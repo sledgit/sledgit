@@ -1,0 +1,1 @@
+{"decimals":6,"id":"trend","kind":"iron-trade-rules","min_trade":0.02,"params":{"sma_days":50},"rule":"All NEAR when the last daily close is above its 50-day average, all USDC when below.","source_sha256":"791d8bc5cf9b1f0535850732de93a868d3eb63a8cdba3260a9977853391eb4da","version":1}

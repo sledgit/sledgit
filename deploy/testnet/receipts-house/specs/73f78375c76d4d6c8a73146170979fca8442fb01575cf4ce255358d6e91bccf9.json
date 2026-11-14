@@ -1,0 +1,1 @@
+{"decimals":6,"id":"hold","kind":"iron-trade-rules","min_trade":0.02,"params":{"weight":0.5},"rule":"Move to 50/50 once, then never trade.","source_sha256":"791d8bc5cf9b1f0535850732de93a868d3eb63a8cdba3260a9977853391eb4da","version":1}

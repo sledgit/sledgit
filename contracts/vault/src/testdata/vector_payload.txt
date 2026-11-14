@@ -1,0 +1,1 @@
+{"signer_id":"0x0000000000000000000000000000000000000001","verifying_contract":"intents.near","deadline":"2026-10-28T13:29:05Z","nonce":"BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc=","intents":[{"intent":"token_diff","diff":{"nep141:wrap.near":"-1000","nep141:usdc.near":"4"}}]}

@@ -1,0 +1,48 @@
+{
+ "data": [
+  {
+   "rank": 1,
+   "user_id": "0x204f72f35326db932158cba6adff0b9a1da95e14",
+   "pnl": 18482425.513018,
+   "volume": 1850584673.0642128,
+   "user_name": "swisstony",
+   "profile_image": "",
+   "x_username": "",
+   "verified": false
+  },
+  {
+   "rank": 2,
+   "user_id": "0x2005d16a84ceefa912d4e380cd32e7ff827875ea",
+   "pnl": 13382624.557747,
+   "volume": 1473530868.3894303,
+   "user_name": "RN1",
+   "profile_image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/profile-image-1567750-84001aec-310a-470f-9584-67dfcaa61267.png",
+   "x_username": "RN1polymarket",
+   "verified": false
+  },
+  {
+   "rank": 4,
+   "user_id": "0x2c335066fe58fe9237c3d3dc7b275c2a034a0563",
+   "pnl": 6725102.82758,
+   "volume": 1354378776.505804,
+   "user_name": "0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465",
+   "profile_image": "",
+   "x_username": "",
+   "verified": false
+  },
+  {
+   "rank": 816,
+   "user_id": "0x89e75fd541c6cb6549f13e98c78b971c8f3e50e9",
+   "pnl": -254473.219505,
+   "volume": 33365422.91528401,
+   "user_name": "ClaudeAI",
+   "profile_image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/profile-image-4480472-099cc91e-67b4-4680-8e9e-131266e6f1c3.jpg",
+   "x_username": "",
+   "verified": false
+  }
+ ],
+ "pagination": {
+  "has_more": true,
+  "next_cursor": "trimmed"
+ }
+}

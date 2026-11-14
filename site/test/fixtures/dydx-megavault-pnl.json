@@ -1,0 +1,60 @@
+{
+ "megavaultPnl": [
+  {
+   "equity": "1699691",
+   "totalPnl": "4663078",
+   "netTransfers": "0",
+   "createdAt": "2026-08-07T00:09:08.000Z",
+   "blockHeight": "100577999",
+   "blockTime": "2026-08-07T00:09:08.000Z"
+  },
+  {
+   "equity": "1699781",
+   "totalPnl": "4663411",
+   "netTransfers": "0",
+   "createdAt": "2026-08-08T00:08:34.000Z",
+   "blockHeight": "100703848",
+   "blockTime": "2026-08-08T00:08:33.000Z"
+  },
+  {
+   "equity": "1703142",
+   "totalPnl": "4663470",
+   "netTransfers": "0",
+   "createdAt": "2026-08-09T00:11:02.000Z",
+   "blockHeight": "100823457",
+   "blockTime": "2026-08-09T00:10:59.000Z"
+  },
+  {
+   "equity": "1654085",
+   "totalPnl": "4664936",
+   "netTransfers": "0",
+   "createdAt": "2026-08-17T00:14:10.000Z",
+   "blockHeight": "101810466",
+   "blockTime": "2026-08-17T00:14:08.000Z"
+  },
+  {
+   "equity": "1654878",
+   "totalPnl": "4667300",
+   "netTransfers": "2000",
+   "createdAt": "2026-08-20T00:11:23.000Z",
+   "blockHeight": "102178205",
+   "blockTime": "2026-08-20T00:11:21.000Z"
+  },
+  {
+   "equity": "1688908",
+   "totalPnl": "4668234",
+   "netTransfers": "-809",
+   "createdAt": "2026-08-21T00:11:20.000Z",
+   "blockHeight": "102305898",
+   "blockTime": "2026-08-21T00:11:18.000Z"
+  },
+  {
+   "equity": "1940209",
+   "totalPnl": "4697277",
+   "netTransfers": "0",
+   "createdAt": "2026-11-04T06:17:54.000Z",
+   "blockHeight": "112391746",
+   "blockTime": "2026-11-04T06:17:54.000Z"
+  }
+ ]
+}

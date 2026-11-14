@@ -1,0 +1,182 @@
+{
+  "date_unix": 1793288922,
+  "network": "testnet",
+  "rows": [
+    {
+      "op": "fn:accept_owner",
+      "n": 1,
+      "median_s": 4.5207802919999995,
+      "p95_s": 4.5207802919999995,
+      "median_tgas": 2,
+      "median_near": 0.0001981676098768
+    },
+    {
+      "op": "fn:accept_owner (back)",
+      "n": 1,
+      "median_s": 4.927401167,
+      "p95_s": 4.927401167,
+      "median_tgas": 2,
+      "median_near": 0.00019814434696360003
+    },
+    {
+      "op": "fn:apply_policy (early)",
+      "n": 1,
+      "median_s": 4.482789792,
+      "p95_s": 4.482789792,
+      "median_tgas": 1,
+      "median_near": 0.00017131659134150002
+    },
+    {
+      "op": "fn:cancel_policy",
+      "n": 1,
+      "median_s": 3.93191025,
+      "p95_s": 3.93191025,
+      "median_tgas": 2,
+      "median_near": 0.00019712130886880003
+    },
+    {
+      "op": "fn:claim_lostfound (empty)",
+      "n": 1,
+      "median_s": 8.037919541,
+      "p95_s": 8.037919541,
+      "median_tgas": 13,
+      "median_near": 0.0012049522677629002
+    },
+    {
+      "op": "fn:claim_lostfound (low gas)",
+      "n": 1,
+      "median_s": 5.24198375,
+      "p95_s": 5.24198375,
+      "median_tgas": 2,
+      "median_near": 0.00017226471974429998
+    },
+    {
+      "op": "fn:exchange_withdraw (empty)",
+      "n": 1,
+      "median_s": 7.869740292,
+      "p95_s": 7.869740292,
+      "median_tgas": 15,
+      "median_near": 0.0014026572839909
+    },
+    {
+      "op": "fn:exchange_withdraw (low gas)",
+      "n": 1,
+      "median_s": 4.561996958,
+      "p95_s": 4.561996958,
+      "median_tgas": 2,
+      "median_near": 0.00017265394759440002
+    },
+    {
+      "op": "fn:intents_deposit",
+      "n": 1,
+      "median_s": 6.649185958,
+      "p95_s": 6.649185958,
+      "median_tgas": 13,
+      "median_near": 0.0012031496763381
+    },
+    {
+      "op": "fn:intents_setup",
+      "n": 1,
+      "median_s": 7.861922083,
+      "p95_s": 7.861922083,
+      "median_tgas": 16,
+      "median_near": 0.0015676909658509002
+    },
+    {
+      "op": "fn:intents_withdraw",
+      "n": 1,
+      "median_s": 6.86475025,
+      "p95_s": 6.86475025,
+      "median_tgas": 14,
+      "median_near": 0.0013097854351927
+    },
+    {
+      "op": "fn:intents_withdraw (too much)",
+      "n": 1,
+      "median_s": 5.603872375,
+      "p95_s": 5.603872375,
+      "median_tgas": 8,
+      "median_near": 0.0007186881768544
+    },
+    {
+      "op": "fn:propose_owner",
+      "n": 1,
+      "median_s": 4.275095291,
+      "p95_s": 4.275095291,
+      "median_tgas": 2,
+      "median_near": 0.0001991321830119
+    },
+    {
+      "op": "fn:propose_owner (back)",
+      "n": 1,
+      "median_s": 4.662255709,
+      "p95_s": 4.662255709,
+      "median_tgas": 2,
+      "median_near": 0.00019910016414250004
+    },
+    {
+      "op": "fn:propose_policy",
+      "n": 1,
+      "median_s": 4.207470208,
+      "p95_s": 4.207470208,
+      "median_tgas": 2,
+      "median_near": 0.0002566739354621
+    },
+    {
+      "op": "fn:propose_policy (replace)",
+      "n": 1,
+      "median_s": 5.236608042,
+      "p95_s": 5.236608042,
+      "median_tgas": 2,
+      "median_near": 0.0002566739354621
+    },
+    {
+      "op": "fn:set_agent=owner",
+      "n": 1,
+      "median_s": 5.015476084,
+      "p95_s": 5.015476084,
+      "median_tgas": 2,
+      "median_near": 0.00017251927859879997
+    },
+    {
+      "op": "fn:set_agent=proposed",
+      "n": 1,
+      "median_s": 4.272357167,
+      "p95_s": 4.272357167,
+      "median_tgas": 2,
+      "median_near": 0.0001740660795658
+    },
+    {
+      "op": "setup:storage_deposit",
+      "n": 2,
+      "median_s": 5.216915042,
+      "p95_s": 5.216915042,
+      "median_tgas": 2,
+      "median_near": 0.0002290949115234
+    },
+    {
+      "op": "view:factory_config",
+      "n": 1,
+      "median_s": 0.464699333,
+      "p95_s": 0.464699333,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:ft_balance_of",
+      "n": 3,
+      "median_s": 0.475655916,
+      "p95_s": 1.005405541,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:get_intents",
+      "n": 4,
+      "median_s": 0.489437166,
+      "p95_s": 0.927605917,
+      "median_tgas": 0,
+      "median_near": 0.0
+    }
+  ]
+}

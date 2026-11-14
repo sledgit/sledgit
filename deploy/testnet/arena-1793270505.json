@@ -1,0 +1,432 @@
+{
+  "date_unix": 1793270505,
+  "network": "testnet",
+  "factory": "arena2.irontrade.testnet",
+  "owner": "it1793205219-owner.testnet",
+  "policy": {
+    "tokens": [
+      {
+        "token": "wrap.testnet",
+        "max_per_trade": "500000000000000000000000",
+        "max_per_day": "3000000000000000000000000"
+      },
+      {
+        "token": "usdc.itachicara.testnet",
+        "max_per_trade": "1000000000000000000000000",
+        "max_per_day": "5000000000000000000000000"
+      }
+    ],
+    "pairs": [
+      {
+        "token_in": "wrap.testnet",
+        "token_out": "usdc.itachicara.testnet",
+        "pool_id": 1103,
+        "min_price_num": "14",
+        "min_price_den": "10"
+      },
+      {
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "pool_id": 1103,
+        "min_price_num": "33",
+        "min_price_den": "100"
+      }
+    ],
+    "max_trades_per_hour": 12,
+    "max_slippage_bps": 100
+  },
+  "vaults": [
+    {
+      "name": "qwen36-tee",
+      "vault": "qwen36-tee.arena2.irontrade.testnet",
+      "agent": "a3-qwen36-tee.it1793205219-owner.testnet",
+      "agent_key": "function-call (vault, agent methods)",
+      "wnear": "500000000000000000000000",
+      "txs": [
+        {
+          "step": "create_agent",
+          "tx": "AK5HGpG9n7K4fvs81rbYzw2Ap5wecH6qniGKLBjMJvsp"
+        },
+        {
+          "step": "add_scoped_key",
+          "tx": "6ypSGBszchydwEPTL3LZcQv21Aq53o1xX3WK9zwC6tkL"
+        },
+        {
+          "step": "delete_temp_key",
+          "tx": "66sDKvmBDHebwN9mWbdGQ1xcRgYMWEoaX2LnR8iYqvxG"
+        },
+        {
+          "step": "create_vault",
+          "tx": "7oPvR7hvwSxuZfqx8ieMRUc8wRZ7798ZXEtfW8CcMGTe"
+        },
+        {
+          "step": "storage_deposit wrap.testnet",
+          "tx": "CoqxjEjcuPT9FKFgZ8nZxK4R49T4nLcjye6jxHUs44vZ"
+        },
+        {
+          "step": "storage_deposit usdc.itachicara.testnet",
+          "tx": "2PDauDNHU8ZVNFV3TQ1W9HyeswUG7Bdpn9Rs8L3C5X6Q"
+        },
+        {
+          "step": "exchange_storage_deposit",
+          "tx": "9EmEFC7UJ2ujL5NdhQi6uPpVtFCGMJdymWBFqV7695je"
+        },
+        {
+          "step": "exchange_register_tokens",
+          "tx": "Fu2dxRvDgE1Q2mz67zNx7dGiSwUXVEqdAarTz7DKh22j"
+        },
+        {
+          "step": "wrap",
+          "tx": "FsGFzUYZLnBBpPSAC3XvfRqrH4uMgDeCPUTEmk11fJtM"
+        },
+        {
+          "step": "fund_vault",
+          "tx": "HCUBVraeGPy9DqhJ8jMLnP4H3yVFQ6swS1KoehkWRFzp"
+        }
+      ]
+    },
+    {
+      "name": "llama32-local",
+      "vault": "llama32-local.arena2.irontrade.testnet",
+      "agent": "a3-llama32-local.it1793205219-owner.testnet",
+      "agent_key": "function-call (vault, agent methods)",
+      "wnear": "500000000000000000000000",
+      "txs": [
+        {
+          "step": "create_agent",
+          "tx": "DiKu9rTzN7agGBiw1NL8Uju2euURRKG5J82ynQBbeqiY"
+        },
+        {
+          "step": "add_scoped_key",
+          "tx": "FdsDsPEntPmhrt5F9SKGTn67PGdFBuDgm4Lpxro444U8"
+        },
+        {
+          "step": "delete_temp_key",
+          "tx": "2NhJtXQa3Qh8SPnCSqwf9vUPEAzNBM9sWE4ATNmdSnHe"
+        },
+        {
+          "step": "create_vault",
+          "tx": "GDQEL9CMeaSB1uHdcjbK2KGTx6QYA2SAk4Jwgp8dswNx"
+        },
+        {
+          "step": "storage_deposit wrap.testnet",
+          "tx": "3nnuq2oeSGqdZPqWKms16EnEFMcqAwYVfPaGCTPpCE59"
+        },
+        {
+          "step": "storage_deposit usdc.itachicara.testnet",
+          "tx": "33enbW1EPS7JrAc8NdyJ38dwZ3yj98N8Jj1zCaWSKsiF"
+        },
+        {
+          "step": "exchange_storage_deposit",
+          "tx": "5aM6bFmG7xWDXUAZqiKqPEys6yDirK2eEkRMvY2erkM7"
+        },
+        {
+          "step": "exchange_register_tokens",
+          "tx": "F7Ggmxj8VoRRQzEsRxVHgw3KHH5sNMwdrJTwAEq3ysxF"
+        },
+        {
+          "step": "wrap",
+          "tx": "6biVhzZ5wGkQ5iMnQk1ku7guwP8o7K7EJtGokm3ffvi9"
+        },
+        {
+          "step": "fund_vault",
+          "tx": "9LWwTwXNGCFjSnNJ8b9nK9ysBUfXvht76ywNdfzoD36J"
+        }
+      ]
+    },
+    {
+      "name": "house-rebalancer",
+      "vault": "house-rebalancer.arena2.irontrade.testnet",
+      "agent": "a3-house-rebalancer.it1793205219-owner.testnet",
+      "agent_key": "function-call (vault, agent methods)",
+      "wnear": "500000000000000000000000",
+      "txs": [
+        {
+          "step": "create_agent",
+          "tx": "EdjJgRQdmjAAn7VVMzWbZv7QysGNcLZWuFhC4wCshdsq"
+        },
+        {
+          "step": "add_scoped_key",
+          "tx": "CgEYJU3PtxjVna7CiuMdpua9VnzpjUCmH8jA6rEigvn3"
+        },
+        {
+          "step": "delete_temp_key",
+          "tx": "47VNkFRpExaaBLtznMRFwgJd1jszoSyivMnHZH4Mye6f"
+        },
+        {
+          "step": "create_vault",
+          "tx": "FytzCswVRLBPtqq43KjvQ7vgX4uEpJJL3rTqX1zchvW2"
+        },
+        {
+          "step": "storage_deposit wrap.testnet",
+          "tx": "44k9MT1Ho6yJj5Da5taZ8pzzdz424fJEXAnPEaWDJxK5"
+        },
+        {
+          "step": "storage_deposit usdc.itachicara.testnet",
+          "tx": "6fNRPQ7iGpXQSaGgoQbZEnDJtwLR9uWBuVQRBnWnzzLk"
+        },
+        {
+          "step": "exchange_storage_deposit",
+          "tx": "FCJJzWZdJcLyABqtYPMxv3UncHoZmMQg2FjLVeD1Wp62"
+        },
+        {
+          "step": "exchange_register_tokens",
+          "tx": "ANbSyNaEap1VsE1nTkbgfSk7nQR8szACinjb4cLU1VLC"
+        },
+        {
+          "step": "wrap",
+          "tx": "EXvh164AJyD6E6LFQk79PyFtySgsGmrh3LcaDsHE7HB3"
+        },
+        {
+          "step": "fund_vault",
+          "tx": "4qCVuyux5waum9BkiEUxBQsZbnJykQSo68uewX88yENt"
+        }
+      ]
+    },
+    {
+      "name": "house-trend",
+      "vault": "house-trend.arena2.irontrade.testnet",
+      "agent": "a3-house-trend.it1793205219-owner.testnet",
+      "agent_key": "function-call (vault, agent methods)",
+      "wnear": "500000000000000000000000",
+      "txs": [
+        {
+          "step": "create_agent",
+          "tx": "AVhxHd7tTkjGFvux2Snpbq4pkc4FBndrkPxK47dVDMx5"
+        },
+        {
+          "step": "add_scoped_key",
+          "tx": "DuGB1yaV1hCWodHJoD4d66i5YWG7FqBS7CAucufUURsR"
+        },
+        {
+          "step": "delete_temp_key",
+          "tx": "DZh5NoYEheo2v88xmevu1GTaQgsBKK87G79XVh27ss9y"
+        },
+        {
+          "step": "create_vault",
+          "tx": "DFpJ8u252BgzzAtKRPBzMmQW6yn8wTSeaMbXFcT8SKpW"
+        },
+        {
+          "step": "storage_deposit wrap.testnet",
+          "tx": "DraGEb3RhgmJpkgoryeJgWgFgyKzmuWxruLXE51NzHxP"
+        },
+        {
+          "step": "storage_deposit usdc.itachicara.testnet",
+          "tx": "H8fkaRjC6CPeQBUuEKnjDBiguHFs6uCV9UPnXTdSF4s4"
+        },
+        {
+          "step": "exchange_storage_deposit",
+          "tx": "9pcgRCnS8yxtAWJnqz1SEkYwdZVtFhHLvzgvecm1HBf3"
+        },
+        {
+          "step": "exchange_register_tokens",
+          "tx": "UaLCinrEkF9q6EYCHhgxzZTLCuqPhkGWyqdGYjRyW2H"
+        },
+        {
+          "step": "wrap",
+          "tx": "BKw9ZeFX1Abt7DXYzJctFTwE17pfyFvHfd9dauNKTSfG"
+        },
+        {
+          "step": "fund_vault",
+          "tx": "EqbkP5fKurjb6iQCi9VikYHDvc4ce65pRYAkYQfakPwf"
+        }
+      ]
+    },
+    {
+      "name": "house-luck",
+      "vault": "house-luck.arena2.irontrade.testnet",
+      "agent": "a3-house-luck.it1793205219-owner.testnet",
+      "agent_key": "function-call (vault, agent methods)",
+      "wnear": "500000000000000000000000",
+      "txs": [
+        {
+          "step": "create_agent",
+          "tx": "5Gr9bUQGgvKChXk5YqzfCNg84WYbJksCPxLbuhE3mV1a"
+        },
+        {
+          "step": "add_scoped_key",
+          "tx": "42kMVZxWDQCTuuJx97SY5Np9Gn4c5usHR97gEdqCtMou"
+        },
+        {
+          "step": "delete_temp_key",
+          "tx": "5bWU99jABzxArb62ehJXt3zbAEgseHQxumEn8tp66Dhw"
+        },
+        {
+          "step": "create_vault",
+          "tx": "1B9mjDiyEWf76ZRav6HdC8KzNPJPrT1X1WgQYMYAs32"
+        },
+        {
+          "step": "storage_deposit wrap.testnet",
+          "tx": "6UwwdVDVAysBJ4oSXFnD1QkWXQZSBX81azi4PN3BP3EA"
+        },
+        {
+          "step": "storage_deposit usdc.itachicara.testnet",
+          "tx": "GVoDcDELzxBEmT3Cu7wLeKBeiqGUm8smdYvGaAKdWugq"
+        },
+        {
+          "step": "exchange_storage_deposit",
+          "tx": "DW6SStabaadLeXTpEAkSep2i1yxE7xXezSbtJBg4gzkg"
+        },
+        {
+          "step": "exchange_register_tokens",
+          "tx": "9jTHaPggdtjEKa3kQawZbTxq1wrJVtccH2FYtZFj5HQr"
+        },
+        {
+          "step": "wrap",
+          "tx": "WV2j3AvWVXF3cUJV5Ki8ece4zrUhrjEHfvqJdGw3gbR"
+        },
+        {
+          "step": "fund_vault",
+          "tx": "AJxGcptUKdqhPVF9GvxDfTkMvBNUGtnRzfSLrgbLQUS6"
+        }
+      ]
+    },
+    {
+      "name": "house-breakout",
+      "vault": "house-breakout.arena2.irontrade.testnet",
+      "agent": "a3-house-breakout.it1793205219-owner.testnet",
+      "agent_key": "function-call (vault, agent methods)",
+      "wnear": "500000000000000000000000",
+      "txs": [
+        {
+          "step": "create_agent",
+          "tx": "Adoh1zWnvYBwCPnwHyc6ZhAyCVbQNxe8SVUKpahcLqqv"
+        },
+        {
+          "step": "add_scoped_key",
+          "tx": "8jZ6myYnxWBDgN1k1nXEKZgGa7ddnxs46YBuj2d4ibmE"
+        },
+        {
+          "step": "delete_temp_key",
+          "tx": "8cPKyhYVoMHUceUsMpyYSvzyjxoBBc6jeD326qzehyK5"
+        },
+        {
+          "step": "create_vault",
+          "tx": "347Y8swvEwxZtm8xDCg4GPfBYviZiET2wETFSoUydDkh"
+        },
+        {
+          "step": "storage_deposit wrap.testnet",
+          "tx": "96VtVmh7drDBVBvoDBMoAZ14zCgEw8ihD2E4Sdvg4adn"
+        },
+        {
+          "step": "storage_deposit usdc.itachicara.testnet",
+          "tx": "D9swu7eu8JMeBDPspNqXEj9JXLb8z2ogJ8kSW9ZLDX2D"
+        },
+        {
+          "step": "exchange_storage_deposit",
+          "tx": "BWRs6XXJWc1cWgyEtza3qpGx5Z8jhR1GkeU5dnBbbpeE"
+        },
+        {
+          "step": "exchange_register_tokens",
+          "tx": "5c3cXSptW5YphFiXtQS86K2wUwS1UckmNE1ojrZETvDM"
+        },
+        {
+          "step": "wrap",
+          "tx": "6TmL5Ljq3nSaAoRM86BDYZgRKQnHfmeDbz38LTF5M5Pz"
+        },
+        {
+          "step": "fund_vault",
+          "tx": "HPp8J3B1hnaPPFrg18jCJxKN2ejoeaXEQ1KXDA168ekG"
+        }
+      ]
+    },
+    {
+      "name": "house-hold",
+      "vault": "house-hold.arena2.irontrade.testnet",
+      "agent": "a3-house-hold.it1793205219-owner.testnet",
+      "agent_key": "function-call (vault, agent methods)",
+      "wnear": "500000000000000000000000",
+      "txs": [
+        {
+          "step": "create_agent",
+          "tx": "BAqY7qLkvWVA15Drg6LNeDGk7Cwx3N9cUqXrEktk9Sk"
+        },
+        {
+          "step": "add_scoped_key",
+          "tx": "9dq5bVJjDirJnegLXJfsNjnKNgGbjMaH3KXYTkanfmu8"
+        },
+        {
+          "step": "delete_temp_key",
+          "tx": "BJvAoccfkWeFzW1qHiisayXpMpKX2cbUnsHmLqEVcKCv"
+        },
+        {
+          "step": "create_vault",
+          "tx": "7qUmiocJ5iro2REVhDZAJHm8p7JStdz5TEHnmScUFwRc"
+        },
+        {
+          "step": "storage_deposit wrap.testnet",
+          "tx": "FHeJVuvwdxGFfX3DnwmNE2Kg9Rto2ndhbSaV7swqGngA"
+        },
+        {
+          "step": "storage_deposit usdc.itachicara.testnet",
+          "tx": "mpCUxf2zdeE3xLw8oCjzegBX584TzdMJxZFxFkHAfMQ"
+        },
+        {
+          "step": "exchange_storage_deposit",
+          "tx": "DwbLpBfPq6uAmcv7hrDX6t9k2iM2HZmrBd957xUqHbc3"
+        },
+        {
+          "step": "exchange_register_tokens",
+          "tx": "34UxtvRdhH7oKQ1UHmpkTfpyJKWX2Vbi7VaoCGAahMF6"
+        },
+        {
+          "step": "wrap",
+          "tx": "6EEPFzgsSHHEMZuGb8AC1sEj696wV9Ku1P8GTcZR1hSa"
+        },
+        {
+          "step": "fund_vault",
+          "tx": "3spcMyjskwwrzwyNCat4biywzkvpJkUw5mccwVNTteaG"
+        }
+      ]
+    },
+    {
+      "name": "suite",
+      "vault": "suite.arena2.irontrade.testnet",
+      "agent": "a3-suite.it1793205219-owner.testnet",
+      "agent_key": "function-call (vault, agent methods)",
+      "wnear": "500000000000000000000000",
+      "txs": [
+        {
+          "step": "create_agent",
+          "tx": "AMdTjoE4zVfvVPVpdQs4MKzngu7F2mrtTNofanZSAgtg"
+        },
+        {
+          "step": "add_scoped_key",
+          "tx": "GJAkXUqsspWuFeMuvnJjYDXXwhD86mhZh96aqzk1foSH"
+        },
+        {
+          "step": "delete_temp_key",
+          "tx": "9ogYunW6R1KxcZbK3QFHoWuqKTQFBorN9hYFDkNFhj8g"
+        },
+        {
+          "step": "create_vault",
+          "tx": "3ZfvkiB4UsmvEhsD6ptaHvvcTfqDMfB4GoYhyPnZcauQ"
+        },
+        {
+          "step": "storage_deposit wrap.testnet",
+          "tx": "2eX7msVutPgGeFdzjom3zBzD4F6WnVwGZFh9tsQKrKRM"
+        },
+        {
+          "step": "storage_deposit usdc.itachicara.testnet",
+          "tx": "AFtmHG2buLHszoMuUoAAirwCgnUyxjXnEwP2HneFtZfY"
+        },
+        {
+          "step": "exchange_storage_deposit",
+          "tx": "AgNt2DUB9CuysoYwfJTs5ei1ewQWhWEHcKEgdYevWc1N"
+        },
+        {
+          "step": "exchange_register_tokens",
+          "tx": "5DPoYNn2SHYVSfmdJRwvdtWN94yXxRbf3G4ryfovY1kJ"
+        },
+        {
+          "step": "wrap",
+          "tx": "F2iWR2gYFwLegoTqj4YcGFZyu5vEq5Yzn91EQjgrCej7"
+        },
+        {
+          "step": "fund_vault",
+          "tx": "DBDRMn2cBqNUvLRrdNCSEfDamzYer7ELP2M8X7rsYeES"
+        }
+      ]
+    }
+  ]
+}

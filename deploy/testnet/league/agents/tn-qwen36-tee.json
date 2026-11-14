@@ -1,0 +1,3373 @@
+{
+  "as_of_ms": 1794616200000,
+  "derived_sha256": "f83c5abb98ab34deeb1eb9e4548408781389b945c0a6c699be0903d06122fa97",
+  "entry": {
+    "account": "qwen36-tee.arena2.irontrade.testnet",
+    "beyond_noise": false,
+    "costs": {
+      "benchmark_cost_rate": 0.003,
+      "benchmark_cost_rate_source": "fixed published rate: the Rhea wNEAR/USDC pool fee, 0.30% (mainnet pool 4512); on testnet an assumption",
+      "benchmark_rebalance_usd": 0.00332925,
+      "fill_vs_reference_pct": 0.15653526,
+      "fill_vs_reference_usd": 0.21507161,
+      "gas_near": 0.04504162,
+      "gas_usd": 0.17611731,
+      "neutralised_usd": 0.2981922,
+      "traded_ref_usd": 1.37395
+    },
+    "counts": {
+      "decisions": 19,
+      "failed": 0,
+      "missed_slots": 0,
+      "off_schedule": 0,
+      "refusals": 0,
+      "skips": 9,
+      "trades": 10
+    },
+    "days": 15.56781657,
+    "decisions": [
+      {
+        "amount_in": "30000000000000000000000",
+        "amount_out": "14194378009282022038839",
+        "block_time_ms": 1794615663506,
+        "cost_usd": -0.01921191,
+        "event": "trade",
+        "fill_price": 2.11351283,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 1103,
+        "receipt_hash": "2a34dffe8d9fa8e6c9b576c28c34abbdd1a7de9323ec465b2c016eb5c0fac7b1",
+        "ref_price": 3.467,
+        "seq": 19,
+        "side": "buy",
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "tx": "FPqwZKAGD8PPDxQcg5psYpLHEyYfdAiJPK54pnNr5iMM",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "30000000000000000000000",
+        "block_time_ms": 1794615653961,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "2a34dffe8d9fa8e6c9b576c28c34abbdd1a7de9323ec465b2c016eb5c0fac7b1",
+        "seq": 19,
+        "side": "buy",
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "tx": "FPqwZKAGD8PPDxQcg5psYpLHEyYfdAiJPK54pnNr5iMM"
+      },
+      {
+        "amount_in": "40000000000000000000000",
+        "amount_out": "18917199995781719191598",
+        "block_time_ms": 1794529225244,
+        "cost_usd": -0.02462116,
+        "event": "trade",
+        "fill_price": 2.11447783,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 1103,
+        "receipt_hash": "d4eac766f988400e8cdab030d7b5654472d964b4be8a6ef9d4094d2bb2d63117",
+        "ref_price": 3.416,
+        "seq": 18,
+        "side": "buy",
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "tx": "8jRPb3gmnxZRrj4WhbQBtkASBFhYsUsxaMmAFo3gg28n",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "40000000000000000000000",
+        "block_time_ms": 1794529216811,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "d4eac766f988400e8cdab030d7b5654472d964b4be8a6ef9d4094d2bb2d63117",
+        "seq": 18,
+        "side": "buy",
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "tx": "8jRPb3gmnxZRrj4WhbQBtkASBFhYsUsxaMmAFo3gg28n"
+      },
+      {
+        "block_time_ms": 1794442816278,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "4a79007d8a2626476fe3a233089d7050b2d28f3a4a4ba158d80a6ee6dab984c0",
+        "seq": 17,
+        "tx": "Dc4ErGn1QcPDFgEzZDRseTQ4DFAWJDdnVMZvnf3MsArp"
+      },
+      {
+        "amount_in": "40000000000000000000000",
+        "amount_out": "18915863903776053437713",
+        "block_time_ms": 1794356464018,
+        "cost_usd": -0.02828627,
+        "event": "trade",
+        "fill_price": 2.11462718,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 1103,
+        "receipt_hash": "cccb765944d120daada26bd66cf632693644eb29570a3725094e3a4fff63d7aa",
+        "ref_price": 3.61,
+        "seq": 16,
+        "side": "buy",
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "tx": "2KiM1PA4PKHFXvNhevAZyQWFJcbSg8AGtN5dt29f6QjX",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "40000000000000000000000",
+        "block_time_ms": 1794356455532,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "cccb765944d120daada26bd66cf632693644eb29570a3725094e3a4fff63d7aa",
+        "seq": 16,
+        "side": "buy",
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "tx": "2KiM1PA4PKHFXvNhevAZyQWFJcbSg8AGtN5dt29f6QjX"
+      },
+      {
+        "block_time_ms": 1794270060329,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "3f55411e360f7e6a718941660ba985f9d6e8da76d0e1ecf8a11f7c781efc2a6f",
+        "seq": 15,
+        "tx": "8CzNXAzzHFCMPjz9p3KSvJyV3ot5iZg4AEnd8CbauPxK"
+      },
+      {
+        "block_time_ms": 1794183622542,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "3a2587e01646799f077ab154e40f9215ea2a5608a1655542d79c6547d5d117ef",
+        "seq": 14,
+        "tx": "G3PZ9wjwMP5FRc1Xu524SZRZDRmMXTMWk5NfHVqZE2bj"
+      },
+      {
+        "block_time_ms": 1794097218591,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "010793c267e85a7e2985922331ad79c21b0bc912e097921ee577fe3a58db70eb",
+        "seq": 13,
+        "tx": "ESeJ5yHz2ChVpvLNeCdfDPUpDpyTJKnipRXPpR3KWPKj"
+      },
+      {
+        "amount_in": "60000000000000000000000",
+        "amount_out": "28369548784750647446861",
+        "block_time_ms": 1794010849820,
+        "cost_usd": -0.04539287,
+        "event": "trade",
+        "fill_price": 2.11494375,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 1103,
+        "receipt_hash": "4bf05d141f176ffb08e279402022b91decc0c92a233de9c4d6b492b492409431",
+        "ref_price": 3.715,
+        "seq": 12,
+        "side": "buy",
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "tx": "6EYxsZ8GC8EqUmdjxDh6uw2Xit1r9sRbzSp4EufEboNb",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "60000000000000000000000",
+        "block_time_ms": 1794010841387,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "4bf05d141f176ffb08e279402022b91decc0c92a233de9c4d6b492b492409431",
+        "seq": 12,
+        "side": "buy",
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "tx": "6EYxsZ8GC8EqUmdjxDh6uw2Xit1r9sRbzSp4EufEboNb"
+      },
+      {
+        "amount_in": "50000000000000000000000",
+        "amount_out": "23641327650857395703879",
+        "block_time_ms": 1793924450290,
+        "cost_usd": -0.03752019,
+        "event": "trade",
+        "fill_price": 2.11494044,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 1103,
+        "receipt_hash": "2fdd4650c21a2db2ecea4038a22f9f42839730f854e21c897c16cb85609cec28",
+        "ref_price": 3.702,
+        "seq": 11,
+        "side": "buy",
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "tx": "Bj4o55j5wPLsPGcYZD5CFqUN3dXAEN67pyv9DRLpPyQ7",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "50000000000000000000000",
+        "block_time_ms": 1793924442469,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "2fdd4650c21a2db2ecea4038a22f9f42839730f854e21c897c16cb85609cec28",
+        "seq": 11,
+        "side": "buy",
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "tx": "Bj4o55j5wPLsPGcYZD5CFqUN3dXAEN67pyv9DRLpPyQ7"
+      },
+      {
+        "amount_in": "50000000000000000000000",
+        "amount_out": "23641401228063610734972",
+        "block_time_ms": 1793838031865,
+        "cost_usd": -0.04466017,
+        "event": "trade",
+        "fill_price": 2.11493386,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 1103,
+        "receipt_hash": "5593badcf3eea488c3a1d7c60e3a2729837376fe629a0986388f3a5ea36617d1",
+        "ref_price": 4.004,
+        "seq": 10,
+        "side": "buy",
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "tx": "ADgwp7FGXWUHMaZhYDWW6ezX4YNwXYPfirtFKmiHbbn5",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "50000000000000000000000",
+        "block_time_ms": 1793838023369,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "5593badcf3eea488c3a1d7c60e3a2729837376fe629a0986388f3a5ea36617d1",
+        "seq": 10,
+        "side": "buy",
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "tx": "ADgwp7FGXWUHMaZhYDWW6ezX4YNwXYPfirtFKmiHbbn5"
+      },
+      {
+        "block_time_ms": 1793751621008,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "e563c0c0e477d899e82f10624f667ce06f046b53ac1a1c362328b52c3895f80e",
+        "seq": 9,
+        "tx": "4yHg51b19K2X4PnJzzWPEuNrvZccJmRFTpMyPJUgr2Sm"
+      },
+      {
+        "block_time_ms": 1793665265734,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "a2a80a753a3525c71ed01de51d18fb228b99e919c388b16652bb4e04c6f5dd55",
+        "seq": 8,
+        "tx": "ES6252vS3RYnwdbdyHT8YJemKkXgZ5icdrYLC3sKr8x"
+      },
+      {
+        "block_time_ms": 1793578864947,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "0b5b6833bfb86f51bc2e51ace28d2add017f25f54e392bb7313e97463e0b4eb6",
+        "seq": 7,
+        "tx": "Ek4rG1UNnEboW9qomHnRUeu4eXnYfdKybKSr8UYPFrZJ"
+      },
+      {
+        "amount_in": "100000000000000000000000",
+        "amount_out": "210225853228389121952183",
+        "block_time_ms": 1793492464373,
+        "cost_usd": 0.23197415,
+        "event": "trade",
+        "fill_price": 2.10225853,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 1103,
+        "receipt_hash": "cf813ee5d6d333baaf13473e4e4d64f5d482c2900ec69ce26a93bebc79bcc933",
+        "ref_price": 4.422,
+        "seq": 6,
+        "side": "sell",
+        "token_in": "wrap.testnet",
+        "token_out": "usdc.itachicara.testnet",
+        "tx": "PFfvFu4LmtE94PV5N9jWESnh1ULEvKrKNZsthCFiev1",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "100000000000000000000000",
+        "block_time_ms": 1793492456020,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "cf813ee5d6d333baaf13473e4e4d64f5d482c2900ec69ce26a93bebc79bcc933",
+        "seq": 6,
+        "side": "sell",
+        "token_in": "wrap.testnet",
+        "token_out": "usdc.itachicara.testnet",
+        "tx": "PFfvFu4LmtE94PV5N9jWESnh1ULEvKrKNZsthCFiev1"
+      },
+      {
+        "amount_in": "45000000000000000000000",
+        "amount_out": "21277309882820068299611",
+        "block_time_ms": 1793406060616,
+        "cost_usd": -0.04706692,
+        "event": "trade",
+        "fill_price": 2.11492901,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 1103,
+        "receipt_hash": "697c8957c97cbc8d203920485e4fe943071911fc01e65a5db057395c25095ff8",
+        "ref_price": 4.327,
+        "seq": 5,
+        "side": "buy",
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "tx": "C9re6uJ8jZVDWX2DZEGdGBWwZwiCYmgBMGtn4MBHUpqR",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "45000000000000000000000",
+        "block_time_ms": 1793406052114,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "697c8957c97cbc8d203920485e4fe943071911fc01e65a5db057395c25095ff8",
+        "seq": 5,
+        "side": "buy",
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "tx": "C9re6uJ8jZVDWX2DZEGdGBWwZwiCYmgBMGtn4MBHUpqR"
+      },
+      {
+        "amount_in": "65000000000000000000000",
+        "amount_out": "30731593216675529282202",
+        "block_time_ms": 1793319638246,
+        "cost_usd": -0.05903271,
+        "event": "trade",
+        "fill_price": 2.11508722,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 1103,
+        "receipt_hash": "dd78589a557fe8dd11665bc8e9e57f6d7f8dc3e57da594a320eb51f42658e99c",
+        "ref_price": 4.036,
+        "seq": 4,
+        "side": "buy",
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "tx": "G9hiWrwXysHjQUh4kgTX8aDEf6yUoQoYkJddd83gT9pL",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "65000000000000000000000",
+        "block_time_ms": 1793319629755,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "dd78589a557fe8dd11665bc8e9e57f6d7f8dc3e57da594a320eb51f42658e99c",
+        "seq": 4,
+        "side": "buy",
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "tx": "G9hiWrwXysHjQUh4kgTX8aDEf6yUoQoYkJddd83gT9pL"
+      },
+      {
+        "block_time_ms": 1793275827266,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "7c7ba46c85e7f6028b7d7da5d375e6746228da9256261b523d6aad4c36d69d0a",
+        "seq": 3,
+        "tx": "ASuPjbiNW6iDkfEQFX2w9TwfK4XBW8Db2uXAhYRgtXcN"
+      },
+      {
+        "amount_in": "125000000000000000000000",
+        "amount_out": "262860330566099775408257",
+        "block_time_ms": 1793273551343,
+        "cost_usd": 0.28888967,
+        "event": "trade",
+        "fill_price": 2.10288264,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 1103,
+        "receipt_hash": "1c59c0d0a4ac91ae7a65259da7aa044cfc73b07f6f894b0111137f36cbb5f2f0",
+        "ref_price": 4.414,
+        "seq": 2,
+        "side": "sell",
+        "token_in": "wrap.testnet",
+        "token_out": "usdc.itachicara.testnet",
+        "tx": "7f4JMTDiP9wi5kdQ4f4KF1hxmS7M64j2D4pSRqNk2q4m",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "125000000000000000000000",
+        "block_time_ms": 1793273543373,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "1c59c0d0a4ac91ae7a65259da7aa044cfc73b07f6f894b0111137f36cbb5f2f0",
+        "seq": 2,
+        "side": "sell",
+        "token_in": "wrap.testnet",
+        "token_out": "usdc.itachicara.testnet",
+        "tx": "7f4JMTDiP9wi5kdQ4f4KF1hxmS7M64j2D4pSRqNk2q4m"
+      },
+      {
+        "block_time_ms": 1793271402109,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "f4ed98e307e9eba90dc0eef4ca019a8f151bcef050233a0d7fd59ca6b306292e",
+        "seq": 1,
+        "tx": "DxB7YtvrQAkqfAG8w224tEQbbxVz7uZdN62RRw7pdPp3"
+      }
+    ],
+    "description": "Decisions from Qwen3.6 on NEAR AI Cloud, each with TEE evidence bound to this vault and the moment.",
+    "end": {
+      "price": 3.461,
+      "value_usd": 1.66676351
+    },
+    "events_sha256": "73747e40b41a2d92d6c35ef45968684f9b1f49a38cde216a611d4c8ca9b8eda9",
+    "funded_twr": -0.22031989,
+    "harness": "sledgit-runner/0.1.0",
+    "hold_twr": -0.11149471,
+    "id": "tn-qwen36-tee",
+    "inactive": false,
+    "kind": "arena",
+    "model": "Qwen/Qwen3.6-35B-A3B-FP8",
+    "name": "Qwen3.6 via NEAR AI",
+    "proof": {
+      "claimed": "tee",
+      "detail": "16 in-season decision(s) have no receipt in the file (first: seq 4)",
+      "tier": "self"
+    },
+    "provenance": {
+      "reason": "direct child of arena2.irontrade.testnet (factory keyless), runs its pinned code 2ZP4H1ENzFKyN4nVSZf9vKf3pEpgoup9DVU6NbjbE2Gg, 0 access keys",
+      "status": "genuine"
+    },
+    "range95": {
+      "hi": -0.15795887,
+      "lo": -0.39883126,
+      "n": 365
+    },
+    "ranked": true,
+    "refusals_by_code": {},
+    "season_seqs": [
+      1,
+      19
+    ],
+    "series": [
+      {
+        "hold": 2.210679,
+        "stake": 2.21067972,
+        "t": 1793271600000,
+        "value": 2.2085
+      },
+      {
+        "hold": 2.21142788,
+        "stake": 2.21143427,
+        "t": 1793275200000,
+        "value": 1.92036033
+      },
+      {
+        "hold": 2.22016475,
+        "stake": 2.2201769,
+        "t": 1793278800000,
+        "value": 1.93348533
+      },
+      {
+        "hold": 2.21841738,
+        "stake": 2.21843521,
+        "t": 1793282400000,
+        "value": 1.93086033
+      },
+      {
+        "hold": 2.23713925,
+        "stake": 2.23716319,
+        "t": 1793286000000,
+        "value": 1.95898533
+      },
+      {
+        "hold": 2.26934088,
+        "stake": 2.26937146,
+        "t": 1793289600000,
+        "value": 2.00736033
+      },
+      {
+        "hold": 2.25611075,
+        "stake": 2.25614689,
+        "t": 1793293200000,
+        "value": 1.98748533
+      },
+      {
+        "hold": 2.23214675,
+        "stake": 2.23218791,
+        "t": 1793296800000,
+        "value": 1.95148533
+      },
+      {
+        "hold": 2.212676,
+        "stake": 2.21272212,
+        "t": 1793300400000,
+        "value": 1.92223533
+      },
+      {
+        "hold": 2.20793312,
+        "stake": 2.20798469,
+        "t": 1793304000000,
+        "value": 1.91511033
+      },
+      {
+        "hold": 2.1497705,
+        "stake": 2.14982469,
+        "t": 1793307600000,
+        "value": 1.82773533
+      },
+      {
+        "hold": 2.1437795,
+        "stake": 2.1438387,
+        "t": 1793311200000,
+        "value": 1.81873533
+      },
+      {
+        "hold": 2.1337945,
+        "stake": 2.1338584,
+        "t": 1793314800000,
+        "value": 1.80373533
+      },
+      {
+        "hold": 2.12131325,
+        "stake": 2.12138158,
+        "t": 1793318400000,
+        "value": 1.78498533
+      },
+      {
+        "hold": 2.1058365,
+        "stake": 2.10590891,
+        "t": 1793322000000,
+        "value": 1.76233453
+      },
+      {
+        "hold": 2.106835,
+        "stake": 2.10691261,
+        "t": 1793325600000,
+        "value": 1.76390641
+      },
+      {
+        "hold": 2.12256138,
+        "stake": 2.12264542,
+        "t": 1793329200000,
+        "value": 1.78866347
+      },
+      {
+        "hold": 2.14852237,
+        "stake": 2.14861392,
+        "t": 1793332800000,
+        "value": 1.82953227
+      },
+      {
+        "hold": 2.16300062,
+        "stake": 2.16309886,
+        "t": 1793336400000,
+        "value": 1.85232448
+      },
+      {
+        "hold": 2.15451337,
+        "stake": 2.15461619,
+        "t": 1793340000000,
+        "value": 1.83896353
+      },
+      {
+        "hold": 2.1917075,
+        "stake": 2.19181954,
+        "t": 1793343600000,
+        "value": 1.89751594
+      },
+      {
+        "hold": 2.17048937,
+        "stake": 2.17060468,
+        "t": 1793347200000,
+        "value": 1.86411356
+      },
+      {
+        "hold": 2.19645038,
+        "stake": 2.19657409,
+        "t": 1793350800000,
+        "value": 1.90498236
+      },
+      {
+        "hold": 2.20119325,
+        "stake": 2.20132312,
+        "t": 1793354400000,
+        "value": 1.91244877
+      },
+      {
+        "hold": 2.20219175,
+        "stake": 2.20232736,
+        "t": 1793358000000,
+        "value": 1.91402065
+      },
+      {
+        "hold": 2.18546688,
+        "stake": 2.18560594,
+        "t": 1793361600000,
+        "value": 1.88769171
+      },
+      {
+        "hold": 2.180724,
+        "stake": 2.18086797,
+        "t": 1793365200000,
+        "value": 1.8802253
+      },
+      {
+        "hold": 2.1817225,
+        "stake": 2.18187212,
+        "t": 1793368800000,
+        "value": 1.88179717
+      },
+      {
+        "hold": 2.19120825,
+        "stake": 2.19136475,
+        "t": 1793372400000,
+        "value": 1.89673
+      },
+      {
+        "hold": 2.18796312,
+        "stake": 2.18812471,
+        "t": 1793376000000,
+        "value": 1.8916214
+      },
+      {
+        "hold": 2.17947587,
+        "stake": 2.17964169,
+        "t": 1793379600000,
+        "value": 1.87826045
+      },
+      {
+        "hold": 2.17323525,
+        "stake": 2.17340557,
+        "t": 1793383200000,
+        "value": 1.86843622
+      },
+      {
+        "hold": 2.17598112,
+        "stake": 2.17615737,
+        "t": 1793386800000,
+        "value": 1.87275888
+      },
+      {
+        "hold": 2.19245638,
+        "stake": 2.19264091,
+        "t": 1793390400000,
+        "value": 1.89869485
+      },
+      {
+        "hold": 2.18521725,
+        "stake": 2.18540609,
+        "t": 1793394000000,
+        "value": 1.88729874
+      },
+      {
+        "hold": 2.1837195,
+        "stake": 2.1839136,
+        "t": 1793397600000,
+        "value": 1.88494093
+      },
+      {
+        "hold": 2.184718,
+        "stake": 2.18491782,
+        "t": 1793401200000,
+        "value": 1.8865128
+      },
+      {
+        "hold": 2.180724,
+        "stake": 2.18092858,
+        "t": 1793404800000,
+        "value": 1.8802253
+      },
+      {
+        "hold": 2.19420375,
+        "stake": 2.19441649,
+        "t": 1793408400000,
+        "value": 1.90258285
+      },
+      {
+        "hold": 2.19595112,
+        "stake": 2.19616979,
+        "t": 1793412000000,
+        "value": 1.90541108
+      },
+      {
+        "hold": 2.19095863,
+        "stake": 2.19118185,
+        "t": 1793415600000,
+        "value": 1.89733042
+      },
+      {
+        "hold": 2.18222175,
+        "stake": 2.18244869,
+        "t": 1793419200000,
+        "value": 1.88318927
+      },
+      {
+        "hold": 2.18047438,
+        "stake": 2.18070646,
+        "t": 1793422800000,
+        "value": 1.88036104
+      },
+      {
+        "hold": 2.18646538,
+        "stake": 2.1867043,
+        "t": 1793426400000,
+        "value": 1.89005783
+      },
+      {
+        "hold": 2.19395413,
+        "stake": 2.19420029,
+        "t": 1793430000000,
+        "value": 1.90217882
+      },
+      {
+        "hold": 2.18821275,
+        "stake": 2.18846316,
+        "t": 1793433600000,
+        "value": 1.89288606
+      },
+      {
+        "hold": 2.19095863,
+        "stake": 2.19121523,
+        "t": 1793437200000,
+        "value": 1.89733042
+      },
+      {
+        "hold": 2.18696463,
+        "stake": 2.18722583,
+        "t": 1793440800000,
+        "value": 1.8908659
+      },
+      {
+        "hold": 2.18746387,
+        "stake": 2.18773075,
+        "t": 1793444400000,
+        "value": 1.89167396
+      },
+      {
+        "hold": 2.19220675,
+        "stake": 2.19248036,
+        "t": 1793448000000,
+        "value": 1.89935059
+      },
+      {
+        "hold": 2.21741888,
+        "stake": 2.21770455,
+        "t": 1793451600000,
+        "value": 1.94015792
+      },
+      {
+        "hold": 2.21017975,
+        "stake": 2.21046923,
+        "t": 1793455200000,
+        "value": 1.92844096
+      },
+      {
+        "hold": 2.214673,
+        "stake": 2.21496934,
+        "t": 1793458800000,
+        "value": 1.93571356
+      },
+      {
+        "hold": 2.22615575,
+        "stake": 2.22646091,
+        "t": 1793462400000,
+        "value": 1.95429907
+      },
+      {
+        "hold": 2.23838737,
+        "stake": 2.23870168,
+        "t": 1793466000000,
+        "value": 1.97409669
+      },
+      {
+        "hold": 2.23688963,
+        "stake": 2.23720932,
+        "t": 1793469600000,
+        "value": 1.97167249
+      },
+      {
+        "hold": 2.23414375,
+        "stake": 2.23446845,
+        "t": 1793473200000,
+        "value": 1.96722813
+      },
+      {
+        "hold": 2.21667,
+        "stake": 2.21699536,
+        "t": 1793476800000,
+        "value": 1.93894582
+      },
+      {
+        "hold": 2.21217675,
+        "stake": 2.21250646,
+        "t": 1793480400000,
+        "value": 1.93167323
+      },
+      {
+        "hold": 2.22191212,
+        "stake": 2.22225047,
+        "t": 1793484000000,
+        "value": 1.94743051
+      },
+      {
+        "hold": 2.21292563,
+        "stake": 2.21326691,
+        "t": 1793487600000,
+        "value": 1.93288533
+      },
+      {
+        "hold": 2.21542187,
+        "stake": 2.21576962,
+        "t": 1793491200000,
+        "value": 1.93692565
+      },
+      {
+        "hold": 2.2136745,
+        "stake": 2.21402738,
+        "t": 1793494800000,
+        "value": 1.7139427
+      },
+      {
+        "hold": 2.224658,
+        "stake": 2.22502012,
+        "t": 1793498400000,
+        "value": 1.7275569
+      },
+      {
+        "hold": 2.21417375,
+        "stake": 2.21453816,
+        "t": 1793502000000,
+        "value": 1.71456153
+      },
+      {
+        "hold": 2.20993012,
+        "stake": 2.2102988,
+        "t": 1793505600000,
+        "value": 1.7093015
+      },
+      {
+        "hold": 2.20443838,
+        "stake": 2.20481084,
+        "t": 1793509200000,
+        "value": 1.7024944
+      },
+      {
+        "hold": 2.2036895,
+        "stake": 2.20406734,
+        "t": 1793512800000,
+        "value": 1.70156616
+      },
+      {
+        "hold": 2.20194212,
+        "stake": 2.20232499,
+        "t": 1793516400000,
+        "value": 1.69940026
+      },
+      {
+        "hold": 2.19944588,
+        "stake": 2.19983347,
+        "t": 1793520000000,
+        "value": 1.69630613
+      },
+      {
+        "hold": 2.20818275,
+        "stake": 2.2085791,
+        "t": 1793523600000,
+        "value": 1.7071356
+      },
+      {
+        "hold": 2.20718425,
+        "stake": 2.20758589,
+        "t": 1793527200000,
+        "value": 1.70589795
+      },
+      {
+        "hold": 2.20319025,
+        "stake": 2.20359606,
+        "t": 1793530800000,
+        "value": 1.70094733
+      },
+      {
+        "hold": 2.20144287,
+        "stake": 2.20185365,
+        "t": 1793534400000,
+        "value": 1.69878144
+      },
+      {
+        "hold": 2.20418875,
+        "stake": 2.20460619,
+        "t": 1793538000000,
+        "value": 1.70218499
+      },
+      {
+        "hold": 2.20518725,
+        "stake": 2.20561071,
+        "t": 1793541600000,
+        "value": 1.70342264
+      },
+      {
+        "hold": 2.20044438,
+        "stake": 2.20087162,
+        "t": 1793545200000,
+        "value": 1.69754378
+      },
+      {
+        "hold": 2.18921125,
+        "stake": 2.18963965,
+        "t": 1793548800000,
+        "value": 1.68362017
+      },
+      {
+        "hold": 2.18721425,
+        "stake": 2.18764741,
+        "t": 1793552400000,
+        "value": 1.68114486
+      },
+      {
+        "hold": 2.18297062,
+        "stake": 2.1834076,
+        "t": 1793556000000,
+        "value": 1.67588483
+      },
+      {
+        "hold": 2.17223675,
+        "stake": 2.17267483,
+        "t": 1793559600000,
+        "value": 1.66258004
+      },
+      {
+        "hold": 2.17223675,
+        "stake": 2.1726803,
+        "t": 1793563200000,
+        "value": 1.66258004
+      },
+      {
+        "hold": 2.17722925,
+        "stake": 2.17768038,
+        "t": 1793566800000,
+        "value": 1.66876831
+      },
+      {
+        "hold": 2.17997512,
+        "stake": 2.18043292,
+        "t": 1793570400000,
+        "value": 1.67217186
+      },
+      {
+        "hold": 2.16999013,
+        "stake": 2.17044911,
+        "t": 1793574000000,
+        "value": 1.65979532
+      },
+      {
+        "hold": 2.178727,
+        "stake": 2.17919526,
+        "t": 1793577600000,
+        "value": 1.6706248
+      },
+      {
+        "hold": 2.17023975,
+        "stake": 2.17070976,
+        "t": 1793581200000,
+        "value": 1.66010473
+      },
+      {
+        "hold": 2.18247138,
+        "stake": 2.18295232,
+        "t": 1793584800000,
+        "value": 1.675266
+      },
+      {
+        "hold": 2.17598112,
+        "stake": 2.17646465,
+        "t": 1793588400000,
+        "value": 1.66722125
+      },
+      {
+        "hold": 2.18122325,
+        "stake": 2.18171467,
+        "t": 1793592000000,
+        "value": 1.67371893
+      },
+      {
+        "hold": 2.17348487,
+        "stake": 2.17397822,
+        "t": 1793595600000,
+        "value": 1.66412711
+      },
+      {
+        "hold": 2.16849238,
+        "stake": 2.16898886,
+        "t": 1793599200000,
+        "value": 1.65793884
+      },
+      {
+        "hold": 2.1357915,
+        "stake": 2.13627796,
+        "t": 1793602800000,
+        "value": 1.61740565
+      },
+      {
+        "hold": 2.1337945,
+        "stake": 2.13428528,
+        "t": 1793606400000,
+        "value": 1.61493034
+      },
+      {
+        "hold": 2.14128325,
+        "stake": 2.14178292,
+        "t": 1793610000000,
+        "value": 1.62421275
+      },
+      {
+        "hold": 2.13703963,
+        "stake": 2.13754254,
+        "t": 1793613600000,
+        "value": 1.61895272
+      },
+      {
+        "hold": 2.13828775,
+        "stake": 2.13879656,
+        "t": 1793617200000,
+        "value": 1.62049979
+      },
+      {
+        "hold": 2.13903663,
+        "stake": 2.13955111,
+        "t": 1793620800000,
+        "value": 1.62142803
+      },
+      {
+        "hold": 2.13254638,
+        "stake": 2.13306288,
+        "t": 1793624400000,
+        "value": 1.61338327
+      },
+      {
+        "hold": 2.12930125,
+        "stake": 2.12982137,
+        "t": 1793628000000,
+        "value": 1.6093609
+      },
+      {
+        "hold": 2.12555688,
+        "stake": 2.12608032,
+        "t": 1793631600000,
+        "value": 1.60471969
+      },
+      {
+        "hold": 2.11008012,
+        "stake": 2.11060076,
+        "t": 1793635200000,
+        "value": 1.58553605
+      },
+      {
+        "hold": 2.10159287,
+        "stake": 2.1021142,
+        "t": 1793638800000,
+        "value": 1.57501598
+      },
+      {
+        "hold": 2.08961088,
+        "stake": 2.09013096,
+        "t": 1793642400000,
+        "value": 1.56016413
+      },
+      {
+        "hold": 2.08037475,
+        "stake": 2.08089494,
+        "t": 1793646000000,
+        "value": 1.54871582
+      },
+      {
+        "hold": 2.0798755,
+        "stake": 2.08040041,
+        "t": 1793649600000,
+        "value": 1.548097
+      },
+      {
+        "hold": 2.074883,
+        "stake": 2.07541019,
+        "t": 1793653200000,
+        "value": 1.54190872
+      },
+      {
+        "hold": 2.08536725,
+        "stake": 2.08590518,
+        "t": 1793656800000,
+        "value": 1.5549041
+      },
+      {
+        "hold": 2.074883,
+        "stake": 2.07542012,
+        "t": 1793660400000,
+        "value": 1.54190872
+      },
+      {
+        "hold": 2.07338525,
+        "stake": 2.0739265,
+        "t": 1793664000000,
+        "value": 1.54005224
+      },
+      {
+        "hold": 2.07413413,
+        "stake": 2.07468076,
+        "t": 1793667600000,
+        "value": 1.54098048
+      },
+      {
+        "hold": 2.06564687,
+        "stake": 2.06619363,
+        "t": 1793671200000,
+        "value": 1.53046042
+      },
+      {
+        "hold": 2.05815812,
+        "stake": 2.05870549,
+        "t": 1793674800000,
+        "value": 1.52117801
+      },
+      {
+        "hold": 2.06340025,
+        "stake": 2.06395554,
+        "t": 1793678400000,
+        "value": 1.5276757
+      },
+      {
+        "hold": 2.064898,
+        "stake": 2.06545908,
+        "t": 1793682000000,
+        "value": 1.52953218
+      },
+      {
+        "hold": 2.050919,
+        "stake": 2.05147673,
+        "t": 1793685600000,
+        "value": 1.51220501
+      },
+      {
+        "hold": 2.05066938,
+        "stake": 2.0512318,
+        "t": 1793689200000,
+        "value": 1.5118956
+      },
+      {
+        "hold": 2.05266637,
+        "stake": 2.05323485,
+        "t": 1793692800000,
+        "value": 1.51437091
+      },
+      {
+        "hold": 2.05341525,
+        "stake": 2.05398903,
+        "t": 1793696400000,
+        "value": 1.51529915
+      },
+      {
+        "hold": 2.06739425,
+        "stake": 2.06798145,
+        "t": 1793700000000,
+        "value": 1.53262631
+      },
+      {
+        "hold": 2.06414913,
+        "stake": 2.06473925,
+        "t": 1793703600000,
+        "value": 1.52860394
+      },
+      {
+        "hold": 2.07463338,
+        "stake": 2.07523494,
+        "t": 1793707200000,
+        "value": 1.54159931
+      },
+      {
+        "hold": 2.08361988,
+        "stake": 2.08423205,
+        "t": 1793710800000,
+        "value": 1.5527382
+      },
+      {
+        "hold": 2.07937625,
+        "stake": 2.07999075,
+        "t": 1793714400000,
+        "value": 1.54747817
+      },
+      {
+        "hold": 2.07313563,
+        "stake": 2.07375114,
+        "t": 1793718000000,
+        "value": 1.53974283
+      },
+      {
+        "hold": 2.07063937,
+        "stake": 2.07125824,
+        "t": 1793721600000,
+        "value": 1.53664869
+      },
+      {
+        "hold": 2.0658965,
+        "stake": 2.06651724,
+        "t": 1793725200000,
+        "value": 1.53076983
+      },
+      {
+        "hold": 2.06464838,
+        "stake": 2.06527323,
+        "t": 1793728800000,
+        "value": 1.52922276
+      },
+      {
+        "hold": 2.06215213,
+        "stake": 2.06278025,
+        "t": 1793732400000,
+        "value": 1.52612863
+      },
+      {
+        "hold": 2.06240175,
+        "stake": 2.06303494,
+        "t": 1793736000000,
+        "value": 1.52643804
+      },
+      {
+        "hold": 2.06539725,
+        "stake": 2.06603735,
+        "t": 1793739600000,
+        "value": 1.53015101
+      },
+      {
+        "hold": 2.07737925,
+        "stake": 2.07803235,
+        "t": 1793743200000,
+        "value": 1.54500286
+      },
+      {
+        "hold": 2.06964087,
+        "stake": 2.0702937,
+        "t": 1793746800000,
+        "value": 1.53541104
+      },
+      {
+        "hold": 2.06464838,
+        "stake": 2.06530273,
+        "t": 1793750400000,
+        "value": 1.52922276
+      },
+      {
+        "hold": 2.0638995,
+        "stake": 2.06455825,
+        "t": 1793754000000,
+        "value": 1.52829452
+      },
+      {
+        "hold": 2.05041975,
+        "stake": 2.05107406,
+        "t": 1793757600000,
+        "value": 1.51158619
+      },
+      {
+        "hold": 2.03644075,
+        "stake": 2.03709012,
+        "t": 1793761200000,
+        "value": 1.49425902
+      },
+      {
+        "hold": 2.0439295,
+        "stake": 2.04458892,
+        "t": 1793764800000,
+        "value": 1.50354143
+      },
+      {
+        "hold": 2.06514762,
+        "stake": 2.06582692,
+        "t": 1793768400000,
+        "value": 1.52984159
+      },
+      {
+        "hold": 2.07812813,
+        "stake": 2.07882162,
+        "t": 1793772000000,
+        "value": 1.5459311
+      },
+      {
+        "hold": 2.092856,
+        "stake": 2.09356508,
+        "t": 1793775600000,
+        "value": 1.56418651
+      },
+      {
+        "hold": 2.1118275,
+        "stake": 2.1125554,
+        "t": 1793779200000,
+        "value": 1.58770194
+      },
+      {
+        "hold": 2.12206213,
+        "stake": 2.12280266,
+        "t": 1793782800000,
+        "value": 1.6003879
+      },
+      {
+        "hold": 2.12455838,
+        "stake": 2.12530596,
+        "t": 1793786400000,
+        "value": 1.60348204
+      },
+      {
+        "hold": 2.13154788,
+        "stake": 2.13230586,
+        "t": 1793790000000,
+        "value": 1.61214562
+      },
+      {
+        "hold": 2.12730425,
+        "stake": 2.12806433,
+        "t": 1793793600000,
+        "value": 1.60688559
+      },
+      {
+        "hold": 2.106835,
+        "stake": 2.10758495,
+        "t": 1793797200000,
+        "value": 1.58151367
+      },
+      {
+        "hold": 2.10758387,
+        "stake": 2.10833953,
+        "t": 1793800800000,
+        "value": 1.58244191
+      },
+      {
+        "hold": 2.14427875,
+        "stake": 2.14506747,
+        "t": 1793804400000,
+        "value": 1.62792571
+      },
+      {
+        "hold": 2.14153287,
+        "stake": 2.14232482,
+        "t": 1793808000000,
+        "value": 1.62452216
+      },
+      {
+        "hold": 2.13629075,
+        "stake": 2.13708396,
+        "t": 1793811600000,
+        "value": 1.61802448
+      },
+      {
+        "hold": 2.13703963,
+        "stake": 2.1378387,
+        "t": 1793815200000,
+        "value": 1.61895272
+      },
+      {
+        "hold": 2.11432375,
+        "stake": 2.11511036,
+        "t": 1793818800000,
+        "value": 1.59079608
+      },
+      {
+        "hold": 2.10334025,
+        "stake": 2.10412339,
+        "t": 1793822400000,
+        "value": 1.57718188
+      },
+      {
+        "hold": 2.1118275,
+        "stake": 2.11262248,
+        "t": 1793826000000,
+        "value": 1.58770194
+      },
+      {
+        "hold": 2.11107862,
+        "stake": 2.11187817,
+        "t": 1793829600000,
+        "value": 1.5867737
+      },
+      {
+        "hold": 2.1238095,
+        "stake": 2.12462441,
+        "t": 1793833200000,
+        "value": 1.6025538
+      },
+      {
+        "hold": 2.10858238,
+        "stake": 2.10939021,
+        "t": 1793836800000,
+        "value": 1.58367956
+      },
+      {
+        "hold": 2.10708462,
+        "stake": 2.10789639,
+        "t": 1793840400000,
+        "value": 1.58274141
+      },
+      {
+        "hold": 2.11607113,
+        "stake": 2.11689538,
+        "t": 1793844000000,
+        "value": 1.59438189
+      },
+      {
+        "hold": 2.11856737,
+        "stake": 2.11939886,
+        "t": 1793847600000,
+        "value": 1.59761536
+      },
+      {
+        "hold": 2.11507262,
+        "stake": 2.11590641,
+        "t": 1793851200000,
+        "value": 1.59308851
+      },
+      {
+        "hold": 2.11756888,
+        "stake": 2.11840992,
+        "t": 1793854800000,
+        "value": 1.59632197
+      },
+      {
+        "hold": 2.10758387,
+        "stake": 2.10842174,
+        "t": 1793858400000,
+        "value": 1.5833881
+      },
+      {
+        "hold": 2.11432375,
+        "stake": 2.11517244,
+        "t": 1793862000000,
+        "value": 1.59211847
+      },
+      {
+        "hold": 2.110829,
+        "stake": 2.11167989,
+        "t": 1793865600000,
+        "value": 1.58759161
+      },
+      {
+        "hold": 2.11706963,
+        "stake": 2.117931,
+        "t": 1793869200000,
+        "value": 1.59567528
+      },
+      {
+        "hold": 2.11407413,
+        "stake": 2.11493812,
+        "t": 1793872800000,
+        "value": 1.59179512
+      },
+      {
+        "hold": 2.11032975,
+        "stake": 2.11119568,
+        "t": 1793876400000,
+        "value": 1.58694492
+      },
+      {
+        "hold": 2.1098305,
+        "stake": 2.11070115,
+        "t": 1793880000000,
+        "value": 1.58629822
+      },
+      {
+        "hold": 2.09160787,
+        "stake": 2.09246774,
+        "t": 1793883600000,
+        "value": 1.56269391
+      },
+      {
+        "hold": 2.09460337,
+        "stake": 2.09547093,
+        "t": 1793887200000,
+        "value": 1.56657407
+      },
+      {
+        "hold": 2.07363487,
+        "stake": 2.07448896,
+        "t": 1793890800000,
+        "value": 1.53941294
+      },
+      {
+        "hold": 2.03244675,
+        "stake": 2.03326915,
+        "t": 1793894400000,
+        "value": 1.48606072
+      },
+      {
+        "hold": 2.04118363,
+        "stake": 2.04201859,
+        "t": 1793898000000,
+        "value": 1.49737786
+      },
+      {
+        "hold": 2.03069938,
+        "stake": 2.03152971,
+        "t": 1793901600000,
+        "value": 1.4837973
+      },
+      {
+        "hold": 2.0259565,
+        "stake": 2.02678728,
+        "t": 1793905200000,
+        "value": 1.47765371
+      },
+      {
+        "hold": 2.03444375,
+        "stake": 2.03528698,
+        "t": 1793908800000,
+        "value": 1.4886475
+      },
+      {
+        "hold": 2.03344525,
+        "stake": 2.03429233,
+        "t": 1793912400000,
+        "value": 1.48735411
+      },
+      {
+        "hold": 2.03044975,
+        "stake": 2.03129883,
+        "t": 1793916000000,
+        "value": 1.48347395
+      },
+      {
+        "hold": 2.02520762,
+        "stake": 2.02605659,
+        "t": 1793919600000,
+        "value": 1.47668367
+      },
+      {
+        "hold": 2.0219625,
+        "stake": 2.02281316,
+        "t": 1793923200000,
+        "value": 1.47248016
+      },
+      {
+        "hold": 2.048922,
+        "stake": 2.04980259,
+        "t": 1793926800000,
+        "value": 1.50927214
+      },
+      {
+        "hold": 2.03943625,
+        "stake": 2.04031275,
+        "t": 1793930400000,
+        "value": 1.49644707
+      },
+      {
+        "hold": 2.03569188,
+        "stake": 2.03656962,
+        "t": 1793934000000,
+        "value": 1.49138454
+      },
+      {
+        "hold": 2.02920162,
+        "stake": 2.03007797,
+        "t": 1793937600000,
+        "value": 1.48260949
+      },
+      {
+        "hold": 2.02346025,
+        "stake": 2.02433584,
+        "t": 1793941200000,
+        "value": 1.47484694
+      },
+      {
+        "hold": 2.02670537,
+        "stake": 2.02758879,
+        "t": 1793944800000,
+        "value": 1.47923447
+      },
+      {
+        "hold": 2.02520762,
+        "stake": 2.02609431,
+        "t": 1793948400000,
+        "value": 1.47720945
+      },
+      {
+        "hold": 2.03069938,
+        "stake": 2.03159612,
+        "t": 1793952000000,
+        "value": 1.4846345
+      },
+      {
+        "hold": 2.03619112,
+        "stake": 2.03709798,
+        "t": 1793955600000,
+        "value": 1.49205954
+      },
+      {
+        "hold": 2.03768887,
+        "stake": 2.03860197,
+        "t": 1793959200000,
+        "value": 1.49408455
+      },
+      {
+        "hold": 2.04318062,
+        "stake": 2.04410392,
+        "t": 1793962800000,
+        "value": 1.5015096
+      },
+      {
+        "hold": 2.040934,
+        "stake": 2.04185988,
+        "t": 1793966400000,
+        "value": 1.49847208
+      },
+      {
+        "hold": 2.03444375,
+        "stake": 2.03536795,
+        "t": 1793970000000,
+        "value": 1.48969703
+      },
+      {
+        "hold": 2.03619112,
+        "stake": 2.03712184,
+        "t": 1793973600000,
+        "value": 1.49205954
+      },
+      {
+        "hold": 2.0479235,
+        "stake": 2.04887081,
+        "t": 1793977200000,
+        "value": 1.50792214
+      },
+      {
+        "hold": 2.04667538,
+        "stake": 2.04762625,
+        "t": 1793980800000,
+        "value": 1.50623463
+      },
+      {
+        "hold": 2.05041975,
+        "stake": 2.05137927,
+        "t": 1793984400000,
+        "value": 1.51129716
+      },
+      {
+        "hold": 2.03918663,
+        "stake": 2.04013949,
+        "t": 1793988000000,
+        "value": 1.49610957
+      },
+      {
+        "hold": 2.044928,
+        "stake": 2.04589156,
+        "t": 1793991600000,
+        "value": 1.50387211
+      },
+      {
+        "hold": 2.040934,
+        "stake": 2.04189825,
+        "t": 1793995200000,
+        "value": 1.49847208
+      },
+      {
+        "hold": 2.03344525,
+        "stake": 2.03440652,
+        "t": 1793998800000,
+        "value": 1.48834702
+      },
+      {
+        "hold": 2.04143325,
+        "stake": 2.04240761,
+        "t": 1794002400000,
+        "value": 1.49914708
+      },
+      {
+        "hold": 2.03219712,
+        "stake": 2.0331666,
+        "t": 1794006000000,
+        "value": 1.48665951
+      },
+      {
+        "hold": 2.03519262,
+        "stake": 2.03617001,
+        "t": 1794009600000,
+        "value": 1.49070953
+      },
+      {
+        "hold": 2.04043475,
+        "stake": 2.04142245,
+        "t": 1794013200000,
+        "value": 1.49920186
+      },
+      {
+        "hold": 2.04442875,
+        "stake": 2.0454255,
+        "t": 1794016800000,
+        "value": 1.50486008
+      },
+      {
+        "hold": 2.04343025,
+        "stake": 2.04443075,
+        "t": 1794020400000,
+        "value": 1.50344553
+      },
+      {
+        "hold": 2.04467837,
+        "stake": 2.04568502,
+        "t": 1794024000000,
+        "value": 1.50521372
+      },
+      {
+        "hold": 2.04642575,
+        "stake": 2.0474391,
+        "t": 1794027600000,
+        "value": 1.50768919
+      },
+      {
+        "hold": 2.0419325,
+        "stake": 2.0429458,
+        "t": 1794031200000,
+        "value": 1.50132369
+      },
+      {
+        "hold": 2.04268138,
+        "stake": 2.04370029,
+        "t": 1794034800000,
+        "value": 1.50238461
+      },
+      {
+        "hold": 2.0419325,
+        "stake": 2.0429554,
+        "t": 1794038400000,
+        "value": 1.50132369
+      },
+      {
+        "hold": 2.042931,
+        "stake": 2.0439598,
+        "t": 1794042000000,
+        "value": 1.50273825
+      },
+      {
+        "hold": 2.03244675,
+        "stake": 2.03346877,
+        "t": 1794045600000,
+        "value": 1.48788542
+      },
+      {
+        "hold": 2.03169788,
+        "stake": 2.03272382,
+        "t": 1794049200000,
+        "value": 1.48682451
+      },
+      {
+        "hold": 2.03269638,
+        "stake": 2.03372818,
+        "t": 1794052800000,
+        "value": 1.48823906
+      },
+      {
+        "hold": 2.030949,
+        "stake": 2.0319836,
+        "t": 1794056400000,
+        "value": 1.48576359
+      },
+      {
+        "hold": 2.03544225,
+        "stake": 2.03648666,
+        "t": 1794060000000,
+        "value": 1.49212909
+      },
+      {
+        "hold": 2.03219712,
+        "stake": 2.03324263,
+        "t": 1794063600000,
+        "value": 1.48753178
+      },
+      {
+        "hold": 2.02720463,
+        "stake": 2.02824921,
+        "t": 1794067200000,
+        "value": 1.48045901
+      },
+      {
+        "hold": 2.01721963,
+        "stake": 2.01825754,
+        "t": 1794070800000,
+        "value": 1.46631346
+      },
+      {
+        "hold": 2.020964,
+        "stake": 2.02201088,
+        "t": 1794074400000,
+        "value": 1.47161804
+      },
+      {
+        "hold": 2.02645575,
+        "stake": 2.02751365,
+        "t": 1794078000000,
+        "value": 1.47939809
+      },
+      {
+        "hold": 2.01871738,
+        "stake": 2.01977104,
+        "t": 1794081600000,
+        "value": 1.46843529
+      },
+      {
+        "hold": 2.01672037,
+        "stake": 2.01777641,
+        "t": 1794085200000,
+        "value": 1.46560618
+      },
+      {
+        "hold": 2.02121362,
+        "stake": 2.02227957,
+        "t": 1794088800000,
+        "value": 1.47197168
+      },
+      {
+        "hold": 2.02445875,
+        "stake": 2.0255332,
+        "t": 1794092400000,
+        "value": 1.47656898
+      },
+      {
+        "hold": 2.04068437,
+        "stake": 2.04178265,
+        "t": 1794096000000,
+        "value": 1.4995555
+      },
+      {
+        "hold": 2.0339445,
+        "stake": 2.0350396,
+        "t": 1794099600000,
+        "value": 1.49000725
+      },
+      {
+        "hold": 2.02970088,
+        "stake": 2.03079569,
+        "t": 1794103200000,
+        "value": 1.4839954
+      },
+      {
+        "hold": 2.03419413,
+        "stake": 2.03529904,
+        "t": 1794106800000,
+        "value": 1.49036089
+      },
+      {
+        "hold": 2.03319562,
+        "stake": 2.03430411,
+        "t": 1794110400000,
+        "value": 1.48894634
+      },
+      {
+        "hold": 2.02370987,
+        "stake": 2.0248117,
+        "t": 1794114000000,
+        "value": 1.47550807
+      },
+      {
+        "hold": 2.03169788,
+        "stake": 2.03281406,
+        "t": 1794117600000,
+        "value": 1.48682451
+      },
+      {
+        "hold": 2.0319475,
+        "stake": 2.03306874,
+        "t": 1794121200000,
+        "value": 1.48717814
+      },
+      {
+        "hold": 2.0339445,
+        "stake": 2.03507293,
+        "t": 1794124800000,
+        "value": 1.49000725
+      },
+      {
+        "hold": 2.03044975,
+        "stake": 2.03157866,
+        "t": 1794128400000,
+        "value": 1.48505631
+      },
+      {
+        "hold": 2.03469337,
+        "stake": 2.03583224,
+        "t": 1794132000000,
+        "value": 1.49106817
+      },
+      {
+        "hold": 2.03419413,
+        "stake": 2.03533714,
+        "t": 1794135600000,
+        "value": 1.49036089
+      },
+      {
+        "hold": 2.03619112,
+        "stake": 2.03734138,
+        "t": 1794139200000,
+        "value": 1.49319
+      },
+      {
+        "hold": 2.0339445,
+        "stake": 2.03509673,
+        "t": 1794142800000,
+        "value": 1.49000725
+      },
+      {
+        "hold": 2.0279535,
+        "stake": 2.02910301,
+        "t": 1794146400000,
+        "value": 1.48151993
+      },
+      {
+        "hold": 2.03619112,
+        "stake": 2.0373557,
+        "t": 1794150000000,
+        "value": 1.49319
+      },
+      {
+        "hold": 2.0319475,
+        "stake": 2.0331115,
+        "t": 1794153600000,
+        "value": 1.48717814
+      },
+      {
+        "hold": 2.00773388,
+        "stake": 2.008872,
+        "t": 1794157200000,
+        "value": 1.45287519
+      },
+      {
+        "hold": 2.00773388,
+        "stake": 2.00887663,
+        "t": 1794160800000,
+        "value": 1.45287519
+      },
+      {
+        "hold": 2.02321063,
+        "stake": 2.02437774,
+        "t": 1794164400000,
+        "value": 1.47480079
+      },
+      {
+        "hold": 2.01672037,
+        "stake": 2.01788389,
+        "t": 1794168000000,
+        "value": 1.46560618
+      },
+      {
+        "hold": 2.01347525,
+        "stake": 2.01463926,
+        "t": 1794171600000,
+        "value": 1.46100888
+      },
+      {
+        "hold": 1.983021,
+        "stake": 1.98415036,
+        "t": 1794175200000,
+        "value": 1.41786495
+      },
+      {
+        "hold": 1.99250675,
+        "stake": 1.9936529,
+        "t": 1794178800000,
+        "value": 1.43130323
+      },
+      {
+        "hold": 2.00324063,
+        "stake": 2.00440529,
+        "t": 1794182400000,
+        "value": 1.44650969
+      },
+      {
+        "hold": 2.01372488,
+        "stake": 2.01490784,
+        "t": 1794186000000,
+        "value": 1.46136252
+      },
+      {
+        "hold": 2.01222713,
+        "stake": 2.01341279,
+        "t": 1794189600000,
+        "value": 1.45924069
+      },
+      {
+        "hold": 2.0139745,
+        "stake": 2.01516711,
+        "t": 1794193200000,
+        "value": 1.46171616
+      },
+      {
+        "hold": 2.01023012,
+        "stake": 2.01142245,
+        "t": 1794196800000,
+        "value": 1.45641158
+      },
+      {
+        "hold": 2.00873238,
+        "stake": 2.00992735,
+        "t": 1794200400000,
+        "value": 1.45428974
+      },
+      {
+        "hold": 1.995003,
+        "stake": 1.99618432,
+        "t": 1794204000000,
+        "value": 1.43483961
+      },
+      {
+        "hold": 1.99050975,
+        "stake": 1.99168962,
+        "t": 1794207600000,
+        "value": 1.42847412
+      },
+      {
+        "hold": 1.97628113,
+        "stake": 1.97744644,
+        "t": 1794211200000,
+        "value": 1.40831671
+      },
+      {
+        "hold": 1.99625112,
+        "stake": 1.99744781,
+        "t": 1794214800000,
+        "value": 1.43660781
+      },
+      {
+        "hold": 1.987015,
+        "stake": 1.98820376,
+        "t": 1794218400000,
+        "value": 1.42352317
+      },
+      {
+        "hold": 1.97827813,
+        "stake": 1.97945955,
+        "t": 1794222000000,
+        "value": 1.41114582
+      },
+      {
+        "hold": 1.98451875,
+        "stake": 1.98571315,
+        "t": 1794225600000,
+        "value": 1.41998679
+      },
+      {
+        "hold": 1.99874737,
+        "stake": 1.99996575,
+        "t": 1794229200000,
+        "value": 1.44014419
+      },
+      {
+        "hold": 1.99325562,
+        "stake": 1.99447104,
+        "t": 1794232800000,
+        "value": 1.43236414
+      },
+      {
+        "hold": 2.01023012,
+        "stake": 2.01147349,
+        "t": 1794236400000,
+        "value": 1.45641158
+      },
+      {
+        "hold": 2.02545725,
+        "stake": 2.02672632,
+        "t": 1794240000000,
+        "value": 1.47798354
+      },
+      {
+        "hold": 2.01072938,
+        "stake": 2.01198271,
+        "t": 1794243600000,
+        "value": 1.45711885
+      },
+      {
+        "hold": 2.0019925,
+        "stake": 2.00323831,
+        "t": 1794247200000,
+        "value": 1.4447415
+      },
+      {
+        "hold": 2.01447375,
+        "stake": 2.01574161,
+        "t": 1794250800000,
+        "value": 1.46242343
+      },
+      {
+        "hold": 2.01023012,
+        "stake": 2.01149669,
+        "t": 1794254400000,
+        "value": 1.45641158
+      },
+      {
+        "hold": 2.01047975,
+        "stake": 2.01175131,
+        "t": 1794258000000,
+        "value": 1.45676521
+      },
+      {
+        "hold": 2.018967,
+        "stake": 2.0202552,
+        "t": 1794261600000,
+        "value": 1.46878893
+      },
+      {
+        "hold": 2.0179685,
+        "stake": 2.01925997,
+        "t": 1794265200000,
+        "value": 1.46737438
+      },
+      {
+        "hold": 2.01422412,
+        "stake": 2.01551494,
+        "t": 1794268800000,
+        "value": 1.4620698
+      },
+      {
+        "hold": 2.01447375,
+        "stake": 2.01576959,
+        "t": 1794272400000,
+        "value": 1.46242343
+      },
+      {
+        "hold": 2.01023012,
+        "stake": 2.01152454,
+        "t": 1794276000000,
+        "value": 1.45641158
+      },
+      {
+        "hold": 2.00623613,
+        "stake": 2.00752942,
+        "t": 1794279600000,
+        "value": 1.45075336
+      },
+      {
+        "hold": 2.00648575,
+        "stake": 2.00778403,
+        "t": 1794283200000,
+        "value": 1.45110699
+      },
+      {
+        "hold": 2.01047975,
+        "stake": 2.01178844,
+        "t": 1794286800000,
+        "value": 1.45676521
+      },
+      {
+        "hold": 2.01472338,
+        "stake": 2.01604289,
+        "t": 1794290400000,
+        "value": 1.46277707
+      },
+      {
+        "hold": 2.01697,
+        "stake": 2.01829746,
+        "t": 1794294000000,
+        "value": 1.46595982
+      },
+      {
+        "hold": 2.01622113,
+        "stake": 2.01755216,
+        "t": 1794297600000,
+        "value": 1.4648989
+      },
+      {
+        "hold": 2.01272637,
+        "stake": 2.01405694,
+        "t": 1794301200000,
+        "value": 1.45994796
+      },
+      {
+        "hold": 2.0119775,
+        "stake": 2.01331162,
+        "t": 1794304800000,
+        "value": 1.45888705
+      },
+      {
+        "hold": 2.00024512,
+        "stake": 2.00156651,
+        "t": 1794308400000,
+        "value": 1.44226603
+      },
+      {
+        "hold": 2.00948125,
+        "stake": 2.01082096,
+        "t": 1794312000000,
+        "value": 1.45535066
+      },
+      {
+        "hold": 2.0159715,
+        "stake": 2.01732552,
+        "t": 1794315600000,
+        "value": 1.46454527
+      },
+      {
+        "hold": 2.01572187,
+        "stake": 2.01708019,
+        "t": 1794319200000,
+        "value": 1.46419163
+      },
+      {
+        "hold": 2.03843775,
+        "stake": 2.03983485,
+        "t": 1794322800000,
+        "value": 1.49637275
+      },
+      {
+        "hold": 1.997,
+        "stake": 1.99833945,
+        "t": 1794326400000,
+        "value": 1.43766872
+      },
+      {
+        "hold": 1.97852775,
+        "stake": 1.97984384,
+        "t": 1794330000000,
+        "value": 1.41149946
+      },
+      {
+        "hold": 1.98876238,
+        "stake": 1.99009847,
+        "t": 1794333600000,
+        "value": 1.42599865
+      },
+      {
+        "hold": 2.004988,
+        "stake": 2.00635333,
+        "t": 1794337200000,
+        "value": 1.44898516
+      },
+      {
+        "hold": 2.000994,
+        "stake": 2.00235784,
+        "t": 1794340800000,
+        "value": 1.44332694
+      },
+      {
+        "hold": 1.9960015,
+        "stake": 1.99736228,
+        "t": 1794344400000,
+        "value": 1.43625417
+      },
+      {
+        "hold": 2.00523763,
+        "stake": 2.00661718,
+        "t": 1794348000000,
+        "value": 1.4493388
+      },
+      {
+        "hold": 1.99525262,
+        "stake": 1.99662139,
+        "t": 1794351600000,
+        "value": 1.43519325
+      },
+      {
+        "hold": 2.00349025,
+        "stake": 2.00487633,
+        "t": 1794355200000,
+        "value": 1.44686333
+      },
+      {
+        "hold": 2.01422412,
+        "stake": 2.01563148,
+        "t": 1794358800000,
+        "value": 1.46298386
+      },
+      {
+        "hold": 2.02146325,
+        "stake": 2.02288655,
+        "t": 1794362400000,
+        "value": 1.47354601
+      },
+      {
+        "hold": 2.0279535,
+        "stake": 2.02939164,
+        "t": 1794366000000,
+        "value": 1.48301552
+      },
+      {
+        "hold": 2.02920162,
+        "stake": 2.03064646,
+        "t": 1794369600000,
+        "value": 1.48483658
+      },
+      {
+        "hold": 2.02370987,
+        "stake": 2.02515081,
+        "t": 1794373200000,
+        "value": 1.47682391
+      },
+      {
+        "hold": 2.02071437,
+        "stake": 2.02215529,
+        "t": 1794376800000,
+        "value": 1.47245337
+      },
+      {
+        "hold": 2.008982,
+        "stake": 2.01040902,
+        "t": 1794380400000,
+        "value": 1.45533541
+      },
+      {
+        "hold": 2.0139745,
+        "stake": 2.01541409,
+        "t": 1794384000000,
+        "value": 1.46261965
+      },
+      {
+        "hold": 2.00448875,
+        "stake": 2.00591788,
+        "t": 1794387600000,
+        "value": 1.4487796
+      },
+      {
+        "hold": 2.01047975,
+        "stake": 2.01192307,
+        "t": 1794391200000,
+        "value": 1.45752068
+      },
+      {
+        "hold": 2.01522262,
+        "stake": 2.0166782,
+        "t": 1794394800000,
+        "value": 1.46444071
+      },
+      {
+        "hold": 2.05341525,
+        "stake": 2.05493697,
+        "t": 1794398400000,
+        "value": 1.52016513
+      },
+      {
+        "hold": 2.042931,
+        "stake": 2.04444066,
+        "t": 1794402000000,
+        "value": 1.50486823
+      },
+      {
+        "hold": 2.0539145,
+        "stake": 2.05544676,
+        "t": 1794405600000,
+        "value": 1.52089356
+      },
+      {
+        "hold": 2.03718963,
+        "stake": 2.03869957,
+        "t": 1794409200000,
+        "value": 1.49649136
+      },
+      {
+        "hold": 2.04343025,
+        "stake": 2.04495515,
+        "t": 1794412800000,
+        "value": 1.50559666
+      },
+      {
+        "hold": 2.05341525,
+        "stake": 2.05496129,
+        "t": 1794416400000,
+        "value": 1.52016513
+      },
+      {
+        "hold": 2.04417913,
+        "stake": 2.04571488,
+        "t": 1794420000000,
+        "value": 1.50668929
+      },
+      {
+        "hold": 2.03669038,
+        "stake": 2.03821862,
+        "t": 1794423600000,
+        "value": 1.49576293
+      },
+      {
+        "hold": 2.03718963,
+        "stake": 2.03872347,
+        "t": 1794427200000,
+        "value": 1.49649136
+      },
+      {
+        "hold": 2.0339445,
+        "stake": 2.03547775,
+        "t": 1794430800000,
+        "value": 1.4917566
+      },
+      {
+        "hold": 2.02470838,
+        "stake": 2.02623105,
+        "t": 1794434400000,
+        "value": 1.47828076
+      },
+      {
+        "hold": 2.006985,
+        "stake": 2.00848286,
+        "t": 1794438000000,
+        "value": 1.45242172
+      },
+      {
+        "hold": 2.00324063,
+        "stake": 2.00473685,
+        "t": 1794441600000,
+        "value": 1.44695854
+      },
+      {
+        "hold": 2.01122862,
+        "stake": 2.01274285,
+        "t": 1794445200000,
+        "value": 1.45861332
+      },
+      {
+        "hold": 2.00623613,
+        "stake": 2.0077466,
+        "t": 1794448800000,
+        "value": 1.45132908
+      },
+      {
+        "hold": 1.998997,
+        "stake": 2.00049988,
+        "t": 1794452400000,
+        "value": 1.44076694
+      },
+      {
+        "hold": 1.997,
+        "stake": 1.99850409,
+        "t": 1794456000000,
+        "value": 1.43785324
+      },
+      {
+        "hold": 1.9940045,
+        "stake": 1.99550808,
+        "t": 1794459600000,
+        "value": 1.4334827
+      },
+      {
+        "hold": 1.98851275,
+        "stake": 1.99001154,
+        "t": 1794463200000,
+        "value": 1.42547003
+      },
+      {
+        "hold": 1.98352025,
+        "stake": 1.98501504,
+        "t": 1794466800000,
+        "value": 1.4181858
+      },
+      {
+        "hold": 1.98327062,
+        "stake": 1.98476949,
+        "t": 1794470400000,
+        "value": 1.41782158
+      },
+      {
+        "hold": 1.97253675,
+        "stake": 1.97402168,
+        "t": 1794474000000,
+        "value": 1.40216047
+      },
+      {
+        "hold": 1.98277138,
+        "stake": 1.98427839,
+        "t": 1794477600000,
+        "value": 1.41709316
+      },
+      {
+        "hold": 1.9800255,
+        "stake": 1.98153227,
+        "t": 1794481200000,
+        "value": 1.41308683
+      },
+      {
+        "hold": 1.969042,
+        "stake": 1.97053422,
+        "t": 1794484800000,
+        "value": 1.39706151
+      },
+      {
+        "hold": 1.95855775,
+        "stake": 1.96003618,
+        "t": 1794488400000,
+        "value": 1.3817646
+      },
+      {
+        "hold": 1.95331563,
+        "stake": 1.95478929,
+        "t": 1794492000000,
+        "value": 1.37411615
+      },
+      {
+        "hold": 1.95830812,
+        "stake": 1.95979487,
+        "t": 1794495600000,
+        "value": 1.38140039
+      },
+      {
+        "hold": 1.95755925,
+        "stake": 1.95904905,
+        "t": 1794499200000,
+        "value": 1.38030776
+      },
+      {
+        "hold": 1.96030513,
+        "stake": 1.96180413,
+        "t": 1794502800000,
+        "value": 1.38431409
+      },
+      {
+        "hold": 1.95681038,
+        "stake": 1.9583076,
+        "t": 1794506400000,
+        "value": 1.37921512
+      },
+      {
+        "hold": 1.96379988,
+        "stake": 1.96531383,
+        "t": 1794510000000,
+        "value": 1.38941305
+      },
+      {
+        "hold": 1.96355025,
+        "stake": 1.96506817,
+        "t": 1794513600000,
+        "value": 1.38904884
+      },
+      {
+        "hold": 1.96529762,
+        "stake": 1.96682306,
+        "t": 1794517200000,
+        "value": 1.39159833
+      },
+      {
+        "hold": 1.95706,
+        "stake": 1.95857514,
+        "t": 1794520800000,
+        "value": 1.37957933
+      },
+      {
+        "hold": 1.9580585,
+        "stake": 1.9595798,
+        "t": 1794524400000,
+        "value": 1.38103618
+      },
+      {
+        "hold": 1.96255175,
+        "stake": 1.96408548,
+        "t": 1794528000000,
+        "value": 1.387592
+      },
+      {
+        "hold": 1.96629613,
+        "stake": 1.967841,
+        "t": 1794531600000,
+        "value": 1.39398335
+      },
+      {
+        "hold": 1.97029013,
+        "stake": 1.97184662,
+        "t": 1794535200000,
+        "value": 1.39998312
+      },
+      {
+        "hold": 1.95855775,
+        "stake": 1.96009745,
+        "t": 1794538800000,
+        "value": 1.38235878
+      },
+      {
+        "hold": 1.94158325,
+        "stake": 1.9430965,
+        "t": 1794542400000,
+        "value": 1.35685973
+      },
+      {
+        "hold": 1.92460875,
+        "stake": 1.92609539,
+        "t": 1794546000000,
+        "value": 1.33136068
+      },
+      {
+        "hold": 1.941084,
+        "stake": 1.94260492,
+        "t": 1794549600000,
+        "value": 1.35610976
+      },
+      {
+        "hold": 1.97927662,
+        "stake": 1.98087176,
+        "t": 1794553200000,
+        "value": 1.41348262
+      },
+      {
+        "hold": 1.9840195,
+        "stake": 1.98562783,
+        "t": 1794556800000,
+        "value": 1.42060735
+      },
+      {
+        "hold": 1.98676537,
+        "stake": 1.98838327,
+        "t": 1794560400000,
+        "value": 1.4247322
+      },
+      {
+        "hold": 1.98027513,
+        "stake": 1.98188556,
+        "t": 1794564000000,
+        "value": 1.41498256
+      },
+      {
+        "hold": 1.98152325,
+        "stake": 1.98314048,
+        "t": 1794567600000,
+        "value": 1.41685749
+      },
+      {
+        "hold": 1.99525262,
+        "stake": 1.99689984,
+        "t": 1794571200000,
+        "value": 1.43748173
+      },
+      {
+        "hold": 1.98951125,
+        "stake": 1.99115234,
+        "t": 1794574800000,
+        "value": 1.42885705
+      },
+      {
+        "hold": 2.0019925,
+        "stake": 2.00366143,
+        "t": 1794578400000,
+        "value": 1.44760635
+      },
+      {
+        "hold": 1.9960015,
+        "stake": 1.99766382,
+        "t": 1794582000000,
+        "value": 1.43860668
+      },
+      {
+        "hold": 1.98426913,
+        "stake": 1.98591398,
+        "t": 1794585600000,
+        "value": 1.42098234
+      },
+      {
+        "hold": 1.98227212,
+        "stake": 1.98391773,
+        "t": 1794589200000,
+        "value": 1.41798245
+      },
+      {
+        "hold": 1.9820225,
+        "stake": 1.98367214,
+        "t": 1794592800000,
+        "value": 1.41760747
+      },
+      {
+        "hold": 1.98576688,
+        "stake": 1.9874281,
+        "t": 1794596400000,
+        "value": 1.42323226
+      },
+      {
+        "hold": 1.99350525,
+        "stake": 1.99518568,
+        "t": 1794600000000,
+        "value": 1.43485682
+      },
+      {
+        "hold": 1.99026012,
+        "stake": 1.99193893,
+        "t": 1794603600000,
+        "value": 1.429982
+      },
+      {
+        "hold": 1.979027,
+        "stake": 1.98068891,
+        "t": 1794607200000,
+        "value": 1.41310763
+      },
+      {
+        "hold": 1.96055475,
+        "stake": 1.9621858,
+        "t": 1794610800000,
+        "value": 1.38535867
+      },
+      {
+        "hold": 1.9680435,
+        "stake": 1.9696933,
+        "t": 1794614400000,
+        "value": 1.39660825
+      },
+      {
+        "hold": 1.9720375,
+        "stake": 1.97369719,
+        "t": 1794616200000,
+        "value": 1.40307219
+      }
+    ],
+    "stake_twr": -0.11074693,
+    "start": {
+      "price": 4.439,
+      "time_ms": 1793271140648,
+      "value_usd": 2.2195
+    },
+    "strategy_sha256": null,
+    "twr": -0.36784312,
+    "unranked_reason": null,
+    "vs_funded": -0.18920995,
+    "vs_hold": -0.28851648,
+    "vs_hold_after_gas": -0.35599136,
+    "vs_stake": -0.28911477
+  },
+  "events": [
+    {
+      "block_height": 275288344,
+      "block_time_ms": 1793270524899,
+      "data": {
+        "agent_id": "a3-qwen36-tee.it1793205219-owner.testnet",
+        "exchange_id": "ref-finance-101.testnet",
+        "intents_id": "it1793205011-intents.testnet",
+        "mpc_id": "v1.signer-prod.testnet",
+        "owner_id": "it1793205219-owner.testnet",
+        "policy": {
+          "max_slippage_bps": 100,
+          "max_trades_per_hour": 12,
+          "pairs": [
+            {
+              "min_price_den": "10",
+              "min_price_num": "14",
+              "pool_id": 1103,
+              "token_in": "wrap.testnet",
+              "token_out": "usdc.itachicara.testnet"
+            },
+            {
+              "min_price_den": "100",
+              "min_price_num": "33",
+              "pool_id": 1103,
+              "token_in": "usdc.itachicara.testnet",
+              "token_out": "wrap.testnet"
+            }
+          ],
+          "tokens": [
+            {
+              "max_per_day": "3000000000000000000000000",
+              "max_per_trade": "500000000000000000000000",
+              "token": "wrap.testnet"
+            },
+            {
+              "max_per_day": "5000000000000000000000000",
+              "max_per_trade": "1000000000000000000000000",
+              "token": "usdc.itachicara.testnet"
+            }
+          ]
+        }
+      },
+      "event": "init",
+      "receipt_id": "C6oxcJFrQuWW5sFHqXfRjp4gaKTDEaxK5qEVDZ6aUvXb",
+      "tx": "7oPvR7hvwSxuZfqx8ieMRUc8wRZ7798ZXEtfW8CcMGTe"
+    },
+    {
+      "block_height": 275288395,
+      "block_time_ms": 1793270555843,
+      "data": {
+        "amount": "500000000000000000000000",
+        "token": "wrap.testnet"
+      },
+      "event": "deposit",
+      "receipt_id": "2xjruApU4mBn86NzbHb4d8tNX6XeNWjRmn6QoLYkJwnQ",
+      "tx": "HCUBVraeGPy9DqhJ8jMLnP4H3yVFQ6swS1KoehkWRFzp"
+    },
+    {
+      "block_height": 275289874,
+      "block_time_ms": 1793271402109,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "f4ed98e307e9eba90dc0eef4ca019a8f151bcef050233a0d7fd59ca6b306292e",
+        "seq": 1
+      },
+      "event": "skip",
+      "receipt_id": "GMzwv5njU162voupVuc2pNGtPRyGpTae3tjDvfY6Wg5x",
+      "tx": "DxB7YtvrQAkqfAG8w224tEQbbxVz7uZdN62RRw7pdPp3"
+    },
+    {
+      "block_height": 275293658,
+      "block_time_ms": 1793273543373,
+      "data": {
+        "amount_in": "125000000000000000000000",
+        "min_amount_out": "175000000000000000000000",
+        "pool_id": 1103,
+        "receipt_hash": "1c59c0d0a4ac91ae7a65259da7aa044cfc73b07f6f894b0111137f36cbb5f2f0",
+        "seq": 2,
+        "token_in": "wrap.testnet",
+        "token_out": "usdc.itachicara.testnet",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "v6EvtbBVAhcTaaf6MA1sc3BUpbu9iRiuK1FD7fEaCbV",
+      "tx": "7f4JMTDiP9wi5kdQ4f4KF1hxmS7M64j2D4pSRqNk2q4m"
+    },
+    {
+      "block_height": 275293672,
+      "block_time_ms": 1793273551343,
+      "data": {
+        "amount_in": "125000000000000000000000",
+        "amount_out": "262860330566099775408257",
+        "min_amount_out": "260231727260438777654174",
+        "note": "",
+        "pool_id": 1103,
+        "quote": "262860330566099775408257",
+        "receipt_hash": "1c59c0d0a4ac91ae7a65259da7aa044cfc73b07f6f894b0111137f36cbb5f2f0",
+        "returned": true,
+        "seq": 2,
+        "token_in": "wrap.testnet",
+        "token_out": "usdc.itachicara.testnet",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "5efyhUkDEUD18fgGZt7MxHgJ1JhDHvNXEJVmPHanhCMQ",
+      "tx": "7f4JMTDiP9wi5kdQ4f4KF1hxmS7M64j2D4pSRqNk2q4m"
+    },
+    {
+      "block_height": 275297599,
+      "block_time_ms": 1793275827266,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "7c7ba46c85e7f6028b7d7da5d375e6746228da9256261b523d6aad4c36d69d0a",
+        "seq": 3
+      },
+      "event": "skip",
+      "receipt_id": "3PSZ8NbpQK6qM687o5wb7sHevfBR1XitMFUQeWkEeqeJ",
+      "tx": "ASuPjbiNW6iDkfEQFX2w9TwfK4XBW8Db2uXAhYRgtXcN"
+    },
+    {
+      "block_height": 275374027,
+      "block_time_ms": 1793319629755,
+      "data": {
+        "amount_in": "65000000000000000000000",
+        "min_amount_out": "21450000000000000000000",
+        "pool_id": 1103,
+        "receipt_hash": "dd78589a557fe8dd11665bc8e9e57f6d7f8dc3e57da594a320eb51f42658e99c",
+        "seq": 4,
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "8Fb6SZAXTA7h9GjRjSdPsLPMg3e11JfEg5HUzQT9JXNz",
+      "tx": "G9hiWrwXysHjQUh4kgTX8aDEf6yUoQoYkJddd83gT9pL"
+    },
+    {
+      "block_height": 275374041,
+      "block_time_ms": 1793319638246,
+      "data": {
+        "amount_in": "65000000000000000000000",
+        "amount_out": "30731593216675529282202",
+        "min_amount_out": "30424277284508773989379",
+        "note": "",
+        "pool_id": 1103,
+        "quote": "30731593216675529282202",
+        "receipt_hash": "dd78589a557fe8dd11665bc8e9e57f6d7f8dc3e57da594a320eb51f42658e99c",
+        "returned": true,
+        "seq": 4,
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "5QMK1aK8HBgcfufYgApNkPaLFvgZEQbKsxTUApU3iDGm",
+      "tx": "G9hiWrwXysHjQUh4kgTX8aDEf6yUoQoYkJddd83gT9pL"
+    },
+    {
+      "block_height": 275523753,
+      "block_time_ms": 1793406052114,
+      "data": {
+        "amount_in": "45000000000000000000000",
+        "min_amount_out": "14850000000000000000000",
+        "pool_id": 1103,
+        "receipt_hash": "697c8957c97cbc8d203920485e4fe943071911fc01e65a5db057395c25095ff8",
+        "seq": 5,
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "HApywJ86Fm68VigwF2AKZDPWom66EbREdnNNGEa72r2j",
+      "tx": "C9re6uJ8jZVDWX2DZEGdGBWwZwiCYmgBMGtn4MBHUpqR"
+    },
+    {
+      "block_height": 275523767,
+      "block_time_ms": 1793406060616,
+      "data": {
+        "amount_in": "45000000000000000000000",
+        "amount_out": "21277309882820068299611",
+        "min_amount_out": "21064536783991867616614",
+        "note": "",
+        "pool_id": 1103,
+        "quote": "21277309882820068299611",
+        "receipt_hash": "697c8957c97cbc8d203920485e4fe943071911fc01e65a5db057395c25095ff8",
+        "returned": true,
+        "seq": 5,
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "D2L7HiEfyzseGHrZrf6YWaSXZVPwL4iSKewWNLu7oTh4",
+      "tx": "C9re6uJ8jZVDWX2DZEGdGBWwZwiCYmgBMGtn4MBHUpqR"
+    },
+    {
+      "block_height": 275673224,
+      "block_time_ms": 1793492456020,
+      "data": {
+        "amount_in": "100000000000000000000000",
+        "min_amount_out": "140000000000000000000000",
+        "pool_id": 1103,
+        "receipt_hash": "cf813ee5d6d333baaf13473e4e4d64f5d482c2900ec69ce26a93bebc79bcc933",
+        "seq": 6,
+        "token_in": "wrap.testnet",
+        "token_out": "usdc.itachicara.testnet",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "3Uup7DU265do1RcygYLzNhStsuExyHzaMsmGusvDwu4d",
+      "tx": "PFfvFu4LmtE94PV5N9jWESnh1ULEvKrKNZsthCFiev1"
+    },
+    {
+      "block_height": 275673238,
+      "block_time_ms": 1793492464373,
+      "data": {
+        "amount_in": "100000000000000000000000",
+        "amount_out": "210225853228389121952183",
+        "min_amount_out": "208123594696105230732661",
+        "note": "",
+        "pool_id": 1103,
+        "quote": "210225853228389121952183",
+        "receipt_hash": "cf813ee5d6d333baaf13473e4e4d64f5d482c2900ec69ce26a93bebc79bcc933",
+        "returned": true,
+        "seq": 6,
+        "token_in": "wrap.testnet",
+        "token_out": "usdc.itachicara.testnet",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "3LLU785wPrg97K195D1frD2yKuDu2iN6cwW8FuF3fjgM",
+      "tx": "PFfvFu4LmtE94PV5N9jWESnh1ULEvKrKNZsthCFiev1"
+    },
+    {
+      "block_height": 275823084,
+      "block_time_ms": 1793578864947,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "0b5b6833bfb86f51bc2e51ace28d2add017f25f54e392bb7313e97463e0b4eb6",
+        "seq": 7
+      },
+      "event": "skip",
+      "receipt_id": "8GjEd1NZfse8SkdyAfGumFzpdNKJggbSncBm6kQ2a6ki",
+      "tx": "Ek4rG1UNnEboW9qomHnRUeu4eXnYfdKybKSr8UYPFrZJ"
+    },
+    {
+      "block_height": 275973221,
+      "block_time_ms": 1793665265734,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "a2a80a753a3525c71ed01de51d18fb228b99e919c388b16652bb4e04c6f5dd55",
+        "seq": 8
+      },
+      "event": "skip",
+      "receipt_id": "Eb7o3RykB9mRiDXRTrWKjWcsBbEZzzz13J9zAbqTxSmr",
+      "tx": "ES6252vS3RYnwdbdyHT8YJemKkXgZ5icdrYLC3sKr8x"
+    },
+    {
+      "block_height": 276121053,
+      "block_time_ms": 1793751621008,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "e563c0c0e477d899e82f10624f667ce06f046b53ac1a1c362328b52c3895f80e",
+        "seq": 9
+      },
+      "event": "skip",
+      "receipt_id": "HhFG4eVbBUs1g834qT5bccWxhJTrp8yQQYxMVxepK7au",
+      "tx": "4yHg51b19K2X4PnJzzWPEuNrvZccJmRFTpMyPJUgr2Sm"
+    },
+    {
+      "block_height": 276268200,
+      "block_time_ms": 1793838023369,
+      "data": {
+        "amount_in": "50000000000000000000000",
+        "min_amount_out": "16500000000000000000000",
+        "pool_id": 1103,
+        "receipt_hash": "5593badcf3eea488c3a1d7c60e3a2729837376fe629a0986388f3a5ea36617d1",
+        "seq": 10,
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "DupK3XfgYdXy2PJEJZqTSPxrduqsbCADVYLwNWQ5HwMN",
+      "tx": "ADgwp7FGXWUHMaZhYDWW6ezX4YNwXYPfirtFKmiHbbn5"
+    },
+    {
+      "block_height": 276268214,
+      "block_time_ms": 1793838031865,
+      "data": {
+        "amount_in": "50000000000000000000000",
+        "amount_out": "23641401228063610734972",
+        "min_amount_out": "23404987215782974627622",
+        "note": "",
+        "pool_id": 1103,
+        "quote": "23641401228063610734972",
+        "receipt_hash": "5593badcf3eea488c3a1d7c60e3a2729837376fe629a0986388f3a5ea36617d1",
+        "returned": true,
+        "seq": 10,
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "8Fp9G8LMtRRo6btyuMz9QxmRNUUgNUx5MDgSa4w1oe5R",
+      "tx": "ADgwp7FGXWUHMaZhYDWW6ezX4YNwXYPfirtFKmiHbbn5"
+    },
+    {
+      "block_height": 276414522,
+      "block_time_ms": 1793924442469,
+      "data": {
+        "amount_in": "50000000000000000000000",
+        "min_amount_out": "16500000000000000000000",
+        "pool_id": 1103,
+        "receipt_hash": "2fdd4650c21a2db2ecea4038a22f9f42839730f854e21c897c16cb85609cec28",
+        "seq": 11,
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "HqHkki8FtwV2YpN4qkSSkfBg1LEmrCcc3CryyZp4MxNg",
+      "tx": "Bj4o55j5wPLsPGcYZD5CFqUN3dXAEN67pyv9DRLpPyQ7"
+    },
+    {
+      "block_height": 276414536,
+      "block_time_ms": 1793924450290,
+      "data": {
+        "amount_in": "50000000000000000000000",
+        "amount_out": "23641327650857395703879",
+        "min_amount_out": "23404914374348821746840",
+        "note": "",
+        "pool_id": 1103,
+        "quote": "23641327650857395703879",
+        "receipt_hash": "2fdd4650c21a2db2ecea4038a22f9f42839730f854e21c897c16cb85609cec28",
+        "returned": true,
+        "seq": 11,
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "9FKiAQWZimPpZHXB5Z3wZTpNihFzeSasdP1uYoGsLjJi",
+      "tx": "Bj4o55j5wPLsPGcYZD5CFqUN3dXAEN67pyv9DRLpPyQ7"
+    },
+    {
+      "block_height": 276558123,
+      "block_time_ms": 1794010841387,
+      "data": {
+        "amount_in": "60000000000000000000000",
+        "min_amount_out": "19800000000000000000000",
+        "pool_id": 1103,
+        "receipt_hash": "4bf05d141f176ffb08e279402022b91decc0c92a233de9c4d6b492b492409431",
+        "seq": 12,
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "Bgx7C8dEKbuvgmz5JCfhF5bChtm4mP79WDERk4a9P8zv",
+      "tx": "6EYxsZ8GC8EqUmdjxDh6uw2Xit1r9sRbzSp4EufEboNb"
+    },
+    {
+      "block_height": 276558137,
+      "block_time_ms": 1794010849820,
+      "data": {
+        "amount_in": "60000000000000000000000",
+        "amount_out": "28369548784750647446861",
+        "min_amount_out": "28085853296903140972392",
+        "note": "",
+        "pool_id": 1103,
+        "quote": "28369548784750647446861",
+        "receipt_hash": "4bf05d141f176ffb08e279402022b91decc0c92a233de9c4d6b492b492409431",
+        "returned": true,
+        "seq": 12,
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "8iz4Q1obCrNfxGBxhZc11kAG4FkJUHqJKGsqRd3WEpjW",
+      "tx": "6EYxsZ8GC8EqUmdjxDh6uw2Xit1r9sRbzSp4EufEboNb"
+    },
+    {
+      "block_height": 276702328,
+      "block_time_ms": 1794097218591,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "010793c267e85a7e2985922331ad79c21b0bc912e097921ee577fe3a58db70eb",
+        "seq": 13
+      },
+      "event": "skip",
+      "receipt_id": "BzPCY89SX5P9YtRV72m3WXDLDEsZdQA741kJRVHhJLeo",
+      "tx": "ESeJ5yHz2ChVpvLNeCdfDPUpDpyTJKnipRXPpR3KWPKj"
+    },
+    {
+      "block_height": 276847490,
+      "block_time_ms": 1794183622542,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "3a2587e01646799f077ab154e40f9215ea2a5608a1655542d79c6547d5d117ef",
+        "seq": 14
+      },
+      "event": "skip",
+      "receipt_id": "6Bz6k96DjaHEDcbQU5ZrAErqYWwKgEi59GDFJCR9TvTG",
+      "tx": "G3PZ9wjwMP5FRc1Xu524SZRZDRmMXTMWk5NfHVqZE2bj"
+    },
+    {
+      "block_height": 276993144,
+      "block_time_ms": 1794270060329,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "3f55411e360f7e6a718941660ba985f9d6e8da76d0e1ecf8a11f7c781efc2a6f",
+        "seq": 15
+      },
+      "event": "skip",
+      "receipt_id": "Atc8ixh71cvDsKqorh3uURW6sFpqJi9eBkqHFpHRA39v",
+      "tx": "8CzNXAzzHFCMPjz9p3KSvJyV3ot5iZg4AEnd8CbauPxK"
+    },
+    {
+      "block_height": 277140556,
+      "block_time_ms": 1794356455532,
+      "data": {
+        "amount_in": "40000000000000000000000",
+        "min_amount_out": "13200000000000000000000",
+        "pool_id": 1103,
+        "receipt_hash": "cccb765944d120daada26bd66cf632693644eb29570a3725094e3a4fff63d7aa",
+        "seq": 16,
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "4FeKyDCCaybxxE5euLkMG8YhiSJGmLFLJXudEvoTPwaV",
+      "tx": "2KiM1PA4PKHFXvNhevAZyQWFJcbSg8AGtN5dt29f6QjX"
+    },
+    {
+      "block_height": 277140570,
+      "block_time_ms": 1794356464018,
+      "data": {
+        "amount_in": "40000000000000000000000",
+        "amount_out": "18915863903776053437713",
+        "min_amount_out": "18726705264738292903335",
+        "note": "",
+        "pool_id": 1103,
+        "quote": "18915863903776053437713",
+        "receipt_hash": "cccb765944d120daada26bd66cf632693644eb29570a3725094e3a4fff63d7aa",
+        "returned": true,
+        "seq": 16,
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "9y3fSXEAtUKwD1p22fhj4aPmnRU2vMNvVb4TytE4JFZ4",
+      "tx": "2KiM1PA4PKHFXvNhevAZyQWFJcbSg8AGtN5dt29f6QjX"
+    },
+    {
+      "block_height": 277287951,
+      "block_time_ms": 1794442816278,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "4a79007d8a2626476fe3a233089d7050b2d28f3a4a4ba158d80a6ee6dab984c0",
+        "seq": 17
+      },
+      "event": "skip",
+      "receipt_id": "8xJfeiMKJSHB11pmaBGfXdFWyDAfYAe66YuvVgPzvytW",
+      "tx": "Dc4ErGn1QcPDFgEzZDRseTQ4DFAWJDdnVMZvnf3MsArp"
+    },
+    {
+      "block_height": 277436009,
+      "block_time_ms": 1794529216811,
+      "data": {
+        "amount_in": "40000000000000000000000",
+        "min_amount_out": "13200000000000000000000",
+        "pool_id": 1103,
+        "receipt_hash": "d4eac766f988400e8cdab030d7b5654472d964b4be8a6ef9d4094d2bb2d63117",
+        "seq": 18,
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "FsTazCERhbUnUpyR5K5u5ij9JMepW6p5mqtaConx2ekH",
+      "tx": "8jRPb3gmnxZRrj4WhbQBtkASBFhYsUsxaMmAFo3gg28n"
+    },
+    {
+      "block_height": 277436023,
+      "block_time_ms": 1794529225244,
+      "data": {
+        "amount_in": "40000000000000000000000",
+        "amount_out": "18917199995781719191598",
+        "min_amount_out": "18728027995823901999682",
+        "note": "",
+        "pool_id": 1103,
+        "quote": "18917199995781719191598",
+        "receipt_hash": "d4eac766f988400e8cdab030d7b5654472d964b4be8a6ef9d4094d2bb2d63117",
+        "returned": true,
+        "seq": 18,
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "G3VG9oKpWnvFqTjQVCabMHanaicGekGswYG3km1Pbqng",
+      "tx": "8jRPb3gmnxZRrj4WhbQBtkASBFhYsUsxaMmAFo3gg28n"
+    },
+    {
+      "block_height": 277582956,
+      "block_time_ms": 1794615653961,
+      "data": {
+        "amount_in": "30000000000000000000000",
+        "min_amount_out": "9900000000000000000000",
+        "pool_id": 1103,
+        "receipt_hash": "2a34dffe8d9fa8e6c9b576c28c34abbdd1a7de9323ec465b2c016eb5c0fac7b1",
+        "seq": 19,
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "BedMvNPEdBA4ebYckVdQ5ozBy39tCEabYD2ypx4pFSbT",
+      "tx": "FPqwZKAGD8PPDxQcg5psYpLHEyYfdAiJPK54pnNr5iMM"
+    },
+    {
+      "block_height": 277582971,
+      "block_time_ms": 1794615663506,
+      "data": {
+        "amount_in": "30000000000000000000000",
+        "amount_out": "14194378009282022038839",
+        "min_amount_out": "14052434229189201818450",
+        "note": "",
+        "pool_id": 1103,
+        "quote": "14194378009282022038839",
+        "receipt_hash": "2a34dffe8d9fa8e6c9b576c28c34abbdd1a7de9323ec465b2c016eb5c0fac7b1",
+        "returned": true,
+        "seq": 19,
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "78B4LNdCBVdPJDkxd5Kf9yGRwsgBYJaX5UuNzT8HB997",
+      "tx": "FPqwZKAGD8PPDxQcg5psYpLHEyYfdAiJPK54pnNr5iMM"
+    }
+  ],
+  "network": "testnet",
+  "observed": {
+    "balances": [
+      {
+        "exchange": "0",
+        "intents": "0",
+        "token": "wrap.testnet",
+        "wallet": "454688622672007046135675"
+      },
+      {
+        "exchange": "0",
+        "intents": "0",
+        "token": "usdc.itachicara.testnet",
+        "wallet": "93086183794488897360440"
+      }
+    ],
+    "config": {
+      "agent_id": "a3-qwen36-tee.it1793205219-owner.testnet",
+      "exchange_id": "ref-finance-101.testnet",
+      "frozen": false,
+      "intents_id": "it1793205011-intents.testnet",
+      "mpc_id": "v1.signer-prod.testnet",
+      "owner_id": "it1793205219-owner.testnet",
+      "proposed_owner": null,
+      "seq": 19,
+      "version": "0.1.0"
+    },
+    "intents": {
+      "intents_id": "it1793205011-intents.testnet",
+      "mpc_id": "v1.signer-prod.testnet",
+      "open_intent": null,
+      "path": "iron-trade/intents-1",
+      "public_key": null
+    },
+    "policy": {
+      "max_slippage_bps": 100,
+      "max_trades_per_hour": 12,
+      "pairs": [
+        {
+          "min_price_den": "10",
+          "min_price_num": "14",
+          "pool_id": 1103,
+          "token_in": "wrap.testnet",
+          "token_out": "usdc.itachicara.testnet"
+        },
+        {
+          "min_price_den": "100",
+          "min_price_num": "33",
+          "pool_id": 1103,
+          "token_in": "usdc.itachicara.testnet",
+          "token_out": "wrap.testnet"
+        }
+      ],
+      "tokens": [
+        {
+          "max_per_day": "3000000000000000000000000",
+          "max_per_trade": "500000000000000000000000",
+          "token": "wrap.testnet"
+        },
+        {
+          "max_per_day": "5000000000000000000000000",
+          "max_per_trade": "1000000000000000000000000",
+          "token": "usdc.itachicara.testnet"
+        }
+      ]
+    },
+    "reconciliation": {
+      "events_replayed": 31,
+      "status": "ok"
+    },
+    "usage": {
+      "hour": "498504",
+      "spent": [
+        [
+          "wrap.testnet",
+          "0"
+        ],
+        [
+          "usdc.itachicara.testnet",
+          "30000000000000000000000"
+        ]
+      ],
+      "trades": 1
+    }
+  },
+  "schema": "sledgit-league/3"
+}

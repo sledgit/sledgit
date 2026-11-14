@@ -1,0 +1,414 @@
+{
+  "date_unix": 1793248974,
+  "network": "testnet",
+  "rows": [
+    {
+      "op": "factory:create_vault",
+      "n": 3,
+      "median_s": 5.604099333,
+      "p95_s": 5.724732416,
+      "median_tgas": 15,
+      "median_near": 0.007755742129503701
+    },
+    {
+      "op": "fn:accept_owner",
+      "n": 1,
+      "median_s": 4.128718958,
+      "p95_s": 4.128718958,
+      "median_tgas": 2,
+      "median_near": 0.0001968386495794
+    },
+    {
+      "op": "fn:accept_owner (back)",
+      "n": 1,
+      "median_s": 3.702521375,
+      "p95_s": 3.702521375,
+      "median_tgas": 2,
+      "median_near": 0.0001968343100542
+    },
+    {
+      "op": "fn:accept_owner (wrong)",
+      "n": 1,
+      "median_s": 3.640569375,
+      "p95_s": 3.640569375,
+      "median_tgas": 2,
+      "median_near": 0.00016892317377130002
+    },
+    {
+      "op": "fn:apply_policy (early)",
+      "n": 1,
+      "median_s": 4.733420375,
+      "p95_s": 4.733420375,
+      "median_tgas": 1,
+      "median_near": 0.00016942233098000002
+    },
+    {
+      "op": "fn:busy",
+      "n": 1,
+      "median_s": 5.279923417,
+      "p95_s": 5.279923417,
+      "median_tgas": 2,
+      "median_near": 0.0002182205293843
+    },
+    {
+      "op": "fn:busy (Rhea)",
+      "n": 1,
+      "median_s": 4.169141542,
+      "p95_s": 4.169141542,
+      "median_tgas": 2,
+      "median_near": 0.0002180808346603
+    },
+    {
+      "op": "fn:cancel after fill",
+      "n": 1,
+      "median_s": 10.623925542,
+      "p95_s": 10.623925542,
+      "median_tgas": 19,
+      "median_near": 0.0018139082422869
+    },
+    {
+      "op": "fn:cancel_policy",
+      "n": 1,
+      "median_s": 4.119822125,
+      "p95_s": 4.119822125,
+      "median_tgas": 2,
+      "median_near": 0.00019580888596700002
+    },
+    {
+      "op": "fn:daily_cap",
+      "n": 1,
+      "median_s": 4.310242542,
+      "p95_s": 4.310242542,
+      "median_tgas": 2,
+      "median_near": 0.0002148431766573
+    },
+    {
+      "op": "fn:exchange_withdraw (empty)",
+      "n": 1,
+      "median_s": 3.941869167,
+      "p95_s": 3.941869167,
+      "median_tgas": 2,
+      "median_near": 0.0001707580417209
+    },
+    {
+      "op": "fn:fill first",
+      "n": 1,
+      "median_s": 4.550045208,
+      "p95_s": 4.550045208,
+      "median_tgas": 6,
+      "median_near": 0.0006646857027705
+    },
+    {
+      "op": "fn:freeze (agent)",
+      "n": 1,
+      "median_s": 4.775996875,
+      "p95_s": 4.775996875,
+      "median_tgas": 2,
+      "median_near": 0.0001939431578157
+    },
+    {
+      "op": "fn:frozen",
+      "n": 1,
+      "median_s": 4.286935208,
+      "p95_s": 4.286935208,
+      "median_tgas": 2,
+      "median_near": 0.000212265049071
+    },
+    {
+      "op": "fn:intent (race)",
+      "n": 1,
+      "median_s": 9.840155708,
+      "p95_s": 9.840155708,
+      "median_tgas": 23,
+      "median_near": 0.0021846078600366
+    },
+    {
+      "op": "fn:intent (to expire)",
+      "n": 1,
+      "median_s": 10.790419417,
+      "p95_s": 10.790419417,
+      "median_tgas": 23,
+      "median_near": 0.0021814128175328003
+    },
+    {
+      "op": "fn:intents_deposit",
+      "n": 1,
+      "median_s": 6.932838,
+      "p95_s": 6.932838,
+      "median_tgas": 13,
+      "median_near": 0.0011991109929949
+    },
+    {
+      "op": "fn:intents_settle (expiry)",
+      "n": 1,
+      "median_s": 5.5295271249999995,
+      "p95_s": 5.5295271249999995,
+      "median_tgas": 7,
+      "median_near": 0.0007113622242941
+    },
+    {
+      "op": "fn:intents_setup",
+      "n": 1,
+      "median_s": 7.712556333,
+      "p95_s": 7.712556333,
+      "median_tgas": 16,
+      "median_near": 0.0015624838250431002
+    },
+    {
+      "op": "fn:intents_withdraw",
+      "n": 1,
+      "median_s": 7.378205791,
+      "p95_s": 7.378205791,
+      "median_tgas": 14,
+      "median_near": 0.0013064906549655
+    },
+    {
+      "op": "fn:intents_withdraw (too much)",
+      "n": 1,
+      "median_s": 5.197035291,
+      "p95_s": 5.197035291,
+      "median_tgas": 8,
+      "median_near": 0.0007156909675424
+    },
+    {
+      "op": "fn:pair_not_allowed",
+      "n": 1,
+      "median_s": 4.216444333,
+      "p95_s": 4.216444333,
+      "median_tgas": 2,
+      "median_near": 0.00020730851630030003
+    },
+    {
+      "op": "fn:propose_owner",
+      "n": 1,
+      "median_s": 4.410005459,
+      "p95_s": 4.410005459,
+      "median_tgas": 2,
+      "median_near": 0.0001978218002601
+    },
+    {
+      "op": "fn:propose_owner (back)",
+      "n": 1,
+      "median_s": 4.3243508330000004,
+      "p95_s": 4.3243508330000004,
+      "median_tgas": 2,
+      "median_near": 0.0001977903573199
+    },
+    {
+      "op": "fn:propose_policy",
+      "n": 1,
+      "median_s": 5.496622708,
+      "p95_s": 5.496622708,
+      "median_tgas": 2,
+      "median_near": 0.0002441319302577
+    },
+    {
+      "op": "fn:propose_policy (agent)",
+      "n": 1,
+      "median_s": 4.40563825,
+      "p95_s": 4.40563825,
+      "median_tgas": 2,
+      "median_near": 0.00017880610383179998
+    },
+    {
+      "op": "fn:propose_policy (replace)",
+      "n": 1,
+      "median_s": 4.444335042,
+      "p95_s": 4.444335042,
+      "median_tgas": 2,
+      "median_near": 0.0002553615125603
+    },
+    {
+      "op": "fn:rate_limit",
+      "n": 1,
+      "median_s": 5.104889417,
+      "p95_s": 5.104889417,
+      "median_tgas": 2,
+      "median_near": 0.000212986918854
+    },
+    {
+      "op": "fn:request_intent (no setup)",
+      "n": 1,
+      "median_s": 4.291513875,
+      "p95_s": 4.291513875,
+      "median_tgas": 2,
+      "median_near": 0.0002083104992657
+    },
+    {
+      "op": "fn:set_agent=owner",
+      "n": 1,
+      "median_s": 4.089998583,
+      "p95_s": 4.089998583,
+      "median_tgas": 2,
+      "median_near": 0.00017062501823729998
+    },
+    {
+      "op": "fn:set_agent=proposed",
+      "n": 1,
+      "median_s": 4.259221666,
+      "p95_s": 4.259221666,
+      "median_tgas": 2,
+      "median_near": 0.00017215493596629998
+    },
+    {
+      "op": "fn:settle the fill",
+      "n": 1,
+      "median_s": 5.242716125,
+      "p95_s": 5.242716125,
+      "median_tgas": 7,
+      "median_near": 0.0007143227798219999
+    },
+    {
+      "op": "fn:swap 0.02 (3rd trade)",
+      "n": 1,
+      "median_s": 13.722123583,
+      "p95_s": 13.722123583,
+      "median_tgas": 43,
+      "median_near": 0.0040232419459368
+    },
+    {
+      "op": "fn:swap 0.05",
+      "n": 2,
+      "median_s": 13.249638,
+      "p95_s": 13.249638,
+      "median_tgas": 43,
+      "median_near": 0.0040241644773014
+    },
+    {
+      "op": "fn:trade_cap",
+      "n": 1,
+      "median_s": 5.528797209,
+      "p95_s": 5.528797209,
+      "median_tgas": 2,
+      "median_near": 0.00020862170309149999
+    },
+    {
+      "op": "fn:unfreeze (agent)",
+      "n": 1,
+      "median_s": 4.760233333,
+      "p95_s": 4.760233333,
+      "median_tgas": 2,
+      "median_near": 0.0001679758262205
+    },
+    {
+      "op": "fn:unfreeze (owner)",
+      "n": 1,
+      "median_s": 4.333398625,
+      "p95_s": 4.333398625,
+      "median_tgas": 2,
+      "median_near": 0.0001920976466838
+    },
+    {
+      "op": "fn:unsettled",
+      "n": 1,
+      "median_s": 4.584484875,
+      "p95_s": 4.584484875,
+      "median_tgas": 2,
+      "median_near": 0.0002195288762848
+    },
+    {
+      "op": "fn:zero_amount",
+      "n": 1,
+      "median_s": 4.369235458,
+      "p95_s": 4.369235458,
+      "median_tgas": 2,
+      "median_near": 0.00020620879882579998
+    },
+    {
+      "op": "setup:exchange_storage",
+      "n": 3,
+      "median_s": 5.26918425,
+      "p95_s": 5.622072292,
+      "median_tgas": 5,
+      "median_near": 0.0004715846514058
+    },
+    {
+      "op": "setup:fund_vault",
+      "n": 3,
+      "median_s": 5.702842917,
+      "p95_s": 5.918509958,
+      "median_tgas": 6,
+      "median_near": 0.0005963461017852
+    },
+    {
+      "op": "setup:intents_deposit",
+      "n": 1,
+      "median_s": 6.883638,
+      "p95_s": 6.883638,
+      "median_tgas": 13,
+      "median_near": 0.0011912408085805
+    },
+    {
+      "op": "setup:intents_setup",
+      "n": 1,
+      "median_s": 6.368634667,
+      "p95_s": 6.368634667,
+      "median_tgas": 16,
+      "median_near": 0.0015494526004087002
+    },
+    {
+      "op": "setup:register_tokens",
+      "n": 3,
+      "median_s": 4.884292083,
+      "p95_s": 5.348871917,
+      "median_tgas": 6,
+      "median_near": 0.0005688926424121001
+    },
+    {
+      "op": "setup:storage_deposit",
+      "n": 8,
+      "median_s": 4.912376875,
+      "p95_s": 5.796059292,
+      "median_tgas": 2,
+      "median_near": 0.00023747601618350002
+    },
+    {
+      "op": "setup:wrap",
+      "n": 1,
+      "median_s": 4.577989208,
+      "p95_s": 4.577989208,
+      "median_tgas": 2,
+      "median_near": 0.000194014957869
+    },
+    {
+      "op": "view:factory_config",
+      "n": 1,
+      "median_s": 0.471291375,
+      "p95_s": 0.471291375,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:ft_balance_of",
+      "n": 3,
+      "median_s": 0.4397135,
+      "p95_s": 0.451102209,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:get_intents",
+      "n": 2,
+      "median_s": 0.451376084,
+      "p95_s": 0.451376084,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:get_usage",
+      "n": 3,
+      "median_s": 0.442911042,
+      "p95_s": 0.462023875,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:mt_balance_of",
+      "n": 2,
+      "median_s": 0.997422583,
+      "p95_s": 0.997422583,
+      "median_tgas": 0,
+      "median_near": 0.0
+    }
+  ]
+}

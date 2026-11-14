@@ -1,0 +1,23 @@
+# Public attestation data from NEAR AI Cloud (TEE signing address, OHTTP public key config): not secrets.
+spikes/near-ai-tee/receipt.json:generic-api-key:471
+spikes/near-ai-tee/receipt.json:generic-api-key:472
+spikes/near-ai-tee/receipt.json:generic-api-key:953
+# Recorded NEAR AI Cloud attestation bundle (agent TEE tests): OHTTP public key configs and enclave public signing keys,
+# all on line 1 (canonical JSON). Checked at capture: no API key or credential in the file.
+agent/test/fixtures/nearai/real-bundle.json:generic-api-key:1
+# NEAR AI attestation bundles of the on-chain arena decisions: OHTTP KeyConfig (X25519 public HPKE key) and Ed25519 public
+# signing_key, for the gateway and the model; server-wide public values (audits/phase-2-review.md P2-15). No credentials.
+deploy/testnet/receipts-arena/qwen36-tee/attestations/0e10108fbf857610dce9c539376adaf3fbe2b7f1ee5f7db2550e57fbbde11a69.json:generic-api-key:1
+deploy/testnet/receipts-arena/qwen36-tee/attestations/25131eccff1c8bdc8178bd01a82833caf15380593c8367a181f384b338d195de.json:generic-api-key:1
+deploy/testnet/receipts-arena/qwen36-tee/attestations/962cbe575660015be5563e7b8596ae644ea99981a0d96d0322dd6b0ff664a701.json:generic-api-key:1
+deploy/testnet/receipts-arena/qwen36-tee/attestations/d9220ec101b46dc9e2f427a86dba076a1cfe990d7f1e095c6c84682e2bd7cfff.json:generic-api-key:1
+deploy/testnet/s1/receipts-arena/qwen36-tee/attestations/06f872bc7bd09f8aa9b852230ad1587715f569e0d1b004d6a9615049cfb333dd.json:generic-api-key:1
+deploy/testnet/s1/receipts-arena/qwen36-tee/attestations/1e601b14784cd698075e05c6bf6f3b8570d610d86bbad39cf9219498239ad6ef.json:generic-api-key:1
+deploy/testnet/s1/receipts-arena/qwen36-tee/attestations/38c0a8286cc24793bebfb65f48cf33fd7516cd2f986ad2d9a5c2ab8389ff6514.json:generic-api-key:1
+# demo-trader demo receipt (sealed, hash on chain): the Kronos tokenizer weights' public sha256 under a "tokenizer" key. Not a secret.
+deploy/testnet/s1/receipts-arena/iron-trader-demo/receipts.jsonl:generic-api-key:2
+# Mainnet native USDC's token account id (17208628…33a1, a public 64-hex implicit account) in the launch configs: not a secret.
+deploy/mainnet/canary-policy.json:generic-api-key:4
+deploy/mainnet/canary-policy.json:generic-api-key:7
+deploy/mainnet/canary-policy.json:generic-api-key:8
+deploy/mainnet/deposit-caps.json:generic-api-key:3

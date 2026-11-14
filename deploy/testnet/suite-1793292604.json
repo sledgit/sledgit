@@ -1,0 +1,187 @@
+{
+  "date_unix": 1793292604,
+  "factory": "arena2.irontrade.testnet",
+  "vaults": [
+    "suite.arena2.irontrade.testnet",
+    "lifecycle.arena2.irontrade.testnet",
+    "refusals.arena2.irontrade.testnet"
+  ],
+  "code_hash": "2ZP4H1ENzFKyN4nVSZf9vKf3pEpgoup9DVU6NbjbE2Gg",
+  "checks": [
+    {
+      "check": "factory pinned to the current vault code hash",
+      "pass": true,
+      "detail": "\"2ZP4H1ENzFKyN4nVSZf9vKf3pEpgoup9DVU6NbjbE2Gg\""
+    },
+    {
+      "check": "suite.arena2.irontrade.testnet has no access keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "lifecycle.arena2.irontrade.testnet has no access keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "refusals.arena2.irontrade.testnet has no access keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "intent authorized",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "refuse busy (intent open)",
+      "pass": true,
+      "detail": "busy"
+    },
+    {
+      "check": "refuse busy on Rhea while an intent is open",
+      "pass": true,
+      "detail": "busy"
+    },
+    {
+      "check": "refuse unsettled (expired, not yet recorded)",
+      "pass": true,
+      "detail": "unsettled"
+    },
+    {
+      "check": "anyone settles; unused nonce after deadline = intent_expired",
+      "pass": true,
+      "detail": "[\"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.2.0\\\",\\\"event\\\":\\\"intent_expired\\\",\\\"data\\\":[{\\\"seq\\\":7,\\\"receipt_hash\\\":\\\"bb0877a710d2456545bf89371057e6074ad6d9668e3680feb8a0993082aff5b3\\\",\\\"venue\\\":\\\"intents\\\",\\\"nonce\\\":\\\"Vij2xgCqO/NaANwgIqxD7Bh9v9mZpqYBKrkT2QUbDww=\\\",\\\"token_in\\\":\\\"wrap.testnet\\\",\\\"amount_in\\\":\\\"20000000000000000000000\\\",\\\"token_out\\\":\\\"usdc.itachicara.testnet\\\"}]}\"]"
+    },
+    {
+      "check": "expiry released the cap (24 h spend back to its level before the intent)",
+      "pass": true,
+      "detail": "0 -> 0"
+    },
+    {
+      "check": "solver fills the intent",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "cancel after a fill fails cleanly (intent_cancel_failed)",
+      "pass": true,
+      "detail": "[\"sign: predecessor=AccountId(\\\"lifecycle.arena2.irontrade.testnet\\\"), request=SignRequestArgs { path: \\\"iron-trade/intents-1\\\", payload: Ecdsa(BoundedVec { inner: [163, 71, 217, 93, 7, 247, 149, 6, 5, 157, 180, 174, 146, 209, 72, 119, 23, 17, 218, 134, 96, 136, 21, 11, 2, 98, 245, 144, 146, 176, 18, 20], witness: NonEmpty(()) }), domain_id: DomainId(0) }\", \"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.2.0\\\",\\\"event\\\":\\\"intent_cancel_failed\\\",\\\"data\\\":[{\\\"seq\\\":11,\\\"reason\\\":\\\"nonce already used or expired: run intents_settle\\\"}]}\"]"
+    },
+    {
+      "check": "settle records the fill as a trade",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "txs": [
+    {
+      "op": "setup:storage_deposit",
+      "method": "storage_deposit",
+      "contract": "wrap.testnet",
+      "ok": true,
+      "tx": "BcNd3HYoNvaDVEa3oKFeskfxF5xJaAKwSQ3CYR1YbRnx",
+      "secs": 5.308814166,
+      "tgas": 2
+    },
+    {
+      "op": "setup:storage_deposit",
+      "method": "storage_deposit",
+      "contract": "usdc.itachicara.testnet",
+      "ok": true,
+      "tx": "E5VjhNQcfX39eXC6p3BpG13pNT3QuiSZeHVGSrmSHtzh",
+      "secs": 5.38594475,
+      "tgas": 2
+    },
+    {
+      "op": "setup:settle leftover intent",
+      "method": "intents_settle",
+      "contract": "lifecycle.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "84ZEz5UEaDBp3VaFR12Wx21JrecEYwipyDG3tLJZrB4N",
+      "secs": 7.467271458,
+      "tgas": 13
+    },
+    {
+      "op": "fn:intent (to expire)",
+      "method": "request_intent_swap",
+      "contract": "lifecycle.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "Bq6WS99o9e2bVzTKd7MEpSd347pBbWVuZ5gRR3QVWx51",
+      "secs": 12.77336875,
+      "tgas": 23
+    },
+    {
+      "op": "fn:busy",
+      "method": "request_intent_swap",
+      "contract": "lifecycle.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "DAuKHs14GAZKdXXGqBT9P4aBstiNfGaX7QWggh6zTo2H",
+      "secs": 6.062220125,
+      "tgas": 2
+    },
+    {
+      "op": "fn:busy (Rhea)",
+      "method": "request_swap",
+      "contract": "lifecycle.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "A6MJExxAT87XpMtrFrrCq2VWBHLQu8b6VfLvmCHdYrCR",
+      "secs": 4.697703792,
+      "tgas": 2
+    },
+    {
+      "op": "fn:unsettled",
+      "method": "request_intent_swap",
+      "contract": "lifecycle.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "BSK1cJEXinxHTu6pESjuG9oLTinbtjSdeKfXzWU9eZFP",
+      "secs": 4.186506208,
+      "tgas": 2
+    },
+    {
+      "op": "fn:intents_settle (expiry)",
+      "method": "intents_settle",
+      "contract": "lifecycle.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "orBTfaCgLGkdJnAmwAENUeutgvqXWZ1w5URFeTNfAJK",
+      "secs": 6.364146583,
+      "tgas": 13
+    },
+    {
+      "op": "fn:intent (race)",
+      "method": "request_intent_swap",
+      "contract": "lifecycle.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "J6m4QH4ohLbc1QX6AdWY1MFJ7zXNzbwz99wSsww76evL",
+      "secs": 10.621256791,
+      "tgas": 23
+    },
+    {
+      "op": "fn:fill first",
+      "method": "execute_intents",
+      "contract": "it1793205011-intents.testnet",
+      "ok": true,
+      "tx": "7hwjNaTWBKMbDQMTah26d15Nc6gfYXZk1N78RF8h7fsX",
+      "secs": 4.633577625,
+      "tgas": 6
+    },
+    {
+      "op": "fn:cancel after fill",
+      "method": "intents_cancel",
+      "contract": "lifecycle.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "F2JAExVWCos5EPc9iNtQwS7UmL1eDGnTnf9mMVhdbMfS",
+      "secs": 10.968321916,
+      "tgas": 19
+    },
+    {
+      "op": "fn:settle the fill",
+      "method": "intents_settle",
+      "contract": "lifecycle.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "BqSL873HWjtMyFPH2ZqtGhyJtxmoF5DjX79VB9h5JvJ7",
+      "secs": 5.77192525,
+      "tgas": 7
+    }
+  ]
+}

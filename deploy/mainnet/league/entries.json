@@ -1,0 +1,23 @@
+{
+  "network": "mainnet",
+  "season": {
+    "id": "mainnet-s1",
+    "start_ms": null,
+    "canonical_pools": [
+      4512
+    ],
+    "benchmark_cost_rate": {
+      "value": 0.003,
+      "source": "fixed published rate: the Rhea wNEAR/USDC pool fee, 0.30% (pool 4512)"
+    },
+    "min_value_usd": 1
+  },
+  "factories": [
+    "arena.sledgit.near"
+  ],
+  "tokens": [
+    "wrap.near",
+    "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+  ],
+  "entries": []
+}

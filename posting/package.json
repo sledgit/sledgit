@@ -1,0 +1,15 @@
+{
+  "name": "sledgit-posting",
+  "private": true,
+  "type": "module",
+  "description": "Post cards and weekly video data from the league snapshot. Nothing here posts; a person approves and posts.",
+  "scripts": {
+    "test": "SLEDGIT_BLOCKLIST=test/blocklist.fixture.txt node --test test/"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "2.6.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

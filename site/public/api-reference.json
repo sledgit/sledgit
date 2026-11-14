@@ -1,0 +1,165 @@
+{
+  "name": "Sledgit vault and factory: read-only views",
+  "version": "1",
+  "transport": "NEAR JSON-RPC query/call_function (free, no account needed). Args are base64 JSON; result is a UTF-8 JSON byte array.",
+  "networks": {
+    "testnet": {
+      "rpc": "https://rpc.testnet.fastnear.com",
+      "factory": "irontrade.testnet",
+      "example_vault": "claude.irontrade.testnet"
+    },
+    "mainnet": {
+      "rpc": "https://free.rpc.fastnear.com",
+      "factory": null,
+      "status": "not deployed yet"
+    }
+  },
+  "amounts": "All token amounts are decimal strings in the token's smallest unit (U128).",
+  "vault_views": [
+    {
+      "method": "get_config",
+      "args": {},
+      "returns": {
+        "owner_id": "AccountId",
+        "proposed_owner": "AccountId|null",
+        "agent_id": "AccountId",
+        "exchange_id": "AccountId",
+        "intents_id": "AccountId",
+        "mpc_id": "AccountId",
+        "frozen": "bool",
+        "seq": "u64",
+        "version": "string"
+      }
+    },
+    {
+      "method": "get_policy",
+      "args": {},
+      "returns": {
+        "tokens": [
+          {
+            "token": "AccountId",
+            "max_per_trade": "U128",
+            "max_per_day": "U128"
+          }
+        ],
+        "pairs": [
+          {
+            "token_in": "AccountId",
+            "token_out": "AccountId",
+            "pool_id": "u64",
+            "min_price_num": "U128",
+            "min_price_den": "U128"
+          }
+        ],
+        "max_trades_per_hour": "u32",
+        "max_slippage_bps": "u16 (<= 500)"
+      }
+    },
+    {
+      "method": "get_pending_policy",
+      "args": {},
+      "returns": "{ value: Policy, applies_at: U64 (ns) } | null (24 h timelock)"
+    },
+    {
+      "method": "get_usage",
+      "args": {},
+      "returns": {
+        "hour": "U64",
+        "trades": "u32 (this clock hour)",
+        "spent": "[[AccountId, U128]] (rolling 24 h per token)"
+      }
+    },
+    {
+      "method": "get_in_flight",
+      "args": {},
+      "returns": "the Rhea swap in progress, or null"
+    },
+    {
+      "method": "get_intents",
+      "args": {},
+      "returns": "{ public_key, path, open_intent | null }"
+    },
+    {
+      "method": "preview_swap",
+      "args": {
+        "token_in": "AccountId",
+        "token_out": "AccountId",
+        "amount_in": "U128",
+        "min_amount_out": "U128"
+      },
+      "returns": "{ ok: true, pool_id, band_floor } | { ok: false, code, reason }"
+    }
+  ],
+  "factory_views": [
+    {
+      "method": "get_config",
+      "args": {},
+      "returns": {
+        "code_hash": "base58 hash of the vault code",
+        "exchange_id": "AccountId",
+        "intents_id": "AccountId",
+        "mpc_id": "AccountId",
+        "min_deposit": "U128",
+        "vaults": "u64",
+        "version": "string"
+      }
+    },
+    {
+      "method": "get_vaults",
+      "args": {
+        "from_index": "u32",
+        "limit": "u32 (<= 100)"
+      },
+      "returns": "[AccountId]"
+    }
+  ],
+  "refusal_codes": [
+    "trade_cap",
+    "daily_cap",
+    "rate_limit",
+    "pair_not_allowed",
+    "unpriceable",
+    "frozen",
+    "busy",
+    "unsettled",
+    "intents_not_set_up",
+    "zero_amount"
+  ],
+  "events": {
+    "standard": "sledgit",
+    "legacy_standard": "irontrade",
+    "format": "NEP-297 EVENT_JSON logs; trust only receipts whose executor_id is the vault",
+    "names": [
+      "init",
+      "request",
+      "trade",
+      "failed",
+      "refuse",
+      "skip",
+      "deposit",
+      "withdraw",
+      "exchange_withdraw",
+      "exchange_withdraw_failed",
+      "intents_deposit",
+      "intents_withdraw",
+      "intents_key",
+      "intents_key_failed",
+      "intent_authorized",
+      "intent_unsigned",
+      "intent_expired",
+      "intent_cancelled",
+      "intent_cancel_failed",
+      "intent_closed",
+      "intent_unresolved",
+      "freeze",
+      "unfreeze",
+      "policy_proposed",
+      "policy_applied",
+      "policy_cancelled",
+      "owner_proposed",
+      "owner_set",
+      "agent_set"
+    ]
+  },
+  "agent_guide": "/skill.md"
+}

@@ -1,0 +1,72 @@
+{
+  "date_unix": 1793520816,
+  "network": "testnet",
+  "chain_id": "testnet",
+  "factory": "arena2.irontrade.testnet",
+  "vault_code_hash": "2ZP4H1ENzFKyN4nVSZf9vKf3pEpgoup9DVU6NbjbE2Gg",
+  "entry": "iron-trader-demo",
+  "vault": "iron-trader-demo.arena2.irontrade.testnet",
+  "owner": "itrader-owner.it1793205219-owner.testnet",
+  "agent": "itrader-agent.it1793205219-owner.testnet",
+  "agent_recovery_public_key": "ed25519:4TDuGUeca5e6ycukXL4GPoHcptdKfYz9khJWLa92XGSC",
+  "policy": {
+    "tokens": [
+      {
+        "token": "wrap.testnet",
+        "max_per_trade": "500000000000000000000000",
+        "max_per_day": "3000000000000000000000000"
+      },
+      {
+        "token": "usdc.itachicara.testnet",
+        "max_per_trade": "1000000000000000000000000",
+        "max_per_day": "5000000000000000000000000"
+      }
+    ],
+    "pairs": [
+      {
+        "token_in": "wrap.testnet",
+        "token_out": "usdc.itachicara.testnet",
+        "pool_id": 1103,
+        "min_price_num": "7",
+        "min_price_den": "5"
+      },
+      {
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "pool_id": 1103,
+        "min_price_num": "33",
+        "min_price_den": "100"
+      }
+    ],
+    "max_trades_per_hour": 2,
+    "max_slippage_bps": 100
+  },
+  "deposit": "200000000000000000000000",
+  "allowance": "500000000000000000000000",
+  "txs": [
+    {
+      "step": "wrap.testnet.near_deposit",
+      "tx": "CMoekSMpHX6oVt173wyJgZjmuzokBN4x7WoJ8oEjaGZT"
+    },
+    {
+      "step": "wrap.testnet.ft_transfer_call",
+      "tx": "CxMRD4ioY7YUTz6pP7jb2tGNxj4PPr8A9s7WAm4M5Jit"
+    },
+    {
+      "step": "usdc.itachicara.testnet.ft_transfer_call",
+      "tx": "3aS8KmDQx2qBmoiKHfnSkkeh6bkNHkogN3msPEE6pPvM"
+    },
+    {
+      "step": "itrader-agent.it1793205219-owner.testnet.add_key(function-call)",
+      "tx": "3p8csrWUmBnnNWAURNYDKecN15FrsVEzXUWjqtNtGtAZ"
+    },
+    {
+      "step": "itrader-agent.it1793205219-owner.testnet.add_key(recovery)",
+      "tx": "8vTz21R64jByhnNsCDtARzDpp4nKp4xXmVNQSuZXscyV"
+    },
+    {
+      "step": "itrader-agent.it1793205219-owner.testnet.delete_key(setup)",
+      "tx": "2AhKGZaAK1uhTeqy3UhNGtMKVq5quT6g4iUV6JjD8jmB"
+    }
+  ]
+}

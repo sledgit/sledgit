@@ -1,0 +1,28 @@
+{
+  "account": "irontrade-1793186555.testnet",
+  "path": "iron-trade/hyperliquid-1",
+  "derived": "0x7a5FB6988fD6549aA43Ff47Df9E387ac19cff652",
+  "digest": "61f9efac7c2a1a88894c914ca1e67c3064de94587c1e26c0b45e61447187609b",
+  "signature": {
+    "scheme": "Secp256k1",
+    "big_r": {
+      "affine_point": "0244a09515fa520fd2431c62f64de0e3f6ad89416df7f3e2d226b3c8d871d03db8"
+    },
+    "s": {
+      "scalar": "5bc8138639fe213c324ea00e440ac6b0349733caed1d8eb380315a21f26e0006"
+    },
+    "recovery_id": 1
+  },
+  "sign_seconds": 5.585615873336792,
+  "near_tx": "EJ7UGddgrHRug6AjvXo6FRtK72eBgb66PtoBzXD7NJoH",
+  "hyperliquid": {
+    "status": "err",
+    "response": "User or API Wallet 0x7a5fb6988fd6549aa43ff47df9e387ac19cff652 does not exist."
+  },
+  "checks": {
+    "control: Hyperliquid recovers a local key's address (digest scheme correct)": true,
+    "signature recovers locally to the derived address": true,
+    "Hyperliquid recovered the derived address": true,
+    "signing latency under 30 s": true
+  }
+}

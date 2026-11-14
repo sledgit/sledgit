@@ -1,0 +1,42 @@
+{
+  "date_unix": 1793248281,
+  "network": "testnet",
+  "factory": "arena.irontrade.testnet",
+  "parent": "irontrade.testnet",
+  "vault_code_hash": "5ePvrzPrKn8WGzZh8LnSLjaxcCPebA5E6nFJ4HxwR3iQ",
+  "vault_wasm_bytes": 312611,
+  "factory_code_hash": "AKtQBKig2TaynqSXNHYaCD92but7qRhhdwttiB944Mag",
+  "config": {
+    "code_hash": "5ePvrzPrKn8WGzZh8LnSLjaxcCPebA5E6nFJ4HxwR3iQ",
+    "exchange_id": "ref-finance-101.testnet",
+    "intents_id": "it1793205011-intents.testnet",
+    "mpc_id": "v1.signer-prod.testnet",
+    "min_deposit": "1000000000000000000000000",
+    "vaults": 0,
+    "version": "0.1.0"
+  },
+  "access_keys_after_lock": 0,
+  "txs": [
+    {
+      "step": "publish_global_code",
+      "tx": "FemthKPA5VFhX7eZ2GDSts6nXtUDM953NFhxoEKNWryE"
+    },
+    {
+      "step": "top_up_parent",
+      "tx": "8miw4jReXZhyN6At3mQMwRw1UpxzzNwve67pgjRbAYcg"
+    },
+    {
+      "step": "create_factory_account",
+      "tx": "3PEs76Pf2jxANobVbjSp28cXgUuQDoUWxZxTHH7KAPCc"
+    },
+    {
+      "step": "deploy_factory",
+      "tx": "6fdg6fEPSPPsAQnGm2xA4i6CPG85MQeuPAZmgBEKvSQX"
+    },
+    {
+      "step": "delete_factory_key",
+      "tx": "7d9DyndFECFABfoAv2QpwrfD1npMcXC6bLQfRs6siNaE"
+    }
+  ],
+  "build": "cargo near build non-reproducible-wasm (reproducible build needs a committed repo; after 1 Nov)"
+}

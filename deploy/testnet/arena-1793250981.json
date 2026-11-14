@@ -1,0 +1,121 @@
+{
+  "date_unix": 1793250981,
+  "network": "testnet",
+  "factory": "arena.irontrade.testnet",
+  "owner": "it1793205219-owner.testnet",
+  "policy": {
+    "tokens": [
+      {
+        "token": "wrap.testnet",
+        "max_per_trade": "500000000000000000000000",
+        "max_per_day": "3000000000000000000000000"
+      },
+      {
+        "token": "usdc.itachicara.testnet",
+        "max_per_trade": "1000000000000000000000000",
+        "max_per_day": "5000000000000000000000000"
+      }
+    ],
+    "pairs": [
+      {
+        "token_in": "wrap.testnet",
+        "token_out": "usdc.itachicara.testnet",
+        "pool_id": 1103,
+        "min_price_num": "14",
+        "min_price_den": "10"
+      },
+      {
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "pool_id": 1103,
+        "min_price_num": "33",
+        "min_price_den": "100"
+      }
+    ],
+    "max_trades_per_hour": 12,
+    "max_slippage_bps": 100
+  },
+  "vaults": [
+    {
+      "name": "perf",
+      "vault": "perf.arena.irontrade.testnet",
+      "agent": "agent2-perf.it1793205219-owner.testnet",
+      "agent_key": "function-call (vault, agent methods)",
+      "rekey": true,
+      "txs": [
+        {
+          "step": "create_agent",
+          "tx": "Hd73Aehv5YEnKRLHGUrxGkdTMRZ4KnZuG8AAmRhSaL3U"
+        },
+        {
+          "step": "add_scoped_key",
+          "tx": "6wzKf8ZjGGbrhrXh19bG6oTv65R3fYn7Gdmp7xi7VgiW"
+        },
+        {
+          "step": "delete_temp_key",
+          "tx": "4cgkuqMTCxvVSnjkj9os9dSurk7Xeyv5U8dEwhpLTSGa"
+        },
+        {
+          "step": "set_agent",
+          "tx": "EbkVgeE7kEB5uaBpPVbtigXVcQx5n8W1mjVjbo9ZVEtJ"
+        }
+      ]
+    },
+    {
+      "name": "lifecycle",
+      "vault": "lifecycle.arena.irontrade.testnet",
+      "agent": "agent2-lifecycle.it1793205219-owner.testnet",
+      "agent_key": "function-call (vault, agent methods)",
+      "rekey": true,
+      "txs": [
+        {
+          "step": "create_agent",
+          "tx": "ETeNzhUKL2Y7u1Rkn6hqXAmMQP6bZ5vXuByECERz1bdD"
+        },
+        {
+          "step": "add_scoped_key",
+          "tx": "7DCnXyVxRzPZXxm5mXGEQ9N5xanMCva56STJqKpDX7Wm"
+        },
+        {
+          "step": "delete_temp_key",
+          "tx": "CHgTdKF4cdwA1Z5NRPrgMZWQWwBKLwXEtusPGDHiH4jy"
+        },
+        {
+          "step": "set_agent",
+          "tx": "HJ6VeXpV5w9ePUSTban6cuXq2ccqwkHP4CpuY9YmpKRX"
+        }
+      ]
+    },
+    {
+      "name": "suite",
+      "vault": "suite.arena.irontrade.testnet",
+      "agent": "agent2-suite.it1793205219-owner.testnet",
+      "agent_key": "function-call (vault, agent methods)",
+      "rekey": true,
+      "txs": [
+        {
+          "step": "create_agent",
+          "tx": "HhM9kWykNL99M49k98pmvM5CvF97uwXMSivs6r3GpKtd"
+        },
+        {
+          "step": "add_scoped_key",
+          "tx": "2FXktd1AYmfiAdCZJ36VtepBXQNperkrNccsphpPuL6u"
+        },
+        {
+          "step": "delete_temp_key",
+          "tx": "79mfvXhAdR3vTXdLZiSME1UxuUdWCxAB9i4nLhwhgxLp"
+        },
+        {
+          "step": "set_agent",
+          "tx": "Aw5aRTpzoHY7nTzGe3L3W1ZDgPAjLxA7WtLbnwnrs7Wv"
+        }
+      ]
+    }
+  ],
+  "note": "Phase 2b (review P2-2): perf, lifecycle and suite are test-suite fixtures, re-pointed from shared full-access agents to dedicated scoped agents. Not arena entries; see FIXTURES.md.",
+  "fixtures": [
+    "perf.arena.irontrade.testnet",
+    "lifecycle.arena.irontrade.testnet",
+    "suite.arena.irontrade.testnet"
+  ]
+}

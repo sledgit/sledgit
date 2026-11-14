@@ -1,0 +1,36 @@
+{
+  "name": "sledgit-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3100",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "serve": "npx --yes serve@14.2.4 out -l 3101",
+    "prebuild": "node scripts/agent-files.mjs && node scripts/league-files.mjs && node scripts/candle-files.mjs && node --import tsx scripts/strategy-files.mts",
+    "pretypecheck": "node scripts/agent-files.mjs && node scripts/league-files.mjs && node scripts/candle-files.mjs && node --import tsx scripts/strategy-files.mts",
+    "pretest": "node scripts/league-files.mjs",
+    "test": "node --import tsx --test test/*.test.ts",
+    "postbuild": "node scripts/canonical.mjs",
+    "wider": "node --import tsx scripts/wider-files.mts --fetch"
+  },
+  "dependencies": {
+    "@near-js/transactions": "2.5.1",
+    "@near-wallet-selector/core": "10.1.4",
+    "@near-wallet-selector/meteor-wallet": "10.1.4",
+    "@near-wallet-selector/my-near-wallet": "10.1.4",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "tsx": "4.23.13",
+    "typescript": "5.9.3"
+  },
+  "overrides": {
+    "nanoid": "5.1.16"
+  }
+}

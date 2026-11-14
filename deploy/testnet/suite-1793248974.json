@@ -1,0 +1,782 @@
+{
+  "date_unix": 1793248974,
+  "factory": "arena.irontrade.testnet",
+  "vaults": [
+    "perf.arena.irontrade.testnet",
+    "lifecycle.arena.irontrade.testnet",
+    "suite.arena.irontrade.testnet"
+  ],
+  "code_hash": "5ePvrzPrKn8WGzZh8LnSLjaxcCPebA5E6nFJ4HxwR3iQ",
+  "checks": [
+    {
+      "check": "factory pinned to the current vault code hash",
+      "pass": true,
+      "detail": "\"5ePvrzPrKn8WGzZh8LnSLjaxcCPebA5E6nFJ4HxwR3iQ\""
+    },
+    {
+      "check": "factory created perf.arena.irontrade.testnet",
+      "pass": true,
+      "detail": "[\"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.1.0\\\",\\\"event\\\":\\\"init\\\",\\\"data\\\":[{\\\"owner_id\\\":\\\"it1793205219-owner.testnet\\\",\\\"agent_id\\\":\\\"it1793205219-agent.testnet\\\",\\\"exchange_id\\\":\\\"ref-finance-101.testnet\\\",\\\"intents_id\\\":\\\"it1793205011-intents.testnet\\\",\\\"mpc_id\\\":\\\"v1.signer-prod.testnet\\\",\\\"policy\\\":{\\\"tokens\\\":[{\\\"token\\\":\\\"wrap.testnet\\\",\\\"max_per_trade\\\":\\\"500000000000000000000000\\\",\\\"max_per_day\\\":\\\"3000000000000000000000000\\\"},{\\\"token\\\":\\\"usdc.itachicara.testnet\\\",\\\"max_per_trade\\\":\\\"1000000000000000000000000\\\",\\\"max_per_day\\\":\\\"5000000000000000000000000\\\"}],\\\"pairs\\\":[{\\\"token_in\\\":\\\"wrap.testnet\\\",\\\"token_out\\\":\\\"usdc.itachicara.testnet\\\",\\\"pool_id\\\":1103,\\\"min_price_num\\\":\\\"14\\\",\\\"min_price_den\\\":\\\"10\\\"},{\\\"token_in\\\":\\\"usdc.itachicara.testnet\\\",\\\"token_out\\\":\\\"wrap.testnet\\\",\\\"pool_id\\\":1103,\\\"min_price_num\\\":\\\"33\\\",\\\"min_price_den\\\":\\\"100\\\"}],\\\"max_trades_per_hour\\\":60,\\\"max_slippage_bps\\\":100}}]}\", \"EVENT_JSON:{\\\"standard\\\":\\\"irontrade-factory\\\",\\\"version\\\":\\\"1.0.0\\\",\\\"event\\\":\\\"vault_created\\\",\\\"data\\\":[{\\\"vault\\\":\\\"perf.arena.irontrade.testnet\\\",\\\"owner_id\\\":\\\"it1793205219-owner.testnet\\\",\\\"creator\\\":\\\"it1793205219-owner.testnet\\\",\\\"code_hash\\\":\\\"5ePvrzPrKn8WGzZh8LnSLjaxcCPebA5E6nFJ4HxwR3iQ\\\"}]}\"]"
+    },
+    {
+      "check": "perf.arena.irontrade.testnet has no access keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "factory created lifecycle.arena.irontrade.testnet",
+      "pass": true,
+      "detail": "[\"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.1.0\\\",\\\"event\\\":\\\"init\\\",\\\"data\\\":[{\\\"owner_id\\\":\\\"it1793205219-owner.testnet\\\",\\\"agent_id\\\":\\\"it1793205011-fund1.testnet\\\",\\\"exchange_id\\\":\\\"ref-finance-101.testnet\\\",\\\"intents_id\\\":\\\"it1793205011-intents.testnet\\\",\\\"mpc_id\\\":\\\"v1.signer-prod.testnet\\\",\\\"policy\\\":{\\\"tokens\\\":[{\\\"token\\\":\\\"wrap.testnet\\\",\\\"max_per_trade\\\":\\\"500000000000000000000000\\\",\\\"max_per_day\\\":\\\"3000000000000000000000000\\\"},{\\\"token\\\":\\\"usdc.itachicara.testnet\\\",\\\"max_per_trade\\\":\\\"1000000000000000000000000\\\",\\\"max_per_day\\\":\\\"5000000000000000000000000\\\"}],\\\"pairs\\\":[{\\\"token_in\\\":\\\"wrap.testnet\\\",\\\"token_out\\\":\\\"usdc.itachicara.testnet\\\",\\\"pool_id\\\":1103,\\\"min_price_num\\\":\\\"14\\\",\\\"min_price_den\\\":\\\"10\\\"},{\\\"token_in\\\":\\\"usdc.itachicara.testnet\\\",\\\"token_out\\\":\\\"wrap.testnet\\\",\\\"pool_id\\\":1103,\\\"min_price_num\\\":\\\"33\\\",\\\"min_price_den\\\":\\\"100\\\"}],\\\"max_trades_per_hour\\\":10,\\\"max_slippage_bps\\\":100}}]}\", \"EVENT_JSON:{\\\"standard\\\":\\\"irontrade-factory\\\",\\\"version\\\":\\\"1.0.0\\\",\\\"event\\\":\\\"vault_created\\\",\\\"data\\\":[{\\\"vault\\\":\\\"lifecycle.arena.irontrade.testnet\\\",\\\"owner_id\\\":\\\"it1793205219-owner.testnet\\\",\\\"creator\\\":\\\"it1793205219-owner.testnet\\\",\\\"code_hash\\\":\\\"5ePvrzPrKn8WGzZh8LnSLjaxcCPebA5E6nFJ4HxwR3iQ\\\"}]}\"]"
+    },
+    {
+      "check": "lifecycle.arena.irontrade.testnet has no access keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "factory created suite.arena.irontrade.testnet",
+      "pass": true,
+      "detail": "[\"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.1.0\\\",\\\"event\\\":\\\"init\\\",\\\"data\\\":[{\\\"owner_id\\\":\\\"it1793205219-owner.testnet\\\",\\\"agent_id\\\":\\\"it1793205011-fund2.testnet\\\",\\\"exchange_id\\\":\\\"ref-finance-101.testnet\\\",\\\"intents_id\\\":\\\"it1793205011-intents.testnet\\\",\\\"mpc_id\\\":\\\"v1.signer-prod.testnet\\\",\\\"policy\\\":{\\\"tokens\\\":[{\\\"token\\\":\\\"wrap.testnet\\\",\\\"max_per_trade\\\":\\\"50000000000000000000000\\\",\\\"max_per_day\\\":\\\"120000000000000000000000\\\"},{\\\"token\\\":\\\"usdc.itachicara.testnet\\\",\\\"max_per_trade\\\":\\\"1000000000000000000000000\\\",\\\"max_per_day\\\":\\\"5000000000000000000000000\\\"}],\\\"pairs\\\":[{\\\"token_in\\\":\\\"wrap.testnet\\\",\\\"token_out\\\":\\\"usdc.itachicara.testnet\\\",\\\"pool_id\\\":1103,\\\"min_price_num\\\":\\\"14\\\",\\\"min_price_den\\\":\\\"10\\\"},{\\\"token_in\\\":\\\"usdc.itachicara.testnet\\\",\\\"token_out\\\":\\\"wrap.testnet\\\",\\\"pool_id\\\":1103,\\\"min_price_num\\\":\\\"33\\\",\\\"min_price_den\\\":\\\"100\\\"}],\\\"max_trades_per_hour\\\":3,\\\"max_slippage_bps\\\":100}}]}\", \"EVENT_JSON:{\\\"standard\\\":\\\"irontrade-factory\\\",\\\"version\\\":\\\"1.0.0\\\",\\\"event\\\":\\\"vault_created\\\",\\\"data\\\":[{\\\"vault\\\":\\\"suite.arena.irontrade.testnet\\\",\\\"owner_id\\\":\\\"it1793205219-owner.testnet\\\",\\\"creator\\\":\\\"it1793205219-owner.testnet\\\",\\\"code_hash\\\":\\\"5ePvrzPrKn8WGzZh8LnSLjaxcCPebA5E6nFJ4HxwR3iQ\\\"}]}\"]"
+    },
+    {
+      "check": "suite.arena.irontrade.testnet has no access keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "refuse intents_not_set_up",
+      "pass": true,
+      "detail": "intents_not_set_up"
+    },
+    {
+      "check": "refuse pair_not_allowed",
+      "pass": true,
+      "detail": "pair_not_allowed"
+    },
+    {
+      "check": "refuse zero_amount",
+      "pass": true,
+      "detail": "zero_amount"
+    },
+    {
+      "check": "refuse trade_cap",
+      "pass": true,
+      "detail": "trade_cap"
+    },
+    {
+      "check": "two capped swaps trade",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "refuse daily_cap (rolling 24 h)",
+      "pass": true,
+      "detail": "daily_cap"
+    },
+    {
+      "check": "third trade within the cap",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "refuse rate_limit (3 trades/hour)",
+      "pass": true,
+      "detail": "rate_limit"
+    },
+    {
+      "check": "refuse frozen",
+      "pass": true,
+      "detail": "frozen"
+    },
+    {
+      "check": "agent cannot unfreeze",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "owner unfreezes",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "policy proposed with a 24 h timelock",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "apply before the timelock is refused",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "replacing a pending policy records policy_cancelled",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "owner cancels the pending policy",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "agent cannot propose policy",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "set_agent refuses the owner as agent",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "a stranger cannot accept ownership",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "set_agent refuses the proposed owner",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "proposed owner accepts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "ownership handed back",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exchange_withdraw of nothing is recorded as failed, not as a withdraw",
+      "pass": false,
+      "detail": "[]"
+    },
+    {
+      "check": "suite: intents key registered",
+      "pass": true,
+      "detail": "[\"EVENT_JSON:{\\\"standard\\\":\\\"dip4\\\",\\\"version\\\":\\\"0.4.3\\\",\\\"event\\\":\\\"public_key_added\\\",\\\"data\\\":{\\\"account_id\\\":\\\"suite.arena.irontrade.testnet\\\",\\\"public_key\\\":\\\"secp256k1:2nZDdjeH9x5Mn2LmUnZVqavtLGqC5yg6Nv6jGmoFdSyep7SWnhhGg5VPne8EeWutyiHP1TPWUBtKd8V4A3g2GP5u\\\"}}\", \"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.1.0\\\",\\\"event\\\":\\\"intents_key\\\",\\\"data\\\":[{\\\"public_key\\\":\\\"secp256k1:2nZDdjeH9x5Mn2LmUnZVqavtLGqC5yg6Nv6jGmoFdSyep7SWnhhGg5VPne8EeWutyiHP1TPWUBtKd8V4A3g2GP5u\\\",\\\"path\\\":\\\"iron-trade/intents-1\\\",\\\"intents_id\\\":\\\"it1793205011-intents.testnet\\\"}]}\"]"
+    },
+    {
+      "check": "intents_deposit recorded once it arrived",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "over-withdraw from intents recorded as failed",
+      "pass": true,
+      "detail": "[\"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.1.0\\\",\\\"event\\\":\\\"intents_withdraw_failed\\\",\\\"data\\\":[{\\\"token\\\":\\\"wrap.testnet\\\",\\\"amount\\\":\\\"1000000000000000000000000\\\"}]}\"]"
+    },
+    {
+      "check": "intents_withdraw recorded",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "intent authorized",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "refuse busy (intent open)",
+      "pass": true,
+      "detail": "busy"
+    },
+    {
+      "check": "refuse busy on Rhea while an intent is open",
+      "pass": true,
+      "detail": "busy"
+    },
+    {
+      "check": "refuse unsettled (expired, not yet recorded)",
+      "pass": true,
+      "detail": "unsettled"
+    },
+    {
+      "check": "anyone settles; unused nonce after deadline = intent_expired",
+      "pass": true,
+      "detail": "[\"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.1.0\\\",\\\"event\\\":\\\"intent_expired\\\",\\\"data\\\":[{\\\"seq\\\":1,\\\"receipt_hash\\\":\\\"c815f0a909d3c929b2781aa42bfdeb2bbdc41d0e852c02c23cc8ec9515e3e0ca\\\",\\\"venue\\\":\\\"intents\\\",\\\"nonce\\\":\\\"Vij2xgCqO/NaACgy2z8c7BhUYS/zXo8cyLWJl4pvozU=\\\",\\\"token_in\\\":\\\"wrap.testnet\\\",\\\"amount_in\\\":\\\"20000000000000000000000\\\",\\\"token_out\\\":\\\"usdc.itachicara.testnet\\\"}]}\"]"
+    },
+    {
+      "check": "expiry released the cap (24 h spend back to its level before the intent)",
+      "pass": true,
+      "detail": "0 -> 0"
+    },
+    {
+      "check": "solver fills the intent",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "cancel after a fill fails cleanly (intent_cancel_failed)",
+      "pass": true,
+      "detail": "[\"sign: predecessor=AccountId(\\\"lifecycle.arena.irontrade.testnet\\\"), request=SignRequestArgs { path: \\\"iron-trade/intents-1\\\", payload: Ecdsa(BoundedVec { inner: [193, 68, 27, 168, 166, 28, 150, 11, 216, 24, 149, 106, 242, 77, 207, 165, 118, 206, 117, 225, 154, 117, 21, 255, 161, 131, 80, 213, 29, 208, 57, 56], witness: NonEmpty(()) }), domain_id: DomainId(0) }\", \"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.1.0\\\",\\\"event\\\":\\\"intent_cancel_failed\\\",\\\"data\\\":[{\\\"seq\\\":5,\\\"reason\\\":\\\"nonce already used or expired: run intents_settle\\\"}]}\"]"
+    },
+    {
+      "check": "settle records the fill as a trade",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "txs": [
+    {
+      "op": "factory:create_vault",
+      "method": "create_vault",
+      "contract": "arena.irontrade.testnet",
+      "ok": true,
+      "tx": "6ZHzCBSWSXZVqhXochAkrDQ6iQZasurvVrF4LxVDWAN2",
+      "secs": 5.210423625,
+      "tgas": 15
+    },
+    {
+      "op": "setup:storage_deposit",
+      "method": "storage_deposit",
+      "contract": "wrap.testnet",
+      "ok": true,
+      "tx": "DhBwLpt9MmE5qRb5egkArBKmBQ3H1Y76seroLzUW8kEC",
+      "secs": 4.743957,
+      "tgas": 2
+    },
+    {
+      "op": "setup:storage_deposit",
+      "method": "storage_deposit",
+      "contract": "usdc.itachicara.testnet",
+      "ok": true,
+      "tx": "CHLqytBMumoCzh1UBzya9Pp92RrMgJ86AWd8y1u4rCR6",
+      "secs": 4.472062708,
+      "tgas": 2
+    },
+    {
+      "op": "setup:exchange_storage",
+      "method": "exchange_storage_deposit",
+      "contract": "perf.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "4Jd3jGZyQiftfndEPxLUQCToKiBFSnyx4YEj9jpBZbu5",
+      "secs": 5.26918425,
+      "tgas": 5
+    },
+    {
+      "op": "setup:register_tokens",
+      "method": "exchange_register_tokens",
+      "contract": "perf.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "GuRN83Ro3WLFm29qssS5Fp42F4wJgtAF5qCX237bWTwU",
+      "secs": 4.587316125,
+      "tgas": 6
+    },
+    {
+      "op": "factory:create_vault",
+      "method": "create_vault",
+      "contract": "arena.irontrade.testnet",
+      "ok": true,
+      "tx": "2zLqf8f8P49azvvjX2rZaYZQdgnCNF2fCC4r2JpxQd2J",
+      "secs": 5.724732416,
+      "tgas": 15
+    },
+    {
+      "op": "setup:storage_deposit",
+      "method": "storage_deposit",
+      "contract": "wrap.testnet",
+      "ok": true,
+      "tx": "Dkxx3zbB5f3oNsGz7v7c42SkLn7R73UELMNV8fv9278m",
+      "secs": 5.355464833,
+      "tgas": 2
+    },
+    {
+      "op": "setup:storage_deposit",
+      "method": "storage_deposit",
+      "contract": "usdc.itachicara.testnet",
+      "ok": true,
+      "tx": "7cpU6DFwjVTfsrajfPoo8EwAu5ynoMa7qhzX3Y9togwb",
+      "secs": 5.796059292,
+      "tgas": 2
+    },
+    {
+      "op": "setup:exchange_storage",
+      "method": "exchange_storage_deposit",
+      "contract": "lifecycle.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "8yR1K2oHAcBATR1Q6tWtyWkEw3SGyRNwDVfKJaGjhJVG",
+      "secs": 5.622072292,
+      "tgas": 5
+    },
+    {
+      "op": "setup:register_tokens",
+      "method": "exchange_register_tokens",
+      "contract": "lifecycle.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "4ft34MKYfR2XBpSpU4gejhSsM1PxDHhspJ4UPDxa8TjM",
+      "secs": 4.884292083,
+      "tgas": 6
+    },
+    {
+      "op": "factory:create_vault",
+      "method": "create_vault",
+      "contract": "arena.irontrade.testnet",
+      "ok": true,
+      "tx": "5zYEi6dUmffoYwZWGuPgibEaVuJqKXCWedPbCBZBR358",
+      "secs": 5.604099333,
+      "tgas": 15
+    },
+    {
+      "op": "setup:storage_deposit",
+      "method": "storage_deposit",
+      "contract": "wrap.testnet",
+      "ok": true,
+      "tx": "AMHoPkBGoxzTqjv4HjkdNT7zPMCjYYhmb63b1YMEscko",
+      "secs": 4.572540125,
+      "tgas": 2
+    },
+    {
+      "op": "setup:storage_deposit",
+      "method": "storage_deposit",
+      "contract": "usdc.itachicara.testnet",
+      "ok": true,
+      "tx": "DyD6szkuUYQCwMLRqAxwQ8CYwaZnaj4N59sQUE8k6odn",
+      "secs": 5.115599708,
+      "tgas": 2
+    },
+    {
+      "op": "setup:exchange_storage",
+      "method": "exchange_storage_deposit",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "GsHpiBdmbwNLXG2iJTQvaLu1nBr9NoGVSjUxBxgN3dYJ",
+      "secs": 4.934436042,
+      "tgas": 5
+    },
+    {
+      "op": "setup:register_tokens",
+      "method": "exchange_register_tokens",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "DcaM9eFtNEkgRj4i2KebbKDHirLWtTXqXKnndL3tAgC4",
+      "secs": 5.348871917,
+      "tgas": 6
+    },
+    {
+      "op": "setup:storage_deposit",
+      "method": "storage_deposit",
+      "contract": "wrap.testnet",
+      "ok": true,
+      "tx": "4y3mqTDvncZN5tjcQiCtgHM4tF7tFMAG9HU8Zv1cf9DG",
+      "secs": 4.496021042,
+      "tgas": 2
+    },
+    {
+      "op": "setup:storage_deposit",
+      "method": "storage_deposit",
+      "contract": "usdc.itachicara.testnet",
+      "ok": true,
+      "tx": "AWNsVia7gsCai6ymqez2z4P4DJYtwrqh31AE1fX24YEg",
+      "secs": 4.912376875,
+      "tgas": 2
+    },
+    {
+      "op": "setup:wrap",
+      "method": "near_deposit",
+      "contract": "wrap.testnet",
+      "ok": true,
+      "tx": "3t1UbWhDt9Bc2aFLQQavTHGpbEMKby7NVcMbtRy2Wji4",
+      "secs": 4.577989208,
+      "tgas": 2
+    },
+    {
+      "op": "setup:fund_vault",
+      "method": "ft_transfer_call",
+      "contract": "wrap.testnet",
+      "ok": true,
+      "tx": "GdV4H67GbYJ8xGc7K7HDPa1zZbAKo19w4xvFxG3sMXP1",
+      "secs": 5.317538583,
+      "tgas": 6
+    },
+    {
+      "op": "setup:fund_vault",
+      "method": "ft_transfer_call",
+      "contract": "wrap.testnet",
+      "ok": true,
+      "tx": "6aWrXZdAFVnmizm3iR8jUYXP6meEGnxhLsPvBqALnfUC",
+      "secs": 5.702842917,
+      "tgas": 6
+    },
+    {
+      "op": "setup:fund_vault",
+      "method": "ft_transfer_call",
+      "contract": "wrap.testnet",
+      "ok": true,
+      "tx": "TzfC2d2KyJGdJ2YURaxMetYKXVUAmpMgX1D5kw88rkv",
+      "secs": 5.918509958,
+      "tgas": 6
+    },
+    {
+      "op": "fn:request_intent (no setup)",
+      "method": "request_intent_swap",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "AnXLdpkS2PJTSYeNo7zU9Et3ASpcUhs5UmJ726gc3teS",
+      "secs": 4.291513875,
+      "tgas": 2
+    },
+    {
+      "op": "fn:pair_not_allowed",
+      "method": "request_swap",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "5523PaAtNAazdiCpo7Ztd6E6Dg4AHrEhXdm36oPgjGwe",
+      "secs": 4.216444333,
+      "tgas": 2
+    },
+    {
+      "op": "fn:zero_amount",
+      "method": "request_swap",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "3Ewb8nXt5pk9p294kN3nhe8RuSbFY63mJkTvX5p3hofM",
+      "secs": 4.369235458,
+      "tgas": 2
+    },
+    {
+      "op": "fn:trade_cap",
+      "method": "request_swap",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "FHV1oZiJjkCLTa157tqMTkjtg7oPK8pcTHdCwA73dwUu",
+      "secs": 5.528797209,
+      "tgas": 2
+    },
+    {
+      "op": "fn:swap 0.05",
+      "method": "request_swap",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "mQy7UDrBU2Mmdx8sYFoaYBc2ELoxk3FKk7kCcZy3sVo",
+      "secs": 12.531278875,
+      "tgas": 43
+    },
+    {
+      "op": "fn:swap 0.05",
+      "method": "request_swap",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "4CJqeaSSdAdjEedEHf34ZhVP77spg7E6z4jSvAwuFJjg",
+      "secs": 13.249638,
+      "tgas": 43
+    },
+    {
+      "op": "fn:daily_cap",
+      "method": "request_swap",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "Fam5Nr3uFzZDfNd8jdxFXPKvKBQNAa78E3aXHpk4ns1d",
+      "secs": 4.310242542,
+      "tgas": 2
+    },
+    {
+      "op": "fn:swap 0.02 (3rd trade)",
+      "method": "request_swap",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "3v71EyHic3EgQVkKovVEefNxSdUzx4oL4XXoAGnNHLRP",
+      "secs": 13.722123583,
+      "tgas": 43
+    },
+    {
+      "op": "fn:rate_limit",
+      "method": "request_swap",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "22TqtPoDxUdoxVsDdCucSWSDtxbViPBo2bp85cV78CZF",
+      "secs": 5.104889417,
+      "tgas": 2
+    },
+    {
+      "op": "fn:freeze (agent)",
+      "method": "freeze",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "2JbLaZLuJDJC3fCcaeLhNWgo7BqMSuxRFxeJBdu88eyw",
+      "secs": 4.775996875,
+      "tgas": 2
+    },
+    {
+      "op": "fn:frozen",
+      "method": "request_swap",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "CU5xSHv2bQRRsvYfQ3UzubzFRY1nZmUqR5LWKQ7cfEk6",
+      "secs": 4.286935208,
+      "tgas": 2
+    },
+    {
+      "op": "fn:unfreeze (agent)",
+      "method": "unfreeze",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": false,
+      "tx": "8VsJnEsk3iJoTHf1NUXVUEzQdFGDMk8UoYqi9D1QZodm",
+      "secs": 4.760233333,
+      "tgas": 2
+    },
+    {
+      "op": "fn:unfreeze (owner)",
+      "method": "unfreeze",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "HBKS3chaMg11yz1BSRZh83AXHsTRDNKhShck9eVTwpck",
+      "secs": 4.333398625,
+      "tgas": 2
+    },
+    {
+      "op": "fn:propose_policy",
+      "method": "propose_policy",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "CzpsRfLasyisuzKC6hteCQ5gAAWjZ7PGspVwKJvXsLmV",
+      "secs": 5.496622708,
+      "tgas": 2
+    },
+    {
+      "op": "fn:apply_policy (early)",
+      "method": "apply_policy",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": false,
+      "tx": "AmzgNmvDfbABcUbDt38tJnbCAfs75JJ1QMtjcpR5SLqq",
+      "secs": 4.733420375,
+      "tgas": 1
+    },
+    {
+      "op": "fn:propose_policy (replace)",
+      "method": "propose_policy",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "8XwNZgfncNeaBc3UvHhy8ktM4TKf4L3wqQiz3CvtEaSu",
+      "secs": 4.444335042,
+      "tgas": 2
+    },
+    {
+      "op": "fn:cancel_policy",
+      "method": "cancel_policy",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "2X7krhek4HD2mGpsv1zc7B94Y3ifHgoyzKt6kXwLk13q",
+      "secs": 4.119822125,
+      "tgas": 2
+    },
+    {
+      "op": "fn:propose_policy (agent)",
+      "method": "propose_policy",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": false,
+      "tx": "EJCqQnNCRkQwh2v9gJMjP8y8AV248M4i27tvBHnCWT9M",
+      "secs": 4.40563825,
+      "tgas": 2
+    },
+    {
+      "op": "fn:set_agent=owner",
+      "method": "set_agent",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": false,
+      "tx": "3s8BiEEP2W5jMnbQkRSVNLrcTETq3Q1PvrnUBggnc6SH",
+      "secs": 4.089998583,
+      "tgas": 2
+    },
+    {
+      "op": "fn:propose_owner",
+      "method": "propose_owner",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "AhigL4P61JA3WtA6xighPTXpkYtPLe8zxtX7FLeZYRBZ",
+      "secs": 4.410005459,
+      "tgas": 2
+    },
+    {
+      "op": "fn:accept_owner (wrong)",
+      "method": "accept_owner",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": false,
+      "tx": "4DXKNZM54sd2mrcCp4fQ2NkzJ3JeWdkShZbUtJxkxhU4",
+      "secs": 3.640569375,
+      "tgas": 2
+    },
+    {
+      "op": "fn:set_agent=proposed",
+      "method": "set_agent",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": false,
+      "tx": "GEwnMk175FQwbo6J3QvVuJD2XQH5NrZxGMbGAsoyCs2f",
+      "secs": 4.259221666,
+      "tgas": 2
+    },
+    {
+      "op": "fn:accept_owner",
+      "method": "accept_owner",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "3Xkuhv16kat3644RP8se34iovKdhFu3Y4zwyDPfcSnKi",
+      "secs": 4.128718958,
+      "tgas": 2
+    },
+    {
+      "op": "fn:propose_owner (back)",
+      "method": "propose_owner",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "2Ei6vrJ8tcVzj2xFqSVDJRbiSSfepxZG4eZWCw39ujpS",
+      "secs": 4.3243508330000004,
+      "tgas": 2
+    },
+    {
+      "op": "fn:accept_owner (back)",
+      "method": "accept_owner",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "9B22cR5YV7vE4n1ZANA1xf64AovV69kRTmFD9zNkvx39",
+      "secs": 3.702521375,
+      "tgas": 2
+    },
+    {
+      "op": "fn:exchange_withdraw (empty)",
+      "method": "exchange_withdraw",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": false,
+      "tx": "CxNh2RUKDd8b771qrCzaXpptaR9BXENtySCZemJNuwVs",
+      "secs": 3.941869167,
+      "tgas": 2
+    },
+    {
+      "op": "fn:intents_setup",
+      "method": "intents_setup",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "6Jn18EA1E6GaKkWHijLrbr7r5yS3FNPSSwC8G16kiKcp",
+      "secs": 7.712556333,
+      "tgas": 16
+    },
+    {
+      "op": "fn:intents_deposit",
+      "method": "intents_deposit",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "AcNbM8L8pdhb76a2RnMj9BPuS5Mw4eddd6tXeV3ES9U9",
+      "secs": 6.932838,
+      "tgas": 13
+    },
+    {
+      "op": "fn:intents_withdraw (too much)",
+      "method": "intents_withdraw",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "F6n4A2uXkVsFde7HNqDbtpNCfVEson4BR9tR6RL29Ycg",
+      "secs": 5.197035291,
+      "tgas": 8
+    },
+    {
+      "op": "fn:intents_withdraw",
+      "method": "intents_withdraw",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "4EZhLYosmtaUinRDrsjiw9PKsryhJYeRnfxDAwrBBm1U",
+      "secs": 7.378205791,
+      "tgas": 14
+    },
+    {
+      "op": "setup:intents_setup",
+      "method": "intents_setup",
+      "contract": "lifecycle.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "6QPV4Hr36rSFt1CBGjxmuCH2bzqMe11mFmGHkXJmDXEF",
+      "secs": 6.368634667,
+      "tgas": 16
+    },
+    {
+      "op": "setup:intents_deposit",
+      "method": "intents_deposit",
+      "contract": "lifecycle.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "6w35S1t5CM2FZcSprvyKVTg4JodW9w3shnPE3Y8TD69G",
+      "secs": 6.883638,
+      "tgas": 13
+    },
+    {
+      "op": "fn:intent (to expire)",
+      "method": "request_intent_swap",
+      "contract": "lifecycle.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "GXv1Sr5yHHnDzSt14DeNoBqiFj1WUmBEJCKjbi7k7YNB",
+      "secs": 10.790419417,
+      "tgas": 23
+    },
+    {
+      "op": "fn:busy",
+      "method": "request_intent_swap",
+      "contract": "lifecycle.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "HJYqDWmKFsXapsxEbvpFng4ftUHX96gUbtm8aNYz2uq9",
+      "secs": 5.279923417,
+      "tgas": 2
+    },
+    {
+      "op": "fn:busy (Rhea)",
+      "method": "request_swap",
+      "contract": "lifecycle.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "3L3vBazFxZsAFcjRsGwAdAM9EDVB1VRP8WhbYZAuaMJx",
+      "secs": 4.169141542,
+      "tgas": 2
+    },
+    {
+      "op": "fn:unsettled",
+      "method": "request_intent_swap",
+      "contract": "lifecycle.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "7psk4SfMUjK25UfbVba1id8TT1Jnhp9D1gzHVhbRzdgM",
+      "secs": 4.584484875,
+      "tgas": 2
+    },
+    {
+      "op": "fn:intents_settle (expiry)",
+      "method": "intents_settle",
+      "contract": "lifecycle.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "FDCeRuY6t7Dd1PkTYcvzJ2r9YVTXPd5WRQwLCwYnv9zf",
+      "secs": 5.5295271249999995,
+      "tgas": 7
+    },
+    {
+      "op": "fn:intent (race)",
+      "method": "request_intent_swap",
+      "contract": "lifecycle.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "27hre2kLMA2UKeGc4q87gTmwEuHwB53eAVWp2UuQ4j24",
+      "secs": 9.840155708,
+      "tgas": 23
+    },
+    {
+      "op": "fn:fill first",
+      "method": "execute_intents",
+      "contract": "it1793205011-intents.testnet",
+      "ok": true,
+      "tx": "65vRKqSDrkLe8FfEHp9CQvcri2Kmkb9tznWaDEFTrbiA",
+      "secs": 4.550045208,
+      "tgas": 6
+    },
+    {
+      "op": "fn:cancel after fill",
+      "method": "intents_cancel",
+      "contract": "lifecycle.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "AGgSJMxpZ5ckzmnrtGaMDkCXPb5wm95Tp7sS1u4cs8ZL",
+      "secs": 10.623925542,
+      "tgas": 19
+    },
+    {
+      "op": "fn:settle the fill",
+      "method": "intents_settle",
+      "contract": "lifecycle.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "CJc4KXB2fiR41aW18MwF7KNSDNEZzmkyMDXXzRhURZzh",
+      "secs": 5.242716125,
+      "tgas": 7
+    }
+  ]
+}

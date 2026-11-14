@@ -1,0 +1,174 @@
+{
+  "date_unix": 1793275434,
+  "network": "testnet",
+  "rows": [
+    {
+      "op": "intents:execute_intents (fill)",
+      "n": 1,
+      "median_s": 5.204745792,
+      "p95_s": 5.204745792,
+      "median_tgas": 6,
+      "median_near": 0.0006642319483098001
+    },
+    {
+      "op": "mpc:sign (direct)",
+      "n": 5,
+      "median_s": 8.534219125,
+      "p95_s": 10.150245167,
+      "median_tgas": 8,
+      "median_near": 0.0008067723439929001
+    },
+    {
+      "op": "rpc:view_account",
+      "n": 20,
+      "median_s": 0.631156292,
+      "p95_s": 1.6767028750000001,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "setup:owner_withdraw_usdc",
+      "n": 1,
+      "median_s": 6.275520583,
+      "p95_s": 6.275520583,
+      "median_tgas": 7,
+      "median_near": 0.0006358147247652001
+    },
+    {
+      "op": "setup:solver_deposit",
+      "n": 1,
+      "median_s": 5.919092959,
+      "p95_s": 5.919092959,
+      "median_tgas": 8,
+      "median_near": 0.0007952057405805
+    },
+    {
+      "op": "setup:storage_deposit",
+      "n": 2,
+      "median_s": 5.875797292,
+      "p95_s": 5.875797292,
+      "median_tgas": 2,
+      "median_near": 0.0002290949115234
+    },
+    {
+      "op": "vault:intents_cancel (MPC)",
+      "n": 5,
+      "median_s": 11.298382334,
+      "p95_s": 11.501864459,
+      "median_tgas": 20,
+      "median_near": 0.0018686969428828
+    },
+    {
+      "op": "vault:intents_deposit",
+      "n": 3,
+      "median_s": 7.46629475,
+      "p95_s": 8.02506475,
+      "median_tgas": 13,
+      "median_near": 0.0012032129903736
+    },
+    {
+      "op": "vault:intents_settle (fill)",
+      "n": 1,
+      "median_s": 7.826853208,
+      "p95_s": 7.826853208,
+      "median_tgas": 7,
+      "median_near": 0.0007185303370313001
+    },
+    {
+      "op": "vault:intents_withdraw",
+      "n": 3,
+      "median_s": 7.07673125,
+      "p95_s": 7.52873175,
+      "median_tgas": 14,
+      "median_near": 0.0013116783302479001
+    },
+    {
+      "op": "vault:log_skip",
+      "n": 5,
+      "median_s": 4.678977333,
+      "p95_s": 7.369139542,
+      "median_tgas": 2,
+      "median_near": 0.0002036473166988
+    },
+    {
+      "op": "vault:request_intent_swap (MPC)",
+      "n": 7,
+      "median_s": 11.93103225,
+      "p95_s": 13.5865305,
+      "median_tgas": 23,
+      "median_near": 0.002190780518522
+    },
+    {
+      "op": "vault:request_swap (Rhea)",
+      "n": 6,
+      "median_s": 12.634850917,
+      "p95_s": 13.872234583000001,
+      "median_tgas": 46,
+      "median_near": 0.004296085712096999
+    },
+    {
+      "op": "vault:withdraw (owner)",
+      "n": 5,
+      "median_s": 5.982917834,
+      "p95_s": 7.079392583,
+      "median_tgas": 6,
+      "median_near": 0.000627419484573
+    },
+    {
+      "op": "view:factory_config",
+      "n": 1,
+      "median_s": 0.469598209,
+      "p95_s": 0.469598209,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:ft_balance_of",
+      "n": 4,
+      "median_s": 1.154206417,
+      "p95_s": 2.06408325,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:get_config",
+      "n": 20,
+      "median_s": 0.780261375,
+      "p95_s": 1.7823605,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:get_intents",
+      "n": 1,
+      "median_s": 0.51307375,
+      "p95_s": 0.51307375,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:get_policy",
+      "n": 20,
+      "median_s": 0.641862791,
+      "p95_s": 2.158006666,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:get_usage",
+      "n": 20,
+      "median_s": 0.6247625,
+      "p95_s": 1.5604971669999999,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:preview_swap",
+      "n": 20,
+      "median_s": 0.675758125,
+      "p95_s": 2.463632709,
+      "median_tgas": 0,
+      "median_near": 0.0
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "date_unix": 1793249510,
+  "factory": "arena.irontrade.testnet",
+  "vaults": [
+    "perf.arena.irontrade.testnet",
+    "lifecycle.arena.irontrade.testnet",
+    "suite.arena.irontrade.testnet"
+  ],
+  "code_hash": "5ePvrzPrKn8WGzZh8LnSLjaxcCPebA5E6nFJ4HxwR3iQ",
+  "checks": [
+    {
+      "check": "factory pinned to the current vault code hash",
+      "pass": true,
+      "detail": "\"5ePvrzPrKn8WGzZh8LnSLjaxcCPebA5E6nFJ4HxwR3iQ\""
+    },
+    {
+      "check": "perf.arena.irontrade.testnet has no access keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "lifecycle.arena.irontrade.testnet has no access keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "suite.arena.irontrade.testnet has no access keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "policy proposed with a 24 h timelock",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "apply before the timelock is refused",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "replacing a pending policy records policy_cancelled",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "owner cancels the pending policy",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "agent cannot propose policy",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "set_agent refuses the owner as agent",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "a stranger cannot accept ownership",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "set_agent refuses the proposed owner",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "proposed owner accepts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "ownership handed back",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exchange_withdraw under its gas floor is refused before anything moves",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exchange_withdraw of nothing is recorded as failed, not as a withdraw",
+      "pass": true,
+      "detail": "[\"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.1.0\\\",\\\"event\\\":\\\"exchange_withdraw_failed\\\",\\\"data\\\":[{\\\"token\\\":\\\"usdc.itachicara.testnet\\\",\\\"amount\\\":\\\"1\\\",\\\"reason\\\":\\\"the exchange balance did not go down\\\"}]}\"]"
+    },
+    {
+      "check": "suite: intents key registered",
+      "pass": false,
+      "detail": "[]"
+    },
+    {
+      "check": "intents_deposit recorded once it arrived",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "over-withdraw from intents recorded as failed",
+      "pass": true,
+      "detail": "[\"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.1.0\\\",\\\"event\\\":\\\"intents_withdraw_failed\\\",\\\"data\\\":[{\\\"token\\\":\\\"wrap.testnet\\\",\\\"amount\\\":\\\"1000000000000000000000000\\\"}]}\"]"
+    },
+    {
+      "check": "intents_withdraw recorded",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "txs": [
+    {
+      "op": "setup:storage_deposit",
+      "method": "storage_deposit",
+      "contract": "wrap.testnet",
+      "ok": true,
+      "tx": "AmQVWC9qNQPLsP1aPcCEFaNiUagJGKfxDVwe1yqFGVZj",
+      "secs": 4.046483167,
+      "tgas": 2
+    },
+    {
+      "op": "setup:storage_deposit",
+      "method": "storage_deposit",
+      "contract": "usdc.itachicara.testnet",
+      "ok": true,
+      "tx": "vEEfPwkfAg727udorWUbswpKkP91b91gsm6pyjZmuxD",
+      "secs": 4.621694292,
+      "tgas": 2
+    },
+    {
+      "op": "fn:propose_policy",
+      "method": "propose_policy",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "6RpGqr7S1rqbYA5jgqQTnh3Dbv9GobLV8TieXAjpcSpk",
+      "secs": 3.715855542,
+      "tgas": 2
+    },
+    {
+      "op": "fn:apply_policy (early)",
+      "method": "apply_policy",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": false,
+      "tx": "JCwWs7R4HPB7ZmManWJs3pktqhPp1b86my4kfRe8nWVv",
+      "secs": 3.890313333,
+      "tgas": 1
+    },
+    {
+      "op": "fn:propose_policy (replace)",
+      "method": "propose_policy",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "299jMkWv6eYf6FN182CLn2xJ5vnyfvat4nkmaFch9P37",
+      "secs": 4.394342833,
+      "tgas": 2
+    },
+    {
+      "op": "fn:cancel_policy",
+      "method": "cancel_policy",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "2nh6xvX5kiozpo5u8uNqonjR3qAqZ7JFfHndQ9bjNAzw",
+      "secs": 4.371385083,
+      "tgas": 2
+    },
+    {
+      "op": "fn:propose_policy (agent)",
+      "method": "propose_policy",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": false,
+      "tx": "34SxRMLw7T4Q6nbYDW7ZhvAknTZt5VhJyGReps1Sd8xj",
+      "secs": 4.037486208,
+      "tgas": 2
+    },
+    {
+      "op": "fn:set_agent=owner",
+      "method": "set_agent",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": false,
+      "tx": "HsKu8CA9axEfrtydFR6MRHKSicnNGJv7D7G4QxjBA2jc",
+      "secs": 4.364772042,
+      "tgas": 2
+    },
+    {
+      "op": "fn:propose_owner",
+      "method": "propose_owner",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "2YVSJHh3gCkFnQoeAHpuCcqGRCKMTqqrCkx5ZzPwZvT6",
+      "secs": 4.448876833,
+      "tgas": 2
+    },
+    {
+      "op": "fn:accept_owner (wrong)",
+      "method": "accept_owner",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": false,
+      "tx": "7LW9BWZowpydwP7myPxAs17U1f7EZFTo9zCUc9FwDUnt",
+      "secs": 4.109823916,
+      "tgas": 2
+    },
+    {
+      "op": "fn:set_agent=proposed",
+      "method": "set_agent",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": false,
+      "tx": "9hBH8VZAq58apmVEhSc8KCh6tbgENZ1SQB6K3FeQLmJW",
+      "secs": 4.742908292,
+      "tgas": 2
+    },
+    {
+      "op": "fn:accept_owner",
+      "method": "accept_owner",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "FYto3FYf6MTA2EhYxCErZrwoNfcho4cSZEQ9ioF7dP9A",
+      "secs": 4.172685875,
+      "tgas": 2
+    },
+    {
+      "op": "fn:propose_owner (back)",
+      "method": "propose_owner",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "33jKMQ8VKf2b3eercvzYS7ofYxntNRGbBJR5Q3BtYEgt",
+      "secs": 3.927845458,
+      "tgas": 2
+    },
+    {
+      "op": "fn:accept_owner (back)",
+      "method": "accept_owner",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "5hUt5QSHb78BRxDVXZctrqgYCwjg7h1w97apxGQBzVTg",
+      "secs": 4.347683959,
+      "tgas": 2
+    },
+    {
+      "op": "fn:exchange_withdraw (low gas)",
+      "method": "exchange_withdraw",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": false,
+      "tx": "4FwnzohqhcLCrc7oKgNcjnF2s1tn66Er3H9cUTjESjeK",
+      "secs": 3.927004833,
+      "tgas": 2
+    },
+    {
+      "op": "fn:exchange_withdraw (empty)",
+      "method": "exchange_withdraw",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "ABKFYqVghkRdxbQuzAfXQSjeFGP9WWMPeGDTDboJGFNL",
+      "secs": 6.638431333,
+      "tgas": 15
+    },
+    {
+      "op": "fn:intents_setup",
+      "method": "intents_setup",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": false,
+      "tx": "A5VPms2ofFWt1CRnG5PrcbQxUTw9fhkpeyCPTuFbEj2U",
+      "secs": 4.616989,
+      "tgas": 2
+    },
+    {
+      "op": "fn:intents_deposit",
+      "method": "intents_deposit",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "HfsL3X6mYsgbqeJocp5cQKWXEnfhK4JF3RziovtowbDg",
+      "secs": 7.812693959,
+      "tgas": 13
+    },
+    {
+      "op": "fn:intents_withdraw (too much)",
+      "method": "intents_withdraw",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "Gss5t7So6gP88LXDJnzTn746m3nK1nrP6raEQzGEjdr9",
+      "secs": 4.7889490420000005,
+      "tgas": 8
+    },
+    {
+      "op": "fn:intents_withdraw",
+      "method": "intents_withdraw",
+      "contract": "suite.arena.irontrade.testnet",
+      "ok": true,
+      "tx": "ECRFynBaoWxy3CYyenAoeBdciyg1c8MJfF2JcYmEoDMF",
+      "secs": 6.417144833,
+      "tgas": 14
+    }
+  ]
+}

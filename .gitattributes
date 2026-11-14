@@ -1,0 +1,3 @@
+# Hashed byte for byte (strategy source, receipts, specs): keep LF on every checkout.
+agent/src/strategies/*.ts text eol=lf
+deploy/testnet/receipts-*/** text eol=lf

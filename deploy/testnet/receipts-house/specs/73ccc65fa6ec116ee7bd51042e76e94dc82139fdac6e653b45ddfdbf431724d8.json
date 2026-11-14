@@ -1,0 +1,1 @@
+{"decimals":6,"id":"breakout","kind":"iron-trade-rules","min_trade":0.02,"params":{"enter_days":55,"exit_days":20},"rule":"Enter all NEAR on a close above the prior 55-day high; exit to USDC on a close below the prior 20-day low.","source_sha256":"791d8bc5cf9b1f0535850732de93a868d3eb63a8cdba3260a9977853391eb4da","version":1}

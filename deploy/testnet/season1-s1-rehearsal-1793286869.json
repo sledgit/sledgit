@@ -1,0 +1,86 @@
+{
+  "date_unix": 1793286869,
+  "network": "testnet",
+  "chain_id": "testnet",
+  "factory": "arena2.irontrade.testnet",
+  "entry": "s1-rehearsal",
+  "vault": "s1-rehearsal.arena2.irontrade.testnet",
+  "owner": "s1r-owner.it1793205219-owner.testnet",
+  "agent": "s1r-agent.it1793205219-owner.testnet",
+  "policy": {
+    "tokens": [
+      {
+        "token": "wrap.testnet",
+        "max_per_trade": "500000000000000000000000",
+        "max_per_day": "3000000000000000000000000"
+      },
+      {
+        "token": "usdc.itachicara.testnet",
+        "max_per_trade": "1000000000000000000000000",
+        "max_per_day": "5000000000000000000000000"
+      }
+    ],
+    "pairs": [
+      {
+        "token_in": "wrap.testnet",
+        "token_out": "usdc.itachicara.testnet",
+        "pool_id": 1103,
+        "min_price_num": "7",
+        "min_price_den": "5"
+      },
+      {
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "pool_id": 1103,
+        "min_price_num": "33",
+        "min_price_den": "100"
+      }
+    ],
+    "max_trades_per_hour": 2,
+    "max_slippage_bps": 100
+  },
+  "deposit": "200000000000000000000000",
+  "allowance": "1000000000000000000000000",
+  "txs": [
+    {
+      "step": "arena2.irontrade.testnet.create_vault",
+      "tx": "BERvzzzaQZYerF5T7YX8fVpWjSRydNxvHrPYfxXc6j5H"
+    },
+    {
+      "step": "wrap.testnet.storage_deposit",
+      "tx": "9fVxsMD8tisg71rqtCsgdyDVSaXMRRkYk4MGfHQtgJGz"
+    },
+    {
+      "step": "usdc.itachicara.testnet.storage_deposit",
+      "tx": "GZ8cphRrHTk36LDSTVWpFZxDPPk16CoUA8TQN1xUJrEz"
+    },
+    {
+      "step": "s1-rehearsal.arena2.irontrade.testnet.exchange_storage_deposit",
+      "tx": "9m3tTSSjKP8T99oHmhCbzkLodoHem1WyHw56fvMJtpVx"
+    },
+    {
+      "step": "s1-rehearsal.arena2.irontrade.testnet.exchange_register_tokens",
+      "tx": "Cz66dahdUfH9bibFyEy4Z1mXAia8yojcUTwfcz71xUjg"
+    },
+    {
+      "step": "wrap.testnet.storage_deposit",
+      "tx": "HHGHhzsk3jCJYrCu236W1JgCQoqYiKi4BjY7CChWt3j2"
+    },
+    {
+      "step": "wrap.testnet.near_deposit",
+      "tx": "6dJ2VuQPLv7dpTTnjjXvqzdXsLUjqH5Qd9SFZ9i6EN7k"
+    },
+    {
+      "step": "wrap.testnet.ft_transfer_call",
+      "tx": "CBXfBKpwnjCvTSxnAwyWVQoskkRu65NKYRKEE5p2iVVo"
+    },
+    {
+      "step": "s1r-agent.it1793205219-owner.testnet.add_key(function-call)",
+      "tx": "8WEbdxZDVD8CBUqKVshGNgXiPoKMXq4EUhzPnMw5fJ9S"
+    },
+    {
+      "step": "s1r-agent.it1793205219-owner.testnet.delete_key(full-access)",
+      "tx": "AAszHRs89j9HcCm9qtngZwqZmH6JVyT4uEmaCz9fM36J"
+    }
+  ]
+}

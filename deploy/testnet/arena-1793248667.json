@@ -1,0 +1,90 @@
+{
+  "date_unix": 1793248667,
+  "network": "testnet",
+  "factory": "arena.irontrade.testnet",
+  "owner": "it1793205219-owner.testnet",
+  "policy": {
+    "tokens": [
+      {
+        "token": "wrap.testnet",
+        "max_per_trade": "500000000000000000000000",
+        "max_per_day": "3000000000000000000000000"
+      },
+      {
+        "token": "usdc.itachicara.testnet",
+        "max_per_trade": "1000000000000000000000000",
+        "max_per_day": "5000000000000000000000000"
+      }
+    ],
+    "pairs": [
+      {
+        "token_in": "wrap.testnet",
+        "token_out": "usdc.itachicara.testnet",
+        "pool_id": 1103,
+        "min_price_num": "14",
+        "min_price_den": "10"
+      },
+      {
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "pool_id": 1103,
+        "min_price_num": "33",
+        "min_price_den": "100"
+      }
+    ],
+    "max_trades_per_hour": 12,
+    "max_slippage_bps": 100
+  },
+  "vaults": [
+    {
+      "name": "qwen36-tee",
+      "vault": "qwen36-tee.arena.irontrade.testnet",
+      "agent": "agent2-qwen36-tee.it1793205219-owner.testnet",
+      "agent_key": "function-call (vault, agent methods)",
+      "rekey": true,
+      "txs": [
+        {
+          "step": "create_agent",
+          "tx": "7253DZNsne7YvRr8fjzqP5oeeJJ2qkB9TRHBuei7SpU9"
+        },
+        {
+          "step": "add_scoped_key",
+          "tx": "5tWic7fL3bEip8KPWsiozdc6aJWPPizmMqkV1MAgBGKb"
+        },
+        {
+          "step": "delete_temp_key",
+          "tx": "LQRfdZub4jqeKibC8kkj1JDPNcgGpMJJEQhBgNJjnFp"
+        },
+        {
+          "step": "set_agent",
+          "tx": "EDfPqwpV5CHqJMQLmYSjqpcFn1PesRhrPDwRAw38Cz5x"
+        }
+      ]
+    },
+    {
+      "name": "llama32-local",
+      "vault": "llama32-local.arena.irontrade.testnet",
+      "agent": "agent2-llama32-local.it1793205219-owner.testnet",
+      "agent_key": "function-call (vault, agent methods)",
+      "rekey": true,
+      "txs": [
+        {
+          "step": "create_agent",
+          "tx": "BtCKQQtVLLhFABVMQhPxn6ahJxyD1UPpBGtmhe8DWq1s"
+        },
+        {
+          "step": "add_scoped_key",
+          "tx": "rCbN4Xp8yr2BgCy7ZEoZsam8vF18zfeUC3Z6pKbAWDo"
+        },
+        {
+          "step": "delete_temp_key",
+          "tx": "GbJstsZLPs1FSfz6xom5LEtiuksPefcecVWY1ufHePGr"
+        },
+        {
+          "step": "set_agent",
+          "tx": "4VgiRd7XXH5y6cU2M1bQYj5T9ghR8e8P8wHR6wtGpMZZ"
+        }
+      ]
+    }
+  ]
+}

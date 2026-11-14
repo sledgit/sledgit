@@ -1,0 +1,75 @@
+{
+  "comment": "Season 1 reference entries, created from the locked factory arena.sledgit.near (each owner calls create_vault). Copy to deploy/mainnet/season1.json (git-ignored) and replace every <...>. One owner and one agent account per entry, each funded on its own; no account may appear in two entries, and none may be the factory or its parent. Owners/agents can be named (.near) or implicit (64 hex). recovery_public_key (optional, per entry): the public key of a full-access key John holds offline (e.g. a Ledger key); if omitted, the tool generates one into ~/.config/sledgit/RECOVERY-mainnet-agent-<name>.json for John to move offline. To change the entries: edit 'entries' (names 2-32 of a-z, 0-9, inner '-'). Amounts are human units. No secrets here.",
+  "network": "mainnet",
+  "factory": "arena.sledgit.near",
+  "expect_vault_code_hash": "REPLACE-WITH-THE-REPRODUCIBLE-BUILD-HASH-AT-THE-1-NOV-TAG",
+  "exchange": "v2.ref-finance.near",
+  "intents": "intents.near",
+  "mpc": "v1.signer",
+  "tokens": {
+    "base": {
+      "id": "wrap.near",
+      "symbol": "wNEAR",
+      "decimals": 24
+    },
+    "quote": {
+      "id": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+      "symbol": "USDC",
+      "decimals": 6
+    }
+  },
+  "pool_id": 4512,
+  "policy": {
+    "base": {
+      "max_per_trade": "1.2",
+      "max_per_day": "2.4"
+    },
+    "quote": {
+      "max_per_trade": "5",
+      "max_per_day": "10"
+    },
+    "min_price_sell": "2.0",
+    "min_price_buy": "0.15",
+    "max_trades_per_hour": 2,
+    "max_slippage_bps": 100
+  },
+  "agent": {
+    "allowance_near": "1",
+    "balance_near": "1.5"
+  },
+  "entries": [
+    {
+      "name": "house-rebalancer",
+      "kind": "rules:rebalancer",
+      "owner": "<owner-1>",
+      "agent": "<agent-1>",
+      "deposit_near": "0.2",
+      "fund": {
+        "base": "1",
+        "quote": "5"
+      }
+    },
+    {
+      "name": "house-trend",
+      "kind": "rules:trend",
+      "owner": "<owner-2>",
+      "agent": "<agent-2>",
+      "deposit_near": "0.2",
+      "fund": {
+        "base": "1",
+        "quote": "5"
+      }
+    },
+    {
+      "name": "qwen36-tee",
+      "kind": "model:Qwen/Qwen3.6-35B-A3B-FP8 (attested)",
+      "owner": "<owner-3>",
+      "agent": "<agent-3>",
+      "deposit_near": "0.2",
+      "fund": {
+        "base": "1",
+        "quote": "5"
+      }
+    }
+  ]
+}

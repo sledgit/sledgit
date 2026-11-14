@@ -1,0 +1,37 @@
+{
+ "rules": {
+  "rebalancer": {
+   "version": 2,
+   "rule": "Back to 50/50 when the NEAR weight, valued at the last daily close, drifts more than 10 points.",
+   "sha256": "3544d9ef12901bf4b3c9e798b406ef8c30ce0778bc11f5dc866679243882edf6"
+  },
+  "trend": {
+   "version": 2,
+   "rule": "All NEAR when the last daily close is above its 50-day average, all USDC when below.",
+   "sha256": "d1278515eb3548725ddeed63263a1b6fcc76631d58e85e78b39cc2eaec53f094"
+  },
+  "breakout": {
+   "version": 2,
+   "rule": "Enter on a close above the prior 55-day high and keep buying toward all NEAR until a close below the prior 20-day low; then keep selling toward all USDC until the next entry. In or out is the side of the vault's last on-chain trade request.",
+   "sha256": "c7fb1b78c53eaa599a2bc0003dcac4639151ab9a54c75eafbda3443198936f4d"
+  },
+  "hold": {
+   "version": 2,
+   "rule": "Move to 50/50 once, then never trade: once the vault has any on-chain trade request, it only holds.",
+   "sha256": "95150baf2bfc66ffa9d4ebd8161eb3d9ed0382b01c95755101e4b5d3b8354583"
+  },
+  "luck": {
+   "version": 2,
+   "rule": "Random trades under the same limits: each tick, with probability 0.25, buy or sell 10-50% of the remaining cap (per trade and rolling 24 h). The randomness is sha256(seed|vault|seq|slot block hash): the vault's own decision number and the hash of the first block at or after the scheduled slot, which nobody knows earlier.",
+   "sha256": "ba2d2bdc50de214995ef238a6b2f78e0c4fc3778dd6fde2dc31fa9797275e6e7"
+  }
+ },
+ "prompts": {
+  "arena-v1": {
+   "sha256": "9f8f34426042cc19017d2149b47258d5f5d14e63e07aac122a9b26dfb2ddcd7b"
+  },
+  "iron-trader-v1": {
+   "sha256": "f9d7c6aa37ec82f8ae56fc1a44d6d0d3baa0e22cd712961bac9392150d199e8a"
+  }
+ }
+}

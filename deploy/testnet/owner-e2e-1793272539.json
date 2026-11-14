@@ -1,0 +1,73 @@
+{
+  "network": "testnet",
+  "factory": "arena2.irontrade.testnet",
+  "vault": "e2e-1793272539.arena2.irontrade.testnet",
+  "owner": "owner-e2e-1793272539.it1793205219-owner.testnet",
+  "agent": "agent-e2e-1793272539.it1793205219-owner.testnet",
+  "wnear_in_vault": "300000000000000000000000",
+  "steps": [
+    {
+      "step": "create throwaway owner",
+      "tx": "37RX91bZv8N1kiqh5HxKeczmdvhVGkFh86FdjYJzJKpL",
+      "ok": true
+    },
+    {
+      "step": "create_vault",
+      "tx": "4KNSTQLXpz4it1gKU5UyWHdAcvApC5scGdGxhfbtoHQt",
+      "ok": true,
+      "note": "true"
+    },
+    {
+      "step": "fund: wrap.testnet.storage_deposit",
+      "tx": "Hu3MmAsh8NbuFUKRxjfrAk1Vng7XCG9HXGnQheqTkfnq",
+      "ok": true,
+      "note": "{\"total\":\"1250000000000000000000\",\"available\":\"0\"}"
+    },
+    {
+      "step": "fund: usdc.itachicara.testnet.storage_deposit",
+      "tx": "H9WGHvpDfviMkd4RDK2F93rvuBR6G9nnFtBh3EoKKV1x",
+      "ok": true,
+      "note": "{\"total\":\"1250000000000000000000\",\"available\":\"0\"}"
+    },
+    {
+      "step": "fund: e2e-1793272539.arena2.irontrade.testnet.exchange_storage_deposit",
+      "tx": "2SrDriHD1ue2ME17SnDxhGgJA5c56DMyz8HsEkaNnpYi",
+      "ok": true,
+      "note": "{\"total\":\"100000000000000000000000\",\"available\":\"98980000000000000000000\"}"
+    },
+    {
+      "step": "fund: e2e-1793272539.arena2.irontrade.testnet.exchange_register_tokens",
+      "tx": "E9LvP8qnppH6QhY4cPcZXjUjxjjjKFa6nZLbTizkwPMp",
+      "ok": true
+    },
+    {
+      "step": "fund: wrap.testnet.storage_deposit",
+      "tx": "G5yC2UZag4be6qJMEXZRkU5TZNEMNY44rRTNYFcBtdFd",
+      "ok": true,
+      "note": "{\"total\":\"1250000000000000000000\",\"available\":\"0\"}"
+    },
+    {
+      "step": "fund: wrap.testnet.near_deposit",
+      "tx": "AgNJtPUKebBztUBkLWYqFqr2mJBFmSnrWQq8gLbBhmMV",
+      "ok": true
+    },
+    {
+      "step": "fund: wrap.testnet.ft_transfer_call",
+      "tx": "CP4rCB97DV71oAf2YvFcshERtfcPbPYm4hSBYEjfE83Q",
+      "ok": true,
+      "note": "\"500000000000000000000000\""
+    },
+    {
+      "step": "freeze",
+      "tx": "9uxgC6fGSgQGtUiEa6KxPCr4AFPqVBsXqVhRZSqchraQ",
+      "ok": true
+    },
+    {
+      "step": "withdraw wNEAR",
+      "tx": "DPeaoG6veCVMXzU12d8amZgTEL4fo11eAHo31bVeQUrx",
+      "ok": true,
+      "note": "true"
+    }
+  ],
+  "at": "2026-10-29T11:16:31.720Z"
+}

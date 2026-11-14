@@ -1,0 +1,87 @@
+{
+  "checks": {
+    "vault account has no access keys after deploy (nobody can sign as it)": true,
+    "on-chain derived signer_id equals the MPC view's address": true,
+    "compliant request returns a signed erc191 MultiPayload": true,
+    "the MPC signer was called for the compliant request": true,
+    "refused without an MPC call: price below floor": true,
+    "refused without an MPC call: amount above cap": true,
+    "refused without an MPC call: pair not allowed": true,
+    "ERC-191 signature recovers to the contract's signer_id": true,
+    "payload is bound to intents.near and a token_diff the policy allowed": true,
+    "intents.near accepts the contract's signature: it passes signature and key checks, stops only at balance": true,
+    "control: a normal key signing as itself stops at the same stage": true,
+    "control: tampered payload is rejected at the key check": true,
+    "control: another key cannot sign as the contract": true,
+    "solver relay takes the contract-signed intent and rejects it only for balance": true,
+    "solver relay returns quotes for wNEAR -> USDC": true
+  },
+  "evidence": {
+    "deploy_tx": "AzhVmnoSwrdGpEZ193Hk7whVyjhCRgVqRA17JpYhQkCB",
+    "contract": "signer-1793199188.irontrade-1793199142.testnet",
+    "lock_tx": "5EMpyefJsPLcWZ58z36QWkXKxpydCNLXQYVXxNBo5tSV",
+    "signer_id": "0xee8e6dfd3f7ea9caadb8ed06bd5fcd04ffb7ab42",
+    "authorize_tx": "GKVPNumzStbDHpuPkrRfnM3LYxJSsuJLFf22R4zNePzi",
+    "authorize_seconds": 6.5,
+    "authorize_gas_tgas": 13.3,
+    "multi_payload": {
+      "standard": "erc191",
+      "payload": "{\"signer_id\":\"0xee8e6dfd3f7ea9caadb8ed06bd5fcd04ffb7ab42\",\"verifying_contract\":\"intents.near\",\"deadline\":\"2026-10-28T14:58:25Z\",\"nonce\":\"k4290/8vG/FLNX0RHMISiv933p06XKHYSaHs/UgL7UQ=\",\"intents\":[{\"intent\":\"token_diff\",\"diff\":{\"nep141:wrap.near\":\"-1000000000000000000000000\",\"nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1\":\"4000000\"}}]}",
+      "signature": "secp256k1:8uQdaYWCGdjEusjrKDGSFV7kchvEqjiMzLGUKA4dmEADjoq94j2yegcmqqyfPAEsmEyxSYMibUvV1kFqP5kY4AH9y"
+    },
+    "refuse_price below floor": {
+      "tx": "6gwqFzSvx2hm6iUd3qBsi4h4wcWuvVu3HG9JMA4rjtFD",
+      "value": {
+        "refused": "price worse than the policy floor"
+      }
+    },
+    "refuse_amount above cap": {
+      "tx": "ATNRXRc9P9XxKJ3nsEEUNtiGeC2NMuQvL6oFPXyp29uW",
+      "value": {
+        "refused": "amount_in above cap 2000000000000000000000000"
+      }
+    },
+    "refuse_pair not allowed": {
+      "tx": "FriLeuQrpCBLcvgUFLcZMsxc6TG1zxQL4yeRFZRAsMHM",
+      "value": {
+        "refused": "pair nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1 -> nep141:wrap.near not allowed"
+      }
+    },
+    "simulate_intents": {
+      "contract-signed intent": {
+        "error": "wasm execution failed with error: HostError(GuestPanic { panic_msg: \"insufficient balance or overflow\" })"
+      },
+      "control: payload tampered (min_out +1)": {
+        "error": "wasm execution failed with error: HostError(GuestPanic { panic_msg: \"public key 'secp256k1:MaV34YhxkN8qdnPLDuW4vpMU7uRAoGEVZcwhvSC2Q483sLwk7ucXKKt3sTFLqjUkCkhpteTdJ1JHEeKnthX7xDR' doesn't exist for account '0xee8e6dfd3f7ea9caadb8ed06bd5fcd04ffb7ab42'\" })"
+      },
+      "control: another key signs as the contract's signer_id": {
+        "error": "wasm execution failed with error: HostError(GuestPanic { panic_msg: \"public key 'secp256k1:2rHwbrQSdtEUXqzE4cw9xgBGbZXAQwWm3iTeXN7PrCS4KrF6PgsDiFewBAXGRQxBsYEwoqK691wBBtoGTqzqWnBV' doesn't exist for account '0xee8e6dfd3f7ea9caadb8ed06bd5fcd04ffb7ab42'\" })"
+      },
+      "control: a local key signing as itself (same stage as the contract's)": {
+        "error": "wasm execution failed with error: HostError(GuestPanic { panic_msg: \"insufficient balance or overflow\" })"
+      }
+    },
+    "relay_quote": {
+      "result": [
+        {
+          "defuse_asset_identifier_in": "nep141:wrap.near",
+          "defuse_asset_identifier_out": "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "amount_in": "1000000000000000000000000",
+          "amount_out": "4577845",
+          "expiration_time": "2026-10-28T14:55:19.256Z",
+          "quote_hash": "3BNTzdzayALoU6coDqyPhHTved8LwyFBGCEy93VF2cgy"
+        }
+      ],
+      "id": 1,
+      "jsonrpc": "2.0"
+    },
+    "relay_publish": {
+      "result": {
+        "status": "FAILED",
+        "reason": "error simulating intents: wasm execution failed with error: HostError(GuestPanic { panic_msg: \"insufficient balance or overflow\" })"
+      },
+      "id": 1,
+      "jsonrpc": "2.0"
+    }
+  }
+}

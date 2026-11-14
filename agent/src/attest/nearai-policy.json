@@ -1,0 +1,79 @@
+{
+  "version": 2,
+  "api": "https://cloud-api.near.ai/v1",
+  "max_evidence_age_secs": 900,
+  "gateway": {
+    "app_ids": [
+      "f550fdfb4eb8ad787c1bcd423f091cbb4a4431ae"
+    ],
+    "compose_hashes": [
+      "9d93365e75d64d6d59fbc0ea9999fba6398524e26de905519325a7a246b71daa",
+      "f571e5dafe8f96baf116a271b4be9cba228b447dd6ebe502bbda81ede7bcc7ce"
+    ],
+    "os_image_hashes": [
+      "da9a3d5cc196a1a76d953fb27069be428ddf60a1ce10b0534c3cf968d3053fde",
+      "8db40cb23008d6213668b5816702d100b37b859a8a5bfd18d938ae3a1b3715bd"
+    ],
+    "key_providers": [
+      "3059301306072a8648ce3d020106082a8648ce3d03010703420004394aaed2c745e6a457cb835f7f47423f57ff3ead71b92abff6bdc14d905b319f2e13961b42c50740dae4498d9c51dd7a2e227660c9e5c504083cda06b6c11682"
+    ],
+    "images": [
+      "nearaidev/cloud-api@sha256:d38e6d816454de5c93690ef46f8297fd5e57c6b8c4b5dfe984b7e1229aa6b790",
+      "nearaidev/cvm-ingress@sha256:1653c23200298a823c08c66d829c633fc36919bca1e09cf577b83b01353e0891",
+      "nearaidev/dstack-vpc@sha256:45f859504c7a66ea562e3230b7a3b482912bdd93f3930d1bb1c2f46e8d84f8f0",
+      "nearaidev/dstack-vpc-client@sha256:dd570dee92901c6d9cf96909404bb5177294437e3642541225a85b06cefa3d9d",
+      "alpine@sha256:4b7ce07002c69e8f3d704a9c5d6fd3053be500b7f1c69fc0d80990c2ad8dd412",
+      "otel/opentelemetry-collector-contrib@sha256:85ac41c2db88d0df9bd6145e608a3cb023f5d8443868adbfbbf66efb51087917"
+    ],
+    "vms": [
+      {
+        "os_image_hash": "da9a3d5cc196a1a76d953fb27069be428ddf60a1ce10b0534c3cf968d3053fde",
+        "mrtd": "f06dfda6dce1cf904d4e2bab1dc370634cf95cefa2ceb2de2eee127c9382698090d7a4a13e14c536ec6c9c3c8fa87077",
+        "rtmr0": "fb14dc139f33d6fcf474bc8332cac001259fb31cfbcb6b34d4ceeb552a2c4466884a0cbde45ad98a05c5c060c23ad65a",
+        "rtmr1": "a7b523278d4f914ee8df0ec80cd1c3d498cbf1152b0c5eaf65bad9425072874a3fcf891e8b01713d3d9937e3e0d26c15",
+        "rtmr2": "24847f5c5a2360d030bc4f7b8577ce32e87c4d051452c937e91220cab69542daef83433947c492b9c201182fc9769bbe"
+      },
+      {
+        "os_image_hash": "8db40cb23008d6213668b5816702d100b37b859a8a5bfd18d938ae3a1b3715bd",
+        "mrtd": "7fe60787222bd394cb516abca2435f22f035ab2cc9c0a4b4b3b148e46297f3d931a237b72f359052c6e657d8c1409173",
+        "rtmr0": "d090162bff4b1d1dc74dc59dc548838efc4b811b173da8536efa8e2a9c045da70ee092301293ad90afebee448bcd0211",
+        "rtmr1": "4ae609807c765916a31d724786ed74bcb97e168a9d937b04936aeef2015c907eba5ac352c6bcd749c246fd62ffb659ec",
+        "rtmr2": "764489f277a8540189761e72b4238ba36d4d647e11bd958d8ab5522af2a4867b0ff63e06b0c4967f1857236244040a5d"
+      }
+    ]
+  },
+  "models": {
+    "Qwen/Qwen3.6-35B-A3B-FP8": {
+      "app_ids": [
+        "2c0a0c96cb6dbd659bf1446e2f3fce58172ff91b"
+      ],
+      "compose_hashes": [
+        "5e513dbd72e1c0f291f748ad06d4dbc1df55659869e649376213ac7b3c9d2e29"
+      ],
+      "os_image_hashes": [
+        "91fd5d69ccee3e5ea4f2aeb8c9b632c4358c4ecfc29ba1aa6fb1e402af209829"
+      ],
+      "key_providers": [
+        "3059301306072a8648ce3d020106082a8648ce3d03010703420004394aaed2c745e6a457cb835f7f47423f57ff3ead71b92abff6bdc14d905b319f2e13961b42c50740dae4498d9c51dd7a2e227660c9e5c504083cda06b6c11682"
+      ],
+      "images": [
+        "nearaidev/compose-manager@sha256:6e035c8fb99c1d31f41760d25af178683a658cca4afd73cd0d366fbb5bf884be",
+        "nearaidev/compose-manager-launcher@sha256:079a14b41deb11e0e27f9b69648e8b3d89bd6fb9ccf6071643b8f447fa415085",
+        "certbot/dns-cloudflare@sha256:742dbd2e61c8709b930712c38958386c3cb3928e09eeb1f1e490600c127e2edb",
+        "otel/opentelemetry-collector-contrib@sha256:85ac41c2db88d0df9bd6145e608a3cb023f5d8443868adbfbbf66efb51087917"
+      ],
+      "vms": [
+        {
+          "os_image_hash": "91fd5d69ccee3e5ea4f2aeb8c9b632c4358c4ecfc29ba1aa6fb1e402af209829",
+          "mrtd": "df4d77c857de652bd0fafa343a2026b51071ee03773d076d283abf1a7d36ff91ffa279ee4a617ac664f7e2a2c8d5891b",
+          "rtmr0": "bc122d143ab768565ba5c3774ff5f03a63c89a4df7c1f5ea38d3bd173409d14f8cbdcc36d40e703cccb996a9d9687590",
+          "rtmr1": "4ae609807c765916a31d724786ed74bcb97e168a9d937b04936aeef2015c907eba5ac352c6bcd749c246fd62ffb659ec",
+          "rtmr2": "bd67ab7554dc27ab03a077bc1447a1a67d0624ff547c4c809a8626f12d6a89712f8ec60e781e99b98208574065d21a71"
+        }
+      ],
+      "signers": [
+        "0xfdbd7952498b333206f360d71d97a1e0961e8ddf"
+      ]
+    }
+  }
+}

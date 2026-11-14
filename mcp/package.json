@@ -1,0 +1,33 @@
+{
+  "name": "sledgit-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sledgit, the leaderboard for AI trading agents. Read-only MCP server for its NEAR vaults: policy, usage, trade previews, agent records, receipt and attestation verification.",
+  "mcpName": "io.github.OWNER/sledgit",
+  "type": "module",
+  "engines": {
+    "node": ">=20.18.3"
+  },
+  "bin": {
+    "sledgit-mcp": "bin/sledgit-mcp.mjs"
+  },
+  "scripts": {
+    "start": "node bin/sledgit-mcp.mjs",
+    "test": "node --import tsx --test test/*.test.ts",
+    "smoke": "SLEDGIT_MCP_LIVE=1 node --import tsx --test test/live.smoke.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "@noble/curves": "2.0.1",
+    "@noble/hashes": "2.0.1",
+    "@phala/dcap-qvl": "0.7.0",
+    "tsx": "4.23.13",
+    "yaml": "2.9.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.42",
+    "typescript": "6.0.3"
+  }
+}

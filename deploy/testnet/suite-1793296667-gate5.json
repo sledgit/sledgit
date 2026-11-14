@@ -1,0 +1,321 @@
+{
+ "date_unix": 1793296667,
+ "factory": "arena2.irontrade.testnet",
+ "code_hash": "2ZP4H1ENzFKyN4nVSZf9vKf3pEpgoup9DVU6NbjbE2Gg",
+ "vaults": [
+  "suite.arena2.irontrade.testnet",
+  "lifecycle.arena2.irontrade.testnet",
+  "refusals.arena2.irontrade.testnet"
+ ],
+ "runs": {
+  "perf": "suite-1793275434.json (earlier run; its fill check counted a policy rate_limit refusal as a failure, suite since fixed; fills re-proven in intents)",
+  "refusals": "log only (run stopped later in owner on a suite bug)",
+  "owner": "suite-1793288922.json",
+  "intents": "suite-1793292604.json",
+  "abandon": "suite-1793292843.json"
+ },
+ "not_live_testable": [
+  "exchange_claim_lostfound with a payout actually parked (sandbox-proven: payout_parked_in_lostfound test vs real Rhea binary)",
+  "settle with an INVALIDATED salt (sandbox-proven vs real intents.near; valid-salt path exercised live in the expiry check)"
+ ],
+ "checks": [
+  {
+   "section": "setup",
+   "check": "factory pinned to the current vault code hash",
+   "pass": true
+  },
+  {
+   "section": "setup",
+   "check": "suite.arena2.irontrade.testnet has no access keys",
+   "pass": true
+  },
+  {
+   "section": "setup",
+   "check": "lifecycle.arena2.irontrade.testnet has no access keys",
+   "pass": true
+  },
+  {
+   "section": "setup",
+   "check": "refusals.arena2.irontrade.testnet has no access keys",
+   "pass": true
+  },
+  {
+   "section": "perf (run 1793275434)",
+   "check": "Rhea swaps settle (perf runs)",
+   "pass": true,
+   "detail": "6/6"
+  },
+  {
+   "section": "perf (run 1793275434)",
+   "check": "intents authorized by real MPC (perf runs)",
+   "pass": true,
+   "detail": "5/5"
+  },
+  {
+   "section": "perf (run 1793275434)",
+   "check": "intents cancelled by real MPC (perf runs)",
+   "pass": true,
+   "detail": "5/5"
+  },
+  {
+   "section": "refusal",
+   "check": "refuse intents_not_set_up",
+   "pass": true,
+   "tx": "AwhKiXn9uTwRLUjRRyMw4d4DknFAWoXxfMqAfcFZ6fgx"
+  },
+  {
+   "section": "refusal",
+   "check": "refuse pair_not_allowed",
+   "pass": true,
+   "tx": "CVZA41guBgE6FfAcLk38HBVmEVEfk8Zbpj6tKpTy92Yr"
+  },
+  {
+   "section": "refusal",
+   "check": "refuse zero_amount",
+   "pass": true,
+   "tx": "G6RVvVZUakLvsvUk6GCBu4RRthGZezjqhFzn3mK1grFH"
+  },
+  {
+   "section": "refusal",
+   "check": "refuse trade_cap",
+   "pass": true,
+   "tx": "94wWYZxJYfrswMYC6QNf6fACYPqKb75QvMa2d5Yq5xw2"
+  },
+  {
+   "section": "refusal",
+   "check": "rolling caps already used this hour/day: daily_cap/rate_limit checks skipped this run",
+   "pass": true,
+   "tx": "94wWYZxJYfrswMYC6QNf6fACYPqKb75QvMa2d5Yq5xw2"
+  },
+  {
+   "section": "refusal",
+   "check": "refuse frozen",
+   "pass": true,
+   "tx": "JAqjbiqagUzAfd7e44MLZjSS8qszYt4mLeuE7vEt73KJ"
+  },
+  {
+   "section": "refusal",
+   "check": "agent cannot unfreeze",
+   "pass": true,
+   "tx": "JAqjbiqagUzAfd7e44MLZjSS8qszYt4mLeuE7vEt73KJ"
+  },
+  {
+   "section": "refusal",
+   "check": "owner unfreezes",
+   "pass": true,
+   "tx": "9hDNiQ4n2jZ3UdHDYoPrDMhfztVg1Ve4EeUQQiUezTYn"
+  },
+  {
+   "section": "owner",
+   "check": "policy proposed with a 24 h timelock",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "owner",
+   "check": "apply before the timelock is refused",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "owner",
+   "check": "replacing a pending policy records policy_cancelled",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "owner",
+   "check": "owner cancels the pending policy",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "owner",
+   "check": "agent cannot propose policy",
+   "pass": true,
+   "detail": "rejected before execution: the signer's key can't make this call"
+  },
+  {
+   "section": "owner",
+   "check": "set_agent refuses the owner as agent",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "owner",
+   "check": "a stranger cannot accept ownership",
+   "pass": true,
+   "detail": "refused by the contract"
+  },
+  {
+   "section": "owner",
+   "check": "set_agent refuses the proposed owner",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "owner",
+   "check": "proposed owner accepts",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "owner",
+   "check": "ownership handed back",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "owner",
+   "check": "exchange_withdraw under its gas floor is refused before anything moves",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "owner",
+   "check": "exchange_withdraw of nothing is recorded as failed, not as a withdraw",
+   "pass": true,
+   "detail": "[\"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.2.0\\\",\\\"event\\\":\\\"exchange_withdraw_failed\\\",\\\"data\\\":[{\\\"token\\\":\\\"usdc.itachicara.testnet\\\",\\\"amount\\\":\\\"1\\\",\\\"reason\\\":\\\"the exchange balance did not go down\\\"}]}\"]"
+  },
+  {
+   "section": "owner",
+   "check": "agent cannot claim lostfound (owner only)",
+   "pass": true,
+   "detail": "rejected before execution: the signer's key can't make this call"
+  },
+  {
+   "section": "owner",
+   "check": "lostfound claim under its gas floor is refused before anything moves",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "owner",
+   "check": "lostfound claim with nothing parked is recorded as failed, never as a claim",
+   "pass": true,
+   "detail": "[\"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.2.0\\\",\\\"event\\\":\\\"exchange_lostfound_claim_failed\\\",\\\"data\\\":[{\\\"token\\\":\\\"wrap.testnet\\\",\\\"reason\\\":\\\"the vault's balance did not go up\\\"}]}\"]"
+  },
+  {
+   "section": "owner",
+   "check": "refuse busy while an owner exchange operation runs",
+   "pass": true,
+   "detail": "busy"
+  },
+  {
+   "section": "owner",
+   "check": "suite: intents key registered",
+   "pass": true,
+   "detail": "[\"EVENT_JSON:{\\\"standard\\\":\\\"dip4\\\",\\\"version\\\":\\\"0.4.3\\\",\\\"event\\\":\\\"public_key_added\\\",\\\"data\\\":{\\\"account_id\\\":\\\"refusals.arena2.irontrade.testnet\\\",\\\"public_key\\\":\\\"secp256k1:5XACfbdriTJKBiEv9sn4JvVqgYGFKdvD5u3CSQMj41yg8jhBXyVaVVnGKzdCirGYRqNk9dHo6EJHZMAFF7tkvzas\\\"}}\", \"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.2.0\\\",\\\"event\\\":\\\"intents_key\\\",\\\"data\\\":[{\\\"public_key\\\":\\\"secp256k1:5XACfbdriTJKBiEv9sn4JvVqgYGFKdvD5u3CSQMj41yg8jhBXyVaVVnGKzdCirGYRqNk9dHo6EJHZMAFF7tkvzas\\\",\\\"path\\\":\\\"iron-trade/intents-1\\\",\\\"intents_id\\\":\\\"it1793205011-intents.testnet\\\"}]}\"]"
+  },
+  {
+   "section": "owner",
+   "check": "intents_deposit recorded once it arrived",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "owner",
+   "check": "over-withdraw from intents recorded as failed",
+   "pass": true,
+   "detail": "[\"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.2.0\\\",\\\"event\\\":\\\"intents_withdraw_failed\\\",\\\"data\\\":[{\\\"token\\\":\\\"wrap.testnet\\\",\\\"amount\\\":\\\"1000000000000000000000000\\\"}]}\"]"
+  },
+  {
+   "section": "owner",
+   "check": "intents_withdraw recorded",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "intents",
+   "check": "intent authorized",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "intents",
+   "check": "refuse busy (intent open)",
+   "pass": true,
+   "detail": "busy"
+  },
+  {
+   "section": "intents",
+   "check": "refuse busy on Rhea while an intent is open",
+   "pass": true,
+   "detail": "busy"
+  },
+  {
+   "section": "intents",
+   "check": "refuse unsettled (expired, not yet recorded)",
+   "pass": true,
+   "detail": "unsettled"
+  },
+  {
+   "section": "intents",
+   "check": "anyone settles; unused nonce after deadline = intent_expired",
+   "pass": true,
+   "detail": "[\"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.2.0\\\",\\\"event\\\":\\\"intent_expired\\\",\\\"data\\\":[{\\\"seq\\\":7,\\\"receipt_hash\\\":\\\"bb0877a710d2456545bf89371057e6074ad6d9668e3680feb8a0993082aff5b3\\\",\\\"venue\\\":\\\"intents\\\",\\\"nonce\\\":\\\"Vij2xgCqO/NaANwgIqxD7Bh9v9mZpqYBKrkT2QUbDww=\\\",\\\"token_in\\\":\\\"wrap.testnet\\\",\\\"amount_in\\\":\\\"20000000000000000000000\\\",\\\"token_out\\\":\\\"usdc.itachicara.testnet\\\"}]}\"]"
+  },
+  {
+   "section": "intents",
+   "check": "expiry released the cap (24 h spend back to its level before the intent)",
+   "pass": true,
+   "detail": "0 -> 0"
+  },
+  {
+   "section": "intents",
+   "check": "solver fills the intent",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "intents",
+   "check": "cancel after a fill fails cleanly (intent_cancel_failed)",
+   "pass": true,
+   "detail": "[\"sign: predecessor=AccountId(\\\"lifecycle.arena2.irontrade.testnet\\\"), request=SignRequestArgs { path: \\\"iron-trade/intents-1\\\", payload: Ecdsa(BoundedVec { inner: [163, 71, 217, 93, 7, 247, 149, 6, 5, 157, 180, 174, 146, 209, 72, 119, 23, 17, 218, 134, 96, 136, 21, 11, 2, 98, 245, 144, 146, 176, 18, 20], witness: NonEmpty(()) }), domain_id: DomainId(0) }\", \"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.2.0\\\",\\\"event\\\":\\\"intent_cancel_failed\\\",\\\"data\\\":[{\\\"seq\\\":11,\\\"reason\\\":\\\"nonce already used or expired: run intents_settle\\\"}]}\"]"
+  },
+  {
+   "section": "intents",
+   "check": "settle records the fill as a trade",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "abandon",
+   "check": "abandon: intent authorized",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "abandon",
+   "check": "agent cannot abandon (owner only)",
+   "pass": true,
+   "detail": "rejected before execution: the signer's key can't make this call"
+  },
+  {
+   "section": "abandon",
+   "check": "abandon before deadline + 1 h is refused",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "section": "abandon",
+   "check": "owner abandons after the grace: recorded as intent_unresolved (abandoned)",
+   "pass": true,
+   "detail": "[\"EVENT_JSON:{\\\"standard\\\":\\\"irontrade\\\",\\\"version\\\":\\\"1.2.0\\\",\\\"event\\\":\\\"intent_unresolved\\\",\\\"data\\\":[{\\\"seq\\\":12,\\\"receipt_hash\\\":\\\"6151a488feefe0d4e19ba88e313983af59fd87a49b3e8c9e73a66426712abda3\\\",\\\"venue\\\":\\\"intents\\\",\\\"nonce\\\":\\\"Vij2xgCqO/NaABTTFOND7BgoguXrZHMJwGpFeDGNwhQ=\\\",\\\"token_in\\\":\\\"wrap.testnet\\\",\\\"amount_in\\\":\\\"15000000000000000000000\\\",\\\"token_out\\\":\\\"usdc.itachicara.testnet\\\",\\\"reason\\\":\\\"abandoned by the owner: settlement could not resolve it\\\"}]}\"]"
+  },
+  {
+   "section": "abandon",
+   "check": "abandon keeps the cap reserved (24 h spend unchanged)",
+   "pass": true,
+   "detail": "35000000000000000000000 -> 35000000000000000000000"
+  },
+  {
+   "section": "abandon",
+   "check": "abandon clears the open intent",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "passed": 50,
+ "failed": 0
+}

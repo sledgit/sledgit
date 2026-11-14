@@ -1,0 +1,59 @@
+{
+  "date_unix": 1793248986,
+  "network": "testnet",
+  "phase": 2,
+  "factory": "arena.irontrade.testnet",
+  "factory_access_keys": 0,
+  "vault_code_hash": "5ePvrzPrKn8WGzZh8LnSLjaxcCPebA5E6nFJ4HxwR3iQ",
+  "factory_code_hash": "AKtQBKig2TaynqSXNHYaCD92but7qRhhdwttiB944Mag",
+  "superseded": {
+    "factory": "irontrade.testnet",
+    "vault_code_hash": "zSZ8hT8PinALB1cd95KBrmZQDmpWnamFqfFTYemZfyk",
+    "note": "pre-round-2 code; kept as history. Its full-access key stays: irontrade.testnet is the namespace root that created arena.irontrade.testnet and may create a later factory; it cannot touch arena or any keyless vault."
+  },
+  "owner": "it1793205219-owner.testnet",
+  "arena_vaults": [
+    {
+      "id": "qwen36-tee.arena.irontrade.testnet",
+      "agent": "agent2-qwen36-tee.it1793205219-owner.testnet",
+      "model": "Qwen/Qwen3.6-35B-A3B-FP8 (NEAR AI Cloud, TEE)",
+      "tier": "attested-model",
+      "decision": {
+        "tx": "H1JLa3EJMgSygtVanU82iks6kLBegvoVKcDeUzorxvxP",
+        "receipt_hash": "fd8217ed59c2be74b85bc70bdde044f4eb1a0517add6663cca7c8a06df1af6e5",
+        "action": "sell 0.125 wNEAR",
+        "outcome": "traded on Rhea"
+      },
+      "evidence": "deploy/testnet/receipts-arena/qwen36-tee/"
+    },
+    {
+      "id": "llama32-local.arena.irontrade.testnet",
+      "agent": "agent2-llama32-local.it1793205219-owner.testnet",
+      "model": "llama3.2:3b (local Ollama)",
+      "tier": "self-reported",
+      "decision": {
+        "tx": "4Jyjuz7Da1exeWfvxJPvq42oeEtDwxjtEjD68RCvYqta",
+        "receipt_hash": "f0d123dbb3c57bc724a3491926f3f3f226918bbb0b5c6eb20a8deaeb906f4547",
+        "action": "hold (invalid model output: zero amount)",
+        "outcome": "skip recorded"
+      },
+      "evidence": "deploy/testnet/receipts-arena/llama32-local/"
+    }
+  ],
+  "retired_agents": [
+    "agent-qwen36-tee.it1793205219-owner.testnet",
+    "agent-llama32-local.it1793205219-owner.testnet"
+  ],
+  "suite_vaults": [
+    "perf.arena.irontrade.testnet",
+    "lifecycle.arena.irontrade.testnet",
+    "suite.arena.irontrade.testnet"
+  ],
+  "files": {
+    "lock": "lock-1793248281.json",
+    "arena_setup": [
+      "arena-1793248438.json",
+      "arena-1793248667.json"
+    ]
+  }
+}

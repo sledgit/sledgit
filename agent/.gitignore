@@ -1,0 +1,4 @@
+node_modules/
+receipts/
+*key*.json
+*.credentials.json

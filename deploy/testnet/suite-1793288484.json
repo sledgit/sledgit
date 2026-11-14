@@ -1,0 +1,126 @@
+{
+  "date_unix": 1793288484,
+  "factory": "arena2.irontrade.testnet",
+  "vaults": [
+    "suite.arena2.irontrade.testnet",
+    "lifecycle.arena2.irontrade.testnet",
+    "refusals.arena2.irontrade.testnet"
+  ],
+  "code_hash": "2ZP4H1ENzFKyN4nVSZf9vKf3pEpgoup9DVU6NbjbE2Gg",
+  "checks": [
+    {
+      "check": "factory pinned to the current vault code hash",
+      "pass": true,
+      "detail": "\"2ZP4H1ENzFKyN4nVSZf9vKf3pEpgoup9DVU6NbjbE2Gg\""
+    },
+    {
+      "check": "suite.arena2.irontrade.testnet has no access keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "lifecycle.arena2.irontrade.testnet has no access keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "refusals.arena2.irontrade.testnet has no access keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "abandon: intent authorized",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "agent cannot abandon (owner only)",
+      "pass": true,
+      "detail": "rejected before execution: the signer's key can't make this call"
+    },
+    {
+      "check": "abandon before deadline + 1 h is refused",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "owner abandons after the grace: recorded as intent_unresolved (abandoned)",
+      "pass": false,
+      "detail": "[]"
+    },
+    {
+      "check": "abandon keeps the cap reserved (24 h spend unchanged)",
+      "pass": false,
+      "detail": "15000000000000000000000 -> 0"
+    },
+    {
+      "check": "abandon clears the open intent",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "txs": [
+    {
+      "op": "setup:storage_deposit",
+      "method": "storage_deposit",
+      "contract": "wrap.testnet",
+      "ok": true,
+      "tx": "7hJDE9dqeqc3j6wqeH4iHinb9p5P3xwnwnGtb1GjWT4a",
+      "secs": 5.392205792,
+      "tgas": 2
+    },
+    {
+      "op": "setup:storage_deposit",
+      "method": "storage_deposit",
+      "contract": "usdc.itachicara.testnet",
+      "ok": true,
+      "tx": "3UK7wxs8fSJasDip4H1uChfez2skPxzWSqyDA4ApgfXk",
+      "secs": 5.556398917,
+      "tgas": 2
+    },
+    {
+      "op": "setup:settle leftover intent",
+      "method": "intents_settle",
+      "contract": "lifecycle.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "8ofjWtcNmdUzicAnUxyqkb1cvVGiQR2piJZVbyLnD2rQ",
+      "secs": 6.307418292,
+      "tgas": 13
+    },
+    {
+      "op": "fn:intent (to abandon)",
+      "method": "request_intent_swap",
+      "contract": "lifecycle.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "78ektmnQZLw5UMKNCMUaFhcr9QguMaYrHJUVe66dBhjR",
+      "secs": 12.016862542,
+      "tgas": 23
+    },
+    {
+      "op": "fn:abandon (agent)",
+      "method": "intents_abandon",
+      "contract": "lifecycle.arena2.irontrade.testnet",
+      "ok": false,
+      "tx": "",
+      "rejected_by": "access key scope"
+    },
+    {
+      "op": "fn:abandon (too early)",
+      "method": "intents_abandon",
+      "contract": "lifecycle.arena2.irontrade.testnet",
+      "ok": false,
+      "tx": "bCV4cNcr7rJWhrZiUdAq4JaHD4APhTqghtPzN9DC2o2",
+      "secs": 4.99800725,
+      "tgas": 2
+    },
+    {
+      "op": "fn:abandon",
+      "method": "intents_abandon",
+      "contract": "lifecycle.arena2.irontrade.testnet",
+      "ok": false,
+      "tx": "JCwkruqHM2ykLTDzPLW6UXUojfEpNpVutkxGsnYgXKMS",
+      "secs": 5.104443875,
+      "tgas": 2
+    }
+  ]
+}

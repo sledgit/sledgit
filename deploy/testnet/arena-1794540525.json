@@ -1,0 +1,89 @@
+{
+  "date_unix": 1794540525,
+  "network": "testnet",
+  "factory": "arena2.irontrade.testnet",
+  "owner": "it1793205219-owner.testnet",
+  "policy": {
+    "tokens": [
+      {
+        "token": "wrap.testnet",
+        "max_per_trade": "500000000000000000000000",
+        "max_per_day": "3000000000000000000000000"
+      },
+      {
+        "token": "usdc.itachicara.testnet",
+        "max_per_trade": "1000000000000000000000000",
+        "max_per_day": "5000000000000000000000000"
+      }
+    ],
+    "pairs": [
+      {
+        "token_in": "wrap.testnet",
+        "token_out": "usdc.itachicara.testnet",
+        "pool_id": 1103,
+        "min_price_num": "14",
+        "min_price_den": "10"
+      },
+      {
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "pool_id": 1103,
+        "min_price_num": "33",
+        "min_price_den": "100"
+      }
+    ],
+    "max_trades_per_hour": 12,
+    "max_slippage_bps": 100
+  },
+  "vaults": [
+    {
+      "name": "rust-qwen3-8b",
+      "vault": "rust-qwen3-8b.arena2.irontrade.testnet",
+      "agent": "agent-rust-qwen3-8b.it1793205219-owner.testnet",
+      "agent_key": "function-call (vault, agent methods)",
+      "wnear": "500000000000000000000000",
+      "txs": [
+        {
+          "step": "create_agent",
+          "tx": "YexXWEPnyevgN8dwNMq4cyrHeHGFVfZfe9oiLD6rt5X"
+        },
+        {
+          "step": "add_scoped_key",
+          "tx": "9ixiu2YUare2oFmFdUeFoLMCVghnhz36VhqPX3W2sa5X"
+        },
+        {
+          "step": "delete_temp_key",
+          "tx": "E4UTcWKgteFFj578mnH4XTbZMZffUToPHGTiCQSZbV8c"
+        },
+        {
+          "step": "create_vault",
+          "tx": "J9Gju7AhzASdxbH5KRZxAtPzznbwzGof9HysC3uoN9VT"
+        },
+        {
+          "step": "storage_deposit wrap.testnet",
+          "tx": "AUTi4EJQmuc6j75aYDK19rxM4pHrvivPRsEgb3ykc6Cb"
+        },
+        {
+          "step": "storage_deposit usdc.itachicara.testnet",
+          "tx": "C4YuzQ3sdzghiYiouXjA7ytaSpxYgJQWbh2sbvRvnhFn"
+        },
+        {
+          "step": "exchange_storage_deposit",
+          "tx": "Gp8uTPYbWgvoczyz5ZKxV4Ki1F16oY6TsyBa49rUM5Fj"
+        },
+        {
+          "step": "exchange_register_tokens",
+          "tx": "BeNjuMH1N8x6qM8N8TSgKejjtrAuMohahe2JSDn3fFK5"
+        },
+        {
+          "step": "wrap",
+          "tx": "CCFJmhuV71BUPQvs6mHmGJbYCYsyfvqZCmNRAarin3D3"
+        },
+        {
+          "step": "fund_vault",
+          "tx": "81dJTfuRZzGkDGJYK9Rov7pHTt6Kis5UbXAh5o1qvBPc"
+        }
+      ]
+    }
+  ]
+}

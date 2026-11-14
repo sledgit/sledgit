@@ -1,0 +1,24 @@
+# Audit round 2: dispositions
+
+Round 2 (2026-10-29) used two independent reviewers, given the code but not the author's conclusions:
+- contracts (vault + factory): `round2-contracts.md`;
+- agent runner: `round2-agent-runner.md`, dispositions in `round2-agent-runner-dispositions.md` (21 of 22 fixed, 51 runner tests).
+
+This file covers the contracts.
+
+| # | Finding | Severity | Disposition |
+|---|---|---|---|
+| H-1 | `on_settle` decided "expired" from the callback's block time, but `is_nonce_used` ran in an earlier block. A fill landing in between was recorded as an expiry and the cap released. | High | **Fixed.** `intents_settle` computes `may_expire = !live(now)` when it makes the check and passes it to `on_settle(seq, may_expire)`; the callback's clock no longer matters. Test: `settle_checked_before_deadline_never_records_an_expiry` |
+| H-2 | intents.near `cleanup_nonces` can delete used V1 nonces after their deadline (nonce deadline was = intent deadline, 120 s), so a later settle read a fill as unused → expiry, cap released | High | **Fixed.** The nonce deadline is the intent deadline + 30 days (`NONCE_TTL_SEC`; intents.near requires nonce deadline ≥ intent deadline). A settle after the nonce deadline records `intent_unresolved` and never an expiry; the cap has long rolled off the 24 h window. Tests: `nonce_outlives_intent_and_late_settle_is_unresolved`, updated layout assertion; sandbox settlement against the real intents.near v0.4.5 still passes |
+| M-1 | `exchange_withdraw` recorded success even when Rhea kept the payout (Rhea's `withdraw` returns success with an empty reply) | Medium | **Fixed.** It reads the vault's exchange balance before and after the withdraw and records only what actually left (`exchange_withdraw` with the moved amount, else `exchange_withdraw_failed`). It needs ≥ `TG_MIN_EXCHANGE_WITHDRAW` (115 Tgas), checked up front. Tests: `exchange_withdraw_records_what_actually_left_the_exchange`; sandbox `payout_to_unregistered_vault_is_detected_and_recoverable` (recovery via the new path) |
+| L-1 | Rhea "lostfound": the vault has no way to claim a payout Rhea parked there, and `on_verify` could report it as returned (needs verification) | Low | **Kept for round 3.** Rhea's exchange source is no longer public, so the claim method's exact signature can't be confirmed. The sandbox (real Rhea mainnet binary) shows a failed payout is re-credited to the vault's exchange balance, not lostfound, and recovered via `exchange_withdraw`. Round 3: probe the real binary for a lostfound path |
+| L-2 | `intents_setup` could be bricked: intents.near registered the key but the vault's callback failed, so retries hit `PublicKeyExists` | Low | **Fixed.** On a reported failure, `on_key_registered` asks intents.near `has_public_key` before giving up (`on_key_check`), and callback gas went up. Test: `key_is_kept_only_once_registered` (both branches) |
+| L-3 | A nonce burned by a cancel whose callback never ran could be recorded as a `trade` | Low | **Fixed.** `burn_attempted` is set on cancel and cleared when the burn provably didn't happen (signing failed, or execute failed). A used nonce with a burn attempted records `intent_closed` ("cancel or fill"), never `trade`. Test: `used_nonce_after_unreported_cancel_is_not_claimed_as_a_trade` |
+| L-4 | Factory names are first come, first served, and `owner_id` needn't be the caller: vault-name impersonation | Low | **Fixed.** `create_vault` requires `owner_id == predecessor`. Sandbox factory tests create as the owner |
+| L-5 | The factory's refund may run before the failed batch's own refund returns (needs verification) | Low | **Mitigated.** Deposits are capped at 100 NEAR (`MAX_DEPOSIT`); the factory must keep at least that much spare NEAR (operational rule). Sandbox: the duplicate-name and bad-policy refunds work. Round 3: confirm receipt ordering on testnet |
+| Info | `now == deadline` boundary | Info | **Fixed.** `live()` uses `now <= deadline` and cancel matches, consistent with intents.near accepting at the deadline |
+| Info | Salt parsing on non-ASCII input | Info | **Fixed.** `parse_salt` rejects non-ASCII |
+| Info | Caps in clock-hour buckets allow up to ~2× in ~23 h, and the hourly trade limit up to 2× across a boundary | Info | **Kept, documented.** A deliberate trade-off for fixed-size state; the property test bounds the 24 h sum |
+| Info | Anyone can deploy the same code with a fake signer | Info | **Kept, documented.** UIs and the leaderboard trust only vaults that are direct children of the factory (`irontrade.testnet` / mainnet factory) and pinned to its code hash |
+
+**Tests after fixes:** 54 unit (vault) + factory; sandbox 16 × 2 nearcore versions (2.13.4 mainnet, 2.14.0 next). Deployed testnet contracts predate these fixes; redeploy the global code and factory before Season 1.

@@ -1,0 +1,138 @@
+{
+  "date_unix": 1793248438,
+  "network": "testnet",
+  "factory": "arena.irontrade.testnet",
+  "owner": "it1793205219-owner.testnet",
+  "policy": {
+    "tokens": [
+      {
+        "token": "wrap.testnet",
+        "max_per_trade": "500000000000000000000000",
+        "max_per_day": "3000000000000000000000000"
+      },
+      {
+        "token": "usdc.itachicara.testnet",
+        "max_per_trade": "1000000000000000000000000",
+        "max_per_day": "5000000000000000000000000"
+      }
+    ],
+    "pairs": [
+      {
+        "token_in": "wrap.testnet",
+        "token_out": "usdc.itachicara.testnet",
+        "pool_id": 1103,
+        "min_price_num": "14",
+        "min_price_den": "10"
+      },
+      {
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "pool_id": 1103,
+        "min_price_num": "33",
+        "min_price_den": "100"
+      }
+    ],
+    "max_trades_per_hour": 12,
+    "max_slippage_bps": 100
+  },
+  "vaults": [
+    {
+      "name": "qwen36-tee",
+      "vault": "qwen36-tee.arena.irontrade.testnet",
+      "agent": "agent-qwen36-tee.it1793205219-owner.testnet",
+      "agent_key": "function-call (vault, agent methods, 0.25 NEAR)",
+      "wnear": "500000000000000000000000",
+      "txs": [
+        {
+          "step": "create_agent",
+          "tx": "7PbAu1W3amHjnDEXaT6n8BQYvma1DYcKeag392r6s7Ae"
+        },
+        {
+          "step": "add_scoped_key",
+          "tx": "EveW5VzLCzc3WpifJLzuFjwt182hr9MGfkm64ehXaX7"
+        },
+        {
+          "step": "delete_temp_key",
+          "tx": "8Vzvu38uvNcUeTekoriYCpWsb5Wzs5RiTv67sWcDjwNU"
+        },
+        {
+          "step": "create_vault",
+          "tx": "3jEVPhvugCyjG4xhy83ChJBTqAwDYxrBrNvYfqji7Yp1"
+        },
+        {
+          "step": "storage_deposit wrap.testnet",
+          "tx": "3kHcqVU6hVposc2vCRm5dDtrqakJBHizY5ve5aC8DCoh"
+        },
+        {
+          "step": "storage_deposit usdc.itachicara.testnet",
+          "tx": "9ur1fQCTt9S5UsovsHLSHfayjD3NEy1nxiRM76LWUMUr"
+        },
+        {
+          "step": "exchange_storage_deposit",
+          "tx": "7YFAaFxEkYHykGVtwfsmgkt8oqoCFzPcdE3wAgsuvriy"
+        },
+        {
+          "step": "exchange_register_tokens",
+          "tx": "BACbQhAZPG9NVgiwR8K3oSgj5uPoZs9deQtz2iuCkeib"
+        },
+        {
+          "step": "wrap",
+          "tx": "D8FWdN5J6xcAdHAFGTcMmq5TFvg3bBhv8bfUf3suE2ZP"
+        },
+        {
+          "step": "fund_vault",
+          "tx": "BQcNAJg8xKuhwMjz1DddVYim21M84eLL6qU7tfymmivR"
+        }
+      ]
+    },
+    {
+      "name": "llama32-local",
+      "vault": "llama32-local.arena.irontrade.testnet",
+      "agent": "agent-llama32-local.it1793205219-owner.testnet",
+      "agent_key": "function-call (vault, agent methods, 0.25 NEAR)",
+      "wnear": "500000000000000000000000",
+      "txs": [
+        {
+          "step": "create_agent",
+          "tx": "DYvqeEXMUkXn7g9EKpZXRLaaRn8jWsw4J5LM13SyxeMV"
+        },
+        {
+          "step": "add_scoped_key",
+          "tx": "EjthvSyiRNnmSAzi18tE8DncWEax1v3ymgfHCssfPu8i"
+        },
+        {
+          "step": "delete_temp_key",
+          "tx": "BXGX8nqEzg2J4V9AgHFFzbwyyrbhZLts937Xp9ZwmBHb"
+        },
+        {
+          "step": "create_vault",
+          "tx": "H5URu26NWbGxxWN3xqxZ3EthbYQWvBgMtag6iTnnNiia"
+        },
+        {
+          "step": "storage_deposit wrap.testnet",
+          "tx": "BQzKRNLyYEBqpMQC4aKSXWqHEJRfmV9i7sMydysypWBB"
+        },
+        {
+          "step": "storage_deposit usdc.itachicara.testnet",
+          "tx": "CeEvNp4toRjJNa8aptNKG1biBXL42vg25K7aSkJAxSDq"
+        },
+        {
+          "step": "exchange_storage_deposit",
+          "tx": "DZx7BL3zLRmQmVzS4gAfjXXfmKtssFC9r8gzGPfCJ2fL"
+        },
+        {
+          "step": "exchange_register_tokens",
+          "tx": "7n78aM7szpSi5TmZ5ciQBtrvStpvmwNaMQFTAqkKcfHt"
+        },
+        {
+          "step": "wrap",
+          "tx": "8rT2i5ABGsaGZH2kqNpKxKeHhaJTjqrWPt4wqA4v6cAf"
+        },
+        {
+          "step": "fund_vault",
+          "tx": "2Ww5rCrATe8fW1kS1qEhF3Hc96odFF6FpmZb6c71Q2Dh"
+        }
+      ]
+    }
+  ]
+}

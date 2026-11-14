@@ -1,0 +1,459 @@
+{
+  "date_unix": 1793275434,
+  "factory": "arena2.irontrade.testnet",
+  "vaults": [
+    "suite.arena2.irontrade.testnet",
+    "lifecycle.arena2.irontrade.testnet",
+    "refusals.arena2.irontrade.testnet"
+  ],
+  "code_hash": "2ZP4H1ENzFKyN4nVSZf9vKf3pEpgoup9DVU6NbjbE2Gg",
+  "checks": [
+    {
+      "check": "factory pinned to the current vault code hash",
+      "pass": true,
+      "detail": "\"2ZP4H1ENzFKyN4nVSZf9vKf3pEpgoup9DVU6NbjbE2Gg\""
+    },
+    {
+      "check": "suite.arena2.irontrade.testnet has no access keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "lifecycle.arena2.irontrade.testnet has no access keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "refusals.arena2.irontrade.testnet has no access keys",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Rhea swaps settle (perf runs)",
+      "pass": true,
+      "detail": "6/6"
+    },
+    {
+      "check": "intents authorized by real MPC (perf runs)",
+      "pass": true,
+      "detail": "5/5"
+    },
+    {
+      "check": "intents cancelled by real MPC (perf runs)",
+      "pass": true,
+      "detail": "5/5"
+    },
+    {
+      "check": "intent fills recorded by intents_settle",
+      "pass": false,
+      "detail": "1/2"
+    }
+  ],
+  "txs": [
+    {
+      "op": "setup:storage_deposit",
+      "method": "storage_deposit",
+      "contract": "wrap.testnet",
+      "ok": true,
+      "tx": "F52nWon9hS8PMNR6JJ9c5eF4keSsp6Lhv2Vcgm9KXujw",
+      "secs": 5.875797292,
+      "tgas": 2
+    },
+    {
+      "op": "setup:storage_deposit",
+      "method": "storage_deposit",
+      "contract": "usdc.itachicara.testnet",
+      "ok": true,
+      "tx": "13St4Q85puonLFKpJhugfjaFbEJQFBNmQ54nDP4NbFzc",
+      "secs": 5.762982125,
+      "tgas": 2
+    },
+    {
+      "op": "mpc:sign (direct)",
+      "method": "sign",
+      "contract": "v1.signer-prod.testnet",
+      "ok": true,
+      "tx": "6X3SPRDjJC3bgD8kP6SJCwYNphrhkNannPpyCA1QVpMG",
+      "secs": 10.150245167,
+      "tgas": 8
+    },
+    {
+      "op": "mpc:sign (direct)",
+      "method": "sign",
+      "contract": "v1.signer-prod.testnet",
+      "ok": true,
+      "tx": "AEW5ehJqKyUNxNQrrBaarefNytmdH5je1wKGgL2qJm9n",
+      "secs": 8.01417975,
+      "tgas": 8
+    },
+    {
+      "op": "mpc:sign (direct)",
+      "method": "sign",
+      "contract": "v1.signer-prod.testnet",
+      "ok": true,
+      "tx": "4VSwGjzaTyQt7BMrbd3fKM9RBuBvk2K5xwbiTU3skRoJ",
+      "secs": 8.534219125,
+      "tgas": 8
+    },
+    {
+      "op": "mpc:sign (direct)",
+      "method": "sign",
+      "contract": "v1.signer-prod.testnet",
+      "ok": true,
+      "tx": "G7NKBgGyrYae8XqGVMYgqUqvJmmhs3c678X6as876iC",
+      "secs": 8.86563675,
+      "tgas": 8
+    },
+    {
+      "op": "mpc:sign (direct)",
+      "method": "sign",
+      "contract": "v1.signer-prod.testnet",
+      "ok": true,
+      "tx": "6QysRVzMaivxGxmySNq3gw7bzQLM9ASuWYMdaDtTtn43",
+      "secs": 7.253945167,
+      "tgas": 8
+    },
+    {
+      "op": "vault:request_swap (Rhea)",
+      "method": "request_swap",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "9kPwMqwmm4BsrDxusA2VBfuHQvQJj5Jybcyys7pVtMie",
+      "secs": 13.872234583000001,
+      "tgas": 46
+    },
+    {
+      "op": "vault:request_swap (Rhea)",
+      "method": "request_swap",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "F3DT8rb7z5BG1uvEYzzvcgHKreTBeDK5SVFiJjm2Cd3T",
+      "secs": 12.634850917,
+      "tgas": 46
+    },
+    {
+      "op": "vault:request_swap (Rhea)",
+      "method": "request_swap",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "E6UYojGYzFBKYUaq46t2W3eyM2m38iKSkaEw86fPKot1",
+      "secs": 11.737404667,
+      "tgas": 46
+    },
+    {
+      "op": "vault:request_swap (Rhea)",
+      "method": "request_swap",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "5wJKSQha7xiHhcozkcsMQdx3gb6f6MgoZANmE1Co3Lbj",
+      "secs": 13.487996208,
+      "tgas": 46
+    },
+    {
+      "op": "vault:request_swap (Rhea)",
+      "method": "request_swap",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "7r9RX3E3mMB8ybhhgGUtKUG1sTjjvaTokMVKmWbBbshe",
+      "secs": 12.314030583,
+      "tgas": 46
+    },
+    {
+      "op": "vault:request_swap (Rhea)",
+      "method": "request_swap",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "7QSUNAJy8b2i7u2sbwQndvfz9xPDivG2fKyKfLnyvKJF",
+      "secs": 12.5538415,
+      "tgas": 46
+    },
+    {
+      "op": "vault:log_skip",
+      "method": "log_skip",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "4Hsr8n3tkBFDmKQEWyma9ESriyR7rAFhzoWjhJqGggVn",
+      "secs": 7.369139542,
+      "tgas": 2
+    },
+    {
+      "op": "vault:log_skip",
+      "method": "log_skip",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "EDXDAMBCU6NENkdde6eU7iht94pWryGqgfdkURMRPbJW",
+      "secs": 4.678977333,
+      "tgas": 2
+    },
+    {
+      "op": "vault:log_skip",
+      "method": "log_skip",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "2MsPm6azxbVPZUF7KWvWvgfjVupfLRNMCBufaWFYxXpt",
+      "secs": 3.9212355,
+      "tgas": 2
+    },
+    {
+      "op": "vault:log_skip",
+      "method": "log_skip",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "TTdBCCFRSrmSaipwKLH8os3g5HeFfQodmgWVqwuUNau",
+      "secs": 4.410575459,
+      "tgas": 2
+    },
+    {
+      "op": "vault:log_skip",
+      "method": "log_skip",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "GUXWfGhnsagbhv3x6UxvUJfmJ3M8ASDc4jcTZajWFLyu",
+      "secs": 4.840896292,
+      "tgas": 2
+    },
+    {
+      "op": "vault:withdraw (owner)",
+      "method": "withdraw",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "EVRv69ZvWsVjwyoFwjDdmzHjxQcjd2CEYK66LZG3XjeN",
+      "secs": 5.842392875,
+      "tgas": 6
+    },
+    {
+      "op": "vault:withdraw (owner)",
+      "method": "withdraw",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "BWccRaJKp1ECguKcP6MHZRZp9Kb9Eix5ZUmdRsLh84wg",
+      "secs": 5.705856708,
+      "tgas": 6
+    },
+    {
+      "op": "vault:withdraw (owner)",
+      "method": "withdraw",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "GDWnh2fYzPonWJYZpbVYnG1HuCGdtghGvY8t1HH41FTc",
+      "secs": 5.982917834,
+      "tgas": 6
+    },
+    {
+      "op": "vault:withdraw (owner)",
+      "method": "withdraw",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "VyY1HuTjanLXG8vWd4yRVa1pTs27rZHnXPUXXrQUDZq",
+      "secs": 7.079392583,
+      "tgas": 6
+    },
+    {
+      "op": "vault:withdraw (owner)",
+      "method": "withdraw",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "93mVbB9LGRh57BJCfsSk8w2phDXgKNxRoGFs3smK7d9H",
+      "secs": 6.748526375,
+      "tgas": 6
+    },
+    {
+      "op": "vault:intents_deposit",
+      "method": "intents_deposit",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "3usBr5REe3h1Ypdo9xG8KfEoTiNkkNek9RiknmZviQ4L",
+      "secs": 6.912199458,
+      "tgas": 13
+    },
+    {
+      "op": "vault:intents_deposit",
+      "method": "intents_deposit",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "3owPaSpF3USpKd7wGtuzCa8SFFBJRTJQ9kTQLnwF2fpD",
+      "secs": 8.02506475,
+      "tgas": 13
+    },
+    {
+      "op": "vault:intents_deposit",
+      "method": "intents_deposit",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "F72cfMokkiAuewCxAY467yorB8kJDGLgzfQqnSS3g8G7",
+      "secs": 7.46629475,
+      "tgas": 13
+    },
+    {
+      "op": "vault:intents_withdraw",
+      "method": "intents_withdraw",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "EiSkPWAH42PUctan5eEmCgWk4FvnUYsP5f5ofLE2wTXx",
+      "secs": 7.52873175,
+      "tgas": 14
+    },
+    {
+      "op": "vault:intents_withdraw",
+      "method": "intents_withdraw",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "93xPsBAo6hWRAHu84pfHjXDXe7knHnWA8ea7EP92KLvL",
+      "secs": 6.985955459,
+      "tgas": 14
+    },
+    {
+      "op": "vault:intents_withdraw",
+      "method": "intents_withdraw",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "62AxGRQCqeW8xqjakB32PbA3yhRJ6GRM2QqZsUbLg8gW",
+      "secs": 7.07673125,
+      "tgas": 14
+    },
+    {
+      "op": "vault:request_intent_swap (MPC)",
+      "method": "request_intent_swap",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "AZxGxZsS3j1anT1gXt7HY6AsGJ2K8HStUHZkgtrE6N6x",
+      "secs": 10.323891625,
+      "tgas": 23
+    },
+    {
+      "op": "vault:intents_cancel (MPC)",
+      "method": "intents_cancel",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "8EsZDSMcew4TYa4ahpzqtwuuxmxShpY2ibb7oUtks3TL",
+      "secs": 11.501864459,
+      "tgas": 20
+    },
+    {
+      "op": "vault:request_intent_swap (MPC)",
+      "method": "request_intent_swap",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "EvyCvvd1dqxSBW6GvbSQwcbkwuEsDh32x5pw8zuhEFPN",
+      "secs": 12.462345208,
+      "tgas": 23
+    },
+    {
+      "op": "vault:intents_cancel (MPC)",
+      "method": "intents_cancel",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "7yd4Era3GAwMBXUunEAtd4WkL942AiwSGHmxRN9eedwV",
+      "secs": 11.238921584,
+      "tgas": 19
+    },
+    {
+      "op": "vault:request_intent_swap (MPC)",
+      "method": "request_intent_swap",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "HQ99nkUkdofcc1BRC3ruGeL6g4pHBGZtoKGv2sDhSvn6",
+      "secs": 12.115096666,
+      "tgas": 23
+    },
+    {
+      "op": "vault:intents_cancel (MPC)",
+      "method": "intents_cancel",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "FEgj38vzXQRHFcQr6vNGfyG42QGDESLenVHoEoGkLaYZ",
+      "secs": 11.298382334,
+      "tgas": 20
+    },
+    {
+      "op": "vault:request_intent_swap (MPC)",
+      "method": "request_intent_swap",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "97jt14dHT6DY2LxUtfQLZeRYScU1KJpmKb8WgAix5Ct8",
+      "secs": 13.5865305,
+      "tgas": 23
+    },
+    {
+      "op": "vault:intents_cancel (MPC)",
+      "method": "intents_cancel",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "5NoHvHWL5nw1Ndw66U8VzqnDaC9yP5dxpG2vRpq4gczD",
+      "secs": 10.713395542,
+      "tgas": 20
+    },
+    {
+      "op": "vault:request_intent_swap (MPC)",
+      "method": "request_intent_swap",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "DyGhApjGX2g5XZYGj5rxrC1B92JCJ2n5Q46xPbw2wDWV",
+      "secs": 11.027663042,
+      "tgas": 23
+    },
+    {
+      "op": "vault:intents_cancel (MPC)",
+      "method": "intents_cancel",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "8F2bNxWxN1VLRpDPKcmSjZkGnR69GVQzNox6sUoAsQnT",
+      "secs": 11.38052975,
+      "tgas": 20
+    },
+    {
+      "op": "setup:owner_withdraw_usdc",
+      "method": "withdraw",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "9qfSbAMmUbN6MXsxS7fFVEYRiuwwiijashz26XL48Jr3",
+      "secs": 6.275520583,
+      "tgas": 7
+    },
+    {
+      "op": "setup:solver_deposit",
+      "method": "ft_transfer_call",
+      "contract": "usdc.itachicara.testnet",
+      "ok": true,
+      "tx": "GX2rGivJFAW3sSqcabvpAZLt9eVeevZoHoVmgDWMrHZj",
+      "secs": 5.919092959,
+      "tgas": 8
+    },
+    {
+      "op": "vault:request_intent_swap (MPC)",
+      "method": "request_intent_swap",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "45zqQP3kRCv6Zc74xnzQJcvTc17q1F5QdCrnYxNJoA31",
+      "secs": 11.93103225,
+      "tgas": 23
+    },
+    {
+      "op": "intents:execute_intents (fill)",
+      "method": "execute_intents",
+      "contract": "it1793205011-intents.testnet",
+      "ok": true,
+      "tx": "ETKXQHMJ8DgFo2cufYfFFjtsYWsgPbM83GPeFSAECrzF",
+      "secs": 5.204745792,
+      "tgas": 6
+    },
+    {
+      "op": "vault:intents_settle (fill)",
+      "method": "intents_settle",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "7xsafVogaNST9B9FM8CV57CXwpQpVwgEc8Wdz2LEK2zT",
+      "secs": 7.826853208,
+      "tgas": 7
+    },
+    {
+      "op": "vault:request_intent_swap (MPC)",
+      "method": "request_intent_swap",
+      "contract": "suite.arena2.irontrade.testnet",
+      "ok": true,
+      "tx": "Cgkjwhi9sDbTih3H7EYk2Yrc5YvjS9KiN8rfwTx9JAWr",
+      "secs": 8.37992325,
+      "tgas": 2
+    }
+  ]
+}

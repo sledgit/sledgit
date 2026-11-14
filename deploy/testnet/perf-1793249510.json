@@ -1,0 +1,174 @@
+{
+  "date_unix": 1793249510,
+  "network": "testnet",
+  "rows": [
+    {
+      "op": "fn:accept_owner",
+      "n": 1,
+      "median_s": 4.172685875,
+      "p95_s": 4.172685875,
+      "median_tgas": 2,
+      "median_near": 0.00019788030303280002
+    },
+    {
+      "op": "fn:accept_owner (back)",
+      "n": 1,
+      "median_s": 4.347683959,
+      "p95_s": 4.347683959,
+      "median_tgas": 2,
+      "median_near": 0.0001978759635076
+    },
+    {
+      "op": "fn:accept_owner (wrong)",
+      "n": 1,
+      "median_s": 4.109823916,
+      "p95_s": 4.109823916,
+      "median_tgas": 2,
+      "median_near": 0.00016918553457490003
+    },
+    {
+      "op": "fn:apply_policy (early)",
+      "n": 1,
+      "median_s": 3.890313333,
+      "p95_s": 3.890313333,
+      "median_tgas": 1,
+      "median_near": 0.00016968469178360002
+    },
+    {
+      "op": "fn:cancel_policy",
+      "n": 1,
+      "median_s": 4.371385083,
+      "p95_s": 4.371385083,
+      "median_tgas": 2,
+      "median_near": 0.000196841160002
+    },
+    {
+      "op": "fn:exchange_withdraw (empty)",
+      "n": 1,
+      "median_s": 6.638431333,
+      "p95_s": 6.638431333,
+      "median_tgas": 15,
+      "median_near": 0.0014008158830633999
+    },
+    {
+      "op": "fn:exchange_withdraw (low gas)",
+      "n": 1,
+      "median_s": 3.927004833,
+      "p95_s": 3.927004833,
+      "median_tgas": 2,
+      "median_near": 0.0001710204025245
+    },
+    {
+      "op": "fn:intents_deposit",
+      "n": 1,
+      "median_s": 7.812693959,
+      "p95_s": 7.812693959,
+      "median_tgas": 13,
+      "median_near": 0.0011983389461257
+    },
+    {
+      "op": "fn:intents_setup",
+      "n": 1,
+      "median_s": 4.616989,
+      "p95_s": 4.616989,
+      "median_tgas": 2,
+      "median_near": 0.0001687351326666
+    },
+    {
+      "op": "fn:intents_withdraw",
+      "n": 1,
+      "median_s": 6.417144833,
+      "p95_s": 6.417144833,
+      "median_tgas": 14,
+      "median_near": 0.0013064906549655
+    },
+    {
+      "op": "fn:intents_withdraw (too much)",
+      "n": 1,
+      "median_s": 4.7889490420000005,
+      "p95_s": 4.7889490420000005,
+      "median_tgas": 8,
+      "median_near": 0.0007156909675424
+    },
+    {
+      "op": "fn:propose_owner",
+      "n": 1,
+      "median_s": 4.448876833,
+      "p95_s": 4.448876833,
+      "median_tgas": 2,
+      "median_near": 0.00019883572683629998
+    },
+    {
+      "op": "fn:propose_owner (back)",
+      "n": 1,
+      "median_s": 3.927845458,
+      "p95_s": 3.927845458,
+      "median_tgas": 2,
+      "median_near": 0.00019880428389610003
+    },
+    {
+      "op": "fn:propose_policy",
+      "n": 1,
+      "median_s": 3.715855542,
+      "p95_s": 3.715855542,
+      "median_tgas": 2,
+      "median_near": 0.0002451639574659
+    },
+    {
+      "op": "fn:propose_policy (agent)",
+      "n": 1,
+      "median_s": 4.037486208,
+      "p95_s": 4.037486208,
+      "median_tgas": 2,
+      "median_near": 0.0001790684646354
+    },
+    {
+      "op": "fn:propose_policy (replace)",
+      "n": 1,
+      "median_s": 4.394342833,
+      "p95_s": 4.394342833,
+      "median_tgas": 2,
+      "median_near": 0.0002563937865953
+    },
+    {
+      "op": "fn:set_agent=owner",
+      "n": 1,
+      "median_s": 4.364772042,
+      "p95_s": 4.364772042,
+      "median_tgas": 2,
+      "median_near": 0.0001708873790409
+    },
+    {
+      "op": "fn:set_agent=proposed",
+      "n": 1,
+      "median_s": 4.742908292,
+      "p95_s": 4.742908292,
+      "median_tgas": 2,
+      "median_near": 0.00017241729676990004
+    },
+    {
+      "op": "setup:storage_deposit",
+      "n": 2,
+      "median_s": 4.621694292,
+      "p95_s": 4.621694292,
+      "median_tgas": 2,
+      "median_near": 0.0002290949115234
+    },
+    {
+      "op": "view:factory_config",
+      "n": 1,
+      "median_s": 0.510150083,
+      "p95_s": 0.510150083,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:ft_balance_of",
+      "n": 3,
+      "median_s": 0.448694,
+      "p95_s": 0.999750625,
+      "median_tgas": 0,
+      "median_near": 0.0
+    }
+  ]
+}

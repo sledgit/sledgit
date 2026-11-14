@@ -1,0 +1,12 @@
+{
+  "tokens": [
+    {"token": "wrap.near", "max_per_trade": "1200000000000000000000000", "max_per_day": "2400000000000000000000000"},
+    {"token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1", "max_per_trade": "5000000", "max_per_day": "10000000"}
+  ],
+  "pairs": [
+    {"token_in": "wrap.near", "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1", "pool_id": 4512, "min_price_num": "2", "min_price_den": "1000000000000000000"},
+    {"token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1", "token_out": "wrap.near", "pool_id": 4512, "min_price_num": "150000000000000000", "min_price_den": "1"}
+  ],
+  "max_trades_per_hour": 2,
+  "max_slippage_bps": 100
+}

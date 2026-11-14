@@ -1,0 +1,49 @@
+{
+ "candles": [
+  {
+   "startedAt": "2026-11-04T00:00:00.000Z",
+   "ticker": "BTC-USD",
+   "resolution": "1DAY",
+   "low": "75655",
+   "high": "78120",
+   "open": "77445",
+   "close": "77765",
+   "baseTokenVolume": "17.4432",
+   "usdVolume": "1342109.4196",
+   "trades": 726,
+   "startingOpenInterest": "228.2507",
+   "orderbookMidPriceOpen": "77349.25",
+   "orderbookMidPriceClose": "77349.25"
+  },
+  {
+   "startedAt": "2026-11-03T00:00:00.000Z",
+   "ticker": "BTC-USD",
+   "resolution": "1DAY",
+   "low": "76256",
+   "high": "78025",
+   "open": "76723",
+   "close": "77348",
+   "baseTokenVolume": "28.1658",
+   "usdVolume": "2171237.9837",
+   "trades": 1555,
+   "startingOpenInterest": "227.4820",
+   "orderbookMidPriceOpen": "76736",
+   "orderbookMidPriceClose": "77349.25"
+  },
+  {
+   "startedAt": "2026-11-02T00:00:00.000Z",
+   "ticker": "BTC-USD",
+   "resolution": "1DAY",
+   "low": "76601",
+   "high": "78763",
+   "open": "78326",
+   "close": "76754",
+   "baseTokenVolume": "24.6258",
+   "usdVolume": "1912151.6825",
+   "trades": 1425,
+   "startingOpenInterest": "223.8231",
+   "orderbookMidPriceOpen": "78270.5",
+   "orderbookMidPriceClose": "76736"
+  }
+ ]
+}

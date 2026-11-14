@@ -1,0 +1,134 @@
+{
+  "date_unix": 1793292604,
+  "network": "testnet",
+  "rows": [
+    {
+      "op": "fn:busy",
+      "n": 1,
+      "median_s": 6.062220125,
+      "p95_s": 6.062220125,
+      "median_tgas": 2,
+      "median_near": 0.0002207864522724
+    },
+    {
+      "op": "fn:busy (Rhea)",
+      "n": 1,
+      "median_s": 4.697703792,
+      "p95_s": 4.697703792,
+      "median_tgas": 2,
+      "median_near": 0.00022065638379360002
+    },
+    {
+      "op": "fn:cancel after fill",
+      "n": 1,
+      "median_s": 10.968321916,
+      "p95_s": 10.968321916,
+      "median_tgas": 19,
+      "median_near": 0.0018246289415759002
+    },
+    {
+      "op": "fn:fill first",
+      "n": 1,
+      "median_s": 4.633577625,
+      "p95_s": 4.633577625,
+      "median_tgas": 6,
+      "median_near": 0.000664874915505
+    },
+    {
+      "op": "fn:intent (race)",
+      "n": 1,
+      "median_s": 10.621256791,
+      "p95_s": 10.621256791,
+      "median_tgas": 23,
+      "median_near": 0.0021952428870431
+    },
+    {
+      "op": "fn:intent (to expire)",
+      "n": 1,
+      "median_s": 12.77336875,
+      "p95_s": 12.77336875,
+      "median_tgas": 23,
+      "median_near": 0.0021952813990684
+    },
+    {
+      "op": "fn:intents_settle (expiry)",
+      "n": 1,
+      "median_s": 6.364146583,
+      "p95_s": 6.364146583,
+      "median_tgas": 13,
+      "median_near": 0.0012015745092729
+    },
+    {
+      "op": "fn:settle the fill",
+      "n": 1,
+      "median_s": 5.77192525,
+      "p95_s": 5.77192525,
+      "median_tgas": 7,
+      "median_near": 0.0007194130771545
+    },
+    {
+      "op": "fn:unsettled",
+      "n": 1,
+      "median_s": 4.186506208,
+      "p95_s": 4.186506208,
+      "median_tgas": 2,
+      "median_near": 0.000222122613036
+    },
+    {
+      "op": "setup:settle leftover intent",
+      "n": 1,
+      "median_s": 7.467271458,
+      "p95_s": 7.467271458,
+      "median_tgas": 13,
+      "median_near": 0.0012015745092729
+    },
+    {
+      "op": "setup:storage_deposit",
+      "n": 2,
+      "median_s": 5.38594475,
+      "p95_s": 5.38594475,
+      "median_tgas": 2,
+      "median_near": 0.0002290949115234
+    },
+    {
+      "op": "view:factory_config",
+      "n": 1,
+      "median_s": 0.4253925,
+      "p95_s": 0.4253925,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:ft_balance_of",
+      "n": 3,
+      "median_s": 0.474812541,
+      "p95_s": 1.1788805,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:get_intents",
+      "n": 5,
+      "median_s": 0.458779709,
+      "p95_s": 1.08170225,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:get_usage",
+      "n": 2,
+      "median_s": 0.437471417,
+      "p95_s": 0.437471417,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:mt_balance_of",
+      "n": 2,
+      "median_s": 0.476755542,
+      "p95_s": 0.476755542,
+      "median_tgas": 0,
+      "median_near": 0.0
+    }
+  ]
+}

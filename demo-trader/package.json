@@ -1,0 +1,14 @@
+{
+  "name": "demo-trader",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A small trading desk whose broker is a Sledgit vault. Runs on agent/ (install agent/ first).",
+  "bin": {
+    "demo-trader": "bin/demo-trader.mjs"
+  },
+  "scripts": {
+    "test": "node --import ../agent/node_modules/tsx/dist/esm/index.mjs --test test/*.test.ts",
+    "typecheck": "../agent/node_modules/.bin/tsc -p tsconfig.json"
+  }
+}

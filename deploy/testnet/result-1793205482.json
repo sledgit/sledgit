@@ -1,0 +1,232 @@
+{
+  "date_unix": 1793205482,
+  "accounts": [
+    "it1793205011-owner.testnet",
+    "it1793205011-agent.testnet",
+    "it1793205011-vault.testnet",
+    "it1793205011-intents.testnet",
+    "it1793205011-fund1.testnet",
+    "it1793205011-fund2.testnet"
+  ],
+  "contracts": {
+    "rhea": "ref-finance-101.testnet",
+    "mpc": "v1.signer-prod.testnet",
+    "pool": 1103,
+    "wrap": "wrap.testnet",
+    "usdc": "usdc.itachicara.testnet"
+  },
+  "checks": [
+    {
+      "check": "Rhea trade event",
+      "pass": true
+    },
+    {
+      "check": "event amount_out equals the vault's USDC balance",
+      "pass": true
+    },
+    {
+      "check": "vault's MPC key registered on intents",
+      "pass": true
+    },
+    {
+      "check": "intents_deposit recorded only once it arrived",
+      "pass": true
+    },
+    {
+      "check": "real MPC signed the intent (intent_authorized)",
+      "pass": true
+    },
+    {
+      "check": "signature recovers to the vault's registered key",
+      "pass": true
+    },
+    {
+      "check": "signature is low-s (intents.near requirement)",
+      "pass": true
+    },
+    {
+      "check": "intent settled on intents.near",
+      "pass": true
+    },
+    {
+      "check": "settle records the fill as a trade",
+      "pass": true
+    },
+    {
+      "check": "second intent authorized after the first was settled",
+      "pass": true
+    },
+    {
+      "check": "cancel burned the nonce (intent_cancelled)",
+      "pass": true
+    },
+    {
+      "check": "cancelled intent cannot be filled",
+      "pass": true
+    },
+    {
+      "check": "vault has no access keys",
+      "pass": true
+    },
+    {
+      "check": "owner can still withdraw from a locked vault",
+      "pass": true
+    }
+  ],
+  "steps": [
+    {
+      "step": "storage_deposit wrap.testnet",
+      "ok": true,
+      "tx": "7KY4mVmLevQcZiLyf2q8g8T7K4rbqVQ2ohst9QgXYn6U",
+      "gas_tgas": 2,
+      "seconds": 4.749691963195801
+    },
+    {
+      "step": "storage_deposit usdc.itachicara.testnet",
+      "ok": true,
+      "tx": "F6au3uATwyXuPPiHJa9jM8dufoiHrPnn7sUbDmdgxYcS",
+      "gas_tgas": 2,
+      "seconds": 4.881396770477295
+    },
+    {
+      "step": "storage_deposit wrap.testnet",
+      "ok": true,
+      "tx": "3tPdRmrZfErHzE3XB18sd2SoF1K7wZhD7LnLJa5s4i6c",
+      "gas_tgas": 2,
+      "seconds": 4.878541946411133
+    },
+    {
+      "step": "storage_deposit usdc.itachicara.testnet",
+      "ok": true,
+      "tx": "Lr91RekhKqcX1mNkUGhzrcQGPA8vy9hh3q1Y3LuarB1",
+      "gas_tgas": 2,
+      "seconds": 5.646091461181641
+    },
+    {
+      "step": "storage_deposit wrap.testnet",
+      "ok": true,
+      "tx": "395a1jvSvsdd8AcnCBmh7VBpMHbnvXwKNVKewzNT15qe",
+      "gas_tgas": 2,
+      "seconds": 5.27619743347168
+    },
+    {
+      "step": "storage_deposit usdc.itachicara.testnet",
+      "ok": true,
+      "tx": "HTazan7uJ6tWh8SLze8rGkDRWLL8XNVrwt23Gzyr8Duo",
+      "gas_tgas": 2,
+      "seconds": 5.555079460144043
+    },
+    {
+      "step": "exchange_storage_deposit",
+      "ok": true,
+      "tx": "7eo9Vev2WdU8p9oyLCgKMTNoAsVRomuBwtAJQ4SkLPpN",
+      "gas_tgas": 5,
+      "seconds": 4.918490886688232
+    },
+    {
+      "step": "exchange_register_tokens",
+      "ok": true,
+      "tx": "DbdESfKYkF9NKiamv1nD2h6iFGovXpiVVYm7fUJJoxiP",
+      "gas_tgas": 6,
+      "seconds": 4.697253227233887
+    },
+    {
+      "step": "wrap 1.5 NEAR",
+      "ok": true,
+      "tx": "Qsiiz7Rqxsmwxgww2NSWbnrvPZSB9oqyDxF3meCTHct",
+      "gas_tgas": 2,
+      "seconds": 4.355288982391357
+    },
+    {
+      "step": "fund vault 1 wNEAR",
+      "ok": true,
+      "tx": "MN9u8Gi3PqTkDt6DUrAcQ6QXY2jeLX4d89SCiNUpmQu",
+      "gas_tgas": 6,
+      "seconds": 5.314520835876465
+    },
+    {
+      "step": "request_swap 0.25 wNEAR->USDC",
+      "ok": true,
+      "tx": "GYYTzj8P6fv9hu7nZsPhDrzahymBo4jmGMFZj69RQ6fe",
+      "gas_tgas": 43,
+      "seconds": 12.804262161254883
+    },
+    {
+      "step": "intents_setup (real MPC key)",
+      "ok": true,
+      "tx": "CHX9wS3LcdN1JVsb9JRyRy7q7qVCar8PwcmXhL5uToQs",
+      "gas_tgas": 16,
+      "seconds": 7.178415298461914
+    },
+    {
+      "step": "intents_deposit 0.4 wNEAR",
+      "ok": true,
+      "tx": "6SywTQ8wd8CCKGxFx78ELaf23eT4278wd6QWKU2eHJbE",
+      "gas_tgas": 13,
+      "seconds": 7.262976169586182
+    },
+    {
+      "step": "request_intent_swap 0.2 wNEAR",
+      "ok": true,
+      "tx": "EYsXtds7XiP6CzUevppD81e2oxhJD4bEomUvsh6kPq5c",
+      "gas_tgas": 23,
+      "seconds": 10.465974807739258
+    },
+    {
+      "step": "owner withdraws vault USDC",
+      "ok": true,
+      "tx": "7BbkPFqiuYepBM7Ks2KTfVvW3KUzri4h1zCG4qhiS9fp",
+      "gas_tgas": 7,
+      "seconds": 5.467939376831055
+    },
+    {
+      "step": "solver USDC onto intents",
+      "ok": true,
+      "tx": "Fc4hyxEWnCERjunQZQd3n7wrDHfAXEYroACXyb2HK1wv",
+      "gas_tgas": 8,
+      "seconds": 5.504342079162598
+    },
+    {
+      "step": "execute_intents (vault + solver)",
+      "ok": true,
+      "tx": "HdyjzgUJ9jMVAodDQTtVmTUqWhZQwZXpcMQwx2koSoFS",
+      "gas_tgas": 6,
+      "seconds": 4.940249443054199
+    },
+    {
+      "step": "intents_settle (anyone)",
+      "ok": true,
+      "tx": "GXCdP59jgeWGPVPAz8cuNcCp27LxLiXNfCQGPvJjTRGS",
+      "gas_tgas": 7,
+      "seconds": 6.001005172729492
+    },
+    {
+      "step": "request_intent_swap 0.05 wNEAR",
+      "ok": true,
+      "tx": "E6GH3NdAx6Zef2ArQ5dMJzKytGkhtckdXYN3YaYgkumr",
+      "gas_tgas": 23,
+      "seconds": 11.992987632751465
+    },
+    {
+      "step": "intents_cancel (agent)",
+      "ok": true,
+      "tx": "7ooUHQLQUpNLMHKz3Wn2LtYbUQxNJHShtpGLcmz2bv7f",
+      "gas_tgas": 19,
+      "seconds": 11.023332595825195
+    },
+    {
+      "step": "execute cancelled intent",
+      "ok": false,
+      "tx": "Bb5zZibB9bxBoSgnxsZEBEZrroVpa6DSvKoCD6rXBTAY",
+      "gas_tgas": 3,
+      "seconds": 4.604856014251709
+    },
+    {
+      "step": "owner withdraws after lock",
+      "ok": true,
+      "tx": "CoKWUFaZFc7Dj9wmNEMPbPQ7NwEKXCToYbA2sauybzrx",
+      "gas_tgas": 6,
+      "seconds": 5.339752197265625
+    }
+  ]
+}

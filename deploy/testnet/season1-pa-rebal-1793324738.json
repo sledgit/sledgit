@@ -1,0 +1,92 @@
+{
+  "date_unix": 1793324738,
+  "network": "testnet",
+  "chain_id": "testnet",
+  "factory": "arena2.irontrade.testnet",
+  "vault_code_hash": "2ZP4H1ENzFKyN4nVSZf9vKf3pEpgoup9DVU6NbjbE2Gg",
+  "entry": "pa-rebal",
+  "vault": "pa-rebal.arena2.irontrade.testnet",
+  "owner": "pao1.it1793205219-owner.testnet",
+  "agent": "paa1.it1793205219-owner.testnet",
+  "agent_recovery_public_key": "ed25519:6ueK1ZgRyiqTFP9YRc9zYfVAzaSE1WGnuP6bJi1NfBQN",
+  "policy": {
+    "tokens": [
+      {
+        "token": "wrap.testnet",
+        "max_per_trade": "500000000000000000000000",
+        "max_per_day": "3000000000000000000000000"
+      },
+      {
+        "token": "usdc.itachicara.testnet",
+        "max_per_trade": "1000000000000000000000000",
+        "max_per_day": "5000000000000000000000000"
+      }
+    ],
+    "pairs": [
+      {
+        "token_in": "wrap.testnet",
+        "token_out": "usdc.itachicara.testnet",
+        "pool_id": 1103,
+        "min_price_num": "7",
+        "min_price_den": "5"
+      },
+      {
+        "token_in": "usdc.itachicara.testnet",
+        "token_out": "wrap.testnet",
+        "pool_id": 1103,
+        "min_price_num": "33",
+        "min_price_den": "100"
+      }
+    ],
+    "max_trades_per_hour": 2,
+    "max_slippage_bps": 100
+  },
+  "deposit": "200000000000000000000000",
+  "allowance": "500000000000000000000000",
+  "txs": [
+    {
+      "step": "arena2.irontrade.testnet.create_vault",
+      "tx": "3esMHbsombVWLLfYsjnBgtzweU686PeSLfYLYShq1NEY"
+    },
+    {
+      "step": "wrap.testnet.storage_deposit",
+      "tx": "HBAV9ogXdpZ4qFegau2nbrCQz9U8WxMKTPL7xb8zYeu5"
+    },
+    {
+      "step": "usdc.itachicara.testnet.storage_deposit",
+      "tx": "3Vbn5Vckr3zQk6zdZ2XyPHELHhRmKC3J56dVPYATxBwv"
+    },
+    {
+      "step": "pa-rebal.arena2.irontrade.testnet.exchange_storage_deposit",
+      "tx": "2N334LJotQu9gacWbujAerdneW7btx32S6HkTNeYwA6p"
+    },
+    {
+      "step": "pa-rebal.arena2.irontrade.testnet.exchange_register_tokens",
+      "tx": "BBqi5Czxy8Xj3gDrc1Ekq2UiTgtVjs7vXAbjfgDX5BLQ"
+    },
+    {
+      "step": "wrap.testnet.storage_deposit",
+      "tx": "B5DzFTB81HbFscgipcTHFiB4PaL8n7EGLxHTzptPTYo2"
+    },
+    {
+      "step": "wrap.testnet.near_deposit",
+      "tx": "8Metrk8B99WgZmMKuosNjNdoYFQgjo2F1DdQ8Rr3mSCs"
+    },
+    {
+      "step": "wrap.testnet.ft_transfer_call",
+      "tx": "EFbR5GvqNkTzzoBtrPHx5XwQ98ziErESCaZuboDi1zWo"
+    },
+    {
+      "step": "paa1.it1793205219-owner.testnet.add_key(function-call)",
+      "tx": "4ijSdG9piZQEjGuBMcDeivQhvryc2yV1UxzZwL4DYQRB"
+    },
+    {
+      "step": "paa1.it1793205219-owner.testnet.add_key(recovery)",
+      "tx": "H4k14SDcrw6Mf9NFhb5xc7UbBeB2PR7ZkAtNcHHpRVGe"
+    },
+    {
+      "step": "paa1.it1793205219-owner.testnet.delete_key(setup)",
+      "tx": "HmqAnAPG6Efchxu2JmaYrm8Ymrk8pWxMmGD9N29ztmyL"
+    }
+  ]
+}

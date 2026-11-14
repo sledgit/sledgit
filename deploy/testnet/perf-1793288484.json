@@ -1,0 +1,86 @@
+{
+  "date_unix": 1793288484,
+  "network": "testnet",
+  "rows": [
+    {
+      "op": "fn:abandon",
+      "n": 1,
+      "median_s": 5.104443875,
+      "p95_s": 5.104443875,
+      "median_tgas": 2,
+      "median_near": 0.00017082745578049998
+    },
+    {
+      "op": "fn:abandon (too early)",
+      "n": 1,
+      "median_s": 4.99800725,
+      "p95_s": 4.99800725,
+      "median_tgas": 2,
+      "median_near": 0.00017335138225439998
+    },
+    {
+      "op": "fn:intent (to abandon)",
+      "n": 1,
+      "median_s": 12.016862542,
+      "p95_s": 12.016862542,
+      "median_tgas": 23,
+      "median_near": 0.0021951997675423002
+    },
+    {
+      "op": "setup:settle leftover intent",
+      "n": 1,
+      "median_s": 6.307418292,
+      "p95_s": 6.307418292,
+      "median_tgas": 13,
+      "median_near": 0.0012015934326609
+    },
+    {
+      "op": "setup:storage_deposit",
+      "n": 2,
+      "median_s": 5.556398917,
+      "p95_s": 5.556398917,
+      "median_tgas": 2,
+      "median_near": 0.0002290949115234
+    },
+    {
+      "op": "view:factory_config",
+      "n": 1,
+      "median_s": 0.420938959,
+      "p95_s": 0.420938959,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:ft_balance_of",
+      "n": 3,
+      "median_s": 0.680190584,
+      "p95_s": 1.019092375,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:get_intents",
+      "n": 6,
+      "median_s": 0.457160209,
+      "p95_s": 0.99077925,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:get_usage",
+      "n": 2,
+      "median_s": 1.133083,
+      "p95_s": 1.133083,
+      "median_tgas": 0,
+      "median_near": 0.0
+    },
+    {
+      "op": "view:mt_balance_of",
+      "n": 1,
+      "median_s": 0.434121416,
+      "p95_s": 0.434121416,
+      "median_tgas": 0,
+      "median_near": 0.0
+    }
+  ]
+}

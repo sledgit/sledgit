@@ -1,0 +1,341 @@
+{
+  "network": "testnet",
+  "season": {
+    "id": "testnet-s1",
+    "start_ms": 1793271140648,
+    "canonical_pools": [
+      1103
+    ],
+    "benchmark_cost_rate": {
+      "value": 0.003,
+      "source": "fixed published rate: the Rhea wNEAR/USDC pool fee, 0.30% (mainnet pool 4512); on testnet an assumption"
+    },
+    "min_value_usd": 1
+  },
+  "factories": [
+    "arena2.irontrade.testnet",
+    "arena.irontrade.testnet"
+  ],
+  "tokens": [
+    "wrap.testnet",
+    "usdc.itachicara.testnet"
+  ],
+  "entries": [
+    {
+      "id": "tn-qwen36-tee",
+      "account": "qwen36-tee.arena2.irontrade.testnet",
+      "name": "Qwen3.6 via NEAR AI",
+      "kind": "arena",
+      "harness": "sledgit-runner/0.1.0",
+      "model": "Qwen/Qwen3.6-35B-A3B-FP8",
+      "proof_claim": "tee",
+      "schedule": null,
+      "receipts": "../s1/receipts-arena/qwen36-tee",
+      "description": "Decisions from Qwen3.6 on NEAR AI Cloud, each with TEE evidence bound to this vault and the moment."
+    },
+    {
+      "id": "tn-llama32-local",
+      "account": "llama32-local.arena2.irontrade.testnet",
+      "name": "Llama 3.2 3B (local)",
+      "kind": "arena",
+      "harness": "sledgit-runner/0.1",
+      "model": "llama3.2:3b",
+      "proof_claim": "self",
+      "schedule": null,
+      "receipts": "../s1/receipts-arena/llama32-local",
+      "description": "A local model with no attestation: harness and model are the operator's word."
+    },
+    {
+      "id": "tn-qwen25-14b-local",
+      "account": "qwen25-14b-local.arena2.irontrade.testnet",
+      "name": "Qwen2.5 14B (local)",
+      "kind": "arena",
+      "harness": "Sledgit runner",
+      "model": "qwen2.5:14b",
+      "proof_claim": "self",
+      "schedule": null,
+      "receipts": "../s1/receipts-arena/qwen25-14b-local",
+      "description": "A self-hosted model with no attestation: harness and model are the operator's word."
+    },
+    {
+      "id": "tn-qwen38-27b-local",
+      "account": "qwen38-27b-local.arena2.irontrade.testnet",
+      "name": "Qwen3.8 27B (local)",
+      "kind": "arena",
+      "harness": "Sledgit runner",
+      "model": "qwen3.8:27b",
+      "proof_claim": "self",
+      "schedule": null,
+      "receipts": "../s1/receipts-arena/qwen38-27b-local",
+      "description": "A self-hosted model with no attestation: harness and model are the operator's word."
+    },
+    {
+      "id": "tn-qwen36-local",
+      "account": "qwen36-local.arena2.irontrade.testnet",
+      "name": "Qwen3.6 35B (self-hosted)",
+      "kind": "arena",
+      "harness": "Sledgit runner",
+      "model": "qwen3.6:35b-a3b",
+      "proof_claim": "self",
+      "schedule": null,
+      "receipts": "../s1/receipts-arena/qwen36-local",
+      "description": "The same model family as the attested NEAR AI entry, self-hosted with no attestation: a same-model, different-proof comparison."
+    },
+    {
+      "id": "tn-rust-qwen3-8b",
+      "account": "rust-qwen3-8b.arena2.irontrade.testnet",
+      "name": "Qwen3 8B (local Rust agent)",
+      "kind": "arena",
+      "harness": "local Rust agent 0.0.5",
+      "model": "qwen3:8b",
+      "proof_claim": "self",
+      "schedule": null,
+      "receipts": "../s1/receipts-arena/rust-qwen3-8b",
+      "description": "A ~4 MB local Rust agent loop on a laptop, model via Ollama. It only proposes; the Sledgit runner checks every decision against the vault's limits. Harness and model are the operator's word."
+    },
+    {
+      "id": "tn-claude-nearai",
+      "account": "claude-nearai.arena2.irontrade.testnet",
+      "name": "Claude Haiku 5.5 (NEAR AI, self-reported)",
+      "kind": "arena",
+      "harness": "sledgit-runner/0.1",
+      "model": "anthropic/claude-haiku-5-5",
+      "proof_claim": "self",
+      "schedule": null,
+      "receipts": "../s1/receipts-arena/claude-nearai",
+      "description": "Claude Haiku 5.5 through NEAR AI Cloud's gateway. Claude can't carry the TEE badge (NEAR AI returns no model attestation for it), so harness and model are the operator's word."
+    },
+    {
+      "id": "tn-house-rebalancer",
+      "account": "house-rebalancer.arena2.irontrade.testnet",
+      "name": "Rebalancer",
+      "kind": "house",
+      "strategy": "rebalancer",
+      "harness": "sledgit-runner/0.1.0",
+      "model": "rules:rebalancer",
+      "proof_claim": "rules",
+      "schedule": {
+        "every_s": 86400,
+        "offset_s": 300,
+        "window_s": 7200,
+        "since_ms": 1793271140648
+      },
+      "receipts": "../s1/receipts-house/rebalancer",
+      "description": "Published rule: back to 50/50 when the wNEAR weight drifts more than 10 points."
+    },
+    {
+      "id": "tn-house-trend",
+      "account": "house-trend.arena2.irontrade.testnet",
+      "name": "Trend 50-day",
+      "kind": "house",
+      "strategy": "trend",
+      "harness": "sledgit-runner/0.1.0",
+      "model": "rules:trend",
+      "proof_claim": "rules",
+      "schedule": {
+        "every_s": 86400,
+        "offset_s": 300,
+        "window_s": 7200,
+        "since_ms": 1793271140648
+      },
+      "receipts": "../s1/receipts-house/trend",
+      "description": "Published rule: all NEAR above the 50-day average, all USDC below."
+    },
+    {
+      "id": "tn-house-luck",
+      "account": "house-luck.arena2.irontrade.testnet",
+      "name": "Luck baseline",
+      "kind": "house",
+      "strategy": "luck",
+      "harness": "sledgit-runner/0.1.0",
+      "model": "rules:luck",
+      "proof_claim": "rules",
+      "schedule": {
+        "every_s": 86400,
+        "offset_s": 300,
+        "window_s": 7200,
+        "since_ms": 1793271140648
+      },
+      "receipts": "../s1/receipts-house/luck",
+      "description": "Luck baseline: random trades under the same limits, seeded by the vault's on-chain decision seq and a slot block hash."
+    },
+    {
+      "id": "tn-house-breakout",
+      "account": "house-breakout.arena2.irontrade.testnet",
+      "name": "Breakout 55/20",
+      "kind": "house",
+      "strategy": "breakout",
+      "harness": "sledgit-runner/0.1.0",
+      "model": "rules:breakout",
+      "proof_claim": "rules",
+      "schedule": {
+        "every_s": 86400,
+        "offset_s": 300,
+        "window_s": 7200,
+        "since_ms": 1793271140648
+      },
+      "receipts": "../s1/receipts-house/breakout",
+      "description": "Published rule: enter above the prior 55-day high, exit below the prior 20-day low."
+    },
+    {
+      "id": "tn-house-hold",
+      "account": "house-hold.arena2.irontrade.testnet",
+      "name": "Hold-once",
+      "kind": "house",
+      "strategy": "hold",
+      "harness": "sledgit-runner/0.1.0",
+      "model": "rules:hold",
+      "proof_claim": "rules",
+      "schedule": {
+        "every_s": 86400,
+        "offset_s": 300,
+        "window_s": 7200,
+        "since_ms": 1793271140648
+      },
+      "receipts": "../s1/receipts-house/hold",
+      "description": "Published rule: move to 50/50 once, then never trade."
+    },
+    {
+      "id": "tn-suite",
+      "account": "suite.arena2.irontrade.testnet",
+      "name": "Test-suite vault",
+      "kind": "fixture",
+      "harness": "test scripts",
+      "model": "none",
+      "proof_claim": "self",
+      "schedule": null,
+      "description": "Test fixture: the live test suite's vault. Not an entry."
+    },
+    {
+      "id": "tn0-qwen36-tee",
+      "account": "qwen36-tee.arena.irontrade.testnet",
+      "name": "Qwen3.6 via NEAR AI",
+      "kind": "arena",
+      "harness": "sledgit-runner/0.1.0",
+      "model": "Qwen/Qwen3.6-35B-A3B-FP8",
+      "proof_claim": "tee",
+      "schedule": null,
+      "receipts": "../receipts-arena/qwen36-tee",
+      "description": "Decisions from Qwen3.6 on NEAR AI Cloud with TEE evidence. Its first decision (seq 1) predates the season and the current attestation policy, so it is history, not scored. Retired: legacy factory arena.irontrade.testnet (pre-round-3 code); record kept, not ranked.",
+      "retired": true
+    },
+    {
+      "id": "tn0-llama32-local",
+      "account": "llama32-local.arena.irontrade.testnet",
+      "name": "Llama 3.2 3B (local)",
+      "kind": "arena",
+      "harness": "sledgit-runner/0.1",
+      "model": "llama3.2:3b",
+      "proof_claim": "self",
+      "schedule": null,
+      "receipts": "../receipts-arena/llama32-local",
+      "description": "A local model with no attestation: harness and model are the operator's word. Retired: legacy factory arena.irontrade.testnet (pre-round-3 code); record kept, not ranked.",
+      "retired": true
+    },
+    {
+      "id": "tn0-house-rebalancer",
+      "account": "house-rebalancer.arena.irontrade.testnet",
+      "name": "Rebalancer",
+      "kind": "house",
+      "strategy": "rebalancer",
+      "harness": "sledgit-runner/0.1.0",
+      "model": "rules:rebalancer",
+      "proof_claim": "rules",
+      "schedule": {
+        "every_s": 86400,
+        "offset_s": 300,
+        "window_s": 7200,
+        "since_ms": 1793264400000
+      },
+      "receipts": "../receipts-house/rebalancer",
+      "description": "Published rule: back to 50/50 when the wNEAR weight drifts more than 10 points. Retired: legacy factory arena.irontrade.testnet (pre-round-3 code); record kept, not ranked.",
+      "retired": true
+    },
+    {
+      "id": "tn0-house-trend",
+      "account": "house-trend.arena.irontrade.testnet",
+      "name": "Trend 50-day",
+      "kind": "house",
+      "strategy": "trend",
+      "harness": "sledgit-runner/0.1.0",
+      "model": "rules:trend",
+      "proof_claim": "rules",
+      "schedule": {
+        "every_s": 86400,
+        "offset_s": 300,
+        "window_s": 7200,
+        "since_ms": 1793264400000
+      },
+      "receipts": "../receipts-house/trend",
+      "description": "Published rule: all wNEAR above the 50-day average, all USDC below. Retired: legacy factory arena.irontrade.testnet (pre-round-3 code); record kept, not ranked.",
+      "retired": true
+    },
+    {
+      "id": "tn0-house-luck",
+      "account": "house-luck.arena.irontrade.testnet",
+      "name": "Luck baseline",
+      "kind": "house",
+      "strategy": "luck",
+      "harness": "sledgit-runner/0.1.0",
+      "model": "rules:luck",
+      "proof_claim": "rules",
+      "schedule": {
+        "every_s": 86400,
+        "offset_s": 300,
+        "window_s": 7200,
+        "since_ms": 1793264400000
+      },
+      "receipts": "../receipts-house/luck",
+      "description": "Random trades under the same limits, seeded and re-runnable. An entry that can't beat this hasn't shown skill. Retired: legacy factory arena.irontrade.testnet (pre-round-3 code); record kept, not ranked.",
+      "retired": true
+    },
+    {
+      "id": "tn0-perf",
+      "account": "perf.arena.irontrade.testnet",
+      "name": "Performance fixture",
+      "kind": "fixture",
+      "harness": "test scripts",
+      "model": "none",
+      "proof_claim": "self",
+      "schedule": null,
+      "description": "Test fixture: scripted performance runs. Not an entry. Retired: legacy factory arena.irontrade.testnet (pre-round-3 code); record kept, not ranked.",
+      "retired": true
+    },
+    {
+      "id": "tn0-lifecycle",
+      "account": "lifecycle.arena.irontrade.testnet",
+      "name": "Owner-powers fixture",
+      "kind": "fixture",
+      "harness": "test scripts",
+      "model": "none",
+      "proof_claim": "self",
+      "schedule": null,
+      "description": "Test fixture: freeze, timelock and ownership checks. Not an entry. Retired: legacy factory arena.irontrade.testnet (pre-round-3 code); record kept, not ranked.",
+      "retired": true
+    },
+    {
+      "id": "tn0-suite",
+      "account": "suite.arena.irontrade.testnet",
+      "name": "Test-suite fixture",
+      "kind": "fixture",
+      "harness": "test scripts",
+      "model": "none",
+      "proof_claim": "self",
+      "schedule": null,
+      "description": "Test fixture: every refusal code, rolling caps and intent expiry. Not an entry. Retired: legacy factory arena.irontrade.testnet (pre-round-3 code); record kept, not ranked.",
+      "retired": true
+    },
+    {
+      "id": "tn-iron-trader-demo",
+      "account": "iron-trader-demo.arena2.irontrade.testnet",
+      "name": "Demo trader",
+      "kind": "arena",
+      "harness": "demo-trader/0.1.0",
+      "model": "iron-trader-v1 / +kronos-small",
+      "proof_claim": "self",
+      "schedule": null,
+      "receipts": "../s1/receipts-arena/iron-trader-demo",
+      "description": "The open-source demo-trader desk (screener, analyst, risk, budget; the vault is the broker). Rule-based, with an optional Kronos-small forecast; the receipts name which ran. Re-run any decision with demo-trader rerun."
+    }
+  ]
+}

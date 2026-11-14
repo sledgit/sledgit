@@ -1,0 +1,199 @@
+{
+  "date_unix": 1793205011,
+  "accounts": [
+    "it1793205011-owner.testnet",
+    "it1793205011-agent.testnet",
+    "it1793205011-vault.testnet",
+    "it1793205011-intents.testnet",
+    "it1793205011-fund1.testnet",
+    "it1793205011-fund2.testnet"
+  ],
+  "contracts": {
+    "rhea": "ref-finance-101.testnet",
+    "mpc": "v1.signer-prod.testnet",
+    "pool": 1103,
+    "wrap": "wrap.testnet",
+    "usdc": "usdc.itachicara.testnet"
+  },
+  "checks": [
+    {
+      "check": "Rhea trade event",
+      "pass": true
+    },
+    {
+      "check": "event amount_out equals the vault's USDC balance",
+      "pass": true
+    },
+    {
+      "check": "vault's MPC key registered on intents",
+      "pass": true
+    },
+    {
+      "check": "real MPC signed the intent (intent_authorized)",
+      "pass": true
+    },
+    {
+      "check": "signature recovers to the vault's registered key",
+      "pass": true
+    },
+    {
+      "check": "signature is low-s (intents.near requirement)",
+      "pass": true
+    },
+    {
+      "check": "intent settled on intents.near",
+      "pass": false
+    },
+    {
+      "check": "settle records the fill as a trade",
+      "pass": false
+    },
+    {
+      "check": "cancel burned the nonce (intent_cancelled)",
+      "pass": true
+    },
+    {
+      "check": "vault has no access keys",
+      "pass": true
+    },
+    {
+      "check": "owner can still withdraw from a locked vault",
+      "pass": true
+    }
+  ],
+  "steps": [
+    {
+      "step": "storage_deposit wrap.testnet",
+      "ok": true,
+      "tx": "FdnXXCRzBt3pmoFvDwRMjx5dsGb3xq2ik1FSpiAHoYzS",
+      "gas_tgas": 2,
+      "seconds": 4.915769577026367
+    },
+    {
+      "step": "storage_deposit usdc.itachicara.testnet",
+      "ok": true,
+      "tx": "BPsh23YhKiNPro5E2W3GLfSAH9K8KxJ7Fy42vycyrPfQ",
+      "gas_tgas": 2,
+      "seconds": 4.716550350189209
+    },
+    {
+      "step": "storage_deposit wrap.testnet",
+      "ok": true,
+      "tx": "864EDowMbmzg2zMpWSfAE744QAfrAcEZH2cwCrmZCM19",
+      "gas_tgas": 2,
+      "seconds": 4.604193210601807
+    },
+    {
+      "step": "storage_deposit usdc.itachicara.testnet",
+      "ok": true,
+      "tx": "3Urntjs1mR3G3jiETePykX7iAiz3GavVGbbGhJvDTTgV",
+      "gas_tgas": 2,
+      "seconds": 5.108441352844238
+    },
+    {
+      "step": "exchange_storage_deposit",
+      "ok": true,
+      "tx": "HMLPYSfYzg3n6kMBkKyizKeRbPbkWbn97uA72SmcH3FH",
+      "gas_tgas": 5,
+      "seconds": 5.222292900085449
+    },
+    {
+      "step": "exchange_register_tokens",
+      "ok": true,
+      "tx": "F1PgZzaDUKHCsvYTQfZB1wZAiQts7geSusyZezCxfaWs",
+      "gas_tgas": 6,
+      "seconds": 4.831188678741455
+    },
+    {
+      "step": "wrap 3 NEAR",
+      "ok": true,
+      "tx": "9gbPMhVx47i1NZbRfAs9Kz8Pd4xtWMQ1UVUoTq3bN6Wc",
+      "gas_tgas": 2,
+      "seconds": 4.171816349029541
+    },
+    {
+      "step": "fund vault 2 wNEAR",
+      "ok": true,
+      "tx": "5JebrQw2SizkeUBQaRPFNCJ1H5cm74hEn3CToemB4dBU",
+      "gas_tgas": 6,
+      "seconds": 5.0586676597595215
+    },
+    {
+      "step": "request_swap 0.5 wNEAR->USDC",
+      "ok": true,
+      "tx": "2bccQfeNE8aHE2VDoXehWBzYcCD13fEZvjuzRCsBkU5c",
+      "gas_tgas": 43,
+      "seconds": 12.006044387817383
+    },
+    {
+      "step": "intents_setup (real MPC key)",
+      "ok": true,
+      "tx": "DgCJh8Czvsux7mXz2SP63CvFCEqZbkGe2Y2A9bAUyhNu",
+      "gas_tgas": 16,
+      "seconds": 6.3547821044921875
+    },
+    {
+      "step": "intents_deposit 0.5 wNEAR",
+      "ok": true,
+      "tx": "7sAinfDwAGwxZPv1s3jpYBjRcQSRCQ36PhUgCgzHCRZc",
+      "gas_tgas": 6,
+      "seconds": 5.391891956329346
+    },
+    {
+      "step": "request_intent_swap 0.3 wNEAR",
+      "ok": true,
+      "tx": "Mfba1RyoFcUUFoGpQUhGamyAsnvDZ9GedDMt8RVmvpW",
+      "gas_tgas": 23,
+      "seconds": 11.925843238830566
+    },
+    {
+      "step": "owner withdraws vault USDC",
+      "ok": true,
+      "tx": "2ZLRhecbAsgXkYaisq255EWoR7cKaqtRAw9YGNZhKAi8",
+      "gas_tgas": 7,
+      "seconds": 5.497675895690918
+    },
+    {
+      "step": "solver USDC onto intents",
+      "ok": false,
+      "tx": "5MjKHutmf54J3Kn9opNPfji9ixbKM9DFBbufFYnhiuah",
+      "gas_tgas": 2,
+      "seconds": 4.280712127685547
+    },
+    {
+      "step": "execute_intents (vault + solver)",
+      "ok": false,
+      "tx": "6Uc7MBZHdJqh3w3VCzxZ78F7WJaJfi8HTZgcPzGdNN3o",
+      "gas_tgas": 4,
+      "seconds": 4.388060092926025
+    },
+    {
+      "step": "intents_settle (anyone)",
+      "ok": true,
+      "tx": "92r6gYsbAehuMsfuzZ2f6qELGuDbru7mo1PQyVzyKTrq",
+      "gas_tgas": 7,
+      "seconds": 5.654942512512207
+    },
+    {
+      "step": "request_intent_swap 0.1 wNEAR",
+      "ok": true,
+      "tx": "EwBr1du3FccHW7xGvF9SfHvZggUCPiDid1YhWAV3a7Me",
+      "gas_tgas": 2,
+      "seconds": 4.292101860046387
+    },
+    {
+      "step": "intents_cancel (agent)",
+      "ok": true,
+      "tx": "Ha8XTv3ZYhcsJwVgfQbzPhXF9v8zh9P68o4WjYuX3VeM",
+      "gas_tgas": 19,
+      "seconds": 13.209086418151855
+    },
+    {
+      "step": "owner withdraws after lock",
+      "ok": true,
+      "tx": "7nL8M7sWCHnmNfMYZnmdCdd1sBdxLsCCVgzttYwqAyxu",
+      "gas_tgas": 6,
+      "seconds": 5.164200782775879
+    }
+  ]
+}
