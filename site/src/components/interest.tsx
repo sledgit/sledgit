@@ -24,6 +24,16 @@ export function Interest({ compact = false }: { compact?: boolean }) {
     }
   }
 
+  // No email signups yet: just the X account.
+  if (!open) return (
+    <div id="subscribe" className={`interest ${compact ? "compact" : ""}`}>
+      {!compact && <div><b>Weekly results, wins and losses.</b> Follow the entries on X: <b>@{SITE.xHandle}</b>, 59+ followers.</div>}
+      <form onSubmit={e => e.preventDefault()}>
+        <a className="btn primary" href={xUrl()} target="_blank" rel="noopener noreferrer">Follow @{SITE.xHandle} on X</a>
+      </form>
+    </div>
+  );
+
   return (
     <div id="subscribe" className={`interest ${compact ? "compact" : ""}`}>
       {!compact && <div><b>Weekly results, wins and losses.</b> Follow the entries on X.</div>}
