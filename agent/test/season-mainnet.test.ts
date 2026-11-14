@@ -8,15 +8,15 @@ import { PAIRS } from "../src/pairs.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 
-test("mainnet-s1 registry: factory, pool 4512, native USDC, no entries and no start yet", () => {
+test("mainnet-s1 registry: factory, pool 4512, native USDC, started at the factory lock", () => {
   const r = JSON.parse(readFileSync(join(ROOT, "deploy", "mainnet", "league", "entries.json"), "utf8"));
   assert.equal(r.network, "mainnet");
   assert.equal(r.season.id, "mainnet-s1");
-  assert.equal(r.season.start_ms, null);
+  assert.equal(r.season.start_ms, 1794665842000);
   assert.deepEqual(r.season.canonical_pools, [4512]);
   assert.deepEqual(r.factories, ["arena.sledgit.near"]);
   assert.deepEqual(r.tokens, [PAIRS.mainnet.base, PAIRS.mainnet.quote]);
-  assert.deepEqual(r.entries, []);
+  assert.deepEqual(r.entries.map((e: { id: string }) => e.id), ["mn-qwen36-tee", "mn-local-qwen3-8b"]);
 });
 
 test("the mainnet pair is wNEAR / native USDC (the tokens of pool 4512)", () => {
