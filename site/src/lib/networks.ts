@@ -7,7 +7,7 @@ export const NETWORK_IDS: NetworkId[] = ["sim", "testnet", "mainnet"];
 export const isNetwork = (x: unknown): x is NetworkId => NETWORK_IDS.includes(x as NetworkId);
 
 /** The network the site leads with: default tab, home board, ticker, season copy. Set to "mainnet" to go live. */
-export const LIVE_NETWORK = "testnet" as Exclude<NetworkId, "sim">;
+export const LIVE_NETWORK = "mainnet" as Exclude<NetworkId, "sim">;
 export const LIVE_LEAGUE = leagueFor(LIVE_NETWORK);
 
 export interface Token { id: string; symbol: string; decimals: number }

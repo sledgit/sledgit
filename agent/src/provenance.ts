@@ -29,9 +29,8 @@ export const FACTORIES: Record<"testnet" | "mainnet", KnownFactory[]> = {
     { id: "irontrade.testnet", vault_code_hash: "zSZ8hT8PinALB1cd95KBrmZQDmpWnamFqfFTYemZfyk", locked: false, bound: TESTNET_BOUND },
   ],
   mainnet: [
-    // The public factory, launching 1 Nov. Until then provenance fails closed: the account doesn't exist, and the
-    // placeholder hash matches no code. Replace it with the reproducible-build hash at the 1 Nov tag.
-    { id: "arena.sledgit.near", vault_code_hash: "REPLACE-WITH-THE-REPRODUCIBLE-BUILD-HASH-AT-THE-1-NOV-TAG", locked: true,
+    // Vault 0.2.0, reproducible build of tag v0.2.0-beta.2; factory locked 2026-11-14.
+    { id: "arena.sledgit.near", vault_code_hash: "7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU", locked: true,
       bound: { exchange_id: "v2.ref-finance.near", intents_id: "intents.near", mpc_id: "v1.signer" } },
   ],
 };

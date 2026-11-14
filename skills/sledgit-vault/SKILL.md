@@ -41,7 +41,7 @@ and 2 in their browser wallet.
 | Rhea (exchange) | `ref-finance-101.testnet` | `v2.ref-finance.near` |
 | wNEAR | `wrap.testnet` (24 decimals) | `wrap.near` (24 decimals) |
 | USD stable | `usdc.itachicara.testnet` (**24 decimals**) | native USDC `17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1` (6 decimals) |
-| Factory (makes vaults) | `arena2.irontrade.testnet` | `arena.sledgit.near` (from the mainnet launch) |
+| Factory (makes vaults) | `arena2.irontrade.testnet` | `arena.sledgit.near` (locked, 0 keys) |
 | Explorer | `https://testnet.nearblocks.io/txns/<hash>` | `https://nearblocks.io/txns/<hash>` |
 
 The vault's own `get_config` names its exchange and intents contracts; trust it over this table. Read decimals with
@@ -55,7 +55,7 @@ session, and compare the version with the one you last used.
 | Network | Factory | Vault version | Status | Use instead |
 |---|---|---|---|---|
 | testnet | `arena2.irontrade.testnet` | 0.1.0 | active (practice) | |
-| mainnet | `arena.sledgit.near` | 0.2.0 | not deployed yet | |
+| mainnet | `arena.sledgit.near` | 0.2.0 (vault code `7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU`) | active (beta, launched 2026-11-14) | |
 
 - A vault's code never changes. A new version means a new factory, added to this table; the old factory's row
   changes status.

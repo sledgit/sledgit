@@ -177,10 +177,10 @@ test("round-3 migration: arena2 vaults are genuine and current; arena vaults sta
   assert.equal((await vaultProvenance(`x.${ARENA2}`, "testnet", mixed)).sledgit_vault, false);
 });
 
-test("mainnet: the Season 1 factory is known, and a vault fails closed while it doesn't exist", async () => {
+test("mainnet: the launched factory is pinned, and a missing vault fails closed", async () => {
   const f = FACTORIES.mainnet.find((k) => k.id === "arena.sledgit.near");
   assert.ok(f, "arena.sledgit.near is in FACTORIES.mainnet");
-  assert.match(f.vault_code_hash, /^REPLACE/, "a placeholder until the reproducible build at the 1 Nov tag");
+  assert.equal(f.vault_code_hash, "7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU", "v0.2.0-beta.2 reproducible build");
   assert.equal(FACTORIES.testnet.find((k) => k.id === ARENA2)?.vault_code_hash, HASH2, "testnet unchanged");
   const missing: ChainReader = {
     viewAccount: async () => { throw new Error("UNKNOWN_ACCOUNT"); },
