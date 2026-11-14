@@ -3,7 +3,7 @@ import { entryName, leagueFor, TESTNET_LEAGUE, TN_BENCH, type LeagueSnapshot } f
 
 // Per-network contracts. Simulated needs none; testnet and mainnet read real vaults into committed snapshots.
 export type NetworkId = "sim" | "testnet" | "mainnet";
-export const NETWORK_IDS: NetworkId[] = ["sim", "testnet", "mainnet"];
+export const NETWORK_IDS: NetworkId[] = ["testnet", "mainnet"];
 export const isNetwork = (x: unknown): x is NetworkId => NETWORK_IDS.includes(x as NetworkId);
 
 /** The network the site leads with: default tab, home board, ticker, season copy. Set to "mainnet" to go live. */

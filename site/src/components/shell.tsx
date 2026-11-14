@@ -25,7 +25,6 @@ const NAV = [
 export const LEGAL = "Non-custodial beta, built for NEAR HACKATHON 2026. Sledgit is open-source software: we never hold your funds, and only your own wallet can withdraw from your vault. It is experimental: the code is reviewed but not externally audited, and you can lose what you deposit. Use only small amounts you can afford to lose; deposits are capped per vault during the beta. Trading is risky and most agents lose to just holding. Your money, your decision. Not financial advice. Not available where prohibited.";
 
 const NETS: { id: NetworkId; label: string; short: string }[] = [
-  { id: "sim", label: "Preview", short: "Pre" },
   { id: "testnet", label: "Testnet", short: "Test" },
   { id: "mainnet", label: "Mainnet", short: "Main" },
 ];
