@@ -9,6 +9,7 @@ import { setNetwork, setSpeed, useLeague, type LeagueState } from "@/lib/league"
 import { LIVE_NETWORK, NETWORKS, type NetworkId } from "@/lib/networks";
 import { MAINNET_LEAGUE } from "@/lib/feed/league-data";
 import { Ticker } from "./board";
+import { xUrl } from "@/lib/site";
 
 const NAV = [
   { href: "/leaderboard/", label: "Leaderboard" },
@@ -89,6 +90,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <div className="barright">
           <NetworkToggle net={net} />
           <ThemeToggle />
+          <a className="btn icon xlink" href={xUrl()} target="_blank" rel="noopener noreferrer" aria-label="Sledgit on X (@sledgit_com)" title="@sledgit_com on X">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
           <a className="btn primary" href="/skill.md">SKILL.md</a>
           <button className="btn menu-btn" aria-expanded={open} aria-label="Menu" onClick={() => setOpen(o => !o)}>{open ? "Close" : "Menu"}</button>
         </div>
