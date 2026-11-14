@@ -2,6 +2,7 @@
 name = "sledgit-factory"
 description = "Sledgit vault factory: creates keyless vaults on one shared, hash-pinned vault code."
 version = "0.2.0"
+repository = "https://github.com/sledgit/sledgit"
 edition = "2024"
 rust-version = "1.96"
 publish = false

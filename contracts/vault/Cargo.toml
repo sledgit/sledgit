@@ -2,6 +2,7 @@
 name = "sledgit-vault"
 description = "Sledgit vault: an agent trades within fixed on-chain limits; only the owner withdraws."
 version = "0.2.0"
+repository = "https://github.com/sledgit/sledgit"
 edition = "2024"
 rust-version = "1.96"
 publish = false
