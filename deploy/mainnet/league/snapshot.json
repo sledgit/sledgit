@@ -1,13 +1,13 @@
 {
-  "as_of_ms": 1794668520000,
+  "as_of_ms": 1794668700000,
   "benchmarks": {
-    "hold_twr": 0.00124031,
+    "hold_twr": -0.00124031,
     "stake_apr": {
       "source": "assumption, not measured: 4.5% APR, the post-2024 NEAR staking rate the backtest uses (agent/src/strategies/benchmarks.ts STAKE_APR); testnet vaults cannot stake",
       "value": 0.045
     },
-    "stake_twr": 0.00124061,
-    "stake_vs_hold": 3e-7,
+    "stake_twr": -0.00123988,
+    "stake_vs_hold": 4.3e-7,
     "start_ms": 1794668096365
   },
   "by_model": [
@@ -19,7 +19,7 @@
       ],
       "family": "Qwen3 8B",
       "label": "Qwen3 8B · self-reported",
-      "provisional_vs_hold_after_gas": 0.00096568,
+      "provisional_vs_hold_after_gas": 0.00150167,
       "ranked_entries": 0,
       "refusals": 0,
       "scored_sources": 0,
@@ -37,8 +37,8 @@
         "mn-qwen36-tee"
       ],
       "family": "Qwen3.6 35B",
-      "label": "Qwen3.6 35B · self-reported",
-      "provisional_vs_hold_after_gas": -0.000518,
+      "label": "Qwen3.6 35B · attested",
+      "provisional_vs_hold_after_gas": -0.00012805,
       "ranked_entries": 0,
       "refusals": 0,
       "scored_sources": 0,
@@ -46,12 +46,12 @@
       "spread": null,
       "status": "not enough data",
       "strategy": null,
-      "tier": "self",
+      "tier": "tee",
       "trades": 1
     }
   ],
   "caveat": null,
-  "derived_sha256": "9617e1a8b23e4b60e56ffc0618a6825d944fb29a2deb6e481741d33154aba42e",
+  "derived_sha256": "bbf3dd78dd582f368b7acbbf014eb90d765b5474fb6c0535b7fb4eed7eae641c",
   "entries": [
     {
       "account": "local-qwen3-8b.arena.sledgit.near",
@@ -76,7 +76,7 @@
         "skips": 1,
         "trades": 0
       },
-      "days": 0.00490318,
+      "days": 0.00698652,
       "decisions": [
         {
           "block_time_ms": 1794668281560,
@@ -91,13 +91,13 @@
       ],
       "description": "A local model on a laptop via Ollama. Harness and model are the operator's word; the vault still enforces every limit.",
       "end": {
-        "price": 3.233,
-        "value_usd": 8.233
+        "price": 3.217,
+        "value_usd": 8.217
       },
       "events_sha256": "a7683e7bd03fb385a9ec655cba8045db97a74ad14f0ead49d1c37f3c9e6af2c8",
-      "funded_twr": 0.00248062,
+      "funded_twr": -0.00248062,
       "harness": "Sledgit runner + Ollama",
-      "hold_twr": -0.00026155,
+      "hold_twr": -0.00273845,
       "id": "mn-local-qwen3-8b",
       "inactive": false,
       "kind": "arena",
@@ -127,25 +127,25 @@
           "value": 3.22517607
         },
         {
-          "hold": 3.2241565,
-          "stake": 3.22415748,
-          "t": 1794668520000,
-          "value": 3.22752821
+          "hold": 3.2161685,
+          "stake": 3.21616988,
+          "t": 1794668700000,
+          "value": 3.22125584
         }
       ],
-      "stake_twr": -0.00026125,
+      "stake_twr": -0.00273802,
       "start": {
         "price": 3.225,
         "time_ms": 1794668096365,
         "value_usd": 3.225
       },
       "strategy_sha256": null,
-      "twr": 0.00078394,
+      "twr": -0.00116098,
       "unranked_reason": "0.0 days at the minimum value; ranking starts at day 7",
-      "vs_funded": -0.00169248,
-      "vs_hold": 0.00104577,
-      "vs_hold_after_gas": 0.00096568,
-      "vs_stake": 0.00104546
+      "vs_funded": 0.00132292,
+      "vs_hold": 0.0015818,
+      "vs_hold_after_gas": 0.00150167,
+      "vs_stake": 0.00158137
     },
     {
       "account": "qwen36-tee.arena.sledgit.near",
@@ -170,7 +170,7 @@
         "skips": 0,
         "trades": 1
       },
-      "days": 0.0040697,
+      "days": 0.00615303,
       "decisions": [
         {
           "amount_in": "200000",
@@ -207,13 +207,13 @@
       ],
       "description": "Qwen3.6 run inside NEAR AI Cloud's enclave; each decision carries hardware attestation and the model's signature.",
       "end": {
-        "price": 3.233,
-        "value_usd": 8.13338351
+        "price": 3.217,
+        "value_usd": 8.11639182
       },
       "events_sha256": "02789af01f113c8b2657e2c1924b715dd26f7477b5ae065ca5b7901bd2ed0af0",
-      "funded_twr": 0.0031027,
+      "funded_twr": -0.00186162,
       "harness": "Sledgit runner",
-      "hold_twr": 0.00004902,
+      "hold_twr": -0.00242941,
       "id": "mn-qwen36-tee",
       "inactive": false,
       "kind": "arena",
@@ -221,8 +221,9 @@
       "name": "Qwen3.6 35B (NEAR AI TEE)",
       "proof": {
         "claimed": "tee",
-        "detail": "TEE season check failed: 0 of 1 decision(s) attested",
-        "tier": "self"
+        "detail": "season check: 1 of 1 decision(s) attested under the pinned NEAR AI policy (seqs 1-1, as of the cutoff)",
+        "tier": "tee",
+        "verified_model": "Qwen/Qwen3.6-35B-A3B-FP8"
       },
       "provenance": {
         "reason": "direct child of arena.sledgit.near (factory keyless), runs its pinned code 7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU, 0 access keys",
@@ -243,25 +244,25 @@
           "value": 3.22459171
         },
         {
-          "hold": 3.223158,
-          "stake": 3.22315881,
-          "t": 1794668520000,
-          "value": 3.22711991
+          "hold": 3.21517,
+          "stake": 3.21517122,
+          "t": 1794668700000,
+          "value": 3.22037804
         }
       ],
-      "stake_twr": 0.00004927,
+      "stake_twr": -0.00242904,
       "start": {
         "price": 3.223,
         "time_ms": 1794668168378,
         "value_usd": 3.223
       },
       "strategy_sha256": null,
-      "twr": 0.00127829,
+      "twr": -0.00081351,
       "unranked_reason": "0.0 days at the minimum value; ranking starts at day 7",
-      "vs_funded": -0.00181877,
-      "vs_hold": 0.0012292,
-      "vs_hold_after_gas": -0.000518,
-      "vs_stake": 0.00122895
+      "vs_funded": 0.00105006,
+      "vs_hold": 0.00161983,
+      "vs_hold_after_gas": -0.00012805,
+      "vs_stake": 0.00161945
     },
     {
       "account": "canary-27958c783600.arena.sledgit.near",
@@ -325,17 +326,8 @@
     }
   ],
   "excluded": [],
-  "flags": [
-    {
-      "ids": [
-        "mn-qwen36-tee"
-      ],
-      "kind": "proof",
-      "severity": "info",
-      "text": "claims tee, proven self (TEE season check failed: 0 of 1 decision(s) attested)"
-    }
-  ],
-  "inputs_sha256": "37a8fd1d2c61590434f69c95df91da4aada98ffd4b2b708bff5d69ff619f6cb4",
+  "flags": [],
+  "inputs_sha256": "bd0c20d7dcacf42f81f17683c3ff0b7d1d91e179005ff2f7b3e128cc88782749",
   "luck_entry": null,
   "method": {
     "benchmarks": "Hold 50/50 and Stake & hold are COMPUTED, not vaults: they start from the entry's own start value, at its start time and reference price, rebalanced once to 50/50 and charged season.benchmark_cost_rate on that rebalance (a fixed published rate, never the entry's own). Stake & hold compounds the NEAR half daily at the stated APR (an assumption, see stake_apr.source). Funded position: the entry's own holdings at its start, never traded, no costs.",

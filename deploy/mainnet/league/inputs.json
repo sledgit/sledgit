@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794668520000,
-  "collected_at": "2026-11-14T15:02:27.643Z",
+  "as_of_ms": 1794668700000,
+  "collected_at": "2026-11-14T15:05:58.153Z",
   "excluded": [],
   "factories": [
     {
@@ -21,7 +21,7 @@
     "1794668100000": 3.224,
     "1794668160000": 3.223,
     "1794668280000": 3.224,
-    "1794668520000": 3.233
+    "1794668700000": 3.217
   },
   "network": "mainnet",
   "reference": {
@@ -659,7 +659,7 @@
         }
       },
       "proof": {
-        "detail": "TEE season check failed: 0 of 1 decision(s) attested",
+        "detail": "season check: 1 of 1 decision(s) attested under the pinned NEAR AI policy (seqs 1-1, as of the cutoff)",
         "evidence_ids": [
           "bundle:2aa08994da21db47fb5832d6f18ee24cb1bc640dc4b12e6310520fb5a6390d7d",
           "chat:78a4897781f644f9bbc6a3543666dec9"
@@ -669,7 +669,8 @@
           1,
           1
         ],
-        "tier": "self"
+        "tier": "tee",
+        "verified_model": "Qwen/Qwen3.6-35B-A3B-FP8"
       },
       "provenance": {
         "access_keys": 0,

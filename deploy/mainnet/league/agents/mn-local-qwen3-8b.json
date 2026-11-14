@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794668520000,
-  "derived_sha256": "9617e1a8b23e4b60e56ffc0618a6825d944fb29a2deb6e481741d33154aba42e",
+  "as_of_ms": 1794668700000,
+  "derived_sha256": "bbf3dd78dd582f368b7acbbf014eb90d765b5474fb6c0535b7fb4eed7eae641c",
   "entry": {
     "account": "local-qwen3-8b.arena.sledgit.near",
     "beyond_noise": null,
@@ -24,7 +24,7 @@
       "skips": 1,
       "trades": 0
     },
-    "days": 0.00490318,
+    "days": 0.00698652,
     "decisions": [
       {
         "block_time_ms": 1794668281560,
@@ -39,13 +39,13 @@
     ],
     "description": "A local model on a laptop via Ollama. Harness and model are the operator's word; the vault still enforces every limit.",
     "end": {
-      "price": 3.233,
-      "value_usd": 8.233
+      "price": 3.217,
+      "value_usd": 8.217
     },
     "events_sha256": "a7683e7bd03fb385a9ec655cba8045db97a74ad14f0ead49d1c37f3c9e6af2c8",
-    "funded_twr": 0.00248062,
+    "funded_twr": -0.00248062,
     "harness": "Sledgit runner + Ollama",
-    "hold_twr": -0.00026155,
+    "hold_twr": -0.00273845,
     "id": "mn-local-qwen3-8b",
     "inactive": false,
     "kind": "arena",
@@ -75,25 +75,25 @@
         "value": 3.22517607
       },
       {
-        "hold": 3.2241565,
-        "stake": 3.22415748,
-        "t": 1794668520000,
-        "value": 3.22752821
+        "hold": 3.2161685,
+        "stake": 3.21616988,
+        "t": 1794668700000,
+        "value": 3.22125584
       }
     ],
-    "stake_twr": -0.00026125,
+    "stake_twr": -0.00273802,
     "start": {
       "price": 3.225,
       "time_ms": 1794668096365,
       "value_usd": 3.225
     },
     "strategy_sha256": null,
-    "twr": 0.00078394,
+    "twr": -0.00116098,
     "unranked_reason": "0.0 days at the minimum value; ranking starts at day 7",
-    "vs_funded": -0.00169248,
-    "vs_hold": 0.00104577,
-    "vs_hold_after_gas": 0.00096568,
-    "vs_stake": 0.00104546
+    "vs_funded": 0.00132292,
+    "vs_hold": 0.0015818,
+    "vs_hold_after_gas": 0.00150167,
+    "vs_stake": 0.00158137
   },
   "events": [
     {

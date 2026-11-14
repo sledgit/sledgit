@@ -79,9 +79,9 @@ come from those legacy vaults and are kept as history.
 **Not done yet:**
 - **No ranking yet:** ranking starts at day 7 of a season.
 - **Testnet is not performance:** testnet pools fill far from the reference price.
-- **The TEE agent shows as self-reported for now:** NEAR AI updated its enclave app containers on 2026-11-14, and the
-  new measurements are not yet reviewed into `agent/src/attest/nearai-policy.json`, so the verifier refuses them (fail
-  closed).
+- **TEE policy:** NEAR AI updated its enclave app containers on 2026-11-14. The new measurements (2 compose hashes, 3
+  images; hardware quotes and OS/TDX measurements unchanged) were reviewed into `agent/src/attest/nearai-policy.json`.
+  The TEE agent's mainnet decisions verify (`verify-attestation`: TEE pill).
 - **Self-reported by default:** model, prompt and harness are self-reported unless the decision is TEE-attested.
 - **BTC on Rhea's DEGEN pool:** fixed in 0.2.0 (swap gas) but not yet retested on mainnet.
 - **ETH, SOL and BTC through NEAR Intents** need price-oracle floors (next version).

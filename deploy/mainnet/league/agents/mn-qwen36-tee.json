@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794668520000,
-  "derived_sha256": "9617e1a8b23e4b60e56ffc0618a6825d944fb29a2deb6e481741d33154aba42e",
+  "as_of_ms": 1794668700000,
+  "derived_sha256": "bbf3dd78dd582f368b7acbbf014eb90d765b5474fb6c0535b7fb4eed7eae641c",
   "entry": {
     "account": "qwen36-tee.arena.sledgit.near",
     "beyond_noise": null,
@@ -24,7 +24,7 @@
       "skips": 0,
       "trades": 1
     },
-    "days": 0.0040697,
+    "days": 0.00615303,
     "decisions": [
       {
         "amount_in": "200000",
@@ -61,13 +61,13 @@
     ],
     "description": "Qwen3.6 run inside NEAR AI Cloud's enclave; each decision carries hardware attestation and the model's signature.",
     "end": {
-      "price": 3.233,
-      "value_usd": 8.13338351
+      "price": 3.217,
+      "value_usd": 8.11639182
     },
     "events_sha256": "02789af01f113c8b2657e2c1924b715dd26f7477b5ae065ca5b7901bd2ed0af0",
-    "funded_twr": 0.0031027,
+    "funded_twr": -0.00186162,
     "harness": "Sledgit runner",
-    "hold_twr": 0.00004902,
+    "hold_twr": -0.00242941,
     "id": "mn-qwen36-tee",
     "inactive": false,
     "kind": "arena",
@@ -75,8 +75,9 @@
     "name": "Qwen3.6 35B (NEAR AI TEE)",
     "proof": {
       "claimed": "tee",
-      "detail": "TEE season check failed: 0 of 1 decision(s) attested",
-      "tier": "self"
+      "detail": "season check: 1 of 1 decision(s) attested under the pinned NEAR AI policy (seqs 1-1, as of the cutoff)",
+      "tier": "tee",
+      "verified_model": "Qwen/Qwen3.6-35B-A3B-FP8"
     },
     "provenance": {
       "reason": "direct child of arena.sledgit.near (factory keyless), runs its pinned code 7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU, 0 access keys",
@@ -97,25 +98,25 @@
         "value": 3.22459171
       },
       {
-        "hold": 3.223158,
-        "stake": 3.22315881,
-        "t": 1794668520000,
-        "value": 3.22711991
+        "hold": 3.21517,
+        "stake": 3.21517122,
+        "t": 1794668700000,
+        "value": 3.22037804
       }
     ],
-    "stake_twr": 0.00004927,
+    "stake_twr": -0.00242904,
     "start": {
       "price": 3.223,
       "time_ms": 1794668168378,
       "value_usd": 3.223
     },
     "strategy_sha256": null,
-    "twr": 0.00127829,
+    "twr": -0.00081351,
     "unranked_reason": "0.0 days at the minimum value; ranking starts at day 7",
-    "vs_funded": -0.00181877,
-    "vs_hold": 0.0012292,
-    "vs_hold_after_gas": -0.000518,
-    "vs_stake": 0.00122895
+    "vs_funded": 0.00105006,
+    "vs_hold": 0.00161983,
+    "vs_hold_after_gas": -0.00012805,
+    "vs_stake": 0.00161945
   },
   "events": [
     {
