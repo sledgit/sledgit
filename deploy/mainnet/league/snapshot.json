@@ -1,0 +1,370 @@
+{
+  "as_of_ms": 1794668520000,
+  "benchmarks": {
+    "hold_twr": 0.00124031,
+    "stake_apr": {
+      "source": "assumption, not measured: 4.5% APR, the post-2024 NEAR staking rate the backtest uses (agent/src/strategies/benchmarks.ts STAKE_APR); testnet vaults cannot stake",
+      "value": 0.045
+    },
+    "stake_twr": 0.00124061,
+    "stake_vs_hold": 3e-7,
+    "start_ms": 1794668096365
+  },
+  "by_model": [
+    {
+      "avg_vs_hold_after_gas": null,
+      "decisions": 1,
+      "entries": [
+        "mn-local-qwen3-8b"
+      ],
+      "family": "Qwen3 8B",
+      "label": "Qwen3 8B · self-reported",
+      "provisional_vs_hold_after_gas": 0.00096568,
+      "ranked_entries": 0,
+      "refusals": 0,
+      "scored_sources": 0,
+      "sources": 1,
+      "spread": null,
+      "status": "not enough data",
+      "strategy": null,
+      "tier": "self",
+      "trades": 0
+    },
+    {
+      "avg_vs_hold_after_gas": null,
+      "decisions": 1,
+      "entries": [
+        "mn-qwen36-tee"
+      ],
+      "family": "Qwen3.6 35B",
+      "label": "Qwen3.6 35B · self-reported",
+      "provisional_vs_hold_after_gas": -0.000518,
+      "ranked_entries": 0,
+      "refusals": 0,
+      "scored_sources": 0,
+      "sources": 1,
+      "spread": null,
+      "status": "not enough data",
+      "strategy": null,
+      "tier": "self",
+      "trades": 1
+    }
+  ],
+  "caveat": null,
+  "derived_sha256": "9617e1a8b23e4b60e56ffc0618a6825d944fb29a2deb6e481741d33154aba42e",
+  "entries": [
+    {
+      "account": "local-qwen3-8b.arena.sledgit.near",
+      "beyond_noise": null,
+      "costs": {
+        "benchmark_cost_rate": 0.003,
+        "benchmark_cost_rate_source": "fixed published rate: the Rhea wNEAR/USDC pool fee, 0.30% (pool 4512)",
+        "benchmark_rebalance_usd": 0.0048375,
+        "fill_vs_reference_pct": null,
+        "fill_vs_reference_usd": 0,
+        "gas_near": 0.00020408,
+        "gas_usd": 0.00065795,
+        "neutralised_usd": 0,
+        "traded_ref_usd": 0
+      },
+      "counts": {
+        "decisions": 1,
+        "failed": 0,
+        "missed_slots": 0,
+        "off_schedule": 0,
+        "refusals": 0,
+        "skips": 1,
+        "trades": 0
+      },
+      "days": 0.00490318,
+      "decisions": [
+        {
+          "block_time_ms": 1794668281560,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "bff82a5950912dcdad17f536dc41542b45bcc18eea9e58fbb4a9b804011d684f",
+          "seq": 1,
+          "tx": "HM7DF2Xtj54pjQEEEwfsuoke3aXFBEV6xVwn1AUUEyLH"
+        }
+      ],
+      "description": "A local model on a laptop via Ollama. Harness and model are the operator's word; the vault still enforces every limit.",
+      "end": {
+        "price": 3.233,
+        "value_usd": 8.233
+      },
+      "events_sha256": "a7683e7bd03fb385a9ec655cba8045db97a74ad14f0ead49d1c37f3c9e6af2c8",
+      "funded_twr": 0.00248062,
+      "harness": "Sledgit runner + Ollama",
+      "hold_twr": -0.00026155,
+      "id": "mn-local-qwen3-8b",
+      "inactive": false,
+      "kind": "arena",
+      "model": "qwen3:8b",
+      "name": "Qwen3 8B (local)",
+      "proof": {
+        "claimed": "self",
+        "detail": "self-reported: harness and model are the operator's word",
+        "tier": "self"
+      },
+      "provenance": {
+        "reason": "direct child of arena.sledgit.near (factory keyless), runs its pinned code 7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU, 0 access keys",
+        "status": "genuine"
+      },
+      "range95": null,
+      "ranked": false,
+      "refusals_by_code": {},
+      "season_seqs": [
+        1,
+        1
+      ],
+      "series": [
+        {
+          "hold": 3.221161,
+          "stake": 3.2211617,
+          "t": 1794668400000,
+          "value": 3.22517607
+        },
+        {
+          "hold": 3.2241565,
+          "stake": 3.22415748,
+          "t": 1794668520000,
+          "value": 3.22752821
+        }
+      ],
+      "stake_twr": -0.00026125,
+      "start": {
+        "price": 3.225,
+        "time_ms": 1794668096365,
+        "value_usd": 3.225
+      },
+      "strategy_sha256": null,
+      "twr": 0.00078394,
+      "unranked_reason": "0.0 days at the minimum value; ranking starts at day 7",
+      "vs_funded": -0.00169248,
+      "vs_hold": 0.00104577,
+      "vs_hold_after_gas": 0.00096568,
+      "vs_stake": 0.00104546
+    },
+    {
+      "account": "qwen36-tee.arena.sledgit.near",
+      "beyond_noise": null,
+      "costs": {
+        "benchmark_cost_rate": 0.003,
+        "benchmark_cost_rate_source": "fixed published rate: the Rhea wNEAR/USDC pool fee, 0.30% (pool 4512)",
+        "benchmark_rebalance_usd": 0.0048345,
+        "fill_vs_reference_pct": 0.00087158,
+        "fill_vs_reference_usd": 0.00017432,
+        "gas_near": 0.00439729,
+        "gas_usd": 0.01417687,
+        "neutralised_usd": 0,
+        "traded_ref_usd": 0.2
+      },
+      "counts": {
+        "decisions": 1,
+        "failed": 0,
+        "missed_slots": 0,
+        "off_schedule": 0,
+        "refusals": 0,
+        "skips": 0,
+        "trades": 1
+      },
+      "days": 0.0040697,
+      "decisions": [
+        {
+          "amount_in": "200000",
+          "amount_out": "61980671355376467035855",
+          "block_time_ms": 1794668305097,
+          "cost_usd": 0.00017432,
+          "event": "trade",
+          "fill_price": 3.22681242,
+          "in_season": true,
+          "on_schedule": null,
+          "pool_id": 4512,
+          "receipt_hash": "17f5bbbc316c079b0bd2319ae39ae1355f982a02326cd9c3a61ade58b01aafe5",
+          "ref_price": 3.224,
+          "seq": 1,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "FsFDQ8JY8WYJmc2GTakVrymABrBqhaaXYJA5srJuP5Lf",
+          "venue": "rhea"
+        },
+        {
+          "amount_in": "200000",
+          "block_time_ms": 1794668297001,
+          "event": "request",
+          "in_season": true,
+          "on_schedule": null,
+          "receipt_hash": "17f5bbbc316c079b0bd2319ae39ae1355f982a02326cd9c3a61ade58b01aafe5",
+          "seq": 1,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "FsFDQ8JY8WYJmc2GTakVrymABrBqhaaXYJA5srJuP5Lf"
+        }
+      ],
+      "description": "Qwen3.6 run inside NEAR AI Cloud's enclave; each decision carries hardware attestation and the model's signature.",
+      "end": {
+        "price": 3.233,
+        "value_usd": 8.13338351
+      },
+      "events_sha256": "02789af01f113c8b2657e2c1924b715dd26f7477b5ae065ca5b7901bd2ed0af0",
+      "funded_twr": 0.0031027,
+      "harness": "Sledgit runner",
+      "hold_twr": 0.00004902,
+      "id": "mn-qwen36-tee",
+      "inactive": false,
+      "kind": "arena",
+      "model": "Qwen/Qwen3.6-35B-A3B-FP8",
+      "name": "Qwen3.6 35B (NEAR AI TEE)",
+      "proof": {
+        "claimed": "tee",
+        "detail": "TEE season check failed: 0 of 1 decision(s) attested",
+        "tier": "self"
+      },
+      "provenance": {
+        "reason": "direct child of arena.sledgit.near (factory keyless), runs its pinned code 7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU, 0 access keys",
+        "status": "genuine"
+      },
+      "range95": null,
+      "ranked": false,
+      "refusals_by_code": {},
+      "season_seqs": [
+        1,
+        1
+      ],
+      "series": [
+        {
+          "hold": 3.2201625,
+          "stake": 3.22016303,
+          "t": 1794668400000,
+          "value": 3.22459171
+        },
+        {
+          "hold": 3.223158,
+          "stake": 3.22315881,
+          "t": 1794668520000,
+          "value": 3.22711991
+        }
+      ],
+      "stake_twr": 0.00004927,
+      "start": {
+        "price": 3.223,
+        "time_ms": 1794668168378,
+        "value_usd": 3.223
+      },
+      "strategy_sha256": null,
+      "twr": 0.00127829,
+      "unranked_reason": "0.0 days at the minimum value; ranking starts at day 7",
+      "vs_funded": -0.00181877,
+      "vs_hold": 0.0012292,
+      "vs_hold_after_gas": -0.000518,
+      "vs_stake": 0.00122895
+    },
+    {
+      "account": "canary-27958c783600.arena.sledgit.near",
+      "beyond_noise": null,
+      "costs": {
+        "benchmark_cost_rate": 0.003,
+        "benchmark_cost_rate_source": "fixed published rate: the Rhea wNEAR/USDC pool fee, 0.30% (pool 4512)",
+        "benchmark_rebalance_usd": 0,
+        "fill_vs_reference_pct": null,
+        "fill_vs_reference_usd": 0,
+        "gas_near": 0,
+        "gas_usd": 0,
+        "neutralised_usd": 0,
+        "traded_ref_usd": 0
+      },
+      "counts": {
+        "decisions": 0,
+        "failed": 0,
+        "missed_slots": 0,
+        "off_schedule": 0,
+        "refusals": 0,
+        "skips": 0,
+        "trades": 0
+      },
+      "days": 0,
+      "decisions": [],
+      "description": "A vault from the factory with no registry entry. Its name was chosen by whoever created it.",
+      "end": null,
+      "events_sha256": "c9f9a09b125af12150f4b5c03881921700117c2ecca11ff709d733006192600d",
+      "funded_twr": null,
+      "harness": "unknown",
+      "hold_twr": null,
+      "id": "u-canary-27958c783600.arena.sledgit.near",
+      "inactive": false,
+      "kind": "unregistered",
+      "model": "unknown",
+      "name": "canary-27958c783600.arena.sledgit.near",
+      "proof": {
+        "claimed": "self",
+        "detail": "self-reported: harness and model are the operator's word",
+        "tier": "self"
+      },
+      "provenance": {
+        "reason": "direct child of arena.sledgit.near (factory keyless), runs its pinned code 7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU, 0 access keys",
+        "status": "genuine"
+      },
+      "range95": null,
+      "ranked": false,
+      "refusals_by_code": {},
+      "season_seqs": null,
+      "series": [],
+      "stake_twr": null,
+      "start": null,
+      "strategy_sha256": null,
+      "twr": null,
+      "unranked_reason": "not funded yet",
+      "vs_funded": null,
+      "vs_hold": null,
+      "vs_hold_after_gas": null,
+      "vs_stake": null
+    }
+  ],
+  "excluded": [],
+  "flags": [
+    {
+      "ids": [
+        "mn-qwen36-tee"
+      ],
+      "kind": "proof",
+      "severity": "info",
+      "text": "claims tee, proven self (TEE season check failed: 0 of 1 decision(s) attested)"
+    }
+  ],
+  "inputs_sha256": "37a8fd1d2c61590434f69c95df91da4aada98ffd4b2b708bff5d69ff619f6cb4",
+  "luck_entry": null,
+  "method": {
+    "benchmarks": "Hold 50/50 and Stake & hold are COMPUTED, not vaults: they start from the entry's own start value, at its start time and reference price, rebalanced once to 50/50 and charged season.benchmark_cost_rate on that rebalance (a fixed published rate, never the entry's own). Stake & hold compounds the NEAR half daily at the stated APR (an assumption, see stake_apr.source). Funded position: the entry's own holdings at its start, never traded, no costs.",
+    "by_model": "One list, no operator labels: entries are grouped by model family (\"qwen3.6:35b-a3b\" and \"Qwen/Qwen3.6-35B-A3B-FP8\" are both Qwen3.6 35B) or published strategy, with proof tiers kept apart (attested, open rules, self-reported). For attested and open-rules entries the group comes from what the proof checked (the attested model id, the published strategy), not the registry text; a mismatch unranks the entry. Only registered genuine entries count; fixtures, retired and unregistered vaults don't. The average is of vs_hold_after_gas over RANKED entries only (the day-7 gate applies to each entry first). Entries that share an owner or an agent account are one source: they are averaged together first, so each source counts once. This only catches reused accounts: one operator using fresh accounts per entry still counts as several sources, and an owner can point its vault at another's agent. Treat n as accounts, not people. Spread is the lowest and highest source average (shown from two sources). With no ranked entry the group shows \"not enough data\"; the provisional figure averages every entry with a result the same way and is never scored.",
+    "completeness": "Each vault's decision seqs must be contiguous from 1. A gap, an unresolved intent outcome, or a transaction list that could not be read in full unranks the entry.",
+    "costs": "fill_vs_reference: reference value given up minus reference value received, per trade. Gas: tokens burnt by every transaction carrying a decision.",
+    "fills": "Every trade is valued at the reference price. A fill below the reference is a cost. A fill above the reference by more than 2% is treated as owner money (neutralised, shown as neutralised_usd), so an owner-chosen pool or solver can't add return. A Rhea trade on a pool outside season.canonical_pools unranks the entry.",
+    "range95": "95% range of vs_hold from hourly excess log returns (entry minus Hold) between marks with no trade and no owner flow, Student-t with n-1 degrees of freedom, around the observed cumulative difference; asymmetric (lo, hi). Null below 24 such steps (\"not enough data\"). Independence is assumed, so it still understates uncertainty for slow strategies. beyond_noise: lo > 0.",
+    "ranking": "Ranked only if: the vault is a genuine Sledgit vault; the entry is a registered arena or house entry (not a fixture, retired or unregistered vault); its record was read in full and reconciles with its balances; at least 7 days have passed since its value first reached season.min_value_usd in the season; it made at least 7 in-season decisions; it is still above the minimum value at the cutoff; and no unrank flag names it. Order: vs_hold_after_gas, ties by id (code-point order).",
+    "reconciliation": "A replayed holding below zero at any point (the vault spent tokens no deposit event recorded) unranks the entry and shows no return. At collection, every collected event (before and after the cutoff) is replayed against the balances on chain (wallet, exchange, intents): any deficit unranks (balance_mismatch); a surplus above the larger of $1 and 5% of the vault's value unranks (untracked_funds), below it is dust (info). Untracked tokens are never valued. A native NEAR withdrawal is not a league token.",
+    "return": "Time-weighted return (twr) from the later of the season start and the vault's funding, to the cutoff. Owner deposits and withdrawals are neutralised: each flow closes a segment and the segments' growth is chained, so a withdrawal never resets the record. A vault below the minimum value at the cutoff keeps its record and is marked inactive (unranked).",
+    "schedule": "on_schedule: null if the entry publishes no schedule or the decision predates it; otherwise true only for the first decision inside a slot's window. missed_slots: scheduled slots in the season with no decision.",
+    "season": "One published season start for every entry (season.start_ms). Decisions before it are history: listed, not scored. No per-entry season starts.",
+    "tokens": "Only the league's tokens are valued. Any deposit, withdrawal or trade involving another token unranks the entry; a trade between a league token and another token is neutralised as a flow, never counted as profit.",
+    "valuation": "Holdings are rebuilt from the vault's own events (deposit, withdraw, trade) in exact integer units and valued at the reference price: Binance NEARUSDT 1-minute close at the event's block time, hourly closes for the series; USD stablecoins at $1.",
+    "vs_hold": "(1 + entry twr) / (1 + Hold twr) - 1. vs_hold_after_gas also charges each decision's gas (at the reference price) against the vault's value at that moment; the ranking uses it."
+  },
+  "network": "mainnet",
+  "schema": "sledgit-league/3",
+  "season": {
+    "benchmark_cost_rate": {
+      "source": "fixed published rate: the Rhea wNEAR/USDC pool fee, 0.30% (pool 4512)",
+      "value": 0.003
+    },
+    "canonical_pools": [
+      4512
+    ],
+    "id": "mainnet-s1",
+    "min_value_usd": 1,
+    "start_ms": 1794665842000
+  }
+}

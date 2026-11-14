@@ -1,0 +1,689 @@
+{
+  "as_of_ms": 1794668520000,
+  "collected_at": "2026-11-14T15:02:27.643Z",
+  "excluded": [],
+  "factories": [
+    {
+      "access_keys": 0,
+      "id": "arena.sledgit.near",
+      "locked": true
+    }
+  ],
+  "hourly": [
+    [
+      1794668400000,
+      3.227
+    ]
+  ],
+  "minute": {
+    "1794665820000": 3.267,
+    "1794668040000": 3.225,
+    "1794668100000": 3.224,
+    "1794668160000": 3.223,
+    "1794668280000": 3.224,
+    "1794668520000": 3.233
+  },
+  "network": "mainnet",
+  "reference": {
+    "note": "1-minute closes at event times, hourly closes for the series; the quote stablecoin is valued at $1",
+    "source": "https://api.binance.com/api/v3/klines?symbol=NEARUSDT",
+    "symbol": "NEARUSDT"
+  },
+  "schema": "sledgit-league-inputs/2",
+  "season": {
+    "benchmark_cost_rate": {
+      "source": "fixed published rate: the Rhea wNEAR/USDC pool fee, 0.30% (pool 4512)",
+      "value": 0.003
+    },
+    "canonical_pools": [
+      4512
+    ],
+    "id": "mainnet-s1",
+    "min_value_usd": 1,
+    "start_ms": 1794665842000
+  },
+  "stake_apr": {
+    "source": "assumption, not measured: 4.5% APR, the post-2024 NEAR staking rate the backtest uses (agent/src/strategies/benchmarks.ts STAKE_APR); testnet vaults cannot stake",
+    "value": 0.045
+  },
+  "tokens": [
+    {
+      "decimals": 24,
+      "id": "wrap.near",
+      "ref": "NEAR",
+      "symbol": "wNEAR"
+    },
+    {
+      "decimals": 6,
+      "id": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+      "ref": "USD",
+      "symbol": "USDC"
+    }
+  ],
+  "vaults": [
+    {
+      "entry": {
+        "account": "canary-27958c783600.arena.sledgit.near",
+        "description": "A vault from the factory with no registry entry. Its name was chosen by whoever created it.",
+        "harness": "unknown",
+        "id": "u-canary-27958c783600.arena.sledgit.near",
+        "kind": "unregistered",
+        "model": "unknown",
+        "name": "canary-27958c783600.arena.sledgit.near",
+        "proof_claim": "self"
+      },
+      "events": [
+        {
+          "block_height": 224525446,
+          "block_time_ms": 1794665865711,
+          "data": {
+            "agent_id": "canary-agent.sledgit.near",
+            "deposit_caps": [
+              {
+                "max": "6000000000000000000000000",
+                "token": "wrap.near"
+              },
+              {
+                "max": "20000000",
+                "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+              }
+            ],
+            "exchange_id": "v2.ref-finance.near",
+            "intents_id": "intents.near",
+            "mpc_id": "v1.signer",
+            "owner_id": "owner.sledgit.near",
+            "policy": {
+              "max_slippage_bps": 100,
+              "max_trades_per_hour": 2,
+              "pairs": [
+                {
+                  "min_price_den": "1000000000000000000",
+                  "min_price_num": "2",
+                  "pool_id": 4512,
+                  "token_in": "wrap.near",
+                  "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+                },
+                {
+                  "min_price_den": "1",
+                  "min_price_num": "150000000000000000",
+                  "pool_id": 4512,
+                  "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+                  "token_out": "wrap.near"
+                }
+              ],
+              "tokens": [
+                {
+                  "max_per_day": "2400000000000000000000000",
+                  "max_per_trade": "1200000000000000000000000",
+                  "token": "wrap.near"
+                },
+                {
+                  "max_per_day": "10000000",
+                  "max_per_trade": "5000000",
+                  "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+                }
+              ]
+            }
+          },
+          "event": "init",
+          "receipt_id": "E4GyFPbDyDrFAHjhcZBFrh5Z73kFe5HyUcqWezc1ejVr",
+          "tx": "Ea84xcFf8apGsGacd2Wdmaq83AXGKujGHF1Ku7tyFXGv"
+        }
+      ],
+      "gas": [],
+      "observed": {
+        "balances": [
+          {
+            "exchange": "0",
+            "intents": "0",
+            "token": "wrap.near",
+            "wallet": "0"
+          },
+          {
+            "exchange": "0",
+            "intents": "0",
+            "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+            "wallet": "0"
+          }
+        ],
+        "config": {
+          "agent_id": "canary-agent.sledgit.near",
+          "exchange_id": "v2.ref-finance.near",
+          "frozen": false,
+          "intents_id": "intents.near",
+          "mpc_id": "v1.signer",
+          "owner_id": "owner.sledgit.near",
+          "proposed_owner": null,
+          "seq": 0,
+          "trading_ends_ns": "1797257865711962182",
+          "version": "0.2.0"
+        },
+        "intents": {
+          "intents_id": "intents.near",
+          "mpc_id": "v1.signer",
+          "open_intent": null,
+          "path": "sledgit/intents-1",
+          "public_key": null
+        },
+        "policy": {
+          "max_slippage_bps": 100,
+          "max_trades_per_hour": 2,
+          "pairs": [
+            {
+              "min_price_den": "1000000000000000000",
+              "min_price_num": "2",
+              "pool_id": 4512,
+              "token_in": "wrap.near",
+              "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+            },
+            {
+              "min_price_den": "1",
+              "min_price_num": "150000000000000000",
+              "pool_id": 4512,
+              "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+              "token_out": "wrap.near"
+            }
+          ],
+          "tokens": [
+            {
+              "max_per_day": "2400000000000000000000000",
+              "max_per_trade": "1200000000000000000000000",
+              "token": "wrap.near"
+            },
+            {
+              "max_per_day": "10000000",
+              "max_per_trade": "5000000",
+              "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+            }
+          ]
+        },
+        "reconciliation": {
+          "events_replayed": 1,
+          "status": "ok"
+        },
+        "usage": {
+          "hour": "498519",
+          "spent": [],
+          "trades": 0
+        }
+      },
+      "proof": {
+        "detail": "self-reported: harness and model are the operator's word",
+        "evidence_ids": [],
+        "seqs": null,
+        "tier": "self"
+      },
+      "provenance": {
+        "access_keys": 0,
+        "code_hash": "7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU",
+        "factory": "arena.sledgit.near",
+        "factory_locked": true,
+        "reason": "direct child of arena.sledgit.near (factory keyless), runs its pinned code 7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU, 0 access keys",
+        "sledgit_vault": true,
+        "status": "genuine"
+      },
+      "reconciliation": {
+        "deficit": {},
+        "surplus": {}
+      }
+    },
+    {
+      "entry": {
+        "account": "local-qwen3-8b.arena.sledgit.near",
+        "description": "A local model on a laptop via Ollama. Harness and model are the operator's word; the vault still enforces every limit.",
+        "harness": "Sledgit runner + Ollama",
+        "id": "mn-local-qwen3-8b",
+        "kind": "arena",
+        "model": "qwen3:8b",
+        "name": "Qwen3 8B (local)",
+        "proof_claim": "self",
+        "receipts": "../s1/receipts/local-qwen3-8b",
+        "schedule": null
+      },
+      "events": [
+        {
+          "block_height": 224529334,
+          "block_time_ms": 1794668058302,
+          "data": {
+            "agent_id": "a4af6959bdef5dacd4c642fdb65ce9ab7770c82d869b6fc476089063208809e9",
+            "deposit_caps": [
+              {
+                "max": "6000000000000000000000000",
+                "token": "wrap.near"
+              },
+              {
+                "max": "20000000",
+                "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+              }
+            ],
+            "exchange_id": "v2.ref-finance.near",
+            "intents_id": "intents.near",
+            "mpc_id": "v1.signer",
+            "owner_id": "fb1bc414b980fa6a5572c9e57c488f771b6ed5f8ac44774b277b81d8f2d6e5ea",
+            "policy": {
+              "max_slippage_bps": 100,
+              "max_trades_per_hour": 2,
+              "pairs": [
+                {
+                  "min_price_den": "500000000000000000",
+                  "min_price_num": "1",
+                  "pool_id": 4512,
+                  "token_in": "wrap.near",
+                  "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+                },
+                {
+                  "min_price_den": "1",
+                  "min_price_num": "150000000000000000",
+                  "pool_id": 4512,
+                  "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+                  "token_out": "wrap.near"
+                }
+              ],
+              "tokens": [
+                {
+                  "max_per_day": "2400000000000000000000000",
+                  "max_per_trade": "1200000000000000000000000",
+                  "token": "wrap.near"
+                },
+                {
+                  "max_per_day": "10000000",
+                  "max_per_trade": "5000000",
+                  "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+                }
+              ]
+            }
+          },
+          "event": "init",
+          "receipt_id": "EKVENvsCnj8CpWLUgJ3nskL25rrGzEYWKh5Wo5r5HL1v",
+          "tx": "BYv9tRCeQ5MGtbVtEmLWcHEtZ3BYxNyRx4NatyXQ7zk8"
+        },
+        {
+          "block_height": 224529400,
+          "block_time_ms": 1794668096365,
+          "data": {
+            "amount": "1000000000000000000000000",
+            "token": "wrap.near"
+          },
+          "event": "deposit",
+          "receipt_id": "FZ4iXu8HLdyaPGTJCmtWhTB825hYHbxitMNX52pmh3oP",
+          "tx": "6N2hdB8rTkQufD7hB6rhAJgJnxXd4frYeiFLG4YbLxUM"
+        },
+        {
+          "block_height": 224529411,
+          "block_time_ms": 1794668103175,
+          "data": {
+            "amount": "5000000",
+            "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+          },
+          "event": "deposit",
+          "receipt_id": "DQVLFE7uASq2X17H4iFp4CatAMowm2Qogpnq8wDFjJZY",
+          "tx": "3C2JRxv19uczhJDucwTKLBETVeyMrkn4uA15bZFmktTK"
+        },
+        {
+          "block_height": 224529731,
+          "block_time_ms": 1794668281560,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "bff82a5950912dcdad17f536dc41542b45bcc18eea9e58fbb4a9b804011d684f",
+            "seq": 1
+          },
+          "event": "skip",
+          "receipt_id": "DiCLvZsj5fkYwseLgbGYuzJ9vSxmq8pjn1NB9kJrJuoJ",
+          "tx": "HM7DF2Xtj54pjQEEEwfsuoke3aXFBEV6xVwn1AUUEyLH"
+        }
+      ],
+      "gas": [
+        {
+          "block_time_ms": 1794668281560,
+          "tokens_burnt": "204077756143600000000",
+          "tx": "HM7DF2Xtj54pjQEEEwfsuoke3aXFBEV6xVwn1AUUEyLH"
+        }
+      ],
+      "observed": {
+        "balances": [
+          {
+            "exchange": "0",
+            "intents": "0",
+            "token": "wrap.near",
+            "wallet": "1000000000000000000000000"
+          },
+          {
+            "exchange": "0",
+            "intents": "0",
+            "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+            "wallet": "5000000"
+          }
+        ],
+        "config": {
+          "agent_id": "a4af6959bdef5dacd4c642fdb65ce9ab7770c82d869b6fc476089063208809e9",
+          "exchange_id": "v2.ref-finance.near",
+          "frozen": false,
+          "intents_id": "intents.near",
+          "mpc_id": "v1.signer",
+          "owner_id": "fb1bc414b980fa6a5572c9e57c488f771b6ed5f8ac44774b277b81d8f2d6e5ea",
+          "proposed_owner": null,
+          "seq": 1,
+          "trading_ends_ns": "1797260058302772872",
+          "version": "0.2.0"
+        },
+        "intents": {
+          "intents_id": "intents.near",
+          "mpc_id": "v1.signer",
+          "open_intent": null,
+          "path": "sledgit/intents-1",
+          "public_key": null
+        },
+        "policy": {
+          "max_slippage_bps": 100,
+          "max_trades_per_hour": 2,
+          "pairs": [
+            {
+              "min_price_den": "500000000000000000",
+              "min_price_num": "1",
+              "pool_id": 4512,
+              "token_in": "wrap.near",
+              "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+            },
+            {
+              "min_price_den": "1",
+              "min_price_num": "150000000000000000",
+              "pool_id": 4512,
+              "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+              "token_out": "wrap.near"
+            }
+          ],
+          "tokens": [
+            {
+              "max_per_day": "2400000000000000000000000",
+              "max_per_trade": "1200000000000000000000000",
+              "token": "wrap.near"
+            },
+            {
+              "max_per_day": "10000000",
+              "max_per_trade": "5000000",
+              "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+            }
+          ]
+        },
+        "reconciliation": {
+          "events_replayed": 4,
+          "status": "ok"
+        },
+        "usage": {
+          "hour": "498519",
+          "spent": [],
+          "trades": 0
+        }
+      },
+      "proof": {
+        "detail": "self-reported: harness and model are the operator's word",
+        "evidence_ids": [],
+        "receipts_sha256": "f509d218a4cfb7bc12eb76b8a0b5f8e679397f24a9e653fdd3a38fea9719c622",
+        "seqs": [
+          1,
+          1
+        ],
+        "tier": "self"
+      },
+      "provenance": {
+        "access_keys": 0,
+        "code_hash": "7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU",
+        "factory": "arena.sledgit.near",
+        "factory_locked": true,
+        "reason": "direct child of arena.sledgit.near (factory keyless), runs its pinned code 7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU, 0 access keys",
+        "sledgit_vault": true,
+        "status": "genuine"
+      },
+      "reconciliation": {
+        "deficit": {},
+        "surplus": {}
+      }
+    },
+    {
+      "entry": {
+        "account": "qwen36-tee.arena.sledgit.near",
+        "description": "Qwen3.6 run inside NEAR AI Cloud's enclave; each decision carries hardware attestation and the model's signature.",
+        "harness": "Sledgit runner",
+        "id": "mn-qwen36-tee",
+        "kind": "arena",
+        "model": "Qwen/Qwen3.6-35B-A3B-FP8",
+        "name": "Qwen3.6 35B (NEAR AI TEE)",
+        "proof_claim": "tee",
+        "receipts": "../s1/receipts/qwen36-tee",
+        "schedule": null
+      },
+      "events": [
+        {
+          "block_height": 224529461,
+          "block_time_ms": 1794668130970,
+          "data": {
+            "agent_id": "2bac3632856f4fefa28fe2fb90db7cfdc60dfe65be29f3f334d1e6396cf551da",
+            "deposit_caps": [
+              {
+                "max": "6000000000000000000000000",
+                "token": "wrap.near"
+              },
+              {
+                "max": "20000000",
+                "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+              }
+            ],
+            "exchange_id": "v2.ref-finance.near",
+            "intents_id": "intents.near",
+            "mpc_id": "v1.signer",
+            "owner_id": "e4cf873fc8516ae3f8c5cd14677c430a05f811e8c291b2c62e8cdcf81f864c1a",
+            "policy": {
+              "max_slippage_bps": 100,
+              "max_trades_per_hour": 2,
+              "pairs": [
+                {
+                  "min_price_den": "500000000000000000",
+                  "min_price_num": "1",
+                  "pool_id": 4512,
+                  "token_in": "wrap.near",
+                  "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+                },
+                {
+                  "min_price_den": "1",
+                  "min_price_num": "150000000000000000",
+                  "pool_id": 4512,
+                  "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+                  "token_out": "wrap.near"
+                }
+              ],
+              "tokens": [
+                {
+                  "max_per_day": "2400000000000000000000000",
+                  "max_per_trade": "1200000000000000000000000",
+                  "token": "wrap.near"
+                },
+                {
+                  "max_per_day": "10000000",
+                  "max_per_trade": "5000000",
+                  "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+                }
+              ]
+            }
+          },
+          "event": "init",
+          "receipt_id": "HLswoRMN5sw6t8MzTb6gR5N4zon36ZTsFtyZ4VQdR6rV",
+          "tx": "FUPyfniVX8Zu46SZfo6vZgXUyQTvtQ6GukVed44s5JVN"
+        },
+        {
+          "block_height": 224529528,
+          "block_time_ms": 1794668168378,
+          "data": {
+            "amount": "1000000000000000000000000",
+            "token": "wrap.near"
+          },
+          "event": "deposit",
+          "receipt_id": "CKH6qSriJH3J652uFpDvxAFS7CHquLSgSHFoiaMAem2c",
+          "tx": "Ck22GSCMC9W5RZ91LwWuFdV8wfNT3rZ2TYyPY6A3bjog"
+        },
+        {
+          "block_height": 224529539,
+          "block_time_ms": 1794668174571,
+          "data": {
+            "amount": "4900000",
+            "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+          },
+          "event": "deposit",
+          "receipt_id": "F7Wgpx1LhFzSxMwAKxYp4ifBzmZDuUS9EomL1FbEJswv",
+          "tx": "SrANZ5oUh9AjKPxdYQgiEHazML9SwGFwWt2agg5LSpf"
+        },
+        {
+          "block_height": 224529759,
+          "block_time_ms": 1794668297001,
+          "data": {
+            "amount_in": "200000",
+            "min_amount_out": "30000000000000000000000",
+            "pool_id": 4512,
+            "receipt_hash": "17f5bbbc316c079b0bd2319ae39ae1355f982a02326cd9c3a61ade58b01aafe5",
+            "seq": 1,
+            "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+            "token_out": "wrap.near",
+            "venue": "rhea"
+          },
+          "event": "request",
+          "receipt_id": "AcYAGMbyUVrd8JBqWgcCg89jcSbn3VAzbsS254zjGCF3",
+          "tx": "FsFDQ8JY8WYJmc2GTakVrymABrBqhaaXYJA5srJuP5Lf"
+        },
+        {
+          "block_height": 224529773,
+          "block_time_ms": 1794668305097,
+          "data": {
+            "amount_in": "200000",
+            "amount_out": "61980671355376467035855",
+            "min_amount_out": "61360864641822702365496",
+            "note": "",
+            "pool_id": 4512,
+            "quote": "61980671355376467035855",
+            "receipt_hash": "17f5bbbc316c079b0bd2319ae39ae1355f982a02326cd9c3a61ade58b01aafe5",
+            "returned": true,
+            "seq": 1,
+            "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+            "token_out": "wrap.near",
+            "venue": "rhea"
+          },
+          "event": "trade",
+          "receipt_id": "A1bQBtjYNX1F8eHDbt2MxeYU2LZzv3GL6aHiGmGvyL2f",
+          "tx": "FsFDQ8JY8WYJmc2GTakVrymABrBqhaaXYJA5srJuP5Lf"
+        }
+      ],
+      "gas": [
+        {
+          "block_time_ms": 1794668297001,
+          "tokens_burnt": "4397291173919900000000",
+          "tx": "FsFDQ8JY8WYJmc2GTakVrymABrBqhaaXYJA5srJuP5Lf"
+        }
+      ],
+      "observed": {
+        "balances": [
+          {
+            "exchange": "0",
+            "intents": "0",
+            "token": "wrap.near",
+            "wallet": "1061980671355376467035855"
+          },
+          {
+            "exchange": "0",
+            "intents": "0",
+            "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+            "wallet": "4700000"
+          }
+        ],
+        "config": {
+          "agent_id": "2bac3632856f4fefa28fe2fb90db7cfdc60dfe65be29f3f334d1e6396cf551da",
+          "exchange_id": "v2.ref-finance.near",
+          "frozen": false,
+          "intents_id": "intents.near",
+          "mpc_id": "v1.signer",
+          "owner_id": "e4cf873fc8516ae3f8c5cd14677c430a05f811e8c291b2c62e8cdcf81f864c1a",
+          "proposed_owner": null,
+          "seq": 1,
+          "trading_ends_ns": "1797260130970222941",
+          "version": "0.2.0"
+        },
+        "intents": {
+          "intents_id": "intents.near",
+          "mpc_id": "v1.signer",
+          "open_intent": null,
+          "path": "sledgit/intents-1",
+          "public_key": null
+        },
+        "policy": {
+          "max_slippage_bps": 100,
+          "max_trades_per_hour": 2,
+          "pairs": [
+            {
+              "min_price_den": "500000000000000000",
+              "min_price_num": "1",
+              "pool_id": 4512,
+              "token_in": "wrap.near",
+              "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+            },
+            {
+              "min_price_den": "1",
+              "min_price_num": "150000000000000000",
+              "pool_id": 4512,
+              "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+              "token_out": "wrap.near"
+            }
+          ],
+          "tokens": [
+            {
+              "max_per_day": "2400000000000000000000000",
+              "max_per_trade": "1200000000000000000000000",
+              "token": "wrap.near"
+            },
+            {
+              "max_per_day": "10000000",
+              "max_per_trade": "5000000",
+              "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+            }
+          ]
+        },
+        "reconciliation": {
+          "events_replayed": 5,
+          "status": "ok"
+        },
+        "usage": {
+          "hour": "498519",
+          "spent": [
+            [
+              "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+              "200000"
+            ]
+          ],
+          "trades": 0
+        }
+      },
+      "proof": {
+        "detail": "TEE season check failed: 0 of 1 decision(s) attested",
+        "evidence_ids": [
+          "bundle:2aa08994da21db47fb5832d6f18ee24cb1bc640dc4b12e6310520fb5a6390d7d",
+          "chat:78a4897781f644f9bbc6a3543666dec9"
+        ],
+        "receipts_sha256": "e22cdd45db1faaa4f5b515eec2ab2547d8870102bb8475699bb727e566746816",
+        "seqs": [
+          1,
+          1
+        ],
+        "tier": "self"
+      },
+      "provenance": {
+        "access_keys": 0,
+        "code_hash": "7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU",
+        "factory": "arena.sledgit.near",
+        "factory_locked": true,
+        "reason": "direct child of arena.sledgit.near (factory keyless), runs its pinned code 7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU, 0 access keys",
+        "sledgit_vault": true,
+        "status": "genuine"
+      },
+      "reconciliation": {
+        "deficit": {},
+        "surplus": {}
+      }
+    }
+  ]
+}

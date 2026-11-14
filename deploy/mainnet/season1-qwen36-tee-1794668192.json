@@ -1,0 +1,96 @@
+{
+  "date_unix": 1794668192,
+  "network": "mainnet",
+  "chain_id": "mainnet",
+  "factory": "arena.sledgit.near",
+  "vault_code_hash": "7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU",
+  "entry": "qwen36-tee",
+  "vault": "qwen36-tee.arena.sledgit.near",
+  "owner": "e4cf873fc8516ae3f8c5cd14677c430a05f811e8c291b2c62e8cdcf81f864c1a",
+  "agent": "2bac3632856f4fefa28fe2fb90db7cfdc60dfe65be29f3f334d1e6396cf551da",
+  "agent_recovery_public_key": "ed25519:7W4a5phNQqGjGGNXLhpobHHH5QcMSnJ4UXfHryQXvUWt",
+  "policy": {
+    "tokens": [
+      {
+        "token": "wrap.near",
+        "max_per_trade": "1200000000000000000000000",
+        "max_per_day": "2400000000000000000000000"
+      },
+      {
+        "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "max_per_trade": "5000000",
+        "max_per_day": "10000000"
+      }
+    ],
+    "pairs": [
+      {
+        "token_in": "wrap.near",
+        "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "pool_id": 4512,
+        "min_price_num": "1",
+        "min_price_den": "500000000000000000"
+      },
+      {
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "pool_id": 4512,
+        "min_price_num": "150000000000000000",
+        "min_price_den": "1"
+      }
+    ],
+    "max_trades_per_hour": 2,
+    "max_slippage_bps": 100
+  },
+  "deposit": "200000000000000000000000",
+  "allowance": "1000000000000000000000000",
+  "txs": [
+    {
+      "step": "arena.sledgit.near.create_vault",
+      "tx": "FUPyfniVX8Zu46SZfo6vZgXUyQTvtQ6GukVed44s5JVN"
+    },
+    {
+      "step": "wrap.near.storage_deposit",
+      "tx": "7nAT7mruVBJWarRfduKrnsCpdxfSHDo19LKqC3q2HNAV"
+    },
+    {
+      "step": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1.storage_deposit",
+      "tx": "AzjaQzagy4USPRuomJ4tJzCYj7FfoUJY2STz78WyjjrY"
+    },
+    {
+      "step": "qwen36-tee.arena.sledgit.near.exchange_storage_deposit",
+      "tx": "crpS5ofSgYPxcDsrJM9MSoN4VHqK4tcDUoqfUHX1uRv"
+    },
+    {
+      "step": "qwen36-tee.arena.sledgit.near.exchange_register_tokens",
+      "tx": "CekyLw9y23JUrq1oh81PHNeGb4RC6NCCNpK85Kibj3bz"
+    },
+    {
+      "step": "wrap.near.storage_deposit",
+      "tx": "8JsVDF5Xf1Faqko73tPF64B3MF4YAD4q6jLy8a97umgS"
+    },
+    {
+      "step": "wrap.near.near_deposit",
+      "tx": "RJWRgKQ1ytDegKaXsaYUtZjr8taK7S2MuN3WyTcGc3D"
+    },
+    {
+      "step": "wrap.near.ft_transfer_call",
+      "tx": "Ck22GSCMC9W5RZ91LwWuFdV8wfNT3rZ2TYyPY6A3bjog"
+    },
+    {
+      "step": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1.ft_transfer_call",
+      "tx": "SrANZ5oUh9AjKPxdYQgiEHazML9SwGFwWt2agg5LSpf"
+    },
+    {
+      "step": "2bac3632856f4fefa28fe2fb90db7cfdc60dfe65be29f3f334d1e6396cf551da.add_key(function-call)",
+      "tx": "59QtNvb2G1fzRtfjra3cdyWPKahhhbKqEgQDCv6WtxqU"
+    },
+    {
+      "step": "2bac3632856f4fefa28fe2fb90db7cfdc60dfe65be29f3f334d1e6396cf551da.add_key(recovery)",
+      "tx": "GmNmX2c4uz5VfEwmq6BHTciQvXgQWtCfpRFC5xVU2MkE"
+    },
+    {
+      "step": "2bac3632856f4fefa28fe2fb90db7cfdc60dfe65be29f3f334d1e6396cf551da.delete_key(setup)",
+      "tx": "7xkHp4ZJyp4eXsFKdhbnabNxm3oRJBJsUQwEZipStr1C"
+    }
+  ]
+}

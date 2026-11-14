@@ -1,0 +1,96 @@
+{
+  "date_unix": 1794668120,
+  "network": "mainnet",
+  "chain_id": "mainnet",
+  "factory": "arena.sledgit.near",
+  "vault_code_hash": "7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU",
+  "entry": "local-qwen3-8b",
+  "vault": "local-qwen3-8b.arena.sledgit.near",
+  "owner": "fb1bc414b980fa6a5572c9e57c488f771b6ed5f8ac44774b277b81d8f2d6e5ea",
+  "agent": "a4af6959bdef5dacd4c642fdb65ce9ab7770c82d869b6fc476089063208809e9",
+  "agent_recovery_public_key": "ed25519:DWL6PgfqvvM4bU55kc2YjCDZApCMzsZChvv6YVdYo6sx",
+  "policy": {
+    "tokens": [
+      {
+        "token": "wrap.near",
+        "max_per_trade": "1200000000000000000000000",
+        "max_per_day": "2400000000000000000000000"
+      },
+      {
+        "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "max_per_trade": "5000000",
+        "max_per_day": "10000000"
+      }
+    ],
+    "pairs": [
+      {
+        "token_in": "wrap.near",
+        "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "pool_id": 4512,
+        "min_price_num": "1",
+        "min_price_den": "500000000000000000"
+      },
+      {
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "pool_id": 4512,
+        "min_price_num": "150000000000000000",
+        "min_price_den": "1"
+      }
+    ],
+    "max_trades_per_hour": 2,
+    "max_slippage_bps": 100
+  },
+  "deposit": "200000000000000000000000",
+  "allowance": "1000000000000000000000000",
+  "txs": [
+    {
+      "step": "arena.sledgit.near.create_vault",
+      "tx": "BYv9tRCeQ5MGtbVtEmLWcHEtZ3BYxNyRx4NatyXQ7zk8"
+    },
+    {
+      "step": "wrap.near.storage_deposit",
+      "tx": "4NSvAhbKex5KhHedkoBx1FRZdknz4Dwf1Y81jSXW1r3L"
+    },
+    {
+      "step": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1.storage_deposit",
+      "tx": "HqsmmoUQsAf2o3npzehZPTWonYF42pV42GdkJuVDCTLe"
+    },
+    {
+      "step": "local-qwen3-8b.arena.sledgit.near.exchange_storage_deposit",
+      "tx": "9RhHRtUATNBuV5YV3s3wjfeg46ELerWeNuTVfLUQtxAq"
+    },
+    {
+      "step": "local-qwen3-8b.arena.sledgit.near.exchange_register_tokens",
+      "tx": "ZTnS4wrpr49b2Kr5hTE1odj7LpyvSPPuCe6PHRXteVR"
+    },
+    {
+      "step": "wrap.near.storage_deposit",
+      "tx": "AzzKoD883esPjW5b2QTisL1svShPvbt8FXiiSYFf49BF"
+    },
+    {
+      "step": "wrap.near.near_deposit",
+      "tx": "7KYUUrMgRcfZVpWvRPXaxL9eGovvhSts4qv68QxbD3yu"
+    },
+    {
+      "step": "wrap.near.ft_transfer_call",
+      "tx": "6N2hdB8rTkQufD7hB6rhAJgJnxXd4frYeiFLG4YbLxUM"
+    },
+    {
+      "step": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1.ft_transfer_call",
+      "tx": "3C2JRxv19uczhJDucwTKLBETVeyMrkn4uA15bZFmktTK"
+    },
+    {
+      "step": "a4af6959bdef5dacd4c642fdb65ce9ab7770c82d869b6fc476089063208809e9.add_key(function-call)",
+      "tx": "BBytBCqzQxsSGyV8Q1N6SbijVe9vG4eooCsdWsJExWSu"
+    },
+    {
+      "step": "a4af6959bdef5dacd4c642fdb65ce9ab7770c82d869b6fc476089063208809e9.add_key(recovery)",
+      "tx": "A8qwdb7w47Riffma6wwfriruqpVKV8My4MXG3e3hdYET"
+    },
+    {
+      "step": "a4af6959bdef5dacd4c642fdb65ce9ab7770c82d869b6fc476089063208809e9.delete_key(setup)",
+      "tx": "FoVjBMLSoeg1e6YRiBBQjwsPQmoE1PNTGsBspGHCyh6C"
+    }
+  ]
+}

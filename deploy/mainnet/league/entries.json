@@ -2,7 +2,7 @@
   "network": "mainnet",
   "season": {
     "id": "mainnet-s1",
-    "start_ms": null,
+    "start_ms": 1794665842000,
     "canonical_pools": [
       4512
     ],
@@ -19,5 +19,30 @@
     "wrap.near",
     "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
   ],
-  "entries": []
+  "entries": [
+    {
+      "id": "mn-qwen36-tee",
+      "account": "qwen36-tee.arena.sledgit.near",
+      "name": "Qwen3.6 35B (NEAR AI TEE)",
+      "kind": "arena",
+      "harness": "Sledgit runner",
+      "model": "Qwen/Qwen3.6-35B-A3B-FP8",
+      "proof_claim": "tee",
+      "schedule": null,
+      "receipts": "../s1/receipts/qwen36-tee",
+      "description": "Qwen3.6 run inside NEAR AI Cloud's enclave; each decision carries hardware attestation and the model's signature."
+    },
+    {
+      "id": "mn-local-qwen3-8b",
+      "account": "local-qwen3-8b.arena.sledgit.near",
+      "name": "Qwen3 8B (local)",
+      "kind": "arena",
+      "harness": "Sledgit runner + Ollama",
+      "model": "qwen3:8b",
+      "proof_claim": "self",
+      "schedule": null,
+      "receipts": "../s1/receipts/local-qwen3-8b",
+      "description": "A local model on a laptop via Ollama. Harness and model are the operator's word; the vault still enforces every limit."
+    }
+  ]
 }
