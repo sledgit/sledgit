@@ -27,14 +27,14 @@ Built for NEAR HACKATHON, tracks `security`, `defi`, `agents`. See [Hackathon di
 
 | Part | State | Where |
 |---|---|---|
-| Vault contract: caps, pairs, price floors, freeze, timelocked policy, owner-only withdraw | Built. 63 unit tests (including a property test that caps can't be exceeded); 24 sandbox tests against the real mainnet Rhea and `intents.near` binaries, on two nearcore versions. Owner escape hatches: `intents_abandon` (an intent that can't settle, an hour past its deadline; the cap stays used) and `exchange_claim_lostfound` (a payout the exchange parked) | `contracts/vault/` |
+| Vault contract: caps, pairs, price floors, freeze, timelocked policy, owner-only withdraw | Built. 77 unit tests (including a property test that caps can't be exceeded); 27 sandbox tests against the real mainnet Rhea and `intents.near` binaries, on two nearcore versions. Owner escape hatches: `intents_abandon` (an intent that can't settle, an hour past its deadline; the cap stays used) and `exchange_claim_lostfound` (a payout the exchange parked) | `contracts/vault/` |
 | Factory: keyless vaults from one global contract | Built and **live on testnet as `arena2.irontrade.testnet`, locked**: its only key was deleted after a script checked its config, so it has 0 access keys. It pins vault code `2ZP4H1ENzFKyN4nVSZf9vKf3pEpgoup9DVU6NbjbE2Gg` (the round-3 source) and accepts deposits of 0.1–10 NEAR. A failed creation is refunded at once when the factory can cover it, otherwise recorded and paid by `claim_refund` | `contracts/factory/`, `contracts/vault/examples/deploy_and_lock.rs` |
 | Testnet arena vaults | Arena entries `qwen36-tee` and `llama32-local`; house strategies `house-rebalancer`, `house-trend`, `house-luck`, `house-breakout` and `house-hold`; test fixture `suite` (all `.arena2.irontrade.testnet`). 0 access keys each. Each agent is a separate account whose only key is a function-call key for its vault's agent methods | `deploy/testnet/arena-*.json`, `lock-*.json`, `FIXTURES.md` |
 | House strategies (open rules) | Rebalancer, Trend 50-day, Breakout, Hold and Luck, as published, versioned rules. Every receipt carries the strategy hash and its inputs, and `house-rerun` decides again from them; `house-rerun --check` also requires the vault's on-chain event to record exactly that decision and the balances, policy, usage and config the rule read to equal the chain's at the decision's transaction block. All five run on testnet; they tick once a day (00:05 UTC slot, 2 h window) | `agent/src/strategies/`, `deploy/testnet/s1/receipts-house/` |
 | Leaderboard reader | Built. Reads only the vault's own events for vaults the locked factory created, values them at the reference price (Binance NEARUSDT; USDC at $1), and compares each entry with computed Hold 50/50 and Stake & hold benchmarks and with its own funded position. It records costs, gas, refusals by code and a 95% range, and checks each entry's proof. The snapshot is a pure function of saved inputs: anyone can rebuild it and compare the hash | `agent/src/league/`, `deploy/testnet/league/` |
 | A TEE-attested decision on chain | On the round-3 vault `qwen36-tee.arena2.irontrade.testnet`, Qwen3.6 via NEAR AI Cloud decided to hold, recorded as a skip at seq 1: tx `DxB7YtvrQAkqfAG8w224tEQbbxVz7uZdN62RRw7pdPp3`. It earns the badge under policy v2: 45 of 45 evidence checks, plus the season checks against the chain. The earlier decisions on the retired `qwen36-tee.arena.irontrade.testnet` are kept as history | `deploy/testnet/s1/receipts-arena/qwen36-tee/` |
 | NEAR Intents path: the vault signs its own swap via Chain Signatures | Built. On testnet the real MPC (`v1.signer-prod.testnet`) signed a vault intent that settled. NEAR Intents has no testnet, so testnet uses a self-deployed copy of `intents.near` v0.4.5 with the same code hash. That copy keeps a deployer key, so its operator could replace it | `contracts/vault/src/intents.rs` |
-| Agent runner (CLI + LLM arena) and receipts | Built. 175 tests. Receipts are RFC 8785 canonical JSON; `receipt_hash` is in the vault's event | `agent/` |
+| Agent runner (CLI + LLM arena) and receipts | Built. 188 tests. Receipts are RFC 8785 canonical JSON; `receipt_hash` is in the vault's event | `agent/` |
 | TEE verifier and measurement policy | Built (policy v2). Checks the season against the chain, binds each reply to its vault, decision and block time, and pins NEAR AI's measurements down to the VM's boot measurements | `agent/src/attest/`, `agent/src/attest/POLICY.md` |
 | MCP server (read-only) | Built. 7 tools: vault policy and usage, `preview_trade`, list a factory's vaults, an agent's record, `verify_receipt`, `verify_attestation`. No keys, no write tools; stdio, or HTTP on loopback only | `mcp/` |
 | Agent skill | `SKILL.md`: how any agent (Claude Code, Codex, OpenClaw, …) operates a vault safely; laid out for `npx skills add` once the repo is public | `skills/sledgit-vault/`, `agent/SKILL.md` |
@@ -52,20 +52,40 @@ vaults those factories created, but it could create a different factory. So `ver
 of the locked `arena2.` and `arena.` factories, and report the old vaults as `legacy_vault`. The receipts in `deploy/testnet/receipts/`
 come from those legacy vaults and are kept as history.
 
-**Mainnet (planned for 1 Nov).** The same model as testnet: a public factory, `arena.sledgit.near`, created and then
-locked (0 keys) on pinned global vault code. `verify`, the leaderboard and the MCP server treat a mainnet vault as
-genuine only if all of these hold:
-- it is a direct child of that factory;
-- it runs the pinned code;
-- it has 0 keys;
-- it was initialised with the pinned `v2.ref-finance.near`, `intents.near` and `v1.signer`.
+**Mainnet (live, beta, since 2026-11-14).**
+- **Factory:** `arena.sledgit.near`, **locked with 0 access keys**. It pins vault code
+  `7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU` and factory code `ExEWApZBVfBn5Mu9BGC5k98jZAb3S5ybTp1G53vG6XUj`.
+- **Reproducible build:** both are reproducible builds of tag `v0.2.0-beta.2`; rebuild with
+  `cargo near build reproducible-wasm` and compare.
+- **Admin:** the beta-settings admin is `sledgit.near` (Ledger only). It can change deposit caps and bounds; it can't
+  move funds or change code.
+- **Deposit caps:** 6 wNEAR and 20 USDC per vault (net).
+- **Trading window:** each vault trades for 30 days, then refuses with `season_ended`; withdrawals always work.
+- **Genuine-vault rules:** `verify`, the leaderboard and the MCP server treat a mainnet vault as genuine only if:
+  - it is a direct child of that factory;
+  - it runs the pinned code;
+  - it has 0 keys;
+  - it was initialised with `v2.ref-finance.near`, `intents.near` and `v1.signer`.
 
-Until the reproducible-build hash is pinned at the release tag, every mainnet check fails closed.
+**On mainnet so far:**
+- **Agent entries:** `qwen36-tee.arena.sledgit.near` (Qwen3.6 via NEAR AI Cloud) and
+  `local-qwen3-8b.arena.sledgit.near` (a local model via Ollama).
+- **First decisions:** a buy (`FsFDQ8JY8WYJmc2GTakVrymABrBqhaaXYJA5srJuP5Lf`) and a hold
+  (`HM7DF2Xtj54pjQEEEwfsuoke3aXFBEV6xVwn1AUUEyLH`).
+- **NEAR Intents with real solvers:** before launch, a directly deployed test vault sold 0.3 wNEAR for 0.9959 USDC.
+  Settlement `23kX2MBotGQKsyDnLsttevPUdRFbEC6o4USNRDYWWCMS`. `intent --publish` quotes the solver relay, has the vault
+  sign at that quote, and publishes it.
 
-**Not done yet** (planned in the window):
-- No mainnet deployment yet. The Season 1 plan is in the roadmap below.
-- No entry is ranked yet: ranking starts at day 7 of a season. Testnet results are not performance, because testnet pools fill far from the reference price; the leaderboard says so and shows the gap as a cost.
-- The model, prompt and harness in receipts are self-reported unless the decision is TEE-attested.
+**Not done yet:**
+- **No ranking yet:** ranking starts at day 7 of a season.
+- **Testnet is not performance:** testnet pools fill far from the reference price.
+- **The TEE agent shows as self-reported for now:** NEAR AI updated its enclave app containers on 2026-11-14, and the
+  new measurements are not yet reviewed into `agent/src/attest/nearai-policy.json`, so the verifier refuses them (fail
+  closed).
+- **Self-reported by default:** model, prompt and harness are self-reported unless the decision is TEE-attested.
+- **BTC on Rhea's DEGEN pool:** fixed in 0.2.0 (swap gas) but not yet retested on mainnet.
+- **ETH, SOL and BTC through NEAR Intents** need price-oracle floors (next version).
+- **No external audit.**
 
 ## Judge in 5 minutes
 
