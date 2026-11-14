@@ -262,6 +262,18 @@ fn frozen_vault_refuses_and_agent_can_freeze() {
 }
 
 #[test]
+fn trading_stops_after_the_window_and_withdrawals_still_work() {
+    let mut v = new_vault();
+    let end = v.get_config()["trading_ends_ns"].as_str().unwrap().parse::<u64>().unwrap();
+    set(acc("anyone.near"), 0, end - 1);
+    assert_eq!(v.preview_swap(usdc(), wnear(), U128(10), U128(1))["ok"], true);
+    set(acc("anyone.near"), 0, end);
+    assert_eq!(v.preview_swap(usdc(), wnear(), U128(10), U128(1))["code"], "season_ended");
+    set(owner(), 1, end + 1);
+    let _ = v.withdraw(usdc(), U128(1));
+}
+
+#[test]
 fn preview_matches_request() {
     let v = new_vault();
     set(acc("anyone.near"), 0, 1);

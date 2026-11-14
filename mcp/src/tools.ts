@@ -12,7 +12,7 @@ import { apiLogs, checkAccount, isTxHash, treeLogs, vaultEvents, type Near, type
 
 /** Refusal codes the vault can return (agent/src/vault.ts REFUSAL_CODES; kept equal by a test). */
 export const REFUSAL_CODES = ["frozen", "busy", "unsettled", "pair_not_allowed", "zero_amount", "trade_cap",
-  "unpriceable", "daily_cap", "rate_limit", "intents_not_set_up"] as const;
+  "unpriceable", "daily_cap", "rate_limit", "intents_not_set_up", "season_ended"] as const;
 
 export const LIMITS = { vaults: 100, events: 200, txs: 200, receiptBytes: 64 * 1024, bundleBytes: 2 * 1024 * 1024 } as const;
 

@@ -13,6 +13,7 @@ const CODES: [string, string, string][] = [
   ["frozen", "Vault frozen", "The owner froze the vault. Nothing trades until they unfreeze it."],
   ["busy", "Another swap in flight", "One swap or open intent at a time; the next waits for it to finish."],
   ["unsettled", "Last intent not recorded", "The previous cross-chain intent finished but isn't recorded yet; anyone can call intents_settle."],
+  ["season_ended", "Trading window over", "The vault's 30-day trading window has ended. Withdrawals still work; open a new vault to keep trading."],
   ["intents_not_set_up", "Cross-chain not set up", "The vault's NEAR Intents key hasn't been registered yet, so it can't sign an intent."],
   ["zero_amount", "Zero amount", "The amount or the minimum output is zero."],
 ];

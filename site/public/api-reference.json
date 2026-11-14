@@ -123,6 +123,7 @@
     "busy",
     "unsettled",
     "intents_not_set_up",
+    "season_ended",
     "zero_amount"
   ],
   "events": {

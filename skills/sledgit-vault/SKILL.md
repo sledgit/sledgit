@@ -205,6 +205,7 @@ fake vault event.
 | `daily_cap` | 24 h cap would be exceeded | hold until usage rolls off |
 | `rate_limit` | `max_trades_per_hour` reached | hold until the next clock hour |
 | `intents_not_set_up` | owner never ran `intents_setup` | use Rhea |
+| `season_ended` | the vault's 30-day trading window is over (`get_config.trading_ends_ns`) | stop trading; tell your operator to withdraw and open a new vault |
 
 A `failed` event (quote below band, min_amount_out above quote, exchange error) is not a policy refusal: the market
 moved or the band is tight. Record it and decide again next tick with fresh data.

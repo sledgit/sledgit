@@ -46,6 +46,8 @@ const TG_ON_WITHDRAW: u64 = TG_SMALL_VIEW + TG_ON_VERIFY + 5;
 const TG_ON_SWAP: u64 = TG_WITHDRAW + TG_ON_WITHDRAW + 5;
 const TG_ON_DEPOSIT: u64 = TG_SWAP + 2 * TG_SMALL_VIEW + TG_ON_SWAP + 10;
 const TG_ON_QUOTE: u64 = TG_FT_TRANSFER_CALL + TG_ON_DEPOSIT + 10;
+/// A vault trades for this long after creation, so old versions sunset on their own.
+pub const TRADING_DAYS: u64 = 30;
 pub const TG_MIN_REQUEST: u64 = TG_VIEW + TG_ON_QUOTE + 20;
 /// balance → withdraw → balance → record.
 pub const TG_MIN_EXCHANGE_WITHDRAW: u64 = TG_VIEW + TG_WITHDRAW + TG_VIEW + TG_ON_MOVED + 15 + 20;
@@ -212,6 +214,8 @@ pub struct Vault {
     deposit_caps: Vec<DepositCap>,
     /// Owner deposits less owner withdrawals, per token (never below 0, so withdrawn gains free room again).
     net_deposits: Vec<(AccountId, u128)>,
+    /// Trading stops here (creation + TRADING_DAYS); withdrawals never do.
+    trading_ends_ns: u64,
 }
 
 fn validate_caps(caps: &[DepositCap]) {
@@ -267,7 +271,8 @@ impl Vault {
             "mpc_id": mpc_id, "policy": policy, "deposit_caps": deposit_caps}));
         Self { owner_id, proposed_owner: None, agent_id, exchange_id, policy, pending_policy: None, frozen: false,
             in_flight: None, usage: Usage { hour: U64(now_hour()), ..Default::default() }, seq: 0, intents_id, mpc_id,
-            intents_key: None, open_intent: None, exchange_op_since: None, deposit_caps, net_deposits: Vec::new() }
+            intents_key: None, open_intent: None, exchange_op_since: None, deposit_caps, net_deposits: Vec::new(),
+            trading_ends_ns: env::block_timestamp() + TRADING_DAYS * 86_400 * 1_000_000_000 }
     }
 
     // ---------------------------------------------------------------- agent
@@ -666,7 +671,7 @@ impl Vault {
     pub fn get_config(&self) -> Value {
         json!({"owner_id": self.owner_id, "proposed_owner": self.proposed_owner, "agent_id": self.agent_id,
             "exchange_id": self.exchange_id, "intents_id": self.intents_id, "mpc_id": self.mpc_id, "frozen": self.frozen,
-            "seq": self.seq, "version": env!("CARGO_PKG_VERSION")})
+            "seq": self.seq, "trading_ends_ns": U64(self.trading_ends_ns), "version": env!("CARGO_PKG_VERSION")})
     }
     /// Each cap with what the owner has deposited net of withdrawals (empty = no cap).
     pub fn get_deposit_caps(&self) -> Value {
@@ -733,6 +738,7 @@ impl Vault {
         let p = &self.policy;
         if self.frozen { return Err(("frozen", "vault is frozen".into())); }
         let now = env::block_timestamp();
+        if now >= self.trading_ends_ns { return Err(("season_ended", "this vault's trading window has ended; withdraw any time".into())); }
         if self.in_flight.is_some() || self.open_intent.as_ref().is_some_and(|o| o.live(now)) || self.exchange_busy() {
             return Err(("busy", "another swap or intent is in flight".into()));
         }

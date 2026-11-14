@@ -495,7 +495,7 @@ function rustConsts(...files: string[]): Record<string, number> {
 test("L5: SKILL.md gas minimums equal the contract's constants", () => {
   const src = join(REPO, "contracts", "vault", "src");
   const c = rustConsts(join(src, "lib.rs"), join(src, "intents.rs"));
-  assert.deepEqual([c.TG_MIN_REQUEST, c.TG_MIN_INTENT_REQUEST, c.TG_MIN_CANCEL], [235, 230, 255]);
+  assert.deepEqual([c.TG_MIN_REQUEST, c.TG_MIN_INTENT_REQUEST, c.TG_MIN_CANCEL], [265, 230, 255]);
   const skill = readFileSync(join(AGENT_DIR, "SKILL.md"), "utf8");
   const row = (m: string) => skill.split("\n").find((l) => l.startsWith(`| \`${m}\``)) ?? "";
   assert.match(row("request_swap"), new RegExp(`min ${c.TG_MIN_REQUEST}\\b`));

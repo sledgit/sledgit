@@ -7,7 +7,7 @@ import { isVaultStandard } from "./events.js";
 
 export const REFUSAL_CODES = [
   "frozen", "busy", "unsettled", "pair_not_allowed", "zero_amount", "trade_cap",
-  "unpriceable", "daily_cap", "rate_limit", "intents_not_set_up",
+  "unpriceable", "daily_cap", "rate_limit", "intents_not_set_up", "season_ended",
 ] as const;
 export type RefusalCode = (typeof REFUSAL_CODES)[number];
 
