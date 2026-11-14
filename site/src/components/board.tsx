@@ -1,6 +1,8 @@
 // The scoreboard pieces: ticker, the "beating hold" box, standings rows, agent cards. Real snapshot data only.
 import Link from "next/link";
 import { boardEntries, latestRefusal, liveCopy, quip, receiptId, relSeries, score, ticker, vsHold } from "@/lib/board";
+import { leagueFor } from "@/lib/feed/league-data";
+import { useLeague } from "@/lib/league";
 import { entryName, type LeagueEntry } from "@/lib/feed/league-data";
 import { pct } from "@/lib/format";
 import { LIVE_LEAGUE, LIVE_NETWORK, NETWORKS, shortAccount } from "@/lib/networks";
@@ -15,35 +17,47 @@ const agentHref = (id: string) => `/agents/${id}/`;
 const shortAcct = (a: string) => shortAccount(NETWORKS[LIVE_NETWORK], a);
 const LIVE = liveCopy(LIVE_NETWORK, LIVE_LEAGUE);
 
+// The network the visitor picked (testnet or mainnet), its snapshot and its wording.
+function useView() {
+  const s = useLeague();
+  const net = s?.network === "testnet" || s?.network === "mainnet" ? s.network : LIVE_NETWORK;
+  const L = leagueFor(net);
+  return { net, L, copy: liveCopy(net, L) };
+}
+
 export function Ticker() {
-  const items = ticker();
+  const { L, copy } = useView();
+  const items = ticker(24, L);
   if (!items.length) return null;
-  const row = (dup: boolean) => [<span key={dup ? "dnet" : "net"} aria-hidden={dup || undefined}><b>{`${LIVE.label.toUpperCase()} ·`}</b></span>, ...items.map(t => (
+  const row = (dup: boolean) => [<span key={dup ? "dnet" : "net"} aria-hidden={dup || undefined}><b>{`${copy.label.toUpperCase()} ·`}</b></span>, ...items.map(t => (
     <span key={`${dup ? "d" : ""}${t.key}`} aria-hidden={dup || undefined}>{t.who} {t.refused ? <b className="x">{t.text} ✗</b> : <>{t.text}{t.ok ? " ✓" : ""}</>}</span>))];
   return (
-    <div className="ticker" role="region" aria-label={`Latest on-chain decisions on ${LIVE.label}`}>
+    <div className="ticker" role="region" aria-label={`Latest on-chain decisions on ${copy.label}`}>
       <div className="track">{row(false)}{row(true)}</div>
     </div>);
 }
 
 export function ScoreBox() {
-  const { beat, total, day } = score();
-  if (LIVE.launching) return (
+  const { L, copy } = useView();
+  const { beat, total, day } = score(L);
+  if (copy.launching) return (
     <div className="board">
-      <div className="k">{LIVE.season} · launching</div>
+      <div className="k">{copy.season} · launching</div>
       <div className="big num">0<span> vaults</span></div>
-      <p className="sub">No vaults on {LIVE.label} yet. The board fills in from the first on-chain decision; ranking starts at day 7.</p>
+      <p className="sub">No vaults on {copy.label} yet. The board fills in from the first on-chain decision; ranking starts at day 7.</p>
     </div>);
   return (
     <div className="board">
-      <div className="k">{`${LIVE.season} · day `}{day ?? "—"}</div>
+      <div className="k">{`${copy.season} · day `}{day ?? "—"}</div>
       <div className="big num">{beat}<span> / {total}</span></div>
       <p className="sub">agents are beating just holding NEAR, after costs. {beat === 0 ? <b>Holding is undefeated so far.</b> : null}
-        {` Ranking starts at day 7.${LIVE.prices ? ` ${LIVE.prices}` : ""}`}</p>
+        {` Ranking starts at day 7.${copy.prices ? ` ${copy.prices}` : ""}`}</p>
     </div>);
 }
 
-export function Standings({ entries = boardEntries(), limit }: { entries?: LeagueEntry[]; limit?: number }) {
+export function Standings({ entries: given, limit }: { entries?: LeagueEntry[]; limit?: number }) {
+  const v = useView();
+  const entries = given ?? boardEntries(v.L);
   const shown = limit ? entries.slice(0, limit) : entries;
   const max = Math.max(0.05, ...shown.map(e => Math.abs(vsHold(e) ?? 0)));
   let n = 0;
@@ -69,7 +83,9 @@ export function Standings({ entries = boardEntries(), limit }: { entries?: Leagu
     </div>);
 }
 
-export function AgentCards({ entries = boardEntries(), limit = 6 }: { entries?: LeagueEntry[]; limit?: number }) {
+export function AgentCards({ entries: given, limit = 6 }: { entries?: LeagueEntry[]; limit?: number }) {
+  const v = useView();
+  const entries = given ?? boardEntries(v.L);
   return (
     <div className="acards">{entries.slice(0, limit).map((e, i) => {
       const v = vsHold(e), q = quip(e), c = e.counts;
@@ -92,17 +108,18 @@ const utc = (ms: number) => new Date(ms).toISOString().slice(0, 16).replace("T",
 
 /** The latest refusal on record, as a receipt. */
 export function LatestReceipt() {
-  const x = latestRefusal();
+  const v = useView();
+  const x = latestRefusal(v.L);
   if (!x) return null;
   const { e, d } = x, no = d.event === "refuse";
   return (
     <div>
-      <Paper title="Sledgit receipt" sub={`${LIVE.label} · on-chain decision`} rows={[
+      <Paper title="Sledgit receipt" sub={`${v.copy.label} · on-chain decision`} rows={[
         ["Agent", e.kind === "arena" || e.kind === "house" ? entryName(e) : shortAcct(e.account)], ["Seq", `#${d.seq}`], ["Time", utc(d.block_time_ms)],
         ["Decision", no ? `REFUSED · ${d.code}` : `${d.event.toUpperCase()}${d.side ? ` · ${d.side.toUpperCase()}` : ""}`],
         ...(d.fill_price ? [["Fill", d.fill_price.toFixed(4)] as [string, string]] : []),
         "hr", ["Tx", `${d.tx.slice(0, 10)}…`], ["Receipt", `${d.receipt_hash.slice(0, 14)}…`],
-      ]} foot={<>Check it yourself: <Link href={`/receipt/?id=${encodeURIComponent(receiptId(d))}&net=${LIVE_NETWORK}`}>full receipt →</Link></>}
+      ]} foot={<>Check it yourself: <Link href={`/receipt/?id=${encodeURIComponent(receiptId(d))}&net=${v.net}`}>full receipt →</Link></>}
         stamp={no ? { text: "Refused · on chain", tone: "no" } : { text: "Recorded on chain", tone: "ok" }} />
     </div>);
 }

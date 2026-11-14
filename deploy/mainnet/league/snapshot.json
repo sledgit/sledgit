@@ -1,13 +1,13 @@
 {
-  "as_of_ms": 1794668700000,
+  "as_of_ms": 1794668880000,
   "benchmarks": {
-    "hold_twr": -0.00124031,
+    "hold_twr": -0.00232558,
     "stake_apr": {
       "source": "assumption, not measured: 4.5% APR, the post-2024 NEAR staking rate the backtest uses (agent/src/strategies/benchmarks.ts STAKE_APR); testnet vaults cannot stake",
       "value": 0.045
     },
-    "stake_twr": -0.00123988,
-    "stake_vs_hold": 4.3e-7,
+    "stake_twr": -0.00232502,
+    "stake_vs_hold": 5.6e-7,
     "start_ms": 1794668096365
   },
   "by_model": [
@@ -19,7 +19,7 @@
       ],
       "family": "Qwen3 8B",
       "label": "Qwen3 8B · self-reported",
-      "provisional_vs_hold_after_gas": 0.00150167,
+      "provisional_vs_hold_after_gas": 0.00173701,
       "ranked_entries": 0,
       "refusals": 0,
       "scored_sources": 0,
@@ -38,7 +38,7 @@
       ],
       "family": "Qwen3.6 35B",
       "label": "Qwen3.6 35B · attested",
-      "provisional_vs_hold_after_gas": -0.00012805,
+      "provisional_vs_hold_after_gas": 0.00004316,
       "ranked_entries": 0,
       "refusals": 0,
       "scored_sources": 0,
@@ -51,7 +51,7 @@
     }
   ],
   "caveat": null,
-  "derived_sha256": "bbf3dd78dd582f368b7acbbf014eb90d765b5474fb6c0535b7fb4eed7eae641c",
+  "derived_sha256": "031d5d8937494a1876a0e14e0d85e5ee61c26f73ffd3c8c0362d27762e85389a",
   "entries": [
     {
       "account": "local-qwen3-8b.arena.sledgit.near",
@@ -76,7 +76,7 @@
         "skips": 1,
         "trades": 0
       },
-      "days": 0.00698652,
+      "days": 0.00906985,
       "decisions": [
         {
           "block_time_ms": 1794668281560,
@@ -91,13 +91,13 @@
       ],
       "description": "A local model on a laptop via Ollama. Harness and model are the operator's word; the vault still enforces every limit.",
       "end": {
-        "price": 3.217,
-        "value_usd": 8.217
+        "price": 3.21,
+        "value_usd": 8.21
       },
       "events_sha256": "a7683e7bd03fb385a9ec655cba8045db97a74ad14f0ead49d1c37f3c9e6af2c8",
-      "funded_twr": -0.00248062,
+      "funded_twr": -0.00465116,
       "harness": "Sledgit runner + Ollama",
-      "hold_twr": -0.00273845,
+      "hold_twr": -0.00382209,
       "id": "mn-local-qwen3-8b",
       "inactive": false,
       "kind": "arena",
@@ -127,25 +127,25 @@
           "value": 3.22517607
         },
         {
-          "hold": 3.2161685,
-          "stake": 3.21616988,
-          "t": 1794668700000,
-          "value": 3.22125584
+          "hold": 3.21267375,
+          "stake": 3.21267554,
+          "t": 1794668880000,
+          "value": 3.21851167
         }
       ],
-      "stake_twr": -0.00273802,
+      "stake_twr": -0.00382154,
       "start": {
         "price": 3.225,
         "time_ms": 1794668096365,
         "value_usd": 3.225
       },
       "strategy_sha256": null,
-      "twr": -0.00116098,
+      "twr": -0.00201188,
       "unranked_reason": "0.0 days at the minimum value; ranking starts at day 7",
-      "vs_funded": 0.00132292,
-      "vs_hold": 0.0015818,
-      "vs_hold_after_gas": 0.00150167,
-      "vs_stake": 0.00158137
+      "vs_funded": 0.00265161,
+      "vs_hold": 0.00181715,
+      "vs_hold_after_gas": 0.00173701,
+      "vs_stake": 0.0018166
     },
     {
       "account": "qwen36-tee.arena.sledgit.near",
@@ -170,7 +170,7 @@
         "skips": 0,
         "trades": 1
       },
-      "days": 0.00615303,
+      "days": 0.00823637,
       "decisions": [
         {
           "amount_in": "200000",
@@ -207,13 +207,13 @@
       ],
       "description": "Qwen3.6 run inside NEAR AI Cloud's enclave; each decision carries hardware attestation and the model's signature.",
       "end": {
-        "price": 3.217,
-        "value_usd": 8.11639182
+        "price": 3.21,
+        "value_usd": 8.10895796
       },
       "events_sha256": "02789af01f113c8b2657e2c1924b715dd26f7477b5ae065ca5b7901bd2ed0af0",
-      "funded_twr": -0.00186162,
+      "funded_twr": -0.00403351,
       "harness": "Sledgit runner",
-      "hold_twr": -0.00242941,
+      "hold_twr": -0.00351373,
       "id": "mn-qwen36-tee",
       "inactive": false,
       "kind": "arena",
@@ -244,25 +244,25 @@
           "value": 3.22459171
         },
         {
-          "hold": 3.21517,
-          "stake": 3.21517122,
-          "t": 1794668700000,
-          "value": 3.22037804
+          "hold": 3.21167525,
+          "stake": 3.21167688,
+          "t": 1794668880000,
+          "value": 3.21742847
         }
       ],
-      "stake_twr": -0.00242904,
+      "stake_twr": -0.00351322,
       "start": {
         "price": 3.223,
         "time_ms": 1794668168378,
         "value_usd": 3.223
       },
       "strategy_sha256": null,
-      "twr": -0.00081351,
+      "twr": -0.00172868,
       "unranked_reason": "0.0 days at the minimum value; ranking starts at day 7",
-      "vs_funded": 0.00105006,
-      "vs_hold": 0.00161983,
-      "vs_hold_after_gas": -0.00012805,
-      "vs_stake": 0.00161945
+      "vs_funded": 0.00231417,
+      "vs_hold": 0.00179135,
+      "vs_hold_after_gas": 0.00004316,
+      "vs_stake": 0.00179084
     },
     {
       "account": "canary-27958c783600.arena.sledgit.near",
@@ -327,7 +327,7 @@
   ],
   "excluded": [],
   "flags": [],
-  "inputs_sha256": "bd0c20d7dcacf42f81f17683c3ff0b7d1d91e179005ff2f7b3e128cc88782749",
+  "inputs_sha256": "f789f42e6a7e6a51f0241e8289a04fe3b78ab3bff4f619ce2fee966481f1182f",
   "luck_entry": null,
   "method": {
     "benchmarks": "Hold 50/50 and Stake & hold are COMPUTED, not vaults: they start from the entry's own start value, at its start time and reference price, rebalanced once to 50/50 and charged season.benchmark_cost_rate on that rebalance (a fixed published rate, never the entry's own). Stake & hold compounds the NEAR half daily at the stated APR (an assumption, see stake_apr.source). Funded position: the entry's own holdings at its start, never traded, no costs.",

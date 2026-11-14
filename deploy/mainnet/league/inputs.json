@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794668700000,
-  "collected_at": "2026-11-14T15:05:58.153Z",
+  "as_of_ms": 1794668880000,
+  "collected_at": "2026-11-14T15:09:00.148Z",
   "excluded": [],
   "factories": [
     {
@@ -21,7 +21,7 @@
     "1794668100000": 3.224,
     "1794668160000": 3.223,
     "1794668280000": 3.224,
-    "1794668700000": 3.217
+    "1794668880000": 3.21
   },
   "network": "mainnet",
   "reference": {
@@ -345,13 +345,13 @@
             "exchange": "0",
             "intents": "0",
             "token": "wrap.near",
-            "wallet": "1000000000000000000000000"
+            "wallet": "1077516575758499558773069"
           },
           {
             "exchange": "0",
             "intents": "0",
             "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
-            "wallet": "5000000"
+            "wallet": "4750000"
           }
         ],
         "config": {
@@ -362,7 +362,7 @@
           "mpc_id": "v1.signer",
           "owner_id": "fb1bc414b980fa6a5572c9e57c488f771b6ed5f8ac44774b277b81d8f2d6e5ea",
           "proposed_owner": null,
-          "seq": 1,
+          "seq": 2,
           "trading_ends_ns": "1797260058302772872",
           "version": "0.2.0"
         },
@@ -406,13 +406,18 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 4,
+          "events_replayed": 6,
           "status": "ok"
         },
         "usage": {
           "hour": "498519",
-          "spent": [],
-          "trades": 0
+          "spent": [
+            [
+              "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+              "250000"
+            ]
+          ],
+          "trades": 1
         }
       },
       "proof": {
@@ -600,7 +605,7 @@
           "mpc_id": "v1.signer",
           "owner_id": "e4cf873fc8516ae3f8c5cd14677c430a05f811e8c291b2c62e8cdcf81f864c1a",
           "proposed_owner": null,
-          "seq": 1,
+          "seq": 2,
           "trading_ends_ns": "1797260130970222941",
           "version": "0.2.0"
         },
@@ -644,7 +649,7 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 5,
+          "events_replayed": 6,
           "status": "ok"
         },
         "usage": {

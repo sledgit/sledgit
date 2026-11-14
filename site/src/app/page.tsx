@@ -52,6 +52,8 @@ function AgentChart() {
 
 export default function Home() {
   const s = useLeague();
+  const net = s?.network === "testnet" || s?.network === "mainnet" ? s.network : LIVE_NETWORK;
+  const V = liveCopy(net, leagueFor(net));
   const es = boardEntries();
   return (
     <>
@@ -69,10 +71,10 @@ export default function Home() {
         <ScoreBox />
       </section>
 
-      {LIVE.launching ? <Section eyebrow={LIVE.net} title="Standings">
-        <MainnetState n={NETWORKS[LIVE_NETWORK]} message={`Season 1 is launching on ${LIVE.label}: no vaults yet.`} />
+      {V.launching ? <Section eyebrow={V.net} title="Standings">
+        <MainnetState n={NETWORKS[net]} message={`Season 1 is launching on ${V.label}: no vaults yet.`} />
       </Section> : <>
-      <Section eyebrow={LIVE.net} title="Standings" lede={<>{LIVE.standings}</>}
+      <Section eyebrow={V.net} title="Standings" lede={<>{V.standings}</>}
         right={<Link className="btn" href="/leaderboard/?view=entry">Full leaderboard →</Link>}>
         <Standings />
         <Disclaimer />
@@ -115,7 +117,7 @@ export default function Home() {
       {s && s.network !== "sim" && (leagueFor(s.network)
         ? <Section eyebrow={NETWORKS[s.network].label} title="Latest decisions" right={<Link className="btn" href="/refusals/">Refusals →</Link>}>
           <div className="panel"><DecisionFeed s={s} limit={10} /></div></Section>
-        : !(LIVE.launching && s.network === LIVE_NETWORK) && <MainnetState n={NETWORKS[s.network]} message={s.status.message} />)}
+        : !(V.launching && s.network === net) && <MainnetState n={NETWORKS[s.network]} message={s.status.message} />)}
 
       <Section eyebrow="How it works" title="Three parts, each checkable">
         <div className="steps">

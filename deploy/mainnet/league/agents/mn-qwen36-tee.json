@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794668700000,
-  "derived_sha256": "bbf3dd78dd582f368b7acbbf014eb90d765b5474fb6c0535b7fb4eed7eae641c",
+  "as_of_ms": 1794668880000,
+  "derived_sha256": "031d5d8937494a1876a0e14e0d85e5ee61c26f73ffd3c8c0362d27762e85389a",
   "entry": {
     "account": "qwen36-tee.arena.sledgit.near",
     "beyond_noise": null,
@@ -24,7 +24,7 @@
       "skips": 0,
       "trades": 1
     },
-    "days": 0.00615303,
+    "days": 0.00823637,
     "decisions": [
       {
         "amount_in": "200000",
@@ -61,13 +61,13 @@
     ],
     "description": "Qwen3.6 run inside NEAR AI Cloud's enclave; each decision carries hardware attestation and the model's signature.",
     "end": {
-      "price": 3.217,
-      "value_usd": 8.11639182
+      "price": 3.21,
+      "value_usd": 8.10895796
     },
     "events_sha256": "02789af01f113c8b2657e2c1924b715dd26f7477b5ae065ca5b7901bd2ed0af0",
-    "funded_twr": -0.00186162,
+    "funded_twr": -0.00403351,
     "harness": "Sledgit runner",
-    "hold_twr": -0.00242941,
+    "hold_twr": -0.00351373,
     "id": "mn-qwen36-tee",
     "inactive": false,
     "kind": "arena",
@@ -98,25 +98,25 @@
         "value": 3.22459171
       },
       {
-        "hold": 3.21517,
-        "stake": 3.21517122,
-        "t": 1794668700000,
-        "value": 3.22037804
+        "hold": 3.21167525,
+        "stake": 3.21167688,
+        "t": 1794668880000,
+        "value": 3.21742847
       }
     ],
-    "stake_twr": -0.00242904,
+    "stake_twr": -0.00351322,
     "start": {
       "price": 3.223,
       "time_ms": 1794668168378,
       "value_usd": 3.223
     },
     "strategy_sha256": null,
-    "twr": -0.00081351,
+    "twr": -0.00172868,
     "unranked_reason": "0.0 days at the minimum value; ranking starts at day 7",
-    "vs_funded": 0.00105006,
-    "vs_hold": 0.00161983,
-    "vs_hold_after_gas": -0.00012805,
-    "vs_stake": 0.00161945
+    "vs_funded": 0.00231417,
+    "vs_hold": 0.00179135,
+    "vs_hold_after_gas": 0.00004316,
+    "vs_stake": 0.00179084
   },
   "events": [
     {
@@ -260,7 +260,7 @@
       "mpc_id": "v1.signer",
       "owner_id": "e4cf873fc8516ae3f8c5cd14677c430a05f811e8c291b2c62e8cdcf81f864c1a",
       "proposed_owner": null,
-      "seq": 1,
+      "seq": 2,
       "trading_ends_ns": "1797260130970222941",
       "version": "0.2.0"
     },
@@ -304,7 +304,7 @@
       ]
     },
     "reconciliation": {
-      "events_replayed": 5,
+      "events_replayed": 6,
       "status": "ok"
     },
     "usage": {

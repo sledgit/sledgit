@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794668700000,
-  "derived_sha256": "bbf3dd78dd582f368b7acbbf014eb90d765b5474fb6c0535b7fb4eed7eae641c",
+  "as_of_ms": 1794668880000,
+  "derived_sha256": "031d5d8937494a1876a0e14e0d85e5ee61c26f73ffd3c8c0362d27762e85389a",
   "entry": {
     "account": "local-qwen3-8b.arena.sledgit.near",
     "beyond_noise": null,
@@ -24,7 +24,7 @@
       "skips": 1,
       "trades": 0
     },
-    "days": 0.00698652,
+    "days": 0.00906985,
     "decisions": [
       {
         "block_time_ms": 1794668281560,
@@ -39,13 +39,13 @@
     ],
     "description": "A local model on a laptop via Ollama. Harness and model are the operator's word; the vault still enforces every limit.",
     "end": {
-      "price": 3.217,
-      "value_usd": 8.217
+      "price": 3.21,
+      "value_usd": 8.21
     },
     "events_sha256": "a7683e7bd03fb385a9ec655cba8045db97a74ad14f0ead49d1c37f3c9e6af2c8",
-    "funded_twr": -0.00248062,
+    "funded_twr": -0.00465116,
     "harness": "Sledgit runner + Ollama",
-    "hold_twr": -0.00273845,
+    "hold_twr": -0.00382209,
     "id": "mn-local-qwen3-8b",
     "inactive": false,
     "kind": "arena",
@@ -75,25 +75,25 @@
         "value": 3.22517607
       },
       {
-        "hold": 3.2161685,
-        "stake": 3.21616988,
-        "t": 1794668700000,
-        "value": 3.22125584
+        "hold": 3.21267375,
+        "stake": 3.21267554,
+        "t": 1794668880000,
+        "value": 3.21851167
       }
     ],
-    "stake_twr": -0.00273802,
+    "stake_twr": -0.00382154,
     "start": {
       "price": 3.225,
       "time_ms": 1794668096365,
       "value_usd": 3.225
     },
     "strategy_sha256": null,
-    "twr": -0.00116098,
+    "twr": -0.00201188,
     "unranked_reason": "0.0 days at the minimum value; ranking starts at day 7",
-    "vs_funded": 0.00132292,
-    "vs_hold": 0.0015818,
-    "vs_hold_after_gas": 0.00150167,
-    "vs_stake": 0.00158137
+    "vs_funded": 0.00265161,
+    "vs_hold": 0.00181715,
+    "vs_hold_after_gas": 0.00173701,
+    "vs_stake": 0.0018166
   },
   "events": [
     {
@@ -194,13 +194,13 @@
         "exchange": "0",
         "intents": "0",
         "token": "wrap.near",
-        "wallet": "1000000000000000000000000"
+        "wallet": "1077516575758499558773069"
       },
       {
         "exchange": "0",
         "intents": "0",
         "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
-        "wallet": "5000000"
+        "wallet": "4750000"
       }
     ],
     "config": {
@@ -211,7 +211,7 @@
       "mpc_id": "v1.signer",
       "owner_id": "fb1bc414b980fa6a5572c9e57c488f771b6ed5f8ac44774b277b81d8f2d6e5ea",
       "proposed_owner": null,
-      "seq": 1,
+      "seq": 2,
       "trading_ends_ns": "1797260058302772872",
       "version": "0.2.0"
     },
@@ -255,13 +255,18 @@
       ]
     },
     "reconciliation": {
-      "events_replayed": 4,
+      "events_replayed": 6,
       "status": "ok"
     },
     "usage": {
       "hour": "498519",
-      "spent": [],
-      "trades": 0
+      "spent": [
+        [
+          "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "250000"
+        ]
+      ],
+      "trades": 1
     }
   },
   "schema": "sledgit-league/3"
