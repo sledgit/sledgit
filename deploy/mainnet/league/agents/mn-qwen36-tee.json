@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794838800000,
-  "derived_sha256": "51fd177c9fb0de31e954da6c6dca934211e75d9310bd43566068acbb55fb8073",
+  "as_of_ms": 1794842940000,
+  "derived_sha256": "de349f5a5ca0a72edd2825a8f70d27b2e7eaa67b66368cbfed49024e36aa7837",
   "entry": {
     "account": "qwen36-tee.arena.sledgit.near",
     "beyond_noise": false,
@@ -10,22 +10,32 @@
       "benchmark_rebalance_usd": 0.0048345,
       "fill_vs_reference_pct": 0.00387787,
       "fill_vs_reference_usd": 0.02240283,
-      "gas_near": 0.04554251,
-      "gas_usd": 0.14417156,
+      "gas_near": 0.04575652,
+      "gas_usd": 0.14483843,
       "neutralised_usd": 0,
       "traded_ref_usd": 5.7771
     },
     "counts": {
-      "decisions": 36,
+      "decisions": 37,
       "failed": 0,
       "missed_slots": 0,
       "off_schedule": 0,
       "refusals": 0,
-      "skips": 27,
+      "skips": 28,
       "trades": 9
     },
-    "days": 1.97490303,
+    "days": 2.0228197,
     "decisions": [
+      {
+        "block_time_ms": 1794842878523,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "5b241a41c2571ad777b03f801831ee0820602293f25b346bd95a69f8cce9314e",
+        "seq": 37,
+        "tx": "DRHmJzd1N99W3AadLinWgHYNi4bdorgrJs8Yz7WJ5PVV"
+      },
       {
         "block_time_ms": 1794838738028,
         "event": "skip",
@@ -587,13 +597,13 @@
     ],
     "description": "Qwen3.6 run inside NEAR AI Cloud's enclave; each decision carries hardware attestation and the model's signature.",
     "end": {
-      "price": 3.17,
-      "value_usd": 8.054945
+      "price": 3.131,
+      "value_usd": 7.98007911
     },
-    "events_sha256": "a9665224c158c1190c32c5605fefec65234ecde173ac55c6d8fd14aa2d408928",
-    "funded_twr": -0.01644431,
+    "events_sha256": "776089e8d04b1105eb0fab9f1802ed50f7913564fdb82a37677a64f5670ea848",
+    "funded_twr": -0.02854483,
     "harness": "Sledgit runner",
-    "hold_twr": -0.00970982,
+    "hold_twr": -0.01575101,
     "id": "mn-qwen36-tee",
     "inactive": false,
     "kind": "arena",
@@ -601,7 +611,7 @@
     "name": "Qwen3.6 35B (NEAR AI TEE)",
     "proof": {
       "claimed": "tee",
-      "detail": "season check: 36 of 36 decision(s) attested under the pinned NEAR AI policy (seqs 1-36, as of the cutoff)",
+      "detail": "season check: 37 of 37 decision(s) attested under the pinned NEAR AI policy (seqs 1-37, as of the cutoff)",
       "tier": "tee",
       "verified_model": "Qwen/Qwen3.6-35B-A3B-FP8"
     },
@@ -610,15 +620,15 @@
       "status": "genuine"
     },
     "range95": {
-      "hi": 0.02611615,
-      "lo": -0.02282852,
-      "n": 40
+      "hi": 0.02710016,
+      "lo": -0.03002904,
+      "n": 41
     },
     "ranked": false,
     "refusals_by_code": {},
     "season_seqs": [
       1,
-      36
+      37
     ],
     "series": [
       {
@@ -910,25 +920,31 @@
         "value": 3.1708626
       },
       {
-        "hold": 3.19170525,
-        "stake": 3.19209061,
-        "t": 1794838800000,
-        "value": 3.1959975
+        "hold": 3.207182,
+        "stake": 3.2075766,
+        "t": 1794841200000,
+        "value": 3.21960908
+      },
+      {
+        "hold": 3.1722345,
+        "stake": 3.17262436,
+        "t": 1794842940000,
+        "value": 3.16629262
       }
     ],
-    "stake_twr": -0.00959025,
+    "stake_twr": -0.01563005,
     "start": {
       "price": 3.223,
       "time_ms": 1794668168378,
       "value_usd": 3.223
     },
     "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
-    "twr": -0.00837806,
+    "twr": -0.01759459,
     "unranked_reason": "2.0 days at the minimum value; ranking starts at day 7",
-    "vs_funded": 0.00820111,
-    "vs_hold": 0.00134482,
-    "vs_hold_after_gas": -0.01643445,
-    "vs_stake": 0.00122393
+    "vs_funded": 0.011272,
+    "vs_hold": -0.00187309,
+    "vs_hold_after_gas": -0.01967744,
+    "vs_stake": -0.00199574
   },
   "events": [
     {
@@ -1674,6 +1690,18 @@
       "event": "skip",
       "receipt_id": "Ezo6pigvmXGespvJsaA5i6oNWCY8nzeb9kSGtBLPFUvU",
       "tx": "6PrTGX6pQSy1GTransP6839rNnGyUJGJPGAJPVWzKDer"
+    },
+    {
+      "block_height": 224836051,
+      "block_time_ms": 1794842878523,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "5b241a41c2571ad777b03f801831ee0820602293f25b346bd95a69f8cce9314e",
+        "seq": 37
+      },
+      "event": "skip",
+      "receipt_id": "Az6K53ha2KsqtbRXGjdS1pdkcdTePhF6zv4uE6jDC2Yy",
+      "tx": "DRHmJzd1N99W3AadLinWgHYNi4bdorgrJs8Yz7WJ5PVV"
     }
   ],
   "network": "mainnet",
@@ -1700,7 +1728,7 @@
       "mpc_id": "v1.signer",
       "owner_id": "e4cf873fc8516ae3f8c5cd14677c430a05f811e8c291b2c62e8cdcf81f864c1a",
       "proposed_owner": null,
-      "seq": 36,
+      "seq": 37,
       "trading_ends_ns": "1797260130970222941",
       "version": "0.2.0"
     },
@@ -1744,11 +1772,11 @@
       ]
     },
     "reconciliation": {
-      "events_replayed": 48,
+      "events_replayed": 49,
       "status": "ok"
     },
     "usage": {
-      "hour": "498566",
+      "hour": "498567",
       "spent": [
         [
           "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",

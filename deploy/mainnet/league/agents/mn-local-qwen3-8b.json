@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794838800000,
-  "derived_sha256": "51fd177c9fb0de31e954da6c6dca934211e75d9310bd43566068acbb55fb8073",
+  "as_of_ms": 1794842940000,
+  "derived_sha256": "de349f5a5ca0a72edd2825a8f70d27b2e7eaa67b66368cbfed49024e36aa7837",
   "entry": {
     "account": "local-qwen3-8b.arena.sledgit.near",
     "beyond_noise": false,
@@ -8,24 +8,56 @@
       "benchmark_cost_rate": 0.003,
       "benchmark_cost_rate_source": "fixed published rate: the Rhea wNEAR/USDC pool fee, 0.30% (pool 4512)",
       "benchmark_rebalance_usd": 0.0048375,
-      "fill_vs_reference_pct": 0.00355166,
-      "fill_vs_reference_usd": 0.0816235,
-      "gas_near": 0.0880048,
-      "gas_usd": 0.27588792,
+      "fill_vs_reference_pct": 0.00347932,
+      "fill_vs_reference_usd": 0.08398305,
+      "gas_near": 0.09243565,
+      "gas_usd": 0.28969445,
       "neutralised_usd": 0,
-      "traded_ref_usd": 22.9818
+      "traded_ref_usd": 24.1378
     },
     "counts": {
-      "decisions": 38,
+      "decisions": 39,
       "failed": 0,
       "missed_slots": 0,
       "off_schedule": 0,
       "refusals": 0,
       "skips": 19,
-      "trades": 19
+      "trades": 20
     },
-    "days": 1.97573652,
+    "days": 2.02365318,
     "decisions": [
+      {
+        "amount_in": "1156000",
+        "amount_out": "370231208926681959723116",
+        "block_time_ms": 1794842865197,
+        "cost_usd": 0.00235955,
+        "event": "trade",
+        "fill_price": 3.12237319,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "dd0431256209d8b59333e4eaf8ea21a3c38507854a4b76309142632bcc272893",
+        "ref_price": 3.116,
+        "seq": 39,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "GVSgGkRFL8eByJf9ar6yoabr4R3YTFiNUaZHMJyx2fPt",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "1156000",
+        "block_time_ms": 1794842857045,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "dd0431256209d8b59333e4eaf8ea21a3c38507854a4b76309142632bcc272893",
+        "seq": 39,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "GVSgGkRFL8eByJf9ar6yoabr4R3YTFiNUaZHMJyx2fPt"
+      },
       {
         "amount_in": "1200000000000000000000000",
         "amount_out": "3788415",
@@ -827,13 +859,13 @@
     ],
     "description": "A local model on a laptop via Ollama. Harness and model are the operator's word; the vault still enforces every limit.",
     "end": {
-      "price": 3.17,
-      "value_usd": 8.08663542
+      "price": 3.131,
+      "value_usd": 8.04726718
     },
-    "events_sha256": "00b695b16a3b8eb621a9c796a9c968a7658e3ca27fd60fda0aa925ff2f18c334",
-    "funded_twr": -0.01705426,
+    "events_sha256": "1201fcd1d118f518861fc4360c6ef707ddb71106459251423a0f449a7ea62d2a",
+    "funded_twr": -0.02914729,
     "harness": "Sledgit runner + Ollama",
-    "hold_twr": -0.01001434,
+    "hold_twr": -0.01605178,
     "id": "mn-local-qwen3-8b",
     "inactive": false,
     "kind": "arena",
@@ -849,15 +881,15 @@
       "status": "genuine"
     },
     "range95": {
-      "hi": 0.02799614,
-      "lo": -0.04092878,
+      "hi": 0.02926855,
+      "lo": -0.03974168,
       "n": 29
     },
     "ranked": false,
     "refusals_by_code": {},
     "season_seqs": [
       1,
-      38
+      39
     ],
     "series": [
       {
@@ -1149,25 +1181,31 @@
         "value": 3.14661706
       },
       {
-        "hold": 3.19270375,
-        "stake": 3.19308927,
-        "t": 1794838800000,
-        "value": 3.17014988
+        "hold": 3.2081805,
+        "stake": 3.20857527,
+        "t": 1794841200000,
+        "value": 3.1834126
+      },
+      {
+        "hold": 3.173233,
+        "stake": 3.17362302,
+        "t": 1794842940000,
+        "value": 3.15471661
       }
     ],
-    "stake_twr": -0.0098948,
+    "stake_twr": -0.01593085,
     "start": {
       "price": 3.225,
       "time_ms": 1794668096365,
       "value_usd": 3.225
     },
     "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
-    "twr": -0.01700779,
+    "twr": -0.0217933,
     "unranked_reason": "2.0 days at the minimum value; ranking starts at day 7",
-    "vs_funded": 0.00004728,
-    "vs_hold": -0.00706419,
-    "vs_hold_after_gas": -0.04020548,
-    "vs_stake": -0.00718408
+    "vs_funded": 0.00757477,
+    "vs_hold": -0.00583518,
+    "vs_hold_after_gas": -0.04067025,
+    "vs_stake": -0.00595736
   },
   "events": [
     {
@@ -2197,6 +2235,44 @@
       "event": "trade",
       "receipt_id": "FpV84fsteosuC5JTokjgqszAZyiqAwykuJCCMhdWGy6H",
       "tx": "Ev45rysoL14xbPvF574LJcXAtHxKCUD4Nmnpf9mXobwQ"
+    },
+    {
+      "block_height": 224836013,
+      "block_time_ms": 1794842857045,
+      "data": {
+        "amount_in": "1156000",
+        "min_amount_out": "173400000000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "dd0431256209d8b59333e4eaf8ea21a3c38507854a4b76309142632bcc272893",
+        "seq": 39,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "EL9M85E8UwMUXJtFe5Vorda2YutjCyN1MSd8PM2zgrAe",
+      "tx": "GVSgGkRFL8eByJf9ar6yoabr4R3YTFiNUaZHMJyx2fPt"
+    },
+    {
+      "block_height": 224836027,
+      "block_time_ms": 1794842865197,
+      "data": {
+        "amount_in": "1156000",
+        "amount_out": "370231208926681959723116",
+        "min_amount_out": "366528896837415140125884",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "370231208926681959723116",
+        "receipt_hash": "dd0431256209d8b59333e4eaf8ea21a3c38507854a4b76309142632bcc272893",
+        "returned": true,
+        "seq": 39,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "7SM2EmDX8i5MJGhwZjBDJanP7nqzbY8RUtCYo78vVJe7",
+      "tx": "GVSgGkRFL8eByJf9ar6yoabr4R3YTFiNUaZHMJyx2fPt"
     }
   ],
   "network": "mainnet",
@@ -2206,13 +2282,13 @@
         "exchange": "0",
         "intents": "0",
         "token": "wrap.near",
-        "wallet": "1091337356077666403745317"
+        "wallet": "1461568565004348363468433"
       },
       {
         "exchange": "0",
         "intents": "0",
         "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
-        "wallet": "4627096"
+        "wallet": "3471096"
       }
     ],
     "config": {
@@ -2223,7 +2299,7 @@
       "mpc_id": "v1.signer",
       "owner_id": "fb1bc414b980fa6a5572c9e57c488f771b6ed5f8ac44774b277b81d8f2d6e5ea",
       "proposed_owner": null,
-      "seq": 38,
+      "seq": 39,
       "trading_ends_ns": "1797260058302772872",
       "version": "0.2.0"
     },
@@ -2267,19 +2343,19 @@
       ]
     },
     "reconciliation": {
-      "events_replayed": 60,
+      "events_replayed": 62,
       "status": "ok"
     },
     "usage": {
-      "hour": "498566",
+      "hour": "498567",
       "spent": [
         [
           "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
-          "7155250"
+          "8311250"
         ],
         [
           "wrap.near",
-          "2400000000000000000000000"
+          "1200000000000000000000000"
         ]
       ],
       "trades": 1
