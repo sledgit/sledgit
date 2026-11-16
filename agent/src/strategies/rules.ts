@@ -1,7 +1,7 @@
-// House strategies, version 2: deterministic rules, published with a hash ("open rules"). A rule reads only the tick's
+// House strategies, version 3: deterministic rules, published with a hash ("open rules"). A rule reads only the tick's
 // recorded inputs: closed daily candles, vault balances, policy, usage, and the vault's own on-chain decision history
 // with the slot block (`chain`). Nothing it reads depends on when the operator sends the tick, so anyone can re-run a
-// receipt and get the same decision. Version 1 stays frozen in rules-v1.ts for the receipts made with it.
+// receipt and get the same decision. Versions 1 and 2 stay frozen in rules-v1.ts and rules-v2.ts for their receipts.
 import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { canonical, type Json } from "../receipt.js";
@@ -49,12 +49,12 @@ function uniforms(seed: string): [number, number, number] {
 
 export const STRATEGIES: Strategy[] = [
   {
-    id: "rebalancer", version: 2, params: { drift: 0.10, weight: 0.5 },
+    id: "rebalancer", version: 3, params: { drift: 0.10, weight: 0.5 },
     rule: "Back to 50/50 when the NEAR weight, valued at the last daily close, drifts more than 10 points.",
     target: (_x, w, s) => (Math.abs(w - num(s, "weight")) > num(s, "drift") ? num(s, "weight") : null),
   },
   {
-    id: "trend", version: 2, params: { sma_days: 50 },
+    id: "trend", version: 3, params: { sma_days: 50 },
     rule: "All NEAR when the last daily close is above its 50-day average, all USDC when below.",
     target: (x, _w, s) => {
       const n = num(s, "sma_days");
@@ -66,7 +66,7 @@ export const STRATEGIES: Strategy[] = [
     },
   },
   {
-    id: "breakout", version: 2, params: { enter_days: 55, exit_days: 20 },
+    id: "breakout", version: 3, params: { enter_days: 55, exit_days: 20 },
     rule: "Enter on a close above the prior 55-day high and keep buying toward all NEAR until a close below the prior "
       + "20-day low; then keep selling toward all USDC until the next entry. In or out is the side of the vault's last "
       + "on-chain trade request.",
@@ -85,7 +85,7 @@ export const STRATEGIES: Strategy[] = [
     },
   },
   {
-    id: "hold", version: 2, params: { weight: 0.5 },
+    id: "hold", version: 3, params: { weight: 0.5 },
     rule: "Move to 50/50 once, then never trade: once the vault has any on-chain trade request, it only holds.",
     target: (x, _w, s) => {
       if (!x.chain) return "no_chain_state";
@@ -93,11 +93,27 @@ export const STRATEGIES: Strategy[] = [
     },
   },
   {
-    id: "luck", version: 2, params: { p_trade: 0.25, min_frac: 0.1, max_frac: 0.5, seed: "iron-trade-luck-v2" },
+    id: "luck", version: 3, params: { p_trade: 0.25, min_frac: 0.1, max_frac: 0.5, seed: "sledgit-luck-v3" },
     rule: "Random trades under the same limits: each tick, with probability 0.25, buy or sell 10-50% of the remaining "
       + "cap (per trade and rolling 24 h). The randomness is sha256(seed|vault|seq|slot block hash): the vault's own "
       + "decision number and the hash of the first block at or after the scheduled slot, which nobody knows earlier.",
     target: () => null, // decided in decide(): it sizes from the cap, not a weight
+  },
+  {
+    id: "vol-target", version: 3, params: { target_vol: 0.40, days: 30, max: 0.9, band: 0.10 },
+    rule: "NEAR weight = 40% annual volatility divided by NEAR's realised volatility over the last 30 daily closes, "
+      + "capped at 90%. Trades only when the target is more than 10 points from the current weight.",
+    target: (x, w, s) => {
+      const c = closes(x);
+      const n = num(s, "days");
+      if (c.length < n + 1) return "not_enough_history";
+      const r = c.slice(-n - 1).slice(1).map((p, i) => Math.log(p / c[c.length - n - 1 + i]));
+      const m = r.reduce((a, b) => a + b, 0) / n;
+      const vol = Math.sqrt(r.reduce((a, b) => a + (b - m) ** 2, 0) / (n - 1)) * Math.sqrt(365);
+      if (!(vol > 0)) return "no_volatility";
+      const t = Math.min(num(s, "max"), num(s, "target_vol") / vol);
+      return Math.abs(t - w) > num(s, "band") ? t : null;
+    },
   },
 ];
 
@@ -114,7 +130,7 @@ export const RULES_SOURCE_SHA256 = createHash("sha256")
 /** The published spec; its sha256 is the strategy hash recorded as prompt_sha256 in every receipt. */
 export function spec(s: Strategy): Json {
   return {
-    kind: "iron-trade-rules", id: s.id, version: s.version, rule: s.rule, params: s.params, source_sha256: RULES_SOURCE_SHA256,
+    kind: "sledgit-rules", id: s.id, version: s.version, rule: s.rule, params: s.params, source_sha256: RULES_SOURCE_SHA256,
     min_trade: MIN_TRADE, decimals: DP,
     inputs: {
       price: "close of the last closed daily candle (Binance NEARUSDT 1d); the spot reference price is recorded but not read",

@@ -35,22 +35,6 @@ const trendOverlay: Strategy = {
   },
 };
 
-const volTarget: Strategy = {
-  id: "vol-target", version: 1, params: { target_vol: 0.40, days: 30, max: 0.9, band: 0.10 },
-  rule: "NEAR weight = 40% annual volatility divided by NEAR's realised volatility over 30 days, capped at 90%. Trades "
-    + "only when the target is more than 10 points from the current weight.",
-  target: (x, w, s) => {
-    const c = closes(x);
-    const n = num(s, "days");
-    if (c.length < n + 1) return "not_enough_history";
-    const r = c.slice(-n - 1).slice(1).map((p, i) => Math.log(p / c[c.length - n - 1 + i]));
-    const m = r.reduce((a, b) => a + b, 0) / n;
-    const vol = Math.sqrt(r.reduce((a, b) => a + (b - m) ** 2, 0) / (n - 1)) * Math.sqrt(365);
-    const t = Math.min(num(s, "max"), num(s, "target_vol") / vol);
-    return Math.abs(t - w) > num(s, "band") ? t : null;
-  },
-};
-
 export const SKILLS: Skill[] = [
   { strategy: house("hold"), name: "Hold 50/50", status: "house", stake: false, candles: 60,
     evidence: "The benchmark every skill must beat." },
@@ -62,12 +46,12 @@ export const SKILLS: Skill[] = [
     evidence: "Carry plus a wide rebalance band." },
   { strategy: trendOverlay, name: "Slow trend overlay", status: "research", stake: false, candles: 200,
     evidence: "Slow time-series momentum survives costs in crypto studies, mostly by cutting crash losses." },
-  { strategy: volTarget, name: "Volatility target", status: "research", stake: false, candles: 31,
+  { strategy: house("vol-target"), name: "Volatility target", status: "house", stake: false, candles: 60,
     evidence: "Volatility scaling lowers drawdowns; return effects are mixed." },
   { strategy: house("trend"), name: "Trend 50-day", status: "house", stake: false, candles: 60,
     evidence: "Best in-sample of 26 trend settings in our earlier test, so likely overfit." },
   { strategy: house("breakout"), name: "Breakout 55/20", status: "house", stake: false, candles: 60,
     evidence: "Classic turtle-style channel breakout." },
   { strategy: house("luck"), name: "Luck (random)", status: "house", stake: false, candles: 60,
-    evidence: "Random trades under the same limits: what no skill looks like." },
+    evidence: "Random trades under the same limits. A new random seed swings its result by tens of points a year: a reminder that a good backtest can be pure luck." },
 ];

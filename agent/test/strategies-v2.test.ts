@@ -8,8 +8,9 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
 import { KeyPair } from "near-api-js";
-import { decide, strategyById, strategyPrompt, RULES_SOURCE_SHA256, type RuleInput } from "../src/strategies/rules.js";
+import { decide, strategyById, strategyPrompt, RULES_SOURCE_SHA256, type RuleInput } from "../src/strategies/rules-v2.js";
 import * as v1 from "../src/strategies/rules-v1.js";
+import * as v3 from "../src/strategies/rules.js";
 import { PUBLISHED, publishedByHash } from "../src/strategies/registry.js";
 import { slotStart, slotBlock, checkSlotBlock, chainState, ARCHIVAL_RPC, type ChainState } from "../src/strategies/schedule.js";
 import { houseRerun, houseCheck } from "../src/strategies/rerun.js";
@@ -155,7 +156,7 @@ test("P3-6: breakout keeps buying toward all NEAR across capped ticks until it g
 // ---------------------------------------------------------------- P3-7 hashes and published specs
 
 test("P3-7: the v2 source hash ignores CRLF; every published version and spec file is accounted for", () => {
-  const src = readFileSync(join(HERE, "..", "src", "strategies", "rules.ts"), "utf8");
+  const src = readFileSync(join(HERE, "..", "src", "strategies", "rules-v2.ts"), "utf8");
   const crlf = src.replace(/\n/g, "\r\n");
   assert.equal(createHash("sha256").update(crlf.replace(/\r\n/g, "\n")).digest("hex"), RULES_SOURCE_SHA256);
   // The frozen v1 file still hashes to the value the 9 published receipts recorded.
@@ -246,7 +247,7 @@ test("P3-2/P3-17: house refuses off-schedule ticks unless asked, records the fla
   const r = JSON.parse(readFileSync(join(forced.dir, "receipts.jsonl"), "utf8").trim());
   assert.equal(r.inputs.chain.off_schedule, true);
   assert.deepEqual(r.inputs.history, [], "house rules get no local history");
-  assert.equal(r.prompt_sha256, strategyPrompt(strategyById("luck")).sha256);
+  assert.equal(r.prompt_sha256, v3.strategyPrompt(v3.strategyById("luck")).sha256);
 
   for (const extra of [["--harness", "x"], ["--prompt", "p.md"], ["--attest", "tee"], ["--model", "m"]]) {
     await assert.rejects(runHouse(["house", "--strategy", "luck", ...extra], false), /house takes no/);

@@ -1,29 +1,34 @@
 {
  "rules": {
   "rebalancer": {
-   "version": 2,
+   "version": 3,
    "rule": "Back to 50/50 when the NEAR weight, valued at the last daily close, drifts more than 10 points.",
-   "sha256": "3544d9ef12901bf4b3c9e798b406ef8c30ce0778bc11f5dc866679243882edf6"
+   "sha256": "6f0ac78a9682a41d11ef94f5f20d695c9664a5b899abf285d13637ea701eb746"
   },
   "trend": {
-   "version": 2,
+   "version": 3,
    "rule": "All NEAR when the last daily close is above its 50-day average, all USDC when below.",
-   "sha256": "d1278515eb3548725ddeed63263a1b6fcc76631d58e85e78b39cc2eaec53f094"
+   "sha256": "4c636738548c146c3846736949a55c2ce3108640d37c912a0f0cb9f1b42f5f90"
   },
   "breakout": {
-   "version": 2,
+   "version": 3,
    "rule": "Enter on a close above the prior 55-day high and keep buying toward all NEAR until a close below the prior 20-day low; then keep selling toward all USDC until the next entry. In or out is the side of the vault's last on-chain trade request.",
-   "sha256": "c7fb1b78c53eaa599a2bc0003dcac4639151ab9a54c75eafbda3443198936f4d"
+   "sha256": "6c4a329a48021137f6b957f6de73f0bf2547a430aa0e498a651e462b4e7474c4"
   },
   "hold": {
-   "version": 2,
+   "version": 3,
    "rule": "Move to 50/50 once, then never trade: once the vault has any on-chain trade request, it only holds.",
-   "sha256": "95150baf2bfc66ffa9d4ebd8161eb3d9ed0382b01c95755101e4b5d3b8354583"
+   "sha256": "7803b5e3f53f4dc67413da366c1586899df264d2fcf1cf2353a52f4c01ac7f39"
   },
   "luck": {
-   "version": 2,
+   "version": 3,
    "rule": "Random trades under the same limits: each tick, with probability 0.25, buy or sell 10-50% of the remaining cap (per trade and rolling 24 h). The randomness is sha256(seed|vault|seq|slot block hash): the vault's own decision number and the hash of the first block at or after the scheduled slot, which nobody knows earlier.",
-   "sha256": "ba2d2bdc50de214995ef238a6b2f78e0c4fc3778dd6fde2dc31fa9797275e6e7"
+   "sha256": "071525cf13da900e320db1e1f9dfd0a7e1d917dc52984467d154040167f9517a"
+  },
+  "vol-target": {
+   "version": 3,
+   "rule": "NEAR weight = 40% annual volatility divided by NEAR's realised volatility over the last 30 daily closes, capped at 90%. Trades only when the target is more than 10 points from the current weight.",
+   "sha256": "e64164068e491a9d536b0285916cf9e20793707ebb17d8de3c1f6fa1bc339d56"
   }
  },
  "prompts": {

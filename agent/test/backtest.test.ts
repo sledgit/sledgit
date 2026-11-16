@@ -36,3 +36,24 @@ test("backtest: the committed history gives a reproducible report with no false 
   assert.deepEqual(a, b);
   for (const s of a.skills) if (s.verdict.startsWith("promising")) assert.ok(s.p_vs_hold! < a.significance.alpha);
 });
+
+test("vol-target v3: low volatility caps at 90%, high volatility cuts NEAR, small moves hold", async () => {
+  const { decide, strategyById } = await import("../src/strategies/rules.js");
+  const s = strategyById("vol-target");
+  const day = (i: number, p: number): Candle => [i * 86_400_000, String(p), String(p), String(p)];
+  const calm = Array.from({ length: 60 }, (_, i) => day(i, 3 * (1 + 0.001 * (i % 2))));
+  const wild = Array.from({ length: 60 }, (_, i) => day(i, 3 * (i % 2 ? 1.15 : 0.87)));
+  const x = (k: Candle[], near: number, usd: number) => ({
+    vault: { base: "wrap.near", quote: "usdc", balances: { "wrap.near": String(near), usdc: String(usd) },
+      policy: { tokens: [{ token: "usdc", max_per_trade: "1000", max_per_day: "1000" }, { token: "wrap.near", max_per_trade: "1000", max_per_day: "1000" }] },
+      usage: { spent_24h: {} } },
+    market: { candles: k },
+  });
+  const p = Number(calm[59][3]);
+  assert.equal(s.target(x(calm, 0, 100), 0, s), 0.9);
+  const t = s.target(x(wild, 50 / Number(wild[59][3]), 50), 0.5, s) as number;
+  assert.ok(t > 0 && t < 0.2, String(t));
+  assert.equal(s.target(x(calm, 85 / p, 15), 0.85, s), null);
+  assert.equal(s.target(x(calm.slice(0, 20), 0, 100), 0, s), "not_enough_history");
+  assert.equal(decide(s, x(calm, 0, 100), "v").action, "buy");
+});

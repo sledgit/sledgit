@@ -19,7 +19,7 @@ const D = data as unknown as { data: { first: string; last: string; out_of_sampl
 const pct = (n: number, sign = true) => `${sign && n > 0 ? "+" : ""}${(n * 100).toFixed(1)}%`;
 const tone = (n: number) => ({ color: n > 0 ? "var(--up)" : n < 0 ? "var(--red)" : undefined });
 const STATUS: Record<string, string> = {
-  house: "Live on testnet as a house vault",
+  house: "Published house rule: open and re-runnable",
   research: "Research: not trading live yet",
 };
 

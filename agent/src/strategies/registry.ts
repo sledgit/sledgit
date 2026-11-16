@@ -4,7 +4,8 @@ import { createHash } from "node:crypto";
 import { canonical, type Json } from "../receipt.js";
 import type { Decision } from "../decision.js";
 import * as v1 from "./rules-v1.js";
-import * as v2 from "./rules.js";
+import * as v2 from "./rules-v2.js";
+import * as v3 from "./rules.js";
 
 export interface PublishedStrategy {
   hash: string;
@@ -25,6 +26,11 @@ function entries(): PublishedStrategy[] {
     const spec = v2.spec(s);
     out.push({ hash: createHash("sha256").update(canonical(spec)).digest("hex"), id: s.id, version: 2, spec,
       decide: (x, vault) => v2.decide(s, x as v2.RuleInput, vault) });
+  }
+  for (const s of v3.STRATEGIES) {
+    const spec = v3.spec(s);
+    out.push({ hash: createHash("sha256").update(canonical(spec)).digest("hex"), id: s.id, version: 3, spec,
+      decide: (x, vault) => v3.decide(s, x as v3.RuleInput, vault) });
   }
   return out;
 }

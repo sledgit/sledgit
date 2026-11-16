@@ -131,7 +131,7 @@ function StrategyPanel({ e }: { e: LeagueEntry }) {
   if (rule) body = <>
     <p>Open rule, no model: {rule.rule}</p>
     <dl className="kv">
-      <dt>Spec</dt><dd className="mono">{e.model} v{rule.version} · <Hash h={rule.sha256} /></dd>
+      <dt>Spec</dt><dd className="mono">{e.model} · <Hash h={recorded ?? rule.sha256} /></dd>
       <dt>Rerun</dt><dd>deterministic: the same prices give the same decisions</dd>
     </dl>{proof}</>;
   else if (desk) body = <>
