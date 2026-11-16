@@ -1,31 +1,819 @@
 {
-  "as_of_ms": 1794668880000,
-  "derived_sha256": "031d5d8937494a1876a0e14e0d85e5ee61c26f73ffd3c8c0362d27762e85389a",
+  "as_of_ms": 1794838800000,
+  "derived_sha256": "51fd177c9fb0de31e954da6c6dca934211e75d9310bd43566068acbb55fb8073",
   "entry": {
     "account": "local-qwen3-8b.arena.sledgit.near",
-    "beyond_noise": null,
+    "beyond_noise": false,
     "costs": {
       "benchmark_cost_rate": 0.003,
       "benchmark_cost_rate_source": "fixed published rate: the Rhea wNEAR/USDC pool fee, 0.30% (pool 4512)",
       "benchmark_rebalance_usd": 0.0048375,
-      "fill_vs_reference_pct": null,
-      "fill_vs_reference_usd": 0,
-      "gas_near": 0.00020408,
-      "gas_usd": 0.00065795,
+      "fill_vs_reference_pct": 0.00355166,
+      "fill_vs_reference_usd": 0.0816235,
+      "gas_near": 0.0880048,
+      "gas_usd": 0.27588792,
       "neutralised_usd": 0,
-      "traded_ref_usd": 0
+      "traded_ref_usd": 22.9818
     },
     "counts": {
-      "decisions": 1,
+      "decisions": 38,
       "failed": 0,
       "missed_slots": 0,
       "off_schedule": 0,
       "refusals": 0,
-      "skips": 1,
-      "trades": 0
+      "skips": 19,
+      "trades": 19
     },
-    "days": 0.00906985,
+    "days": 1.97573652,
     "decisions": [
+      {
+        "amount_in": "1200000000000000000000000",
+        "amount_out": "3788415",
+        "block_time_ms": 1794838721208,
+        "cost_usd": 0.025185,
+        "event": "trade",
+        "fill_price": 3.1570125,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "bdd2168c9236893009fbf6f4fc5afdb10effdf8fc335012356cd9404b84d75c9",
+        "ref_price": 3.178,
+        "seq": 38,
+        "side": "sell",
+        "token_in": "wrap.near",
+        "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "tx": "Ev45rysoL14xbPvF574LJcXAtHxKCUD4Nmnpf9mXobwQ",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "1200000000000000000000000",
+        "block_time_ms": 1794838713279,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "bdd2168c9236893009fbf6f4fc5afdb10effdf8fc335012356cd9404b84d75c9",
+        "seq": 38,
+        "side": "sell",
+        "token_in": "wrap.near",
+        "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "tx": "Ev45rysoL14xbPvF574LJcXAtHxKCUD4Nmnpf9mXobwQ"
+      },
+      {
+        "block_time_ms": 1794834547506,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "49e29504849706fdc0b7b23480329bf80d155a6c858a3ba4c6efe0e02a37bf02",
+        "seq": 37,
+        "tx": "BCke4cqcKsrtrVUVJB4n9DyawmXsZZgLsMSowDWrNDud"
+      },
+      {
+        "block_time_ms": 1794830096097,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "54086077327d2ab1eeb67d7f168232d23e88adb56ed9909ddcf13b94662ca077",
+        "seq": 36,
+        "tx": "B5FLVEdAnaMRi6wiA6pCkCp7Y8eHS583HjsRZAJCC96Q"
+      },
+      {
+        "block_time_ms": 1794825923742,
+        "event": "skip",
+        "in_season": true,
+        "note": "refused:daily_cap sell 0.20967",
+        "on_schedule": null,
+        "receipt_hash": "88f86705626455abe5e78bd8cdbc5bb5f01981e692f45b9cbc05dba5a7f1f6a3",
+        "seq": 35,
+        "tx": "GZc5ngkLxeD5p6TF8LZyG1rzYdw2995Wi5U6S2qsiRS3"
+      },
+      {
+        "amount_in": "279000",
+        "amount_out": "87788683886376364864089",
+        "block_time_ms": 1794817357569,
+        "cost_usd": 0.00035872,
+        "event": "trade",
+        "fill_price": 3.17808615,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "59c39e10d8e7f1af66e5b63dcd12489ac8b4e2d86226ba69d48bdb219dde47bc",
+        "ref_price": 3.174,
+        "seq": 34,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "GvcdtEnDgKW3LdxbztQDHwMAr3pTegpaFeMUGW3r5xSs",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "279000",
+        "block_time_ms": 1794817349607,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "59c39e10d8e7f1af66e5b63dcd12489ac8b4e2d86226ba69d48bdb219dde47bc",
+        "seq": 34,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "GvcdtEnDgKW3LdxbztQDHwMAr3pTegpaFeMUGW3r5xSs"
+      },
+      {
+        "block_time_ms": 1794813242853,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "519eebdac9c0b87e802954eeafe0162d00d81ea0c4b42d4b44915d4b4cdf94c3",
+        "seq": 33,
+        "tx": "5pmvsKEZwmwrEqbJkFPdBTZUbMTpornyicQaYNz8KeKr"
+      },
+      {
+        "amount_in": "370000",
+        "amount_out": "116800761649415305808519",
+        "block_time_ms": 1794809215625,
+        "cost_usd": 0.0020776,
+        "event": "trade",
+        "fill_price": 3.16778756,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "71c4a9eec34693f1c94ebd4888fcdbc96791c29f3f58aeeee7a215f410847528",
+        "ref_price": 3.15,
+        "seq": 32,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "2tn8zniVVkCycazuQkf31WBJSqcQd6xo2SsPZHBfqFya",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "370000",
+        "block_time_ms": 1794809207807,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "71c4a9eec34693f1c94ebd4888fcdbc96791c29f3f58aeeee7a215f410847528",
+        "seq": 32,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "2tn8zniVVkCycazuQkf31WBJSqcQd6xo2SsPZHBfqFya"
+      },
+      {
+        "block_time_ms": 1794805235722,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "56950cc24dfbcc8fc4d59ecf3e2f6b541fd586cb77e7201650847b7331fad4b7",
+        "seq": 31,
+        "tx": "7Vc6bzj9oMoY9fs5NvqjDqRhBnJz29FxThNok2x6H5mX"
+      },
+      {
+        "block_time_ms": 1794801227351,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "47781f7f229cd6515278ca0bbffacdf012510fc39b2cb8f1fa1d86411d4e1cde",
+        "seq": 30,
+        "tx": "7j79ugNkGACT9oVWuQGX7FDnDqzpqQASCmsvmBnkNtZ3"
+      },
+      {
+        "block_time_ms": 1794797224302,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "90bcdade0fb382f433257511e67f7de2d2f945035abe18c472c901f39e97444a",
+        "seq": 29,
+        "tx": "FEn7Q83Kg7ShHnG48fRMQXvk5ew98GSz6iyww6aKAtah"
+      },
+      {
+        "block_time_ms": 1794793291025,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "b980801949c453d2934cc9eaa17d927c01a543a012fd14c3764b23164ba88630",
+        "seq": 28,
+        "tx": "7QDtFwSim2N8JCy1y3n8jpsfcmsSfCgPYfHVKrApRPja"
+      },
+      {
+        "amount_in": "250000",
+        "amount_out": "78435160999669943925472",
+        "block_time_ms": 1794789350594,
+        "cost_usd": 0.00096836,
+        "event": "trade",
+        "fill_price": 3.18734604,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "ef4af568ea22a124ab20542f644467da353d70e4c5d2b99d5313385abe89bd39",
+        "ref_price": 3.175,
+        "seq": 27,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "hVRSRMimSCVCyZg2P42PjvGKCw2StJpqg3tBQy4GtNB",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "250000",
+        "block_time_ms": 1794789342126,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "ef4af568ea22a124ab20542f644467da353d70e4c5d2b99d5313385abe89bd39",
+        "seq": 27,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "hVRSRMimSCVCyZg2P42PjvGKCw2StJpqg3tBQy4GtNB"
+      },
+      {
+        "amount_in": "250000",
+        "amount_out": "78019406501052513927324",
+        "block_time_ms": 1794785328854,
+        "cost_usd": 0.00041592,
+        "event": "trade",
+        "fill_price": 3.20433096,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "65168395f2a6e636a74c9f629230d36207d8846d668043ba76fe8aaf88210cc1",
+        "ref_price": 3.199,
+        "seq": 26,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "24HioQpXmxDhaPJ1S6iFqC6fnTnqpRZWtTaZCsWN6E7M",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "250000",
+        "block_time_ms": 1794785320907,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "65168395f2a6e636a74c9f629230d36207d8846d668043ba76fe8aaf88210cc1",
+        "seq": 26,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "24HioQpXmxDhaPJ1S6iFqC6fnTnqpRZWtTaZCsWN6E7M"
+      },
+      {
+        "amount_in": "4006250",
+        "amount_out": "1250451227716290075188232",
+        "block_time_ms": 1794781300931,
+        "cost_usd": 0.00605652,
+        "event": "trade",
+        "fill_price": 3.20384347,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "6a2fc52f46385390d587d6979a499616df46681fc3d6b7e84d4e37faed3127eb",
+        "ref_price": 3.199,
+        "seq": 25,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "AE4cJCA3voKQXw6iP88GCTQPB5Tm5tUfFLrZraVgmwZA",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "4006250",
+        "block_time_ms": 1794781293007,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "6a2fc52f46385390d587d6979a499616df46681fc3d6b7e84d4e37faed3127eb",
+        "seq": 25,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "AE4cJCA3voKQXw6iP88GCTQPB5Tm5tUfFLrZraVgmwZA"
+      },
+      {
+        "block_time_ms": 1794777073670,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "695a19b5b4e40910cddca8a16a501baf2f9c1725e4a4d73ad29bf390772b9489",
+        "seq": 24,
+        "tx": "3H1Ws7SCJkjkLDCTD3ooTnGMYoARDyXYPrSNDTGUMR4K"
+      },
+      {
+        "amount_in": "2000000",
+        "amount_out": "628406289066684280271220",
+        "block_time_ms": 1794772943621,
+        "cost_usd": 0.00795206,
+        "event": "trade",
+        "fill_price": 3.18265433,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "f29000d58a2b5f504b473c0f0998418ad947afc05c310a783b74f0354840f228",
+        "ref_price": 3.17,
+        "seq": 23,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "5seBWmLovfR8EXk1ZKW3AnfEe31xjV4CPdWovYdpgE6J",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "2000000",
+        "block_time_ms": 1794772935634,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "f29000d58a2b5f504b473c0f0998418ad947afc05c310a783b74f0354840f228",
+        "seq": 23,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "5seBWmLovfR8EXk1ZKW3AnfEe31xjV4CPdWovYdpgE6J"
+      },
+      {
+        "block_time_ms": 1794768998103,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "07eff7bbe50e3d35bf4201bd2d50216a649c5c0a7b0eef18565c30306122f3f9",
+        "seq": 22,
+        "tx": "JDA1r74NaWzgrT1v2wVKMqW4T7EDe6wHfdNEascygwMJ"
+      },
+      {
+        "block_time_ms": 1794765069258,
+        "event": "skip",
+        "in_season": true,
+        "note": "refused:daily_cap sell 0.051435826258177919760461",
+        "on_schedule": null,
+        "receipt_hash": "89e670192cc2889f94d05c3edaf2e42c11bdc1825391c1d0237524de35423b35",
+        "seq": 21,
+        "tx": "E5fWcoCP6FQgyKofhJPGLG8hKtab4pd8GTDwL2YE1pq7"
+      },
+      {
+        "block_time_ms": 1794761159203,
+        "event": "skip",
+        "in_season": true,
+        "note": "refused:daily_cap sell 0.01285",
+        "on_schedule": null,
+        "receipt_hash": "67b8b58a24b45d0033649fec3eb25f1701819c34ca2226af4ecb625650eab104",
+        "seq": 20,
+        "tx": "DsjEhTuAF5PG7jWciFgPzMLX2WQ1B1QAuVy98NRLjicG"
+      },
+      {
+        "amount_in": "1200000000000000000000000",
+        "amount_out": "3750821",
+        "block_time_ms": 1794757196312,
+        "cost_usd": 0.013579,
+        "event": "trade",
+        "fill_price": 3.12568417,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "af32754725aaf2a5fc7cd2946b37c57d7f337f2f58aef40765f85c7ecd5a0a66",
+        "ref_price": 3.137,
+        "seq": 19,
+        "side": "sell",
+        "token_in": "wrap.near",
+        "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "tx": "3Q1cSsfAZx5iHgUhhJaZk3ibPc6HESKSdh2VJJRskqKr",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "1200000000000000000000000",
+        "block_time_ms": 1794757188223,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "af32754725aaf2a5fc7cd2946b37c57d7f337f2f58aef40765f85c7ecd5a0a66",
+        "seq": 19,
+        "side": "sell",
+        "token_in": "wrap.near",
+        "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "tx": "3Q1cSsfAZx5iHgUhhJaZk3ibPc6HESKSdh2VJJRskqKr"
+      },
+      {
+        "amount_in": "1200000000000000000000000",
+        "amount_out": "3736860",
+        "block_time_ms": 1794753263766,
+        "cost_usd": 0.01794,
+        "event": "trade",
+        "fill_price": 3.11405,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "b4ee91e40457e473379100591f4972ae52188be0b26ceb54242a63e83bea3252",
+        "ref_price": 3.129,
+        "seq": 18,
+        "side": "sell",
+        "token_in": "wrap.near",
+        "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "tx": "Avo6yZ1zGEK9mJwCd7jNJjrh1RmGMggM2KRSovn5Ti8T",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "1200000000000000000000000",
+        "block_time_ms": 1794753253986,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "b4ee91e40457e473379100591f4972ae52188be0b26ceb54242a63e83bea3252",
+        "seq": 18,
+        "side": "sell",
+        "token_in": "wrap.near",
+        "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "tx": "Avo6yZ1zGEK9mJwCd7jNJjrh1RmGMggM2KRSovn5Ti8T"
+      },
+      {
+        "block_time_ms": 1794749203935,
+        "event": "skip",
+        "in_season": true,
+        "note": "invalid_model_output",
+        "on_schedule": null,
+        "receipt_hash": "99dcdd50147e1a6de2ef7a57409d6ace89ae4b10d4213bc7c854371a4ed4a29b",
+        "seq": 17,
+        "tx": "HycGWQAsnPsgeFEuP4DEo8L9Rywv9X9qh7pyhvWBSF61"
+      },
+      {
+        "block_time_ms": 1794745049008,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "141b2acf1637c3ef5a109351bbc7d6a2269fa23dabc95b87adcc5ae7f98bdb85",
+        "seq": 16,
+        "tx": "Ep4Wx3HXuzuJmYgep9JwXAzDBaHQwvxEWy3GTPQSk3mJ"
+      },
+      {
+        "block_time_ms": 1794741008878,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "d0bee18d33f445c5fce2830c9b4395a9ee728b4052b9c1e3ed13cd810486da38",
+        "seq": 15,
+        "tx": "GTcdordF6a41ZirHc8b6ZUXvTq8Eex6ynnvYzwFwmDb"
+      },
+      {
+        "block_time_ms": 1794736782249,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "378dd83c1e3f9f4ed18dfc4df92aa33ac6156ce782191e24a3245867e43c9625",
+        "seq": 14,
+        "tx": "5GTzLaZca15KDHuMMMAsGVgiqz8LXctGSC272G7QEmgD"
+      },
+      {
+        "block_time_ms": 1794732720726,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "0e78a531a299319ccfa13abd6cc7b3cf5b895276e64ca65709190504b0a1e1ad",
+        "seq": 13,
+        "tx": "BqkKyazVoGTfmEFfbpEXyJ17zaEVZsT7MzTyZy8S8KdG"
+      },
+      {
+        "amount_in": "168750",
+        "amount_out": "53779974056722508581584",
+        "block_time_ms": 1794728481603,
+        "cost_usd": 0.00025734,
+        "event": "trade",
+        "fill_price": 3.13778508,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "793c7f0ad01bf54beb20db7bf13acf50edfd1466495bc0b8f8b9828d7dc88745",
+        "ref_price": 3.133,
+        "seq": 12,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "8hYn6pgrd3a2EVz9dTXZ5oxQgE8hGX2ATeyoBU3UTQ2w",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "168750",
+        "block_time_ms": 1794728473181,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "793c7f0ad01bf54beb20db7bf13acf50edfd1466495bc0b8f8b9828d7dc88745",
+        "seq": 12,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "8hYn6pgrd3a2EVz9dTXZ5oxQgE8hGX2ATeyoBU3UTQ2w"
+      },
+      {
+        "amount_in": "1200000",
+        "amount_out": "380134135017989014056204",
+        "block_time_ms": 1794724334892,
+        "cost_usd": 0.00485828,
+        "event": "trade",
+        "fill_price": 3.15678043,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "768c4bc801ab07976bb6b5158f9401e18475622597b48786b6da39852bfe6123",
+        "ref_price": 3.144,
+        "seq": 11,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "D7FYYdijJQRYRa3TH3tthPDWAZKg3Sc6jnSY92fTBjYQ",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "1200000",
+        "block_time_ms": 1794724326456,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "768c4bc801ab07976bb6b5158f9401e18475622597b48786b6da39852bfe6123",
+        "seq": 11,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "D7FYYdijJQRYRa3TH3tthPDWAZKg3Sc6jnSY92fTBjYQ"
+      },
+      {
+        "amount_in": "625000",
+        "amount_out": "198908624602847628253569",
+        "block_time_ms": 1794720487095,
+        "cost_usd": 0.00102364,
+        "event": "trade",
+        "fill_price": 3.14214631,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "6d43961865964e742651746e255b335254a405fb45dd8b8dd23eece3fb5ebfb0",
+        "ref_price": 3.137,
+        "seq": 10,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "6hEg6Wrv2jEButH5RBosQfXnwxgzxJnwL8ZL3a2gaq3Y",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "625000",
+        "block_time_ms": 1794720479401,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "6d43961865964e742651746e255b335254a405fb45dd8b8dd23eece3fb5ebfb0",
+        "seq": 10,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "6hEg6Wrv2jEButH5RBosQfXnwxgzxJnwL8ZL3a2gaq3Y"
+      },
+      {
+        "amount_in": "250000",
+        "amount_out": "79690251515653083426493",
+        "block_time_ms": 1794716352657,
+        "cost_usd": 0.00112734,
+        "event": "trade",
+        "fill_price": 3.13714658,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "89b746cb3ae6cab7572358d66baa503e6e83c8dc8b9ee420c37694a2e5bb9143",
+        "ref_price": 3.123,
+        "seq": 9,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "cGN9156vU3pGfL92bESziSjtreVtxBHCGQBf5kPeXF5",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "250000",
+        "block_time_ms": 1794716344177,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "89b746cb3ae6cab7572358d66baa503e6e83c8dc8b9ee420c37694a2e5bb9143",
+        "seq": 9,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "cGN9156vU3pGfL92bESziSjtreVtxBHCGQBf5kPeXF5"
+      },
+      {
+        "amount_in": "250000",
+        "amount_out": "79153458876327936048931",
+        "block_time_ms": 1794712339621,
+        "cost_usd": 0.00034999,
+        "event": "trade",
+        "fill_price": 3.15842167,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "60cbc2b9babdec91a71dbcb6ea614db92f124720a5e28e1614cca155a7df990b",
+        "ref_price": 3.154,
+        "seq": 8,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "gWefSTV7kTRAG1ter5QPayo8rTQLqJhBFKCPRmtvycp",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "250000",
+        "block_time_ms": 1794712331402,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "60cbc2b9babdec91a71dbcb6ea614db92f124720a5e28e1614cca155a7df990b",
+        "seq": 8,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "gWefSTV7kTRAG1ter5QPayo8rTQLqJhBFKCPRmtvycp"
+      },
+      {
+        "amount_in": "1000000",
+        "amount_out": "336854635005200542721119",
+        "block_time_ms": 1794708257574,
+        "cost_usd": -0.00348996,
+        "event": "trade",
+        "fill_price": 2.96863957,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "91522bac547490f0ce3548f11c56c3dcee6d82564d7c82f5a78864bc7f940cb8",
+        "ref_price": 2.979,
+        "seq": 7,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "FJzEsBeHFujChSz7PQyXpRXArTZycgWggU5rjqPyyaZz",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "1000000",
+        "block_time_ms": 1794708249429,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "91522bac547490f0ce3548f11c56c3dcee6d82564d7c82f5a78864bc7f940cb8",
+        "seq": 7,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "FJzEsBeHFujChSz7PQyXpRXArTZycgWggU5rjqPyyaZz"
+      },
+      {
+        "amount_in": "250000",
+        "amount_out": "82248436915249486795447",
+        "block_time_ms": 1794704260366,
+        "cost_usd": 0.00128073,
+        "event": "trade",
+        "fill_price": 3.03957144,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "5f8eaaa4f08dcffdc15ccf70bc835552ebc3e3527bc00b206ecdc1567f0c96ce",
+        "ref_price": 3.024,
+        "seq": 6,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "EFTHwzwtFfChhwsCEzQj7TvkWcacXJDLa2Hi3gbnMjLq",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "250000",
+        "block_time_ms": 1794704252262,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "5f8eaaa4f08dcffdc15ccf70bc835552ebc3e3527bc00b206ecdc1567f0c96ce",
+        "seq": 6,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "EFTHwzwtFfChhwsCEzQj7TvkWcacXJDLa2Hi3gbnMjLq"
+      },
+      {
+        "amount_in": "250000",
+        "amount_out": "82497292858417280598126",
+        "block_time_ms": 1794700231621,
+        "cost_usd": 0.00077568,
+        "event": "trade",
+        "fill_price": 3.03040247,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "a6be79b8d9fcf15323f8d81523cc3a6c87b6f4ed97cb2a9adb9f2f51d0cbc267",
+        "ref_price": 3.021,
+        "seq": 5,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "GpAzZNvz7QLAHbuuqiLDmnSX2A82By7BNfD8T7u4Sa9f",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "250000",
+        "block_time_ms": 1794700223307,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "a6be79b8d9fcf15323f8d81523cc3a6c87b6f4ed97cb2a9adb9f2f51d0cbc267",
+        "seq": 5,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "GpAzZNvz7QLAHbuuqiLDmnSX2A82By7BNfD8T7u4Sa9f"
+      },
+      {
+        "block_time_ms": 1794675156443,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "d7727527d0977a4ac513f5dbd45053eecbc10802cf9f47035bed076cdcf29118",
+        "seq": 4,
+        "tx": "EzUuKC5hNPxg5p2gbrFsYinvh1aZ3nLVksm3pv7VZV1L"
+      },
+      {
+        "amount_in": "250000",
+        "amount_out": "80652441651270880505919",
+        "block_time_ms": 1794674989270,
+        "cost_usd": -0.00026453,
+        "event": "trade",
+        "fill_price": 3.09972017,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "f042d12352d665123c69d47f45386e57f75494220da0f6e7212edccd2fcfb79d",
+        "ref_price": 3.103,
+        "seq": 3,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "BhBbX57EYbRgtQLAWtqxEvcfVJifKU2nrhbkEb9CdTHw",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "250000",
+        "block_time_ms": 1794674981155,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "f042d12352d665123c69d47f45386e57f75494220da0f6e7212edccd2fcfb79d",
+        "seq": 3,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "BhBbX57EYbRgtQLAWtqxEvcfVJifKU2nrhbkEb9CdTHw"
+      },
+      {
+        "amount_in": "250000",
+        "amount_out": "77516575758499558773069",
+        "block_time_ms": 1794668910698,
+        "cost_usd": 0.00117179,
+        "event": "trade",
+        "fill_price": 3.22511666,
+        "in_season": true,
+        "on_schedule": null,
+        "pool_id": 4512,
+        "receipt_hash": "b333c78d471cd880d56d331ac51f44188ab4f4dbe08e74db777c816d1885f6ed",
+        "ref_price": 3.21,
+        "seq": 2,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "DVjTxfDsQVafspyeUZJLkn2yZ1iYxVCqj4qrQ7sDP4hs",
+        "venue": "rhea"
+      },
+      {
+        "amount_in": "250000",
+        "block_time_ms": 1794668902583,
+        "event": "request",
+        "in_season": true,
+        "on_schedule": null,
+        "receipt_hash": "b333c78d471cd880d56d331ac51f44188ab4f4dbe08e74db777c816d1885f6ed",
+        "seq": 2,
+        "side": "buy",
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "tx": "DVjTxfDsQVafspyeUZJLkn2yZ1iYxVCqj4qrQ7sDP4hs"
+      },
       {
         "block_time_ms": 1794668281560,
         "event": "skip",
@@ -39,13 +827,13 @@
     ],
     "description": "A local model on a laptop via Ollama. Harness and model are the operator's word; the vault still enforces every limit.",
     "end": {
-      "price": 3.21,
-      "value_usd": 8.21
+      "price": 3.17,
+      "value_usd": 8.08663542
     },
-    "events_sha256": "a7683e7bd03fb385a9ec655cba8045db97a74ad14f0ead49d1c37f3c9e6af2c8",
-    "funded_twr": -0.00465116,
+    "events_sha256": "00b695b16a3b8eb621a9c796a9c968a7658e3ca27fd60fda0aa925ff2f18c334",
+    "funded_twr": -0.01705426,
     "harness": "Sledgit runner + Ollama",
-    "hold_twr": -0.00382209,
+    "hold_twr": -0.01001434,
     "id": "mn-local-qwen3-8b",
     "inactive": false,
     "kind": "arena",
@@ -60,12 +848,16 @@
       "reason": "direct child of arena.sledgit.near (factory keyless), runs its pinned code 7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU, 0 access keys",
       "status": "genuine"
     },
-    "range95": null,
+    "range95": {
+      "hi": 0.02799614,
+      "lo": -0.04092878,
+      "n": 29
+    },
     "ranked": false,
     "refusals_by_code": {},
     "season_seqs": [
       1,
-      1
+      38
     ],
     "series": [
       {
@@ -75,25 +867,307 @@
         "value": 3.22517607
       },
       {
-        "hold": 3.21267375,
-        "stake": 3.21267554,
-        "t": 1794668880000,
-        "value": 3.21851167
+        "hold": 3.217167,
+        "stake": 3.21717595,
+        "t": 1794672000000,
+        "value": 3.22185401
+      },
+      {
+        "hold": 3.16274875,
+        "stake": 3.16276537,
+        "t": 1794675600000,
+        "value": 3.17613616
+      },
+      {
+        "hold": 3.17273375,
+        "stake": 3.17275851,
+        "t": 1794679200000,
+        "value": 3.18521675
+      },
+      {
+        "hold": 3.1602525,
+        "stake": 3.16028502,
+        "t": 1794682800000,
+        "value": 3.17386602
+      },
+      {
+        "hold": 3.1522645,
+        "stake": 3.15230478,
+        "t": 1794686400000,
+        "value": 3.16660155
+      },
+      {
+        "hold": 3.089359,
+        "stake": 3.08940523,
+        "t": 1794690000000,
+        "value": 3.10939386
+      },
+      {
+        "hold": 3.087362,
+        "stake": 3.08741576,
+        "t": 1794693600000,
+        "value": 3.10757774
+      },
+      {
+        "hold": 3.0843665,
+        "stake": 3.08442772,
+        "t": 1794697200000,
+        "value": 3.10485356
+      },
+      {
+        "hold": 3.12280875,
+        "stake": 3.12287934,
+        "t": 1794700800000,
+        "value": 3.1398008
+      },
+      {
+        "hold": 3.1163185,
+        "stake": 3.11639653,
+        "t": 1794704400000,
+        "value": 3.13275021
+      },
+      {
+        "hold": 3.08286875,
+        "stake": 3.08295261,
+        "t": 1794708000000,
+        "value": 3.09800311
+      },
+      {
+        "hold": 3.1762285,
+        "stake": 3.17632572,
+        "t": 1794711600000,
+        "value": 3.21721664
+      },
+      {
+        "hold": 3.17523,
+        "stake": 3.1753352,
+        "t": 1794715200000,
+        "value": 3.21518853
+      },
+      {
+        "hold": 3.16474575,
+        "stake": 3.16485823,
+        "t": 1794718800000,
+        "value": 3.20014976
+      },
+      {
+        "hold": 3.1682405,
+        "stake": 3.16836124,
+        "t": 1794722400000,
+        "value": 3.20349141
+      },
+      {
+        "hold": 3.179224,
+        "stake": 3.17935365,
+        "t": 1794726000000,
+        "value": 3.21883797
+      },
+      {
+        "hold": 3.167242,
+        "stake": 3.16737866,
+        "t": 1794729600000,
+        "value": 3.19588344
+      },
+      {
+        "hold": 3.177227,
+        "stake": 3.17737258,
+        "t": 1794733200000,
+        "value": 3.21510384
+      },
+      {
+        "hold": 3.1862135,
+        "stake": 3.18636802,
+        "t": 1794736800000,
+        "value": 3.2324022
+      },
+      {
+        "hold": 3.19969325,
+        "stake": 3.19985725,
+        "t": 1794740400000,
+        "value": 3.25834974
+      },
+      {
+        "hold": 3.193203,
+        "stake": 3.19337447,
+        "t": 1794744000000,
+        "value": 3.24585648
+      },
+      {
+        "hold": 3.2041865,
+        "stake": 3.20436735,
+        "t": 1794747600000,
+        "value": 3.26699892
+      },
+      {
+        "hold": 3.189209,
+        "stake": 3.18939626,
+        "t": 1794751200000,
+        "value": 3.23816832
+      },
+      {
+        "hold": 3.1702375,
+        "stake": 3.17043052,
+        "t": 1794754800000,
+        "value": 3.19649837
+      },
+      {
+        "hold": 3.17523,
+        "stake": 3.17543168,
+        "t": 1794758400000,
+        "value": 3.19702186
+      },
+      {
+        "hold": 3.18072175,
+        "stake": 3.18093221,
+        "t": 1794762000000,
+        "value": 3.19724367
+      },
+      {
+        "hold": 3.1742315,
+        "stake": 3.17444912,
+        "t": 1794765600000,
+        "value": 3.19698153
+      },
+      {
+        "hold": 3.177227,
+        "stake": 3.17745309,
+        "t": 1794769200000,
+        "value": 3.19710252
+      },
+      {
+        "hold": 3.19370225,
+        "stake": 3.19393886,
+        "t": 1794772800000,
+        "value": 3.19776793
+      },
+      {
+        "hold": 3.207182,
+        "stake": 3.20742882,
+        "t": 1794776400000,
+        "value": 3.20233911
+      },
+      {
+        "hold": 3.1952,
+        "stake": 3.19545312,
+        "t": 1794780000000,
+        "value": 3.19594278
+      },
+      {
+        "hold": 3.2141715,
+        "stake": 3.21443589,
+        "t": 1794783600000,
+        "value": 3.2105589
+      },
+      {
+        "hold": 3.21566925,
+        "stake": 3.21594213,
+        "t": 1794787200000,
+        "value": 3.21318596
+      },
+      {
+        "hold": 3.1922045,
+        "stake": 3.19248152,
+        "t": 1794790800000,
+        "value": 3.17561849
+      },
+      {
+        "hold": 3.173233,
+        "stake": 3.17351473,
+        "t": 1794794400000,
+        "value": 3.14453244
+      },
+      {
+        "hold": 3.21367225,
+        "stake": 3.21396951,
+        "t": 1794798000000,
+        "value": 3.21079481
+      },
+      {
+        "hold": 3.20967825,
+        "stake": 3.20998299,
+        "t": 1794801600000,
+        "value": 3.20425038
+      },
+      {
+        "hold": 3.1952,
+        "stake": 3.19551012,
+        "t": 1794805200000,
+        "value": 3.18052681
+      },
+      {
+        "hold": 3.18870975,
+        "stake": 3.18902671,
+        "t": 1794808800000,
+        "value": 3.16989211
+      },
+      {
+        "hold": 3.1902075,
+        "stake": 3.19053288,
+        "t": 1794812400000,
+        "value": 3.17221863
+      },
+      {
+        "hold": 3.20268875,
+        "stake": 3.20302488,
+        "t": 1794816000000,
+        "value": 3.1938147
+      },
+      {
+        "hold": 3.19569925,
+        "stake": 3.19604206,
+        "t": 1794819600000,
+        "value": 3.18164911
+      },
+      {
+        "hold": 3.2001925,
+        "stake": 3.20054445,
+        "t": 1794823200000,
+        "value": 3.18973343
+      },
+      {
+        "hold": 3.205185,
+        "stake": 3.20554625,
+        "t": 1794826800000,
+        "value": 3.198716
+      },
+      {
+        "hold": 3.2081805,
+        "stake": 3.20855064,
+        "t": 1794830400000,
+        "value": 3.20410555
+      },
+      {
+        "hold": 3.1742315,
+        "stake": 3.17460181,
+        "t": 1794834000000,
+        "value": 3.14302402
+      },
+      {
+        "hold": 3.1762285,
+        "stake": 3.17660733,
+        "t": 1794837600000,
+        "value": 3.14661706
+      },
+      {
+        "hold": 3.19270375,
+        "stake": 3.19308927,
+        "t": 1794838800000,
+        "value": 3.17014988
       }
     ],
-    "stake_twr": -0.00382154,
+    "stake_twr": -0.0098948,
     "start": {
       "price": 3.225,
       "time_ms": 1794668096365,
       "value_usd": 3.225
     },
-    "strategy_sha256": null,
-    "twr": -0.00201188,
-    "unranked_reason": "0.0 days at the minimum value; ranking starts at day 7",
-    "vs_funded": 0.00265161,
-    "vs_hold": 0.00181715,
-    "vs_hold_after_gas": 0.00173701,
-    "vs_stake": 0.0018166
+    "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
+    "twr": -0.01700779,
+    "unranked_reason": "2.0 days at the minimum value; ranking starts at day 7",
+    "vs_funded": 0.00004728,
+    "vs_hold": -0.00706419,
+    "vs_hold_after_gas": -0.04020548,
+    "vs_stake": -0.00718408
   },
   "events": [
     {
@@ -185,6 +1259,944 @@
       "event": "skip",
       "receipt_id": "DiCLvZsj5fkYwseLgbGYuzJ9vSxmq8pjn1NB9kJrJuoJ",
       "tx": "HM7DF2Xtj54pjQEEEwfsuoke3aXFBEV6xVwn1AUUEyLH"
+    },
+    {
+      "block_height": 224530817,
+      "block_time_ms": 1794668902583,
+      "data": {
+        "amount_in": "250000",
+        "min_amount_out": "37500000000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "b333c78d471cd880d56d331ac51f44188ab4f4dbe08e74db777c816d1885f6ed",
+        "seq": 2,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "H8hkzzm7d7jYhswYMV1LHVwuXcvGRLHp8dTCMKxHFhYQ",
+      "tx": "DVjTxfDsQVafspyeUZJLkn2yZ1iYxVCqj4qrQ7sDP4hs"
+    },
+    {
+      "block_height": 224530831,
+      "block_time_ms": 1794668910698,
+      "data": {
+        "amount_in": "250000",
+        "amount_out": "77516575758499558773069",
+        "min_amount_out": "76741410000914563185338",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "77516575758499558773069",
+        "receipt_hash": "b333c78d471cd880d56d331ac51f44188ab4f4dbe08e74db777c816d1885f6ed",
+        "returned": true,
+        "seq": 2,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "GKx5MtSrxkvci9nxZJG4Rpd5w5cLWX8z6xEMZVKxj3kP",
+      "tx": "DVjTxfDsQVafspyeUZJLkn2yZ1iYxVCqj4qrQ7sDP4hs"
+    },
+    {
+      "block_height": 224541498,
+      "block_time_ms": 1794674981155,
+      "data": {
+        "amount_in": "250000",
+        "min_amount_out": "37500000000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "f042d12352d665123c69d47f45386e57f75494220da0f6e7212edccd2fcfb79d",
+        "seq": 3,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "DTbw5zfQrEMvM1b45CsxVGjYvgD3kNDyVcSG6SJpn5kB",
+      "tx": "BhBbX57EYbRgtQLAWtqxEvcfVJifKU2nrhbkEb9CdTHw"
+    },
+    {
+      "block_height": 224541512,
+      "block_time_ms": 1794674989270,
+      "data": {
+        "amount_in": "250000",
+        "amount_out": "80652441651270880505919",
+        "min_amount_out": "79845917234758171700859",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "80652441651270880505919",
+        "receipt_hash": "f042d12352d665123c69d47f45386e57f75494220da0f6e7212edccd2fcfb79d",
+        "returned": true,
+        "seq": 3,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "Fugp4T2nYBkYVr8drvaSJUidsEGMivvvWsnxnDrPqS4S",
+      "tx": "BhBbX57EYbRgtQLAWtqxEvcfVJifKU2nrhbkEb9CdTHw"
+    },
+    {
+      "block_height": 224541807,
+      "block_time_ms": 1794675156443,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "d7727527d0977a4ac513f5dbd45053eecbc10802cf9f47035bed076cdcf29118",
+        "seq": 4
+      },
+      "event": "skip",
+      "receipt_id": "2ko319gMgJTHTKes7Cks2Mjz3TZGnLPFBckPX8XML9jV",
+      "tx": "EzUuKC5hNPxg5p2gbrFsYinvh1aZ3nLVksm3pv7VZV1L"
+    },
+    {
+      "block_height": 224585446,
+      "block_time_ms": 1794700223307,
+      "data": {
+        "amount_in": "250000",
+        "min_amount_out": "37500000000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "a6be79b8d9fcf15323f8d81523cc3a6c87b6f4ed97cb2a9adb9f2f51d0cbc267",
+        "seq": 5,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "99Fb4pVzaYQGQ3BQWchaPx4o9s8NctQB9LcbCeXu9YBW",
+      "tx": "GpAzZNvz7QLAHbuuqiLDmnSX2A82By7BNfD8T7u4Sa9f"
+    },
+    {
+      "block_height": 224585460,
+      "block_time_ms": 1794700231621,
+      "data": {
+        "amount_in": "250000",
+        "amount_out": "82497292858417280598126",
+        "min_amount_out": "81672319929833107792144",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "82497292858417280598126",
+        "receipt_hash": "a6be79b8d9fcf15323f8d81523cc3a6c87b6f4ed97cb2a9adb9f2f51d0cbc267",
+        "returned": true,
+        "seq": 5,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "5VrdEM3GcJy8B8wZLxQzakFnycJrfWEDs6sdQjUAMoTP",
+      "tx": "GpAzZNvz7QLAHbuuqiLDmnSX2A82By7BNfD8T7u4Sa9f"
+    },
+    {
+      "block_height": 224592545,
+      "block_time_ms": 1794704252262,
+      "data": {
+        "amount_in": "250000",
+        "min_amount_out": "37500000000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "5f8eaaa4f08dcffdc15ccf70bc835552ebc3e3527bc00b206ecdc1567f0c96ce",
+        "seq": 6,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "HDDdtzAzbZGqJszjGpryQ8bK9PVwCfeVDyQC24qjyuyt",
+      "tx": "EFTHwzwtFfChhwsCEzQj7TvkWcacXJDLa2Hi3gbnMjLq"
+    },
+    {
+      "block_height": 224592559,
+      "block_time_ms": 1794704260366,
+      "data": {
+        "amount_in": "250000",
+        "amount_out": "82248436915249486795447",
+        "min_amount_out": "81425952546096991927492",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "82248436915249486795447",
+        "receipt_hash": "5f8eaaa4f08dcffdc15ccf70bc835552ebc3e3527bc00b206ecdc1567f0c96ce",
+        "returned": true,
+        "seq": 6,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "4nHUvyEg8qLdCSf2Run1uAmApzkzexPjei9qTMmqyAaf",
+      "tx": "EFTHwzwtFfChhwsCEzQj7TvkWcacXJDLa2Hi3gbnMjLq"
+    },
+    {
+      "block_height": 224599585,
+      "block_time_ms": 1794708249429,
+      "data": {
+        "amount_in": "1000000",
+        "min_amount_out": "150000000000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "91522bac547490f0ce3548f11c56c3dcee6d82564d7c82f5a78864bc7f940cb8",
+        "seq": 7,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "HMGdvFMvo1hBFPnMfw7eZd5J2zxkBZuDNgGFz3a6eP6u",
+      "tx": "FJzEsBeHFujChSz7PQyXpRXArTZycgWggU5rjqPyyaZz"
+    },
+    {
+      "block_height": 224599599,
+      "block_time_ms": 1794708257574,
+      "data": {
+        "amount_in": "1000000",
+        "amount_out": "336854635005200542721119",
+        "min_amount_out": "333486088655148537293907",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "336854635005200542721119",
+        "receipt_hash": "91522bac547490f0ce3548f11c56c3dcee6d82564d7c82f5a78864bc7f940cb8",
+        "returned": true,
+        "seq": 7,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "2rgBqEWhg1TRta9ZFsJQzotbSgur5545HaNWx2RMhzrE",
+      "tx": "FJzEsBeHFujChSz7PQyXpRXArTZycgWggU5rjqPyyaZz"
+    },
+    {
+      "block_height": 224606706,
+      "block_time_ms": 1794712331402,
+      "data": {
+        "amount_in": "250000",
+        "min_amount_out": "37500000000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "60cbc2b9babdec91a71dbcb6ea614db92f124720a5e28e1614cca155a7df990b",
+        "seq": 8,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "86S4DjUW9qLrhsK33cAjryeDj5ALYxo5WbN2ddkitdgu",
+      "tx": "gWefSTV7kTRAG1ter5QPayo8rTQLqJhBFKCPRmtvycp"
+    },
+    {
+      "block_height": 224606720,
+      "block_time_ms": 1794712339621,
+      "data": {
+        "amount_in": "250000",
+        "amount_out": "79153458876327936048931",
+        "min_amount_out": "78361924287564656688441",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "79153458876327936048931",
+        "receipt_hash": "60cbc2b9babdec91a71dbcb6ea614db92f124720a5e28e1614cca155a7df990b",
+        "returned": true,
+        "seq": 8,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "gBob8GY7cMRYTc9o2dQ1xj4oSakZbYsGxyHXJXKuQab",
+      "tx": "gWefSTV7kTRAG1ter5QPayo8rTQLqJhBFKCPRmtvycp"
+    },
+    {
+      "block_height": 224613764,
+      "block_time_ms": 1794716344177,
+      "data": {
+        "amount_in": "250000",
+        "min_amount_out": "37500000000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "89b746cb3ae6cab7572358d66baa503e6e83c8dc8b9ee420c37694a2e5bb9143",
+        "seq": 9,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "7AGw9YxbHZo9jjg5NwFFGFYkjxfiivXE8Wc7Nye5WhRX",
+      "tx": "cGN9156vU3pGfL92bESziSjtreVtxBHCGQBf5kPeXF5"
+    },
+    {
+      "block_height": 224613778,
+      "block_time_ms": 1794716352657,
+      "data": {
+        "amount_in": "250000",
+        "amount_out": "79690251515653083426493",
+        "min_amount_out": "78893349000496552592228",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "79690251515653083426493",
+        "receipt_hash": "89b746cb3ae6cab7572358d66baa503e6e83c8dc8b9ee420c37694a2e5bb9143",
+        "returned": true,
+        "seq": 9,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "EC956so1xLH9bAsfSsU5ZfMbmgQfVEPnLif8zjiHGpjq",
+      "tx": "cGN9156vU3pGfL92bESziSjtreVtxBHCGQBf5kPeXF5"
+    },
+    {
+      "block_height": 224621062,
+      "block_time_ms": 1794720479401,
+      "data": {
+        "amount_in": "625000",
+        "min_amount_out": "93750000000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "6d43961865964e742651746e255b335254a405fb45dd8b8dd23eece3fb5ebfb0",
+        "seq": 10,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "8VmcB33mch8bw7JbJq7Nde6EPWzrdWHuUNnjn9woHRia",
+      "tx": "6hEg6Wrv2jEButH5RBosQfXnwxgzxJnwL8ZL3a2gaq3Y"
+    },
+    {
+      "block_height": 224621076,
+      "block_time_ms": 1794720487095,
+      "data": {
+        "amount_in": "625000",
+        "amount_out": "198908624602847628253569",
+        "min_amount_out": "196919538356819151971033",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "198908624602847628253569",
+        "receipt_hash": "6d43961865964e742651746e255b335254a405fb45dd8b8dd23eece3fb5ebfb0",
+        "returned": true,
+        "seq": 10,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "2tfT8r6MNSFs8pz6yyjcuMeHTAcP8XZvEPsE276awkxb",
+      "tx": "6hEg6Wrv2jEButH5RBosQfXnwxgzxJnwL8ZL3a2gaq3Y"
+    },
+    {
+      "block_height": 224627792,
+      "block_time_ms": 1794724326456,
+      "data": {
+        "amount_in": "1200000",
+        "min_amount_out": "180000000000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "768c4bc801ab07976bb6b5158f9401e18475622597b48786b6da39852bfe6123",
+        "seq": 11,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "9zg9KwjTQgESm49oc4uiweEdDDjUJbJT79A6uYni4vBH",
+      "tx": "D7FYYdijJQRYRa3TH3tthPDWAZKg3Sc6jnSY92fTBjYQ"
+    },
+    {
+      "block_height": 224627806,
+      "block_time_ms": 1794724334892,
+      "data": {
+        "amount_in": "1200000",
+        "amount_out": "380134135017989014056204",
+        "min_amount_out": "376332793667809123915641",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "380134135017989014056204",
+        "receipt_hash": "768c4bc801ab07976bb6b5158f9401e18475622597b48786b6da39852bfe6123",
+        "returned": true,
+        "seq": 11,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "8wpsNHfqK1RizVgGmPGsy4E4DBF99gzzN8rpFxDxsboF",
+      "tx": "D7FYYdijJQRYRa3TH3tthPDWAZKg3Sc6jnSY92fTBjYQ"
+    },
+    {
+      "block_height": 224635095,
+      "block_time_ms": 1794728473181,
+      "data": {
+        "amount_in": "168750",
+        "min_amount_out": "25312500000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "793c7f0ad01bf54beb20db7bf13acf50edfd1466495bc0b8f8b9828d7dc88745",
+        "seq": 12,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "FTeTpsFNmaTPDZaup5g3iC8UVeeeB6R11BJcFcKUpYPu",
+      "tx": "8hYn6pgrd3a2EVz9dTXZ5oxQgE8hGX2ATeyoBU3UTQ2w"
+    },
+    {
+      "block_height": 224635109,
+      "block_time_ms": 1794728481603,
+      "data": {
+        "amount_in": "168750",
+        "amount_out": "53779974056722508581584",
+        "min_amount_out": "53242174316155283495768",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "53779974056722508581584",
+        "receipt_hash": "793c7f0ad01bf54beb20db7bf13acf50edfd1466495bc0b8f8b9828d7dc88745",
+        "returned": true,
+        "seq": 12,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "9awiNZ1RtgSib83Z6eRQkHx2wedFZiqgUyGQvadnK3jn",
+      "tx": "8hYn6pgrd3a2EVz9dTXZ5oxQgE8hGX2ATeyoBU3UTQ2w"
+    },
+    {
+      "block_height": 224642572,
+      "block_time_ms": 1794732720726,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "0e78a531a299319ccfa13abd6cc7b3cf5b895276e64ca65709190504b0a1e1ad",
+        "seq": 13
+      },
+      "event": "skip",
+      "receipt_id": "C77zmzjGePmoFtRYsHAXw57un7eDKgYzC2tLL5GVTPZM",
+      "tx": "BqkKyazVoGTfmEFfbpEXyJ17zaEVZsT7MzTyZy8S8KdG"
+    },
+    {
+      "block_height": 224649788,
+      "block_time_ms": 1794736782249,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "378dd83c1e3f9f4ed18dfc4df92aa33ac6156ce782191e24a3245867e43c9625",
+        "seq": 14
+      },
+      "event": "skip",
+      "receipt_id": "85yiBLzFx7zkz8pnubh7iVpJejN71WrCh7gKW1ZgBD2X",
+      "tx": "5GTzLaZca15KDHuMMMAsGVgiqz8LXctGSC272G7QEmgD"
+    },
+    {
+      "block_height": 224657262,
+      "block_time_ms": 1794741008878,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "d0bee18d33f445c5fce2830c9b4395a9ee728b4052b9c1e3ed13cd810486da38",
+        "seq": 15
+      },
+      "event": "skip",
+      "receipt_id": "9drr7pchZWUX366CEcqYKLBeMbGeQ63pxHo4QB5wcDqS",
+      "tx": "GTcdordF6a41ZirHc8b6ZUXvTq8Eex6ynnvYzwFwmDb"
+    },
+    {
+      "block_height": 224664404,
+      "block_time_ms": 1794745049008,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "141b2acf1637c3ef5a109351bbc7d6a2269fa23dabc95b87adcc5ae7f98bdb85",
+        "seq": 16
+      },
+      "event": "skip",
+      "receipt_id": "8ZmUHqn8H61dgcvADNeSBMhTbhpHh1PhZnEqghLFR7Zh",
+      "tx": "Ep4Wx3HXuzuJmYgep9JwXAzDBaHQwvxEWy3GTPQSk3mJ"
+    },
+    {
+      "block_height": 224671702,
+      "block_time_ms": 1794749203935,
+      "data": {
+        "note": "invalid_model_output",
+        "receipt_hash": "99dcdd50147e1a6de2ef7a57409d6ace89ae4b10d4213bc7c854371a4ed4a29b",
+        "seq": 17
+      },
+      "event": "skip",
+      "receipt_id": "3Zsw2tkGwdkPzutQp5Mkhgo4DLJPVWqKYtKgUCTh27EX",
+      "tx": "HycGWQAsnPsgeFEuP4DEo8L9Rywv9X9qh7pyhvWBSF61"
+    },
+    {
+      "block_height": 224678852,
+      "block_time_ms": 1794753253986,
+      "data": {
+        "amount_in": "1200000000000000000000000",
+        "min_amount_out": "2400000",
+        "pool_id": 4512,
+        "receipt_hash": "b4ee91e40457e473379100591f4972ae52188be0b26ceb54242a63e83bea3252",
+        "seq": 18,
+        "token_in": "wrap.near",
+        "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "FMiYoZFmyygCf4d8B12KWGaE373EJJKW98vuB2WZybWX",
+      "tx": "Avo6yZ1zGEK9mJwCd7jNJjrh1RmGMggM2KRSovn5Ti8T"
+    },
+    {
+      "block_height": 224678866,
+      "block_time_ms": 1794753263766,
+      "data": {
+        "amount_in": "1200000000000000000000000",
+        "amount_out": "3736860",
+        "min_amount_out": "3699491",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "3736860",
+        "receipt_hash": "b4ee91e40457e473379100591f4972ae52188be0b26ceb54242a63e83bea3252",
+        "returned": true,
+        "seq": 18,
+        "token_in": "wrap.near",
+        "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "G3KSA4yr3sesmmtAGTkWXSTnKqcpekdfvq5Eb7ZuGcDg",
+      "tx": "Avo6yZ1zGEK9mJwCd7jNJjrh1RmGMggM2KRSovn5Ti8T"
+    },
+    {
+      "block_height": 224685685,
+      "block_time_ms": 1794757188223,
+      "data": {
+        "amount_in": "1200000000000000000000000",
+        "min_amount_out": "2400000",
+        "pool_id": 4512,
+        "receipt_hash": "af32754725aaf2a5fc7cd2946b37c57d7f337f2f58aef40765f85c7ecd5a0a66",
+        "seq": 19,
+        "token_in": "wrap.near",
+        "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "8PraXWNRDAxWy3S4h75AeLXzboXJs4P3FEKfLNHL2Aaj",
+      "tx": "3Q1cSsfAZx5iHgUhhJaZk3ibPc6HESKSdh2VJJRskqKr"
+    },
+    {
+      "block_height": 224685699,
+      "block_time_ms": 1794757196312,
+      "data": {
+        "amount_in": "1200000000000000000000000",
+        "amount_out": "3750821",
+        "min_amount_out": "3713312",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "3750821",
+        "receipt_hash": "af32754725aaf2a5fc7cd2946b37c57d7f337f2f58aef40765f85c7ecd5a0a66",
+        "returned": true,
+        "seq": 19,
+        "token_in": "wrap.near",
+        "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "6NzWyc8VzLfLcLzZphBa1Fre4Hx8PpjJReKs4QQrohyb",
+      "tx": "3Q1cSsfAZx5iHgUhhJaZk3ibPc6HESKSdh2VJJRskqKr"
+    },
+    {
+      "block_height": 224692697,
+      "block_time_ms": 1794761159203,
+      "data": {
+        "note": "refused:daily_cap sell 0.01285",
+        "receipt_hash": "67b8b58a24b45d0033649fec3eb25f1701819c34ca2226af4ecb625650eab104",
+        "seq": 20
+      },
+      "event": "skip",
+      "receipt_id": "9kwDUqrXS1XREuMUgPfZtaTLF8SiFq1tD4sTxA33TnfT",
+      "tx": "DsjEhTuAF5PG7jWciFgPzMLX2WQ1B1QAuVy98NRLjicG"
+    },
+    {
+      "block_height": 224699591,
+      "block_time_ms": 1794765069258,
+      "data": {
+        "note": "refused:daily_cap sell 0.051435826258177919760461",
+        "receipt_hash": "89e670192cc2889f94d05c3edaf2e42c11bdc1825391c1d0237524de35423b35",
+        "seq": 21
+      },
+      "event": "skip",
+      "receipt_id": "CrCfYGWs2BrGT4SrRjwWBeijVVSJ4cBaCyFXY1HQqRfG",
+      "tx": "E5fWcoCP6FQgyKofhJPGLG8hKtab4pd8GTDwL2YE1pq7"
+    },
+    {
+      "block_height": 224706450,
+      "block_time_ms": 1794768998103,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "07eff7bbe50e3d35bf4201bd2d50216a649c5c0a7b0eef18565c30306122f3f9",
+        "seq": 22
+      },
+      "event": "skip",
+      "receipt_id": "ZHbvDfcFFQsbPp4ZQdVUWdA853YqanAM3r5s3vqDdjk",
+      "tx": "JDA1r74NaWzgrT1v2wVKMqW4T7EDe6wHfdNEascygwMJ"
+    },
+    {
+      "block_height": 224713225,
+      "block_time_ms": 1794772935634,
+      "data": {
+        "amount_in": "2000000",
+        "min_amount_out": "300000000000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "f29000d58a2b5f504b473c0f0998418ad947afc05c310a783b74f0354840f228",
+        "seq": 23,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "5as43r336PZiotjuWFmM6CV6eyygtiGLMu9jbFRynoKr",
+      "tx": "5seBWmLovfR8EXk1ZKW3AnfEe31xjV4CPdWovYdpgE6J"
+    },
+    {
+      "block_height": 224713239,
+      "block_time_ms": 1794772943621,
+      "data": {
+        "amount_in": "2000000",
+        "amount_out": "628406289066684280271220",
+        "min_amount_out": "622122226176017437468507",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "628406289066684280271220",
+        "receipt_hash": "f29000d58a2b5f504b473c0f0998418ad947afc05c310a783b74f0354840f228",
+        "returned": true,
+        "seq": 23,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "C4oJQtNoUQeW6YaKjTvCZ7nCB7BA4cwfCeHVuqR72ttd",
+      "tx": "5seBWmLovfR8EXk1ZKW3AnfEe31xjV4CPdWovYdpgE6J"
+    },
+    {
+      "block_height": 224720517,
+      "block_time_ms": 1794777073670,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "695a19b5b4e40910cddca8a16a501baf2f9c1725e4a4d73ad29bf390772b9489",
+        "seq": 24
+      },
+      "event": "skip",
+      "receipt_id": "8hgwsNGTMn3248HTnS4d3X5DW4naib6BW1A9R3RPyet",
+      "tx": "3H1Ws7SCJkjkLDCTD3ooTnGMYoARDyXYPrSNDTGUMR4K"
+    },
+    {
+      "block_height": 224727955,
+      "block_time_ms": 1794781293007,
+      "data": {
+        "amount_in": "4006250",
+        "min_amount_out": "600937500000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "6a2fc52f46385390d587d6979a499616df46681fc3d6b7e84d4e37faed3127eb",
+        "seq": 25,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "DTfXeb4Ujqk8eMT5hREvHTA5GLT6g2XJ4jRzqEhJrue6",
+      "tx": "AE4cJCA3voKQXw6iP88GCTQPB5Tm5tUfFLrZraVgmwZA"
+    },
+    {
+      "block_height": 224727969,
+      "block_time_ms": 1794781300931,
+      "data": {
+        "amount_in": "4006250",
+        "amount_out": "1250451227716290075188232",
+        "min_amount_out": "1237946715439127174436349",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "1250451227716290075188232",
+        "receipt_hash": "6a2fc52f46385390d587d6979a499616df46681fc3d6b7e84d4e37faed3127eb",
+        "returned": true,
+        "seq": 25,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "12f44D4bzP2xbjixAPpwVvZBupPLxzaGEVpVzs8rkD52",
+      "tx": "AE4cJCA3voKQXw6iP88GCTQPB5Tm5tUfFLrZraVgmwZA"
+    },
+    {
+      "block_height": 224735076,
+      "block_time_ms": 1794785320907,
+      "data": {
+        "amount_in": "250000",
+        "min_amount_out": "37500000000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "65168395f2a6e636a74c9f629230d36207d8846d668043ba76fe8aaf88210cc1",
+        "seq": 26,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "4fUM2kcHoZagUZ5XjPXzqMp9Xt8kKsB7rsHKjdc9qVb8",
+      "tx": "24HioQpXmxDhaPJ1S6iFqC6fnTnqpRZWtTaZCsWN6E7M"
+    },
+    {
+      "block_height": 224735090,
+      "block_time_ms": 1794785328854,
+      "data": {
+        "amount_in": "250000",
+        "amount_out": "78019406501052513927324",
+        "min_amount_out": "77239212436041988788050",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "78019406501052513927324",
+        "receipt_hash": "65168395f2a6e636a74c9f629230d36207d8846d668043ba76fe8aaf88210cc1",
+        "returned": true,
+        "seq": 26,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "6468tcT7jNJPAKdpKDFN4yj7s5AraC1NAQoYD7mQR5RQ",
+      "tx": "24HioQpXmxDhaPJ1S6iFqC6fnTnqpRZWtTaZCsWN6E7M"
+    },
+    {
+      "block_height": 224742166,
+      "block_time_ms": 1794789342126,
+      "data": {
+        "amount_in": "250000",
+        "min_amount_out": "37500000000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "ef4af568ea22a124ab20542f644467da353d70e4c5d2b99d5313385abe89bd39",
+        "seq": 27,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "7FftPZn4Uu5uFFoHwVat55bUuL8PdioPbqfUZLThiLDH",
+      "tx": "hVRSRMimSCVCyZg2P42PjvGKCw2StJpqg3tBQy4GtNB"
+    },
+    {
+      "block_height": 224742180,
+      "block_time_ms": 1794789350594,
+      "data": {
+        "amount_in": "250000",
+        "amount_out": "78435160999669943925472",
+        "min_amount_out": "77650809389673244486217",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "78435160999669943925472",
+        "receipt_hash": "ef4af568ea22a124ab20542f644467da353d70e4c5d2b99d5313385abe89bd39",
+        "returned": true,
+        "seq": 27,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "6QJunbECNxbPq8RXV4tow3S1A11FVuV4pAXud97wzMrc",
+      "tx": "hVRSRMimSCVCyZg2P42PjvGKCw2StJpqg3tBQy4GtNB"
+    },
+    {
+      "block_height": 224749119,
+      "block_time_ms": 1794793291025,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "b980801949c453d2934cc9eaa17d927c01a543a012fd14c3764b23164ba88630",
+        "seq": 28
+      },
+      "event": "skip",
+      "receipt_id": "598F8xUeNGJ8nzJgapNxuNd8ZTU558rJqaffCktCx28w",
+      "tx": "7QDtFwSim2N8JCy1y3n8jpsfcmsSfCgPYfHVKrApRPja"
+    },
+    {
+      "block_height": 224756042,
+      "block_time_ms": 1794797224302,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "90bcdade0fb382f433257511e67f7de2d2f945035abe18c472c901f39e97444a",
+        "seq": 29
+      },
+      "event": "skip",
+      "receipt_id": "A6W8pmxH75QhUrSnPXQ9MdaBKoRRmpGbMsxhQVXpnfS5",
+      "tx": "FEn7Q83Kg7ShHnG48fRMQXvk5ew98GSz6iyww6aKAtah"
+    },
+    {
+      "block_height": 224763080,
+      "block_time_ms": 1794801227351,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "47781f7f229cd6515278ca0bbffacdf012510fc39b2cb8f1fa1d86411d4e1cde",
+        "seq": 30
+      },
+      "event": "skip",
+      "receipt_id": "AdkW61iCwHjdyJMX5dbggHbMNmCsaRmxSNP3EUYBQHuJ",
+      "tx": "7j79ugNkGACT9oVWuQGX7FDnDqzpqQASCmsvmBnkNtZ3"
+    },
+    {
+      "block_height": 224770121,
+      "block_time_ms": 1794805235722,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "56950cc24dfbcc8fc4d59ecf3e2f6b541fd586cb77e7201650847b7331fad4b7",
+        "seq": 31
+      },
+      "event": "skip",
+      "receipt_id": "23xnXLLM26xedSxHRdjtxvW1jy3sq6DU24wjzwJXKfr5",
+      "tx": "7Vc6bzj9oMoY9fs5NvqjDqRhBnJz29FxThNok2x6H5mX"
+    },
+    {
+      "block_height": 224777155,
+      "block_time_ms": 1794809207807,
+      "data": {
+        "amount_in": "370000",
+        "min_amount_out": "55500000000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "71c4a9eec34693f1c94ebd4888fcdbc96791c29f3f58aeeee7a215f410847528",
+        "seq": 32,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "GFTRFhrdppi1NehED74xCwPQUkbr3hCYotM4CzCptuRq",
+      "tx": "2tn8zniVVkCycazuQkf31WBJSqcQd6xo2SsPZHBfqFya"
+    },
+    {
+      "block_height": 224777169,
+      "block_time_ms": 1794809215625,
+      "data": {
+        "amount_in": "370000",
+        "amount_out": "116800761649415305808519",
+        "min_amount_out": "115632754032921152750433",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "116800761649415305808519",
+        "receipt_hash": "71c4a9eec34693f1c94ebd4888fcdbc96791c29f3f58aeeee7a215f410847528",
+        "returned": true,
+        "seq": 32,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "DJxafeJuhsfBxqTuQsb88QCsZqJW83z3eoR5H7wTGcTq",
+      "tx": "2tn8zniVVkCycazuQkf31WBJSqcQd6xo2SsPZHBfqFya"
+    },
+    {
+      "block_height": 224784265,
+      "block_time_ms": 1794813242853,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "519eebdac9c0b87e802954eeafe0162d00d81ea0c4b42d4b44915d4b4cdf94c3",
+        "seq": 33
+      },
+      "event": "skip",
+      "receipt_id": "Er3Am6zb6NAd9TWZdkSYtkDiB5C76z94Vb8uuAyj4q7j",
+      "tx": "5pmvsKEZwmwrEqbJkFPdBTZUbMTpornyicQaYNz8KeKr"
+    },
+    {
+      "block_height": 224791506,
+      "block_time_ms": 1794817349607,
+      "data": {
+        "amount_in": "279000",
+        "min_amount_out": "41850000000000000000000",
+        "pool_id": 4512,
+        "receipt_hash": "59c39e10d8e7f1af66e5b63dcd12489ac8b4e2d86226ba69d48bdb219dde47bc",
+        "seq": 34,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "8bzBWK4ih9xPSaPWLfuQBY2bKgwxR9M1ne4EMwNxzmHZ",
+      "tx": "GvcdtEnDgKW3LdxbztQDHwMAr3pTegpaFeMUGW3r5xSs"
+    },
+    {
+      "block_height": 224791520,
+      "block_time_ms": 1794817357569,
+      "data": {
+        "amount_in": "279000",
+        "amount_out": "87788683886376364864089",
+        "min_amount_out": "86910797047512601215448",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "87788683886376364864089",
+        "receipt_hash": "59c39e10d8e7f1af66e5b63dcd12489ac8b4e2d86226ba69d48bdb219dde47bc",
+        "returned": true,
+        "seq": 34,
+        "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "token_out": "wrap.near",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "GBL7UCwVqQVukRVjcA2pd61iC4VcKQhLnsvJEXoW5j9n",
+      "tx": "GvcdtEnDgKW3LdxbztQDHwMAr3pTegpaFeMUGW3r5xSs"
+    },
+    {
+      "block_height": 224806533,
+      "block_time_ms": 1794825923742,
+      "data": {
+        "note": "refused:daily_cap sell 0.20967",
+        "receipt_hash": "88f86705626455abe5e78bd8cdbc5bb5f01981e692f45b9cbc05dba5a7f1f6a3",
+        "seq": 35
+      },
+      "event": "skip",
+      "receipt_id": "FkDCiQUjLrBxFzDRaoffgSF9yLxgAgXXpWFbcfbMnhPm",
+      "tx": "GZc5ngkLxeD5p6TF8LZyG1rzYdw2995Wi5U6S2qsiRS3"
+    },
+    {
+      "block_height": 224813855,
+      "block_time_ms": 1794830096097,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "54086077327d2ab1eeb67d7f168232d23e88adb56ed9909ddcf13b94662ca077",
+        "seq": 36
+      },
+      "event": "skip",
+      "receipt_id": "fvEZEWxumJcr6K2eYck9xKLFCYXgvN1auyR3LGesEb6",
+      "tx": "B5FLVEdAnaMRi6wiA6pCkCp7Y8eHS583HjsRZAJCC96Q"
+    },
+    {
+      "block_height": 224821617,
+      "block_time_ms": 1794834547506,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "49e29504849706fdc0b7b23480329bf80d155a6c858a3ba4c6efe0e02a37bf02",
+        "seq": 37
+      },
+      "event": "skip",
+      "receipt_id": "7nJC2f2xaispLghe3ptMFHLtVfD8s4P2JzbQ3kCkYGDN",
+      "tx": "BCke4cqcKsrtrVUVJB4n9DyawmXsZZgLsMSowDWrNDud"
+    },
+    {
+      "block_height": 224828787,
+      "block_time_ms": 1794838713279,
+      "data": {
+        "amount_in": "1200000000000000000000000",
+        "min_amount_out": "2400000",
+        "pool_id": 4512,
+        "receipt_hash": "bdd2168c9236893009fbf6f4fc5afdb10effdf8fc335012356cd9404b84d75c9",
+        "seq": 38,
+        "token_in": "wrap.near",
+        "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "venue": "rhea"
+      },
+      "event": "request",
+      "receipt_id": "3rLStmE9BXsgbRwCVS7pK69kW3NPRU7iyW88sekgGBd2",
+      "tx": "Ev45rysoL14xbPvF574LJcXAtHxKCUD4Nmnpf9mXobwQ"
+    },
+    {
+      "block_height": 224828801,
+      "block_time_ms": 1794838721208,
+      "data": {
+        "amount_in": "1200000000000000000000000",
+        "amount_out": "3788415",
+        "min_amount_out": "3750530",
+        "note": "",
+        "pool_id": 4512,
+        "quote": "3788415",
+        "receipt_hash": "bdd2168c9236893009fbf6f4fc5afdb10effdf8fc335012356cd9404b84d75c9",
+        "returned": true,
+        "seq": 38,
+        "token_in": "wrap.near",
+        "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "venue": "rhea"
+      },
+      "event": "trade",
+      "receipt_id": "FpV84fsteosuC5JTokjgqszAZyiqAwykuJCCMhdWGy6H",
+      "tx": "Ev45rysoL14xbPvF574LJcXAtHxKCUD4Nmnpf9mXobwQ"
     }
   ],
   "network": "mainnet",
@@ -194,13 +2206,13 @@
         "exchange": "0",
         "intents": "0",
         "token": "wrap.near",
-        "wallet": "1077516575758499558773069"
+        "wallet": "1091337356077666403745317"
       },
       {
         "exchange": "0",
         "intents": "0",
         "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
-        "wallet": "4750000"
+        "wallet": "4627096"
       }
     ],
     "config": {
@@ -211,7 +2223,7 @@
       "mpc_id": "v1.signer",
       "owner_id": "fb1bc414b980fa6a5572c9e57c488f771b6ed5f8ac44774b277b81d8f2d6e5ea",
       "proposed_owner": null,
-      "seq": 2,
+      "seq": 38,
       "trading_ends_ns": "1797260058302772872",
       "version": "0.2.0"
     },
@@ -255,15 +2267,19 @@
       ]
     },
     "reconciliation": {
-      "events_replayed": 6,
+      "events_replayed": 60,
       "status": "ok"
     },
     "usage": {
-      "hour": "498519",
+      "hour": "498566",
       "spent": [
         [
           "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
-          "250000"
+          "7155250"
+        ],
+        [
+          "wrap.near",
+          "2400000000000000000000000"
         ]
       ],
       "trades": 1

@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794616200000,
-  "derived_sha256": "f83c5abb98ab34deeb1eb9e4548408781389b945c0a6c699be0903d06122fa97",
+  "as_of_ms": 1794789000000,
+  "derived_sha256": "ce0549b085c848b97732adf4bdfcc1d31a66d87e8bc922233c09db3586ee56ce",
   "entry": {
     "account": "qwen38-27b-local.arena2.irontrade.testnet",
     "beyond_noise": false,
@@ -10,22 +10,262 @@
       "benchmark_rebalance_usd": 0.003318,
       "fill_vs_reference_pct": null,
       "fill_vs_reference_usd": 0,
-      "gas_near": 0.03403132,
-      "gas_usd": 0.13190654,
+      "gas_near": 0.03878403,
+      "gas_usd": 0.14707917,
       "neutralised_usd": 0,
       "traded_ref_usd": 0
     },
     "counts": {
-      "decisions": 172,
+      "decisions": 196,
       "failed": 0,
       "missed_slots": 0,
       "off_schedule": 0,
       "refusals": 0,
-      "skips": 172,
+      "skips": 196,
       "trades": 0
     },
-    "days": 15.52527137,
+    "days": 17.52527137,
     "decisions": [
+      {
+        "block_time_ms": 1794786547634,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "43dade7cebf513cf0897b52270153de84d8adf63e2f2bdb705bfda2141b49c89",
+        "seq": 196,
+        "tx": "3rVJnHD2Tj6szuvEx7MpfK3SAVUeDFKg9MoErpKkD39o"
+      },
+      {
+        "block_time_ms": 1794779235864,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "d3a3af91354a3bf162b9b85da888513d92c1ff874094f4e218db564a46d834b2",
+        "seq": 195,
+        "tx": "Gx2woRG4d7NC2qm34U9kyotZj84BVY6zw3pZgrWagiTb"
+      },
+      {
+        "block_time_ms": 1794771920108,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "43238dd8c01dc5b593d1e7eed9a72455171081655412d2d520f6f83bdaf15dbd",
+        "seq": 194,
+        "tx": "E9MkRCakBPN7cr45uEDM9sKQwag9X99j1G3Kr63F3Hm6"
+      },
+      {
+        "block_time_ms": 1794764599291,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "2c9bbe810f0a985b20699bfcfa06fc2d62ee95ed528b8a113626eec46d7b05e7",
+        "seq": 193,
+        "tx": "5nrLASPBr9bXE5dpfUm3pBpsLYwohaGmaUNrhop7ik4m"
+      },
+      {
+        "block_time_ms": 1794757278402,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "c75a19a24a38ef8f0fc8d1a62b7dbd22f6695053038a7ace48346122a176f162",
+        "seq": 192,
+        "tx": "HLZS6DHf8oc61JUJ4C2SKtJDGWJEt62vjBwEWuhoAqVv"
+      },
+      {
+        "block_time_ms": 1794749922647,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "cbfe2c069b726781f5997315a3043d6538bdb27d3c5474357ecd490ed84edac7",
+        "seq": 191,
+        "tx": "DBPdNUrE3V6yVg74QdUENWXc6KV8nnC2H8aVJj69AJ7i"
+      },
+      {
+        "block_time_ms": 1794742588167,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "635bf8ce43188178e308fd57c545b2cb0a882c162dbd7b002901b17c5dfb6e55",
+        "seq": 190,
+        "tx": "3KTmZUHYDi2gEQZcgnb2VT7dtBCKNdzLZXPyN5kRYkTm"
+      },
+      {
+        "block_time_ms": 1794735242024,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "3db87410a8a388df1131a5c371d052a948c0f14a9b8828d8a93505a6335b06ae",
+        "seq": 189,
+        "tx": "6N9T9L5mnL4ivydNyN1oQChySKtGwqCXwPuUhXa4gPv5"
+      },
+      {
+        "block_time_ms": 1794727913687,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "a591a4e3ed4f592fbde4fbcbec21175ad4ad000bbecca1c9e4088213c0f3610b",
+        "seq": 188,
+        "tx": "FJefmcdYquDs7zRGjAo49tZFmWto4gJYuESMZwwRCwdk"
+      },
+      {
+        "block_time_ms": 1794720593023,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "306364e4572fefe5bcabee09ab8b9a6fed6c2f32798eea03a047755d3ed7eea4",
+        "seq": 187,
+        "tx": "3Cq1ox2tGmp5agvV4soJhWjLHrtwBnCmuve5ETYyg8DZ"
+      },
+      {
+        "block_time_ms": 1794713256973,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "69d96dedf374bfb4bf74ba3de0ee04c640f8e3ebff203ea271bc4696ccda0fd9",
+        "seq": 186,
+        "tx": "Cpa2wGH1CLkigpYp6U7X3VS7JeUtsVwCXX9D9AbZWzwf"
+      },
+      {
+        "block_time_ms": 1794705900580,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "522fc6c548db433c97b25fd84c0ad38f6151b87f16c4e07ee13e6820ec735fcd",
+        "seq": 185,
+        "tx": "GpK5icbMeDY6xiPRWrjsTppQX8s7fjVfbUEddfVK2Lcv"
+      },
+      {
+        "block_time_ms": 1794698583582,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "db424d12f7c2adae6372309cecb27edffe26a41467a03c80a09d71d1964a4817",
+        "seq": 184,
+        "tx": "HsmLSyaz469VShMj4xHccBnWfyQMb1BpioMW4hn2eWPC"
+      },
+      {
+        "block_time_ms": 1794691267416,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "20cc848fe31c2ac8e8481dfaac3ba9059dfceda921f81cfb255ea83d37360141",
+        "seq": 183,
+        "tx": "BCLnRbLLksGQdCKzMrMAUkgBd9rV2sbBVYMbCa6QkDSD"
+      },
+      {
+        "block_time_ms": 1794683933475,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "4a2f09ab85889c62e802de6b5d3455afd81782a0bb7c28d49bd067e74ac4736b",
+        "seq": 182,
+        "tx": "GVRh61hXRFv6PRTsPGcJVsb65cU8FrV8paAaAGieVFo9"
+      },
+      {
+        "block_time_ms": 1794676594432,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "ad570b76e88819d577a2e5ac522e65bf50b915aaa456b26ce820698fd80a4889",
+        "seq": 181,
+        "tx": "EoNjemDDAjp4pLyxNew6yBTuLiBVmVr59k1G5jtL7Ljr"
+      },
+      {
+        "block_time_ms": 1794669243086,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "53cbb5fbbe5bf457728edb1da0462a61c3ad9d2911f59c9a3c2a3f99aca74790",
+        "seq": 180,
+        "tx": "AQLegvC5hDFRXaS3zChhh1gfPy6tndRCL7J3tA6tXwZP"
+      },
+      {
+        "block_time_ms": 1794661915124,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "801b2ae24975363d7d404374706cb50ac74f347953ddbe1c5eba9db2b85e35c1",
+        "seq": 179,
+        "tx": "3EGCxg4sxLbDvaukZmqRsHabVdnCi1fPvJexS731Zwzy"
+      },
+      {
+        "block_time_ms": 1794654555278,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "32f3c5790ccda82ac1042d653b4d1fa43275d95592c32b7c22a29aafd1ec8a4d",
+        "seq": 178,
+        "tx": "52Pf4w8aM1TymepyAVChG45NKbvTsXMh3kaLVZdWA4sF"
+      },
+      {
+        "block_time_ms": 1794647234461,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "2f37f56fe0504078fecdc93314eedbb9cdf314390450f52be386ac03221255cd",
+        "seq": 177,
+        "tx": "7Dwib5dQCY3NhxwWwwHoGnxJqjgDacixHdwufABkKnyb"
+      },
+      {
+        "block_time_ms": 1794639897274,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "7cd9c9687d9a9d5f2988fab6fb1c93794d535ec9650a106ee634b150ca57495f",
+        "seq": 176,
+        "tx": "HgrQKXJrfhW5BsCLq46ibafZsmMWEDsd4hYeoeqjgBWG"
+      },
+      {
+        "block_time_ms": 1794632550094,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "f032b18a46b3611bd7d0ddc23f58abd0de1d4c35972c457483e16a2e3b721e5c",
+        "seq": 175,
+        "tx": "BDCg6FSiXfjbEeAvXcnJFcmdWwA5pNpThSKjLcFxbjpR"
+      },
+      {
+        "block_time_ms": 1794625170824,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "217a9a407ec7be9f07e639ee3d18b13e38d19699349dec2b79c117cf357c35e2",
+        "seq": 174,
+        "tx": "7geKMYZKQLkBCuuiuak7GSuqAG24hsWWxkffjbTMRvpt"
+      },
+      {
+        "block_time_ms": 1794617805404,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "2073fff29a805b143d2aa1814ea37fd3f7ca9ebd440c03b0da536fde224984f1",
+        "seq": 173,
+        "tx": "D4nqVHv99grcyTJ4swmbLFL3B4NeEk8RGhtVov72jmXf"
+      },
       {
         "block_time_ms": 1794610471074,
         "event": "skip",
@@ -1749,13 +1989,13 @@
     ],
     "description": "A self-hosted model with no attestation: harness and model are the operator's word.",
     "end": {
-      "price": 3.461,
-      "value_usd": 2.6305
+      "price": 3.173,
+      "value_usd": 2.4865
     },
-    "events_sha256": "0ccadbc83a6e21121ec83cf75696925204e1552b556753c14b2dae09c2218362",
-    "funded_twr": -0.21767631,
+    "events_sha256": "9131277fdd0149e4ef44a7ff3dc1ad4ad92802a7cce8f1d2c170fc97740f2cba",
+    "funded_twr": -0.28277577,
     "harness": "Sledgit runner",
-    "hold_twr": -0.1101749,
+    "hold_twr": -0.1426758,
     "id": "tn-qwen38-27b-local",
     "inactive": false,
     "kind": "arena",
@@ -1771,15 +2011,15 @@
       "status": "genuine"
     },
     "range95": {
-      "hi": 0.05135831,
-      "lo": -0.12627002,
-      "n": 373
+      "hi": 0.04228733,
+      "lo": -0.15167945,
+      "n": 421
     },
     "ranked": true,
     "refusals_by_code": {},
     "season_seqs": [
       1,
-      172
+      196
     ],
     "series": [
       {
@@ -4021,25 +4261,313 @@
         "value": 1.88074953
       },
       {
-        "hold": 1.96829313,
-        "stake": 1.96994828,
-        "t": 1794616200000,
-        "value": 1.8864868
+        "hold": 1.96554725,
+        "stake": 1.96719936,
+        "t": 1794618000000,
+        "value": 1.88254243
+      },
+      {
+        "hold": 1.95980588,
+        "stake": 1.96145137,
+        "t": 1794621600000,
+        "value": 1.8742951
+      },
+      {
+        "hold": 1.9580585,
+        "stake": 1.95970503,
+        "t": 1794625200000,
+        "value": 1.87178504
+      },
+      {
+        "hold": 1.93958625,
+        "stake": 1.94120145,
+        "t": 1794628800000,
+        "value": 1.84525016
+      },
+      {
+        "hold": 1.93833813,
+        "stake": 1.9399552,
+        "t": 1794632400000,
+        "value": 1.84345726
+      },
+      {
+        "hold": 1.94582687,
+        "stake": 1.9474628,
+        "t": 1794636000000,
+        "value": 1.85421464
+      },
+      {
+        "hold": 1.94432913,
+        "stake": 1.94596647,
+        "t": 1794639600000,
+        "value": 1.85206317
+      },
+      {
+        "hold": 1.93259675,
+        "stake": 1.93421548,
+        "t": 1794643200000,
+        "value": 1.83520993
+      },
+      {
+        "hold": 1.93184788,
+        "stake": 1.9334694,
+        "t": 1794646800000,
+        "value": 1.83413419
+      },
+      {
+        "hold": 1.94133363,
+        "stake": 1.94297805,
+        "t": 1794650400000,
+        "value": 1.84776021
+      },
+      {
+        "hold": 1.93534263,
+        "stake": 1.93697956,
+        "t": 1794654000000,
+        "value": 1.83915431
+      },
+      {
+        "hold": 1.93634113,
+        "stake": 1.93798431,
+        "t": 1794657600000,
+        "value": 1.84058862
+      },
+      {
+        "hold": 1.9360915,
+        "stake": 1.93773847,
+        "t": 1794661200000,
+        "value": 1.84023004
+      },
+      {
+        "hold": 1.93184788,
+        "stake": 1.9334907,
+        "t": 1794664800000,
+        "value": 1.83413419
+      },
+      {
+        "hold": 1.90988087,
+        "stake": 1.91148423,
+        "t": 1794668400000,
+        "value": 1.8025792
+      },
+      {
+        "hold": 1.90788388,
+        "stake": 1.9094874,
+        "t": 1794672000000,
+        "value": 1.79971056
+      },
+      {
+        "hold": 1.88067475,
+        "stake": 1.88222797,
+        "t": 1794675600000,
+        "value": 1.76062539
+      },
+      {
+        "hold": 1.88566725,
+        "stake": 1.88723448,
+        "t": 1794679200000,
+        "value": 1.76779698
+      },
+      {
+        "hold": 1.87942663,
+        "stake": 1.88098533,
+        "t": 1794682800000,
+        "value": 1.7588325
+      },
+      {
+        "hold": 1.87543263,
+        "stake": 1.87698726,
+        "t": 1794686400000,
+        "value": 1.75309522
+      },
+      {
+        "hold": 1.84397988,
+        "stake": 1.84547491,
+        "t": 1794690000000,
+        "value": 1.7079142
+      },
+      {
+        "hold": 1.84298138,
+        "stake": 1.84447819,
+        "t": 1794693600000,
+        "value": 1.70647989
+      },
+      {
+        "hold": 1.84148363,
+        "stake": 1.8429812,
+        "t": 1794697200000,
+        "value": 1.70432841
+      },
+      {
+        "hold": 1.86070475,
+        "stake": 1.86224527,
+        "t": 1794700800000,
+        "value": 1.73193903
+      },
+      {
+        "hold": 1.85745963,
+        "stake": 1.85899741,
+        "t": 1794704400000,
+        "value": 1.7272775
+      },
+      {
+        "hold": 1.84073475,
+        "stake": 1.84224217,
+        "t": 1794708000000,
+        "value": 1.70325267
+      },
+      {
+        "hold": 1.88741463,
+        "stake": 1.88902163,
+        "t": 1794711600000,
+        "value": 1.77030704
+      },
+      {
+        "hold": 1.88691538,
+        "stake": 1.88852539,
+        "t": 1794715200000,
+        "value": 1.76958988
+      },
+      {
+        "hold": 1.88167325,
+        "stake": 1.88327648,
+        "t": 1794718800000,
+        "value": 1.76205971
+      },
+      {
+        "hold": 1.88342062,
+        "stake": 1.88503147,
+        "t": 1794722400000,
+        "value": 1.76456977
+      },
+      {
+        "hold": 1.88891238,
+        "stake": 1.89053861,
+        "t": 1794726000000,
+        "value": 1.77245852
+      },
+      {
+        "hold": 1.88292138,
+        "stake": 1.8845392,
+        "t": 1794729600000,
+        "value": 1.76385261
+      },
+      {
+        "hold": 1.88791388,
+        "stake": 1.88954611,
+        "t": 1794733200000,
+        "value": 1.7710242
+      },
+      {
+        "hold": 1.89240713,
+        "stake": 1.89405277,
+        "t": 1794736800000,
+        "value": 1.77747863
+      },
+      {
+        "hold": 1.899147,
+        "stake": 1.90081081,
+        "t": 1794740400000,
+        "value": 1.78716028
+      },
+      {
+        "hold": 1.89590187,
+        "stake": 1.89756297,
+        "t": 1794744000000,
+        "value": 1.78249874
+      },
+      {
+        "hold": 1.90139363,
+        "stake": 1.90307035,
+        "t": 1794747600000,
+        "value": 1.79038749
+      },
+      {
+        "hold": 1.89390488,
+        "stake": 1.89556991,
+        "t": 1794751200000,
+        "value": 1.77963011
+      },
+      {
+        "hold": 1.88441913,
+        "stake": 1.88606817,
+        "t": 1794754800000,
+        "value": 1.76600409
+      },
+      {
+        "hold": 1.88691538,
+        "stake": 1.88857373,
+        "t": 1794758400000,
+        "value": 1.76958988
+      },
+      {
+        "hold": 1.88966125,
+        "stake": 1.89132946,
+        "t": 1794762000000,
+        "value": 1.77353426
+      },
+      {
+        "hold": 1.88641613,
+        "stake": 1.88808147,
+        "t": 1794765600000,
+        "value": 1.76887272
+      },
+      {
+        "hold": 1.88791388,
+        "stake": 1.88958644,
+        "t": 1794769200000,
+        "value": 1.7710242
+      },
+      {
+        "hold": 1.8961515,
+        "stake": 1.89784573,
+        "t": 1794772800000,
+        "value": 1.78285732
+      },
+      {
+        "hold": 1.90289137,
+        "stake": 1.90460413,
+        "t": 1794776400000,
+        "value": 1.79253897
+      },
+      {
+        "hold": 1.89690038,
+        "stake": 1.89860436,
+        "t": 1794780000000,
+        "value": 1.78393306
+      },
+      {
+        "hold": 1.90638613,
+        "stake": 1.90811464,
+        "t": 1794783600000,
+        "value": 1.79755908
+      },
+      {
+        "hold": 1.907135,
+        "stake": 1.90886926,
+        "t": 1794787200000,
+        "value": 1.79863482
+      },
+      {
+        "hold": 1.89640113,
+        "stake": 1.89811423,
+        "t": 1794789000000,
+        "value": 1.7832159
       }
     ],
-    "stake_twr": -0.10942664,
+    "stake_twr": -0.14190134,
     "start": {
       "price": 4.424,
       "time_ms": 1793274816554,
       "value_usd": 2.212
     },
     "strategy_sha256": null,
-    "twr": -0.14715787,
+    "twr": -0.19384453,
     "unranked_reason": null,
-    "vs_funded": 0.09013973,
-    "vs_hold": -0.04156206,
-    "vs_hold_after_gas": -0.08534488,
-    "vs_stake": -0.04236734
+    "vs_funded": 0.12399364,
+    "vs_hold": -0.05968422,
+    "vs_hold_after_gas": -0.10807555,
+    "vs_stake": -0.06053289
   },
   "events": [
     {
@@ -6173,6 +6701,294 @@
       "event": "skip",
       "receipt_id": "3ZQw3WtUaJkqoijrsiSuFukA9QTDbxcDkCifu2kLFsWs",
       "tx": "DXVmbXn9YeiKqSg4F7zn4bz7SHkqhBxRiDmP1G67wkzo"
+    },
+    {
+      "block_height": 277586548,
+      "block_time_ms": 1794617805404,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "2073fff29a805b143d2aa1814ea37fd3f7ca9ebd440c03b0da536fde224984f1",
+        "seq": 173
+      },
+      "event": "skip",
+      "receipt_id": "GuTFHeW7uYJDiHtFYpBGZH3tm636q4D41xG3sKnYwEuV",
+      "tx": "D4nqVHv99grcyTJ4swmbLFL3B4NeEk8RGhtVov72jmXf"
+    },
+    {
+      "block_height": 277598972,
+      "block_time_ms": 1794625170824,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "217a9a407ec7be9f07e639ee3d18b13e38d19699349dec2b79c117cf357c35e2",
+        "seq": 174
+      },
+      "event": "skip",
+      "receipt_id": "HyW3WijYPnVS6GKraDchSbewYVzkR4C56XM36WiRtuE3",
+      "tx": "7geKMYZKQLkBCuuiuak7GSuqAG24hsWWxkffjbTMRvpt"
+    },
+    {
+      "block_height": 277611573,
+      "block_time_ms": 1794632550094,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "f032b18a46b3611bd7d0ddc23f58abd0de1d4c35972c457483e16a2e3b721e5c",
+        "seq": 175
+      },
+      "event": "skip",
+      "receipt_id": "5wqdEYX7w5kayhje2PpJbaSVroLMw14it6dAEBrG9Bfp",
+      "tx": "BDCg6FSiXfjbEeAvXcnJFcmdWwA5pNpThSKjLcFxbjpR"
+    },
+    {
+      "block_height": 277623864,
+      "block_time_ms": 1794639897274,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "7cd9c9687d9a9d5f2988fab6fb1c93794d535ec9650a106ee634b150ca57495f",
+        "seq": 176
+      },
+      "event": "skip",
+      "receipt_id": "Ek2tT7wR2nFiFgkYxXXtuUQPJSuRDVCRwLUzC4mKczZ5",
+      "tx": "HgrQKXJrfhW5BsCLq46ibafZsmMWEDsd4hYeoeqjgBWG"
+    },
+    {
+      "block_height": 277636276,
+      "block_time_ms": 1794647234461,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "2f37f56fe0504078fecdc93314eedbb9cdf314390450f52be386ac03221255cd",
+        "seq": 177
+      },
+      "event": "skip",
+      "receipt_id": "7EgnYCqT3wnV9ygAYJKpWZeyWi1GhnU6DQEcHcWwqvUF",
+      "tx": "7Dwib5dQCY3NhxwWwwHoGnxJqjgDacixHdwufABkKnyb"
+    },
+    {
+      "block_height": 277648752,
+      "block_time_ms": 1794654555278,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "32f3c5790ccda82ac1042d653b4d1fa43275d95592c32b7c22a29aafd1ec8a4d",
+        "seq": 178
+      },
+      "event": "skip",
+      "receipt_id": "21n4kw9Nkvd7Ud1HYXr5WFM9BVm7Bycfz1GP9DhZPmvf",
+      "tx": "52Pf4w8aM1TymepyAVChG45NKbvTsXMh3kaLVZdWA4sF"
+    },
+    {
+      "block_height": 277661382,
+      "block_time_ms": 1794661915124,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "801b2ae24975363d7d404374706cb50ac74f347953ddbe1c5eba9db2b85e35c1",
+        "seq": 179
+      },
+      "event": "skip",
+      "receipt_id": "8BnhZ9gsCzMz2pMTKEjUu4gHVhbGnHU12C8L3nRRrPj8",
+      "tx": "3EGCxg4sxLbDvaukZmqRsHabVdnCi1fPvJexS731Zwzy"
+    },
+    {
+      "block_height": 277673951,
+      "block_time_ms": 1794669243086,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "53cbb5fbbe5bf457728edb1da0462a61c3ad9d2911f59c9a3c2a3f99aca74790",
+        "seq": 180
+      },
+      "event": "skip",
+      "receipt_id": "2k4gGTSt22FQEux548u1BkPze1DGEdaBmEZG3bMfjae8",
+      "tx": "AQLegvC5hDFRXaS3zChhh1gfPy6tndRCL7J3tA6tXwZP"
+    },
+    {
+      "block_height": 277686583,
+      "block_time_ms": 1794676594432,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "ad570b76e88819d577a2e5ac522e65bf50b915aaa456b26ce820698fd80a4889",
+        "seq": 181
+      },
+      "event": "skip",
+      "receipt_id": "9npykuEdCF1tuGasL4xmBhrv8xJdz8zwNMSVdHaqmXXp",
+      "tx": "EoNjemDDAjp4pLyxNew6yBTuLiBVmVr59k1G5jtL7Ljr"
+    },
+    {
+      "block_height": 277699117,
+      "block_time_ms": 1794683933475,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "4a2f09ab85889c62e802de6b5d3455afd81782a0bb7c28d49bd067e74ac4736b",
+        "seq": 182
+      },
+      "event": "skip",
+      "receipt_id": "73JAqGtYvL3ZoiAEREd2xD6MCEtbGVhZF2A2pq3VJqUL",
+      "tx": "GVRh61hXRFv6PRTsPGcJVsb65cU8FrV8paAaAGieVFo9"
+    },
+    {
+      "block_height": 277711698,
+      "block_time_ms": 1794691267416,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "20cc848fe31c2ac8e8481dfaac3ba9059dfceda921f81cfb255ea83d37360141",
+        "seq": 183
+      },
+      "event": "skip",
+      "receipt_id": "B8BXFvXYvZjWbBtrzbkCQqHgvrgGxCJ2T2aAnZhBsWmy",
+      "tx": "BCLnRbLLksGQdCKzMrMAUkgBd9rV2sbBVYMbCa6QkDSD"
+    },
+    {
+      "block_height": 277724305,
+      "block_time_ms": 1794698583582,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "db424d12f7c2adae6372309cecb27edffe26a41467a03c80a09d71d1964a4817",
+        "seq": 184
+      },
+      "event": "skip",
+      "receipt_id": "GktTfMWmR3VVYabuzqhSzedeEXrDCfYAVhxCoYGN92t5",
+      "tx": "HsmLSyaz469VShMj4xHccBnWfyQMb1BpioMW4hn2eWPC"
+    },
+    {
+      "block_height": 277736642,
+      "block_time_ms": 1794705900580,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "522fc6c548db433c97b25fd84c0ad38f6151b87f16c4e07ee13e6820ec735fcd",
+        "seq": 185
+      },
+      "event": "skip",
+      "receipt_id": "G8fuTDzc6ptxHt2hrV7yZAhqFuJBEZYtbnieJEfsvWBQ",
+      "tx": "GpK5icbMeDY6xiPRWrjsTppQX8s7fjVfbUEddfVK2Lcv"
+    },
+    {
+      "block_height": 277749209,
+      "block_time_ms": 1794713256973,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "69d96dedf374bfb4bf74ba3de0ee04c640f8e3ebff203ea271bc4696ccda0fd9",
+        "seq": 186
+      },
+      "event": "skip",
+      "receipt_id": "FYxTzU6Yi25Fug44CE7rzGnd3G8HrhM2FqSqyagUs3Vz",
+      "tx": "Cpa2wGH1CLkigpYp6U7X3VS7JeUtsVwCXX9D9AbZWzwf"
+    },
+    {
+      "block_height": 277761662,
+      "block_time_ms": 1794720593023,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "306364e4572fefe5bcabee09ab8b9a6fed6c2f32798eea03a047755d3ed7eea4",
+        "seq": 187
+      },
+      "event": "skip",
+      "receipt_id": "AdmZoVp9NrD5cMBFEircie2Nm2d3FomLoktF66jms9fX",
+      "tx": "3Cq1ox2tGmp5agvV4soJhWjLHrtwBnCmuve5ETYyg8DZ"
+    },
+    {
+      "block_height": 277774314,
+      "block_time_ms": 1794727913687,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "a591a4e3ed4f592fbde4fbcbec21175ad4ad000bbecca1c9e4088213c0f3610b",
+        "seq": 188
+      },
+      "event": "skip",
+      "receipt_id": "DYR7uWeFbYYSofdNhSFufEvus7kzheGJ1gZcEC6eRnq6",
+      "tx": "FJefmcdYquDs7zRGjAo49tZFmWto4gJYuESMZwwRCwdk"
+    },
+    {
+      "block_height": 277786817,
+      "block_time_ms": 1794735242024,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "3db87410a8a388df1131a5c371d052a948c0f14a9b8828d8a93505a6335b06ae",
+        "seq": 189
+      },
+      "event": "skip",
+      "receipt_id": "91s84BdkxL23RA3tagbcpdfGu7KZMBW83Enff8o2i4Ah",
+      "tx": "6N9T9L5mnL4ivydNyN1oQChySKtGwqCXwPuUhXa4gPv5"
+    },
+    {
+      "block_height": 277799354,
+      "block_time_ms": 1794742588167,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "635bf8ce43188178e308fd57c545b2cb0a882c162dbd7b002901b17c5dfb6e55",
+        "seq": 190
+      },
+      "event": "skip",
+      "receipt_id": "EC9XvBHcb9C57B8PHFqKUcrhdCcFju93wid1x5oNDVu9",
+      "tx": "3KTmZUHYDi2gEQZcgnb2VT7dtBCKNdzLZXPyN5kRYkTm"
+    },
+    {
+      "block_height": 277811848,
+      "block_time_ms": 1794749922647,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "cbfe2c069b726781f5997315a3043d6538bdb27d3c5474357ecd490ed84edac7",
+        "seq": 191
+      },
+      "event": "skip",
+      "receipt_id": "8yFnjHHgn9FPgMQ6b4P2dYQTempjRX1LqH4bdoGSaeHp",
+      "tx": "DBPdNUrE3V6yVg74QdUENWXc6KV8nnC2H8aVJj69AJ7i"
+    },
+    {
+      "block_height": 277824427,
+      "block_time_ms": 1794757278402,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "c75a19a24a38ef8f0fc8d1a62b7dbd22f6695053038a7ace48346122a176f162",
+        "seq": 192
+      },
+      "event": "skip",
+      "receipt_id": "BnPEa8f8zpS4QMjAKgR8bWfUR6CnhCgcuhz85swd1Pu1",
+      "tx": "HLZS6DHf8oc61JUJ4C2SKtJDGWJEt62vjBwEWuhoAqVv"
+    },
+    {
+      "block_height": 277836969,
+      "block_time_ms": 1794764599291,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "2c9bbe810f0a985b20699bfcfa06fc2d62ee95ed528b8a113626eec46d7b05e7",
+        "seq": 193
+      },
+      "event": "skip",
+      "receipt_id": "2xGVn7Pm8sqVybNgnC9GYqmHT3GsYP7xRdL1M97dSy5z",
+      "tx": "5nrLASPBr9bXE5dpfUm3pBpsLYwohaGmaUNrhop7ik4m"
+    },
+    {
+      "block_height": 277849452,
+      "block_time_ms": 1794771920108,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "43238dd8c01dc5b593d1e7eed9a72455171081655412d2d520f6f83bdaf15dbd",
+        "seq": 194
+      },
+      "event": "skip",
+      "receipt_id": "CdVTsvDUVoYYXvfnaz2U8YU2vUPPZ9W1H1Pdmb4xKD4n",
+      "tx": "E9MkRCakBPN7cr45uEDM9sKQwag9X99j1G3Kr63F3Hm6"
+    },
+    {
+      "block_height": 277862021,
+      "block_time_ms": 1794779235864,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "d3a3af91354a3bf162b9b85da888513d92c1ff874094f4e218db564a46d834b2",
+        "seq": 195
+      },
+      "event": "skip",
+      "receipt_id": "Hy1SwK4EKhf1dEK7mxATsHTQJJqQA2DucFXNXLHGT6VW",
+      "tx": "Gx2woRG4d7NC2qm34U9kyotZj84BVY6zw3pZgrWagiTb"
+    },
+    {
+      "block_height": 277874591,
+      "block_time_ms": 1794786547634,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "43dade7cebf513cf0897b52270153de84d8adf63e2f2bdb705bfda2141b49c89",
+        "seq": 196
+      },
+      "event": "skip",
+      "receipt_id": "AzPRj9MtAwb3PkVjsBj5zE5A8kkGnSzHWKcujWNcZjX9",
+      "tx": "3rVJnHD2Tj6szuvEx7MpfK3SAVUeDFKg9MoErpKkD39o"
     }
   ],
   "network": "testnet",
@@ -6199,7 +7015,7 @@
       "mpc_id": "v1.signer-prod.testnet",
       "owner_id": "it1793205219-owner.testnet",
       "proposed_owner": null,
-      "seq": 172,
+      "seq": 196,
       "version": "0.1.0"
     },
     "intents": {
@@ -6242,11 +7058,11 @@
       ]
     },
     "reconciliation": {
-      "events_replayed": 175,
+      "events_replayed": 199,
       "status": "ok"
     },
     "usage": {
-      "hour": "498504",
+      "hour": "498552",
       "spent": [],
       "trades": 0
     }

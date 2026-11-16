@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794616200000,
-  "collected_at": "2026-11-14T00:48:52.592Z",
+  "as_of_ms": 1794789000000,
+  "collected_at": "2026-11-16T00:48:49.821Z",
   "excluded": [
     "children of irontrade.testnet not read: the factory still holds a key, so its vaults are legacy"
   ],
@@ -1536,6 +1536,198 @@
     [
       1794614400000,
       3.445
+    ],
+    [
+      1794618000000,
+      3.45
+    ],
+    [
+      1794621600000,
+      3.427
+    ],
+    [
+      1794625200000,
+      3.42
+    ],
+    [
+      1794628800000,
+      3.346
+    ],
+    [
+      1794632400000,
+      3.341
+    ],
+    [
+      1794636000000,
+      3.371
+    ],
+    [
+      1794639600000,
+      3.365
+    ],
+    [
+      1794643200000,
+      3.318
+    ],
+    [
+      1794646800000,
+      3.315
+    ],
+    [
+      1794650400000,
+      3.353
+    ],
+    [
+      1794654000000,
+      3.329
+    ],
+    [
+      1794657600000,
+      3.333
+    ],
+    [
+      1794661200000,
+      3.332
+    ],
+    [
+      1794664800000,
+      3.315
+    ],
+    [
+      1794668400000,
+      3.227
+    ],
+    [
+      1794672000000,
+      3.219
+    ],
+    [
+      1794675600000,
+      3.11
+    ],
+    [
+      1794679200000,
+      3.13
+    ],
+    [
+      1794682800000,
+      3.105
+    ],
+    [
+      1794686400000,
+      3.089
+    ],
+    [
+      1794690000000,
+      2.963
+    ],
+    [
+      1794693600000,
+      2.959
+    ],
+    [
+      1794697200000,
+      2.953
+    ],
+    [
+      1794700800000,
+      3.03
+    ],
+    [
+      1794704400000,
+      3.017
+    ],
+    [
+      1794708000000,
+      2.95
+    ],
+    [
+      1794711600000,
+      3.137
+    ],
+    [
+      1794715200000,
+      3.135
+    ],
+    [
+      1794718800000,
+      3.114
+    ],
+    [
+      1794722400000,
+      3.121
+    ],
+    [
+      1794726000000,
+      3.143
+    ],
+    [
+      1794729600000,
+      3.119
+    ],
+    [
+      1794733200000,
+      3.139
+    ],
+    [
+      1794736800000,
+      3.157
+    ],
+    [
+      1794740400000,
+      3.184
+    ],
+    [
+      1794744000000,
+      3.171
+    ],
+    [
+      1794747600000,
+      3.193
+    ],
+    [
+      1794751200000,
+      3.163
+    ],
+    [
+      1794754800000,
+      3.125
+    ],
+    [
+      1794758400000,
+      3.135
+    ],
+    [
+      1794762000000,
+      3.146
+    ],
+    [
+      1794765600000,
+      3.133
+    ],
+    [
+      1794769200000,
+      3.139
+    ],
+    [
+      1794772800000,
+      3.172
+    ],
+    [
+      1794776400000,
+      3.199
+    ],
+    [
+      1794780000000,
+      3.175
+    ],
+    [
+      1794783600000,
+      3.213
+    ],
+    [
+      1794787200000,
+      3.216
     ]
   ],
   "minute": {
@@ -2273,7 +2465,93 @@
     "1794615420000": 3.467,
     "1794615600000": 3.463,
     "1794615660000": 3.467,
-    "1794616200000": 3.461
+    "1794617760000": 3.452,
+    "1794617820000": 3.449,
+    "1794617880000": 3.454,
+    "1794625080000": 3.419,
+    "1794625140000": 3.42,
+    "1794625260000": 3.421,
+    "1794632460000": 3.334,
+    "1794632520000": 3.347,
+    "1794632580000": 3.347,
+    "1794632640000": 3.344,
+    "1794639840000": 3.374,
+    "1794639900000": 3.376,
+    "1794639960000": 3.374,
+    "1794647160000": 3.327,
+    "1794647220000": 3.323,
+    "1794647280000": 3.327,
+    "1794654480000": 3.329,
+    "1794654540000": 3.327,
+    "1794654600000": 3.326,
+    "1794654660000": 3.329,
+    "1794661860000": 3.324,
+    "1794661920000": 3.326,
+    "1794661980000": 3.325,
+    "1794669180000": 3.214,
+    "1794669240000": 3.216,
+    "1794669300000": 3.225,
+    "1794676500000": 3.105,
+    "1794676560000": 3.091,
+    "1794676620000": 3.104,
+    "1794676680000": 3.101,
+    "1794683880000": 3.076,
+    "1794683940000": 3.07,
+    "1794684000000": 3.07,
+    "1794691200000": 2.945,
+    "1794691260000": 2.943,
+    "1794691320000": 2.943,
+    "1794698520000": 2.972,
+    "1794698580000": 2.97,
+    "1794698640000": 2.97,
+    "1794701100000": 3.029,
+    "1794701280000": 3.027,
+    "1794701460000": 3.06,
+    "1794701640000": 3.059,
+    "1794701820000": 3.063,
+    "1794702000000": 3.059,
+    "1794705840000": 2.996,
+    "1794705900000": 2.981,
+    "1794705960000": 2.992,
+    "1794713220000": 3.137,
+    "1794713280000": 3.134,
+    "1794713340000": 3.133,
+    "1794720540000": 3.141,
+    "1794720600000": 3.137,
+    "1794720660000": 3.135,
+    "1794727860000": 3.141,
+    "1794727920000": 3.139,
+    "1794727980000": 3.138,
+    "1794735180000": 3.158,
+    "1794735240000": 3.156,
+    "1794735300000": 3.148,
+    "1794742500000": 3.198,
+    "1794742560000": 3.201,
+    "1794742620000": 3.199,
+    "1794749880000": 3.178,
+    "1794750000000": 3.179,
+    "1794757200000": 3.131,
+    "1794757260000": 3.129,
+    "1794757320000": 3.123,
+    "1794764520000": 3.13,
+    "1794764580000": 3.134,
+    "1794764640000": 3.133,
+    "1794771840000": 3.161,
+    "1794771900000": 3.163,
+    "1794771960000": 3.167,
+    "1794779160000": 3.19,
+    "1794779220000": 3.186,
+    "1794779280000": 3.187,
+    "1794786480000": 3.214,
+    "1794786540000": 3.208,
+    "1794786600000": 3.205,
+    "1794787500000": 3.208,
+    "1794787680000": 3.201,
+    "1794787860000": 3.194,
+    "1794788040000": 3.191,
+    "1794788220000": 3.181,
+    "1794788400000": 3.18,
+    "1794789000000": 3.173
   },
   "network": "testnet",
   "reference": {
@@ -2508,7 +2786,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [],
           "trades": 0
         }
@@ -2700,7 +2978,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [],
           "trades": 0
         }
@@ -3031,6 +3309,30 @@
           "event": "skip",
           "receipt_id": "88RtmcC6yHYCkfY3Mvx9T7E9Xhu64kQYVdbfprRfAdzi",
           "tx": "6n1rDg1abXKE3yGy8qU79xTqdujQo4dBwqKjgDgZVEKC"
+        },
+        {
+          "block_height": 277729527,
+          "block_time_ms": 1794701689839,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "61af8a4d8808f6c5d4c1919d900fb97951013da29ba7eb06967ebba8c51398b5",
+            "seq": 18
+          },
+          "event": "skip",
+          "receipt_id": "J5xnUtyrYzJveefhCqqLzNxwoWTqJUavPURq2L9Lik6v",
+          "tx": "C62kZkHAmfsMcYDzXXXt2Q1F1DgZ8PDRkJ2wfiqM6AY7"
+        },
+        {
+          "block_height": 277877200,
+          "block_time_ms": 1794788067677,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "9a46be482120d27979fcdffc8f3675e56a34dbf432fa5f36383b18adcefaf12d",
+            "seq": 19
+          },
+          "event": "skip",
+          "receipt_id": "3jamUQJavZCh82ij4oHEn7ZwLjdtDr53Dcr6dALvHVDp",
+          "tx": "GHRqwiSS4xnak1By4wTD1uw4DQE5SzoR52PYFtRTfxjA"
         }
       ],
       "gas": [
@@ -3118,6 +3420,16 @@
           "block_time_ms": 1794615281343,
           "tokens_burnt": "202786512714900000000",
           "tx": "6n1rDg1abXKE3yGy8qU79xTqdujQo4dBwqKjgDgZVEKC"
+        },
+        {
+          "block_time_ms": 1794701689839,
+          "tokens_burnt": "202786512714900000000",
+          "tx": "C62kZkHAmfsMcYDzXXXt2Q1F1DgZ8PDRkJ2wfiqM6AY7"
+        },
+        {
+          "block_time_ms": 1794788067677,
+          "tokens_burnt": "202786512714900000000",
+          "tx": "GHRqwiSS4xnak1By4wTD1uw4DQE5SzoR52PYFtRTfxjA"
         }
       ],
       "observed": {
@@ -3143,7 +3455,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 17,
+          "seq": 19,
           "version": "0.1.0"
         },
         "intents": {
@@ -3186,11 +3498,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 20,
+          "events_replayed": 22,
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",
@@ -3201,12 +3513,12 @@
         }
       },
       "proof": {
-        "detail": "16 in-season decision(s) have no receipt in the file (first: seq 2)",
+        "detail": "18 in-season decision(s) have no receipt in the file (first: seq 2)",
         "evidence_ids": [],
         "receipts_sha256": "13bc34e2cb04c9411d1b1a6eb2ab50e29069cf5cc14dd65f80e48e259ee0ebfd",
         "seqs": [
           1,
-          17
+          19
         ],
         "tier": "self"
       },
@@ -3530,6 +3842,30 @@
           "event": "skip",
           "receipt_id": "2BM9JuDsYTJ1EHQBYpNhfxQ1mjMmTm1r5NFgkc7DaNwU",
           "tx": "AnL6xgqVhv1bMWsUQDzS75oBEfAd82c6z72pEsFw7VTE"
+        },
+        {
+          "block_height": 277729783,
+          "block_time_ms": 1794701845269,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "00eebeabd814d76b1306d0a1855c0ac17357e6af00a6ee72db26509cbcdbfe3e",
+            "seq": 18
+          },
+          "event": "skip",
+          "receipt_id": "zbngcwWng3gYxRc7iYMvpF3CLdbPWbhTDKN29BjtFGg",
+          "tx": "AoUaF2YFtr6QaevKWgcpRjaq5hpycE1sNAfDC5sw94AG"
+        },
+        {
+          "block_height": 277877498,
+          "block_time_ms": 1794788248313,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "f9e379586e906ac51add4e468710fff48a840e77f0875353a82ff9e054943155",
+            "seq": 19
+          },
+          "event": "skip",
+          "receipt_id": "8CwSSPrdhYF1bKeiRB3vnzU516voimsEbjzipxt3aM36",
+          "tx": "CSC2BM3o4gHf5bUTp2vsFTZztZPp2MCDwqxeUNdvjX4L"
         }
       ],
       "gas": [
@@ -3617,6 +3953,16 @@
           "block_time_ms": 1794615437834,
           "tokens_burnt": "202717434355300000000",
           "tx": "AnL6xgqVhv1bMWsUQDzS75oBEfAd82c6z72pEsFw7VTE"
+        },
+        {
+          "block_time_ms": 1794701845269,
+          "tokens_burnt": "202717434355300000000",
+          "tx": "AoUaF2YFtr6QaevKWgcpRjaq5hpycE1sNAfDC5sw94AG"
+        },
+        {
+          "block_time_ms": 1794788248313,
+          "tokens_burnt": "202717434355300000000",
+          "tx": "CSC2BM3o4gHf5bUTp2vsFTZztZPp2MCDwqxeUNdvjX4L"
         }
       ],
       "observed": {
@@ -3642,7 +3988,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 17,
+          "seq": 19,
           "version": "0.1.0"
         },
         "intents": {
@@ -3685,11 +4031,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 20,
+          "events_replayed": 22,
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",
@@ -3700,12 +4046,12 @@
         }
       },
       "proof": {
-        "detail": "16 in-season decision(s) have no receipt in the file (first: seq 2)",
+        "detail": "18 in-season decision(s) have no receipt in the file (first: seq 2)",
         "evidence_ids": [],
         "receipts_sha256": "71d29ee1f66b9640853ec0526f6e61b383cea36532935428152f39e15b2e067e",
         "seqs": [
           1,
-          17
+          19
         ],
         "tier": "self"
       },
@@ -3994,7 +4340,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",
@@ -4397,6 +4743,30 @@
           "event": "skip",
           "receipt_id": "4cmNZYqHmcxchE6BUviq8uxjVz2gWMiJvgY27NTSFypJ",
           "tx": "7pvTa2Zt11DLpeUFQi1wWzgwRSg9VMxubcPLWtatboQT"
+        },
+        {
+          "block_height": 277729231,
+          "block_time_ms": 1794701509153,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "836393d927b2a4a027065be4e1b87527427b54c0933a2b6967b2d280977834b1",
+            "seq": 17
+          },
+          "event": "skip",
+          "receipt_id": "2hZEr1hJ5D34ketfLz2aKTW1bP7q89v9wnyT2UZPqqVR",
+          "tx": "2tFVoDCfEpdEwf1WGNAruZE2653X2RYeyXtHeyg4iENp"
+        },
+        {
+          "block_height": 277876902,
+          "block_time_ms": 1794787887044,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "cee36a818efd110c15e5481caed56581da45ffa336d20ea12bf06938e3c9dc4f",
+            "seq": 18
+          },
+          "event": "skip",
+          "receipt_id": "FVxZNowkMHTw7MuMmTQW3sELyeMvRK7iScm3hnCdPL8i",
+          "tx": "GLZgzUgUsMf3DDzzjpAqCv249JcitQpUizEiBWTPtBCN"
         }
       ],
       "gas": [
@@ -4479,6 +4849,16 @@
           "block_time_ms": 1794615110494,
           "tokens_burnt": "208055100386400000000",
           "tx": "7pvTa2Zt11DLpeUFQi1wWzgwRSg9VMxubcPLWtatboQT"
+        },
+        {
+          "block_time_ms": 1794701509153,
+          "tokens_burnt": "208055100386400000000",
+          "tx": "2tFVoDCfEpdEwf1WGNAruZE2653X2RYeyXtHeyg4iENp"
+        },
+        {
+          "block_time_ms": 1794787887044,
+          "tokens_burnt": "208055100386400000000",
+          "tx": "GLZgzUgUsMf3DDzzjpAqCv249JcitQpUizEiBWTPtBCN"
         }
       ],
       "observed": {
@@ -4504,7 +4884,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 16,
+          "seq": 18,
           "version": "0.1.0"
         },
         "intents": {
@@ -4547,11 +4927,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 22,
+          "events_replayed": 24,
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",
@@ -4566,12 +4946,12 @@
         }
       },
       "proof": {
-        "detail": "15 in-season decision(s) have no receipt in the file (first: seq 2)",
+        "detail": "17 in-season decision(s) have no receipt in the file (first: seq 2)",
         "evidence_ids": [],
         "receipts_sha256": "8ebba9095a15b129455c23272456e7569b10d4145a1b6997d8bc78395d62f31f",
         "seqs": [
           1,
-          16
+          18
         ],
         "tier": "self"
       },
@@ -4877,7 +5257,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",
@@ -5240,6 +5620,30 @@
           "event": "skip",
           "receipt_id": "Ew1KSJterDKWpZAmnDCXRoWken2KUkjW9BjT4EvcMcuD",
           "tx": "q3mRdvtvcSYMZGMW9byqkckxnq6DVnAhvEcbgsX9mR9"
+        },
+        {
+          "block_height": 277728589,
+          "block_time_ms": 1794701123249,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "a59da6acb98363b7cea75ba611b631662181ba02d07fc4d93d9d34d1ebe04f84",
+            "seq": 18
+          },
+          "event": "skip",
+          "receipt_id": "7KVvghD97YDmdCJremkpvG8pqHi138vrFG8N2bNP32Z6",
+          "tx": "3iFCqzuEFk8C6BzGyPeXaAvcQLydzYtn4eTN4Eq5vYGa"
+        },
+        {
+          "block_height": 277876249,
+          "block_time_ms": 1794787526595,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "2a8ff15454f3ed123b6f485ce3f6e619bebe6120e2f2f19a1a26b2d6839125b4",
+            "seq": 19
+          },
+          "event": "skip",
+          "receipt_id": "74QTpH7si1bneFibvmXvaABcp3ncg5SZc81Bvau7Pgtn",
+          "tx": "9ASg7yjUVu9eA7UsDgasLw5vt1eYnMdErAudWTXX2mjv"
         }
       ],
       "gas": [
@@ -5327,6 +5731,16 @@
           "block_time_ms": 1794614719334,
           "tokens_burnt": "203296386660700000000",
           "tx": "q3mRdvtvcSYMZGMW9byqkckxnq6DVnAhvEcbgsX9mR9"
+        },
+        {
+          "block_time_ms": 1794701123249,
+          "tokens_burnt": "203296386660700000000",
+          "tx": "3iFCqzuEFk8C6BzGyPeXaAvcQLydzYtn4eTN4Eq5vYGa"
+        },
+        {
+          "block_time_ms": 1794787526595,
+          "tokens_burnt": "203296386660700000000",
+          "tx": "9ASg7yjUVu9eA7UsDgasLw5vt1eYnMdErAudWTXX2mjv"
         }
       ],
       "observed": {
@@ -5352,7 +5766,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 17,
+          "seq": 19,
           "version": "0.1.0"
         },
         "intents": {
@@ -5395,11 +5809,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 21,
+          "events_replayed": 23,
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",
@@ -5410,12 +5824,12 @@
         }
       },
       "proof": {
-        "detail": "16 in-season decision(s) have no receipt in the file (first: seq 2)",
+        "detail": "18 in-season decision(s) have no receipt in the file (first: seq 2)",
         "evidence_ids": [],
         "receipts_sha256": "2c969ad8ca2846b0a3626f6ddd0a95c3ff8cc080b58af9eede556000362f57b8",
         "seqs": [
           1,
-          17
+          19
         ],
         "tier": "self"
       },
@@ -5652,7 +6066,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [],
           "trades": 0
         }
@@ -5984,6 +6398,30 @@
           "event": "skip",
           "receipt_id": "BPP1fnKLdUM8rcmZPSdKxu57Z277zu5HYBukHVTo3W7e",
           "tx": "HVMPHaqwCVf6mgoEhsDnFarGMrWWgzpkjnHCnpHfWdJk"
+        },
+        {
+          "block_height": 277728923,
+          "block_time_ms": 1794701324507,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "be68c9d738d625fb9a712e073062399cd1bdc5a28be8ef1d2f234f6539b051df",
+            "seq": 18
+          },
+          "event": "skip",
+          "receipt_id": "9bsuJhcSpNvGGpsifrppsfqTCoDKSeErvUd7JaH6Szv2",
+          "tx": "9vEySi2Y75Fnui1r6iZ1j9CRQAKqsaqRyL9MQZNq9Hav"
+        },
+        {
+          "block_height": 277876574,
+          "block_time_ms": 1794787705704,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "0e1c5af46173affc2315ace81e6de37d32e1734a8beb858e44b124e2fdc062a3",
+            "seq": 19
+          },
+          "event": "skip",
+          "receipt_id": "FDPFnHe2zk3vE4rj35Ww8DVL3zbzGHsLqo44ZJHczgtT",
+          "tx": "5jQjF7jQGMuxkKzmoGycs88b3g4r4btxjhfN9b7SVLqu"
         }
       ],
       "gas": [
@@ -6071,6 +6509,16 @@
           "block_time_ms": 1794614925872,
           "tokens_burnt": "203200577017200000000",
           "tx": "HVMPHaqwCVf6mgoEhsDnFarGMrWWgzpkjnHCnpHfWdJk"
+        },
+        {
+          "block_time_ms": 1794701324507,
+          "tokens_burnt": "203200577017200000000",
+          "tx": "9vEySi2Y75Fnui1r6iZ1j9CRQAKqsaqRyL9MQZNq9Hav"
+        },
+        {
+          "block_time_ms": 1794787705704,
+          "tokens_burnt": "203200577017200000000",
+          "tx": "5jQjF7jQGMuxkKzmoGycs88b3g4r4btxjhfN9b7SVLqu"
         }
       ],
       "observed": {
@@ -6096,7 +6544,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 17,
+          "seq": 19,
           "version": "0.1.0"
         },
         "intents": {
@@ -6139,11 +6587,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 20,
+          "events_replayed": 22,
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",
@@ -6154,12 +6602,12 @@
         }
       },
       "proof": {
-        "detail": "16 in-season decision(s) have no receipt in the file (first: seq 2)",
+        "detail": "18 in-season decision(s) have no receipt in the file (first: seq 2)",
         "evidence_ids": [],
         "receipts_sha256": "dfd90b279bc09d1ab57cac84c07ae8e1ebb4d98e72d526aa58be38b3911745c5",
         "seqs": [
           1,
-          17
+          19
         ],
         "tier": "self"
       },
@@ -6366,7 +6814,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [],
           "trades": 0
         }
@@ -6776,7 +7224,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",
@@ -7502,7 +7950,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",
@@ -7708,7 +8156,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [],
           "trades": 0
         }
@@ -10751,6 +11199,294 @@
           "event": "skip",
           "receipt_id": "AtCnQMFHLCY2JiSxAfVmSnWTshKNMjtwP4jSEjndArsp",
           "tx": "BfaMNcs5tKxjEuAAAkKDRk81Snzyi7fHFngKA5zJqbu3"
+        },
+        {
+          "block_height": 277586491,
+          "block_time_ms": 1794617770905,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.0000185",
+            "receipt_hash": "092f921ab7cabff4a9a3e38c02528a34d6bde84484b8467450944ca664fd1a62",
+            "seq": 172
+          },
+          "event": "skip",
+          "receipt_id": "B2SvaUqRZe6UC3K5mcWTNpAZShFesaw9pzp6vwCY8dn4",
+          "tx": "GRzyX4kRgESHK47hc5CrSjNLH76Nokfz38pkMY2SouXt"
+        },
+        {
+          "block_height": 277598882,
+          "block_time_ms": 1794625118908,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.0000185",
+            "receipt_hash": "04414bd1ef35439fb5b37f904335ca73379cddcac08da3194741d65340850a4c",
+            "seq": 173
+          },
+          "event": "skip",
+          "receipt_id": "G1ZmKtvzneoebc3zHKdejS6Ps4k1KGkTz3Hg6vzPYaqU",
+          "tx": "DpdzARpFt34SP67hSDFfQKDi6wgp9CQedJWEEcvNX8HX"
+        },
+        {
+          "block_height": 277611515,
+          "block_time_ms": 1794632515869,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.0000185",
+            "receipt_hash": "d964f8f09ef01ebcad3b8a9cd307a88d43e4c3446dfb09ecef7cff6d5a1802e0",
+            "seq": 174
+          },
+          "event": "skip",
+          "receipt_id": "Exm8GX4DB5KHd21c1qQ5Ai3Tu5wzsCQAijaG8qXco3Mf",
+          "tx": "5GESEwT28ikLRmhkm1Y7bYmdawJXAJK4p864iAyG8kqZ"
+        },
+        {
+          "block_height": 277623800,
+          "block_time_ms": 1794639861367,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "975968f434f8160b73c801832c88bfa35e7114b3028cffba334fe4ac081f4528",
+            "seq": 175
+          },
+          "event": "skip",
+          "receipt_id": "2uNKe4YJjuH6ws8WnFwKquCrEcWfQuQ8igepVKFJV5h6",
+          "tx": "ByAbDrT5VNtjEMTmYJ3nSruc2VXAs9pNV4YT57MaquFo"
+        },
+        {
+          "block_height": 277636212,
+          "block_time_ms": 1794647201054,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "bbd3085fd6d1bc8548c0219328e331525f573761ba0937d835b39c15b0e5a07c",
+            "seq": 176
+          },
+          "event": "skip",
+          "receipt_id": "7weYsFvnj8BGRH23Rv7DNMZMECYirwXWTmBvCeyLa8Bg",
+          "tx": "HZMwzmua4xizs86WjDQxUyqQiYAdLBoCriu2s3h4pnpD"
+        },
+        {
+          "block_height": 277648685,
+          "block_time_ms": 1794654517657,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000016",
+            "receipt_hash": "df6c4a5c4dacde99c4430403351e36e1e9c8f19bd8c2f343f3b2f5752e610267",
+            "seq": 177
+          },
+          "event": "skip",
+          "receipt_id": "6KLkRCMQ7n89zySaa9SymHBQ38o9HNTf1cMNP6XetnBB",
+          "tx": "2bckw732QMrHqUCdwykBLHYBVuCfc7j8TWuZGcRMDRA8"
+        },
+        {
+          "block_height": 277661323,
+          "block_time_ms": 1794661882655,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "2ad5f1b7a727011827ab4d7c51bbf0dd8ced8cf8d6c1f315e2a87015760bb3eb",
+            "seq": 178
+          },
+          "event": "skip",
+          "receipt_id": "G1s5VwRLUSEVjMjV3PBTxUC44NH43RAb7a2x5qaad6Lw",
+          "tx": "4F1kpSyiFt1mPwSBcYoeMf5epAednvFrgd1QktHcapi7"
+        },
+        {
+          "block_height": 277673888,
+          "block_time_ms": 1794669206257,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "7abe4c41e3f7091d3d0a7e092ae5be3dea75b699ed3507412da027549bd4075b",
+            "seq": 179
+          },
+          "event": "skip",
+          "receipt_id": "9dA6KQWUV1g82TfmqX9RdBsTo8jHzQEteSEoHMZjYVVi",
+          "tx": "DBCiwKePXnk7ujmUsMFf9CPPXVVhj4jHRqcFJKw3hG2B"
+        },
+        {
+          "block_height": 277686521,
+          "block_time_ms": 1794676556866,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "334b58d2e28ec699a177f6e1e668ab3abc6abcc1b5389bbe77775b72141814b2",
+            "seq": 180
+          },
+          "event": "skip",
+          "receipt_id": "DmsbJWoabiDN4vMNayy5BffuVRRQ631ARbBpxG3jbu8V",
+          "tx": "B9qpxxQEbqeCi1Ji6tk5YY2Vcg33vtjEQ7rqPhf2iA1K"
+        },
+        {
+          "block_height": 277699063,
+          "block_time_ms": 1794683900671,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "6bcaf216141013c0f428c64bc5a1658b39bcb4c6f98b3220bbdc1b120ee3455e",
+            "seq": 181
+          },
+          "event": "skip",
+          "receipt_id": "5C2bK1WUk3UHCskRkD1q25puoXJX59xrdhALWSdoeJ4b",
+          "tx": "CFA29rqT687vGVWCCz8mvdc7xSwXkRNRu5q2eeM5U7m8"
+        },
+        {
+          "block_height": 277711641,
+          "block_time_ms": 1794691233171,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "6d1825f4b0a2a2ec5ec43ffcb91b7f05c109c90255343a0fe6a2912e1ce0d567",
+            "seq": 182
+          },
+          "event": "skip",
+          "receipt_id": "8qiUqb4zFFcULbTdZV1AXRguozrMC2Nb35hpqGniAdSy",
+          "tx": "141HWfsoh3tDSSEj9LBzRbCYf7uc4ejtmVXte6eGYZjt"
+        },
+        {
+          "block_height": 277724249,
+          "block_time_ms": 1794698549567,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "a3d8d067162f4f11f4a55467b16197ca84ec3085f6bbb2d498cc48f4e21db4e2",
+            "seq": 183
+          },
+          "event": "skip",
+          "receipt_id": "4U9iM99RMadguKGRofUnrayv7JDBV1bpke9acR6nqvPn",
+          "tx": "37dF35dQ32Gx8Vy6rty853xxZNm7acxiqw7c2P2zbeny"
+        },
+        {
+          "block_height": 277736588,
+          "block_time_ms": 1794705868032,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "614096759f025846c6089591a99d2b45b41758507b33a5523897b2017ef6c544",
+            "seq": 184
+          },
+          "event": "skip",
+          "receipt_id": "J2vowFGWotHmWdoLikJsn9fJTJQiiRRqw7W6ue3aTkgx",
+          "tx": "Czh265pFTZqdG7xJjYsDHLLmzT6AWrQxZ175SjWqVKrS"
+        },
+        {
+          "block_height": 277749153,
+          "block_time_ms": 1794713223105,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "fa6fdb3d5e4cf330da9768891f8bb0377d10dfc347c4d32163c0c650ac2b194f",
+            "seq": 185
+          },
+          "event": "skip",
+          "receipt_id": "6PKqDAf6S3H8HpyKJRgTDe45gt2idG97a19ev2MyGyXp",
+          "tx": "8pCVQ1nWBKwZC4FhGxt2se7FYFCzY8CkNgarKkUSJsTX"
+        },
+        {
+          "block_height": 277761607,
+          "block_time_ms": 1794720559688,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "28d41968bb9500c9d0ffa31d2e413ec323a6469877edec3b539703f08161220b",
+            "seq": 186
+          },
+          "event": "skip",
+          "receipt_id": "6TG8b3jiDwtTWD3rRnY8LX6ieQW9Yz67af84Ai2oaHUF",
+          "tx": "2URkoyvkBD6Frhknn1pyum7TpnAymAyWjrzR8r4oH1XP"
+        },
+        {
+          "block_height": 277774255,
+          "block_time_ms": 1794727879896,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "9667efad8de44959c56df2e6d120a16f7124cb11a365595fb342e74bcdc53376",
+            "seq": 187
+          },
+          "event": "skip",
+          "receipt_id": "7Jg3hgxMyAJb9o73iCiM92Pgz92Mvd1Dm2hgU6szP6pn",
+          "tx": "7pozEtrZZbrPvN1VcFCT5A66Nqh2hhMiLkzVSX7dFQYb"
+        },
+        {
+          "block_height": 277786756,
+          "block_time_ms": 1794735207586,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "ddd030a43d69b2cbfa82132d6deaaeffeee4326e6846de5e0ef6e3b5e032ffdd",
+            "seq": 188
+          },
+          "event": "skip",
+          "receipt_id": "JAngFSnENVeGw37PBeEE39xWUdXpM2BUwzmcTLp8XSLT",
+          "tx": "Ak68tg8iLppctY8TyDZBTsDRMRcarpb7mXWSB8HzrJhj"
+        },
+        {
+          "block_height": 277799294,
+          "block_time_ms": 1794742552409,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "457c3d6225a2c418dc51dc97644b318334645cb0abc9948a58812af031472e2d",
+            "seq": 189
+          },
+          "event": "skip",
+          "receipt_id": "ALxCt59KqxES2H5nqdQns98Hb4F3pPo6ub3tuvCFqWzG",
+          "tx": "Br6BC9yq5VcEbv7um8M6XFdeDZ5taC6BrTsaaDPa8QDS"
+        },
+        {
+          "block_height": 277811788,
+          "block_time_ms": 1794749887666,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "1a5796e320a75776d37a5a42f1d2d02837543842acab3abfbff0800e48698040",
+            "seq": 190
+          },
+          "event": "skip",
+          "receipt_id": "DHAgHspJuNcN1VpCdtybnmUhTcXv3VwuaBZZBGuePz2K",
+          "tx": "9idUorNx9Ha2QMZWBXBY54tuhD93r2WAb4Lb8Ss73uHb"
+        },
+        {
+          "block_height": 277824361,
+          "block_time_ms": 1794757243370,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "a271e526445c8dce084cd15edd91b8fe4ea6aabafb259a795eb481cb82aeabec",
+            "seq": 191
+          },
+          "event": "skip",
+          "receipt_id": "5DiR6zXyKGVVicveGVocxQUVZwCLu3MVhPoJSzvLvmW3",
+          "tx": "GU6zkpMPYEmVgVmAui7T35LG5M2DbCrnmvu4nwEnj8kr"
+        },
+        {
+          "block_height": 277836910,
+          "block_time_ms": 1794764568209,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.0000149",
+            "receipt_hash": "8a0d643ffa5ad7a0d154a927c232805003e529b7574620602a70c006dc737835",
+            "seq": 192
+          },
+          "event": "skip",
+          "receipt_id": "FbRL1zP3XmESVtsyAZi8G7LjFhCYwgnnmapmUZJuRCXv",
+          "tx": "AN8ESfVtqjmfzJNDUBm9L5NKqDcAPfwGqMSA9ucwjc7f"
+        },
+        {
+          "block_height": 277849394,
+          "block_time_ms": 1794771888360,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "b3276cfed6843b767d52b130afbd9e0b7095258df3b3d45ca25f06f410d985ba",
+            "seq": 193
+          },
+          "event": "skip",
+          "receipt_id": "GBzrfHQLaBzNDdursEzaRWuqtmkrVDxQBVxuAD5wKfiN",
+          "tx": "556UfzdtPELnu2dKaVXR8tcSwY9c2ASwp6dMUqcVEE6T"
+        },
+        {
+          "block_height": 277861961,
+          "block_time_ms": 1794779201975,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.0000149",
+            "receipt_hash": "d92c7223aeeabff1c477efe25748ce1b0a157bb05848816effc808ca0a8a3a40",
+            "seq": 194
+          },
+          "event": "skip",
+          "receipt_id": "62awBWL3CNicaNwwki4jrSnV8LthyNYiX7wnV7xyVj2j",
+          "tx": "DkgncbGwdC3cUbQtq4TBKZKe8J76YosS3B6fNTpMtS35"
+        },
+        {
+          "block_height": 277874532,
+          "block_time_ms": 1794786513270,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "2683af2845e380bd0046ac612123898a9afd3576ec3c597a4e7ce5bfb9424a5a",
+            "seq": 195
+          },
+          "event": "skip",
+          "receipt_id": "76zKjzYsJaEHT5EWH7depEXuCrTkGxeYXodAaMta3jMs",
+          "tx": "57ULvN8GtMynwtrxUtXxERm7fQ3yj9GTySkURVHLVapz"
         }
       ],
       "gas": [
@@ -11608,6 +12344,126 @@
           "block_time_ms": 1794610438195,
           "tokens_burnt": "207031006558800000000",
           "tx": "BfaMNcs5tKxjEuAAAkKDRk81Snzyi7fHFngKA5zJqbu3"
+        },
+        {
+          "block_time_ms": 1794617770905,
+          "tokens_burnt": "208557147277200000000",
+          "tx": "GRzyX4kRgESHK47hc5CrSjNLH76Nokfz38pkMY2SouXt"
+        },
+        {
+          "block_time_ms": 1794625118908,
+          "tokens_burnt": "208557147277200000000",
+          "tx": "DpdzARpFt34SP67hSDFfQKDi6wgp9CQedJWEEcvNX8HX"
+        },
+        {
+          "block_time_ms": 1794632515869,
+          "tokens_burnt": "208557147277200000000",
+          "tx": "5GESEwT28ikLRmhkm1Y7bYmdawJXAJK4p864iAyG8kqZ"
+        },
+        {
+          "block_time_ms": 1794639861367,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "ByAbDrT5VNtjEMTmYJ3nSruc2VXAs9pNV4YT57MaquFo"
+        },
+        {
+          "block_time_ms": 1794647201054,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "HZMwzmua4xizs86WjDQxUyqQiYAdLBoCriu2s3h4pnpD"
+        },
+        {
+          "block_time_ms": 1794654517657,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "2bckw732QMrHqUCdwykBLHYBVuCfc7j8TWuZGcRMDRA8"
+        },
+        {
+          "block_time_ms": 1794661882655,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "4F1kpSyiFt1mPwSBcYoeMf5epAednvFrgd1QktHcapi7"
+        },
+        {
+          "block_time_ms": 1794669206257,
+          "tokens_burnt": "207031006558800000000",
+          "tx": "DBCiwKePXnk7ujmUsMFf9CPPXVVhj4jHRqcFJKw3hG2B"
+        },
+        {
+          "block_time_ms": 1794676556866,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "B9qpxxQEbqeCi1Ji6tk5YY2Vcg33vtjEQ7rqPhf2iA1K"
+        },
+        {
+          "block_time_ms": 1794683900671,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "CFA29rqT687vGVWCCz8mvdc7xSwXkRNRu5q2eeM5U7m8"
+        },
+        {
+          "block_time_ms": 1794691233171,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "141HWfsoh3tDSSEj9LBzRbCYf7uc4ejtmVXte6eGYZjt"
+        },
+        {
+          "block_time_ms": 1794698549567,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "37dF35dQ32Gx8Vy6rty853xxZNm7acxiqw7c2P2zbeny"
+        },
+        {
+          "block_time_ms": 1794705868032,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "Czh265pFTZqdG7xJjYsDHLLmzT6AWrQxZ175SjWqVKrS"
+        },
+        {
+          "block_time_ms": 1794713223105,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "8pCVQ1nWBKwZC4FhGxt2se7FYFCzY8CkNgarKkUSJsTX"
+        },
+        {
+          "block_time_ms": 1794720559688,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "2URkoyvkBD6Frhknn1pyum7TpnAymAyWjrzR8r4oH1XP"
+        },
+        {
+          "block_time_ms": 1794727879896,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "7pozEtrZZbrPvN1VcFCT5A66Nqh2hhMiLkzVSX7dFQYb"
+        },
+        {
+          "block_time_ms": 1794735207586,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "Ak68tg8iLppctY8TyDZBTsDRMRcarpb7mXWSB8HzrJhj"
+        },
+        {
+          "block_time_ms": 1794742552409,
+          "tokens_burnt": "207031006558800000000",
+          "tx": "Br6BC9yq5VcEbv7um8M6XFdeDZ5taC6BrTsaaDPa8QDS"
+        },
+        {
+          "block_time_ms": 1794749887666,
+          "tokens_burnt": "207031006558800000000",
+          "tx": "9idUorNx9Ha2QMZWBXBY54tuhD93r2WAb4Lb8Ss73uHb"
+        },
+        {
+          "block_time_ms": 1794757243370,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "GU6zkpMPYEmVgVmAui7T35LG5M2DbCrnmvu4nwEnj8kr"
+        },
+        {
+          "block_time_ms": 1794764568209,
+          "tokens_burnt": "208557147277200000000",
+          "tx": "AN8ESfVtqjmfzJNDUBm9L5NKqDcAPfwGqMSA9ucwjc7f"
+        },
+        {
+          "block_time_ms": 1794771888360,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "556UfzdtPELnu2dKaVXR8tcSwY9c2ASwp6dMUqcVEE6T"
+        },
+        {
+          "block_time_ms": 1794779201975,
+          "tokens_burnt": "208557147277200000000",
+          "tx": "DkgncbGwdC3cUbQtq4TBKZKe8J76YosS3B6fNTpMtS35"
+        },
+        {
+          "block_time_ms": 1794786513270,
+          "tokens_burnt": "207031006558800000000",
+          "tx": "57ULvN8GtMynwtrxUtXxERm7fQ3yj9GTySkURVHLVapz"
         }
       ],
       "observed": {
@@ -11633,7 +12489,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 171,
+          "seq": 195,
           "version": "0.1.0"
         },
         "intents": {
@@ -11676,11 +12532,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 208,
+          "events_replayed": 232,
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "usdc.itachicara.testnet",
@@ -11697,10 +12553,10 @@
       "proof": {
         "detail": "self-reported: harness and model are the operator's word",
         "evidence_ids": [],
-        "receipts_sha256": "d9eaa35f664eb370cc3b3658aac542b68f322814f5d8cd1c502a51ee33a3faaa",
+        "receipts_sha256": "f84e9b8693103e8c47b80f1476eeecea7db6d04435b0427207408d09c665e506",
         "seqs": [
           1,
-          171
+          195
         ],
         "tier": "self"
       },
@@ -11903,7 +12759,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",
@@ -12090,7 +12946,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [],
           "trades": 0
         }
@@ -14407,6 +15263,294 @@
           "event": "skip",
           "receipt_id": "B4TU4V8ahcDYRYVMjpMAdRMkZpiBMQfiM8hd6qYwFADf",
           "tx": "E7hFnqTBMANB5vv3jq23bauiZrQYtkAS4JHok2SNyarX"
+        },
+        {
+          "block_height": 277586535,
+          "block_time_ms": 1794617797623,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "c1c67f5a826c070e7ef269c5c317ef76104312261961206c4d26b1545a077630",
+            "seq": 170
+          },
+          "event": "skip",
+          "receipt_id": "DcT3m9xz6gigBQ5orjbxMjVViSX4LDxmzWBYHthceRwi",
+          "tx": "8CwwNxipuHGtCZ4D36mnZQ7gdWycXo4KQxXzJPMY6Gq6"
+        },
+        {
+          "block_height": 277598936,
+          "block_time_ms": 1794625149803,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "2cbee19f844d15cc7072533d9e942035787b1b2d7216b1e0c1362bbbe01fd171",
+            "seq": 171
+          },
+          "event": "skip",
+          "receipt_id": "5jvedykBTaNQ35aESKg1SKVwbTxb1uvSgWvTSBgfXPys",
+          "tx": "DTVFRh5eASWch2hSZ7qEwxCLkEHeVTEuEt1YFxehbkTj"
+        },
+        {
+          "block_height": 277611559,
+          "block_time_ms": 1794632542388,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "0c91bb33446bd01c379ca0d1a09bffcbbb73b4188964a47f969341b12f0dfea0",
+            "seq": 172
+          },
+          "event": "skip",
+          "receipt_id": "47tdS6vbBgSasJxrsHwJZ1mpksdXH2G9D1ZZtLg8SB7w",
+          "tx": "Bn7bYx45sGCdY3Vvb6843jru7ToJQERN5M3X61TAVzKK"
+        },
+        {
+          "block_height": 277623849,
+          "block_time_ms": 1794639888836,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "df8d31bb2dd8db5bddb6a1a40979521009ec56d2fa48e4744f2036b43c607acb",
+            "seq": 173
+          },
+          "event": "skip",
+          "receipt_id": "6kwDfbjKSnsHhZEsrbx6CQeSQ5yRjETSC28TGm2efxne",
+          "tx": "74omRLhJ1uprpz2D5W9doMkeyMPRkzCQNaJFtwfbfgvQ"
+        },
+        {
+          "block_height": 277636262,
+          "block_time_ms": 1794647227168,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "e8704df1c592defebd7b6ca283bdcaa3ed48f7948867e436348edad2bf0af7d5",
+            "seq": 174
+          },
+          "event": "skip",
+          "receipt_id": "BBYU7dT5Hkthc4PY7aeFUQbKxHu1pLs1KZf4taNFq7rZ",
+          "tx": "8pbhZWneAcmZVHsAN1msji1ooLEzMefwpz5c2JP4SUaR"
+        },
+        {
+          "block_height": 277648737,
+          "block_time_ms": 1794654547223,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "378555b56e18cc72f9413652af7ef09389ace4425dec8b35885b8c5ae22c0f7c",
+            "seq": 175
+          },
+          "event": "skip",
+          "receipt_id": "6x2eNpHUH8WQK5t9dukE9UxGcmnKMZFEBufTR37V5oCQ",
+          "tx": "4n3zrvxY6vPTGYaGM6HQ9X6V3FJPvHaR6Hy4ZXjnLJEu"
+        },
+        {
+          "block_height": 277661369,
+          "block_time_ms": 1794661908077,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "e5aa2434312f68d172fdaf4f5fe99e70b529e052c9074a06c6101561f512c7ea",
+            "seq": 176
+          },
+          "event": "skip",
+          "receipt_id": "3y3bmVBQEQaZvsT5pq73dvg4ZHbRrH2Lz48Gpsx8u8Ks",
+          "tx": "2FqJBCkwJ726QrWUUD67DwRqVge4bAdHeq29TcNaByxy"
+        },
+        {
+          "block_height": 277673938,
+          "block_time_ms": 1794669235215,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "6cfcb3ad10f13d68b90d63ae90ea4aba15d5d565c1699057e5da96326384d67b",
+            "seq": 177
+          },
+          "event": "skip",
+          "receipt_id": "MP5DNGY6Tm3w9pKs4cuy1uthv2wEXJpDZZZ1h7TyBbc",
+          "tx": "6Mw5LBUACJM3JVPvjUB5YuAHBWbwaG2Hk1GcCHwnNQbo"
+        },
+        {
+          "block_height": 277686569,
+          "block_time_ms": 1794676585971,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "1d861004498c59e68a273aac127ad5f6c4448ba0aca951b1f3c173ad64fa9517",
+            "seq": 178
+          },
+          "event": "skip",
+          "receipt_id": "F7giXWKa32F9esmRU6wrpwYSwXYmdRZUDdqwGvRmsMWT",
+          "tx": "Czw1V3MnixekfQttx6jttez5Q4N4z5oWBGxPUjwMQ9V7"
+        },
+        {
+          "block_height": 277699105,
+          "block_time_ms": 1794683926299,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "8cf59d7c012a640645c6a461a264b2b5551a1cf47f00c0fa194834e2077843c2",
+            "seq": 179
+          },
+          "event": "skip",
+          "receipt_id": "91brvDZtqaKLBezam6wqyx8xkZwxxM8WXSymsYoKBPhY",
+          "tx": "5H144h4gs2Zrt8r7Vb2cpXuJ8dLqeDYAJfno6JTRb6CR"
+        },
+        {
+          "block_height": 277711681,
+          "block_time_ms": 1794691257375,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "d9a560fce9a69c6e74e1f40b43d5e66fcbd8249fbe459066e1e944fec66fb4dd",
+            "seq": 180
+          },
+          "event": "skip",
+          "receipt_id": "Lupb4Mc3yw29VuQ5pQfKBMZL88pwpWWtWX3wddPqhxF",
+          "tx": "HojsG2YDWs61K3WVcWQMYtJnVM2rofNRuGi735xrp8cm"
+        },
+        {
+          "block_height": 277724292,
+          "block_time_ms": 1794698575656,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "5e56cc80db880099e819e673421708271cec5f3e7d6b9990a3c13e056601e768",
+            "seq": 181
+          },
+          "event": "skip",
+          "receipt_id": "C2oBH9RwKvZ2qCJWFjYx1TPHZxh2KcxPBVXDc2Xn6tiu",
+          "tx": "Dg4eh555VezBg5df41sGWiEi4hTbDQ82RSZmc2rZRokL"
+        },
+        {
+          "block_height": 277736630,
+          "block_time_ms": 1794705893488,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "5943117a8c0fbdcbf03c6f2f0afbd83130de007615d01b39973e7c71e0d411c4",
+            "seq": 182
+          },
+          "event": "skip",
+          "receipt_id": "5qG2B9Q5hPXMm4FmYTLwQcVHLzyXvkkor6g9xvbpdbhY",
+          "tx": "2ks4BsMb1ikVFAwF16KfDbvGbodWWydYn5a32nrGEz7X"
+        },
+        {
+          "block_height": 277749194,
+          "block_time_ms": 1794713248020,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "51688efe3ab04234ef3a4e747a6e70beeeeefedbe02b7a4b49573ca5b8d9f664",
+            "seq": 183
+          },
+          "event": "skip",
+          "receipt_id": "3oFK78AXi1ESUKZLbFZBhSzyycDDLvK7JtAkPspkJTTJ",
+          "tx": "AmXj8qskWJisCB9kcigAnxgknyf27z45JyKqTQ1cymu8"
+        },
+        {
+          "block_height": 277761648,
+          "block_time_ms": 1794720584515,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "3046ce2e6668737848c1458affdd024d159b58b2c7b8e2d15bd8b2bcebec62be",
+            "seq": 184
+          },
+          "event": "skip",
+          "receipt_id": "Az6ZgvMbcuCjryaab5LGvrQuS5mT9vEchsKSm1qgFmXX",
+          "tx": "3HSieP84bgwVbE3jhXUd84fhA1m8qTLifxnbZhPXQaSD"
+        },
+        {
+          "block_height": 277774299,
+          "block_time_ms": 1794727905416,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "d9260e3434f226d137d5c14161ab8264bfde49c19f911e5f0906f18755617f24",
+            "seq": 185
+          },
+          "event": "skip",
+          "receipt_id": "FwRn8NH6R4XBWz38DgbVcew9HUcxpv7seNYvQY9vmfFw",
+          "tx": "5jTX3Cn8WY7A3twViS3vQqWkXERGaJzmmp3vRULmQfj7"
+        },
+        {
+          "block_height": 277786802,
+          "block_time_ms": 1794735233446,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "0d355c97cc3dc0d41d9558619f6b7c590559600292862192a236c839aabbdc49",
+            "seq": 186
+          },
+          "event": "skip",
+          "receipt_id": "AuRgAre7AWMuFHCdTh92kZUSaoVpbpENDJCuuKhgfPKm",
+          "tx": "Eg3r1DdvYKgnjZAHXB8jD4J3YiYC92xY2zdCtbyXB7M1"
+        },
+        {
+          "block_height": 277799339,
+          "block_time_ms": 1794742579015,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "9bcaffaa01a51e8674fba4b6c219c2be4a054cb99c8c64e82945150ea94f45b6",
+            "seq": 187
+          },
+          "event": "skip",
+          "receipt_id": "5SWpy5uMbLoRszmyuc6pRh8BaoeiNdgcpyEZxJXcQ3AD",
+          "tx": "55tt5FWCmDYtcL37zdLzNVrmauuPygTWuzGDX6gm8Pjh"
+        },
+        {
+          "block_height": 277811834,
+          "block_time_ms": 1794749914369,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "e894ea2000a2e229542d45384354b5d6eef79677130664d048f8412b70b0b99c",
+            "seq": 188
+          },
+          "event": "skip",
+          "receipt_id": "7SaR2PJhvVLj3gmaKPopTTW339Vg3V7eMuKarZFNZQUe",
+          "tx": "E241VBjtqotpRDzHXaHggBs4bmYzyd6NTKcT1ZinFwq7"
+        },
+        {
+          "block_height": 277824413,
+          "block_time_ms": 1794757270147,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "552b1883ed2490f34950aa1b339e61a1d37717619f5a5c241e5e27a2c5cb64e0",
+            "seq": 189
+          },
+          "event": "skip",
+          "receipt_id": "EjCS1pj8tP5kKcoANafawiFoufqGfniq59Rx7GnBmLdK",
+          "tx": "5kfRuvLyQLPn37TMYDVe4D2MxAdjYwMPWJ9xHuUDknfE"
+        },
+        {
+          "block_height": 277836955,
+          "block_time_ms": 1794764592080,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "d81a3af2a0b1f1c9cd14c1f631c03ddad5aa00a3a527ef8ee8dcf4a02f47db60",
+            "seq": 190
+          },
+          "event": "skip",
+          "receipt_id": "HyfDvAGD8j186yo88dguH4mjwntYECNiUswTsSKJvQZS",
+          "tx": "s2x46Bk8UnuSSoCYLyPVd6P3wURcZTraqqr5MXCs6Nf"
+        },
+        {
+          "block_height": 277849439,
+          "block_time_ms": 1794771912949,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "256ebbd179d67ad6716e15a95cfdf0806a5f90296b29850fb4d0de0366da82f1",
+            "seq": 191
+          },
+          "event": "skip",
+          "receipt_id": "FkmJqguKVFUnruhznPJNmV5cvF8hnoiHwfFXzUnLDH6V",
+          "tx": "EWyDqsDgM2kzE6gwhnsMqFedeCxJ9fSBfh1BEZVTEumY"
+        },
+        {
+          "block_height": 277862006,
+          "block_time_ms": 1794779227859,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "6feefd8fd59461b270aaa014ae2df6da4383be94c2fb33e250d2cd0b4c9a1e3a",
+            "seq": 192
+          },
+          "event": "skip",
+          "receipt_id": "9XR7Mo3534LW4MKfRMixEzYCuhRju5ySbBuwPqi3GGzD",
+          "tx": "5oscBQiWL6RcT5W2PAPofXb5H4FhivJGryBhejwU4BK9"
+        },
+        {
+          "block_height": 277874578,
+          "block_time_ms": 1794786539328,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "d31c63143fe7cc24472c59a00b59daa4bf77171025515a9ef1b6a3ed74f5d789",
+            "seq": 193
+          },
+          "event": "skip",
+          "receipt_id": "9iwy3GptSwA5YwZpsWiptcUibT7Gpdg4CcaUJ3RGErZV",
+          "tx": "BrPrDwgYsEPHwFHipeeXmSfoXen5es4Sczjc2L4AUMYx"
         }
       ],
       "gas": [
@@ -15254,6 +16398,126 @@
           "block_time_ms": 1794610463424,
           "tokens_burnt": "206863125164100000000",
           "tx": "E7hFnqTBMANB5vv3jq23bauiZrQYtkAS4JHok2SNyarX"
+        },
+        {
+          "block_time_ms": 1794617797623,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "8CwwNxipuHGtCZ4D36mnZQ7gdWycXo4KQxXzJPMY6Gq6"
+        },
+        {
+          "block_time_ms": 1794625149803,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "DTVFRh5eASWch2hSZ7qEwxCLkEHeVTEuEt1YFxehbkTj"
+        },
+        {
+          "block_time_ms": 1794632542388,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "Bn7bYx45sGCdY3Vvb6843jru7ToJQERN5M3X61TAVzKK"
+        },
+        {
+          "block_time_ms": 1794639888836,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "74omRLhJ1uprpz2D5W9doMkeyMPRkzCQNaJFtwfbfgvQ"
+        },
+        {
+          "block_time_ms": 1794647227168,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "8pbhZWneAcmZVHsAN1msji1ooLEzMefwpz5c2JP4SUaR"
+        },
+        {
+          "block_time_ms": 1794654547223,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "4n3zrvxY6vPTGYaGM6HQ9X6V3FJPvHaR6Hy4ZXjnLJEu"
+        },
+        {
+          "block_time_ms": 1794661908077,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "2FqJBCkwJ726QrWUUD67DwRqVge4bAdHeq29TcNaByxy"
+        },
+        {
+          "block_time_ms": 1794669235215,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "6Mw5LBUACJM3JVPvjUB5YuAHBWbwaG2Hk1GcCHwnNQbo"
+        },
+        {
+          "block_time_ms": 1794676585971,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "Czw1V3MnixekfQttx6jttez5Q4N4z5oWBGxPUjwMQ9V7"
+        },
+        {
+          "block_time_ms": 1794683926299,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "5H144h4gs2Zrt8r7Vb2cpXuJ8dLqeDYAJfno6JTRb6CR"
+        },
+        {
+          "block_time_ms": 1794691257375,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "HojsG2YDWs61K3WVcWQMYtJnVM2rofNRuGi735xrp8cm"
+        },
+        {
+          "block_time_ms": 1794698575656,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "Dg4eh555VezBg5df41sGWiEi4hTbDQ82RSZmc2rZRokL"
+        },
+        {
+          "block_time_ms": 1794705893488,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "2ks4BsMb1ikVFAwF16KfDbvGbodWWydYn5a32nrGEz7X"
+        },
+        {
+          "block_time_ms": 1794713248020,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "AmXj8qskWJisCB9kcigAnxgknyf27z45JyKqTQ1cymu8"
+        },
+        {
+          "block_time_ms": 1794720584515,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "3HSieP84bgwVbE3jhXUd84fhA1m8qTLifxnbZhPXQaSD"
+        },
+        {
+          "block_time_ms": 1794727905416,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "5jTX3Cn8WY7A3twViS3vQqWkXERGaJzmmp3vRULmQfj7"
+        },
+        {
+          "block_time_ms": 1794735233446,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "Eg3r1DdvYKgnjZAHXB8jD4J3YiYC92xY2zdCtbyXB7M1"
+        },
+        {
+          "block_time_ms": 1794742579015,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "55tt5FWCmDYtcL37zdLzNVrmauuPygTWuzGDX6gm8Pjh"
+        },
+        {
+          "block_time_ms": 1794749914369,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "E241VBjtqotpRDzHXaHggBs4bmYzyd6NTKcT1ZinFwq7"
+        },
+        {
+          "block_time_ms": 1794757270147,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "5kfRuvLyQLPn37TMYDVe4D2MxAdjYwMPWJ9xHuUDknfE"
+        },
+        {
+          "block_time_ms": 1794764592080,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "s2x46Bk8UnuSSoCYLyPVd6P3wURcZTraqqr5MXCs6Nf"
+        },
+        {
+          "block_time_ms": 1794771912949,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "EWyDqsDgM2kzE6gwhnsMqFedeCxJ9fSBfh1BEZVTEumY"
+        },
+        {
+          "block_time_ms": 1794779227859,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "5oscBQiWL6RcT5W2PAPofXb5H4FhivJGryBhejwU4BK9"
+        },
+        {
+          "block_time_ms": 1794786539328,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "BrPrDwgYsEPHwFHipeeXmSfoXen5es4Sczjc2L4AUMYx"
         }
       ],
       "observed": {
@@ -15279,7 +16543,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 169,
+          "seq": 193,
           "version": "0.1.0"
         },
         "intents": {
@@ -15322,11 +16586,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 179,
+          "events_replayed": 203,
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",
@@ -15343,10 +16607,10 @@
       "proof": {
         "detail": "self-reported: harness and model are the operator's word",
         "evidence_ids": [],
-        "receipts_sha256": "56b204b2e6061a518ac92c81b8759e714e31122f5a472531734ce93f9898d590",
+        "receipts_sha256": "01ce9cdd4d9700f2c38f0c95d258941e67ad0c962d07ad756fb7aa1730a7abe4",
         "seqs": [
           1,
-          169
+          193
         ],
         "tier": "self"
       },
@@ -18733,6 +19997,294 @@
           "event": "skip",
           "receipt_id": "CwHy1dnENfB4PwDaRnpVZKYDQaV3khkBgCVjw9Q54Ct",
           "tx": "enVDLYvpeGikXCnRPZmrbRxRwcD8Uy4W35ncaZ6gCim"
+        },
+        {
+          "block_height": 277586650,
+          "block_time_ms": 1794617867439,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "9d1f43ac37a41bdc9d49a377bfbb7ea276cb266d10923d1b389a4cc4eeba8a2b",
+            "seq": 171
+          },
+          "event": "skip",
+          "receipt_id": "FHG2gQTH7Ge65jDskeidCwjcRJvDDAucyhjevN9FGnNC",
+          "tx": "Dx9QawcMtTLGFYMAVZiiKAi67qA8dnFcmeDpBggx76fJ"
+        },
+        {
+          "block_height": 277599138,
+          "block_time_ms": 1794625265702,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "44168015d1a36e5bc0ba4d6c560cb00b44f42ed27ad6a6697204a45ade9375f8",
+            "seq": 172
+          },
+          "event": "skip",
+          "receipt_id": "5GjPNWmUkBSzQshKykSa9JFKntzz5Qr3pbt2GGFfTeGE",
+          "tx": "3WxKnbYA2MZMzdAXNfaTPBisHTZPTPLYXjTnzvLLLrLf"
+        },
+        {
+          "block_height": 277611677,
+          "block_time_ms": 1794632612716,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "da933d63d9022a1fd5816c8dd2310bf47b18032bf8e02dd20fc423e9bbe50d81",
+            "seq": 173
+          },
+          "event": "skip",
+          "receipt_id": "76aytCTNYwLHKead2gAiypEC2NmekuRXwJ87oLfXU2oC",
+          "tx": "Djou2sejkj2w3qbVUJG3N8jzB3c4sHgxWdh9nqhmJ3BN"
+        },
+        {
+          "block_height": 277623965,
+          "block_time_ms": 1794639957319,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "a43cd96709bee333584970ab9d1b0cc262b6faad8228ad6a8e3206ad12c7bf0f",
+            "seq": 174
+          },
+          "event": "skip",
+          "receipt_id": "DS2q2LcKLzCGSQPUdF6WtjWqs5Mhq4MPrdHAJ7eUGzN2",
+          "tx": "3kWjktLjzk4RTNXbKn4dgQNGxxpS56911Kkv3qEgC2RT"
+        },
+        {
+          "block_height": 277636346,
+          "block_time_ms": 1794647270962,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "5a3abba3e4ea5336f177b77d4bac861bb135725ffa5beba9073d3fd2aba82893",
+            "seq": 175
+          },
+          "event": "skip",
+          "receipt_id": "ErUzx8WPtTEpYLaMT5znKpKmKwTXfydCZHYhBWzUEKwy",
+          "tx": "AFwTubCSQvKxrKoqeKAx7CyN5m2eY6TLjrg7hahsCXSE"
+        },
+        {
+          "block_height": 277648890,
+          "block_time_ms": 1794654635411,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "8feef83a57666a32ea26a9626f3b426cb577114b42eb627a6cc6a8971c8090f5",
+            "seq": 176
+          },
+          "event": "skip",
+          "receipt_id": "C5uXv5YD7VS23Vem3yBZg2sofKUU3XJ8g8Hjwcoj1EGj",
+          "tx": "7n2qbgyvgGwvU6VaZmqDxpEz9RGEUxjLsLvTuWb29hfD"
+        },
+        {
+          "block_height": 277661468,
+          "block_time_ms": 1794661962494,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "4bf7331436c301f5f87475adc9e326c3b3bcd2a5acb5eb5b931c216d036e01eb",
+            "seq": 177
+          },
+          "event": "skip",
+          "receipt_id": "A81UaBvkmjN4cKQbeRaVvi6iUoatmGA1bFuKXuNxRY8d",
+          "tx": "AFJxvHfiQ56yskVxnMvvvbWkHDXWsuQ1tP6fAAXsiG14"
+        },
+        {
+          "block_height": 277674070,
+          "block_time_ms": 1794669313863,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "44d025e875d7841faa0714b74fbf2bdc79185fcbf9b9ef567cc93064bb7aa539",
+            "seq": 178
+          },
+          "event": "skip",
+          "receipt_id": "D2DSZ5ouTXCkQzQ4wr9vicxptmDrBUR2dkuFu4bWniBf",
+          "tx": "3y91epXbMNZYLkGXGWryg4VM1qxCqrk1D2F6W3Gzf7xi"
+        },
+        {
+          "block_height": 277686690,
+          "block_time_ms": 1794676658891,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "ba2fc8c259acf10e4dff02a9f6229f3a2ed8d7e33747f968ea429b35cb3d1f39",
+            "seq": 179
+          },
+          "event": "skip",
+          "receipt_id": "B7kpR6EixpSR2tFUUp11zQBp5twh83TZ9a7FC7TFWobx",
+          "tx": "99EAruC8hJ4oD4xwcbNbxPGaEfECpReWZGjPhBcg4ChG"
+        },
+        {
+          "block_height": 277699217,
+          "block_time_ms": 1794683994045,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "aee4a53ae344b16b4b24189ab15912da1a726837cc541fbaa30a615366d34cda",
+            "seq": 180
+          },
+          "event": "skip",
+          "receipt_id": "84cGKL5LynGzY5Xu3tpR4eBoDdhHUHLq6xiV2HMB5DNR",
+          "tx": "8QLUwuP5M3ggKcPr1BU9HG5ZfqjiS4yuHmzdLuDn4k9G"
+        },
+        {
+          "block_height": 277711767,
+          "block_time_ms": 1794691308262,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "efa9fc91d639478b8d159df8e5e79fbf1ecd3b0f4063ee60a2cc03e8c7fad389",
+            "seq": 181
+          },
+          "event": "skip",
+          "receipt_id": "CWY9iogiqHRrTehogbvqWekJ4n6UgqYfJ2mbYGUykQJd",
+          "tx": "H8Qh9UEb9xu9einm2V9wPcVxWPbSVB5xEr5yitmuZQCF"
+        },
+        {
+          "block_height": 277724380,
+          "block_time_ms": 1794698629085,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "e8a1446a3e7e81250aad08e40c6b588370a0613cec35c31b538e14ca25b5c1db",
+            "seq": 182
+          },
+          "event": "skip",
+          "receipt_id": "3i8LJZKknWV7mjcnfKLWvdnQyGcdwY48BN1CUo6mJDBo",
+          "tx": "B69U1N5pciR9jm46omyXrK37gReDWHRCaMrXcbrGSf42"
+        },
+        {
+          "block_height": 277736783,
+          "block_time_ms": 1794705982790,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "1a2f386c2b864d1eeb1db391c7b4ae9ad3623cd80dac4e5bc75d4adf7300ed47",
+            "seq": 183
+          },
+          "event": "skip",
+          "receipt_id": "ALAe73sBgtQwdSEg3iL5CQPeuj3ndH9cAnLPriYjNVez",
+          "tx": "4ovr9gbKbwDQ1gduh1ErgykjgMyNgUoC8Nc1PeqQYpVz"
+        },
+        {
+          "block_height": 277749315,
+          "block_time_ms": 1794713316654,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "a8f0f4dd80a2de380aa330e91cd0e7f111990f6bdff0867a32c6a998d1c95c33",
+            "seq": 184
+          },
+          "event": "skip",
+          "receipt_id": "EZazwYQStJZwEo7G4LyMUhhMC4T2ksSbBKM2FQA7LcyB",
+          "tx": "4KaCdqDqDxC8z83WyDb8Zte611JVdHkVYxA173iTw7qY"
+        },
+        {
+          "block_height": 277761744,
+          "block_time_ms": 1794720639243,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "c4e138baaa25575a5071a0e49e24f55ead3ceaa82b0101cb13fd4636e9f56422",
+            "seq": 185
+          },
+          "event": "skip",
+          "receipt_id": "F4v1w9enWchmGv1KuPpQ3AnywocE75S4y1nVMrzuxjzC",
+          "tx": "C726uGrmP61K5DBWRfZa1XJKYvSqQXHWCXYLmt44YsKX"
+        },
+        {
+          "block_height": 277774405,
+          "block_time_ms": 1794727966448,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "06a6860a783c48c4211ef33610aedd567c3cbe7c094305568ca8fe28085668a0",
+            "seq": 186
+          },
+          "event": "skip",
+          "receipt_id": "5aKB8Bt3JiEbefFGENd9TGc4jmHoYaLebpWNyXV1hCjo",
+          "tx": "J5fkbZRt9bZCXEHntvtCJhwPvkhzsruUyv5GY4bC7oSp"
+        },
+        {
+          "block_height": 277786935,
+          "block_time_ms": 1794735311682,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "94f37e6b9c9407fec6d449bde3cc61aa3c611765f1ee8b52f3851ee05d3fa598",
+            "seq": 187
+          },
+          "event": "skip",
+          "receipt_id": "FqqHCV7agPGrwQhNa1NbXaCmkJAtfA9eBfjn4FeN4E3H",
+          "tx": "2TcNT79UrerG8HeRBChGS8bgRnJD4vK5YThBVDNMR83M"
+        },
+        {
+          "block_height": 277799450,
+          "block_time_ms": 1794742646363,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "876320d42a42c4d76c447dccce157fa7762aaaa6f7eb1e080261837b548690e7",
+            "seq": 188
+          },
+          "event": "skip",
+          "receipt_id": "Bfi1mog8axNJojZ1kuqaykG4Uh4q88aqpHUUEjCzEXUB",
+          "tx": "GKxHUPcH3hLk1DmFdp4zFgrkJqwJsiyDBaJskrZtZ2eC"
+        },
+        {
+          "block_height": 277811979,
+          "block_time_ms": 1794750001649,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "e7b57f5ad39aa36ed1abd0277bf6411fdaefd4a4876414d9aafaaa872c0cb78e",
+            "seq": 189
+          },
+          "event": "skip",
+          "receipt_id": "DnzcuL9JPzq46j6FK45Fn5QKwcA1i1w8aHfRM1dKxQin",
+          "tx": "14SL8hUoxtJ6zGYG2uLPxc3bKek8CdsvAiiXmzNuSBFd"
+        },
+        {
+          "block_height": 277824527,
+          "block_time_ms": 1794757329085,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "a7b3df8d597d5e6a03342652d1b9bb9eb19c220cbcbb757eb084fcd568144b71",
+            "seq": 190
+          },
+          "event": "skip",
+          "receipt_id": "AL9Fu1j7G2g9gbj7ye65tk5avyRa5WRjSpNushsNvi8i",
+          "tx": "78EbUrHqEhqJD5aVUjfwRDRNMbC9RvEz1Gia7AR4aW9e"
+        },
+        {
+          "block_height": 277837049,
+          "block_time_ms": 1794764647016,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "4a68f49eef0b69ec6883223dd0bffe2611b636c52135477ca991dbb6a4b53e0f",
+            "seq": 191
+          },
+          "event": "skip",
+          "receipt_id": "8MF9URetsqxfzY8j9tMeciuN7FMKjhBYTuYA4H14RBLV",
+          "tx": "77mY9RH6JpdZTBeM9choPibk72bYjURaJCrukmCjgG2p"
+        },
+        {
+          "block_height": 277849526,
+          "block_time_ms": 1794771963748,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "1f93f7182d6dfafe428883393bbe0104569bc7e10a39d01daa07c1f23ab2d40f",
+            "seq": 192
+          },
+          "event": "skip",
+          "receipt_id": "6dXf9zc2rH1e6vMdV4dHEWdFJZQAuWPToM6b4jprQHYb",
+          "tx": "6N3yYiTbmeyz9DGLV9wzJBuDbvPTBZq2GKhHw2yY9YEa"
+        },
+        {
+          "block_height": 277862086,
+          "block_time_ms": 1794779271843,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "6f7da02d0b8d29024de4006acc7ddecc1059ab028a0f610bead32486a536a08a",
+            "seq": 193
+          },
+          "event": "skip",
+          "receipt_id": "GUoq1hHjNgeYTtfJVmXhQNxfbjpnHe1fsjMgSTXx2oJE",
+          "tx": "2Bh3VV5NVJA2qwbLGxtiKskXfvsaK5HYPLXHVGfZjYhG"
+        },
+        {
+          "block_height": 277874719,
+          "block_time_ms": 1794786625226,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "32f54f150bf61ade79667bceaafbc6b57a9b6a792c749fbb489af1c300c6ac21",
+            "seq": 194
+          },
+          "event": "skip",
+          "receipt_id": "AGE34vjvNCPd4LsqyQ2G5z5rudbvS7MWp7apdwhR5Nhf",
+          "tx": "AKZfNyCp9n55Ugie2DpG4qTELpcKic7JPuUb8ciDi9u1"
         }
       ],
       "gas": [
@@ -19585,6 +21137,126 @@
           "block_time_ms": 1794610530630,
           "tokens_burnt": "207692882708500000000",
           "tx": "enVDLYvpeGikXCnRPZmrbRxRwcD8Uy4W35ncaZ6gCim"
+        },
+        {
+          "block_time_ms": 1794617867439,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "Dx9QawcMtTLGFYMAVZiiKAi67qA8dnFcmeDpBggx76fJ"
+        },
+        {
+          "block_time_ms": 1794625265702,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "3WxKnbYA2MZMzdAXNfaTPBisHTZPTPLYXjTnzvLLLrLf"
+        },
+        {
+          "block_time_ms": 1794632612716,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "Djou2sejkj2w3qbVUJG3N8jzB3c4sHgxWdh9nqhmJ3BN"
+        },
+        {
+          "block_time_ms": 1794639957319,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "3kWjktLjzk4RTNXbKn4dgQNGxxpS56911Kkv3qEgC2RT"
+        },
+        {
+          "block_time_ms": 1794647270962,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "AFwTubCSQvKxrKoqeKAx7CyN5m2eY6TLjrg7hahsCXSE"
+        },
+        {
+          "block_time_ms": 1794654635411,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "7n2qbgyvgGwvU6VaZmqDxpEz9RGEUxjLsLvTuWb29hfD"
+        },
+        {
+          "block_time_ms": 1794661962494,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "AFJxvHfiQ56yskVxnMvvvbWkHDXWsuQ1tP6fAAXsiG14"
+        },
+        {
+          "block_time_ms": 1794669313863,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "3y91epXbMNZYLkGXGWryg4VM1qxCqrk1D2F6W3Gzf7xi"
+        },
+        {
+          "block_time_ms": 1794676658891,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "99EAruC8hJ4oD4xwcbNbxPGaEfECpReWZGjPhBcg4ChG"
+        },
+        {
+          "block_time_ms": 1794683994045,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "8QLUwuP5M3ggKcPr1BU9HG5ZfqjiS4yuHmzdLuDn4k9G"
+        },
+        {
+          "block_time_ms": 1794691308262,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "H8Qh9UEb9xu9einm2V9wPcVxWPbSVB5xEr5yitmuZQCF"
+        },
+        {
+          "block_time_ms": 1794698629085,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "B69U1N5pciR9jm46omyXrK37gReDWHRCaMrXcbrGSf42"
+        },
+        {
+          "block_time_ms": 1794705982790,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "4ovr9gbKbwDQ1gduh1ErgykjgMyNgUoC8Nc1PeqQYpVz"
+        },
+        {
+          "block_time_ms": 1794713316654,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "4KaCdqDqDxC8z83WyDb8Zte611JVdHkVYxA173iTw7qY"
+        },
+        {
+          "block_time_ms": 1794720639243,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "C726uGrmP61K5DBWRfZa1XJKYvSqQXHWCXYLmt44YsKX"
+        },
+        {
+          "block_time_ms": 1794727966448,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "J5fkbZRt9bZCXEHntvtCJhwPvkhzsruUyv5GY4bC7oSp"
+        },
+        {
+          "block_time_ms": 1794735311682,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "2TcNT79UrerG8HeRBChGS8bgRnJD4vK5YThBVDNMR83M"
+        },
+        {
+          "block_time_ms": 1794742646363,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "GKxHUPcH3hLk1DmFdp4zFgrkJqwJsiyDBaJskrZtZ2eC"
+        },
+        {
+          "block_time_ms": 1794750001649,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "14SL8hUoxtJ6zGYG2uLPxc3bKek8CdsvAiiXmzNuSBFd"
+        },
+        {
+          "block_time_ms": 1794757329085,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "78EbUrHqEhqJD5aVUjfwRDRNMbC9RvEz1Gia7AR4aW9e"
+        },
+        {
+          "block_time_ms": 1794764647016,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "77mY9RH6JpdZTBeM9choPibk72bYjURaJCrukmCjgG2p"
+        },
+        {
+          "block_time_ms": 1794771963748,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "6N3yYiTbmeyz9DGLV9wzJBuDbvPTBZq2GKhHw2yY9YEa"
+        },
+        {
+          "block_time_ms": 1794779271843,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "2Bh3VV5NVJA2qwbLGxtiKskXfvsaK5HYPLXHVGfZjYhG"
+        },
+        {
+          "block_time_ms": 1794786625226,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "AKZfNyCp9n55Ugie2DpG4qTELpcKic7JPuUb8ciDi9u1"
         }
       ],
       "observed": {
@@ -19610,7 +21282,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 170,
+          "seq": 194,
           "version": "0.1.0"
         },
         "intents": {
@@ -19653,11 +21325,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 221,
+          "events_replayed": 245,
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "usdc.itachicara.testnet",
@@ -19674,10 +21346,10 @@
       "proof": {
         "detail": "self-reported: harness and model are the operator's word",
         "evidence_ids": [],
-        "receipts_sha256": "482cbd8903685b67899dd81117efe38bae7567f33517863e15884ea1c7934560",
+        "receipts_sha256": "1038856a283402eb43c7de91391fd45a170b0519b6cd576bab2e3c8f2ff78553",
         "seqs": [
           1,
-          170
+          194
         ],
         "tier": "self"
       },
@@ -19911,7 +21583,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",
@@ -20500,6 +22172,56 @@
           "event": "trade",
           "receipt_id": "78B4LNdCBVdPJDkxd5Kf9yGRwsgBYJaX5UuNzT8HB997",
           "tx": "FPqwZKAGD8PPDxQcg5psYpLHEyYfdAiJPK54pnNr5iMM"
+        },
+        {
+          "block_height": 277730131,
+          "block_time_ms": 1794702048120,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "563bab24b2caa920fb751efc18a0ade9091f11c19882bb333a61ebdfc0db092e",
+            "seq": 20
+          },
+          "event": "skip",
+          "receipt_id": "C6aPByjwGC49p8HbjAvwjCPsCgNyUuRe9TNtJ5ZzeZYv",
+          "tx": "7PReFYpvFad8EJBSL8Upxz2RstyBimEjNcQTJnHnVwpr"
+        },
+        {
+          "block_height": 277877820,
+          "block_time_ms": 1794788429082,
+          "data": {
+            "amount_in": "20000000000000000000000",
+            "min_amount_out": "6600000000000000000000",
+            "pool_id": 1103,
+            "receipt_hash": "13609c97c7ba92d0c96902e848a7f885cc50ab6f4c9a0480bb650be9fbf2eb09",
+            "seq": 21,
+            "token_in": "usdc.itachicara.testnet",
+            "token_out": "wrap.testnet",
+            "venue": "rhea"
+          },
+          "event": "request",
+          "receipt_id": "HVRFXX4Gev2P83NZB76k9hZxKDAsJN9P91tdWy2XZEVp",
+          "tx": "65CDM5MHpESZXonZBrUhxhrLgxj824UnK4EV87mZFe5r"
+        },
+        {
+          "block_height": 277877834,
+          "block_time_ms": 1794788436450,
+          "data": {
+            "amount_in": "20000000000000000000000",
+            "amount_out": "9465085333195419145758",
+            "min_amount_out": "9370434479863464954300",
+            "note": "",
+            "pool_id": 1103,
+            "quote": "9465085333195419145758",
+            "receipt_hash": "13609c97c7ba92d0c96902e848a7f885cc50ab6f4c9a0480bb650be9fbf2eb09",
+            "returned": true,
+            "seq": 21,
+            "token_in": "usdc.itachicara.testnet",
+            "token_out": "wrap.testnet",
+            "venue": "rhea"
+          },
+          "event": "trade",
+          "receipt_id": "G2E3WzDPSHaKAn3gdaDfokDzkfKFaenRTP3tMipS6Knp",
+          "tx": "65CDM5MHpESZXonZBrUhxhrLgxj824UnK4EV87mZFe5r"
         }
       ],
       "gas": [
@@ -20597,6 +22319,16 @@
           "block_time_ms": 1794615653961,
           "tokens_burnt": "4321661547786600000000",
           "tx": "FPqwZKAGD8PPDxQcg5psYpLHEyYfdAiJPK54pnNr5iMM"
+        },
+        {
+          "block_time_ms": 1794702048120,
+          "tokens_burnt": "208055100386400000000",
+          "tx": "7PReFYpvFad8EJBSL8Upxz2RstyBimEjNcQTJnHnVwpr"
+        },
+        {
+          "block_time_ms": 1794788429082,
+          "tokens_burnt": "4320839397364300000000",
+          "tx": "65CDM5MHpESZXonZBrUhxhrLgxj824UnK4EV87mZFe5r"
         }
       ],
       "observed": {
@@ -20605,13 +22337,13 @@
             "exchange": "0",
             "intents": "0",
             "token": "wrap.testnet",
-            "wallet": "454688622672007046135675"
+            "wallet": "464153708005202465281433"
           },
           {
             "exchange": "0",
             "intents": "0",
             "token": "usdc.itachicara.testnet",
-            "wallet": "93086183794488897360440"
+            "wallet": "73086183794488897360440"
           }
         ],
         "config": {
@@ -20622,7 +22354,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 19,
+          "seq": 21,
           "version": "0.1.0"
         },
         "intents": {
@@ -20665,11 +22397,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 31,
+          "events_replayed": 34,
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",
@@ -20677,14 +22409,14 @@
             ],
             [
               "usdc.itachicara.testnet",
-              "30000000000000000000000"
+              "20000000000000000000000"
             ]
           ],
           "trades": 1
         }
       },
       "proof": {
-        "detail": "16 in-season decision(s) have no receipt in the file (first: seq 4)",
+        "detail": "18 in-season decision(s) have no receipt in the file (first: seq 4)",
         "evidence_ids": [
           "bundle:06f872bc7bd09f8aa9b852230ad1587715f569e0d1b004d6a9615049cfb333dd",
           "bundle:1e601b14784cd698075e05c6bf6f3b8570d610d86bbad39cf9219498239ad6ef",
@@ -20696,7 +22428,7 @@
         "receipts_sha256": "0c95a48bb3574d020ed74a73706d386203e2647309466b22d0745408c6b9b216",
         "seqs": [
           1,
-          19
+          21
         ],
         "tier": "self"
       },
@@ -22859,6 +24591,294 @@
           "event": "skip",
           "receipt_id": "3ZQw3WtUaJkqoijrsiSuFukA9QTDbxcDkCifu2kLFsWs",
           "tx": "DXVmbXn9YeiKqSg4F7zn4bz7SHkqhBxRiDmP1G67wkzo"
+        },
+        {
+          "block_height": 277586548,
+          "block_time_ms": 1794617805404,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "2073fff29a805b143d2aa1814ea37fd3f7ca9ebd440c03b0da536fde224984f1",
+            "seq": 173
+          },
+          "event": "skip",
+          "receipt_id": "GuTFHeW7uYJDiHtFYpBGZH3tm636q4D41xG3sKnYwEuV",
+          "tx": "D4nqVHv99grcyTJ4swmbLFL3B4NeEk8RGhtVov72jmXf"
+        },
+        {
+          "block_height": 277598972,
+          "block_time_ms": 1794625170824,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "217a9a407ec7be9f07e639ee3d18b13e38d19699349dec2b79c117cf357c35e2",
+            "seq": 174
+          },
+          "event": "skip",
+          "receipt_id": "HyW3WijYPnVS6GKraDchSbewYVzkR4C56XM36WiRtuE3",
+          "tx": "7geKMYZKQLkBCuuiuak7GSuqAG24hsWWxkffjbTMRvpt"
+        },
+        {
+          "block_height": 277611573,
+          "block_time_ms": 1794632550094,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "f032b18a46b3611bd7d0ddc23f58abd0de1d4c35972c457483e16a2e3b721e5c",
+            "seq": 175
+          },
+          "event": "skip",
+          "receipt_id": "5wqdEYX7w5kayhje2PpJbaSVroLMw14it6dAEBrG9Bfp",
+          "tx": "BDCg6FSiXfjbEeAvXcnJFcmdWwA5pNpThSKjLcFxbjpR"
+        },
+        {
+          "block_height": 277623864,
+          "block_time_ms": 1794639897274,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "7cd9c9687d9a9d5f2988fab6fb1c93794d535ec9650a106ee634b150ca57495f",
+            "seq": 176
+          },
+          "event": "skip",
+          "receipt_id": "Ek2tT7wR2nFiFgkYxXXtuUQPJSuRDVCRwLUzC4mKczZ5",
+          "tx": "HgrQKXJrfhW5BsCLq46ibafZsmMWEDsd4hYeoeqjgBWG"
+        },
+        {
+          "block_height": 277636276,
+          "block_time_ms": 1794647234461,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "2f37f56fe0504078fecdc93314eedbb9cdf314390450f52be386ac03221255cd",
+            "seq": 177
+          },
+          "event": "skip",
+          "receipt_id": "7EgnYCqT3wnV9ygAYJKpWZeyWi1GhnU6DQEcHcWwqvUF",
+          "tx": "7Dwib5dQCY3NhxwWwwHoGnxJqjgDacixHdwufABkKnyb"
+        },
+        {
+          "block_height": 277648752,
+          "block_time_ms": 1794654555278,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "32f3c5790ccda82ac1042d653b4d1fa43275d95592c32b7c22a29aafd1ec8a4d",
+            "seq": 178
+          },
+          "event": "skip",
+          "receipt_id": "21n4kw9Nkvd7Ud1HYXr5WFM9BVm7Bycfz1GP9DhZPmvf",
+          "tx": "52Pf4w8aM1TymepyAVChG45NKbvTsXMh3kaLVZdWA4sF"
+        },
+        {
+          "block_height": 277661382,
+          "block_time_ms": 1794661915124,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "801b2ae24975363d7d404374706cb50ac74f347953ddbe1c5eba9db2b85e35c1",
+            "seq": 179
+          },
+          "event": "skip",
+          "receipt_id": "8BnhZ9gsCzMz2pMTKEjUu4gHVhbGnHU12C8L3nRRrPj8",
+          "tx": "3EGCxg4sxLbDvaukZmqRsHabVdnCi1fPvJexS731Zwzy"
+        },
+        {
+          "block_height": 277673951,
+          "block_time_ms": 1794669243086,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "53cbb5fbbe5bf457728edb1da0462a61c3ad9d2911f59c9a3c2a3f99aca74790",
+            "seq": 180
+          },
+          "event": "skip",
+          "receipt_id": "2k4gGTSt22FQEux548u1BkPze1DGEdaBmEZG3bMfjae8",
+          "tx": "AQLegvC5hDFRXaS3zChhh1gfPy6tndRCL7J3tA6tXwZP"
+        },
+        {
+          "block_height": 277686583,
+          "block_time_ms": 1794676594432,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "ad570b76e88819d577a2e5ac522e65bf50b915aaa456b26ce820698fd80a4889",
+            "seq": 181
+          },
+          "event": "skip",
+          "receipt_id": "9npykuEdCF1tuGasL4xmBhrv8xJdz8zwNMSVdHaqmXXp",
+          "tx": "EoNjemDDAjp4pLyxNew6yBTuLiBVmVr59k1G5jtL7Ljr"
+        },
+        {
+          "block_height": 277699117,
+          "block_time_ms": 1794683933475,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "4a2f09ab85889c62e802de6b5d3455afd81782a0bb7c28d49bd067e74ac4736b",
+            "seq": 182
+          },
+          "event": "skip",
+          "receipt_id": "73JAqGtYvL3ZoiAEREd2xD6MCEtbGVhZF2A2pq3VJqUL",
+          "tx": "GVRh61hXRFv6PRTsPGcJVsb65cU8FrV8paAaAGieVFo9"
+        },
+        {
+          "block_height": 277711698,
+          "block_time_ms": 1794691267416,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "20cc848fe31c2ac8e8481dfaac3ba9059dfceda921f81cfb255ea83d37360141",
+            "seq": 183
+          },
+          "event": "skip",
+          "receipt_id": "B8BXFvXYvZjWbBtrzbkCQqHgvrgGxCJ2T2aAnZhBsWmy",
+          "tx": "BCLnRbLLksGQdCKzMrMAUkgBd9rV2sbBVYMbCa6QkDSD"
+        },
+        {
+          "block_height": 277724305,
+          "block_time_ms": 1794698583582,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "db424d12f7c2adae6372309cecb27edffe26a41467a03c80a09d71d1964a4817",
+            "seq": 184
+          },
+          "event": "skip",
+          "receipt_id": "GktTfMWmR3VVYabuzqhSzedeEXrDCfYAVhxCoYGN92t5",
+          "tx": "HsmLSyaz469VShMj4xHccBnWfyQMb1BpioMW4hn2eWPC"
+        },
+        {
+          "block_height": 277736642,
+          "block_time_ms": 1794705900580,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "522fc6c548db433c97b25fd84c0ad38f6151b87f16c4e07ee13e6820ec735fcd",
+            "seq": 185
+          },
+          "event": "skip",
+          "receipt_id": "G8fuTDzc6ptxHt2hrV7yZAhqFuJBEZYtbnieJEfsvWBQ",
+          "tx": "GpK5icbMeDY6xiPRWrjsTppQX8s7fjVfbUEddfVK2Lcv"
+        },
+        {
+          "block_height": 277749209,
+          "block_time_ms": 1794713256973,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "69d96dedf374bfb4bf74ba3de0ee04c640f8e3ebff203ea271bc4696ccda0fd9",
+            "seq": 186
+          },
+          "event": "skip",
+          "receipt_id": "FYxTzU6Yi25Fug44CE7rzGnd3G8HrhM2FqSqyagUs3Vz",
+          "tx": "Cpa2wGH1CLkigpYp6U7X3VS7JeUtsVwCXX9D9AbZWzwf"
+        },
+        {
+          "block_height": 277761662,
+          "block_time_ms": 1794720593023,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "306364e4572fefe5bcabee09ab8b9a6fed6c2f32798eea03a047755d3ed7eea4",
+            "seq": 187
+          },
+          "event": "skip",
+          "receipt_id": "AdmZoVp9NrD5cMBFEircie2Nm2d3FomLoktF66jms9fX",
+          "tx": "3Cq1ox2tGmp5agvV4soJhWjLHrtwBnCmuve5ETYyg8DZ"
+        },
+        {
+          "block_height": 277774314,
+          "block_time_ms": 1794727913687,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "a591a4e3ed4f592fbde4fbcbec21175ad4ad000bbecca1c9e4088213c0f3610b",
+            "seq": 188
+          },
+          "event": "skip",
+          "receipt_id": "DYR7uWeFbYYSofdNhSFufEvus7kzheGJ1gZcEC6eRnq6",
+          "tx": "FJefmcdYquDs7zRGjAo49tZFmWto4gJYuESMZwwRCwdk"
+        },
+        {
+          "block_height": 277786817,
+          "block_time_ms": 1794735242024,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "3db87410a8a388df1131a5c371d052a948c0f14a9b8828d8a93505a6335b06ae",
+            "seq": 189
+          },
+          "event": "skip",
+          "receipt_id": "91s84BdkxL23RA3tagbcpdfGu7KZMBW83Enff8o2i4Ah",
+          "tx": "6N9T9L5mnL4ivydNyN1oQChySKtGwqCXwPuUhXa4gPv5"
+        },
+        {
+          "block_height": 277799354,
+          "block_time_ms": 1794742588167,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "635bf8ce43188178e308fd57c545b2cb0a882c162dbd7b002901b17c5dfb6e55",
+            "seq": 190
+          },
+          "event": "skip",
+          "receipt_id": "EC9XvBHcb9C57B8PHFqKUcrhdCcFju93wid1x5oNDVu9",
+          "tx": "3KTmZUHYDi2gEQZcgnb2VT7dtBCKNdzLZXPyN5kRYkTm"
+        },
+        {
+          "block_height": 277811848,
+          "block_time_ms": 1794749922647,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "cbfe2c069b726781f5997315a3043d6538bdb27d3c5474357ecd490ed84edac7",
+            "seq": 191
+          },
+          "event": "skip",
+          "receipt_id": "8yFnjHHgn9FPgMQ6b4P2dYQTempjRX1LqH4bdoGSaeHp",
+          "tx": "DBPdNUrE3V6yVg74QdUENWXc6KV8nnC2H8aVJj69AJ7i"
+        },
+        {
+          "block_height": 277824427,
+          "block_time_ms": 1794757278402,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "c75a19a24a38ef8f0fc8d1a62b7dbd22f6695053038a7ace48346122a176f162",
+            "seq": 192
+          },
+          "event": "skip",
+          "receipt_id": "BnPEa8f8zpS4QMjAKgR8bWfUR6CnhCgcuhz85swd1Pu1",
+          "tx": "HLZS6DHf8oc61JUJ4C2SKtJDGWJEt62vjBwEWuhoAqVv"
+        },
+        {
+          "block_height": 277836969,
+          "block_time_ms": 1794764599291,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "2c9bbe810f0a985b20699bfcfa06fc2d62ee95ed528b8a113626eec46d7b05e7",
+            "seq": 193
+          },
+          "event": "skip",
+          "receipt_id": "2xGVn7Pm8sqVybNgnC9GYqmHT3GsYP7xRdL1M97dSy5z",
+          "tx": "5nrLASPBr9bXE5dpfUm3pBpsLYwohaGmaUNrhop7ik4m"
+        },
+        {
+          "block_height": 277849452,
+          "block_time_ms": 1794771920108,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "43238dd8c01dc5b593d1e7eed9a72455171081655412d2d520f6f83bdaf15dbd",
+            "seq": 194
+          },
+          "event": "skip",
+          "receipt_id": "CdVTsvDUVoYYXvfnaz2U8YU2vUPPZ9W1H1Pdmb4xKD4n",
+          "tx": "E9MkRCakBPN7cr45uEDM9sKQwag9X99j1G3Kr63F3Hm6"
+        },
+        {
+          "block_height": 277862021,
+          "block_time_ms": 1794779235864,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "d3a3af91354a3bf162b9b85da888513d92c1ff874094f4e218db564a46d834b2",
+            "seq": 195
+          },
+          "event": "skip",
+          "receipt_id": "Hy1SwK4EKhf1dEK7mxATsHTQJJqQA2DucFXNXLHGT6VW",
+          "tx": "Gx2woRG4d7NC2qm34U9kyotZj84BVY6zw3pZgrWagiTb"
+        },
+        {
+          "block_height": 277874591,
+          "block_time_ms": 1794786547634,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "43dade7cebf513cf0897b52270153de84d8adf63e2f2bdb705bfda2141b49c89",
+            "seq": 196
+          },
+          "event": "skip",
+          "receipt_id": "AzPRj9MtAwb3PkVjsBj5zE5A8kkGnSzHWKcujWNcZjX9",
+          "tx": "3rVJnHD2Tj6szuvEx7MpfK3SAVUeDFKg9MoErpKkD39o"
         }
       ],
       "gas": [
@@ -23721,6 +25741,126 @@
           "block_time_ms": 1794610471074,
           "tokens_burnt": "198029573991600000000",
           "tx": "DXVmbXn9YeiKqSg4F7zn4bz7SHkqhBxRiDmP1G67wkzo"
+        },
+        {
+          "block_time_ms": 1794617805404,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "D4nqVHv99grcyTJ4swmbLFL3B4NeEk8RGhtVov72jmXf"
+        },
+        {
+          "block_time_ms": 1794625170824,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "7geKMYZKQLkBCuuiuak7GSuqAG24hsWWxkffjbTMRvpt"
+        },
+        {
+          "block_time_ms": 1794632550094,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "BDCg6FSiXfjbEeAvXcnJFcmdWwA5pNpThSKjLcFxbjpR"
+        },
+        {
+          "block_time_ms": 1794639897274,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "HgrQKXJrfhW5BsCLq46ibafZsmMWEDsd4hYeoeqjgBWG"
+        },
+        {
+          "block_time_ms": 1794647234461,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "7Dwib5dQCY3NhxwWwwHoGnxJqjgDacixHdwufABkKnyb"
+        },
+        {
+          "block_time_ms": 1794654555278,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "52Pf4w8aM1TymepyAVChG45NKbvTsXMh3kaLVZdWA4sF"
+        },
+        {
+          "block_time_ms": 1794661915124,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "3EGCxg4sxLbDvaukZmqRsHabVdnCi1fPvJexS731Zwzy"
+        },
+        {
+          "block_time_ms": 1794669243086,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "AQLegvC5hDFRXaS3zChhh1gfPy6tndRCL7J3tA6tXwZP"
+        },
+        {
+          "block_time_ms": 1794676594432,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "EoNjemDDAjp4pLyxNew6yBTuLiBVmVr59k1G5jtL7Ljr"
+        },
+        {
+          "block_time_ms": 1794683933475,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "GVRh61hXRFv6PRTsPGcJVsb65cU8FrV8paAaAGieVFo9"
+        },
+        {
+          "block_time_ms": 1794691267416,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "BCLnRbLLksGQdCKzMrMAUkgBd9rV2sbBVYMbCa6QkDSD"
+        },
+        {
+          "block_time_ms": 1794698583582,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "HsmLSyaz469VShMj4xHccBnWfyQMb1BpioMW4hn2eWPC"
+        },
+        {
+          "block_time_ms": 1794705900580,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "GpK5icbMeDY6xiPRWrjsTppQX8s7fjVfbUEddfVK2Lcv"
+        },
+        {
+          "block_time_ms": 1794713256973,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "Cpa2wGH1CLkigpYp6U7X3VS7JeUtsVwCXX9D9AbZWzwf"
+        },
+        {
+          "block_time_ms": 1794720593023,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "3Cq1ox2tGmp5agvV4soJhWjLHrtwBnCmuve5ETYyg8DZ"
+        },
+        {
+          "block_time_ms": 1794727913687,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "FJefmcdYquDs7zRGjAo49tZFmWto4gJYuESMZwwRCwdk"
+        },
+        {
+          "block_time_ms": 1794735242024,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "6N9T9L5mnL4ivydNyN1oQChySKtGwqCXwPuUhXa4gPv5"
+        },
+        {
+          "block_time_ms": 1794742588167,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "3KTmZUHYDi2gEQZcgnb2VT7dtBCKNdzLZXPyN5kRYkTm"
+        },
+        {
+          "block_time_ms": 1794749922647,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "DBPdNUrE3V6yVg74QdUENWXc6KV8nnC2H8aVJj69AJ7i"
+        },
+        {
+          "block_time_ms": 1794757278402,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "HLZS6DHf8oc61JUJ4C2SKtJDGWJEt62vjBwEWuhoAqVv"
+        },
+        {
+          "block_time_ms": 1794764599291,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "5nrLASPBr9bXE5dpfUm3pBpsLYwohaGmaUNrhop7ik4m"
+        },
+        {
+          "block_time_ms": 1794771920108,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "E9MkRCakBPN7cr45uEDM9sKQwag9X99j1G3Kr63F3Hm6"
+        },
+        {
+          "block_time_ms": 1794779235864,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "Gx2woRG4d7NC2qm34U9kyotZj84BVY6zw3pZgrWagiTb"
+        },
+        {
+          "block_time_ms": 1794786547634,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "3rVJnHD2Tj6szuvEx7MpfK3SAVUeDFKg9MoErpKkD39o"
         }
       ],
       "observed": {
@@ -23746,7 +25886,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 172,
+          "seq": 196,
           "version": "0.1.0"
         },
         "intents": {
@@ -23789,11 +25929,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 175,
+          "events_replayed": 199,
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [],
           "trades": 0
         }
@@ -23801,10 +25941,10 @@
       "proof": {
         "detail": "self-reported: harness and model are the operator's word",
         "evidence_ids": [],
-        "receipts_sha256": "fb6df63abe17a3149d8d7f0a702173ff4342e944d4137984a9ed96b3883c99a4",
+        "receipts_sha256": "07506f37bc1f01e40631835e667644adcc1db8fe48c3a3c1676456c530e58d58",
         "seqs": [
           1,
-          172
+          196
         ],
         "tier": "self"
       },
@@ -24692,7 +26832,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",
@@ -24927,6 +27067,294 @@
           "event": "skip",
           "receipt_id": "5mLaA4rLtveku55agWXsZTAkwUA5z6bCQDZjPbHdo1sP",
           "tx": "EfiBizK6nDGP4tMBUqD8VzYZ9xa47Bkkpn7aDS4ss9mu"
+        },
+        {
+          "block_height": 277586703,
+          "block_time_ms": 1794617899467,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "a00898fefaee17929a0fd64d28cf812d7c005ea97bb9a33f6ff93eab352697ca",
+            "seq": 12
+          },
+          "event": "skip",
+          "receipt_id": "72sJS8TZzJ9ndhhEoGUqRftSmsqPz1W52ZW15uuFZLHs",
+          "tx": "GyzwAN6J6TaD6HJNnVJRxNjgLeUKTSXoifhY5b5yZVFV"
+        },
+        {
+          "block_height": 277599194,
+          "block_time_ms": 1794625297964,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "93fd2730fefa84727ee9519b27105a151c3b7c249e3b676f61d7388bc5ef81af",
+            "seq": 13
+          },
+          "event": "skip",
+          "receipt_id": "F2zfayZ8HiKYGfThHVUp2LzGMVkbi5CaSPeyryxVm95e",
+          "tx": "EuAvvG78BMZRJHp1GuCHaMs5PhdhLM9TQnykfNfAg2aU"
+        },
+        {
+          "block_height": 277611724,
+          "block_time_ms": 1794632641141,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "9d6e860bd268b68ba3a683b23a337566fadc8c1ce15598e077cd2b20627e7bf5",
+            "seq": 14
+          },
+          "event": "skip",
+          "receipt_id": "3GdTjxDxJYUHkcxQcaTf7fUcmekcG2t1JWHB1UuwEsjW",
+          "tx": "FmbRxVvccmXJKYtUEMiNfwLbz5JsY2DHcc3VGvDkEtUn"
+        },
+        {
+          "block_height": 277624008,
+          "block_time_ms": 1794639982482,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "65eb4b2897cee4242020b40f81b3f24521a9711078939cc382f2179051760f2c",
+            "seq": 15
+          },
+          "event": "skip",
+          "receipt_id": "AiwrANfp4VLFTMCqS1wfoVVW68h65xAr9Sa7WmF2FW2T",
+          "tx": "u25ht2Xyi3zHjKbvRzZ6GknsYmEtPoMXquvAxxQdVTm"
+        },
+        {
+          "block_height": 277636396,
+          "block_time_ms": 1794647297612,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "c14184a678fe1fb8631854374f8e425daf11cdc73bffa94b9e9849f0b3ff8d6b",
+            "seq": 16
+          },
+          "event": "skip",
+          "receipt_id": "8gFnc5cUfLM68YDKKyGTRJzk47DMvfYBB165L85cA5bN",
+          "tx": "HWuWvVsqEoQkW1DcR63iVtHXEKixGdAEPwmWXYcbc8oK"
+        },
+        {
+          "block_height": 277648942,
+          "block_time_ms": 1794654665055,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "55698ec7d9b36f2c3eaf6900b302f2d5fa148550d73784d9896ef546c20b4fed",
+            "seq": 17
+          },
+          "event": "skip",
+          "receipt_id": "6fQM2MVVZb4Bq4ySuC8kJ7hBf286PdfksKQve6jAZMvk",
+          "tx": "DjCgWZrSChNQfXoJ2yUdbZjJhPUagzoem9N1NQ2Nwuyp"
+        },
+        {
+          "block_height": 277661515,
+          "block_time_ms": 1794661989251,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "2f42b87bfe2f9a2a065403c3345da6c650686dc01fda82a45b567c2175a837e7",
+            "seq": 18
+          },
+          "event": "skip",
+          "receipt_id": "EwF5ffbhZA7YnnHbRUZQra4YQcyA5ZGkEvaTZSKcL89Y",
+          "tx": "AQhd5npQzVNbFv6SYUsZkfQp8SNX4oS6w4KTTgfq7ctS"
+        },
+        {
+          "block_height": 277674118,
+          "block_time_ms": 1794669340668,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "6f99a8bdf6c0f311e2f804da19bd3bec14afa4b09c2c2495e35bc9a45d9f96c4",
+            "seq": 19
+          },
+          "event": "skip",
+          "receipt_id": "EhB3qbGzT549eyLkrhAhZqL1d57iHiNZC4qJkdcKoHdx",
+          "tx": "zU3EdLHf9XX6m1JFbSnWjJdo92oYTHZcUQf4cdAzgmU"
+        },
+        {
+          "block_height": 277686733,
+          "block_time_ms": 1794676684853,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "4002071c915f8e5ee3fe6683076b74d7aa87fa80b64000d4b4ee6548b57cf9a7",
+            "seq": 20
+          },
+          "event": "skip",
+          "receipt_id": "5WHvfrLqs46wHAc6gfLVycbxF6FYXb11sNhcFxEBNcu2",
+          "tx": "Fi8M3zNdkGGYGtRQ4VJAGXgNXM9MWUEuPXhRKhTq9N6z"
+        },
+        {
+          "block_height": 277699261,
+          "block_time_ms": 1794684018838,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "7d49cf5bd64b611e4897aca6c7718f61642337f99876dd36b6c2e780cf0d9689",
+            "seq": 21
+          },
+          "event": "skip",
+          "receipt_id": "65YcwxMNChFSkNSR9oEuYb3dSQhptiGY27iesqMjUkMA",
+          "tx": "BCbZ5C4EjxGdoYvx8fF7gmMzN4nbQvzmNDyHKAgWnYRp"
+        },
+        {
+          "block_height": 277711809,
+          "block_time_ms": 1794691333671,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "348a9def52ecb68e6f5936e5b5b454e4f9041a6e5938676a626d140902ac6fde",
+            "seq": 22
+          },
+          "event": "skip",
+          "receipt_id": "4vJ2pt1EkXidQaGU2Jmx4kzzELR6mnBJhU3tkxM1uUAb",
+          "tx": "3KsMWYCTaQgwzJjAM1kqSVyfNmLRAfbS4UnynHHS8H53"
+        },
+        {
+          "block_height": 277724421,
+          "block_time_ms": 1794698653926,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "67e1aff8c1759279fbce964de5185794e7845a8787c473b9d53c7c9017aeee6d",
+            "seq": 23
+          },
+          "event": "skip",
+          "receipt_id": "7GkFw6i2nminuDXNseBnT8BsAiM7HpMS5jcvwpSZhUnH",
+          "tx": "4M9fnFcfk49U41ph6JwLqPPkDJfvP4heMLQT5cYLSxfb"
+        },
+        {
+          "block_height": 277736826,
+          "block_time_ms": 1794706007914,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "495a7d6fa3f3a2f11c390bf4b96b88a85807920e7a8eda1da308a80fb747434b",
+            "seq": 24
+          },
+          "event": "skip",
+          "receipt_id": "3gjx5k82ctCciVGanLci3KHtA48GiYayDH7nhsPimLvf",
+          "tx": "9ULVHhLMcmbjJ6353y1kP31bzZMs83xExRqbJayv3jeo"
+        },
+        {
+          "block_height": 277749360,
+          "block_time_ms": 1794713343515,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "0f7060353fd6b6bcaba2a18cf831aa81ebef2c9d9cdcbf57de366d25efae923a",
+            "seq": 25
+          },
+          "event": "skip",
+          "receipt_id": "FMCQ5iKLefskELoniwzzj5Va4qJEnQ51MRVPCrKN1osu",
+          "tx": "431hmdGWBEenrKSh1NKgL852BK7fSQwdUq3MtL7MaXim"
+        },
+        {
+          "block_height": 277761789,
+          "block_time_ms": 1794720664966,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "b968d55024e0576b0c11eb52d685627c69488e39bbab55965eb8a55aee9f6fe4",
+            "seq": 26
+          },
+          "event": "skip",
+          "receipt_id": "DUkEpcjxSYGGFRD9CnB9URZCtXnZYN8Y75gtZCP2zES6",
+          "tx": "8TWWJExPghWnvLmrEuBwFAbs7zKGSi9twktkfrorLXYT"
+        },
+        {
+          "block_height": 277774449,
+          "block_time_ms": 1794727992301,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "ed6ac75cd15618982b4f9eebda9a4ac96ce5365fed6e8bc7ecc4c175be189eb1",
+            "seq": 27
+          },
+          "event": "skip",
+          "receipt_id": "5e9Y2dHNu1Ef54yFbPCwkjYgSDM2ocvgms8xCVLfz35L",
+          "tx": "FH6uK7ZErfGHFUTTAL47zMWzAYZshh8nCtmoiXV8raZf"
+        },
+        {
+          "block_height": 277786976,
+          "block_time_ms": 1794735336144,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "be1b4af0bb50312749aee8c258045cc00c5f74149ca1ba40efefb3a32fc8324a",
+            "seq": 28
+          },
+          "event": "skip",
+          "receipt_id": "RuNt5Yzk1PLrkxCFixWHFSJjpdMiQkKaBhK2nqdDKhB",
+          "tx": "GQ6TrAV2ydXkLxsaSYZVnfqAQFrYeDr2Bx12rqQDmHcf"
+        },
+        {
+          "block_height": 277799493,
+          "block_time_ms": 1794742672302,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "8f9e316a963705ea4fca1b7b5080f2830897a3e9b35cb12ca7583ff68015d660",
+            "seq": 29
+          },
+          "event": "skip",
+          "receipt_id": "GgQZVyGDV863suRBLpmv9wqjesnEkKBdP2bX6Ccvc6Tu",
+          "tx": "6xEC9pvkZzRf4Ti1up8WrQe9CDLDBU5iLCdh1y8SydX3"
+        },
+        {
+          "block_height": 277812022,
+          "block_time_ms": 1794750027701,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "1be9e9a5f864b497b16e148599407b5abf555be0134bb0e3696e99ae5e526877",
+            "seq": 30
+          },
+          "event": "skip",
+          "receipt_id": "3F25BhFqmxuuYCTUPUa426uHRRKz1meJvf8YPChWWoAR",
+          "tx": "H2AdtfabcRwtcjbnipyHSmfc81oUpijftvtF7Wv1esP8"
+        },
+        {
+          "block_height": 277824572,
+          "block_time_ms": 1794757353642,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "e31342b45ee3b692e27cca8fb60536cbe96c9d517910b5f941ca1772ce9807b7",
+            "seq": 31
+          },
+          "event": "skip",
+          "receipt_id": "DcHzcRy5mFP51idzJRoV1bxAaZEdNsghyM2EFPXDeqXz",
+          "tx": "DtrVreehJ5w7C2UobseFADA1HK72Wb1gBWGNdsHfC8Cx"
+        },
+        {
+          "block_height": 277837091,
+          "block_time_ms": 1794764671980,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "af37f9397ac8a58cba43117554c8e1db5ef247a30d11868861aca2e59e40d6f0",
+            "seq": 32
+          },
+          "event": "skip",
+          "receipt_id": "D1uVfdtfKNYvUHP1ciQACTJv4yGK2aL9JwE7sHkpEBqr",
+          "tx": "FVuWwUFFy2CDafq6ciKdng2aXcoZTxqdwCDPR2ES46Wb"
+        },
+        {
+          "block_height": 277849567,
+          "block_time_ms": 1794771987417,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "393b2c9e7184348e33c4f1cb0c92980ceff07aa8dfbc64ac1f30dd8f7cad57f7",
+            "seq": 33
+          },
+          "event": "skip",
+          "receipt_id": "BtnrVz3CX7k1HgM6rTCHP78kAbAW9SzztZSyTdm84ZFu",
+          "tx": "HgprtxqbVv4kykkY1VKdiGNx82TrVCMBaPyk8iRycKMx"
+        },
+        {
+          "block_height": 277862131,
+          "block_time_ms": 1794779298334,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "d0d7166cef2005dcda81e4e6be621e7dde2e488d543c132801c5b3a126fac2dc",
+            "seq": 34
+          },
+          "event": "skip",
+          "receipt_id": "FZCzVGu4BUPkkSxhBQriGMunF9Bck6Nw7kHUtJa8JJKf",
+          "tx": "FJVycb3kU7ECsp8tETv7y7FB52DU8tTBRBCBcHGQsowM"
+        },
+        {
+          "block_height": 277874765,
+          "block_time_ms": 1794786651584,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "b516eb4629cb7aa196aefadc3121d5a9ffa0d411149b5a9aeaebbbb1a3a0c752",
+            "seq": 35
+          },
+          "event": "skip",
+          "receipt_id": "Hu8v4x342ZQkX1j9nDyWLWYrYuSmqS6JGddgmkZhrcZq",
+          "tx": "GTwpz6HrPt5KPcDa5DUR5VqNn5ipCchWdurG9EHeozUv"
         }
       ],
       "gas": [
@@ -24984,6 +27412,126 @@
           "block_time_ms": 1794610555625,
           "tokens_burnt": "197719955582700000000",
           "tx": "EfiBizK6nDGP4tMBUqD8VzYZ9xa47Bkkpn7aDS4ss9mu"
+        },
+        {
+          "block_time_ms": 1794617899467,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "GyzwAN6J6TaD6HJNnVJRxNjgLeUKTSXoifhY5b5yZVFV"
+        },
+        {
+          "block_time_ms": 1794625297964,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "EuAvvG78BMZRJHp1GuCHaMs5PhdhLM9TQnykfNfAg2aU"
+        },
+        {
+          "block_time_ms": 1794632641141,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "FmbRxVvccmXJKYtUEMiNfwLbz5JsY2DHcc3VGvDkEtUn"
+        },
+        {
+          "block_time_ms": 1794639982482,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "u25ht2Xyi3zHjKbvRzZ6GknsYmEtPoMXquvAxxQdVTm"
+        },
+        {
+          "block_time_ms": 1794647297612,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "HWuWvVsqEoQkW1DcR63iVtHXEKixGdAEPwmWXYcbc8oK"
+        },
+        {
+          "block_time_ms": 1794654665055,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "DjCgWZrSChNQfXoJ2yUdbZjJhPUagzoem9N1NQ2Nwuyp"
+        },
+        {
+          "block_time_ms": 1794661989251,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "AQhd5npQzVNbFv6SYUsZkfQp8SNX4oS6w4KTTgfq7ctS"
+        },
+        {
+          "block_time_ms": 1794669340668,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "zU3EdLHf9XX6m1JFbSnWjJdo92oYTHZcUQf4cdAzgmU"
+        },
+        {
+          "block_time_ms": 1794676684853,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "Fi8M3zNdkGGYGtRQ4VJAGXgNXM9MWUEuPXhRKhTq9N6z"
+        },
+        {
+          "block_time_ms": 1794684018838,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "BCbZ5C4EjxGdoYvx8fF7gmMzN4nbQvzmNDyHKAgWnYRp"
+        },
+        {
+          "block_time_ms": 1794691333671,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "3KsMWYCTaQgwzJjAM1kqSVyfNmLRAfbS4UnynHHS8H53"
+        },
+        {
+          "block_time_ms": 1794698653926,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "4M9fnFcfk49U41ph6JwLqPPkDJfvP4heMLQT5cYLSxfb"
+        },
+        {
+          "block_time_ms": 1794706007914,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "9ULVHhLMcmbjJ6353y1kP31bzZMs83xExRqbJayv3jeo"
+        },
+        {
+          "block_time_ms": 1794713343515,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "431hmdGWBEenrKSh1NKgL852BK7fSQwdUq3MtL7MaXim"
+        },
+        {
+          "block_time_ms": 1794720664966,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "8TWWJExPghWnvLmrEuBwFAbs7zKGSi9twktkfrorLXYT"
+        },
+        {
+          "block_time_ms": 1794727992301,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "FH6uK7ZErfGHFUTTAL47zMWzAYZshh8nCtmoiXV8raZf"
+        },
+        {
+          "block_time_ms": 1794735336144,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "GQ6TrAV2ydXkLxsaSYZVnfqAQFrYeDr2Bx12rqQDmHcf"
+        },
+        {
+          "block_time_ms": 1794742672302,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "6xEC9pvkZzRf4Ti1up8WrQe9CDLDBU5iLCdh1y8SydX3"
+        },
+        {
+          "block_time_ms": 1794750027701,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "H2AdtfabcRwtcjbnipyHSmfc81oUpijftvtF7Wv1esP8"
+        },
+        {
+          "block_time_ms": 1794757353642,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "DtrVreehJ5w7C2UobseFADA1HK72Wb1gBWGNdsHfC8Cx"
+        },
+        {
+          "block_time_ms": 1794764671980,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "FVuWwUFFy2CDafq6ciKdng2aXcoZTxqdwCDPR2ES46Wb"
+        },
+        {
+          "block_time_ms": 1794771987417,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "HgprtxqbVv4kykkY1VKdiGNx82TrVCMBaPyk8iRycKMx"
+        },
+        {
+          "block_time_ms": 1794779298334,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "FJVycb3kU7ECsp8tETv7y7FB52DU8tTBRBCBcHGQsowM"
+        },
+        {
+          "block_time_ms": 1794786651584,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "GTwpz6HrPt5KPcDa5DUR5VqNn5ipCchWdurG9EHeozUv"
         }
       ],
       "observed": {
@@ -25009,7 +27557,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 11,
+          "seq": 35,
           "version": "0.1.0"
         },
         "intents": {
@@ -25052,11 +27600,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 13,
+          "events_replayed": 37,
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [],
           "trades": 0
         }
@@ -25064,10 +27612,10 @@
       "proof": {
         "detail": "self-reported: harness and model are the operator's word",
         "evidence_ids": [],
-        "receipts_sha256": "fdf2efeaa932f42853c721cb8b3c417e1c38c27ca318b7bc38202d5a374d072d",
+        "receipts_sha256": "d85f08e72690d87b1f04d6aa5e5696f023faf1dbf6a22f1d527b67e9c9f4e78d",
         "seqs": [
           1,
-          11
+          35
         ],
         "tier": "self"
       },
@@ -25287,7 +27835,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",
@@ -26360,7 +28908,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",
@@ -28018,7 +30566,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498504",
+          "hour": "498552",
           "spent": [
             [
               "wrap.testnet",

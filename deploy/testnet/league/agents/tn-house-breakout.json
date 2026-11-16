@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794616200000,
-  "derived_sha256": "f83c5abb98ab34deeb1eb9e4548408781389b945c0a6c699be0903d06122fa97",
+  "as_of_ms": 1794789000000,
+  "derived_sha256": "ce0549b085c848b97732adf4bdfcc1d31a66d87e8bc922233c09db3586ee56ce",
   "entry": {
     "account": "house-breakout.arena2.irontrade.testnet",
     "beyond_noise": false,
@@ -10,22 +10,42 @@
       "benchmark_rebalance_usd": 0.00332925,
       "fill_vs_reference_pct": 0.48087611,
       "fill_vs_reference_usd": 0.97377412,
-      "gas_near": 0.00753216,
-      "gas_usd": 0.02984887,
+      "gas_near": 0.00793774,
+      "gas_usd": 0.03111629,
       "neutralised_usd": 0,
       "traded_ref_usd": 2.025
     },
     "counts": {
-      "decisions": 17,
+      "decisions": 19,
       "failed": 0,
       "missed_slots": 0,
       "off_schedule": 1,
       "refusals": 0,
-      "skips": 16,
+      "skips": 18,
       "trades": 1
     },
-    "days": 15.56781657,
+    "days": 17.56781657,
     "decisions": [
+      {
+        "block_time_ms": 1794788067677,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": true,
+        "receipt_hash": "9a46be482120d27979fcdffc8f3675e56a34dbf432fa5f36383b18adcefaf12d",
+        "seq": 19,
+        "tx": "GHRqwiSS4xnak1By4wTD1uw4DQE5SzoR52PYFtRTfxjA"
+      },
+      {
+        "block_time_ms": 1794701689839,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": true,
+        "receipt_hash": "61af8a4d8808f6c5d4c1919d900fb97951013da29ba7eb06967ebba8c51398b5",
+        "seq": 18,
+        "tx": "C62kZkHAmfsMcYDzXXXt2Q1F1DgZ8PDRkJ2wfiqM6AY7"
+      },
       {
         "block_time_ms": 1794615281343,
         "event": "skip",
@@ -221,13 +241,13 @@
     ],
     "description": "Published rule: enter above the prior 55-day high, exit below the prior 20-day low.",
     "end": {
-      "price": 3.461,
+      "price": 3.173,
       "value_usd": 1.05122588
     },
-    "events_sha256": "66720e9c68c7c179dfc88dd31a6ccfaa06a45bb9610de39061ebfc5a33b47f45",
-    "funded_twr": -0.22031989,
+    "events_sha256": "10f0aeb62ca06614e912498a9a32e34f339dd87f98a1b96ac5aab6ca4a4d292b",
+    "funded_twr": -0.28519937,
     "harness": "sledgit-runner/0.1.0",
-    "hold_twr": -0.11149471,
+    "hold_twr": -0.14388579,
     "id": "tn-house-breakout",
     "inactive": false,
     "kind": "house",
@@ -235,7 +255,7 @@
     "name": "Breakout 55/20",
     "proof": {
       "claimed": "rules",
-      "detail": "16 in-season decision(s) have no receipt in the file (first: seq 2)",
+      "detail": "18 in-season decision(s) have no receipt in the file (first: seq 2)",
       "tier": "self"
     },
     "provenance": {
@@ -243,15 +263,15 @@
       "status": "genuine"
     },
     "range95": {
-      "hi": -0.35015096,
-      "lo": -0.56273042,
-      "n": 374
+      "hi": -0.31383725,
+      "lo": -0.5539421,
+      "n": 422
     },
     "ranked": true,
     "refusals_by_code": {},
     "season_seqs": [
       1,
-      17
+      19
     ],
     "series": [
       {
@@ -2499,13 +2519,301 @@
         "value": 1.05122588
       },
       {
-        "hold": 1.9720375,
-        "stake": 1.97369719,
-        "t": 1794616200000,
+        "hold": 1.96929163,
+        "stake": 1.97094826,
+        "t": 1794618000000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.96355025,
+        "stake": 1.96520024,
+        "t": 1794621600000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.96180287,
+        "stake": 1.96345389,
+        "t": 1794625200000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.94333062,
+        "stake": 1.94495021,
+        "t": 1794628800000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.9420825,
+        "stake": 1.94370396,
+        "t": 1794632400000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.94957125,
+        "stake": 1.9512116,
+        "t": 1794636000000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.9480735,
+        "stake": 1.94971525,
+        "t": 1794639600000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.93634112,
+        "stake": 1.93796421,
+        "t": 1794643200000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.93559225,
+        "stake": 1.93721813,
+        "t": 1794646800000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.945078,
+        "stake": 1.94672682,
+        "t": 1794650400000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.939087,
+        "stake": 1.9407283,
+        "t": 1794654000000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.9400855,
+        "stake": 1.94173305,
+        "t": 1794657600000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.93983588,
+        "stake": 1.94148721,
+        "t": 1794661200000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.93559225,
+        "stake": 1.93723942,
+        "t": 1794664800000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.91362525,
+        "stake": 1.91523284,
+        "t": 1794668400000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.91162825,
+        "stake": 1.91323599,
+        "t": 1794672000000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.88441913,
+        "stake": 1.88597642,
+        "t": 1794675600000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.88941162,
+        "stake": 1.89098296,
+        "t": 1794679200000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.883171,
+        "stake": 1.88473377,
+        "t": 1794682800000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.879177,
+        "stake": 1.88073569,
+        "t": 1794686400000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.84772425,
+        "stake": 1.84922317,
+        "t": 1794690000000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.84672575,
+        "stake": 1.84822645,
+        "t": 1794693600000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.845228,
+        "stake": 1.84672945,
+        "t": 1794697200000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.86444912,
+        "stake": 1.86599362,
+        "t": 1794700800000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.861204,
+        "stake": 1.86274574,
+        "t": 1794704400000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.84447913,
+        "stake": 1.84599042,
+        "t": 1794708000000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.891159,
+        "stake": 1.89277012,
+        "t": 1794711600000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.89065975,
+        "stake": 1.89227388,
+        "t": 1794715200000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.88541763,
+        "stake": 1.88702494,
+        "t": 1794718800000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.887165,
+        "stake": 1.88877994,
+        "t": 1794722400000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.89265675,
+        "stake": 1.89428711,
+        "t": 1794726000000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.88666575,
+        "stake": 1.88828767,
+        "t": 1794729600000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.89165825,
+        "stake": 1.8932946,
+        "t": 1794733200000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.8961515,
+        "stake": 1.89780129,
+        "t": 1794736800000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.90289137,
+        "stake": 1.90455937,
+        "t": 1794740400000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.89964625,
+        "stake": 1.90131151,
+        "t": 1794744000000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.905138,
+        "stake": 1.90681891,
+        "t": 1794747600000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.89764925,
+        "stake": 1.89931843,
+        "t": 1794751200000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.8881635,
+        "stake": 1.88981665,
+        "t": 1794754800000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.89065975,
+        "stake": 1.89232221,
+        "t": 1794758400000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.89340562,
+        "stake": 1.89507797,
+        "t": 1794762000000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.8901605,
+        "stake": 1.89182996,
+        "t": 1794765600000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.89165825,
+        "stake": 1.89333494,
+        "t": 1794769200000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.89989588,
+        "stake": 1.90159426,
+        "t": 1794772800000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.90663575,
+        "stake": 1.90835271,
+        "t": 1794776400000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.90064475,
+        "stake": 1.90235291,
+        "t": 1794780000000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.9101305,
+        "stake": 1.91186323,
+        "t": 1794783600000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.91087938,
+        "stake": 1.91261785,
+        "t": 1794787200000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.9001455,
+        "stake": 1.90186277,
+        "t": 1794789000000,
         "value": 1.05122588
       }
     ],
-    "stake_twr": -0.11074693,
+    "stake_twr": -0.14311206,
     "start": {
       "price": 4.439,
       "time_ms": 1793271140648,
@@ -2514,10 +2822,10 @@
     "strategy_sha256": null,
     "twr": -0.52636816,
     "unranked_reason": null,
-    "vs_funded": -0.39253055,
-    "vs_hold": -0.46693413,
-    "vs_hold_after_gas": -0.47751257,
-    "vs_stake": -0.46738239
+    "vs_funded": -0.33739308,
+    "vs_hold": -0.44676559,
+    "vs_hold_after_gas": -0.45839784,
+    "vs_stake": -0.44726513
   },
   "events": [
     {
@@ -2806,6 +3114,30 @@
       "event": "skip",
       "receipt_id": "88RtmcC6yHYCkfY3Mvx9T7E9Xhu64kQYVdbfprRfAdzi",
       "tx": "6n1rDg1abXKE3yGy8qU79xTqdujQo4dBwqKjgDgZVEKC"
+    },
+    {
+      "block_height": 277729527,
+      "block_time_ms": 1794701689839,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "61af8a4d8808f6c5d4c1919d900fb97951013da29ba7eb06967ebba8c51398b5",
+        "seq": 18
+      },
+      "event": "skip",
+      "receipt_id": "J5xnUtyrYzJveefhCqqLzNxwoWTqJUavPURq2L9Lik6v",
+      "tx": "C62kZkHAmfsMcYDzXXXt2Q1F1DgZ8PDRkJ2wfiqM6AY7"
+    },
+    {
+      "block_height": 277877200,
+      "block_time_ms": 1794788067677,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "9a46be482120d27979fcdffc8f3675e56a34dbf432fa5f36383b18adcefaf12d",
+        "seq": 19
+      },
+      "event": "skip",
+      "receipt_id": "3jamUQJavZCh82ij4oHEn7ZwLjdtDr53Dcr6dALvHVDp",
+      "tx": "GHRqwiSS4xnak1By4wTD1uw4DQE5SzoR52PYFtRTfxjA"
     }
   ],
   "network": "testnet",
@@ -2832,7 +3164,7 @@
       "mpc_id": "v1.signer-prod.testnet",
       "owner_id": "it1793205219-owner.testnet",
       "proposed_owner": null,
-      "seq": 17,
+      "seq": 19,
       "version": "0.1.0"
     },
     "intents": {
@@ -2875,11 +3207,11 @@
       ]
     },
     "reconciliation": {
-      "events_replayed": 20,
+      "events_replayed": 22,
       "status": "ok"
     },
     "usage": {
-      "hour": "498504",
+      "hour": "498552",
       "spent": [
         [
           "wrap.testnet",
