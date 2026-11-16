@@ -246,7 +246,9 @@ export async function checkProof(entry: EntryMeta, registryDir: string, events: 
   const receipts = kept.map((l) => JSON.parse(l) as Receipt);
   const evidence = receipts.flatMap((r) => (r.attestation ? [`chat:${r.attestation.chat_id}`, `bundle:${r.attestation.bundle_sha256}`] : []));
   const seqs: [number, number] | null = season.length ? [Number(season[0].data.seq), Number(season[season.length - 1].data.seq)] : null;
-  const base = { evidence_ids: [...new Set(evidence)].sort(cmp), seqs, ...(text ? { receipts_sha256: sha256Hex(text) } : {}) };
+  const versions = [...new Set(receipts.map((r) => String(r.prompt_sha256)))];
+  const base = { evidence_ids: [...new Set(evidence)].sort(cmp), seqs, ...(text ? { receipts_sha256: sha256Hex(text) } : {}),
+    ...(receipts.length ? { strategy_sha256: String(receipts[receipts.length - 1].prompt_sha256), strategy_versions: versions.length } : {}) };
   const self = (detail: string): ProofCheck => ({ tier: "self", detail, ...base });
   if (entry.proof_claim === "self") return self("self-reported: harness and model are the operator's word");
   if (!season.length) return self("no decision in the season yet");
@@ -275,7 +277,6 @@ export async function checkProof(entry: EntryMeta, registryDir: string, events: 
     if (rows.length !== kept.length) return self(`house-rerun --check covered ${rows.length} of ${kept.length} receipt(s) (not all are rules receipts)`);
     const bad = rows.filter((r) => !r.pass);
     if (bad.length) return self(`house-rerun --check: ${bad.length} of ${rows.length} receipt(s) fail (${bad[0].problems[0] ?? "different decision"})`);
-    const versions = [...new Set(receipts.map((r) => r.prompt_sha256))];
     const strategies = [...new Set(versions.map((h) => publishedByHash(String(h))?.id ?? "?"))];
     if (strategies.length !== 1 || strategies[0] === "?") return self(`receipts don't name exactly one published strategy (${strategies.join(", ")})`);
     return { tier: "rules", verified_model: `rules:${strategies[0]}`, detail: `house-rerun --check passes for ${rows.length} of ${rows.length} in-season decision(s) (${span}): published strategy, recorded inputs match chain and feed, and each receipt decides what the vault recorded`,

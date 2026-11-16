@@ -437,7 +437,7 @@ export function compute(inp: LeagueInputs): Snapshot {
     if (v.proof.verified_model && modelFamily(v.proof.verified_model) !== modelFamily(v.entry.model))
       flags.push({ ids: [id], kind: "label_mismatch", severity: "unrank", text: `registry says ${v.entry.model}, but the proof binds ${v.proof.verified_model}` });
     if (v.proof.tier !== v.entry.proof_claim) flags.push({ ids: [id], kind: "proof", severity: "info", text: `claims ${v.entry.proof_claim}, proven ${v.proof.tier} (${v.proof.detail})` });
-    if ((v.proof.strategy_versions ?? 0) > 1) flags.push({ ids: [id], kind: "strategy_change", severity: "info", text: `the season's receipts use ${v.proof.strategy_versions} published strategy versions (strategy changed mid-season)` });
+    if ((v.proof.strategy_versions ?? 0) > 1) flags.push({ ids: [id], kind: "strategy_change", severity: "info", text: `the season's receipts use ${v.proof.strategy_versions} published prompt or strategy versions (changed mid-season)` });
   }
 
   const results = parts.map(({ v, R }) => entryResult(inp, v, R));

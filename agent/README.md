@@ -101,7 +101,7 @@ intents balance (`mt_balance_of` on the intents contract) is not checked before 
    before any model call, receipt or transaction.
 1. Read the vault (policy, usage, in-flight, open intent, balances, decimals) and the mainnet NEAR/USDT price
    from Binance's public ticker. Views use `optimistic` finality (the near-api-js default).
-2. Send the model `prompts/arena-v1.md` as the system prompt and the inputs as one canonical JSON user message. The
+2. Send the model `prompts/arena-v1.1.md` as the system prompt and the inputs as one canonical JSON user message. The
    model's last five decisions on this vault are included as history.
 3. Parse and validate the answer: exactly `{action, amount_in, reason}`, action `buy|sell|hold`, a plain decimal
    amount with no more digits than the token has (a JSON number with more than 15 significant digits is rejected;
@@ -141,7 +141,7 @@ reference price with its source and fetch time, the converted policy/usage/balan
 - Canonical form: RFC 8785 (JCS): keys sorted at every level by UTF-16 code units, no whitespace, ECMAScript string
   escaping and number form, amounts as strings.
 - `receipt_hash = sha256(canonical line)` in lowercase hex. The line in `receipts.jsonl` is exactly the hashed bytes.
-- `prompt_sha256 = sha256(prompts/arena-v1.md bytes)`. Changing the prompt changes every later receipt, so runs under
+- `prompt_sha256 = sha256(prompts/arena-v1.1.md bytes)`. Changing the prompt changes every later receipt, so runs under
   different prompts are never mixed by accident; name a new prompt file (`arena-v2.md`) rather than editing v1.
 
 To verify: `verify <file> [--outcomes <file>]` hashes each stored line, finds its transaction in `outcomes.jsonl`, reads

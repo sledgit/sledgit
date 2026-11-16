@@ -353,7 +353,7 @@ export async function main(argv: string[], deps: MainDeps = {}): Promise<number>
       const model = o.attest === "tee"
         ? (deps.makeAttested ?? nearAiModel)(o.model!, env)
         : (deps.makeModel ?? makeModel)(o.provider!, o.model ?? defaultModel(o.provider!), env);
-      const prompt = loadPrompt(o.prompt ?? join(HERE, "prompts", "arena-v1.md"));
+      const prompt = loadPrompt(o.prompt ?? join(HERE, "prompts", "arena-v1.1.md"));
       const sleep = deps.sleep ?? ((ms: number) => new Promise<void>((r) => setTimeout(r, ms)));
       for (let i = 0; i < ticks; i++) {
         if (i > 0) await sleep(intervalS * 1000);

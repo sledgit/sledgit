@@ -14,6 +14,7 @@ const out = {
   rules: Object.fromEntries(STRATEGIES.map(s => [s.id, { version: s.version, rule: s.rule, sha256: strategyPrompt(s).sha256 }])),
   prompts: {
     "arena-v1": { sha256: fileHash("agent/prompts/arena-v1.md") },
+    "arena-v1.1": { sha256: fileHash("agent/prompts/arena-v1.1.md") },
     "iron-trader-v1": { sha256: fileHash("demo-trader/prompts/iron-trader-v1.md") },
   },
 };

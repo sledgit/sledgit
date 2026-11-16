@@ -30,6 +30,9 @@
   "arena-v1": {
    "sha256": "9f8f34426042cc19017d2149b47258d5f5d14e63e07aac122a9b26dfb2ddcd7b"
   },
+  "arena-v1.1": {
+   "sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852"
+  },
   "iron-trader-v1": {
    "sha256": "f9d7c6aa37ec82f8ae56fc1a44d6d0d3baa0e22cd712961bac9392150d199e8a"
   }

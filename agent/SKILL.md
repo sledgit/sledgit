@@ -241,4 +241,4 @@ moved or the band is tight. Record it and decide again next tick with fresh data
 
 `agent/` in the Sledgit repo implements this skill (TypeScript, near-api-js): `status`, `preview`, `swap`,
 `intent`, `skip`, `settle`, `cancel`, `freeze`, `verify`, and `arena` (an LLM decides each tick under
-`prompts/arena-v1.md`). See its README.
+`prompts/arena-v1.1.md`; earlier receipts may name `arena-v1.md`). See its README.

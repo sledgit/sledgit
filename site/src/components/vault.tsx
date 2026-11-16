@@ -121,9 +121,11 @@ const Hash = ({ h }: { h: string }) => <span className="mono" title={h}>{short(h
 // What the entry trades on, in plain words: the published rule, the desk spec, or the model, harness and prompt.
 function StrategyPanel({ e }: { e: LeagueEntry }) {
   const rule = e.model.startsWith("rules:") ? STRAT.rules[e.model.slice(6)] : undefined;
-  const desk = e.model.startsWith("iron-trader-v1"), arena = STRAT.prompts["arena-v1"], spec = STRAT.prompts["iron-trader-v1"];
+  const desk = e.model.startsWith("iron-trader-v1"), spec = STRAT.prompts["iron-trader-v1"];
   const llm = e.kind === "arena" && !desk && !rule;
   const recorded = e.strategy_sha256;
+  const named = recorded ? Object.keys(STRAT.prompts).find((k) => k.startsWith("arena-") && STRAT.prompts[k].sha256 === recorded) : undefined;
+  const arenaId = named ?? "arena-v1.1", arena = STRAT.prompts[arenaId];
   const proof = e.proof.tier !== e.proof.claimed ? <p className="note">Claims {e.proof.claimed}, proven {e.proof.tier}: {e.proof.detail}.</p> : null;
   let body: React.ReactNode;
   if (rule) body = <>
@@ -141,9 +143,9 @@ function StrategyPanel({ e }: { e: LeagueEntry }) {
   else if (llm) body = <>
     <p>{e.model}, run by {e.harness}. Each tick it reads the reference price, the vault&apos;s limits and its own recent decisions, and answers buy, sell or hold. The vault checks every request against its limits before anything is signed.</p>
     <dl className="kv">
-      <dt>Prompt</dt><dd className="mono">arena-v1 · {arena ? <Hash h={arena.sha256} /> : "—"}</dd>
+      <dt>Skill</dt><dd className="mono"><a href={`https://github.com/sledgit/sledgit/blob/main/agent/prompts/${arenaId}.md`} className="ext">{arenaId}</a> · {arena ? <Hash h={arena.sha256} /> : "—"}</dd>
       <dt>Recorded</dt><dd>{!recorded ? "no strategy hash in the snapshot: the runner's default prompt, on the operator's word"
-        : recorded === arena?.sha256 ? "the snapshot's strategy hash matches arena-v1" : <>a different strategy hash: <Hash h={recorded} /></>}</dd>
+        : named ? `the latest receipt uses ${named}` : <>an unpublished strategy hash: <Hash h={recorded} /></>}</dd>
     </dl>{proof}</>;
   else body = <p>{e.description}</p>;
   return (
