@@ -1,6 +1,8 @@
 // NEAR Intents solver relay (JSON-RPC): quote, publish a signed intent, poll its status. Needs a Partner Portal JWT.
 import { readFileSync, statSync } from "node:fs";
 import { homedir } from "node:os";
+import { registerSecret } from "./config.js";
+import { readCapped } from "./attest/verify.js";
 
 export const RELAY = "https://solver-relay-v2.chaindefuser.com/rpc";
 const TIMEOUT_MS = 20_000;
@@ -13,17 +15,18 @@ export function relayKey(path = process.env.SLEDGIT_INTENTS_JWT_FILE ?? `${homed
   if (statSync(path).mode & 0o077) throw new Error(`${path} must be readable by you only (chmod 600)`);
   const key = readFileSync(path, "utf8").trim();
   if (!key) throw new Error(`${path} is empty`);
+  registerSecret(key);
   return key;
 }
 
 async function rpc<T>(key: string, method: string, params: unknown, f: typeof fetch = fetch): Promise<T> {
   const res = await f(RELAY, {
-    method: "POST", signal: AbortSignal.timeout(TIMEOUT_MS),
+    method: "POST", signal: AbortSignal.timeout(TIMEOUT_MS), redirect: "error",
     headers: { "content-type": "application/json", "X-API-Key": key },
     body: JSON.stringify({ id: Date.now(), jsonrpc: "2.0", method, params: [params] }),
   });
   if (!res.ok) throw new Error(`relay ${method}: HTTP ${res.status}`);
-  const body = await res.json() as { result?: T; error?: { message?: string } };
+  const body = JSON.parse(await readCapped(res, 1_000_000, "relay")) as { result?: T; error?: { message?: string } };
   if (body.error) throw new Error(`relay ${method}: ${body.error.message ?? JSON.stringify(body.error)}`);
   return body.result as T;
 }

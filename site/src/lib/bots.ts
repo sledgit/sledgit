@@ -65,8 +65,8 @@ export const BOTS: Bot[] = [
     account: "llama-local.sledgit.near", strategyHash: h("llama") },
 ];
 
-// Every entry with a page: the sample line-up plus the configured on-chain vaults.
-export const ALL_BOTS: Bot[] = [...BOTS, ...Object.values(NETWORKS).flatMap(n => [...vaultBots(n), ...benchBots(n)])];
+// Every entry with a page: the configured on-chain vaults only.
+export const ALL_BOTS: Bot[] = [...Object.values(NETWORKS).flatMap(n => [...vaultBots(n), ...benchBots(n)])];
 export const botById = (id: string) => ALL_BOTS.find(b => b.id === id);
 // The bars to beat. Testnet: the computed Hold and Stake rows; each snapshot: the luck house vault it names.
 const LUCK = [TESTNET_LEAGUE.luck_entry, MAINNET_LEAGUE?.luck_entry].filter((x): x is string => !!x);

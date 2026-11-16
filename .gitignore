@@ -60,3 +60,7 @@ deploy/testnet/*.local.json
 
 # Design iterations and render scripts: kept locally, not published.
 brand-gen/
+
+*.jwt
+RECOVERY-*
+mainnet-agent-*.json

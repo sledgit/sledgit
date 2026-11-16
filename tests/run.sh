@@ -81,7 +81,7 @@ site_no_private_paths() {
   # Key shapes: OpenAI/Anthropic (sk-, sk-ant-…), GitHub (ghp_, github_pat_), Slack (xox?-), AWS (AKIA…), NEAR ed25519.
   ! grep -rlIE '/Users/|/home/[a-z]+/|sk-[A-Za-z0-9_-]{20,}|gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{20,}|xox[baprs]-[A-Za-z0-9-]{10,}|AKIA[0-9A-Z]{16}|ed25519:[1-9A-HJ-NP-Za-km-z]{80,}' site/out || return 1
   # The build output is git-ignored, so the repo scan never sees it: scan it here too when gitleaks is installed.
-  if need gitleaks; then gitleaks dir site/out --no-banner --redact; fi
+  if need gitleaks; then gitleaks dir site/out --no-banner --redact -c .gitleaks.toml; fi
 }
 gate_unit()         { node --test deploy/vercel/middleware.test.mjs; }
 posting_unit()      { cd posting && { [ -d node_modules ] || npm ci --silent; } && npm test; }

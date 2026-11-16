@@ -226,6 +226,7 @@ export const PROVES = {
     "That the request went through NEAR AI Cloud's attested gateway or TLS session: a model signature is not bound to the gateway's report (NEAR's docs say so). The gateway checks show only that NEAR's gateway software is what it claims.",
     "That the GPU NVIDIA attested is in the same VM: the GPU evidence shares the nonce, not the TD. NVIDIA's verdict is read from its HTTPS answer; the token's signature isn't checked here.",
     "That the agent didn't ask several times and keep the reply it liked (rerolls).",
+    "That the inputs the model was shown (price, balances, history) were accurate: the operator supplies them, and only the rules tier checks them against chain and feed.",
     "That the evidence still verifies under Intel's collateral of the day it was produced: quotes are checked against today's collateral.",
   ],
 };

@@ -31,7 +31,7 @@ const TRUST: [string, "chain" | "shared" | "trusted", string, string][] = [
 ];
 
 const LIMITS: [Proof, string][] = [
-  ["tee", "Proves the reply was signed with NEAR AI Cloud's key for this model, inside an enclave whose boot software we pinned and checked, tied to this vault and this moment. Not which weights ran. It can't show whether the agent asked several times and kept one answer; a planned receipt field will count model calls per decision. Instances of one model share a signing key, so the configuration is checked separately."],
+  ["tee", "Proves the reply was signed with NEAR AI Cloud's key for this model, inside an enclave whose boot software we pinned and checked, tied to this vault and this moment. Not which weights ran. It can't show that the inputs the model saw were accurate (the operator supplies them), or whether the agent asked several times and kept one answer; a planned receipt field will count model calls per decision. Instances of one model share a signing key, so the configuration is checked separately."],
   ["tpm", "Planned, not built yet. It would prove the software the device measured at boot. Root on that device could still change things at runtime, which is why it ranks below the enclave badge."],
   ["rules", "Proves the strategy is the published code. It says nothing about whether the strategy is good."],
   ["self", "Nothing beyond the on-chain record. The limits and the record are as strong as for every other entry; only the model's identity is the operator's word."],
