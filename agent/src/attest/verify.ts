@@ -196,7 +196,7 @@ export async function checkReport(name: string, r: NearReport, nonce: string, de
           verdict = nonceOk ? await deps.nras(payload) : false;
         } catch (e) {
           verdict = false;
-          why = `NVIDIA NRAS: ${(e as Error).message.slice(0, 120)}`;
+          why = `NVIDIA NRAS: ${(e as Error).message} ${String((e as { cause?: unknown }).cause ?? "")}`.slice(0, 160);
         }
         add("gpu verdict (NVIDIA NRAS)", verdict ?? null, why ?? (verdict === undefined ? "not checked here (offline)" : undefined));
       }
@@ -359,11 +359,21 @@ export async function verifyBundle(b: TeeBundle, deps: VerifyDeps = {}): Promise
 
 /** Default online GPU check: POST the payload to NVIDIA NRAS and read x-nvidia-overall-att-result from the JWT. */
 export async function nrasOnline(payload: unknown): Promise<boolean> {
-  const res = await fetch("https://nras.attestation.nvidia.com/v3/attest/gpu", {
-    method: "POST", headers: { accept: "application/json", "content-type": "application/json" },
-    body: JSON.stringify(payload), signal: AbortSignal.timeout(NETWORK_TIMEOUT_MS),
-  });
-  if (!res.ok) return false;
+  // Retries transport errors and 429/5xx only.
+  let res: Response | undefined;
+  for (let i = 0; i < 4; i++) {
+    if (i) await new Promise((r) => setTimeout(r, 1000 * 2 ** i));
+    try {
+      res = await fetch("https://nras.attestation.nvidia.com/v3/attest/gpu", {
+        method: "POST", headers: { accept: "application/json", "content-type": "application/json" },
+        body: JSON.stringify(payload), signal: AbortSignal.timeout(NETWORK_TIMEOUT_MS),
+      });
+      if (res.status !== 429 && res.status < 500) break;
+    } catch (e) {
+      if (i === 3) throw e;
+    }
+  }
+  if (!res?.ok) return false;
   const arr = JSON.parse(await readCapped(res, MAX_NRAS_BYTES, "NVIDIA NRAS")) as unknown[];
   const first = arr?.[0] as [string, string] | undefined;
   if (!Array.isArray(first) || first[0] !== "JWT") return false;

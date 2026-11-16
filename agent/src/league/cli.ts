@@ -53,8 +53,12 @@ export function deps(): CollectDeps {
     teeSeason: async (text, attestDir, fromSeq, toSeq, cutoffMs) => {
       let res: { tee_pill?: boolean; vault?: string; problems?: string[]; decisions?: { seq: number; attested: boolean }[] } = {};
       const chain = (net: NetworkId) => chainAsOf(chainFor(net), toSeq, cutoffMs);
-      const code = await runVerifyAttestation("season.jsonl", text, attestDir, (v) => { res = v as typeof res; },
-        { deps: { nras: nrasOnline }, fromSeq, chain });
+      // Retries transient network failures.
+      let code = 1;
+      for (let i = 0; i < 3 && !(code === 0 && res.tee_pill); i++) {
+        code = await runVerifyAttestation("season.jsonl", text, attestDir, (v) => { res = v as typeof res; },
+          { deps: { nras: nrasOnline }, fromSeq, chain });
+      }
       const n = res.decisions?.length ?? 0, ok = res.decisions?.filter((x) => x.attested).length ?? 0;
       return code === 0 && res.tee_pill
         ? { pill: true, vault: res.vault, detail: `season check: ${ok} of ${n} decision(s) attested under the pinned NEAR AI policy` }

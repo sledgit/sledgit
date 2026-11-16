@@ -32,11 +32,19 @@ const BATCH = 20;
 const TIMEOUT_MS = 30_000;
 const MAX_BYTES = 16 * 1024 * 1024;
 
+// Read-only; retries transient failures.
 async function post<T>(url: string, body: unknown, f: typeof fetch): Promise<T> {
-  const res = await f(url, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body),
-    signal: AbortSignal.timeout(TIMEOUT_MS), redirect: "error" });
-  if (!res.ok) throw new Error(`${new URL(url).host}: HTTP ${res.status}`);
-  return JSON.parse(await readCapped(res, MAX_BYTES, new URL(url).host)) as T;
+  for (let i = 0; ; i++) {
+    try {
+      const res = await f(url, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body),
+        signal: AbortSignal.timeout(TIMEOUT_MS), redirect: "error" });
+      if (!res.ok) throw new Error(`${new URL(url).host}: HTTP ${res.status}`);
+      return JSON.parse(await readCapped(res, MAX_BYTES, new URL(url).host)) as T;
+    } catch (e) {
+      if (i >= 2 || !/HTTP (429|5\d\d)|fetch failed|timeout|aborted/i.test((e as Error).message)) throw e;
+      await new Promise((r) => setTimeout(r, 1000 * (i + 1)));
+    }
+  }
 }
 
 async function rpc<T>(net: NetworkId, method: string, params: unknown, f: typeof fetch): Promise<T> {
@@ -103,7 +111,9 @@ export async function vaultDecisions(net: NetworkId, vault: string, f: typeof fe
 }
 
 export async function blockAt(net: NetworkId, height: number, f: typeof fetch = fetch): Promise<ChainBlock> {
-  const r = await rpc<{ header?: { hash?: string; timestamp?: number | string } }>(net, "block", { block_id: height }, f);
+  type B = { header?: { hash?: string; timestamp?: number | string } };
+  // Pruned blocks fall back to the archival node.
+  const r = await rpc<B>(net, "block", { block_id: height }, f).catch(() => archival<B>(net, "block", { block_id: height }, f));
   if (typeof r.header?.hash !== "string") throw new Error(`no block #${height}`);
   return { hash: r.header.hash, time_secs: Math.floor(Number(r.header.timestamp) / 1e9) };
 }
