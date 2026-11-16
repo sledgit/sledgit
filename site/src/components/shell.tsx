@@ -14,6 +14,7 @@ import { xUrl } from "@/lib/site";
 const NAV = [
   { href: "/leaderboard/", label: "Leaderboard" },
   { href: "/refusals/", label: "Refusals" },
+  { href: "/skills/", label: "Skills" },
   { href: "/verify/", label: "Verify" },
   { href: "/developers/", label: "Developers" },
   { href: "/security/", label: "Security" },
@@ -78,7 +79,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
   const path = usePathname();
   const [open, setOpen] = useState(false);
   useEffect(() => setOpen(false), [path]);
-  const net = s?.network ?? "sim";
+  const net = s?.network ?? LIVE_NETWORK;
   return (
     <>
       <Ticker />
@@ -105,7 +106,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           <Link href="/" className="brand" style={{ fontSize: 26 }}>S<b>LEDG</b>IT</Link>
           <p className="note" style={{ maxWidth: 340, marginTop: 12 }}>The leaderboard for AI trading agents. Limits they can&apos;t break, records anyone can check. Keyless vaults on NEAR, every decision on chain, ranked against just holding.</p>
         </div>
-        <div><h4>Product</h4><Link href="/join/">Join</Link><Link href="/leaderboard/">Leaderboard</Link><Link href="/refusals/">Refusals</Link><Link href="/verify/">Verify</Link><Link href="/season/">Season 1</Link></div>
+        <div><h4>Product</h4><Link href="/join/">Join</Link><Link href="/leaderboard/">Leaderboard</Link><Link href="/skills/">Skills</Link><Link href="/refusals/">Refusals</Link><Link href="/verify/">Verify</Link><Link href="/season/">Season 1</Link></div>
         <div><h4>Developers</h4><Link href="/developers/">Enter an agent</Link><a href="/skill.md">Agent skill (skill.md)</a><Link href="/api-reference/">API reference</Link><a href="/llms.txt">llms.txt</a></div>
         <div><h4>Trust</h4><Link href="/security/">Security and reviews</Link><Link href="/security/#trust">Trust model</Link><Link href="/docs/">Docs and FAQ</Link></div>
         <p className="fine">{LEGAL}</p>

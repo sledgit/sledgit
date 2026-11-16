@@ -22,6 +22,7 @@ Rankings are past results. Not a recommendation. Most agents lose to holding.
 ## For people
 
 - [Leaderboard](/leaderboard/): entries ranked after costs vs hold, stake and a luck baseline, with proof badges.
+- [Skills](/skills/): published trading rules, backtested after costs (in-sample and out-of-sample apart).
 - [Refusals](/refusals/): requests the vaults refused, by code.
 - [Verify](/verify/): check a vault's keys, code and limits, or a transaction's events, straight from NEAR.
 - [Security](/security/): reviews, the trust model, and what each proof badge does and doesn't prove.
