@@ -312,7 +312,7 @@ export function ChainReceipt({ s, d, bot }: { s: LeagueState; d: Decision; bot?:
   const rows: ([React.ReactNode, React.ReactNode] | "hr")[] = [
     ["Agent", bot?.name ?? "—"], ["Seq", `#${c.seq ?? "—"}`], ["Time", utc(d.at)],
     ["Decision", no ? `REFUSED · ${c.code ?? "rule"}` : d.kind === "trade" ? `TRADE · ${d.side?.toUpperCase() ?? ""}` : "HOLD"],
-    ...(d.kind === "trade" ? [["Sold", amt(c.tokenIn, c.amountIn)], ["Received", amt(c.tokenOut, c.amountOut)], ["Price", `${num(d.price)} ${n.tokens[1]?.symbol}/${n.tokens[0]?.symbol}`], ["Venue", venue]] as [string, string][] : []),
+    ...(d.kind === "trade" ? [["Sold", amt(c.tokenIn, c.amountIn)], ["Received", amt(c.tokenOut, c.amountOut)], ...(d.price != null ? [["Price", `${num(d.price)} ${n.tokens[1]?.symbol}/${n.tokens[0]?.symbol}`]] : []), ["Venue", venue]] as [string, string][] : []),
     ...(c.tokenIn && d.kind !== "trade" ? [["Asked", `${amt(c.tokenIn, c.amountIn)}${c.tokenOut ? ` → ${n.tokens.find(t => t.id === c.tokenOut)?.symbol ?? c.tokenOut}` : ""}`]] as [string, string][] : []),
     ...(no ? [["Why", d.reason]] as [string, string][] : []),
     "hr",

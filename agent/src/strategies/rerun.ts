@@ -2,7 +2,7 @@
 // again from the recorded inputs. `houseCheck` also checks those inputs against the world: the receipt is the vault's
 // own on-chain decision recording exactly the receipt's decision, the receipt's decision is exactly the rule's output,
 // the vault is genuine, the candles are the published feed's, the balances, policy, usage and config the rule read are
-// the chain's at the decision's transaction block, and (version 2) the chain state and slot block are what the chain
+// the chain's at the decision's transaction block, and (version 2 on) the chain state and slot block are what the chain
 // says. Version 1 receipts read local history; the check compares it with chain.
 import type { NetworkId } from "../config.js";
 import { canonical, sha256Hex, type Json, type Receipt } from "../receipt.js";
@@ -34,9 +34,10 @@ interface RulesReceipt {
 }
 
 /** The output a rule produced and the decision the receipt claims must agree; otherwise the rule didn't decide it. */
-export function decisionConsistent(r: Pick<RulesReceipt, "model_output" | "network" | "decision">): boolean {
+export function decisionConsistent(r: Pick<RulesReceipt, "model_output" | "network" | "decision" | "model">): boolean {
   if (typeof r.model_output !== "string") return false;
-  return canonical(expectedDecision({ model_output: r.model_output, network: r.network as Receipt["network"] })) === canonical(r.decision ?? null);
+  return canonical(expectedDecision({ model_output: r.model_output, network: r.network as Receipt["network"], model: { provider: r.model?.provider } }))
+    === canonical(r.decision ?? null);
 }
 
 /** Offline re-run of every rules receipt. Lines that aren't rules receipts are counted, not silently dropped. */
@@ -140,27 +141,29 @@ async function pricePlausible(rp: { price?: string; fetched_at?: string } | null
 }
 
 /** What a rule read from chain, as the arena records it in inputs.raw. */
-export interface VaultState { config: Json; policy: Json; usage: Json; balances: Record<string, string> }
+export interface VaultState { config: Json; policy: Json; usage: Json; balances: Record<string, string>; stake_rate?: string }
 
 export interface CheckDeps {
   fetch?: typeof fetch;
   decisions?: (net: NetworkId, vault: string) => Promise<ChainDecision[]>;
   /** The vault's state at the end of a block (default: archival RPC). */
-  stateAt?: (net: NetworkId, vault: string, tokens: string[], height: number) => Promise<VaultState>;
+  stateAt?: (net: NetworkId, vault: string, tokens: string[], height: number, stake?: { token: string; rate_method: string }) => Promise<VaultState>;
   /** The block a transaction was included in, when the indexer didn't say (default: archival RPC). */
   txBlock?: (net: NetworkId, tx: string, sender: string) => Promise<number>;
   /** Report non-rules lines as skipped instead of failing (CLI --skip-non-rules). */
   skipNonRules?: boolean;
 }
 
-export async function archivalState(net: NetworkId, vault: string, tokens: string[], height: number, f: typeof fetch = fetch): Promise<VaultState> {
+export async function archivalState(net: NetworkId, vault: string, tokens: string[], height: number, f: typeof fetch = fetch,
+  stake?: { token: string; rate_method: string }): Promise<VaultState> {
   // One read at a time: the public archival RPC rate-limits bursts.
   const config = await viewAt<Json>(net, vault, "get_config", {}, height, f);
   const policy = await viewAt<Json>(net, vault, "get_policy", {}, height, f);
   const usage = await viewAt<Json>(net, vault, "get_usage", {}, height, f);
   const balances: Record<string, string> = {};
   for (const t of tokens) balances[t] = String(await viewAt<string>(net, t, "ft_balance_of", { account_id: vault }, height, f));
-  return { config, policy, usage, balances };
+  if (!stake) return { config, policy, usage, balances };
+  return { config, policy, usage, balances, stake_rate: String(await viewAt<string>(net, stake.token, stake.rate_method, {}, height, f)) };
 }
 
 /** Compare what the receipt says the rule read with the chain; returns problems. */
@@ -176,6 +179,8 @@ function stateProblems(raw: Partial<VaultState> | undefined, chain: VaultState):
   for (const [t, v] of Object.entries(chain.balances)) {
     if (raw?.balances?.[t] !== v) out.push(`recorded ${t} balance ${String(raw?.balances?.[t])} differs from the chain's ${v} at the decision's transaction block`);
   }
+  if (chain.stake_rate !== undefined && raw?.stake_rate !== chain.stake_rate)
+    out.push(`recorded staking rate ${String(raw?.stake_rate)} differs from the chain's ${chain.stake_rate} at the decision's transaction block`);
   return out;
 }
 
@@ -186,7 +191,7 @@ export async function houseCheck(text: string, net: NetworkId, deps: CheckDeps =
   const provenance = cachedProvenance(net, rpcReader(net, f));
   const history = new Map<string, Promise<ChainDecision[]>>();
   const decisionsOf = (v: string) => { let p = history.get(v); if (!p) { p = load(net, v); history.set(v, p); } return p; };
-  const stateAt = deps.stateAt ?? ((n: NetworkId, v: string, t: string[], h: number) => archivalState(n, v, t, h, f));
+  const stateAt = deps.stateAt ?? ((n: NetworkId, v: string, t: string[], h: number, st?: { token: string; rate_method: string }) => archivalState(n, v, t, h, f, st));
   const txBlock = deps.txBlock ?? ((n: NetworkId, tx: string, sender: string) => txBlockHeight(n, tx, sender, f));
   const offline = houseRerun(text).rows;
   const lines = text.split("\n").filter(Boolean);
@@ -206,6 +211,7 @@ export async function houseCheck(text: string, net: NetworkId, deps: CheckDeps =
     if (!row.hash_match || !row.same || !row.decision_consistent) { if (!row.same && !row.error) c.problems.push("re-run gives a different decision"); continue; }
     try {
       const r = JSON.parse(line) as RulesReceipt;
+      const published = publishedByHash(r.prompt_sha256);
       if (r.network !== net) c.problems.push(`receipt is for ${r.network}, not ${net}`);
       const prov = await provenance(r.vault);
       c.sledgit_vault = prov.sledgit_vault;
@@ -229,7 +235,16 @@ export async function houseCheck(text: string, net: NetworkId, deps: CheckDeps =
         if (!pair) throw new Error(`unknown network ${r.network}`);
         const h = mine.tx_block_height ?? await txBlock(net, mine.tx, String(r.agent ?? ""));
         c.state_block = h;
-        const sp = stateProblems(r.inputs.raw as unknown as Partial<VaultState> | undefined, await stateAt(net, r.vault, [pair.base, pair.quote], h));
+        // A staked strategy reads the pinned staking token and its rate; the receipt can't name another.
+        const st = published?.staked ? pair.stake : undefined;
+        if (published?.staked && !st) throw new Error(`${r.network} has no staking token`);
+        const rv = r.inputs.vault as { stake?: string; stake_rate?: string } | undefined;
+        if (st && rv?.stake !== st.token) c.problems.push(`receipt's staking token ${String(rv?.stake)} is not ${st.token}`);
+        const rr = (r.inputs.raw as { stake_rate?: string } | undefined)?.stake_rate;
+        if (st && (!rr || !/^[0-9]{1,40}$/.test(rr) || fromUnits(BigInt(rr), pair.decimals[pair.base]) !== rv?.stake_rate))
+          c.problems.push("recorded staking rate differs from the raw rate in the same receipt");
+        const sp = stateProblems(r.inputs.raw as unknown as Partial<VaultState> | undefined,
+          await stateAt(net, r.vault, [pair.base, pair.quote, ...(st ? [st.token] : [])], h, st));
         c.chain_state_matches = sp.length === 0;
         c.problems.push(...sp);
       } catch (e) {
@@ -250,11 +265,11 @@ export async function houseCheck(text: string, net: NetworkId, deps: CheckDeps =
       const pp = await pricePlausible(r.inputs.reference_price as { price?: string; fetched_at?: string } | null, f);
       c.reference_price_plausible = pp === null;
       if (pp) c.problems.push(pp);
-      if (row.version === 2) {
+      if (published?.reads_chain) {
         const ch = r.inputs.chain as unknown as ChainState | undefined;
-        if (!ch) { c.chain_inputs_match = false; c.problems.push("version 2 receipt has no chain state"); continue; }
+        if (!ch) { c.chain_inputs_match = false; c.problems.push("receipt has no chain state"); continue; }
         const base = String((r.inputs.vault as { base?: string }).base);
-        const want = { seq: mine.seq, ...summarise(before, base) };
+        const want = { seq: mine.seq, ...summarise(before, base, published.staked ? pinnedPair(r.network)?.stake?.token : undefined) };
         const got = { seq: ch.seq, decisions_before: ch.decisions_before, requests: ch.requests, last_request: ch.last_request };
         c.chain_inputs_match = JSON.stringify(got) === JSON.stringify(want);
         if (!c.chain_inputs_match) c.problems.push(`recorded chain state ${JSON.stringify(got)} differs from the chain's ${JSON.stringify(want)}`);

@@ -8,7 +8,7 @@ import { sealBundle, bundleRequest, bundleResponse, completionText, boundUserMes
 import { verifyBundle, CLOCK_SKEW_SECS, type VerifyDeps, type Check } from "./verify.js";
 import { nearAiPolicy } from "./policy.js";
 import type { ChainDecision } from "./chain.js";
-import { pinnedPair } from "../pairs.js";
+import { legs, pinnedPair, type Leg } from "../pairs.js";
 
 export interface DecisionAttestation { receipt_hash: string; attested: boolean; checks: Check[] }
 
@@ -24,16 +24,18 @@ type Inputs = { vault?: { base?: string; quote?: string } } & Record<string, unk
  * The decision the arena records for `model_output` (arena.ts tick): parsed, or a fixed invalid_output code. The token
  * and its decimals come from the network's pinned pair, so editing the receipt's inputs can't change the answer.
  */
-export function expectedDecision(r: Pick<Receipt, "model_output" | "network">): Record<string, string> {
-  const p = parseDecision(r.model_output);
+export function expectedDecision(r: Pick<Receipt, "model_output" | "network"> & { model?: { provider?: string } }): Record<string, string> {
+  const p = parseDecision(r.model_output, { stake: r.model?.provider === "rules" });
   const hold = (code: string) => ({ action: "hold", amount_in: "0", reason: code, error: code });
   if (!p.ok) return hold(`invalid_output:${p.code}`);
   const d = p.decision;
   if (d.action !== "hold") {
     const pair = pinnedPair(r.network);
     if (!pair) return hold("unknown_network");
+    const leg = legs(pair, d.action);
+    if (!leg) return hold("invalid_output:bad_action");
     try {
-      toUnits(d.amount_in, pair.decimals[d.action === "buy" ? pair.quote : pair.base]);
+      toUnits(d.amount_in, pair.decimals[leg[0]]);
     } catch {
       return hold("invalid_output:amount_precision");
     }
@@ -86,15 +88,18 @@ export async function eventMatches(r: Receipt, ev: ChainDecision, decimals?: (to
   const d = r.decision as { action?: string; amount_in?: string } | null;
   const pair = pinnedPair(r.network);
   if (d?.action === "hold") return { name, ok: ev.event === "skip", detail: `${ev.event} #${ev.seq}` };
-  if (d?.action !== "buy" && d?.action !== "sell") return { name, ok: false, detail: "no valid action" };
+  const leg = pair && ["buy", "sell", "stake", "unstake"].includes(String(d?.action)) ? legs(pair, d!.action as Leg) : undefined;
+  if (!leg) return { name, ok: false, detail: "no valid action" };
   if (ev.event === "skip") {
-    return { name, ok: !!ev.note?.startsWith("refused:") && ev.note.endsWith(` ${d.action} ${d.amount_in}`), detail: `skip #${ev.seq}` };
+    return { name, ok: !!ev.note?.startsWith("refused:") && ev.note.endsWith(` ${d!.action} ${d!.amount_in}`), detail: `skip #${ev.seq}` };
   }
-  const token = !pair ? undefined : d.action === "buy" ? pair.quote : pair.base;
-  if (!token || ev.token_in !== token) return { name, ok: false, detail: `token_in ${String(ev.token_in).slice(0, 80)} vs ${String(token)}` };
+  const token = leg[0];
+  // Stake and sell both spend base: the token out tells them apart.
+  if (ev.token_in !== token || (ev.token_out !== undefined && ev.token_out !== leg[1]))
+    return { name, ok: false, detail: `token_in ${String(ev.token_in).slice(0, 80)} vs ${token}` };
   if (!decimals) return { name, ok: null, detail: "amount not checked here (no chain access)" };
   try {
-    const units = toUnits(String(d.amount_in), await decimals(token));
+    const units = toUnits(String(d!.amount_in), await decimals(token));
     return { name, ok: ev.amount_in === units.toString(), detail: `${ev.event} #${ev.seq}` };
   } catch (e) {
     return { name, ok: false, detail: (e as Error).message.slice(0, 120) };

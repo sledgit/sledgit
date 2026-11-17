@@ -280,17 +280,19 @@ function worldFetch(daily: Candle[], slotSecs: number) {
   }) as typeof fetch;
 }
 
-async function sealedV2(off = false) {
+async function sealedV2(off = false, v: "v2" | "v3" = "v2") {
   const slot = Date.UTC(2026, 9, 29, 0, 5);
   const f = worldFetch(candles(rise(60)), Math.floor(slot / 1000));
   const sb = await slotBlock("testnet", slot, f);
   const { vault } = fakeVault(3);
   const dir = mkdtempSync(join(tmpdir(), "it-check-"));
-  const s = strategyById("luck");
+  const s = v === "v3" ? v3.strategyById("luck") : strategyById("luck");
   const { rulesModel } = await import("../src/strategies/rules.js");
   const ch = chain({ seq: 4, decisions_before: 3, requests: { buy: 0, sell: 1 }, last_request: { seq: 2, side: "sell" },
     slot: new Date(slot).toISOString(), off_schedule: off, slot_block: sb });
-  await tick({ vault, model: rulesModel(s, VAULT), prompt: strategyPrompt(s),
+  await tick({ vault, model: v === "v3" ? rulesModel(s as v3.Strategy, VAULT) : { ref: { provider: "rules", id: "luck" },
+    complete: async (_p: string, u: string) => JSON.stringify(decide(s, JSON.parse(u) as RuleInput, VAULT)) },
+  prompt: v === "v3" ? v3.strategyPrompt(s as v3.Strategy) : strategyPrompt(s),
     price: async () => ({ source: "t", symbol: "NEARUSDT", price: "2.5", fetched_at: "2026-10-29T00:30:00.000Z" }),
     market: async () => ({ source: "t", interval: "1d", candles: candles(rise(60)), as_of: "x" }),
     chain: ch as never, historySize: 0, receiptsPath: join(dir, "receipts.jsonl"), outcomesPath: join(dir, "outcomes.jsonl"), dryRun: true });
@@ -350,6 +352,16 @@ test("P3-3: house-rerun --check passes a genuine v2 receipt and catches forged c
   const none = (await houseCheck(line, "testnet", { ...world(line), fetch: f, decisions: async () => [] }))[0];
   assert.equal(none.on_chain, false);
   assert.equal(none.pass, false);
+});
+
+test("version 3 receipts are checked against chain state, not version 1 local history", async () => {
+  const { line, f, decisions } = await sealedV2(false, "v3");
+  const r = (await houseCheck(line, "testnet", { ...world(line), fetch: f, decisions: decisions(sha256Hex(line)) }))[0];
+  assert.equal(r.version, 3);
+  assert.equal(r.chain_inputs_match, true);
+  assert.equal(r.local_history_matches_chain, undefined);
+  assert.equal(r.slot_block_ok, true);
+  assert.ok(!r.problems.some((p) => /local history|chain state/.test(p)), r.problems.join("; "));
 });
 
 test("P3-2: a receipt that claims on-schedule but landed after the window fails the check", async () => {

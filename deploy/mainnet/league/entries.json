@@ -4,7 +4,8 @@
     "id": "mainnet-s1",
     "start_ms": 1794665842000,
     "canonical_pools": [
-      4512
+      4512,
+      3514
     ],
     "benchmark_cost_rate": {
       "value": 0.003,
@@ -17,7 +18,8 @@
   ],
   "tokens": [
     "wrap.near",
-    "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+    "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+    "meta-pool.near"
   ],
   "entries": [
     {

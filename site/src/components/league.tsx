@@ -273,8 +273,8 @@ export function ByModelTable({ L }: { L: LeagueSnapshot }) {
 // Compact board for testnet/mainnet views (kept for the vault pages).
 export const Board = ({ s }: { s: LeagueState }) => <LeaderTable s={s} />;
 
-const KIND = (d: Decision) => (d.kind === "trade" ? (d.side === "buy" ? "buy" : "sell") : d.kind);
-const LABEL: Record<string, string> = { buy: "Buy", sell: "Sell", refuse: "Refused", skip: "Hold" };
+const KIND = (d: Decision) => (d.kind === "trade" ? d.side ?? "sell" : d.kind);
+const LABEL: Record<string, string> = { buy: "Buy", sell: "Sell", stake: "Stake", unstake: "Unstake", refuse: "Refused", skip: "Hold" };
 
 // A decision read from NEAR: amounts in token units, never dollars.
 function ChainRow({ s, d, named }: { s: LeagueState; d: Decision; named: boolean }) {

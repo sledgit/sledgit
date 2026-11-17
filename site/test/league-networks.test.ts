@@ -21,7 +21,7 @@ test("leagueFor: testnet snapshot, mainnet snapshot or null, nothing for the sim
 
 test("mainnet config: real contracts, vaults only from its snapshot", () => {
   const m = NETWORKS.mainnet;
-  assert.deepEqual(m.tokens.map(t => [t.id, t.decimals]), [["wrap.near", 24], ["17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1", 6]]);
+  assert.deepEqual(m.tokens.map(t => [t.id, t.decimals]), [["wrap.near", 24], ["17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1", 6], ["meta-pool.near", 24]]);
   assert.equal(m.pool, 4512);
   assert.equal(m.rhea, "v2.ref-finance.near");
   assert.equal(m.intents, "intents.near");

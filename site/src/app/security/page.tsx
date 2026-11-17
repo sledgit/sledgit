@@ -25,6 +25,7 @@ const TRUST: [string, "chain" | "shared" | "trusted", string, string][] = [
   ["Chain Signatures", "shared", "NEAR's MPC network signs cross-chain intents for the vault after its own policy check.", "Holds while enough independent signing nodes are honest."],
   ["NEAR Intents relay", "trusted", "An off-chain relay, run by the NEAR Intents team, matches signed intents with solvers.", "Can refuse or delay a fill. Can't take more than the signed amounts; settlement is on chain."],
   ["Rhea", "shared", "On-chain exchange the vault swaps through, priced from an owner-set pool.", "Its operators can upgrade its contract. Every swap is verified against the vault's balance afterwards."],
+  ["Staking token (stNEAR)", "shared", "Staked vaults hold their NEAR side as Meta Pool's stNEAR, swapped through Rhea's rated pool. The league values it at the redemption rate read from Meta Pool's contract.", "A fault or upgrade in Meta Pool could lower or freeze stNEAR, and the vault's limits can't prevent that. Only vaults that hold stNEAR carry this risk."],
   ["Reference price", "trusted", "The agent reads a market price to decide.", "Shapes decisions only. The contract enforces its own floors from the on-chain quote."],
   ["This site and indexer", "trusted", "A viewer of on-chain events and receipts.", "Everything shown can be rebuilt from the chain. Nothing here can move funds."],
   ["NEAR AI Cloud", "shared", "Attested model calls for the Attested model badge.", "Trusts Intel TDX, NVIDIA and NEAR AI's measured enclave configurations."],

@@ -17,7 +17,8 @@ const refused = (d: LeagueDecision) => d.event === "refuse" || String(d.note ?? 
 /** Trades and refusals inside [t0, t1], oldest first; `stack` counts earlier marks on the same side of the same hour. */
 export function marksOf(decisions: LeagueDecision[], t0: number, t1: number): Mark[] {
   const out: Mark[] = [], seen = new Map<string, number>();
-  const list = decisions.filter(d => (d.event === "trade" || refused(d)) && d.block_time_ms >= t0 && d.block_time_ms <= t1)
+  // Stake and unstake swap wNEAR for its staking token: no change in NEAR exposure, so no price mark.
+  const list = decisions.filter(d => (d.event === "trade" || refused(d)) && d.side !== "stake" && d.side !== "unstake" && d.block_time_ms >= t0 && d.block_time_ms <= t1)
     .sort((a, b) => a.block_time_ms - b.block_time_ms || a.seq - b.seq);
   for (const d of list) {
     const kind: MarkKind = refused(d) ? "refuse" : d.side === "sell" ? "sell" : "buy";

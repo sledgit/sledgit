@@ -10,6 +10,8 @@ import { makeModel, type Model } from "./models.js";
 import { nearUsdt, type RefPrice } from "./price.js";
 import { tick, loadPrompt, attestationsDir } from "./arena.js";
 import { strategyById, strategyPrompt, rulesModel, STRATEGIES } from "./strategies/rules.js";
+import { stakedById, stakedModel, stakedPrompt, STAKED } from "./strategies/staked.js";
+import { PAIRS } from "./pairs.js";
 import { dailyCandles } from "./strategies/market.js";
 import { houseRerun as rerunRows, houseCheck, type RerunRow } from "./strategies/rerun.js";
 import { chainState, nextSlot, SCHEDULE } from "./strategies/schedule.js";
@@ -55,7 +57,7 @@ export const USAGE = `sledgit <command> [options]
                                  [--interval ${MIN_INTERVAL_S}..${MAX_INTERVAL_S} seconds] [--dry-run]; stops when the vault is frozen or the agent replaced
                                  [--attest tee]: call --model through NEAR AI Cloud (NEAR_AI_CLOUD_API_KEY) and keep TEE evidence
                                  [--harness <name/version>]: the agent software recorded in receipts (self-reported)
-  house --strategy <id>          a published rule-based house strategy (${STRATEGIES.map((x) => x.id).join(" | ")}); same ticks, receipts and
+  house --strategy <id>          a published rule-based house strategy (${[...STRATEGIES, ...STAKED].map((x) => x.id).join(" | ")}); same ticks, receipts and
                                  limits as arena, plus closed daily candles and the vault's on-chain history; prompt_sha256 =
                                  the strategy hash. Ticks once per daily slot (${SCHEDULE.slot_utc} UTC, ${SCHEDULE.window_minutes} min window);
                                  [--off-schedule] ticks anyway and the receipt says so
@@ -215,7 +217,8 @@ export async function main(argv: string[], deps: MainDeps = {}): Promise<number>
   const looped = cmd === "arena" || cmd === "house";
   const ticks = looped ? boundedInt(o.ticks!, "--ticks", 1, MAX_TICKS) : 1;
   const intervalS = looped ? boundedInt(o.interval!, "--interval", MIN_INTERVAL_S, MAX_INTERVAL_S) : 0;
-  const strategy = cmd === "house" ? strategyById(o.strategy ?? "") : undefined;
+  const stakedStrategy = cmd === "house" ? stakedById(o.strategy ?? "") : undefined;
+  const strategy = cmd === "house" && !stakedStrategy ? strategyById(o.strategy ?? "") : undefined;
   if (cmd === "house") {
     // A house strategy is its published rules; nothing else may shape its decisions or its receipts.
     const extra = (["attest", "prompt", "harness", "model"] as const).filter((k) => o[k] !== undefined);
@@ -368,15 +371,19 @@ export async function main(argv: string[], deps: MainDeps = {}): Promise<number>
       return 0;
     }
     case "house": {
-      const model = rulesModel(strategy!, vault.id);
-      const prompt = strategyPrompt(strategy!);
+      // Staked strategies need the network's staking token; testnet has none.
+      const stake = stakedStrategy ? PAIRS[net.id].stake : undefined;
+      if (stakedStrategy && !stake) throw new Error(`${stakedStrategy.id} needs a staking token; ${net.id} has none`);
+      const model = stakedStrategy ? stakedModel(stakedStrategy, vault.id) : rulesModel(strategy!, vault.id);
+      const prompt = stakedStrategy ? stakedPrompt(stakedStrategy) : strategyPrompt(strategy!);
+      const id = stakedStrategy?.id ?? strategy!.id;
       const sleep = deps.sleep ?? ((ms: number) => new Promise<void>((r) => setTimeout(r, ms)));
       const now = deps.now ?? Date.now;
       for (let i = 0; i < ticks; i++) {
         // House ticks follow the published schedule (one daily slot); --interval doesn't apply.
         if (i > 0) await sleep(Math.max(0, nextSlot(now()) + 60_000 - now()));
         const cfg = await vault.config();
-        const chain = await (deps.chainState ?? ((v: string, b: string, seq: number, t: number) => chainState(net.id, v, b, seq, t)))(
+        const chain = await (deps.chainState ?? ((v: string, b: string, seq: number, t: number) => chainState(net.id, v, b, seq, t, fetch, undefined, stake?.token)))(
           vault.id, net.base, Number(cfg.seq ?? 0), now());
         if (chain.off_schedule && !o["off-schedule"] && !o["dry-run"]) {
           warn(`house: off schedule (slot ${chain.slot}, ${SCHEDULE.window_minutes} min window, one tick per slot); `
@@ -384,8 +391,8 @@ export async function main(argv: string[], deps: MainDeps = {}): Promise<number>
           return 1;
         }
         const r = await tick({ vault, model, prompt, price: deps.price ?? nearUsdt, market: deps.market ?? (async () => (await dailyCandles()) as unknown as Json),
-          chain: chain as unknown as Json, historySize: 0, receiptsPath, outcomesPath, dryRun: o["dry-run"] });
-        out({ tick: i + 1, strategy: strategy!.id, strategy_sha256: prompt.sha256, slot: chain.slot, off_schedule: chain.off_schedule,
+          chain: chain as unknown as Json, historySize: 0, receiptsPath, outcomesPath, dryRun: o["dry-run"], ...(stake ? { stake } : {}) });
+        out({ tick: i + 1, strategy: id, strategy_sha256: prompt.sha256, slot: chain.slot, off_schedule: chain.off_schedule,
           ...r, ...(r.tx ? { explorer: net.explorer + r.tx } : {}) });
         if (r.stopped) { warn(`house: stopped at tick ${i + 1}: ${r.stopped}`); return 1; }
       }

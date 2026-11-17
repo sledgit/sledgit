@@ -36,12 +36,14 @@ export interface ChainState {
   slot_block: SlotBlock;
 }
 
-/** Decision history summary from the vault's own events. `base` is the token a sell spends. */
-export function summarise(decisions: ChainDecision[], base: string): Pick<ChainState, "decisions_before" | "requests" | "last_request"> {
+/** Decision history summary from the vault's own events. `base` is the token a sell spends. With a staking token,
+ * requests between base and it (stake, unstake) are not buys or sells and are left out. */
+export function summarise(decisions: ChainDecision[], base: string, stake?: string): Pick<ChainState, "decisions_before" | "requests" | "last_request"> {
   const requests = { buy: 0, sell: 0 };
   let last: ChainState["last_request"] = null;
   for (const d of decisions) {
     if (d.event !== "request") continue;
+    if (stake && (d.token_in === stake || (d.token_in === base && d.token_out === stake))) continue;
     const side = d.token_in === base ? "sell" : "buy";
     requests[side]++;
     last = { seq: d.seq, side };
@@ -128,7 +130,7 @@ export async function checkSlotBlock(net: NetworkId, slotMs: number, b: SlotBloc
 
 /** Everything a house rule needs from chain for the tick at `now`. Throws when the history can't be read in full. */
 export async function chainState(net: NetworkId, vault: string, base: string, configSeq: number, now: number,
-  f: Fetch = fetch, decisions?: ChainDecision[]): Promise<ChainState> {
+  f: Fetch = fetch, decisions?: ChainDecision[], stake?: string): Promise<ChainState> {
   const hist = decisions ?? await vaultDecisions(net, vault, f);
   if (hist.length !== configSeq) throw new Error(`${vault}: read ${hist.length} decisions but the vault's seq is ${configSeq}; history incomplete`);
   const slot = slotStart(now);
@@ -136,7 +138,7 @@ export async function chainState(net: NetworkId, vault: string, base: string, co
   const already = hist.some((d) => d.block_time_secs * 1000 >= slot);
   return {
     seq: configSeq + 1,
-    ...summarise(hist, base),
+    ...summarise(hist, base, stake),
     slot: new Date(slot).toISOString(),
     off_schedule: !inWindow || already,
     slot_block: await slotBlock(net, slot, f),

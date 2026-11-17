@@ -9,6 +9,7 @@ import type { Network } from "./config.js";
 import type { VaultEvent } from "./vault.js";
 import type { Provenance } from "./provenance.js";
 import { expectedDecision } from "./attest/pill.js";
+import { legs, pinnedPair, type Leg } from "./pairs.js";
 
 export interface EventSource {
   /** Events emitted by `vault` itself in transaction `tx` sent by `sender`. */
@@ -133,15 +134,18 @@ async function decisionMatches(r: Receipt, ev: VaultEvent, net: Network, src: Ev
   const d = r.decision as { action?: string; amount_in?: string } | null;
   const action = d?.action;
   if (action === "hold") return ev.event === "skip" ? [] : [`decision is hold but the vault recorded ${ev.event}`];
-  if (action !== "buy" && action !== "sell") return [`decision has no valid action`];
+  const pair = pinnedPair(net.id);
+  const leg = pair && ["buy", "sell", "stake", "unstake"].includes(String(action)) ? legs({ ...pair, base: net.base, quote: net.quote }, action as Leg) : undefined;
+  if (!leg) return [`decision has no valid action`];
   if (ev.event === "skip") {
     // The arena logs a local refusal (insufficient balance) as a skip with the decision's action and amount.
     const note = String(ev.data.note ?? "");
     return note.startsWith("refused:") && note.endsWith(` ${action} ${d?.amount_in}`) ? [] : [`decision is ${action} but the vault recorded a skip`];
   }
-  const tokenIn = action === "buy" ? net.quote : net.base;
+  const [tokenIn, tokenOut] = leg;
   // A wrong token ends it: its metadata is never fetched, so a hostile token's decimals can't cost anything.
   if (ev.data.token_in !== tokenIn) return [`token_in on chain ${clip(ev.data.token_in)}, decision implies ${tokenIn}`];
+  if (ev.data.token_out !== undefined && ev.data.token_out !== tokenOut) return [`token_out on chain ${clip(ev.data.token_out)}, decision implies ${tokenOut}`];
   try {
     const units = toUnits(String(d?.amount_in), await src.decimals(tokenIn));
     if (String(ev.data.amount_in) !== units.toString()) return [`amount_in on chain ${clip(ev.data.amount_in)}, decision ${clip(d?.amount_in)} = ${clip(units)}`];

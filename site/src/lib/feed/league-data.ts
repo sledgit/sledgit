@@ -8,7 +8,7 @@ export type LeagueProof = "tee" | "rules" | "self";
 
 export interface LeagueDecision {
   seq: number; event: "request" | "refuse" | "skip" | "trade" | "failed"; tx: string; block_time_ms: number; receipt_hash: string;
-  in_season: boolean; on_schedule: boolean | null; code?: string; note?: string; side?: "buy" | "sell";
+  in_season: boolean; on_schedule: boolean | null; code?: string; note?: string; side?: "buy" | "sell" | "stake" | "unstake";
   token_in?: string; amount_in?: string; token_out?: string; amount_out?: string; ref_price?: number; fill_price?: number; cost_usd?: number;
   venue?: string; pool_id?: number;
 }

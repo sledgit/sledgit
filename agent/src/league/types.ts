@@ -94,7 +94,9 @@ export interface VaultInput {
  * replayed but not on chain. `error` when the balances could not be reconciled. */
 export type Reconciliation = { surplus: Record<string, string>; deficit: Record<string, string> } | { error: string };
 
-export interface TokenInfo { id: string; symbol: string; decimals: number; ref: "NEAR" | "USD" }
+/** How a token is valued: NEAR at the reference price, USD at $1, STAKE (a liquid-staking token) at its recorded
+ * redemption rate times the reference price. */
+export interface TokenInfo { id: string; symbol: string; decimals: number; ref: "NEAR" | "USD" | "STAKE" }
 
 export interface LeagueInputs {
   schema: typeof INPUTS_SCHEMA;
@@ -109,6 +111,9 @@ export interface LeagueInputs {
   /** Reference price at exact moments: 1-minute bar close, keyed by the bar's open time (ms). */
   minute: Record<string, number>;
   stake_apr: { value: number; source: string };
+  /** Per STAKE token: redemption-rate samples [block time ms, block height, raw base units per whole token], oldest
+   * first. A value at time t uses the latest sample at or before t. Absent when no vault holds a STAKE token. */
+  stake_rates?: Record<string, [number, number, string][]>;
   season: Season;
   factories: { id: string; locked: boolean; access_keys: number }[];
   vaults: VaultInput[];
@@ -126,7 +131,7 @@ export interface DecisionRow {
   on_schedule: boolean | null;
   code?: string;
   note?: string;
-  side?: "buy" | "sell";
+  side?: "buy" | "sell" | "stake" | "unstake";
   token_in?: string;
   amount_in?: string;
   token_out?: string;

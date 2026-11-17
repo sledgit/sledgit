@@ -15,10 +15,11 @@ Built from the chain by `node agent/bin/league.mjs build deploy/testnet/league/e
 |---|---|
 | `as_of_ms` | Cutoff. Events with a later block time and prices after it are not used. |
 | `season` | `id`, `start_ms` (decisions before it are history: listed, not scored), `canonical_pools` (Rhea pool ids a ranked entry may trade on), `benchmark_cost_rate` (`value`, `source`: the fixed rate charged to the computed benchmarks' one rebalance), `min_value_usd`. |
-| `tokens[]` | `id`, `symbol`, `decimals` (read from `ft_metadata`), `ref`: `NEAR` (valued at the reference) or `USD` ($1). Only these tokens are valued. |
+| `tokens[]` | `id`, `symbol`, `decimals` (read from `ft_metadata`), `ref`: `NEAR` (valued at the reference), `USD` ($1) or `STAKE` (a liquid-staking token, valued at its redemption rate times the reference). Only these tokens are valued. |
 | `hourly[]` | `[close time ms, close]` Binance NEARUSDT hourly bars that closed by the cutoff. |
 | `minute{}` | Binance NEARUSDT 1-minute close keyed by bar open time (ms), for every event time, gas time, the season start and the cutoff. A missing bar fails the computation. |
 | `stake_apr` | `value` and `source`. The source says it is an assumption, not a measurement. |
+| `stake_rates{}` | Per `STAKE` token: `[block time ms, block height, raw rate]` samples, oldest first, read from the staking contract at that height (archival RPC). The raw rate is base units per whole token. One sample per UTC day from the day before the vault first touched the token, plus one at the cutoff; a value at time t uses the latest sample at or before t. Absent when no vault touched a `STAKE` token. |
 | `factories[]` | Each trusted factory, whether it is locked, and its access-key count. |
 | `vaults[]` | Per vault: `entry` (registry row; an unregistered vault gets the id `u-<account>`, which can't collide with a registered id); `provenance` (`genuine`, `legacy` or `unverified`, with the reason); `events[]` (the vault's own irontrade events from succeeded receipts); `gas[]`; `proof` (tier proven, detail, the seq range it covers, strategy hash and versions, model evidence ids); `incomplete` (set when the transaction list couldn't be read in full, past 100 pages: the entry is unranked, the build goes on); `observed` (current views, balances and the reconciliation of replayed holdings against them; not part of the derived hash). |
 | `excluded[]` | What was deliberately not read, e.g. a factory that still holds a key. |

@@ -6,12 +6,17 @@ import type { Decision } from "../decision.js";
 import * as v1 from "./rules-v1.js";
 import * as v2 from "./rules-v2.js";
 import * as v3 from "./rules.js";
+import { STAKED, stakedSpec, decideStaked, type StakedInput } from "./staked.js";
 
 export interface PublishedStrategy {
   hash: string;
   id: string;
   version: number;
   spec: Json;
+  /** Reads its history and slot block from chain (`inputs.chain`); version 1 read local history. */
+  reads_chain: boolean;
+  /** Holds the NEAR side as the pair's staking token. */
+  staked: boolean;
   decide(inputs: unknown, vault: string): Decision;
 }
 
@@ -19,18 +24,23 @@ function entries(): PublishedStrategy[] {
   const out: PublishedStrategy[] = [];
   for (const s of v1.STRATEGIES) {
     const spec = v1.spec(s);
-    out.push({ hash: createHash("sha256").update(canonical(spec)).digest("hex"), id: s.id, version: 1, spec,
+    out.push({ hash: createHash("sha256").update(canonical(spec)).digest("hex"), id: s.id, version: 1, spec, reads_chain: false, staked: false,
       decide: (x, vault) => v1.decide(s, x as v1.RuleInput, vault) });
   }
   for (const s of v2.STRATEGIES) {
     const spec = v2.spec(s);
-    out.push({ hash: createHash("sha256").update(canonical(spec)).digest("hex"), id: s.id, version: 2, spec,
+    out.push({ hash: createHash("sha256").update(canonical(spec)).digest("hex"), id: s.id, version: 2, spec, reads_chain: true, staked: false,
       decide: (x, vault) => v2.decide(s, x as v2.RuleInput, vault) });
   }
   for (const s of v3.STRATEGIES) {
     const spec = v3.spec(s);
-    out.push({ hash: createHash("sha256").update(canonical(spec)).digest("hex"), id: s.id, version: 3, spec,
+    out.push({ hash: createHash("sha256").update(canonical(spec)).digest("hex"), id: s.id, version: 3, spec, reads_chain: true, staked: false,
       decide: (x, vault) => v3.decide(s, x as v3.RuleInput, vault) });
+  }
+  for (const s of STAKED) {
+    const spec = stakedSpec(s);
+    out.push({ hash: createHash("sha256").update(canonical(spec)).digest("hex"), id: s.id, version: s.version, spec, reads_chain: true, staked: true,
+      decide: (x, vault) => decideStaked(s, x as StakedInput, vault) });
   }
   return out;
 }

@@ -13,7 +13,7 @@ type SkillRow = {
   id: string; name: string; status: string; stake: boolean; rule: string; version: number; spec_sha256: string | null; evidence: string;
   periods: Record<"full" | "in_sample" | "out_of_sample", Period>; years: Record<string, number>; p_vs_hold: number | null; verdict: string; weekly: number[];
 };
-const D = data as unknown as { data: { first: string; last: string; out_of_sample_from: string }; costs: { start_usd: number; fee: number; depth_usd: number; gas_usd: number; cap: number };
+const D = data as unknown as { data: { first: string; last: string; out_of_sample_from: string }; costs: { start_usd: number; fee: number; depth_usd: number; gas_usd: number; cap: number; stake_fee: number; unstake_fee: number };
   significance: { alpha: number; correction: string; test: string }; stake_apr: string; hold_weekly: number[]; skills: SkillRow[] };
 
 const pct = (n: number, sign = true) => `${sign && n > 0 ? "+" : ""}${(n * 100).toFixed(1)}%`;
@@ -68,7 +68,7 @@ export default function Skills() {
           <dt>Prices</dt><dd>Binance NEARUSDT daily closes, the reference feed the live vaults use. The first 200 days are warm-up only.</dd>
           <dt>Decisions</dt><dd>One per day at the close, filled at that close. Every vault starts in USDC, so the first move pays costs too.</dd>
           <dt>Costs</dt><dd>{(c.fee * 100).toFixed(1)}% pool fee, price impact of trade size ÷ ${(c.depth_usd / 1e3).toFixed(0)}k pool depth, ${c.gas_usd} gas per trade. Each trade and each day is capped at {c.cap * 100}% of the vault.</dd>
-          <dt>Staking</dt><dd>Skills marked staked earn {D.stake_apr} on the NEAR side, as a liquid-staking token would. Today&apos;s vaults can&apos;t hold one yet.</dd>
+          <dt>Staking</dt><dd>Staked skills hold the NEAR side as stNEAR (Meta Pool), whose redemption rate grows at {D.stake_apr}. Buys land in wNEAR and are staked on a later day; a sell unstakes first when wNEAR is short. Swapping into stNEAR costs {(c.stake_fee * 100).toFixed(2)}% and back out {(c.unstake_fee * 100).toFixed(2)}%, from Rhea&apos;s rated pool on 2026-11-17. Staking adds the staking contract as a dependency: the vault&apos;s limits can&apos;t protect against a fault there.</dd>
           <dt>Periods</dt><dd>Results before {D.data.out_of_sample_from} are in-sample: the house rules were chosen knowing that history. Results from {D.data.out_of_sample_from} on are the fairer test.</dd>
           <dt>Significance</dt><dd>A {D.significance.test}. A skill is called promising only if p &lt; {D.significance.alpha} ({D.significance.correction}) and it beat hold out of sample. Even then it is a backtest result, not proof.</dd>
         </dl>

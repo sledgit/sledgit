@@ -179,7 +179,7 @@ h1,h2,h3,h4{color:var(--strong);margin:0;font-family:var(--cond);font-weight:800
 .dr{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:12px;align-items:baseline;padding:10px 16px;border-bottom:1px solid var(--line);font-size:13px}
 .dr:last-child{border-bottom:0}
 .dr .k{font:700 13px var(--cond);letter-spacing:.08em;text-transform:uppercase}
-.dr.buy .k{color:var(--up)} .dr.sell .k{color:var(--sky)} .dr.refuse .k{color:var(--red)} .dr.skip .k{color:var(--faint)}
+.dr.buy .k{color:var(--up)} .dr.sell .k{color:var(--sky)} .dr.stake .k,.dr.unstake .k{color:var(--muted)} .dr.refuse .k{color:var(--red)} .dr.skip .k{color:var(--faint)}
 .dr .t b{color:var(--strong);font-weight:600}
 .dr .t b a{text-decoration:none}
 .dr .t .why{color:var(--faint)}

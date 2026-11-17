@@ -1,10 +1,14 @@
 // Model output -> a validated decision, and decimal <-> smallest-unit amounts. Pure; no I/O.
 
-export type Action = "buy" | "sell" | "hold";
+export type Action = "buy" | "sell" | "hold" | "stake" | "unstake";
+
+/** Swaps between base and the staking token; only published rules may decide them. */
+export const STAKE_ACTIONS = ["stake", "unstake"] as const;
 
 export interface Decision {
   action: Action;
-  /** Decimal string in token_in units: quote for "buy", base for "sell", "0" for "hold". */
+  /** Decimal string in token_in units: quote for "buy", base for "sell" and "stake", the staking token for "unstake",
+   * "0" for "hold". */
   amount_in: string;
   reason: string;
 }
@@ -32,7 +36,7 @@ export function extractJson(text: string): string | null {
   return t.slice(start, end + 1);
 }
 
-export function parseDecision(text: string): Parsed {
+export function parseDecision(text: string, opts: { stake?: boolean } = {}): Parsed {
   const raw = extractJson(text);
   if (raw === null) return fail("no_json", "no JSON object in model output");
   let v: unknown;
@@ -41,15 +45,16 @@ export function parseDecision(text: string): Parsed {
   } catch (e) {
     return fail("invalid_json", `invalid JSON: ${(e as Error).message}`);
   }
-  return validateDecision(v);
+  return validateDecision(v, opts);
 }
 
-export function validateDecision(v: unknown): Parsed {
+export function validateDecision(v: unknown, opts: { stake?: boolean } = {}): Parsed {
   if (typeof v !== "object" || v === null || Array.isArray(v)) return fail("not_object", "decision is not an object");
   const o = v as Record<string, unknown>;
   const extra = Object.keys(o).filter((k) => !["action", "amount_in", "reason"].includes(k));
   if (extra.length) return fail("unexpected_fields", `unexpected fields: ${extra.join(",")}`);
-  if (o.action !== "buy" && o.action !== "sell" && o.action !== "hold") {
+  const stake = opts.stake === true && (STAKE_ACTIONS as readonly unknown[]).includes(o.action);
+  if (o.action !== "buy" && o.action !== "sell" && o.action !== "hold" && !stake) {
     return fail("bad_action", `action must be buy|sell|hold, got ${JSON.stringify(o.action)}`);
   }
   if (typeof o.reason !== "string" || !o.reason.trim()) return fail("bad_reason", "reason must be a non-empty string");
@@ -67,7 +72,7 @@ export function validateDecision(v: unknown): Parsed {
     return fail("bad_amount", `amount_in must be a positive decimal string, got ${JSON.stringify(o.amount_in)}`);
   }
   if (!/[1-9]/.test(amount)) return fail("zero_amount", "amount_in must be above 0 for buy/sell");
-  return { ok: true, decision: { action: o.action, amount_in: amount, reason: clip(o.reason) } };
+  return { ok: true, decision: { action: o.action as Action, amount_in: amount, reason: clip(o.reason) } };
 }
 
 /** Doubles hold 15 significant decimal digits exactly; beyond that the parsed value may differ from the text. */

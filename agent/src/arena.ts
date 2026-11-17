@@ -9,6 +9,7 @@ import { redact } from "./config.js";
 import { modelErrorCode, type Model } from "./models.js";
 import { PriceError, type RefPrice } from "./price.js";
 import type { Vault, Outcome, Policy, Preview } from "./vault.js";
+import { legs, type Pair } from "./pairs.js";
 
 export interface Prompt { text: string; sha256: string; path: string }
 
@@ -33,6 +34,8 @@ export interface TickDeps {
   market?: () => Promise<Json>;
   /** On-chain state for rule-based agents (decision history, slot block); recorded in the inputs as `chain`. */
   chain?: Json;
+  /** Staked vaults: the staking token, its balance and redemption rate are read and recorded too. */
+  stake?: NonNullable<Pair["stake"]>;
 }
 
 /** Default harness label: this runner. */
@@ -115,10 +118,14 @@ export async function tick(d: TickDeps): Promise<TickResult> {
       outcome: { status: "stopped", reason: stop } };
   }
 
-  const [policy, usage, intents, inFlight, decBase, decQuote, balBase, balQuote] = await Promise.all([
+  const st = d.stake;
+  const [policy, usage, intents, inFlight, decBase, decQuote, balBase, balQuote, decStake, balStake, rate] = await Promise.all([
     vault.policy(), vault.usage(), vault.intents(), vault.inFlight(),
     vault.decimals(base), vault.decimals(quote), vault.balance(base), vault.balance(quote),
+    st ? vault.decimals(st.token) : 0, st ? vault.balance(st.token) : 0n,
+    st ? vault.view<string>(st.rate_method, {}, st.token) : "",
   ]);
+  if (st && !/^[0-9]{1,40}$/.test(String(rate))) throw new Error(`${st.token}.${st.rate_method} returned ${String(rate).slice(0, 40)}`);
   let refPrice: RefPrice | null = null;
   let decisionError: string | undefined;
   let detail: string | undefined;
@@ -137,12 +144,15 @@ export async function tick(d: TickDeps): Promise<TickResult> {
       detail = (e as Error).message;
     }
   }
-  const dec: Record<string, number> = { [base]: decBase, [quote]: decQuote };
+  const dec: Record<string, number> = { [base]: decBase, [quote]: decQuote, ...(st ? { [st.token]: decStake } : {}) };
+  const bal: Record<string, bigint> = { [base]: balBase, [quote]: balQuote, ...(st ? { [st.token]: balStake } : {}) };
+  const human = Object.fromEntries(Object.entries(bal).map(([t, v]) => [t, fromUnits(v, dec[t])]));
   const inputs = {
     reference_price: refPrice as unknown as Json,
     vault: {
-      base, quote, frozen: config.frozen, busy: inFlight !== null || intents.open_intent !== null,
-      balances: { [base]: fromUnits(balBase, decBase), [quote]: fromUnits(balQuote, decQuote) },
+      base, quote, ...(st ? { stake: st.token, stake_rate: fromUnits(BigInt(rate), decBase) } : {}),
+      frozen: config.frozen, busy: inFlight !== null || intents.open_intent !== null,
+      balances: human,
       policy: humanPolicy(policy, dec),
       usage: { trades_this_hour: usage.trades, spent_24h: Object.fromEntries(usage.spent.map(([t, v]) => [t, t in dec ? fromUnits(v, dec[t]) : v])) },
     },
@@ -152,8 +162,8 @@ export async function tick(d: TickDeps): Promise<TickResult> {
     ...(d.chain !== undefined ? { chain: d.chain } : {}),
   };
   // Raw chain values too, so a verifier does not have to trust the conversion above.
-  const raw = { config, policy, usage, balances: { [base]: balBase.toString(), [quote]: balQuote.toString() }, decimals: dec,
-    chain_id: vault.chainId };
+  const raw = { config, policy, usage, balances: Object.fromEntries(Object.entries(bal).map(([t, v]) => [t, v.toString()])), decimals: dec,
+    ...(st ? { stake_rate: String(rate) } : {}), chain_id: vault.chainId };
 
   let output = "";
   let decision: Decision = { action: "hold", amount_in: "0", reason: "" };
@@ -170,12 +180,16 @@ export async function tick(d: TickDeps): Promise<TickResult> {
   const evidence = "takeEvidence" in model ? (model as { takeEvidence(): TeeBundle | undefined }).takeEvidence() : undefined;
   const attestation = evidence ? saveBundle(d.receiptsPath, evidence) : undefined;
   if (!decisionError) {
-    const p = parseDecision(output);
+    const p = parseDecision(output, { stake: model.ref.provider === "rules" });
     if (p.ok) decision = { ...p.decision, reason: redact(p.decision.reason) };
     else { decisionError = `invalid_output:${p.code}`; detail = p.error; }
   }
-  const tokenIn = decision.action === "buy" ? quote : base;
-  const tokenOut = decision.action === "buy" ? base : quote;
+  const leg = decision.action === "hold" ? undefined : legs({ base, quote, decimals: dec, ...(st ? { stake: st } : {}) }, decision.action);
+  if (!decisionError && decision.action !== "hold" && !leg) {
+    decisionError = "invalid_output:bad_action";
+    detail = `${decision.action} needs a staking token`;
+  }
+  const [tokenIn, tokenOut] = leg ?? [base, quote];
   let amountIn = 0n;
   if (!decisionError && decision.action !== "hold") {
     try {
@@ -211,8 +225,7 @@ export async function tick(d: TickDeps): Promise<TickResult> {
       await skip(!decisionError ? "hold" : decisionError.startsWith("model_error") ? "model_error"
         : decisionError.startsWith("price_error") ? "price_error" : "invalid_model_output");
     } else {
-      const bal = tokenIn === base ? balBase : balQuote;
-      if (amountIn > bal) {
+      if (amountIn > bal[tokenIn]) {
         result.local_refusal = "insufficient_balance";
         await skip(`refused:insufficient_balance ${decision.action} ${decision.amount_in}`);
       } else {

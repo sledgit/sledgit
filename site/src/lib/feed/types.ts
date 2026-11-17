@@ -35,7 +35,7 @@ export interface Decision {
   botId: string;
   at: number;           // league seconds
   reason: string;
-  side?: "buy" | "sell";
+  side?: "buy" | "sell" | "stake" | "unstake";
   usd?: number;
   price?: number;
   tx?: string;

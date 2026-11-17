@@ -79,7 +79,7 @@ function init(network: NetworkId): LeagueState {
         s.counts.decisions++;
         if (e.kind === "skip") s.counts.skips++;
         else if (e.kind === "refuse") { s.counts.refused++; s.pulse = { kind: "down", botId: e.botId, n: ++pulseN }; }
-        else { s.counts.trades++; s.pulse = { kind: e.side === "buy" ? "up" : "down", botId: e.botId, n: ++pulseN }; }
+        else { s.counts.trades++; if (e.side === "buy" || e.side === "sell") s.pulse = { kind: e.side === "buy" ? "up" : "down", botId: e.botId, n: ++pulseN }; }
         break;
       case "standings":
         s.standings = e.rows;

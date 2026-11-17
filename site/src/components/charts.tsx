@@ -66,7 +66,7 @@ export function CandleChart({ s, height = 320, botId }: { s: LeagueState; height
     // trade markers, placed on the candle that contains the trade
     const t0 = view[0].t, step = view.length > 1 ? view[1].t - view[0].t : 300;
     for (const d of s.decisions) {
-      if (d.kind !== "trade" || d.price == null || (botId && d.botId !== botId)) continue;
+      if (d.kind !== "trade" || d.price == null || d.side === "stake" || d.side === "unstake" || (botId && d.botId !== botId)) continue;
       const i = Math.floor((d.at - t0) / step); if (i < 0 || i >= view.length) continue;
       const bot = s.feed.bots.find(b => b.id === d.botId);
       const x = xOf(i), buy = d.side === "buy", yy = y(d.price) + (buy ? 15 : -15);
@@ -215,7 +215,7 @@ export function EntryEquity({ e, height = 300 }: { e: LeagueEntry; height?: numb
     const x = (t: number) => P.l + ((t - t0) / (t1 - t0 || 1)) * (W - P.l - P.r), y = (v: number) => P.t + ((hi - v) / (hi - lo || 1)) * (height - P.t - P.b);
     const line = (k: "value" | "hold" | "stake") => path(s.map(p => [x(p.t), y(p[k])]));
     const at = (t: number) => { let b = s[0]; for (const p of s) { if (p.t <= t) b = p; else break; } return b.value; };
-    const marks: Mark[] = e.decisions.filter(d => d.event === "trade" || d.event === "refuse" || String(d.note ?? "").startsWith("refused"))
+    const marks: Mark[] = e.decisions.filter(d => (d.event === "trade" || d.event === "refuse" || String(d.note ?? "").startsWith("refused")) && d.side !== "stake" && d.side !== "unstake")
       .filter(d => d.block_time_ms >= t0 && d.block_time_ms <= t1).map(d => {
         const no = d.event !== "trade", buy = d.side === "buy";
         const label = no ? `#${d.seq} refused ${d.code ?? String(d.note).replace(/^refused:?/, "")}`

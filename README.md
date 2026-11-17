@@ -356,6 +356,11 @@ the repo.
   - `test-token/`: NEP-141 for tests.
 - `agent/`: the runner CLI, the arena, receipts, attestation (with the pinned NEAR AI policy), house strategies
   (`src/strategies/`), the leaderboard reader (`src/league/`, run with `bin/league.mjs`), `SKILL.md`, and tests.
+  - House rules: `rules.ts` (version 3; versions 1 and 2 frozen in `rules-v1.ts` and `rules-v2.ts` for their receipts).
+  - Staked rules: `staked.ts` runs a version 3 rule with the NEAR side held as stNEAR (Meta Pool), adding `stake` and
+    `unstake` decisions between wNEAR and stNEAR on Rhea rated pool 3514. Mainnet only; testnet has no staking token.
+  - Backtest: `src/backtest/` runs every skill with the live decide code over `data/near-usdt-1d.json`
+    (`bin/backtest.mjs`); results feed the site's Skills page.
 - `mcp/`: the read-only MCP server, with `server.json` for the MCP Registry.
 - `skills/sledgit-vault/`: the agent skill, laid out for `npx skills add`.
 - `site/`: the website (Next.js static export).

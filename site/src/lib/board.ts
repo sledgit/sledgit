@@ -36,10 +36,11 @@ const shown = (L: LeagueSnapshot, e: LeagueEntry) => (e.kind === "arena" || e.ki
 const refused = (d: LeagueDecision) => d.event === "refuse" || String(d.note ?? "").startsWith("refused");
 
 export interface Tick { key: string; who: string; text: string; refused: boolean; ok: boolean }
-// A buy spends the quote (USDC), a sell the traded asset (wNEAR), each at its network's decimals.
+// The amount spent, in the token spent, at its network's decimals.
 const amount = (L: LeagueSnapshot, d: LeagueDecision) => {
-  const t = NETWORKS[L.network].tokens[d.side === "buy" ? 1 : 0];
-  return `${(Number(d.amount_in ?? 0) / 10 ** (t?.decimals ?? 24)).toFixed(2)} ${d.side === "buy" ? "USDC" : "wNEAR"}`;
+  const ts = NETWORKS[L.network].tokens;
+  const t = ts.find(x => x.id === d.token_in) ?? ts[d.side === "buy" ? 1 : 0];
+  return `${(Number(d.amount_in ?? 0) / 10 ** (t?.decimals ?? 24)).toFixed(2)} ${t?.symbol ?? ""}`;
 };
 
 /**

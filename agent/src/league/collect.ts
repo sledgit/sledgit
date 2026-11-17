@@ -14,6 +14,8 @@ import type { ChainDecision } from "../attest/chain.js";
 import { STAKE_APR } from "../strategies/benchmarks.js";
 import { cmp } from "./compute.js";
 import { isVaultStandard } from "../events.js";
+import { PAIRS } from "../pairs.js";
+import { ARCHIVAL_RPC } from "../strategies/schedule.js";
 import {
   INPUTS_SCHEMA, type EntryMeta, type GasRow, type LeagueInputs, type ProofCheck, type RawEvent, type Reconciliation, type Season, type TokenInfo, type VaultInput,
 } from "./types.js";
@@ -203,16 +205,21 @@ function receiptsOf(dir: string): { text: string; receipts: Receipt[] } {
 
 const DECISIONS = ["request", "refuse", "skip"];
 
-/** A receipt's decision is what the vault recorded: hold ↔ skip; buy/sell ↔ request or refuse with the same input token
- * (quote for buy, base for sell) and the same raw amount. Returns a problem, or null. */
+/** A receipt's decision is what the vault recorded: hold ↔ skip; buy/sell/stake/unstake ↔ request or refuse with the
+ * same tokens (buy: quote -> base, sell: base -> quote, stake: base -> staking token, unstake: the reverse) and the same
+ * raw amount. Returns a problem, or null. */
 export function decisionMismatch(r: Receipt, ev: RawEvent, tokens: TokenInfo[]): string | null {
   const d = (r.decision ?? {}) as { action?: string; amount_in?: string };
-  const base = tokens.find((t) => t.ref === "NEAR"), quote = tokens.find((t) => t.ref === "USD");
+  const ref = (x: TokenInfo["ref"]) => tokens.find((t) => t.ref === x);
+  const LEGS: Record<string, [TokenInfo["ref"], TokenInfo["ref"]]> = { buy: ["USD", "NEAR"], sell: ["NEAR", "USD"], stake: ["NEAR", "STAKE"], unstake: ["STAKE", "NEAR"] };
   if (d.action === "hold") return ev.event === "skip" ? null : `receipt says hold, the vault recorded ${ev.event}`;
-  if (d.action !== "buy" && d.action !== "sell") return `receipt has no valid decision (${String(d.action)})`;
+  const leg = Object.hasOwn(LEGS, String(d.action)) ? LEGS[String(d.action)] : undefined;
+  if (!leg) return `receipt has no valid decision (${String(d.action)})`;
   if (ev.event !== "request" && ev.event !== "refuse") return `receipt says ${d.action}, the vault recorded ${ev.event}`;
-  const tin = d.action === "buy" ? quote : base;
+  const tin = ref(leg[0]), tout = ref(leg[1]);
   if (!tin || String(ev.data.token_in) !== tin.id) return `receipt's ${d.action} spends ${tin?.id ?? "?"}, the vault's request spends ${String(ev.data.token_in)}`;
+  if (ev.data.token_out !== undefined && (!tout || String(ev.data.token_out) !== tout.id))
+    return `receipt's ${d.action} buys ${tout?.id ?? "?"}, the vault's request buys ${String(ev.data.token_out)}`;
   let want: bigint;
   try {
     want = toUnits(String(d.amount_in), tin.decimals);
@@ -226,7 +233,8 @@ export function decisionMismatch(r: Receipt, ev: RawEvent, tokens: TokenInfo[]):
 function chainDecisions(events: RawEvent[]): ChainDecision[] {
   return events.filter((e) => DECISIONS.includes(e.event)).map((e) => ({
     seq: Number(e.data.seq), event: e.event as ChainDecision["event"], receipt_hash: String(e.data.receipt_hash ?? ""),
-    ...(e.data.token_in !== undefined ? { token_in: String(e.data.token_in) } : {}), ...(e.data.amount_in !== undefined ? { amount_in: String(e.data.amount_in) } : {}),
+    ...(e.data.token_in !== undefined ? { token_in: String(e.data.token_in) } : {}),
+    ...(e.data.token_out !== undefined ? { token_out: String(e.data.token_out) } : {}), ...(e.data.amount_in !== undefined ? { amount_in: String(e.data.amount_in) } : {}),
     ...(e.data.note !== undefined ? { note: String(e.data.note) } : {}), tx: e.tx, block_time_secs: Math.floor(e.block_time_ms / 1000),
   })).sort((a, b) => a.seq - b.seq);
 }
@@ -373,7 +381,9 @@ export async function collect(registryPath: string, asOfMs: number, d: CollectDe
   for (const [i, id] of reg.tokens.entries()) {
     const m = await view<{ decimals?: number; symbol?: string }>(id, "ft_metadata");
     if (typeof m.decimals !== "number" || m.decimals < 0 || m.decimals > 38) throw new Error(`${id}: bad decimals`);
-    tokens.push({ id, symbol: String(m.symbol ?? id), decimals: m.decimals, ref: i === 0 ? "NEAR" : "USD" });
+    const ref = id === PAIRS[net].stake?.token ? "STAKE" : i === 0 ? "NEAR" : i === 1 ? "USD" : null;
+    if (!ref) throw new Error(`registry: ${id} is not the network's base, quote or staking token`);
+    tokens.push({ id, symbol: String(m.symbol ?? id), decimals: m.decimals, ref });
   }
 
   const vaults: VaultInput[] = [];
@@ -447,10 +457,69 @@ export async function collect(registryPath: string, asOfMs: number, d: CollectDe
     if (!hit) throw new Error(`no 1-minute reference bar at ${new Date(m).toISOString()}`);
     minute[String(m)] = hit[1];
   }
+  const stake_rates = await stakeRates(net, tokens, vaults, asOfMs, d);
   return {
     schema: INPUTS_SCHEMA, network: net, as_of_ms: asOfMs, collected_at: new Date().toISOString(),
     reference: { source: `${BINANCE[0]}/api/v3/klines?symbol=NEARUSDT`, symbol: "NEARUSDT",
       note: "1-minute closes at event times, hourly closes for the series; the quote stablecoin is valued at $1" },
-    tokens, hourly, minute, stake_apr: { value: STAKE_APR, source: STAKE_APR_SOURCE }, season: S, factories, vaults, excluded,
+    tokens, hourly, minute, stake_apr: { value: STAKE_APR, source: STAKE_APR_SOURCE },
+    ...(Object.keys(stake_rates).length ? { stake_rates } : {}), season: S, factories, vaults, excluded,
   };
+}
+
+const DAY = 86_400_000;
+
+/** Redemption-rate samples for each STAKE token a vault touched: one at the start of each UTC day from the day before
+ * its first event to the cutoff, and one at the cutoff. Each is read at a recorded block height (archival RPC). */
+export async function stakeRates(net: NetworkId, tokens: TokenInfo[], vaults: VaultInput[], asOfMs: number, d: CollectDeps): Promise<Record<string, [number, number, string][]>> {
+  const out: Record<string, [number, number, string][]> = {};
+  for (const k of tokens.filter((t) => t.ref === "STAKE")) {
+    const method = PAIRS[net].stake?.token === k.id ? PAIRS[net].stake!.rate_method : undefined;
+    if (!method) throw new Error(`${k.id}: no redemption-rate method`);
+    const touched = vaults.flatMap((v) => v.events).filter((e) => [e.data.token, e.data.token_in, e.data.token_out].includes(k.id)).map((e) => e.block_time_ms);
+    if (!touched.length) continue;
+    const targets: number[] = [];
+    for (let t = Math.floor(Math.min(...touched) / DAY) * DAY - DAY; t < asOfMs; t += DAY) targets.push(t);
+    targets.push(asOfMs);
+    const rows: [number, number, string][] = [];
+    for (const t of targets) {
+      const b = await blockBefore(net, t, d);
+      const rate = await archivalView<string>(net, k.id, method, b.height, d);
+      if (!/^[0-9]{1,40}$/.test(String(rate))) throw new Error(`${k.id}.${method} at ${b.height}: ${String(rate).slice(0, 40)}`);
+      if (!rows.length || rows[rows.length - 1][1] !== b.height) rows.push([b.time_ms, b.height, String(rate)]);
+    }
+    out[k.id] = rows;
+  }
+  return out;
+}
+
+async function archival<T>(net: NetworkId, method: string, params: unknown, d: CollectDeps): Promise<T> {
+  return withRetry(`archival ${method}`, async () => {
+    const r = await getJson<{ result?: T; error?: { message?: string; cause?: { name?: string } } }>(ARCHIVAL_RPC[net], d, { jsonrpc: "2.0", id: "league", method, params });
+    if (r.error || r.result === undefined) throw new Error(r.error?.cause?.name ?? r.error?.message ?? "no result");
+    return r.result;
+  }, d);
+}
+
+async function archivalView<T>(net: NetworkId, account: string, method: string, height: number, d: CollectDeps): Promise<T> {
+  const r = await archival<{ result?: number[] }>(net, "query", { request_type: "call_function", block_id: height, account_id: account,
+    method_name: method, args_base64: "e30=" }, d);
+  return JSON.parse(Buffer.from(r.result ?? []).toString("utf8")) as T;
+}
+
+/** A block at or just before t (ms): estimated from the head's pace, then stepped back until its time is <= t. */
+async function blockBefore(net: NetworkId, t: number, d: CollectDeps): Promise<{ height: number; time_ms: number }> {
+  type B = { header: { height: number; timestamp: number | string } };
+  const at = async (q: unknown) => { const b = await archival<B>(net, "block", q, d); return { height: b.header.height, time_ms: Math.floor(Number(b.header.timestamp) / 1e6) }; };
+  const head = await at({ finality: "final" });
+  if (head.time_ms <= t) return head;
+  const past = await at({ block_id: Math.max(1, head.height - 100_000) });
+  const pace = (head.time_ms - past.time_ms) / Math.max(1, head.height - past.height);
+  let h = Math.max(1, head.height - Math.ceil((head.time_ms - t) / pace));
+  for (let i = 0; i < 12; i++) {
+    const b = await at({ block_id: h }).catch(() => null); // a skipped height
+    if (b && b.time_ms <= t) return b;
+    h = Math.max(1, h - (b ? Math.ceil((b.time_ms - t) / pace) + 10 : 1));
+  }
+  throw new Error(`no block found before ${new Date(t).toISOString()}`);
 }

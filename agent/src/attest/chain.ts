@@ -18,6 +18,7 @@ export interface ChainDecision {
   event: "request" | "refuse" | "skip";
   receipt_hash: string;
   token_in?: string;
+  token_out?: string;
   amount_in?: string;
   note?: string;
   tx: string;
@@ -98,6 +99,7 @@ export async function vaultDecisions(net: NetworkId, vault: string, f: typeof fe
           for (const d of ev.data ?? []) {
             out.push({ seq: Number(d.seq), event: ev.event as ChainDecision["event"], receipt_hash: String(d.receipt_hash ?? ""),
               ...(d.token_in !== undefined ? { token_in: String(d.token_in) } : {}),
+              ...(d.token_out !== undefined ? { token_out: String(d.token_out) } : {}),
               ...(d.amount_in !== undefined ? { amount_in: String(d.amount_in) } : {}),
               ...(d.note !== undefined ? { note: String(d.note) } : {}),
               tx: String(tx.transaction?.hash ?? ""), block_time_secs: Math.floor(Number(o.block_timestamp) / 1e9),

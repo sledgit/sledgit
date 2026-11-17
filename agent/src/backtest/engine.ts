@@ -2,11 +2,12 @@
 // with the pool fee, price impact and gas. Every vault starts in USDC, so the first move pays costs too.
 import { createHash } from "node:crypto";
 import { decide, type RuleInput } from "../strategies/rules.js";
+import { decideStaked } from "../strategies/staked.js";
 import type { Candle } from "../strategies/market.js";
 import type { Skill } from "./skills.js";
 
 const DAY = 86_400_000;
-const BASE = "wrap.near", QUOTE = "usdc";
+const BASE = "wrap.near", QUOTE = "usdc", STAKE = "stnear";
 
 export interface Costs {
   start_usd: number;
@@ -16,9 +17,12 @@ export interface Costs {
   gas_usd: number;
   /** Per-trade and 24 h cap as a share of vault value. */
   cap: number;
+  /** Staked vaults, wNEAR <-> staking token in the rated pool, measured on 2026-11-17: entry ~0, exit 0.15%. */
+  stake_fee: number;
+  unstake_fee: number;
 }
 
-export const COSTS: Costs = { start_usd: 1000, fee: 0.003, depth_usd: 900_000, gas_usd: 0.01, cap: 0.5 };
+export const COSTS: Costs = { start_usd: 1000, fee: 0.003, depth_usd: 900_000, gas_usd: 0.01, cap: 0.5, stake_fee: 0, unstake_fee: 0.0015 };
 /** Staking APR on the NEAR leg: 9% before NEAR's inflation cut on 2025-10-30, 4.5% after. */
 export const stakeApr = (t: number) => (t < Date.UTC(2025, 9, 30) ? 0.09 : 0.045);
 export const WARMUP = 200;
@@ -26,19 +30,24 @@ export const WARMUP = 200;
 export interface Run { t: number[]; equity: number[]; trades: number; costs_usd: number }
 
 export function simulate(skill: Skill, candles: Candle[], c: Costs = COSTS, from = WARMUP): Run {
-  let b = 0, q = c.start_usd, trades = 0, costs = 0;
+  // l: staking-token units, worth `rate` base each; the rate grows at the staking APR.
+  let b = 0, q = c.start_usd, l = 0, rate = 1, trades = 0, costs = 0;
   const requests = { buy: 0, sell: 0 };
   let last: { seq: number; side: "buy" | "sell" } | null = null;
   const out: Run = { t: [], equity: [], trades: 0, costs_usd: 0 };
   for (let i = from; i < candles.length; i++) {
     const p = Number(candles[i][3]);
-    if (skill.stake && i > from) b *= 1 + stakeApr(candles[i][0]) / 365;
-    const value = b * p + q;
+    if (i > from && skill.staked) rate *= 1 + stakeApr(candles[i][0]) / 365;
+    else if (skill.stake && i > from) b *= 1 + stakeApr(candles[i][0]) / 365;
+    const value = (b + l * rate) * p + q;
     const cap = (value * c.cap).toString();
-    const x: RuleInput = {
+    const near = String(value * c.cap / p);
+    const x: RuleInput & { vault: { stake?: string; stake_rate?: string } } = {
       vault: {
-        base: BASE, quote: QUOTE, balances: { [BASE]: String(b), [QUOTE]: String(q) },
-        policy: { tokens: [{ token: QUOTE, max_per_trade: cap, max_per_day: cap }, { token: BASE, max_per_trade: String(value * c.cap / p), max_per_day: String(value * c.cap / p) }] },
+        base: BASE, quote: QUOTE, balances: { [BASE]: String(b), [QUOTE]: String(q), ...(skill.staked ? { [STAKE]: String(l) } : {}) },
+        ...(skill.staked ? { stake: STAKE, stake_rate: String(rate) } : {}),
+        policy: { tokens: [{ token: QUOTE, max_per_trade: cap, max_per_day: cap }, { token: BASE, max_per_trade: near, max_per_day: near },
+          { token: STAKE, max_per_trade: String(Number(near) / rate), max_per_day: String(Number(near) / rate) }] },
         usage: { spent_24h: {} },
       },
       market: { candles: candles.slice(Math.max(0, i + 1 - skill.candles), i + 1) },
@@ -47,8 +56,14 @@ export function simulate(skill: Skill, candles: Candle[], c: Costs = COSTS, from
         off_schedule: false, slot_block: { height: i, hash: createHash("sha256").update(`backtest|${candles[i][0]}`).digest("hex") },
       } as RuleInput["chain"],
     };
-    const d = decide(skill.strategy, x, `backtest-${skill.strategy.id}`);
-    if (d.action !== "hold") {
+    const d = skill.staked ? decideStaked(skill.staked, x, `backtest-${skill.strategy.id}`) : decide(skill.strategy, x, `backtest-${skill.strategy.id}`);
+    if (d.action === "stake" || d.action === "unstake") {
+      const a = Number(d.amount_in);
+      const usd = (d.action === "stake" ? a : a * rate) * p;
+      const cost = usd * (d.action === "stake" ? c.stake_fee : c.unstake_fee) + c.gas_usd;
+      if (d.action === "stake") { b -= a; l += (usd - cost) / p / rate; } else { l -= a; b += (usd - cost) / p; }
+      trades++; costs += cost;
+    } else if (d.action !== "hold") {
       const a = Number(d.amount_in);
       const usd = d.action === "buy" ? a : a * p;
       const cost = usd * (c.fee + usd / c.depth_usd) + c.gas_usd;
@@ -56,7 +71,7 @@ export function simulate(skill: Skill, candles: Candle[], c: Costs = COSTS, from
       trades++; costs += cost; requests[d.action]++; last = { seq: i - from + 1, side: d.action };
     }
     out.t.push(candles[i][0]);
-    out.equity.push(b * p + q);
+    out.equity.push((b + l * rate) * p + q);
   }
   out.trades = trades; out.costs_usd = costs;
   return out;

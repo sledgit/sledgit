@@ -34,10 +34,10 @@ export const UNTRACKED_SHARE = 0.05;
 
 export const METHOD: Record<string, string> = {
   season: "One published season start for every entry (season.start_ms). Decisions before it are history: listed, not scored. No per-entry season starts.",
-  valuation: "Holdings are rebuilt from the vault's own events (deposit, withdraw, trade) in exact integer units and valued at the reference price: Binance NEARUSDT 1-minute close at the event's block time, hourly closes for the series; USD stablecoins at $1.",
+  valuation: "Holdings are rebuilt from the vault's own events (deposit, withdraw, trade) in exact integer units and valued at the reference price: Binance NEARUSDT 1-minute close at the event's block time, hourly closes for the series; USD stablecoins at $1. A liquid-staking token (stNEAR) is valued at its redemption rate times the reference price: the rate is read from the staking contract at recorded blocks (stake_rates, about one a day, with the block height so anyone can re-read it), and a value at time t uses the latest sample at or before t. Its exit cost shows up as a trade cost when the vault unstakes.",
   return: "Time-weighted return (twr) from the later of the season start and the vault's funding, to the cutoff. Owner deposits and withdrawals are neutralised: each flow closes a segment and the segments' growth is chained, so a withdrawal never resets the record. A vault below the minimum value at the cutoff keeps its record and is marked inactive (unranked).",
   fills: `Every trade is valued at the reference price. A fill below the reference is a cost. A fill above the reference by more than ${FILL_TOLERANCE * 100}% is treated as owner money (neutralised, shown as neutralised_usd), so an owner-chosen pool or solver can't add return. A Rhea trade on a pool outside season.canonical_pools unranks the entry.`,
-  tokens: "Only the league's tokens are valued. Any deposit, withdrawal or trade involving another token unranks the entry; a trade between a league token and another token is neutralised as a flow, never counted as profit.",
+  tokens: "Only the league's tokens (inputs.tokens; on mainnet wNEAR, USDC and stNEAR) are valued. Any deposit, withdrawal or trade involving another token unranks the entry; a trade between a league token and another token is neutralised as a flow, never counted as profit.",
   benchmarks: "Hold 50/50 and Stake & hold are COMPUTED, not vaults: they start from the entry's own start value, at its start time and reference price, rebalanced once to 50/50 and charged season.benchmark_cost_rate on that rebalance (a fixed published rate, never the entry's own). Stake & hold compounds the NEAR half daily at the stated APR (an assumption, see stake_apr.source). Funded position: the entry's own holdings at its start, never traded, no costs.",
   vs_hold: "(1 + entry twr) / (1 + Hold twr) - 1. vs_hold_after_gas also charges each decision's gas (at the reference price) against the vault's value at that moment; the ranking uses it.",
   range95: `95% range of vs_hold from hourly excess log returns (entry minus Hold) between marks with no trade and no owner flow, Student-t with n-1 degrees of freedom, around the observed cumulative difference; asymmetric (lo, hi). Null below ${MIN_RANGE_STEPS} such steps ("not enough data"). Independence is assumed, so it still understates uncertainty for slow strategies. beyond_noise: lo > 0.`,
@@ -80,17 +80,41 @@ export function priceAt(inp: LeagueInputs, t: number): number {
 
 function tokenOf(inp: LeagueInputs, id: string): TokenInfo | undefined { return inp.tokens.find((t) => t.id === id); }
 
+/** Redemption rate of a STAKE token at t: the latest recorded sample at or before t. A missing sample is an error. */
+export function rateAt(inp: LeagueInputs, token: string, t: number): number {
+  const s = inp.stake_rates?.[token] ?? [];
+  let hit: [number, number, string] | undefined;
+  for (const x of s) if (x[0] <= t) hit = x; else break;
+  const base = inp.tokens.find((k) => k.ref === "NEAR");
+  if (!hit || !base) throw new PriceGap(`no ${token} redemption rate at or before ${new Date(t).toISOString()}`);
+  const r = toNum(raw(hit[2], `rate ${token}`), base.decimals);
+  if (!(r > 0)) throw new PriceGap(`bad ${token} redemption rate at ${new Date(hit[0]).toISOString()}`);
+  return r;
+}
+
+/** Reference value of one token per whole unit at price p and time t. */
+function unitValue(inp: LeagueInputs, k: TokenInfo, p: number, t: number): number {
+  return k.ref === "USD" ? 1 : k.ref === "NEAR" ? p : rateAt(inp, k.id, t) * p;
+}
+
 /** Holdings in raw units per league token. */
 type Holdings = Map<string, bigint>;
-function value(h: Holdings, inp: LeagueInputs, p: number): number {
+function value(h: Holdings, inp: LeagueInputs, p: number, t: number): number {
   let v = 0;
-  for (const [t, x] of h) { const k = tokenOf(inp, t)!; v += toNum(x, k.decimals) * (k.ref === "USD" ? 1 : p); }
+  for (const [id, x] of h) { const k = tokenOf(inp, id)!; if (x !== 0n) v += toNum(x, k.decimals) * unitValue(inp, k, p, t); }
   return v;
 }
-function nearValue(h: Holdings, inp: LeagueInputs, p: number): number {
+/** NEAR exposure: base and staking tokens. */
+function nearValue(h: Holdings, inp: LeagueInputs, p: number, t: number): number {
   let v = 0;
-  for (const [t, x] of h) { const k = tokenOf(inp, t)!; if (k.ref === "NEAR") v += toNum(x, k.decimals) * p; }
+  for (const [id, x] of h) { const k = tokenOf(inp, id)!; if (k.ref !== "USD" && x !== 0n) v += toNum(x, k.decimals) * unitValue(inp, k, p, t); }
   return v;
+}
+/** Side of a trade or request: buy, sell, or a swap between base and its staking token. */
+function sideOf(tin?: TokenInfo, tout?: TokenInfo): DecisionRow["side"] {
+  if (tin?.ref === "STAKE") return "unstake";
+  if (tin?.ref === "NEAR") return tout?.ref === "STAKE" ? "stake" : "sell";
+  return "buy";
 }
 const add = (h: Holdings, t: string, x: bigint) => h.set(t, (h.get(t) ?? 0n) + x);
 
@@ -165,17 +189,18 @@ function decisionRows(inp: LeagueInputs, v: VaultInput): Rows {
       if (tin && tout) {
         const p = priceAt(inp, e.block_time_ms);
         const ain = toNum(raw(row.amount_in, `trade ${e.tx}`), tin.decimals), aout = toNum(raw(row.amount_out, `trade ${e.tx}`), tout.decimals);
-        const inRef = ain * (tin.ref === "USD" ? 1 : p), outRef = aout * (tout.ref === "USD" ? 1 : p);
-        row.side = tin.ref === "NEAR" ? "sell" : "buy";
+        const inRef = ain * unitValue(inp, tin, p, e.block_time_ms), outRef = aout * unitValue(inp, tout, p, e.block_time_ms);
+        row.side = sideOf(tin, tout);
         row.ref_price = p;
-        row.fill_price = r8(row.side === "sell" ? (ain > 0 ? aout / ain : 0) : (aout > 0 ? ain / aout : 0));
+        // Buy and sell: USD per NEAR. Stake and unstake: tokens out per token in.
+        row.fill_price = r8(row.side === "buy" ? (aout > 0 ? ain / aout : 0) : (ain > 0 ? aout / ain : 0));
         row.cost_usd = r8(inRef - outRef);
         if (row.in_season) trades.push({ in_ref: inRef, cost: inRef - outRef });
       }
       if (row.in_season && row.venue === "rhea" && !(row.pool_id !== undefined && pools.has(row.pool_id)))
         flags.push({ ids: [id], kind: "non_canonical_pool", severity: "unrank", text: `trade #${seq} used Rhea pool ${row.pool_id ?? "?"}, not a season pool (${[...pools].join(", ")})` });
     } else if (e.event === "refuse" || e.event === "request") {
-      row.side = tokenOf(inp, String(row.token_in ?? ""))?.ref === "NEAR" ? "sell" : "buy";
+      row.side = sideOf(tokenOf(inp, String(row.token_in ?? "")), tokenOf(inp, String(row.token_out ?? "")));
     }
     rows.push(row);
   }
@@ -258,7 +283,7 @@ function entryResult(inp: LeagueInputs, v: VaultInput, R: Rows): EntryResult {
   while (i < evs.length && (evs[i].block_time_ms < start || (evs[i].block_time_ms === start && evs[i].event === "deposit"))) { apply(h, inp, evs[i]); i++; }
   const opening = new Map(h);
   const p0 = priceAt(inp, start);
-  const v0 = value(h, inp, p0);
+  const v0 = value(h, inp, p0, start);
   if (!(v0 > 0)) { base.unranked_reason = "nothing in the vault at the season start"; return base; }
 
   // Walk events, gas and hourly closes to the cutoff. Flows (and fill gains beyond the tolerance) close a segment.
@@ -279,10 +304,10 @@ function entryResult(inp: LeagueInputs, v: VaultInput, R: Rows): EntryResult {
       const g = gi < gas.length && gas[gi].block_time_ms <= t ? gas[gi] : null;
       if (!ev && !g) break;
       if (ev && (!g || ev.block_time_ms <= g.block_time_ms)) {
-        const pe = priceAt(inp, ev.block_time_ms);
-        const before = value(h, inp, pe);
+        const pe = priceAt(inp, ev.block_time_ms), te = ev.block_time_ms;
+        const before = value(h, inp, pe, te);
         const a = apply(h, inp, ev);
-        const after = value(h, inp, pe);
+        const after = value(h, inp, pe, te);
         if (a.kind === "flow") {
           // Close the segment at the value just before the flow; the next one starts from the value after it.
           if (segStart > 0) growth *= before / segStart;
@@ -290,7 +315,7 @@ function entryResult(inp: LeagueInputs, v: VaultInput, R: Rows): EntryResult {
           stepNoisy = true;
         } else if (a.kind === "trade") {
           const gain = after - before;
-          const inRef = tradeInRef(ev, inp, pe);
+          const inRef = tradeInRef(ev, inp, pe, te);
           const allowed = inRef * FILL_TOLERANCE;
           if (gain > allowed) {
             // Better than the reference beyond the tolerance: owner money, not return.
@@ -301,35 +326,35 @@ function entryResult(inp: LeagueInputs, v: VaultInput, R: Rows): EntryResult {
           }
           stepNoisy = true;
         }
-        if (rankFrom === null && value(h, inp, pe) >= S.min_value_usd) rankFrom = ev.block_time_ms;
+        if (rankFrom === null && value(h, inp, pe, te) >= S.min_value_usd) rankFrom = ev.block_time_ms;
         i++;
       } else if (g) {
         const pg = priceAt(inp, g.block_time_ms);
-        const n = toNum(raw(g.tokens_burnt, `gas ${g.tx}`), 24), usdG = n * pg, vt = value(h, inp, pg);
+        const n = toNum(raw(g.tokens_burnt, `gas ${g.tx}`), 24), usdG = n * pg, vt = value(h, inp, pg, g.block_time_ms);
         gasNear += n; gasUsd += usdG;
         if (vt > 0) gasFactor *= Math.max(0, 1 - usdG / vt);
         gi++;
       }
     }
-    const vt = value(h, inp, p);
+    const vt = value(h, inp, p, t);
     if (rankFrom === null && vt >= S.min_value_usd) rankFrom = t;
     vals.push(vt);
     noisy.push(stepNoisy);
     stepNoisy = false;
     series.push({ t, value: r8(v0 * segValue(vt)), hold: 0, stake: 0 });
   }
-  const end = value(h, inp, pEnd);
+  const end = value(h, inp, pEnd, inp.as_of_ms);
   const twr = segValue(end) - 1;
 
   // Benchmarks: the start value at the start price, one rebalance to 50/50 at the season's fixed cost rate.
-  const rebalance = Math.abs(v0 / 2 - nearValue(opening, inp, p0));
+  const rebalance = Math.abs(v0 / 2 - nearValue(opening, inp, p0, start));
   const benchCost = rebalance * S.benchmark_cost_rate.value;
   const closes: [number, number][] = [[start, p0], ...marks];
   const hold = hold5050(v0 - benchCost, closes), stake = stakeHold(v0 - benchCost, closes, inp.stake_apr.value);
   for (let k = 0; k < series.length; k++) { series[k].hold = r8(hold[k + 1].value); series[k].stake = r8(stake[k + 1].value); }
   const holdTwr = hold[hold.length - 1].value / v0 - 1;
   const stakeTwr = stake[stake.length - 1].value / v0 - 1;
-  const fundedTwr = value(opening, inp, pEnd) / v0 - 1;
+  const fundedTwr = value(opening, inp, pEnd, inp.as_of_ms) / v0 - 1;
 
   // 95% range: hourly excess log returns over steps with no trade and no flow, Student-t, around the observed sum.
   const ex: number[] = [];
@@ -380,7 +405,7 @@ function reconciliationFlags(inp: LeagueInputs, v: VaultInput, r: EntryResult): 
   const list = (m: Record<string, string>) => Object.keys(m).sort(cmp).map((t) => {
     const k = tokenOf(inp, t);
     if (!k) throw new Error(`${id}: reconciliation names ${t}, not a league token`);
-    return { sym: k.symbol, usd: toNum(raw(m[t], `reconciliation ${id}`), k.decimals) * (k.ref === "USD" ? 1 : p) };
+    return { sym: k.symbol, usd: toNum(raw(m[t], `reconciliation ${id}`), k.decimals) * unitValue(inp, k, p, inp.as_of_ms) };
   });
   const out: Flag[] = [];
   const def = list(rc.deficit);
@@ -396,9 +421,9 @@ function reconciliationFlags(inp: LeagueInputs, v: VaultInput, r: EntryResult): 
 }
 
 /** Reference value of what a trade gave up, at price p. */
-function tradeInRef(e: RawEvent, inp: LeagueInputs, p: number): number {
-  const t = tokenOf(inp, String(e.data.token_in));
-  return t ? toNum(raw(e.data.amount_in, `trade ${e.tx}`), t.decimals) * (t.ref === "USD" ? 1 : p) : 0;
+function tradeInRef(e: RawEvent, inp: LeagueInputs, p: number, t: number): number {
+  const k = tokenOf(inp, String(e.data.token_in));
+  return k ? toNum(raw(e.data.amount_in, `trade ${e.tx}`), k.decimals) * unitValue(inp, k, p, t) : 0;
 }
 
 /** The derived part of a snapshot: what derived_sha256 covers. */

@@ -4,6 +4,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { parseArgs } from "node:util";
 import type { Candle } from "../strategies/market.js";
 import { strategyPrompt, STRATEGIES } from "../strategies/rules.js";
+import { stakedPrompt } from "../strategies/staked.js";
 import { bootstrapP, COSTS, dayIndex, metrics, simulate, WARMUP, type Metrics, type Run } from "./engine.js";
 import { SKILLS } from "./skills.js";
 
@@ -41,7 +42,8 @@ export function report(candles: Candle[]) {
     const live = STRATEGIES.some((x) => x.id === s.strategy.id && x === s.strategy);
     return {
       id: s.strategy.id, name: s.name, status: s.status, stake: s.stake, rule: s.strategy.rule, params: s.strategy.params,
-      version: s.strategy.version, spec_sha256: live ? strategyPrompt(s.strategy).sha256 : null, evidence: s.evidence,
+      version: s.staked?.version ?? s.strategy.version,
+      spec_sha256: s.staked ? stakedPrompt(s.staked).sha256 : live ? strategyPrompt(s.strategy).sha256 : null, evidence: s.evidence,
       periods: per, years, p_vs_hold: p, verdict, weekly,
     };
   });

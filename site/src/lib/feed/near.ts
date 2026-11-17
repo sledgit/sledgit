@@ -128,7 +128,10 @@ export function decisionOf(e: ChainEvent, botId: string, n: NetworkConfig): Deci
     reason: "", tx: e.txHash, venue: chain.venue ? VENUE_NAME[chain.venue] ?? chain.venue : undefined, chain };
   if (e.event === "skip") return { ...base, reason: str(d.note) ?? "no reason given" };
   if (e.event === "refuse") return { ...base, reason: `${chain.code ?? "refused"}: ${str(d.reason) ?? ""}`.replace(/: $/, "") };
-  const [asset, quote] = n.tokens, buy = chain.tokenOut === asset.id;
+  const [asset, quote] = n.tokens;
+  const staking = n.tokens.find(t => t.rate && (t.id === chain.tokenIn || t.id === chain.tokenOut));
+  if (staking) return { ...base, side: chain.tokenOut === staking.id ? "stake" : "unstake", reason: `swap on Rhea pool ${d.pool_id ?? "?"}` };
+  const buy = chain.tokenOut === asset.id;
   const assetRaw = buy ? chain.amountOut : chain.amountIn, quoteRaw = buy ? chain.amountIn : chain.amountOut;
   const known = (buy ? chain.tokenIn : chain.tokenOut) === quote.id && assetRaw && quoteRaw;
   const usd = known ? tokenAmount(n, quote.id, quoteRaw) : undefined;
@@ -138,10 +141,11 @@ export function decisionOf(e: ChainEvent, botId: string, n: NetworkConfig): Deci
 }
 
 // Rebuild holdings from events. A hold benchmark keeps every deposit and withdrawal but never trades.
-function replay(n: NetworkConfig, events: ChainEvent[], price: number | null) {
+function replay(n: NetworkConfig, events: ChainEvent[], price: number | null, rates: Map<string, number> = new Map()) {
   const have = new Map<string, bigint>(), hold = new Map<string, bigint>(), unknown = new Set<string>();
   const add = (m: Map<string, bigint>, t: string, a: bigint) => m.set(t, (m.get(t) ?? 0n) + a);
-  const unitPrice = (t: string) => (t === n.tokens[1]?.id ? 1 : t === n.tokens[0]?.id ? price ?? NaN : (unknown.add(t), NaN));
+  const unitPrice = (t: string) => (t === n.tokens[1]?.id ? 1 : t === n.tokens[0]?.id ? price ?? NaN
+    : rates.has(t) ? rates.get(t)! * (price ?? NaN) : (unknown.add(t), NaN));
   const value = (m: Map<string, bigint>) => [...m].reduce((s, [t, a]) => s + (a === 0n ? 0 : tokenAmount(n, t, a.toString()) * unitPrice(t)), 0);
   const series: { value: number; hold: number }[] = [];
   let deposited = 0;
@@ -193,11 +197,20 @@ async function loadVault(n: NetworkConfig, v: VaultConfig, price: number | null)
   } catch (e) {
     errors.push(`balances: ${msg(e)}`);
   }
-  const r = replay(n, eventsRes, price);
+  // Staking tokens: today's redemption rate (the replay values past events at it too).
+  const rates = new Map<string, number>();
+  for (const t of n.tokens.filter(x => x.rate)) {
+    try {
+      rates.set(t.id, tokenAmount(n, n.tokens[0].id, await view<string>(n, t.id, t.rate!)));
+    } catch (e) {
+      errors.push(`${t.symbol} rate: ${msg(e)}`);
+    }
+  }
+  const r = replay(n, eventsRes, price, rates);
   if (r.unknown.length) errors.push(`no price for ${r.unknown.join(", ")}: left out of the valuation`);
   const value = bal.length
     ? bal.reduce((s, b) => s + [b.wallet, b.exchange, b.intents].reduce((x, raw) => x + tokenAmount(n, b.token, raw), 0)
-        * (b.token === n.tokens[1].id ? 1 : price ?? NaN), 0)
+        * (b.token === n.tokens[1].id ? 1 : rates.has(b.token) ? rates.get(b.token)! * (price ?? NaN) : price ?? NaN), 0)
     : null;
   const vv: VaultView = { botId: v.id, account: v.account, config, policy, usage, intents, balances: bal, events: eventsRes, price,
     deposited: r.deposited, value, replayValue: r.replayValue, holdValue: r.holdValue, errors };

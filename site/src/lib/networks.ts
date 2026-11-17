@@ -10,7 +10,8 @@ export const isNetwork = (x: unknown): x is NetworkId => NETWORK_IDS.includes(x 
 export const LIVE_NETWORK = "mainnet" as Exclude<NetworkId, "sim">;
 export const LIVE_LEAGUE = leagueFor(LIVE_NETWORK);
 
-export interface Token { id: string; symbol: string; decimals: number }
+/** `rate`: a liquid-staking token's view for its redemption rate (base units per whole token); valued at rate x price. */
+export interface Token { id: string; symbol: string; decimals: number; rate?: string }
 export interface VaultConfig { id: string; name: string; account: string; note: string }
 export interface NetworkConfig {
   id: Exclude<NetworkId, "sim">;
@@ -22,7 +23,7 @@ export interface NetworkConfig {
   intents?: string;     // NEAR Intents contract (on testnet: our own copy)
   mpc: string;          // chain signatures signer
   factory?: string;     // the locked vault factory
-  tokens: Token[];      // first is the traded asset, second the quote (USDC)
+  tokens: Token[];      // first is the traded asset, second the quote (USDC), then any staking token
   pool?: number;        // Rhea pool used for the reference price
   vaults: VaultConfig[];
 }
@@ -57,6 +58,7 @@ export const NETWORKS: Record<NetworkConfig["id"], NetworkConfig> = {
     tokens: [
       { id: "wrap.near", symbol: "wNEAR", decimals: 24 },
       { id: "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1", symbol: "USDC", decimals: 6 },
+      { id: "meta-pool.near", symbol: "stNEAR", decimals: 24, rate: "get_st_near_price" },
     ],
     pool: 4512,
     // Empty until deploy/mainnet/league/snapshot.json exists.
