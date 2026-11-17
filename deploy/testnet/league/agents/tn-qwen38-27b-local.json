@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794789000000,
-  "derived_sha256": "ce0549b085c848b97732adf4bdfcc1d31a66d87e8bc922233c09db3586ee56ce",
+  "as_of_ms": 1794875400000,
+  "derived_sha256": "609b8920f25406d143f7d6276d70e3e917c2135f0ec794499aa2465fefbb2dc6",
   "entry": {
     "account": "qwen38-27b-local.arena2.irontrade.testnet",
     "beyond_noise": false,
@@ -10,22 +10,132 @@
       "benchmark_rebalance_usd": 0.003318,
       "fill_vs_reference_pct": null,
       "fill_vs_reference_usd": 0,
-      "gas_near": 0.03878403,
-      "gas_usd": 0.14707917,
+      "gas_near": 0.04096235,
+      "gas_usd": 0.15398882,
       "neutralised_usd": 0,
       "traded_ref_usd": 0
     },
     "counts": {
-      "decisions": 196,
+      "decisions": 207,
       "failed": 0,
       "missed_slots": 0,
       "off_schedule": 0,
       "refusals": 0,
-      "skips": 196,
+      "skips": 207,
       "trades": 0
     },
-    "days": 17.52527137,
+    "days": 18.52527137,
     "decisions": [
+      {
+        "block_time_ms": 1794868555589,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "97e8f8504d8ce32e7d23a38ea36e6d5067cb259b0ffcd19d54c0a8207932e397",
+        "seq": 207,
+        "tx": "7gTyy4pW1tCbE45ZPsv5rrNvbNiHgza7NNALKYKubMG"
+      },
+      {
+        "block_time_ms": 1794861217861,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "27161a034fa316e4aa6976702aa656ec72ad93be8fa7328cf805042a2b09091e",
+        "seq": 206,
+        "tx": "HvfxYRpXuknRYYPdwZNhWRKfvvzM9BwQKrCfFuzCgFTQ"
+      },
+      {
+        "block_time_ms": 1794853806200,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "83983266a615b26ffc30a56950757c9fd1194b7acd86e7256b1bd069d84a650c",
+        "seq": 205,
+        "tx": "345bFeUB16gLkLBajLSeqfyaD2DN9M3VwoNKfnoqUNFH"
+      },
+      {
+        "block_time_ms": 1794846297197,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "fe8e0c95f6e40aa4a9e53442ebb559b35760334b638cbb25665b5a24c5853098",
+        "seq": 204,
+        "tx": "BYYeXFT39RTGFvavQ8rdTNGhFmxHXURNsx2Yuxu9Yj67"
+      },
+      {
+        "block_time_ms": 1794838567992,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "2a908494f1f13123751d19a54a1bc914d91c232ea7f97b033b0c73f3efe14c79",
+        "seq": 203,
+        "tx": "64By9kmFFCq9eRhxtLE2rrEQbAvQAKtLn6k8bXwU9Vdy"
+      },
+      {
+        "block_time_ms": 1794830686950,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "f0aabddf8207bb5dd9d57d82dddb6d6ba8f6cd3cd7698b49a01ac569be54f993",
+        "seq": 202,
+        "tx": "HXeFCBBLAANteLnb9h2wACmB1pDCYUx2gQqNr5HxCgJD"
+      },
+      {
+        "block_time_ms": 1794823306978,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "aee96af85273dcc05b4ac5721f29da4c51b63b38f8a0f32b1b70005ebd981947",
+        "seq": 201,
+        "tx": "GFg6Lsn4YkMsieGPLEXEqs1JtSeEUSHP28KaM9tiR757"
+      },
+      {
+        "block_time_ms": 1794815966350,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "b5a80f42bc2ea284d3f46831984d27b09d44622c3fd7b8f34a9c54aa9805a9f4",
+        "seq": 200,
+        "tx": "HoVR1yLGN5QXfi37PHdr6oDjF8kY57RaQHch9wQrjrnf"
+      },
+      {
+        "block_time_ms": 1794808609586,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "5d3eeb522b66ec5820bd37d77e6a4685f1d893d145d4942c20cd45f0706b0f11",
+        "seq": 199,
+        "tx": "cdTjYjjdnuaQaN7zD59jh6tCDygKtxg1j1CkLyaE9yF"
+      },
+      {
+        "block_time_ms": 1794801269848,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "69773c051889847500168fa0a28022e44aa9529e92b98b7df614177f9d9a2817",
+        "seq": 198,
+        "tx": "DNBPEXKsFSpiZed5nH7zmRgnE3XkGKLMA9zrJvpfkrVs"
+      },
+      {
+        "block_time_ms": 1794793899984,
+        "event": "skip",
+        "in_season": true,
+        "note": "model_error",
+        "on_schedule": null,
+        "receipt_hash": "b9ebab913f3c87e95664cad0dff7e52b3eb9575b39677fbe83fd46f363dd9fc7",
+        "seq": 197,
+        "tx": "HTjTzwUrpo2jVnvY63MpbrDfqWgmE48XMwyTimFTugUJ"
+      },
       {
         "block_time_ms": 1794786547634,
         "event": "skip",
@@ -1989,13 +2099,13 @@
     ],
     "description": "A self-hosted model with no attestation: harness and model are the operator's word.",
     "end": {
-      "price": 3.173,
-      "value_usd": 2.4865
+      "price": 3.139,
+      "value_usd": 2.4695
     },
-    "events_sha256": "9131277fdd0149e4ef44a7ff3dc1ad4ad92802a7cce8f1d2c170fc97740f2cba",
-    "funded_twr": -0.28277577,
+    "events_sha256": "2065cba9431783e292e5a63a18b2ffb59fbbf4904f718a9f821688ba1e9d2efa",
+    "funded_twr": -0.29046112,
     "harness": "Sledgit runner",
-    "hold_twr": -0.1426758,
+    "hold_twr": -0.14651271,
     "id": "tn-qwen38-27b-local",
     "inactive": false,
     "kind": "arena",
@@ -2011,15 +2121,15 @@
       "status": "genuine"
     },
     "range95": {
-      "hi": 0.04228733,
-      "lo": -0.15167945,
-      "n": 421
+      "hi": 0.04250264,
+      "lo": -0.15587362,
+      "n": 445
     },
     "ranked": true,
     "refusals_by_code": {},
     "season_seqs": [
       1,
-      196
+      207
     ],
     "series": [
       {
@@ -4549,25 +4659,169 @@
         "value": 1.79863482
       },
       {
-        "hold": 1.89640113,
-        "stake": 1.89811423,
-        "t": 1794789000000,
-        "value": 1.7832159
+        "hold": 1.89540263,
+        "stake": 1.89711561,
+        "t": 1794790800000,
+        "value": 1.78178158
+      },
+      {
+        "hold": 1.88591688,
+        "stake": 1.88761334,
+        "t": 1794794400000,
+        "value": 1.76815556
+      },
+      {
+        "hold": 1.9061365,
+        "stake": 1.90788098,
+        "t": 1794798000000,
+        "value": 1.7972005
+      },
+      {
+        "hold": 1.9041395,
+        "stake": 1.90588376,
+        "t": 1794801600000,
+        "value": 1.79433187
+      },
+      {
+        "hold": 1.89690038,
+        "stake": 1.89863292,
+        "t": 1794805200000,
+        "value": 1.78393306
+      },
+      {
+        "hold": 1.89365525,
+        "stake": 1.89538477,
+        "t": 1794808800000,
+        "value": 1.77927153
+      },
+      {
+        "hold": 1.89440413,
+        "stake": 1.89613935,
+        "t": 1794812400000,
+        "value": 1.78034727
+      },
+      {
+        "hold": 1.90064475,
+        "stake": 1.90239778,
+        "t": 1794816000000,
+        "value": 1.78931175
+      },
+      {
+        "hold": 1.89715,
+        "stake": 1.89889942,
+        "t": 1794819600000,
+        "value": 1.78429164
+      },
+      {
+        "hold": 1.89939663,
+        "stake": 1.9011551,
+        "t": 1794823200000,
+        "value": 1.78751886
+      },
+      {
+        "hold": 1.90189288,
+        "stake": 1.90366097,
+        "t": 1794826800000,
+        "value": 1.79110465
+      },
+      {
+        "hold": 1.90339063,
+        "stake": 1.90516616,
+        "t": 1794830400000,
+        "value": 1.79325613
+      },
+      {
+        "hold": 1.88641613,
+        "stake": 1.88815796,
+        "t": 1794834000000,
+        "value": 1.76887272
+      },
+      {
+        "hold": 1.88741463,
+        "stake": 1.88916272,
+        "t": 1794837600000,
+        "value": 1.77030704
+      },
+      {
+        "hold": 1.90339063,
+        "stake": 1.9051785,
+        "t": 1794841200000,
+        "value": 1.79325613
+      },
+      {
+        "hold": 1.8901605,
+        "stake": 1.89192282,
+        "t": 1794844800000,
+        "value": 1.77425141
+      },
+      {
+        "hold": 1.9021425,
+        "stake": 1.90393579,
+        "t": 1794848400000,
+        "value": 1.79146323
+      },
+      {
+        "hold": 1.889162,
+        "stake": 1.89093016,
+        "t": 1794852000000,
+        "value": 1.7728171
+      },
+      {
+        "hold": 1.89590187,
+        "stake": 1.89768929,
+        "t": 1794855600000,
+        "value": 1.78249874
+      },
+      {
+        "hold": 1.899147,
+        "stake": 1.90094584,
+        "t": 1794859200000,
+        "value": 1.78716028
+      },
+      {
+        "hold": 1.895153,
+        "stake": 1.89694687,
+        "t": 1794862800000,
+        "value": 1.781423
+      },
+      {
+        "hold": 1.89839813,
+        "stake": 1.90020344,
+        "t": 1794866400000,
+        "value": 1.78608454
+      },
+      {
+        "hold": 1.895153,
+        "stake": 1.89695501,
+        "t": 1794870000000,
+        "value": 1.781423
+      },
+      {
+        "hold": 1.893156,
+        "stake": 1.89495752,
+        "t": 1794873600000,
+        "value": 1.77855437
+      },
+      {
+        "hold": 1.88791388,
+        "stake": 1.88970544,
+        "t": 1794875400000,
+        "value": 1.7710242
       }
     ],
-    "stake_twr": -0.14190134,
+    "stake_twr": -0.14570278,
     "start": {
       "price": 4.424,
       "time_ms": 1793274816554,
       "value_usd": 2.212
     },
-    "strategy_sha256": null,
-    "twr": -0.19384453,
+    "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
+    "twr": -0.19935615,
     "unranked_reason": null,
-    "vs_funded": 0.12399364,
-    "vs_hold": -0.05968422,
-    "vs_hold_after_gas": -0.10807555,
-    "vs_stake": -0.06053289
+    "vs_funded": 0.12840025,
+    "vs_hold": -0.06191473,
+    "vs_hold_after_gas": -0.11266129,
+    "vs_stake": -0.0628041
   },
   "events": [
     {
@@ -6989,6 +7243,138 @@
       "event": "skip",
       "receipt_id": "AzPRj9MtAwb3PkVjsBj5zE5A8kkGnSzHWKcujWNcZjX9",
       "tx": "3rVJnHD2Tj6szuvEx7MpfK3SAVUeDFKg9MoErpKkD39o"
+    },
+    {
+      "block_height": 277887147,
+      "block_time_ms": 1794793899984,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "b9ebab913f3c87e95664cad0dff7e52b3eb9575b39677fbe83fd46f363dd9fc7",
+        "seq": 197
+      },
+      "event": "skip",
+      "receipt_id": "9MLdscaSMJbwmGYrn7FvjBa3T5M1Z4iQGYCmNVDC68uU",
+      "tx": "HTjTzwUrpo2jVnvY63MpbrDfqWgmE48XMwyTimFTugUJ"
+    },
+    {
+      "block_height": 277899821,
+      "block_time_ms": 1794801269848,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "69773c051889847500168fa0a28022e44aa9529e92b98b7df614177f9d9a2817",
+        "seq": 198
+      },
+      "event": "skip",
+      "receipt_id": "B3HGJanDcP9dZ6BJQ3zbcjG454CinL1fZNd7VqMh9kx5",
+      "tx": "DNBPEXKsFSpiZed5nH7zmRgnE3XkGKLMA9zrJvpfkrVs"
+    },
+    {
+      "block_height": 277912370,
+      "block_time_ms": 1794808609586,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "5d3eeb522b66ec5820bd37d77e6a4685f1d893d145d4942c20cd45f0706b0f11",
+        "seq": 199
+      },
+      "event": "skip",
+      "receipt_id": "CFKF6kQyjKDwkKyEGjAQP6JhkTcXaJX6aNz7wnfPc2d6",
+      "tx": "cdTjYjjdnuaQaN7zD59jh6tCDygKtxg1j1CkLyaE9yF"
+    },
+    {
+      "block_height": 277924991,
+      "block_time_ms": 1794815966350,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "b5a80f42bc2ea284d3f46831984d27b09d44622c3fd7b8f34a9c54aa9805a9f4",
+        "seq": 200
+      },
+      "event": "skip",
+      "receipt_id": "SNJDpNaqAEAqV9kFxTmhBE5YUEJUK3cHjYnPdmJmwmt",
+      "tx": "HoVR1yLGN5QXfi37PHdr6oDjF8kY57RaQHch9wQrjrnf"
+    },
+    {
+      "block_height": 277937577,
+      "block_time_ms": 1794823306978,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "aee96af85273dcc05b4ac5721f29da4c51b63b38f8a0f32b1b70005ebd981947",
+        "seq": 201
+      },
+      "event": "skip",
+      "receipt_id": "AMbrXXoL3afsgysRwZkMUJ4z1pxFSziD6RBYj9degsFL",
+      "tx": "GFg6Lsn4YkMsieGPLEXEqs1JtSeEUSHP28KaM9tiR757"
+    },
+    {
+      "block_height": 277950041,
+      "block_time_ms": 1794830686950,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "f0aabddf8207bb5dd9d57d82dddb6d6ba8f6cd3cd7698b49a01ac569be54f993",
+        "seq": 202
+      },
+      "event": "skip",
+      "receipt_id": "DrTXfg5eLW7T249oEUAd2btnVckmy54TqiJ5dVhZnUKp",
+      "tx": "HXeFCBBLAANteLnb9h2wACmB1pDCYUx2gQqNr5HxCgJD"
+    },
+    {
+      "block_height": 277963400,
+      "block_time_ms": 1794838567992,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "2a908494f1f13123751d19a54a1bc914d91c232ea7f97b033b0c73f3efe14c79",
+        "seq": 203
+      },
+      "event": "skip",
+      "receipt_id": "3BY5GCCszGPwY1oLGCq95jwzJ2FS42gXmzAvY2Wcnm5N",
+      "tx": "64By9kmFFCq9eRhxtLE2rrEQbAvQAKtLn6k8bXwU9Vdy"
+    },
+    {
+      "block_height": 277976482,
+      "block_time_ms": 1794846297197,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "fe8e0c95f6e40aa4a9e53442ebb559b35760334b638cbb25665b5a24c5853098",
+        "seq": 204
+      },
+      "event": "skip",
+      "receipt_id": "9S3hzTu4BgtghimZxnuEoyXErjptdmJABHWjyucSkbwV",
+      "tx": "BYYeXFT39RTGFvavQ8rdTNGhFmxHXURNsx2Yuxu9Yj67"
+    },
+    {
+      "block_height": 277988925,
+      "block_time_ms": 1794853806200,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "83983266a615b26ffc30a56950757c9fd1194b7acd86e7256b1bd069d84a650c",
+        "seq": 205
+      },
+      "event": "skip",
+      "receipt_id": "Boa5keTvXeJKjnFaPXfEmxPkJ6LWYXPDWzRe3wmGK5kW",
+      "tx": "345bFeUB16gLkLBajLSeqfyaD2DN9M3VwoNKfnoqUNFH"
+    },
+    {
+      "block_height": 278000947,
+      "block_time_ms": 1794861217861,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "27161a034fa316e4aa6976702aa656ec72ad93be8fa7328cf805042a2b09091e",
+        "seq": 206
+      },
+      "event": "skip",
+      "receipt_id": "H3BHpiP2476cHcfQ7e8BdHJwUaqk1vCRipqc6uSpym7j",
+      "tx": "HvfxYRpXuknRYYPdwZNhWRKfvvzM9BwQKrCfFuzCgFTQ"
+    },
+    {
+      "block_height": 278012990,
+      "block_time_ms": 1794868555589,
+      "data": {
+        "note": "model_error",
+        "receipt_hash": "97e8f8504d8ce32e7d23a38ea36e6d5067cb259b0ffcd19d54c0a8207932e397",
+        "seq": 207
+      },
+      "event": "skip",
+      "receipt_id": "7EHGpUUUvzLnDFzyoN45j97hQvWyRrr3TqTJEhZaMKZN",
+      "tx": "7gTyy4pW1tCbE45ZPsv5rrNvbNiHgza7NNALKYKubMG"
     }
   ],
   "network": "testnet",
@@ -7015,7 +7401,7 @@
       "mpc_id": "v1.signer-prod.testnet",
       "owner_id": "it1793205219-owner.testnet",
       "proposed_owner": null,
-      "seq": 196,
+      "seq": 208,
       "version": "0.1.0"
     },
     "intents": {
@@ -7058,11 +7444,11 @@
       ]
     },
     "reconciliation": {
-      "events_replayed": 199,
+      "events_replayed": 211,
       "status": "ok"
     },
     "usage": {
-      "hour": "498552",
+      "hour": "498576",
       "spent": [],
       "trades": 0
     }

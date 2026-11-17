@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794789000000,
-  "derived_sha256": "ce0549b085c848b97732adf4bdfcc1d31a66d87e8bc922233c09db3586ee56ce",
+  "as_of_ms": 1794875400000,
+  "derived_sha256": "609b8920f25406d143f7d6276d70e3e917c2135f0ec794499aa2465fefbb2dc6",
   "entry": {
     "account": "qwen25-14b-local.arena2.irontrade.testnet",
     "beyond_noise": false,
@@ -10,22 +10,132 @@
       "benchmark_rebalance_usd": 0.0033165,
       "fill_vs_reference_pct": 0.02209308,
       "fill_vs_reference_usd": 0.18898789,
-      "gas_near": 0.06868949,
-      "gas_usd": 0.26951278,
+      "gas_near": 0.07096498,
+      "gas_usd": 0.27673044,
       "neutralised_usd": 2.61280863,
       "traded_ref_usd": 8.55416749
     },
     "counts": {
-      "decisions": 193,
+      "decisions": 204,
       "failed": 0,
       "missed_slots": 0,
       "off_schedule": 0,
       "refusals": 0,
-      "skips": 186,
+      "skips": 197,
       "trades": 7
     },
-    "days": 17.52594007,
+    "days": 18.52594007,
     "decisions": [
+      {
+        "block_time_ms": 1794868546423,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "d5abafa39d4a42012c1d6b79c8c617c11debcbd48e0f5c9b7c6649b118e3b9a1",
+        "seq": 204,
+        "tx": "BuuQ7nt5ggsNymKAXG7TtU4utL61keTCcmPW5fLWmkaa"
+      },
+      {
+        "block_time_ms": 1794861208849,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "b4c1de7a5e792c495c768e3f431833d9be28553c4a2a045e0969a32dda16cd1b",
+        "seq": 203,
+        "tx": "AcAtq4pKddzNpfDa8QUHLHTrXpwA16m8JrFQQvgv5iNC"
+      },
+      {
+        "block_time_ms": 1794853788496,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "35f0150240722e2d344f88786ef94cedd7e6aa470045267f6a8ac5fef7dd0123",
+        "seq": 202,
+        "tx": "AFB3op3EELJ1xWL5M14hstXfN2FwpMuAykmiqccVBGfu"
+      },
+      {
+        "block_time_ms": 1794846273522,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "2f59be89e8ac12aecbb974da8b38dcd0bb93daf8e81fa34ea8fdee94478f35cd",
+        "seq": 201,
+        "tx": "DqUL3T1g3uvrfW9wmbDTX6vpifwKL6nVAezdjz43mjCg"
+      },
+      {
+        "block_time_ms": 1794838409798,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "e74676a5518ec7ae5d72b9d3daaebd440ca33a943aefdf8291401a6bfb63b9a1",
+        "seq": 200,
+        "tx": "BH5YnaZkX3q1f1PmtC4o1sjca1CE6spkGvTn48jxrr9V"
+      },
+      {
+        "block_time_ms": 1794830652338,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "d4d3fad7d80c2aec2df456bdf3605d6e816997e9292067d492b3605b49ff47ca",
+        "seq": 199,
+        "tx": "7jgtesDqDS9mmwcqbdE8whYgGhSQfjnByTJhiiyhjb8Y"
+      },
+      {
+        "block_time_ms": 1794823298997,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "879cf4fe9624510b2f7af3af6a0b2a8fe913f38f46c5898b73b0fa326d7368a3",
+        "seq": 198,
+        "tx": "AHowxvhCpGZCpr9EAoMm2d2kPWn2VQZ2wUn8W4gVkrjC"
+      },
+      {
+        "block_time_ms": 1794815957237,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "eefe809d0f6ce18365bdb9b375513b79a5424c597398308978ef4bfb2ad31acb",
+        "seq": 197,
+        "tx": "9EBgqe3Uh86BNLXYne3ehDizHnBLU2reke1w7kXZ2JTj"
+      },
+      {
+        "block_time_ms": 1794808601728,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "aeb7f378f5a1f33d3617b122dc41fe3cab25a2e24aec9de445475a51bab8749e",
+        "seq": 196,
+        "tx": "WGDvigrLPq4orrPVcEzLaX1x3PY4MnHn3DoEyMRuTnW"
+      },
+      {
+        "block_time_ms": 1794801262334,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "d4dec6149a3077e1c3201075bbcc4507a06d344c9e2aebdbc0dc40b468242639",
+        "seq": 195,
+        "tx": "29oQ9AqjQfKmq2kPmXze4L8gRY1upRjPTprGhbmDtNh3"
+      },
+      {
+        "block_time_ms": 1794793891891,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "75054eb2c49bcf0dd3bfcb6b83f8f41a852413de95553289b7b3c4c33ea902b4",
+        "seq": 194,
+        "tx": "APam5D9nAXgQgtBRUAmo8pV3U3nkwZJ1zhorF9SEc9fx"
+      },
       {
         "block_time_ms": 1794786539328,
         "event": "skip",
@@ -2113,13 +2223,13 @@
     ],
     "description": "A self-hosted model with no attestation: harness and model are the operator's word.",
     "end": {
-      "price": 3.173,
-      "value_usd": 2.36134147
+      "price": 3.139,
+      "value_usd": 2.34779751
     },
-    "events_sha256": "b110529727dfe38c79a53aa71415c704d3e3f2102d57faa45603e4cd1d069ad7",
-    "funded_twr": -0.28245138,
+    "events_sha256": "90672e2e66203d0bf88af799b788a2c3a3dc5f095298c503e798429f3e8ebf17",
+    "funded_twr": -0.29014021,
     "harness": "Sledgit runner",
-    "hold_twr": -0.14251385,
+    "hold_twr": -0.1463525,
     "id": "tn-qwen25-14b-local",
     "inactive": false,
     "kind": "arena",
@@ -2135,15 +2245,15 @@
       "status": "genuine"
     },
     "range95": {
-      "hi": -0.68588274,
-      "lo": -0.76171216,
-      "n": 414
+      "hi": -0.68611505,
+      "lo": -0.7621386,
+      "n": 438
     },
     "ranked": true,
     "refusals_by_code": {},
     "season_seqs": [
       1,
-      193
+      204
     ],
     "series": [
       {
@@ -4673,25 +4783,169 @@
         "value": 0.52245838
       },
       {
-        "hold": 1.89590187,
-        "stake": 1.89761505,
-        "t": 1794789000000,
-        "value": 0.51869577
+        "hold": 1.89490338,
+        "stake": 1.89661643,
+        "t": 1794790800000,
+        "value": 0.51834576
+      },
+      {
+        "hold": 1.88541763,
+        "stake": 1.88711416,
+        "t": 1794794400000,
+        "value": 0.51502066
+      },
+      {
+        "hold": 1.90563725,
+        "stake": 1.9073818,
+        "t": 1794798000000,
+        "value": 0.52210837
+      },
+      {
+        "hold": 1.90364025,
+        "stake": 1.90538457,
+        "t": 1794801600000,
+        "value": 0.52140835
+      },
+      {
+        "hold": 1.89640113,
+        "stake": 1.89813374,
+        "t": 1794805200000,
+        "value": 0.51887077
+      },
+      {
+        "hold": 1.893156,
+        "stake": 1.89488558,
+        "t": 1794808800000,
+        "value": 0.51773324
+      },
+      {
+        "hold": 1.89390488,
+        "stake": 1.89564017,
+        "t": 1794812400000,
+        "value": 0.51799575
+      },
+      {
+        "hold": 1.9001455,
+        "stake": 1.9018986,
+        "t": 1794816000000,
+        "value": 0.52018331
+      },
+      {
+        "hold": 1.89665075,
+        "stake": 1.89840024,
+        "t": 1794819600000,
+        "value": 0.51895827
+      },
+      {
+        "hold": 1.89889738,
+        "stake": 1.90065591,
+        "t": 1794823200000,
+        "value": 0.5197458
+      },
+      {
+        "hold": 1.90139363,
+        "stake": 1.90316179,
+        "t": 1794826800000,
+        "value": 0.52062082
+      },
+      {
+        "hold": 1.90289138,
+        "stake": 1.90466697,
+        "t": 1794830400000,
+        "value": 0.52114584
+      },
+      {
+        "hold": 1.88591688,
+        "stake": 1.88765878,
+        "t": 1794834000000,
+        "value": 0.51519566
+      },
+      {
+        "hold": 1.88691538,
+        "stake": 1.88866353,
+        "t": 1794837600000,
+        "value": 0.51554567
+      },
+      {
+        "hold": 1.90289138,
+        "stake": 1.90467931,
+        "t": 1794841200000,
+        "value": 0.52114584
+      },
+      {
+        "hold": 1.88966125,
+        "stake": 1.89142363,
+        "t": 1794844800000,
+        "value": 0.5165082
+      },
+      {
+        "hold": 1.90164325,
+        "stake": 1.90343661,
+        "t": 1794848400000,
+        "value": 0.52070833
+      },
+      {
+        "hold": 1.88866275,
+        "stake": 1.89043097,
+        "t": 1794852000000,
+        "value": 0.51615819
+      },
+      {
+        "hold": 1.89540263,
+        "stake": 1.89719011,
+        "t": 1794855600000,
+        "value": 0.51852076
+      },
+      {
+        "hold": 1.89864775,
+        "stake": 1.90044665,
+        "t": 1794859200000,
+        "value": 0.51965829
+      },
+      {
+        "hold": 1.89465375,
+        "stake": 1.89644768,
+        "t": 1794862800000,
+        "value": 0.51825825
+      },
+      {
+        "hold": 1.89789888,
+        "stake": 1.89970426,
+        "t": 1794866400000,
+        "value": 0.51939579
+      },
+      {
+        "hold": 1.89465375,
+        "stake": 1.89645583,
+        "t": 1794870000000,
+        "value": 0.51825825
+      },
+      {
+        "hold": 1.89265675,
+        "stake": 1.89445834,
+        "t": 1794873600000,
+        "value": 0.51755823
+      },
+      {
+        "hold": 1.88741463,
+        "stake": 1.88920626,
+        "t": 1794875400000,
+        "value": 0.51572068
       }
     ],
-    "stake_twr": -0.14173901,
+    "stake_twr": -0.14554217,
     "start": {
       "price": 4.422,
       "time_ms": 1793274758778,
       "value_usd": 2.211
     },
-    "strategy_sha256": null,
-    "twr": -0.76540219,
+    "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
+    "twr": -0.76674777,
     "unranked_reason": null,
-    "vs_funded": -0.67305656,
-    "vs_hold": -0.72641212,
-    "vs_hold_after_gas": -0.75189557,
-    "vs_stake": -0.72665912
+    "vs_funded": -0.67141084,
+    "vs_hold": -0.72675814,
+    "vs_hold_after_gas": -0.75296584,
+    "vs_stake": -0.72701727
   },
   "events": [
     {
@@ -7259,6 +7513,138 @@
       "event": "skip",
       "receipt_id": "9iwy3GptSwA5YwZpsWiptcUibT7Gpdg4CcaUJ3RGErZV",
       "tx": "BrPrDwgYsEPHwFHipeeXmSfoXen5es4Sczjc2L4AUMYx"
+    },
+    {
+      "block_height": 277887132,
+      "block_time_ms": 1794793891891,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "75054eb2c49bcf0dd3bfcb6b83f8f41a852413de95553289b7b3c4c33ea902b4",
+        "seq": 194
+      },
+      "event": "skip",
+      "receipt_id": "3KkY4jvW2zdRw23Nk3LVzk1sdBfNRbSXQPA1thsHEj75",
+      "tx": "APam5D9nAXgQgtBRUAmo8pV3U3nkwZJ1zhorF9SEc9fx"
+    },
+    {
+      "block_height": 277899807,
+      "block_time_ms": 1794801262334,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "d4dec6149a3077e1c3201075bbcc4507a06d344c9e2aebdbc0dc40b468242639",
+        "seq": 195
+      },
+      "event": "skip",
+      "receipt_id": "7FeMkyznM65XpiqsrQGD2CZxxnnVSSBGWry6r8cSe41G",
+      "tx": "29oQ9AqjQfKmq2kPmXze4L8gRY1upRjPTprGhbmDtNh3"
+    },
+    {
+      "block_height": 277912357,
+      "block_time_ms": 1794808601728,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "aeb7f378f5a1f33d3617b122dc41fe3cab25a2e24aec9de445475a51bab8749e",
+        "seq": 196
+      },
+      "event": "skip",
+      "receipt_id": "9ZxAX7dHh61MMtSR5AcC9RLiq5fX2eoxLbx75PfCrE6Z",
+      "tx": "WGDvigrLPq4orrPVcEzLaX1x3PY4MnHn3DoEyMRuTnW"
+    },
+    {
+      "block_height": 277924976,
+      "block_time_ms": 1794815957237,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "eefe809d0f6ce18365bdb9b375513b79a5424c597398308978ef4bfb2ad31acb",
+        "seq": 197
+      },
+      "event": "skip",
+      "receipt_id": "E2uaCsKhDAyzrQtbCVJ6pR3QfkP7GTrizMcscBj3CGAX",
+      "tx": "9EBgqe3Uh86BNLXYne3ehDizHnBLU2reke1w7kXZ2JTj"
+    },
+    {
+      "block_height": 277937562,
+      "block_time_ms": 1794823298997,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "879cf4fe9624510b2f7af3af6a0b2a8fe913f38f46c5898b73b0fa326d7368a3",
+        "seq": 198
+      },
+      "event": "skip",
+      "receipt_id": "7jHvV1Pi22KdG6w7gkSpt9bH2yd48fBov2gruYxTK7HX",
+      "tx": "AHowxvhCpGZCpr9EAoMm2d2kPWn2VQZ2wUn8W4gVkrjC"
+    },
+    {
+      "block_height": 277949984,
+      "block_time_ms": 1794830652338,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "d4d3fad7d80c2aec2df456bdf3605d6e816997e9292067d492b3605b49ff47ca",
+        "seq": 199
+      },
+      "event": "skip",
+      "receipt_id": "7Q4ghr7V2YLGHCXQ419zVCoCaDTvSzCKD4denzzvFc1k",
+      "tx": "7jgtesDqDS9mmwcqbdE8whYgGhSQfjnByTJhiiyhjb8Y"
+    },
+    {
+      "block_height": 277963136,
+      "block_time_ms": 1794838409798,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "e74676a5518ec7ae5d72b9d3daaebd440ca33a943aefdf8291401a6bfb63b9a1",
+        "seq": 200
+      },
+      "event": "skip",
+      "receipt_id": "6NJZ4Y9KKLtwqAg1eQt6kKxCSxP5HgHdkaFmc92dNfd3",
+      "tx": "BH5YnaZkX3q1f1PmtC4o1sjca1CE6spkGvTn48jxrr9V"
+    },
+    {
+      "block_height": 277976443,
+      "block_time_ms": 1794846273522,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "2f59be89e8ac12aecbb974da8b38dcd0bb93daf8e81fa34ea8fdee94478f35cd",
+        "seq": 201
+      },
+      "event": "skip",
+      "receipt_id": "CMqTNCnuHgFKv2yN8o5d1srS4AEmnirvJ591A3bHe9gF",
+      "tx": "DqUL3T1g3uvrfW9wmbDTX6vpifwKL6nVAezdjz43mjCg"
+    },
+    {
+      "block_height": 277988896,
+      "block_time_ms": 1794853788496,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "35f0150240722e2d344f88786ef94cedd7e6aa470045267f6a8ac5fef7dd0123",
+        "seq": 202
+      },
+      "event": "skip",
+      "receipt_id": "ETKC9cdJreezNmNeCckhCDMJJpDfbm9R7bGGk75LxsHB",
+      "tx": "AFB3op3EELJ1xWL5M14hstXfN2FwpMuAykmiqccVBGfu"
+    },
+    {
+      "block_height": 278000932,
+      "block_time_ms": 1794861208849,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "b4c1de7a5e792c495c768e3f431833d9be28553c4a2a045e0969a32dda16cd1b",
+        "seq": 203
+      },
+      "event": "skip",
+      "receipt_id": "DjYcorjBRt26fapnr8kaJT7VSHA4LfCvbCiJC4YxxmSv",
+      "tx": "AcAtq4pKddzNpfDa8QUHLHTrXpwA16m8JrFQQvgv5iNC"
+    },
+    {
+      "block_height": 278012975,
+      "block_time_ms": 1794868546423,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "d5abafa39d4a42012c1d6b79c8c617c11debcbd48e0f5c9b7c6649b118e3b9a1",
+        "seq": 204
+      },
+      "event": "skip",
+      "receipt_id": "3pAfdMktfLKyge8Cy6QLn7xVsPoEuesaNYT1sRx6Qoq4",
+      "tx": "BuuQ7nt5ggsNymKAXG7TtU4utL61keTCcmPW5fLWmkaa"
     }
   ],
   "network": "testnet",
@@ -7285,7 +7671,7 @@
       "mpc_id": "v1.signer-prod.testnet",
       "owner_id": "it1793205219-owner.testnet",
       "proposed_owner": null,
-      "seq": 193,
+      "seq": 205,
       "version": "0.1.0"
     },
     "intents": {
@@ -7328,11 +7714,11 @@
       ]
     },
     "reconciliation": {
-      "events_replayed": 203,
+      "events_replayed": 215,
       "status": "ok"
     },
     "usage": {
-      "hour": "498552",
+      "hour": "498576",
       "spent": [
         [
           "wrap.testnet",

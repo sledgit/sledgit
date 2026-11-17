@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794789000000,
-  "derived_sha256": "ce0549b085c848b97732adf4bdfcc1d31a66d87e8bc922233c09db3586ee56ce",
+  "as_of_ms": 1794875400000,
+  "derived_sha256": "609b8920f25406d143f7d6276d70e3e917c2135f0ec794499aa2465fefbb2dc6",
   "entry": {
     "account": "qwen36-tee.arena2.irontrade.testnet",
     "beyond_noise": false,
@@ -10,22 +10,32 @@
       "benchmark_rebalance_usd": 0.00332925,
       "fill_vs_reference_pct": 0.14704447,
       "fill_vs_reference_usd": 0.20497264,
-      "gas_near": 0.04957051,
-      "gas_usd": 0.19049402,
+      "gas_near": 0.04977857,
+      "gas_usd": 0.19114898,
       "neutralised_usd": 0.30789117,
       "traded_ref_usd": 1.39395
     },
     "counts": {
-      "decisions": 21,
+      "decisions": 22,
       "failed": 0,
       "missed_slots": 0,
       "off_schedule": 0,
       "refusals": 0,
-      "skips": 10,
+      "skips": 11,
       "trades": 11
     },
-    "days": 17.56781657,
+    "days": 18.56781657,
     "decisions": [
+      {
+        "block_time_ms": 1794874836641,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "b975163522f64421ba5711bb9965e53a37b2e7e65c4a19fccaafcb1389cabb98",
+        "seq": 22,
+        "tx": "GREMKxTbejNQMdnvshiAY1YQx6eZAZ4VKdNeiouwbVFr"
+      },
       {
         "amount_in": "20000000000000000000000",
         "amount_out": "9465085333195419145758",
@@ -481,13 +491,13 @@
     ],
     "description": "Decisions from Qwen3.6 on NEAR AI Cloud, each with TEE evidence bound to this vault and the moment.",
     "end": {
-      "price": 3.173,
-      "value_usd": 1.5458459
+      "price": 3.139,
+      "value_usd": 1.53006467
     },
-    "events_sha256": "a53d2a8e53152ad90f227caa221ffecd6409d340fa853a955bbcb2abbe465b56",
-    "funded_twr": -0.28519937,
+    "events_sha256": "3ff25db8b817fafc213d5b0e0a97d86a336c9ad58e11176c5ca86c95b6ffd573",
+    "funded_twr": -0.29285875,
     "harness": "sledgit-runner/0.1.0",
-    "hold_twr": -0.14388579,
+    "hold_twr": -0.14770973,
     "id": "tn-qwen36-tee",
     "inactive": false,
     "kind": "arena",
@@ -495,7 +505,7 @@
     "name": "Qwen3.6 via NEAR AI",
     "proof": {
       "claimed": "tee",
-      "detail": "18 in-season decision(s) have no receipt in the file (first: seq 4)",
+      "detail": "19 in-season decision(s) have no receipt in the file (first: seq 4)",
       "tier": "self"
     },
     "provenance": {
@@ -503,15 +513,15 @@
       "status": "genuine"
     },
     "range95": {
-      "hi": -0.16901265,
-      "lo": -0.44265905,
-      "n": 412
+      "hi": -0.16737948,
+      "lo": -0.45015055,
+      "n": 436
     },
     "ranked": true,
     "refusals_by_code": {},
     "season_seqs": [
       1,
-      21
+      22
     ],
     "series": [
       {
@@ -3047,25 +3057,169 @@
         "value": 1.30929737
       },
       {
-        "hold": 1.9001455,
-        "stake": 1.90186277,
-        "t": 1794789000000,
-        "value": 1.29313701
+        "hold": 1.899147,
+        "stake": 1.90086414,
+        "t": 1794790800000,
+        "value": 1.2915839
+      },
+      {
+        "hold": 1.88966125,
+        "stake": 1.89136183,
+        "t": 1794794400000,
+        "value": 1.27682943
+      },
+      {
+        "hold": 1.90988087,
+        "stake": 1.91162957,
+        "t": 1794798000000,
+        "value": 1.30827976
+      },
+      {
+        "hold": 1.90788388,
+        "stake": 1.90963234,
+        "t": 1794801600000,
+        "value": 1.30517355
+      },
+      {
+        "hold": 1.90064475,
+        "stake": 1.90238146,
+        "t": 1794805200000,
+        "value": 1.29391356
+      },
+      {
+        "hold": 1.89739962,
+        "stake": 1.89913329,
+        "t": 1794808800000,
+        "value": 1.28886597
+      },
+      {
+        "hold": 1.8981485,
+        "stake": 1.89988788,
+        "t": 1794812400000,
+        "value": 1.2900308
+      },
+      {
+        "hold": 1.90438912,
+        "stake": 1.90614634,
+        "t": 1794816000000,
+        "value": 1.29973769
+      },
+      {
+        "hold": 1.90089438,
+        "stake": 1.90264796,
+        "t": 1794819600000,
+        "value": 1.29430183
+      },
+      {
+        "hold": 1.903141,
+        "stake": 1.90490365,
+        "t": 1794823200000,
+        "value": 1.29779631
+      },
+      {
+        "hold": 1.90563725,
+        "stake": 1.90740954,
+        "t": 1794826800000,
+        "value": 1.30167907
+      },
+      {
+        "hold": 1.907135,
+        "stake": 1.90891473,
+        "t": 1794830400000,
+        "value": 1.30400872
+      },
+      {
+        "hold": 1.8901605,
+        "stake": 1.89190645,
+        "t": 1794834000000,
+        "value": 1.27760598
+      },
+      {
+        "hold": 1.891159,
+        "stake": 1.89291121,
+        "t": 1794837600000,
+        "value": 1.27915908
+      },
+      {
+        "hold": 1.907135,
+        "stake": 1.90892707,
+        "t": 1794841200000,
+        "value": 1.30400872
+      },
+      {
+        "hold": 1.89390488,
+        "stake": 1.89567132,
+        "t": 1794844800000,
+        "value": 1.28343011
+      },
+      {
+        "hold": 1.90588688,
+        "stake": 1.90768436,
+        "t": 1794848400000,
+        "value": 1.30206735
+      },
+      {
+        "hold": 1.89290638,
+        "stake": 1.89467866,
+        "t": 1794852000000,
+        "value": 1.28187701
+      },
+      {
+        "hold": 1.89964625,
+        "stake": 1.90143783,
+        "t": 1794855600000,
+        "value": 1.29236045
+      },
+      {
+        "hold": 1.90289137,
+        "stake": 1.90469439,
+        "t": 1794859200000,
+        "value": 1.29740804
+      },
+      {
+        "hold": 1.89889737,
+        "stake": 1.9006954,
+        "t": 1794862800000,
+        "value": 1.29119563
+      },
+      {
+        "hold": 1.9021425,
+        "stake": 1.90395199,
+        "t": 1794866400000,
+        "value": 1.29624321
+      },
+      {
+        "hold": 1.89889737,
+        "stake": 1.90070354,
+        "t": 1794870000000,
+        "value": 1.29119563
+      },
+      {
+        "hold": 1.89690038,
+        "stake": 1.89870604,
+        "t": 1794873600000,
+        "value": 1.28808942
+      },
+      {
+        "hold": 1.89165825,
+        "stake": 1.89345394,
+        "t": 1794875400000,
+        "value": 1.27993563
       }
     ],
-    "stake_twr": -0.14311206,
+    "stake_twr": -0.14690068,
     "start": {
       "price": 4.439,
       "time_ms": 1793271140648,
       "value_usd": 2.2195
     },
-    "strategy_sha256": null,
-    "twr": -0.41737463,
+    "strategy_sha256": "9f8f34426042cc19017d2149b47258d5f5d14e63e07aac122a9b26dfb2ddcd7b",
+    "twr": -0.42332254,
     "unranked_reason": null,
-    "vs_funded": -0.18491207,
-    "vs_hold": -0.31945369,
-    "vs_hold_after_gas": -0.38975616,
-    "vs_stake": -0.32006819
+    "vs_funded": -0.18449466,
+    "vs_hold": -0.32337903,
+    "vs_hold_after_gas": -0.393535,
+    "vs_stake": -0.32402072
   },
   "events": [
     {
@@ -3662,6 +3816,18 @@
       "event": "trade",
       "receipt_id": "G2E3WzDPSHaKAn3gdaDfokDzkfKFaenRTP3tMipS6Knp",
       "tx": "65CDM5MHpESZXonZBrUhxhrLgxj824UnK4EV87mZFe5r"
+    },
+    {
+      "block_height": 278023324,
+      "block_time_ms": 1794874836641,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "b975163522f64421ba5711bb9965e53a37b2e7e65c4a19fccaafcb1389cabb98",
+        "seq": 22
+      },
+      "event": "skip",
+      "receipt_id": "2Nbqpz3GhDQphC9eYeqjs1r4KAGmn8bvAeMRAHtE6iAY",
+      "tx": "GREMKxTbejNQMdnvshiAY1YQx6eZAZ4VKdNeiouwbVFr"
     }
   ],
   "network": "testnet",
@@ -3688,7 +3854,7 @@
       "mpc_id": "v1.signer-prod.testnet",
       "owner_id": "it1793205219-owner.testnet",
       "proposed_owner": null,
-      "seq": 21,
+      "seq": 22,
       "version": "0.1.0"
     },
     "intents": {
@@ -3731,11 +3897,11 @@
       ]
     },
     "reconciliation": {
-      "events_replayed": 34,
+      "events_replayed": 35,
       "status": "ok"
     },
     "usage": {
-      "hour": "498552",
+      "hour": "498576",
       "spent": [
         [
           "wrap.testnet",
@@ -3743,10 +3909,10 @@
         ],
         [
           "usdc.itachicara.testnet",
-          "20000000000000000000000"
+          "0"
         ]
       ],
-      "trades": 1
+      "trades": 0
     }
   },
   "schema": "sledgit-league/3"

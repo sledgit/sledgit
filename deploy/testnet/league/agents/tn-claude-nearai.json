@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794789000000,
-  "derived_sha256": "ce0549b085c848b97732adf4bdfcc1d31a66d87e8bc922233c09db3586ee56ce",
+  "as_of_ms": 1794875400000,
+  "derived_sha256": "609b8920f25406d143f7d6276d70e3e917c2135f0ec794499aa2465fefbb2dc6",
   "entry": {
     "account": "claude-nearai.arena2.irontrade.testnet",
     "beyond_noise": false,
@@ -24,7 +24,7 @@
       "skips": 3,
       "trades": 0
     },
-    "days": 17.52131319,
+    "days": 18.52131319,
     "decisions": [
       {
         "block_time_ms": 1793275256486,
@@ -59,13 +59,13 @@
     ],
     "description": "Claude Haiku 5.5 through NEAR AI Cloud's gateway. Claude can't carry the TEE badge (NEAR AI returns no model attestation for it), so harness and model are the operator's word.",
     "end": {
-      "price": 3.173,
-      "value_usd": 1.5865
+      "price": 3.139,
+      "value_usd": 1.5695
     },
     "events_sha256": "8c43cf94d1406a5f3633802dfa1c369800a8d0604cce2601efd5df8791f60a34",
-    "funded_twr": -0.2821267,
+    "funded_twr": -0.289819,
     "harness": "sledgit-runner/0.1",
-    "hold_twr": -0.14235175,
+    "hold_twr": -0.14619214,
     "id": "tn-claude-nearai",
     "inactive": false,
     "kind": "arena",
@@ -81,9 +81,9 @@
       "status": "genuine"
     },
     "range95": {
-      "hi": 0.08269301,
-      "lo": -0.35289931,
-      "n": 422
+      "hi": 0.08368994,
+      "lo": -0.36157078,
+      "n": 446
     },
     "ranked": false,
     "refusals_by_code": {},
@@ -2619,25 +2619,169 @@
         "value": 1.608
       },
       {
-        "hold": 1.89540263,
-        "stake": 1.89711535,
-        "t": 1794789000000,
-        "value": 1.5865
+        "hold": 1.89440413,
+        "stake": 1.89611672,
+        "t": 1794790800000,
+        "value": 1.5845
+      },
+      {
+        "hold": 1.88491837,
+        "stake": 1.88661446,
+        "t": 1794794400000,
+        "value": 1.5655
+      },
+      {
+        "hold": 1.905138,
+        "stake": 1.90688209,
+        "t": 1794798000000,
+        "value": 1.606
+      },
+      {
+        "hold": 1.903141,
+        "stake": 1.90488487,
+        "t": 1794801600000,
+        "value": 1.602
+      },
+      {
+        "hold": 1.89590187,
+        "stake": 1.89763404,
+        "t": 1794805200000,
+        "value": 1.5875
+      },
+      {
+        "hold": 1.89265675,
+        "stake": 1.89438588,
+        "t": 1794808800000,
+        "value": 1.581
+      },
+      {
+        "hold": 1.89340562,
+        "stake": 1.89514046,
+        "t": 1794812400000,
+        "value": 1.5825
+      },
+      {
+        "hold": 1.89964625,
+        "stake": 1.90139889,
+        "t": 1794816000000,
+        "value": 1.595
+      },
+      {
+        "hold": 1.8961515,
+        "stake": 1.89790053,
+        "t": 1794819600000,
+        "value": 1.588
+      },
+      {
+        "hold": 1.89839813,
+        "stake": 1.90015621,
+        "t": 1794823200000,
+        "value": 1.5925
+      },
+      {
+        "hold": 1.90089437,
+        "stake": 1.90266208,
+        "t": 1794826800000,
+        "value": 1.5975
+      },
+      {
+        "hold": 1.90239213,
+        "stake": 1.90416727,
+        "t": 1794830400000,
+        "value": 1.6005
+      },
+      {
+        "hold": 1.88541763,
+        "stake": 1.88715908,
+        "t": 1794834000000,
+        "value": 1.5665
+      },
+      {
+        "hold": 1.88641612,
+        "stake": 1.88816384,
+        "t": 1794837600000,
+        "value": 1.5685
+      },
+      {
+        "hold": 1.90239213,
+        "stake": 1.90417961,
+        "t": 1794841200000,
+        "value": 1.6005
+      },
+      {
+        "hold": 1.889162,
+        "stake": 1.89092393,
+        "t": 1794844800000,
+        "value": 1.574
+      },
+      {
+        "hold": 1.901144,
+        "stake": 1.9029369,
+        "t": 1794848400000,
+        "value": 1.598
+      },
+      {
+        "hold": 1.8881635,
+        "stake": 1.88993127,
+        "t": 1794852000000,
+        "value": 1.572
+      },
+      {
+        "hold": 1.89490337,
+        "stake": 1.8966904,
+        "t": 1794855600000,
+        "value": 1.5855
+      },
+      {
+        "hold": 1.8981485,
+        "stake": 1.89994695,
+        "t": 1794859200000,
+        "value": 1.592
+      },
+      {
+        "hold": 1.8941545,
+        "stake": 1.89594798,
+        "t": 1794862800000,
+        "value": 1.584
+      },
+      {
+        "hold": 1.89739962,
+        "stake": 1.89920455,
+        "t": 1794866400000,
+        "value": 1.5905
+      },
+      {
+        "hold": 1.8941545,
+        "stake": 1.89595612,
+        "t": 1794870000000,
+        "value": 1.584
+      },
+      {
+        "hold": 1.8921575,
+        "stake": 1.89395864,
+        "t": 1794873600000,
+        "value": 1.58
+      },
+      {
+        "hold": 1.88691537,
+        "stake": 1.88870656,
+        "t": 1794875400000,
+        "value": 1.5695
       }
     ],
-    "stake_twr": -0.14157677,
+    "stake_twr": -0.14538165,
     "start": {
       "price": 4.42,
       "time_ms": 1793275158540,
       "value_usd": 2.21
     },
-    "strategy_sha256": null,
-    "twr": -0.2821267,
+    "strategy_sha256": "9f8f34426042cc19017d2149b47258d5f5d14e63e07aac122a9b26dfb2ddcd7b",
+    "twr": -0.289819,
     "unranked_reason": "3 in-season decision(s); ranking needs 7",
     "vs_funded": 0,
-    "vs_hold": -0.16297467,
-    "vs_hold_after_gas": -0.16396719,
-    "vs_stake": -0.16373034
+    "vs_hold": -0.16821919,
+    "vs_hold_after_gas": -0.16920548,
+    "vs_stake": -0.16900802
   },
   "events": [
     {
@@ -2805,7 +2949,7 @@
       "status": "ok"
     },
     "usage": {
-      "hour": "498552",
+      "hour": "498576",
       "spent": [],
       "trades": 0
     }

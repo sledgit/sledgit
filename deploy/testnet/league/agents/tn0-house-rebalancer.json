@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794789000000,
-  "derived_sha256": "ce0549b085c848b97732adf4bdfcc1d31a66d87e8bc922233c09db3586ee56ce",
+  "as_of_ms": 1794875400000,
+  "derived_sha256": "609b8920f25406d143f7d6276d70e3e917c2135f0ec794499aa2465fefbb2dc6",
   "entry": {
     "account": "house-rebalancer.arena.irontrade.testnet",
     "beyond_noise": false,
@@ -18,13 +18,13 @@
     "counts": {
       "decisions": 0,
       "failed": 0,
-      "missed_slots": 17,
+      "missed_slots": 18,
       "off_schedule": 0,
       "refusals": 0,
       "skips": 0,
       "trades": 0
     },
-    "days": 17.56781657,
+    "days": 18.56781657,
     "decisions": [
       {
         "block_time_ms": 1793267611411,
@@ -123,13 +123,13 @@
     ],
     "description": "Published rule: back to 50/50 when the wNEAR weight drifts more than 10 points. Retired: legacy factory arena.irontrade.testnet (pre-round-3 code); record kept, not ranked.",
     "end": {
-      "price": 3.173,
-      "value_usd": 1.24829887
+      "price": 3.139,
+      "value_usd": 1.24204614
     },
     "events_sha256": "693badd880341aa55f8ddb4745164f14e029926a294715812f14eafa418a8505",
-    "funded_twr": -0.15719338,
+    "funded_twr": -0.161415,
     "harness": "sledgit-runner/0.1.0",
-    "hold_twr": -0.1427313,
+    "hold_twr": -0.14656041,
     "id": "tn0-house-rebalancer",
     "inactive": false,
     "kind": "retired",
@@ -145,9 +145,9 @@
       "status": "genuine"
     },
     "range95": {
-      "hi": 0.00711577,
-      "lo": -0.0402844,
-      "n": 423
+      "hi": 0.00715272,
+      "lo": -0.04136501,
+      "n": 447
     },
     "ranked": false,
     "refusals_by_code": {},
@@ -2686,25 +2686,169 @@
         "value": 1.25620675
       },
       {
-        "hold": 1.26971896,
-        "stake": 1.27086648,
-        "t": 1794789000000,
-        "value": 1.24829887
+        "hold": 1.26905174,
+        "stake": 1.27019917,
+        "t": 1794790800000,
+        "value": 1.24756326
+      },
+      {
+        "hold": 1.26271315,
+        "stake": 1.26384951,
+        "t": 1794794400000,
+        "value": 1.24057491
+      },
+      {
+        "hold": 1.27622435,
+        "stake": 1.27739287,
+        "t": 1794798000000,
+        "value": 1.25547113
+      },
+      {
+        "hold": 1.27488991,
+        "stake": 1.27605827,
+        "t": 1794801600000,
+        "value": 1.2539999
+      },
+      {
+        "hold": 1.27005257,
+        "stake": 1.27121308,
+        "t": 1794805200000,
+        "value": 1.24866668
+      },
+      {
+        "hold": 1.2678841,
+        "stake": 1.26904258,
+        "t": 1794808800000,
+        "value": 1.24627593
+      },
+      {
+        "hold": 1.26838452,
+        "stake": 1.26954681,
+        "t": 1794812400000,
+        "value": 1.24682764
+      },
+      {
+        "hold": 1.27255464,
+        "stake": 1.27372885,
+        "t": 1794816000000,
+        "value": 1.25142524
+      },
+      {
+        "hold": 1.27021937,
+        "stake": 1.27139116,
+        "t": 1794819600000,
+        "value": 1.24885059
+      },
+      {
+        "hold": 1.27172062,
+        "stake": 1.27289846,
+        "t": 1794823200000,
+        "value": 1.25050572
+      },
+      {
+        "hold": 1.27338867,
+        "stake": 1.27457295,
+        "t": 1794826800000,
+        "value": 1.25234476
+      },
+      {
+        "hold": 1.27438949,
+        "stake": 1.27557875,
+        "t": 1794830400000,
+        "value": 1.25344819
+      },
+      {
+        "hold": 1.26304676,
+        "stake": 1.26421344,
+        "t": 1794834000000,
+        "value": 1.24094271
+      },
+      {
+        "hold": 1.26371398,
+        "stake": 1.26488485,
+        "t": 1794837600000,
+        "value": 1.24167833
+      },
+      {
+        "hold": 1.27438949,
+        "stake": 1.275587,
+        "t": 1794841200000,
+        "value": 1.25344819
+      },
+      {
+        "hold": 1.26554883,
+        "stake": 1.26672921,
+        "t": 1794844800000,
+        "value": 1.24370127
+      },
+      {
+        "hold": 1.27355547,
+        "stake": 1.27475659,
+        "t": 1794848400000,
+        "value": 1.25252867
+      },
+      {
+        "hold": 1.26488161,
+        "stake": 1.26606589,
+        "t": 1794852000000,
+        "value": 1.24296566
+      },
+      {
+        "hold": 1.26938535,
+        "stake": 1.27058252,
+        "t": 1794855600000,
+        "value": 1.24793107
+      },
+      {
+        "hold": 1.27155381,
+        "stake": 1.27275862,
+        "t": 1794859200000,
+        "value": 1.25032182
+      },
+      {
+        "hold": 1.26888493,
+        "stake": 1.27008641,
+        "t": 1794862800000,
+        "value": 1.24737935
+      },
+      {
+        "hold": 1.2710534,
+        "stake": 1.27226254,
+        "t": 1794866400000,
+        "value": 1.24977011
+      },
+      {
+        "hold": 1.26888493,
+        "stake": 1.27009185,
+        "t": 1794870000000,
+        "value": 1.24737935
+      },
+      {
+        "hold": 1.26755049,
+        "stake": 1.26875708,
+        "t": 1794873600000,
+        "value": 1.24590812
+      },
+      {
+        "hold": 1.26404759,
+        "stake": 1.26524751,
+        "t": 1794875400000,
+        "value": 1.24204614
       }
     ],
-    "stake_twr": -0.14195654,
+    "stake_twr": -0.14575027,
     "start": {
       "price": 4.439,
       "time_ms": 1793271140648,
       "value_usd": 1.48112134
     },
     "strategy_sha256": null,
-    "twr": -0.15719338,
+    "twr": -0.161415,
     "unranked_reason": "retired entry: record kept, not ranked",
     "vs_funded": 0,
-    "vs_hold": -0.01686994,
-    "vs_hold_after_gas": -0.01686994,
-    "vs_stake": -0.01775765
+    "vs_hold": -0.01740556,
+    "vs_hold_after_gas": -0.01740556,
+    "vs_stake": -0.01833742
   },
   "events": [
     {
@@ -2948,7 +3092,7 @@
       "status": "ok"
     },
     "usage": {
-      "hour": "498552",
+      "hour": "498576",
       "spent": [
         [
           "wrap.testnet",

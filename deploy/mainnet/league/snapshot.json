@@ -1,25 +1,25 @@
 {
-  "as_of_ms": 1794842940000,
+  "as_of_ms": 1794878160000,
   "benchmarks": {
-    "hold_twr": -0.01457364,
+    "hold_twr": -0.01395349,
     "stake_apr": {
       "source": "assumption, not measured: 4.5% APR, the post-2024 NEAR staking rate the backtest uses (agent/src/strategies/benchmarks.ts STAKE_APR); testnet vaults cannot stake",
       "value": 0.045
     },
-    "stake_twr": -0.01445253,
-    "stake_vs_hold": 0.0001229,
+    "stake_twr": -0.01380778,
+    "stake_vs_hold": 0.00014777,
     "start_ms": 1794668096365
   },
   "by_model": [
     {
       "avg_vs_hold_after_gas": null,
-      "decisions": 39,
+      "decisions": 45,
       "entries": [
         "mn-local-qwen3-8b"
       ],
       "family": "Qwen3 8B",
       "label": "Qwen3 8B · self-reported",
-      "provisional_vs_hold_after_gas": -0.04067025,
+      "provisional_vs_hold_after_gas": -0.04605527,
       "ranked_entries": 0,
       "refusals": 0,
       "scored_sources": 0,
@@ -28,17 +28,17 @@
       "status": "not enough data",
       "strategy": null,
       "tier": "self",
-      "trades": 20
+      "trades": 23
     },
     {
       "avg_vs_hold_after_gas": null,
-      "decisions": 37,
+      "decisions": 44,
       "entries": [
         "mn-qwen36-tee"
       ],
       "family": "Qwen3.6 35B",
       "label": "Qwen3.6 35B · attested",
-      "provisional_vs_hold_after_gas": -0.01967744,
+      "provisional_vs_hold_after_gas": -0.01992948,
       "ranked_entries": 0,
       "refusals": 0,
       "scored_sources": 0,
@@ -51,7 +51,7 @@
     }
   ],
   "caveat": null,
-  "derived_sha256": "de349f5a5ca0a72edd2825a8f70d27b2e7eaa67b66368cbfed49024e36aa7837",
+  "derived_sha256": "ae3d3e67672bb407d184cdb1e22cb177ffbef57ac0553b1500ef548909885dbe",
   "entries": [
     {
       "account": "qwen36-tee.arena.sledgit.near",
@@ -62,22 +62,92 @@
         "benchmark_rebalance_usd": 0.0048345,
         "fill_vs_reference_pct": 0.00387787,
         "fill_vs_reference_usd": 0.02240283,
-        "gas_near": 0.04575652,
-        "gas_usd": 0.14483843,
+        "gas_near": 0.04725491,
+        "gas_usd": 0.14958319,
         "neutralised_usd": 0,
         "traded_ref_usd": 5.7771
       },
       "counts": {
-        "decisions": 37,
+        "decisions": 44,
         "failed": 0,
         "missed_slots": 0,
         "off_schedule": 0,
         "refusals": 0,
-        "skips": 28,
+        "skips": 35,
         "trades": 9
       },
-      "days": 2.0228197,
+      "days": 2.43045859,
       "decisions": [
+        {
+          "block_time_ms": 1794875434701,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "a55b347eb156f7e700b201a615eedbc1690f2e515819903e3deb4259698a0311",
+          "seq": 44,
+          "tx": "GduGXwoqC5LsEdUzvzQ23dYw2LFGhBSxP1B6rchvVpaQ"
+        },
+        {
+          "block_time_ms": 1794871357224,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "548778c38984d358723465c21f570d5fb26f24a37084e43469e6746b232dd0e4",
+          "seq": 43,
+          "tx": "4TmqgMdUcKgzikov2tSDfiEV4AyPNKgE1guTu7fP3JDg"
+        },
+        {
+          "block_time_ms": 1794867384477,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "4ea2fb906cd931b4b9fcfbb848006835ae3ce62b39b5dc1837bdc863d4073ea3",
+          "seq": 42,
+          "tx": "2KNzE2ukCqv6VFvcQ7tX9rYHNkhPNnrheCZp3rWbYJA4"
+        },
+        {
+          "block_time_ms": 1794863337542,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "f6f931a9898372355506e534b7eddc462fb4ab774dd73dfe01cccdc23da34249",
+          "seq": 41,
+          "tx": "HNSLJutQTk9PM2tubBz5VCny6PgD3Q4PHUHJx2ds7iqe"
+        },
+        {
+          "block_time_ms": 1794855071889,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "df8c53ab7715276bae1966beb519a1e0e7a71f7169fc064ff45292d5bfe363de",
+          "seq": 40,
+          "tx": "4AVAVPYYZGYUCb7efP9EUkgCq9XHjXhNEW5aerAkynBY"
+        },
+        {
+          "block_time_ms": 1794851182269,
+          "event": "skip",
+          "in_season": true,
+          "note": "model_error",
+          "on_schedule": null,
+          "receipt_hash": "6d6c5e3bc1f4f74c72b7e97f4dac06f438e393b4d406f44608a8785cd8b38712",
+          "seq": 39,
+          "tx": "8gRno4gaY1LnnwFaLNH7ixxNnMEBwuQ4PLctqNHHcnXr"
+        },
+        {
+          "block_time_ms": 1794847135070,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "6409a8cf0510e0ce141077b0045ffe9dd19ee584a552ab524e5eb7b24a730b4d",
+          "seq": 38,
+          "tx": "4DfVyVndPhiTEWihDKrPbCN8Aay2HeF9fhCQAqr24ebK"
+        },
         {
           "block_time_ms": 1794842878523,
           "event": "skip",
@@ -649,13 +719,13 @@
       ],
       "description": "Qwen3.6 run inside NEAR AI Cloud's enclave; each decision carries hardware attestation and the model's signature.",
       "end": {
-        "price": 3.131,
-        "value_usd": 7.98007911
+        "price": 3.135,
+        "value_usd": 7.98775766
       },
-      "events_sha256": "776089e8d04b1105eb0fab9f1802ed50f7913564fdb82a37677a64f5670ea848",
-      "funded_twr": -0.02854483,
+      "events_sha256": "6a052ee69cdca93d00fdd0fa9e4e2d9e22a1e851886b72e06acb3106c4746a5d",
+      "funded_twr": -0.02730375,
       "harness": "Sledgit runner",
-      "hold_twr": -0.01575101,
+      "hold_twr": -0.0151314,
       "id": "mn-qwen36-tee",
       "inactive": false,
       "kind": "arena",
@@ -663,7 +733,7 @@
       "name": "Qwen3.6 35B (NEAR AI TEE)",
       "proof": {
         "claimed": "tee",
-        "detail": "season check: 37 of 37 decision(s) attested under the pinned NEAR AI policy (seqs 1-37, as of the cutoff)",
+        "detail": "season check: 44 of 44 decision(s) attested under the pinned NEAR AI policy (seqs 1-44, as of the cutoff)",
         "tier": "tee",
         "verified_model": "Qwen/Qwen3.6-35B-A3B-FP8"
       },
@@ -672,15 +742,15 @@
         "status": "genuine"
       },
       "range95": {
-        "hi": 0.02710016,
-        "lo": -0.03002904,
-        "n": 41
+        "hi": 0.02996069,
+        "lo": -0.03207964,
+        "n": 51
       },
       "ranked": false,
       "refusals_by_code": {},
       "season_seqs": [
         1,
-        37
+        44
       ],
       "series": [
         {
@@ -978,25 +1048,85 @@
           "value": 3.21960908
         },
         {
-          "hold": 3.1722345,
-          "stake": 3.17262436,
-          "t": 1794842940000,
-          "value": 3.16629262
+          "hold": 3.18072175,
+          "stake": 3.1811179,
+          "t": 1794844800000,
+          "value": 3.1792409
+        },
+        {
+          "hold": 3.20468575,
+          "stake": 3.20509613,
+          "t": 1794848400000,
+          "value": 3.21580076
+        },
+        {
+          "hold": 3.17872475,
+          "stake": 3.17913652,
+          "t": 1794852000000,
+          "value": 3.17619425
+        },
+        {
+          "hold": 3.1922045,
+          "stake": 3.19262794,
+          "t": 1794855600000,
+          "value": 3.19675917
+        },
+        {
+          "hold": 3.19869475,
+          "stake": 3.1991281,
+          "t": 1794859200000,
+          "value": 3.2066608
+        },
+        {
+          "hold": 3.19070675,
+          "stake": 3.19114604,
+          "t": 1794862800000,
+          "value": 3.19447418
+        },
+        {
+          "hold": 3.197197,
+          "stake": 3.19764626,
+          "t": 1794866400000,
+          "value": 3.2043758
+        },
+        {
+          "hold": 3.19070675,
+          "stake": 3.1911623,
+          "t": 1794870000000,
+          "value": 3.19447418
+        },
+        {
+          "hold": 3.18671275,
+          "stake": 3.18717525,
+          "t": 1794873600000,
+          "value": 3.18838087
+        },
+        {
+          "hold": 3.169239,
+          "stake": 3.1697044,
+          "t": 1794877200000,
+          "value": 3.16172264
+        },
+        {
+          "hold": 3.1742315,
+          "stake": 3.17470053,
+          "t": 1794878160000,
+          "value": 3.16933928
         }
       ],
-      "stake_twr": -0.01563005,
+      "stake_twr": -0.01498587,
       "start": {
         "price": 3.223,
         "time_ms": 1794668168378,
         "value_usd": 3.223
       },
       "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
-      "twr": -0.01759459,
-      "unranked_reason": "2.0 days at the minimum value; ranking starts at day 7",
-      "vs_funded": 0.011272,
-      "vs_hold": -0.00187309,
-      "vs_hold_after_gas": -0.01967744,
-      "vs_stake": -0.00199574
+      "twr": -0.01664931,
+      "unranked_reason": "2.4 days at the minimum value; ranking starts at day 7",
+      "vs_funded": 0.01095352,
+      "vs_hold": -0.00154123,
+      "vs_hold_after_gas": -0.01992948,
+      "vs_stake": -0.00168874
     },
     {
       "account": "local-qwen3-8b.arena.sledgit.near",
@@ -1005,24 +1135,150 @@
         "benchmark_cost_rate": 0.003,
         "benchmark_cost_rate_source": "fixed published rate: the Rhea wNEAR/USDC pool fee, 0.30% (pool 4512)",
         "benchmark_rebalance_usd": 0.0048375,
-        "fill_vs_reference_pct": 0.00347932,
-        "fill_vs_reference_usd": 0.08398305,
-        "gas_near": 0.09243565,
-        "gas_usd": 0.28969445,
+        "fill_vs_reference_pct": 0.00343646,
+        "fill_vs_reference_usd": 0.10425191,
+        "gas_near": 0.10633677,
+        "gas_usd": 0.33365648,
         "neutralised_usd": 0,
-        "traded_ref_usd": 24.1378
+        "traded_ref_usd": 30.337
       },
       "counts": {
-        "decisions": 39,
+        "decisions": 45,
         "failed": 0,
         "missed_slots": 0,
         "off_schedule": 0,
         "refusals": 0,
-        "skips": 19,
-        "trades": 20
+        "skips": 22,
+        "trades": 23
       },
-      "days": 2.02365318,
+      "days": 2.43129207,
       "decisions": [
+        {
+          "block_time_ms": 1794875421928,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "08b0fdde11ac7e62dae2179875ab4d7815f65b6479e9195c6a452aafc3d8a031",
+          "seq": 45,
+          "tx": "DSMj3xjgHfHHZHneuSbCURYQ4HZ67cfNQXYDkDrCkEN7"
+        },
+        {
+          "amount_in": "1200000",
+          "amount_out": "377163869326345892816319",
+          "block_time_ms": 1794871346385,
+          "cost_usd": 0.00401337,
+          "event": "trade",
+          "fill_price": 3.18164092,
+          "in_season": true,
+          "on_schedule": null,
+          "pool_id": 4512,
+          "receipt_hash": "81c60d00170f2eeca171bf9020a854cb33757aa4cd6a88799b97e8f1ef8d125d",
+          "ref_price": 3.171,
+          "seq": 44,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "35grpJLvxck1KQus7ZTuRtBq4BjZsi8g9dQgMQLeJWFH",
+          "venue": "rhea"
+        },
+        {
+          "amount_in": "1200000",
+          "block_time_ms": 1794871338518,
+          "event": "request",
+          "in_season": true,
+          "on_schedule": null,
+          "receipt_hash": "81c60d00170f2eeca171bf9020a854cb33757aa4cd6a88799b97e8f1ef8d125d",
+          "seq": 44,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "35grpJLvxck1KQus7ZTuRtBq4BjZsi8g9dQgMQLeJWFH"
+        },
+        {
+          "block_time_ms": 1794867372627,
+          "event": "skip",
+          "in_season": true,
+          "note": "refused:daily_cap sell 0.64",
+          "on_schedule": null,
+          "receipt_hash": "7afbc7ccb0cda6168927d0c7bae71c422f2bc0fb187ee6991ade450ff7836943",
+          "seq": 43,
+          "tx": "1g6tfjpYr6ZDkiMtJc7YeGtgVWMVAaRoyTwwmdotRve"
+        },
+        {
+          "block_time_ms": 1794863325537,
+          "event": "skip",
+          "in_season": true,
+          "note": "model_error",
+          "on_schedule": null,
+          "receipt_hash": "da466615a50cc4dadce0528de33a753a374a91f08ba9b415c5c07327880b4a1c",
+          "seq": 42,
+          "tx": "7REhrTn283TwaGY5EQi6LpbmYV2TURK2NcqsFWcRfAAP"
+        },
+        {
+          "amount_in": "1200000",
+          "amount_out": "378464607794332064526121",
+          "block_time_ms": 1794851174192,
+          "cost_usd": 0.00783649,
+          "event": "trade",
+          "fill_price": 3.17070599,
+          "in_season": true,
+          "on_schedule": null,
+          "pool_id": 4512,
+          "receipt_hash": "dc87ceb22f2e65309148f04f39a0f09a05e1c0d03e74519f5d3607bd6eb6c415",
+          "ref_price": 3.15,
+          "seq": 41,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "7vK5vJspcj9b9ugYNiHGB6kMaeMKao7tuh5BYXE8GrHK",
+          "venue": "rhea"
+        },
+        {
+          "amount_in": "1200000",
+          "block_time_ms": 1794851165388,
+          "event": "request",
+          "in_season": true,
+          "on_schedule": null,
+          "receipt_hash": "dc87ceb22f2e65309148f04f39a0f09a05e1c0d03e74519f5d3607bd6eb6c415",
+          "seq": 41,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "7vK5vJspcj9b9ugYNiHGB6kMaeMKao7tuh5BYXE8GrHK"
+        },
+        {
+          "amount_in": "1200000000000000000000000",
+          "amount_out": "3790781",
+          "block_time_ms": 1794847117074,
+          "cost_usd": 0.008419,
+          "event": "trade",
+          "fill_price": 3.15898417,
+          "in_season": true,
+          "on_schedule": null,
+          "pool_id": 4512,
+          "receipt_hash": "af4db8e40815aa08cbb5d1bd778b7b821bc70567e3bc691116d8e86675169187",
+          "ref_price": 3.166,
+          "seq": 40,
+          "side": "sell",
+          "token_in": "wrap.near",
+          "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "tx": "9o5GtQ7Y2nMfxMWSBQ2PrJYpXwGpFS6Kdi5ks4nbhLHg",
+          "venue": "rhea"
+        },
+        {
+          "amount_in": "1200000000000000000000000",
+          "block_time_ms": 1794847103657,
+          "event": "request",
+          "in_season": true,
+          "on_schedule": null,
+          "receipt_hash": "af4db8e40815aa08cbb5d1bd778b7b821bc70567e3bc691116d8e86675169187",
+          "seq": 40,
+          "side": "sell",
+          "token_in": "wrap.near",
+          "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "tx": "9o5GtQ7Y2nMfxMWSBQ2PrJYpXwGpFS6Kdi5ks4nbhLHg"
+        },
         {
           "amount_in": "1156000",
           "amount_out": "370231208926681959723116",
@@ -1856,13 +2112,13 @@
       ],
       "description": "A local model on a laptop via Ollama. Harness and model are the operator's word; the vault still enforces every limit.",
       "end": {
-        "price": 3.131,
-        "value_usd": 8.04726718
+        "price": 3.135,
+        "value_usd": 8.05078973
       },
-      "events_sha256": "1201fcd1d118f518861fc4360c6ef707ddb71106459251423a0f449a7ea62d2a",
-      "funded_twr": -0.02914729,
+      "events_sha256": "64f604856c5bf6bb1fbeaddacbbd96378cd8355c1d1957a49401fac15c323cf5",
+      "funded_twr": -0.02790698,
       "harness": "Sledgit runner + Ollama",
-      "hold_twr": -0.01605178,
+      "hold_twr": -0.01543256,
       "id": "mn-local-qwen3-8b",
       "inactive": false,
       "kind": "arena",
@@ -1878,15 +2134,15 @@
         "status": "genuine"
       },
       "range95": {
-        "hi": 0.02926855,
-        "lo": -0.03974168,
-        "n": 29
+        "hi": 0.02927765,
+        "lo": -0.04011787,
+        "n": 36
       },
       "ranked": false,
       "refusals_by_code": {},
       "season_seqs": [
         1,
-        39
+        45
       ],
       "series": [
         {
@@ -2184,25 +2440,85 @@
           "value": 3.1834126
         },
         {
-          "hold": 3.173233,
-          "stake": 3.17362302,
-          "t": 1794842940000,
-          "value": 3.15471661
+          "hold": 3.18172025,
+          "stake": 3.18211656,
+          "t": 1794844800000,
+          "value": 3.16445708
+        },
+        {
+          "hold": 3.20568425,
+          "stake": 3.2060948,
+          "t": 1794848400000,
+          "value": 3.17454631
+        },
+        {
+          "hold": 3.17972325,
+          "stake": 3.18013518,
+          "t": 1794852000000,
+          "value": 3.16525189
+        },
+        {
+          "hold": 3.193203,
+          "stake": 3.19362661,
+          "t": 1794855600000,
+          "value": 3.1720264
+        },
+        {
+          "hold": 3.19969325,
+          "stake": 3.20012676,
+          "t": 1794859200000,
+          "value": 3.17528821
+        },
+        {
+          "hold": 3.19170525,
+          "stake": 3.19214471,
+          "t": 1794862800000,
+          "value": 3.17127368
+        },
+        {
+          "hold": 3.1981955,
+          "stake": 3.19864492,
+          "t": 1794866400000,
+          "value": 3.17453548
+        },
+        {
+          "hold": 3.19170525,
+          "stake": 3.19216096,
+          "t": 1794870000000,
+          "value": 3.17127368
+        },
+        {
+          "hold": 3.18771125,
+          "stake": 3.18817392,
+          "t": 1794873600000,
+          "value": 3.16606665
+        },
+        {
+          "hold": 3.1702375,
+          "stake": 3.17070306,
+          "t": 1794877200000,
+          "value": 3.15210988
+        },
+        {
+          "hold": 3.17523,
+          "stake": 3.17569919,
+          "t": 1794878160000,
+          "value": 3.15609753
         }
       ],
-      "stake_twr": -0.01593085,
+      "stake_twr": -0.01528707,
       "start": {
         "price": 3.225,
         "time_ms": 1794668096365,
         "value_usd": 3.225
       },
       "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
-      "twr": -0.0217933,
-      "unranked_reason": "2.0 days at the minimum value; ranking starts at day 7",
-      "vs_funded": 0.00757477,
-      "vs_hold": -0.00583518,
-      "vs_hold_after_gas": -0.04067025,
-      "vs_stake": -0.00595736
+      "twr": -0.02136511,
+      "unranked_reason": "2.4 days at the minimum value; ranking starts at day 7",
+      "vs_funded": 0.00672967,
+      "vs_hold": -0.00602554,
+      "vs_hold_after_gas": -0.04605527,
+      "vs_stake": -0.00617239
     },
     {
       "account": "canary-27958c783600.arena.sledgit.near",
@@ -2284,7 +2600,7 @@
       "text": "the season's receipts use 2 published prompt or strategy versions (changed mid-season)"
     }
   ],
-  "inputs_sha256": "6f332a94a4f1ce086a5b5191b98a7696fbab2eb856404952381a099ad2b38e19",
+  "inputs_sha256": "24de41293c0c8c4944f38f96f0452d0298b178dbc5a7236a35866d78aca07807",
   "luck_entry": null,
   "method": {
     "benchmarks": "Hold 50/50 and Stake & hold are COMPUTED, not vaults: they start from the entry's own start value, at its start time and reference price, rebalanced once to 50/50 and charged season.benchmark_cost_rate on that rebalance (a fixed published rate, never the entry's own). Stake & hold compounds the NEAR half daily at the stated APR (an assumption, see stake_apr.source). Funded position: the entry's own holdings at its start, never traded, no costs.",
@@ -2298,8 +2614,8 @@
     "return": "Time-weighted return (twr) from the later of the season start and the vault's funding, to the cutoff. Owner deposits and withdrawals are neutralised: each flow closes a segment and the segments' growth is chained, so a withdrawal never resets the record. A vault below the minimum value at the cutoff keeps its record and is marked inactive (unranked).",
     "schedule": "on_schedule: null if the entry publishes no schedule or the decision predates it; otherwise true only for the first decision inside a slot's window. missed_slots: scheduled slots in the season with no decision.",
     "season": "One published season start for every entry (season.start_ms). Decisions before it are history: listed, not scored. No per-entry season starts.",
-    "tokens": "Only the league's tokens are valued. Any deposit, withdrawal or trade involving another token unranks the entry; a trade between a league token and another token is neutralised as a flow, never counted as profit.",
-    "valuation": "Holdings are rebuilt from the vault's own events (deposit, withdraw, trade) in exact integer units and valued at the reference price: Binance NEARUSDT 1-minute close at the event's block time, hourly closes for the series; USD stablecoins at $1.",
+    "tokens": "Only the league's tokens (inputs.tokens; on mainnet wNEAR, USDC and stNEAR) are valued. Any deposit, withdrawal or trade involving another token unranks the entry; a trade between a league token and another token is neutralised as a flow, never counted as profit.",
+    "valuation": "Holdings are rebuilt from the vault's own events (deposit, withdraw, trade) in exact integer units and valued at the reference price: Binance NEARUSDT 1-minute close at the event's block time, hourly closes for the series; USD stablecoins at $1. A liquid-staking token (stNEAR) is valued at its redemption rate times the reference price: the rate is read from the staking contract at recorded blocks (stake_rates, about one a day, with the block height so anyone can re-read it), and a value at time t uses the latest sample at or before t. Its exit cost shows up as a trade cost when the vault unstakes.",
     "vs_hold": "(1 + entry twr) / (1 + Hold twr) - 1. vs_hold_after_gas also charges each decision's gas (at the reference price) against the vault's value at that moment; the ranking uses it."
   },
   "network": "mainnet",
@@ -2310,7 +2626,8 @@
       "value": 0.003
     },
     "canonical_pools": [
-      4512
+      4512,
+      3514
     ],
     "id": "mainnet-s1",
     "min_value_usd": 1,

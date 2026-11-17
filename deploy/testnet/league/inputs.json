@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794789000000,
-  "collected_at": "2026-11-16T00:48:49.821Z",
+  "as_of_ms": 1794875400000,
+  "collected_at": "2026-11-17T00:49:00.989Z",
   "excluded": [
     "children of irontrade.testnet not read: the factory still holds a key, so its vaults are legacy"
   ],
@@ -1728,6 +1728,102 @@
     [
       1794787200000,
       3.216
+    ],
+    [
+      1794790800000,
+      3.169
+    ],
+    [
+      1794794400000,
+      3.131
+    ],
+    [
+      1794798000000,
+      3.212
+    ],
+    [
+      1794801600000,
+      3.204
+    ],
+    [
+      1794805200000,
+      3.175
+    ],
+    [
+      1794808800000,
+      3.162
+    ],
+    [
+      1794812400000,
+      3.165
+    ],
+    [
+      1794816000000,
+      3.19
+    ],
+    [
+      1794819600000,
+      3.176
+    ],
+    [
+      1794823200000,
+      3.185
+    ],
+    [
+      1794826800000,
+      3.195
+    ],
+    [
+      1794830400000,
+      3.201
+    ],
+    [
+      1794834000000,
+      3.133
+    ],
+    [
+      1794837600000,
+      3.137
+    ],
+    [
+      1794841200000,
+      3.201
+    ],
+    [
+      1794844800000,
+      3.148
+    ],
+    [
+      1794848400000,
+      3.196
+    ],
+    [
+      1794852000000,
+      3.144
+    ],
+    [
+      1794855600000,
+      3.171
+    ],
+    [
+      1794859200000,
+      3.184
+    ],
+    [
+      1794862800000,
+      3.168
+    ],
+    [
+      1794866400000,
+      3.181
+    ],
+    [
+      1794870000000,
+      3.168
+    ],
+    [
+      1794873600000,
+      3.16
     ]
   ],
   "minute": {
@@ -2551,7 +2647,47 @@
     "1794788040000": 3.191,
     "1794788220000": 3.181,
     "1794788400000": 3.18,
-    "1794789000000": 3.173
+    "1794793860000": 3.131,
+    "1794793920000": 3.136,
+    "1794793980000": 3.14,
+    "1794801180000": 3.186,
+    "1794801240000": 3.194,
+    "1794801300000": 3.201,
+    "1794808560000": 3.152,
+    "1794808680000": 3.162,
+    "1794815880000": 3.197,
+    "1794815940000": 3.19,
+    "1794816000000": 3.185,
+    "1794823260000": 3.198,
+    "1794823320000": 3.189,
+    "1794823380000": 3.187,
+    "1794830580000": 3.19,
+    "1794830640000": 3.19,
+    "1794830700000": 3.189,
+    "1794830760000": 3.191,
+    "1794838380000": 3.159,
+    "1794838560000": 3.164,
+    "1794838800000": 3.17,
+    "1794838920000": 3.161,
+    "1794846180000": 3.165,
+    "1794846240000": 3.164,
+    "1794846480000": 3.167,
+    "1794853740000": 3.164,
+    "1794853800000": 3.16,
+    "1794853860000": 3.162,
+    "1794853920000": 3.162,
+    "1794861180000": 3.168,
+    "1794861240000": 3.17,
+    "1794861300000": 3.17,
+    "1794868500000": 3.181,
+    "1794868620000": 3.174,
+    "1794873900000": 3.15,
+    "1794874080000": 3.157,
+    "1794874260000": 3.161,
+    "1794874440000": 3.154,
+    "1794874620000": 3.149,
+    "1794874800000": 3.148,
+    "1794875400000": 3.139
   },
   "network": "testnet",
   "reference": {
@@ -2786,7 +2922,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [],
           "trades": 0
         }
@@ -2799,6 +2935,8 @@
           1,
           3
         ],
+        "strategy_sha256": "9f8f34426042cc19017d2149b47258d5f5d14e63e07aac122a9b26dfb2ddcd7b",
+        "strategy_versions": 1,
         "tier": "self"
       },
       "provenance": {
@@ -2978,7 +3116,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [],
           "trades": 0
         }
@@ -3333,6 +3471,18 @@
           "event": "skip",
           "receipt_id": "3jamUQJavZCh82ij4oHEn7ZwLjdtDr53Dcr6dALvHVDp",
           "tx": "GHRqwiSS4xnak1By4wTD1uw4DQE5SzoR52PYFtRTfxjA"
+        },
+        {
+          "block_height": 278022731,
+          "block_time_ms": 1794874472767,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "b04c00afce00c6440afdec408f90edcd23349da3765625a2804745ede5b90bb4",
+            "seq": 20
+          },
+          "event": "skip",
+          "receipt_id": "Exs6d4pA7BQi1Xjhq3vbjge1fVG5dPoxiioJmzTRiSuN",
+          "tx": "J5pduWiZx8GfCBmPzYuyXRXGPRNxgDsCWy4KZXCWaKpm"
         }
       ],
       "gas": [
@@ -3430,6 +3580,11 @@
           "block_time_ms": 1794788067677,
           "tokens_burnt": "202786512714900000000",
           "tx": "GHRqwiSS4xnak1By4wTD1uw4DQE5SzoR52PYFtRTfxjA"
+        },
+        {
+          "block_time_ms": 1794874472767,
+          "tokens_burnt": "202786512714900000000",
+          "tx": "J5pduWiZx8GfCBmPzYuyXRXGPRNxgDsCWy4KZXCWaKpm"
         }
       ],
       "observed": {
@@ -3455,7 +3610,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 19,
+          "seq": 20,
           "version": "0.1.0"
         },
         "intents": {
@@ -3498,11 +3653,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 22,
+          "events_replayed": 23,
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",
@@ -3513,13 +3668,15 @@
         }
       },
       "proof": {
-        "detail": "18 in-season decision(s) have no receipt in the file (first: seq 2)",
+        "detail": "19 in-season decision(s) have no receipt in the file (first: seq 2)",
         "evidence_ids": [],
         "receipts_sha256": "13bc34e2cb04c9411d1b1a6eb2ab50e29069cf5cc14dd65f80e48e259ee0ebfd",
         "seqs": [
           1,
-          19
+          20
         ],
+        "strategy_sha256": "c7fb1b78c53eaa599a2bc0003dcac4639151ab9a54c75eafbda3443198936f4d",
+        "strategy_versions": 1,
         "tier": "self"
       },
       "provenance": {
@@ -3866,6 +4023,18 @@
           "event": "skip",
           "receipt_id": "8CwSSPrdhYF1bKeiRB3vnzU516voimsEbjzipxt3aM36",
           "tx": "CSC2BM3o4gHf5bUTp2vsFTZztZPp2MCDwqxeUNdvjX4L"
+        },
+        {
+          "block_height": 278023028,
+          "block_time_ms": 1794874656770,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "f16f85e55177af00ce7c29760f812c5d0bc673fe051bc4095e8a01b742836b0c",
+            "seq": 20
+          },
+          "event": "skip",
+          "receipt_id": "H38fA42tGvyWFjrn9JGj6zvh9aPShGqvrX65ApPEP3y1",
+          "tx": "9mtX5BrZquyMqdRLmhVt8DbS71amE9ukFUcbgStqSudo"
         }
       ],
       "gas": [
@@ -3963,6 +4132,11 @@
           "block_time_ms": 1794788248313,
           "tokens_burnt": "202717434355300000000",
           "tx": "CSC2BM3o4gHf5bUTp2vsFTZztZPp2MCDwqxeUNdvjX4L"
+        },
+        {
+          "block_time_ms": 1794874656770,
+          "tokens_burnt": "202717434355300000000",
+          "tx": "9mtX5BrZquyMqdRLmhVt8DbS71amE9ukFUcbgStqSudo"
         }
       ],
       "observed": {
@@ -3988,7 +4162,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 19,
+          "seq": 20,
           "version": "0.1.0"
         },
         "intents": {
@@ -4031,11 +4205,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 22,
+          "events_replayed": 23,
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",
@@ -4046,13 +4220,15 @@
         }
       },
       "proof": {
-        "detail": "18 in-season decision(s) have no receipt in the file (first: seq 2)",
+        "detail": "19 in-season decision(s) have no receipt in the file (first: seq 2)",
         "evidence_ids": [],
         "receipts_sha256": "71d29ee1f66b9640853ec0526f6e61b383cea36532935428152f39e15b2e067e",
         "seqs": [
           1,
-          19
+          20
         ],
+        "strategy_sha256": "95150baf2bfc66ffa9d4ebd8161eb3d9ed0382b01c95755101e4b5d3b8354583",
+        "strategy_versions": 1,
         "tier": "self"
       },
       "provenance": {
@@ -4340,7 +4516,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",
@@ -4767,6 +4943,18 @@
           "event": "skip",
           "receipt_id": "FVxZNowkMHTw7MuMmTQW3sELyeMvRK7iScm3hnCdPL8i",
           "tx": "GLZgzUgUsMf3DDzzjpAqCv249JcitQpUizEiBWTPtBCN"
+        },
+        {
+          "block_height": 278022443,
+          "block_time_ms": 1794874294576,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "0a788e9898a31b819ede6f3fe9711d877752cf56b2260eda8c833bf135f2e07d",
+            "seq": 19
+          },
+          "event": "skip",
+          "receipt_id": "2FHsS3LXBnAo6PJ8inHb3VpE28K4MuMPPNwGokw4chaq",
+          "tx": "Ci5vkBtFgp8EGjkGSwv8eNJq3HeG24WPT9sZ8qSyod1h"
         }
       ],
       "gas": [
@@ -4859,6 +5047,11 @@
           "block_time_ms": 1794787887044,
           "tokens_burnt": "208055100386400000000",
           "tx": "GLZgzUgUsMf3DDzzjpAqCv249JcitQpUizEiBWTPtBCN"
+        },
+        {
+          "block_time_ms": 1794874294576,
+          "tokens_burnt": "208055100386400000000",
+          "tx": "Ci5vkBtFgp8EGjkGSwv8eNJq3HeG24WPT9sZ8qSyod1h"
         }
       ],
       "observed": {
@@ -4884,7 +5077,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 18,
+          "seq": 19,
           "version": "0.1.0"
         },
         "intents": {
@@ -4927,11 +5120,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 24,
+          "events_replayed": 25,
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",
@@ -4946,13 +5139,15 @@
         }
       },
       "proof": {
-        "detail": "17 in-season decision(s) have no receipt in the file (first: seq 2)",
+        "detail": "18 in-season decision(s) have no receipt in the file (first: seq 2)",
         "evidence_ids": [],
         "receipts_sha256": "8ebba9095a15b129455c23272456e7569b10d4145a1b6997d8bc78395d62f31f",
         "seqs": [
           1,
-          18
+          19
         ],
+        "strategy_sha256": "ba2d2bdc50de214995ef238a6b2f78e0c4fc3778dd6fde2dc31fa9797275e6e7",
+        "strategy_versions": 1,
         "tier": "self"
       },
       "provenance": {
@@ -5257,7 +5452,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",
@@ -5644,6 +5839,18 @@
           "event": "skip",
           "receipt_id": "74QTpH7si1bneFibvmXvaABcp3ncg5SZc81Bvau7Pgtn",
           "tx": "9ASg7yjUVu9eA7UsDgasLw5vt1eYnMdErAudWTXX2mjv"
+        },
+        {
+          "block_height": 278021831,
+          "block_time_ms": 1794873921345,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "e3dc817e2c246b147e6c19ab746dbfdd6022e7299d1825f86173a0dc3ca07956",
+            "seq": 20
+          },
+          "event": "skip",
+          "receipt_id": "Cfvz9fHnmksnsf2dt3uWnyf3AscdrJTiBvhZEEQHCGrV",
+          "tx": "BosvA5VEcQp7HHQjk37GjzHU5DLyeJryAj7Bubn3JnW"
         }
       ],
       "gas": [
@@ -5741,6 +5948,11 @@
           "block_time_ms": 1794787526595,
           "tokens_burnt": "203296386660700000000",
           "tx": "9ASg7yjUVu9eA7UsDgasLw5vt1eYnMdErAudWTXX2mjv"
+        },
+        {
+          "block_time_ms": 1794873921345,
+          "tokens_burnt": "203296386660700000000",
+          "tx": "BosvA5VEcQp7HHQjk37GjzHU5DLyeJryAj7Bubn3JnW"
         }
       ],
       "observed": {
@@ -5766,7 +5978,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 19,
+          "seq": 20,
           "version": "0.1.0"
         },
         "intents": {
@@ -5809,11 +6021,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 23,
+          "events_replayed": 24,
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",
@@ -5824,13 +6036,15 @@
         }
       },
       "proof": {
-        "detail": "18 in-season decision(s) have no receipt in the file (first: seq 2)",
+        "detail": "19 in-season decision(s) have no receipt in the file (first: seq 2)",
         "evidence_ids": [],
         "receipts_sha256": "2c969ad8ca2846b0a3626f6ddd0a95c3ff8cc080b58af9eede556000362f57b8",
         "seqs": [
           1,
-          19
+          20
         ],
+        "strategy_sha256": "3544d9ef12901bf4b3c9e798b406ef8c30ce0778bc11f5dc866679243882edf6",
+        "strategy_versions": 1,
         "tier": "self"
       },
       "provenance": {
@@ -6066,7 +6280,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [],
           "trades": 0
         }
@@ -6422,6 +6636,18 @@
           "event": "skip",
           "receipt_id": "FDPFnHe2zk3vE4rj35Ww8DVL3zbzGHsLqo44ZJHczgtT",
           "tx": "5jQjF7jQGMuxkKzmoGycs88b3g4r4btxjhfN9b7SVLqu"
+        },
+        {
+          "block_height": 278022143,
+          "block_time_ms": 1794874112625,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "5a7c1f289d3cd31b12536ae526e45064391474d2e493ae01ce3851cb4e4f8aba",
+            "seq": 20
+          },
+          "event": "skip",
+          "receipt_id": "52ExgXYrhxVne2FwQ8ZKB9WbrtVTYX6zHQGwcmrFA12z",
+          "tx": "8ZjDhDsbqxDwg8AxeE42ed9bY68KJbGEcmKEdgm2mMUm"
         }
       ],
       "gas": [
@@ -6519,6 +6745,11 @@
           "block_time_ms": 1794787705704,
           "tokens_burnt": "203200577017200000000",
           "tx": "5jQjF7jQGMuxkKzmoGycs88b3g4r4btxjhfN9b7SVLqu"
+        },
+        {
+          "block_time_ms": 1794874112625,
+          "tokens_burnt": "203200577017200000000",
+          "tx": "8ZjDhDsbqxDwg8AxeE42ed9bY68KJbGEcmKEdgm2mMUm"
         }
       ],
       "observed": {
@@ -6544,7 +6775,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 19,
+          "seq": 20,
           "version": "0.1.0"
         },
         "intents": {
@@ -6587,11 +6818,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 22,
+          "events_replayed": 23,
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",
@@ -6602,13 +6833,15 @@
         }
       },
       "proof": {
-        "detail": "18 in-season decision(s) have no receipt in the file (first: seq 2)",
+        "detail": "19 in-season decision(s) have no receipt in the file (first: seq 2)",
         "evidence_ids": [],
         "receipts_sha256": "dfd90b279bc09d1ab57cac84c07ae8e1ebb4d98e72d526aa58be38b3911745c5",
         "seqs": [
           1,
-          19
+          20
         ],
+        "strategy_sha256": "d1278515eb3548725ddeed63263a1b6fcc76631d58e85e78b39cc2eaec53f094",
+        "strategy_versions": 1,
         "tier": "self"
       },
       "provenance": {
@@ -6814,7 +7047,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [],
           "trades": 0
         }
@@ -6827,6 +7060,8 @@
           1,
           2
         ],
+        "strategy_sha256": "f9d7c6aa37ec82f8ae56fc1a44d6d0d3baa0e22cd712961bac9392150d199e8a",
+        "strategy_versions": 1,
         "tier": "self"
       },
       "provenance": {
@@ -7224,7 +7459,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",
@@ -7950,7 +8185,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",
@@ -8156,7 +8391,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [],
           "trades": 0
         }
@@ -11487,6 +11722,126 @@
           "event": "skip",
           "receipt_id": "76zKjzYsJaEHT5EWH7depEXuCrTkGxeYXodAaMta3jMs",
           "tx": "57ULvN8GtMynwtrxUtXxERm7fQ3yj9GTySkURVHLVapz"
+        },
+        {
+          "block_height": 277887088,
+          "block_time_ms": 1794793866858,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "31b3f0ef94e61093b458ab65138cba5334d579cf6481ae025edc783ee11cf99f",
+            "seq": 196
+          },
+          "event": "skip",
+          "receipt_id": "BsEYffm5WQ4jbS7JssmRmTW8D3w7efqdoHJTym1ywM8P",
+          "tx": "DNcKiYgmRTY9bZdbyVXSVmH6ZSMdrPshjatGXd126S2H"
+        },
+        {
+          "block_height": 277899759,
+          "block_time_ms": 1794801236419,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "ddd2d55694803a76906c9ccdb154404e9330f9f3e4b2327215e4cdda0382679b",
+            "seq": 197
+          },
+          "event": "skip",
+          "receipt_id": "DvmvFSyB8Pd5WYt5vRSy2VqzMnsH9CfNoG2KsPcuaCGM",
+          "tx": "J8ZrqhGafcdM4cSWopqKsBpF8JwGQHf5ejEMdgRtFa2B"
+        },
+        {
+          "block_height": 277912312,
+          "block_time_ms": 1794808574372,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.0000149",
+            "receipt_hash": "1fabbea9cae825fa544672cb7315fc313afbeee792f103cc9d417bf88aabe807",
+            "seq": 198
+          },
+          "event": "skip",
+          "receipt_id": "4rAf3atRY7Fw7761qjR3Sksajak3EhiFPoSyheAUXQNQ",
+          "tx": "9PRw2FAo1ueqHjobTd4XbfPtPxpSXy37vQEhw8EP7iWZ"
+        },
+        {
+          "block_height": 277924931,
+          "block_time_ms": 1794815929972,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "42ecacf9c432d936d8812bfdc332369457c4fea7fed0fdb73198dc84985fc9cb",
+            "seq": 199
+          },
+          "event": "skip",
+          "receipt_id": "EnGuJ9TVMxZF8KSnrVmrhNa9wQzDyF3UMpg2H3Qa9HDP",
+          "tx": "6eMsw2EYm4wsL5GNJLD1oQn33JQ669HTZsexhgFofoJ1"
+        },
+        {
+          "block_height": 277937520,
+          "block_time_ms": 1794823273762,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "79c4340058aca1a1fc1faba47c02a2cdc9cb560348146f727ca063fb1a32f041",
+            "seq": 200
+          },
+          "event": "skip",
+          "receipt_id": "BttXN8sgKAGtwo2mNaxamyiF37DGchmHfVDEGZenBRyH",
+          "tx": "3RD4FFWTTk8Ww1km7v7jcQQKF9569WV3yxRNpCd7oDNT"
+        },
+        {
+          "block_height": 277949934,
+          "block_time_ms": 1794830622051,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "4236f3e86609a390e46595dcde125f28795331d2c395e903d1cc53419e72edb3",
+            "seq": 201
+          },
+          "event": "skip",
+          "receipt_id": "29HAGMMz7Aq7PMQMifTNuv8H1Ps8iSkv1Z9GB6Y4E2iy",
+          "tx": "CdV1w5sjcyrXhXSTS8R6iLDcaRyqgv4kM3axDmEU3iTR"
+        },
+        {
+          "block_height": 277976335,
+          "block_time_ms": 1794846211361,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "d4524df0649dd63416a57a94000d3b07a7f9ab8638b30e5484214e77cdca48ca",
+            "seq": 202
+          },
+          "event": "skip",
+          "receipt_id": "E3JiawB1wK4N6qx8y9qDSsEN5dYLEtNQBkeHjuCz5keX",
+          "tx": "6Y1NQgyqvjXogXytA5PdtksobkvY9jdKDECgvtBoTgMR"
+        },
+        {
+          "block_height": 277988846,
+          "block_time_ms": 1794853755184,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "3fee3abce39658227d1b6c99f0b95a786a6913df36b7208dc4157d80ac977f12",
+            "seq": 203
+          },
+          "event": "skip",
+          "receipt_id": "8rn6HJEqy3M3o5z3XnbfjPSkTCdYbJUynsb5HtSbS8vz",
+          "tx": "42xxxxRQfHwErknmhLi9vskh5WdEkKpeoaec3bzbsnpM"
+        },
+        {
+          "block_height": 278000890,
+          "block_time_ms": 1794861182755,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000014",
+            "receipt_hash": "c875cf9e4ee9d83e49ba19ba03163d61a8bcd1bb8c16f4e7b6ebf74db2499121",
+            "seq": 204
+          },
+          "event": "skip",
+          "receipt_id": "EhqaVpu7hq6wu7R6TUhDsZNGc6XsUFwVpz5wDdFrQEAt",
+          "tx": "4Wgfptq9K5JkuBcTosB6HgExqSsF272e7BDFJ86UmHEJ"
+        },
+        {
+          "block_height": 278012932,
+          "block_time_ms": 1794868520342,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "eb813705bb275cf870b979aefa0ac5e57780bca6e1328510b6601bf45368a289",
+            "seq": 205
+          },
+          "event": "skip",
+          "receipt_id": "4DQUUH6ihpVDtunfa2KibA6QqbbqbZtDyXmzgQPcGQMc",
+          "tx": "2e3Xxr4Q8u9CX14a1v33xeWQ2xHtJWtGHBMzbDohVR3T"
         }
       ],
       "gas": [
@@ -12464,6 +12819,56 @@
           "block_time_ms": 1794786513270,
           "tokens_burnt": "207031006558800000000",
           "tx": "57ULvN8GtMynwtrxUtXxERm7fQ3yj9GTySkURVHLVapz"
+        },
+        {
+          "block_time_ms": 1794793866858,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "DNcKiYgmRTY9bZdbyVXSVmH6ZSMdrPshjatGXd126S2H"
+        },
+        {
+          "block_time_ms": 1794801236419,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "J8ZrqhGafcdM4cSWopqKsBpF8JwGQHf5ejEMdgRtFa2B"
+        },
+        {
+          "block_time_ms": 1794808574372,
+          "tokens_burnt": "208557147277200000000",
+          "tx": "9PRw2FAo1ueqHjobTd4XbfPtPxpSXy37vQEhw8EP7iWZ"
+        },
+        {
+          "block_time_ms": 1794815929972,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "6eMsw2EYm4wsL5GNJLD1oQn33JQ669HTZsexhgFofoJ1"
+        },
+        {
+          "block_time_ms": 1794823273762,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "3RD4FFWTTk8Ww1km7v7jcQQKF9569WV3yxRNpCd7oDNT"
+        },
+        {
+          "block_time_ms": 1794830622051,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "CdV1w5sjcyrXhXSTS8R6iLDcaRyqgv4kM3axDmEU3iTR"
+        },
+        {
+          "block_time_ms": 1794846211361,
+          "tokens_burnt": "207031006558800000000",
+          "tx": "6Y1NQgyqvjXogXytA5PdtksobkvY9jdKDECgvtBoTgMR"
+        },
+        {
+          "block_time_ms": 1794853755184,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "42xxxxRQfHwErknmhLi9vskh5WdEkKpeoaec3bzbsnpM"
+        },
+        {
+          "block_time_ms": 1794861182755,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "4Wgfptq9K5JkuBcTosB6HgExqSsF272e7BDFJ86UmHEJ"
+        },
+        {
+          "block_time_ms": 1794868520342,
+          "tokens_burnt": "207031006558800000000",
+          "tx": "2e3Xxr4Q8u9CX14a1v33xeWQ2xHtJWtGHBMzbDohVR3T"
         }
       ],
       "observed": {
@@ -12489,7 +12894,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 195,
+          "seq": 206,
           "version": "0.1.0"
         },
         "intents": {
@@ -12532,11 +12937,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 232,
+          "events_replayed": 243,
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "usdc.itachicara.testnet",
@@ -12553,11 +12958,13 @@
       "proof": {
         "detail": "self-reported: harness and model are the operator's word",
         "evidence_ids": [],
-        "receipts_sha256": "f84e9b8693103e8c47b80f1476eeecea7db6d04435b0427207408d09c665e506",
+        "receipts_sha256": "52d4112c0265fe8552c8023cd140360413b0d8a2d5737ac20f0ad99170ad9e0c",
         "seqs": [
           1,
-          195
+          205
         ],
+        "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
+        "strategy_versions": 2,
         "tier": "self"
       },
       "provenance": {
@@ -12759,7 +13166,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",
@@ -12946,7 +13353,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [],
           "trades": 0
         }
@@ -15551,6 +15958,138 @@
           "event": "skip",
           "receipt_id": "9iwy3GptSwA5YwZpsWiptcUibT7Gpdg4CcaUJ3RGErZV",
           "tx": "BrPrDwgYsEPHwFHipeeXmSfoXen5es4Sczjc2L4AUMYx"
+        },
+        {
+          "block_height": 277887132,
+          "block_time_ms": 1794793891891,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "75054eb2c49bcf0dd3bfcb6b83f8f41a852413de95553289b7b3c4c33ea902b4",
+            "seq": 194
+          },
+          "event": "skip",
+          "receipt_id": "3KkY4jvW2zdRw23Nk3LVzk1sdBfNRbSXQPA1thsHEj75",
+          "tx": "APam5D9nAXgQgtBRUAmo8pV3U3nkwZJ1zhorF9SEc9fx"
+        },
+        {
+          "block_height": 277899807,
+          "block_time_ms": 1794801262334,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "d4dec6149a3077e1c3201075bbcc4507a06d344c9e2aebdbc0dc40b468242639",
+            "seq": 195
+          },
+          "event": "skip",
+          "receipt_id": "7FeMkyznM65XpiqsrQGD2CZxxnnVSSBGWry6r8cSe41G",
+          "tx": "29oQ9AqjQfKmq2kPmXze4L8gRY1upRjPTprGhbmDtNh3"
+        },
+        {
+          "block_height": 277912357,
+          "block_time_ms": 1794808601728,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "aeb7f378f5a1f33d3617b122dc41fe3cab25a2e24aec9de445475a51bab8749e",
+            "seq": 196
+          },
+          "event": "skip",
+          "receipt_id": "9ZxAX7dHh61MMtSR5AcC9RLiq5fX2eoxLbx75PfCrE6Z",
+          "tx": "WGDvigrLPq4orrPVcEzLaX1x3PY4MnHn3DoEyMRuTnW"
+        },
+        {
+          "block_height": 277924976,
+          "block_time_ms": 1794815957237,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "eefe809d0f6ce18365bdb9b375513b79a5424c597398308978ef4bfb2ad31acb",
+            "seq": 197
+          },
+          "event": "skip",
+          "receipt_id": "E2uaCsKhDAyzrQtbCVJ6pR3QfkP7GTrizMcscBj3CGAX",
+          "tx": "9EBgqe3Uh86BNLXYne3ehDizHnBLU2reke1w7kXZ2JTj"
+        },
+        {
+          "block_height": 277937562,
+          "block_time_ms": 1794823298997,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "879cf4fe9624510b2f7af3af6a0b2a8fe913f38f46c5898b73b0fa326d7368a3",
+            "seq": 198
+          },
+          "event": "skip",
+          "receipt_id": "7jHvV1Pi22KdG6w7gkSpt9bH2yd48fBov2gruYxTK7HX",
+          "tx": "AHowxvhCpGZCpr9EAoMm2d2kPWn2VQZ2wUn8W4gVkrjC"
+        },
+        {
+          "block_height": 277949984,
+          "block_time_ms": 1794830652338,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "d4d3fad7d80c2aec2df456bdf3605d6e816997e9292067d492b3605b49ff47ca",
+            "seq": 199
+          },
+          "event": "skip",
+          "receipt_id": "7Q4ghr7V2YLGHCXQ419zVCoCaDTvSzCKD4denzzvFc1k",
+          "tx": "7jgtesDqDS9mmwcqbdE8whYgGhSQfjnByTJhiiyhjb8Y"
+        },
+        {
+          "block_height": 277963136,
+          "block_time_ms": 1794838409798,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "e74676a5518ec7ae5d72b9d3daaebd440ca33a943aefdf8291401a6bfb63b9a1",
+            "seq": 200
+          },
+          "event": "skip",
+          "receipt_id": "6NJZ4Y9KKLtwqAg1eQt6kKxCSxP5HgHdkaFmc92dNfd3",
+          "tx": "BH5YnaZkX3q1f1PmtC4o1sjca1CE6spkGvTn48jxrr9V"
+        },
+        {
+          "block_height": 277976443,
+          "block_time_ms": 1794846273522,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "2f59be89e8ac12aecbb974da8b38dcd0bb93daf8e81fa34ea8fdee94478f35cd",
+            "seq": 201
+          },
+          "event": "skip",
+          "receipt_id": "CMqTNCnuHgFKv2yN8o5d1srS4AEmnirvJ591A3bHe9gF",
+          "tx": "DqUL3T1g3uvrfW9wmbDTX6vpifwKL6nVAezdjz43mjCg"
+        },
+        {
+          "block_height": 277988896,
+          "block_time_ms": 1794853788496,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "35f0150240722e2d344f88786ef94cedd7e6aa470045267f6a8ac5fef7dd0123",
+            "seq": 202
+          },
+          "event": "skip",
+          "receipt_id": "ETKC9cdJreezNmNeCckhCDMJJpDfbm9R7bGGk75LxsHB",
+          "tx": "AFB3op3EELJ1xWL5M14hstXfN2FwpMuAykmiqccVBGfu"
+        },
+        {
+          "block_height": 278000932,
+          "block_time_ms": 1794861208849,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "b4c1de7a5e792c495c768e3f431833d9be28553c4a2a045e0969a32dda16cd1b",
+            "seq": 203
+          },
+          "event": "skip",
+          "receipt_id": "DjYcorjBRt26fapnr8kaJT7VSHA4LfCvbCiJC4YxxmSv",
+          "tx": "AcAtq4pKddzNpfDa8QUHLHTrXpwA16m8JrFQQvgv5iNC"
+        },
+        {
+          "block_height": 278012975,
+          "block_time_ms": 1794868546423,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "d5abafa39d4a42012c1d6b79c8c617c11debcbd48e0f5c9b7c6649b118e3b9a1",
+            "seq": 204
+          },
+          "event": "skip",
+          "receipt_id": "3pAfdMktfLKyge8Cy6QLn7xVsPoEuesaNYT1sRx6Qoq4",
+          "tx": "BuuQ7nt5ggsNymKAXG7TtU4utL61keTCcmPW5fLWmkaa"
         }
       ],
       "gas": [
@@ -16518,6 +17057,61 @@
           "block_time_ms": 1794786539328,
           "tokens_burnt": "206863125164100000000",
           "tx": "BrPrDwgYsEPHwFHipeeXmSfoXen5es4Sczjc2L4AUMYx"
+        },
+        {
+          "block_time_ms": 1794793891891,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "APam5D9nAXgQgtBRUAmo8pV3U3nkwZJ1zhorF9SEc9fx"
+        },
+        {
+          "block_time_ms": 1794801262334,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "29oQ9AqjQfKmq2kPmXze4L8gRY1upRjPTprGhbmDtNh3"
+        },
+        {
+          "block_time_ms": 1794808601728,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "WGDvigrLPq4orrPVcEzLaX1x3PY4MnHn3DoEyMRuTnW"
+        },
+        {
+          "block_time_ms": 1794815957237,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "9EBgqe3Uh86BNLXYne3ehDizHnBLU2reke1w7kXZ2JTj"
+        },
+        {
+          "block_time_ms": 1794823298997,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "AHowxvhCpGZCpr9EAoMm2d2kPWn2VQZ2wUn8W4gVkrjC"
+        },
+        {
+          "block_time_ms": 1794830652338,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "7jgtesDqDS9mmwcqbdE8whYgGhSQfjnByTJhiiyhjb8Y"
+        },
+        {
+          "block_time_ms": 1794838409798,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "BH5YnaZkX3q1f1PmtC4o1sjca1CE6spkGvTn48jxrr9V"
+        },
+        {
+          "block_time_ms": 1794846273522,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "DqUL3T1g3uvrfW9wmbDTX6vpifwKL6nVAezdjz43mjCg"
+        },
+        {
+          "block_time_ms": 1794853788496,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "AFB3op3EELJ1xWL5M14hstXfN2FwpMuAykmiqccVBGfu"
+        },
+        {
+          "block_time_ms": 1794861208849,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "AcAtq4pKddzNpfDa8QUHLHTrXpwA16m8JrFQQvgv5iNC"
+        },
+        {
+          "block_time_ms": 1794868546423,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "BuuQ7nt5ggsNymKAXG7TtU4utL61keTCcmPW5fLWmkaa"
         }
       ],
       "observed": {
@@ -16543,7 +17137,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 193,
+          "seq": 205,
           "version": "0.1.0"
         },
         "intents": {
@@ -16586,11 +17180,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 203,
+          "events_replayed": 215,
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",
@@ -16607,11 +17201,13 @@
       "proof": {
         "detail": "self-reported: harness and model are the operator's word",
         "evidence_ids": [],
-        "receipts_sha256": "01ce9cdd4d9700f2c38f0c95d258941e67ad0c962d07ad756fb7aa1730a7abe4",
+        "receipts_sha256": "e24fdb9570f0d446699b78d0fc7e0041bd8a133de7c8dba3c8734fdffb109bdd",
         "seqs": [
           1,
-          193
+          204
         ],
+        "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
+        "strategy_versions": 2,
         "tier": "self"
       },
       "provenance": {
@@ -20285,6 +20881,126 @@
           "event": "skip",
           "receipt_id": "AGE34vjvNCPd4LsqyQ2G5z5rudbvS7MWp7apdwhR5Nhf",
           "tx": "AKZfNyCp9n55Ugie2DpG4qTELpcKic7JPuUb8ciDi9u1"
+        },
+        {
+          "block_height": 277887259,
+          "block_time_ms": 1794793963600,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "ec16bc743970d56773a4acc10ca273746a36e51cbab6cfe3f93d8887d29eff75",
+            "seq": 195
+          },
+          "event": "skip",
+          "receipt_id": "2pDKcSmVGLabfCebREg4v3EhhQbhjdspr4PYemezYDv6",
+          "tx": "4Y3udmYkWMAjGVKY9JGMpYiKXAcf2VqZr9tSKT3ngxLc"
+        },
+        {
+          "block_height": 277899925,
+          "block_time_ms": 1794801330910,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "9f935c6e09c62911b53f3997b1ccc6441b556319517ac304abc74f82cc7cfa84",
+            "seq": 196
+          },
+          "event": "skip",
+          "receipt_id": "9JSKnrxGsNVq7vE6rXNJuq6W14tEEhLDAPMJfTMRNseB",
+          "tx": "HBFD11tgqeqf43MMas18KMJuwKAAg5yTYnAZHRG4SZpg"
+        },
+        {
+          "block_height": 277912503,
+          "block_time_ms": 1794808686125,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "378d02f4e7957d7ecdbc81c478957bb56b294c0dc3b422167a89a0d1bec718cd",
+            "seq": 197
+          },
+          "event": "skip",
+          "receipt_id": "2pjguypYJU7EWgSetZn578wbg3iQxjNmJYvSVW81zC8h",
+          "tx": "a5i1vrLjbJhHVu9cLitdwXoEiZ9utPhbDVCsSFE1Aif"
+        },
+        {
+          "block_height": 277925096,
+          "block_time_ms": 1794816029209,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "f0f952cf0c2afabdc3fafea513070f64f0e95525009024bdc2d99f85753721e8",
+            "seq": 198
+          },
+          "event": "skip",
+          "receipt_id": "F82sGmKdYShXQ6wWozxDRJXdHy2itwyGVRFyqZWE4akX",
+          "tx": "AvFnxchXJw6q9TaevoJxbvojWXfxKkUb8C2Briq4Rpp4"
+        },
+        {
+          "block_height": 277937698,
+          "block_time_ms": 1794823376210,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "cba07b101e0bb085e654dea1ddb4ec2de7f0db529ee876126fd7186b2bbc2d94",
+            "seq": 199
+          },
+          "event": "skip",
+          "receipt_id": "BiTdaAE2iMAyVdKRhVh6f1AV1LJbUM2fXd8bzwUYtftf",
+          "tx": "BqEUaM9D6tQwgU7mXZ4ceG1whKboDt32KLpv7PXHaCxS"
+        },
+        {
+          "block_height": 277950140,
+          "block_time_ms": 1794830746867,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "41daa76a946118bf26f4a9ba9bde4af708f1dbc4377c0f53419aaf8a5f9a93ab",
+            "seq": 200
+          },
+          "event": "skip",
+          "receipt_id": "4crPx4RVrwULk7RjbDMHKe4LRjn5xtSpF2pPKzPvVhop",
+          "tx": "8HrhaJhFW8BddnSAGNjsq8Jygr9qrfBz5oDChSWnxgCA"
+        },
+        {
+          "block_height": 277963865,
+          "block_time_ms": 1794838849023,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "edaeeff376ac210c8b6299a00be2c684dd9415031883cc1c805d181d35076b01",
+            "seq": 201
+          },
+          "event": "skip",
+          "receipt_id": "GZTsypfw5qBVQcjzvHbFQq6J8brfSJWthmbuH8AwmnCh",
+          "tx": "DxAT6X5NZhWxMhEUUyy4wefha2jU94uSYWAD1PbNYbaY"
+        },
+        {
+          "block_height": 277989086,
+          "block_time_ms": 1794853910701,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "ffa1ceecf2b3606ecd52505c738a47a883c8ca43b4747e60c74595792ce38ac7",
+            "seq": 202
+          },
+          "event": "skip",
+          "receipt_id": "EY2VAimywY2RCKQe14h6F6CnyFvufjpneXtTDchqaY25",
+          "tx": "2eMruQmDPzQwCEUhstDpsSijpchXRiA4HxVxVpwSRdec"
+        },
+        {
+          "block_height": 278001041,
+          "block_time_ms": 1794861274962,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "be43fc33b1cceac070c688388be287f0be081a0ea339d8d4a225b8f0a0b29d42",
+            "seq": 203
+          },
+          "event": "skip",
+          "receipt_id": "63hF4tYpmq5h2k2vU6L7Qxh78rqvMXNJnM6w8c4CuH3",
+          "tx": "5kuWeFTf1sXoGgATL4DCF8PjB6k4jEk6N2ReY3sjQiWN"
+        },
+        {
+          "block_height": 278013119,
+          "block_time_ms": 1794868632842,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "e67e911dad05ed7cb71f39c00ead28df7578c6a18b3605008e6e1263c2283d63",
+            "seq": 204
+          },
+          "event": "skip",
+          "receipt_id": "13jE8R5kvQy3h7avojgbu2CkejKKQf9CMYpQ43NPV69J",
+          "tx": "743358FyYjSUiEboxbBSBHN3egaLomasF3KuTts8uSxh"
         }
       ],
       "gas": [
@@ -21257,6 +21973,56 @@
           "block_time_ms": 1794786625226,
           "tokens_burnt": "207692882708500000000",
           "tx": "AKZfNyCp9n55Ugie2DpG4qTELpcKic7JPuUb8ciDi9u1"
+        },
+        {
+          "block_time_ms": 1794793963600,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "4Y3udmYkWMAjGVKY9JGMpYiKXAcf2VqZr9tSKT3ngxLc"
+        },
+        {
+          "block_time_ms": 1794801330910,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "HBFD11tgqeqf43MMas18KMJuwKAAg5yTYnAZHRG4SZpg"
+        },
+        {
+          "block_time_ms": 1794808686125,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "a5i1vrLjbJhHVu9cLitdwXoEiZ9utPhbDVCsSFE1Aif"
+        },
+        {
+          "block_time_ms": 1794816029209,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "AvFnxchXJw6q9TaevoJxbvojWXfxKkUb8C2Briq4Rpp4"
+        },
+        {
+          "block_time_ms": 1794823376210,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "BqEUaM9D6tQwgU7mXZ4ceG1whKboDt32KLpv7PXHaCxS"
+        },
+        {
+          "block_time_ms": 1794830746867,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "8HrhaJhFW8BddnSAGNjsq8Jygr9qrfBz5oDChSWnxgCA"
+        },
+        {
+          "block_time_ms": 1794838849023,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "DxAT6X5NZhWxMhEUUyy4wefha2jU94uSYWAD1PbNYbaY"
+        },
+        {
+          "block_time_ms": 1794853910701,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "2eMruQmDPzQwCEUhstDpsSijpchXRiA4HxVxVpwSRdec"
+        },
+        {
+          "block_time_ms": 1794861274962,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "5kuWeFTf1sXoGgATL4DCF8PjB6k4jEk6N2ReY3sjQiWN"
+        },
+        {
+          "block_time_ms": 1794868632842,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "743358FyYjSUiEboxbBSBHN3egaLomasF3KuTts8uSxh"
         }
       ],
       "observed": {
@@ -21282,7 +22048,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 194,
+          "seq": 205,
           "version": "0.1.0"
         },
         "intents": {
@@ -21325,11 +22091,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 245,
+          "events_replayed": 256,
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "usdc.itachicara.testnet",
@@ -21346,11 +22112,13 @@
       "proof": {
         "detail": "self-reported: harness and model are the operator's word",
         "evidence_ids": [],
-        "receipts_sha256": "1038856a283402eb43c7de91391fd45a170b0519b6cd576bab2e3c8f2ff78553",
+        "receipts_sha256": "32b3700f806ecbe3b357a74459aea5c9a1b5d2cd2a125ebd46ae2448f050df9e",
         "seqs": [
           1,
-          194
+          204
         ],
+        "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
+        "strategy_versions": 2,
         "tier": "self"
       },
       "provenance": {
@@ -21583,7 +22351,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",
@@ -22222,6 +22990,18 @@
           "event": "trade",
           "receipt_id": "G2E3WzDPSHaKAn3gdaDfokDzkfKFaenRTP3tMipS6Knp",
           "tx": "65CDM5MHpESZXonZBrUhxhrLgxj824UnK4EV87mZFe5r"
+        },
+        {
+          "block_height": 278023324,
+          "block_time_ms": 1794874836641,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "b975163522f64421ba5711bb9965e53a37b2e7e65c4a19fccaafcb1389cabb98",
+            "seq": 22
+          },
+          "event": "skip",
+          "receipt_id": "2Nbqpz3GhDQphC9eYeqjs1r4KAGmn8bvAeMRAHtE6iAY",
+          "tx": "GREMKxTbejNQMdnvshiAY1YQx6eZAZ4VKdNeiouwbVFr"
         }
       ],
       "gas": [
@@ -22329,6 +23109,11 @@
           "block_time_ms": 1794788429082,
           "tokens_burnt": "4320839397364300000000",
           "tx": "65CDM5MHpESZXonZBrUhxhrLgxj824UnK4EV87mZFe5r"
+        },
+        {
+          "block_time_ms": 1794874836641,
+          "tokens_burnt": "208055100386400000000",
+          "tx": "GREMKxTbejNQMdnvshiAY1YQx6eZAZ4VKdNeiouwbVFr"
         }
       ],
       "observed": {
@@ -22354,7 +23139,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 21,
+          "seq": 22,
           "version": "0.1.0"
         },
         "intents": {
@@ -22397,11 +23182,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 34,
+          "events_replayed": 35,
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",
@@ -22409,14 +23194,14 @@
             ],
             [
               "usdc.itachicara.testnet",
-              "20000000000000000000000"
+              "0"
             ]
           ],
-          "trades": 1
+          "trades": 0
         }
       },
       "proof": {
-        "detail": "18 in-season decision(s) have no receipt in the file (first: seq 4)",
+        "detail": "19 in-season decision(s) have no receipt in the file (first: seq 4)",
         "evidence_ids": [
           "bundle:06f872bc7bd09f8aa9b852230ad1587715f569e0d1b004d6a9615049cfb333dd",
           "bundle:1e601b14784cd698075e05c6bf6f3b8570d610d86bbad39cf9219498239ad6ef",
@@ -22428,8 +23213,10 @@
         "receipts_sha256": "0c95a48bb3574d020ed74a73706d386203e2647309466b22d0745408c6b9b216",
         "seqs": [
           1,
-          21
+          22
         ],
+        "strategy_sha256": "9f8f34426042cc19017d2149b47258d5f5d14e63e07aac122a9b26dfb2ddcd7b",
+        "strategy_versions": 1,
         "tier": "self"
       },
       "provenance": {
@@ -24879,6 +25666,138 @@
           "event": "skip",
           "receipt_id": "AzPRj9MtAwb3PkVjsBj5zE5A8kkGnSzHWKcujWNcZjX9",
           "tx": "3rVJnHD2Tj6szuvEx7MpfK3SAVUeDFKg9MoErpKkD39o"
+        },
+        {
+          "block_height": 277887147,
+          "block_time_ms": 1794793899984,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "b9ebab913f3c87e95664cad0dff7e52b3eb9575b39677fbe83fd46f363dd9fc7",
+            "seq": 197
+          },
+          "event": "skip",
+          "receipt_id": "9MLdscaSMJbwmGYrn7FvjBa3T5M1Z4iQGYCmNVDC68uU",
+          "tx": "HTjTzwUrpo2jVnvY63MpbrDfqWgmE48XMwyTimFTugUJ"
+        },
+        {
+          "block_height": 277899821,
+          "block_time_ms": 1794801269848,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "69773c051889847500168fa0a28022e44aa9529e92b98b7df614177f9d9a2817",
+            "seq": 198
+          },
+          "event": "skip",
+          "receipt_id": "B3HGJanDcP9dZ6BJQ3zbcjG454CinL1fZNd7VqMh9kx5",
+          "tx": "DNBPEXKsFSpiZed5nH7zmRgnE3XkGKLMA9zrJvpfkrVs"
+        },
+        {
+          "block_height": 277912370,
+          "block_time_ms": 1794808609586,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "5d3eeb522b66ec5820bd37d77e6a4685f1d893d145d4942c20cd45f0706b0f11",
+            "seq": 199
+          },
+          "event": "skip",
+          "receipt_id": "CFKF6kQyjKDwkKyEGjAQP6JhkTcXaJX6aNz7wnfPc2d6",
+          "tx": "cdTjYjjdnuaQaN7zD59jh6tCDygKtxg1j1CkLyaE9yF"
+        },
+        {
+          "block_height": 277924991,
+          "block_time_ms": 1794815966350,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "b5a80f42bc2ea284d3f46831984d27b09d44622c3fd7b8f34a9c54aa9805a9f4",
+            "seq": 200
+          },
+          "event": "skip",
+          "receipt_id": "SNJDpNaqAEAqV9kFxTmhBE5YUEJUK3cHjYnPdmJmwmt",
+          "tx": "HoVR1yLGN5QXfi37PHdr6oDjF8kY57RaQHch9wQrjrnf"
+        },
+        {
+          "block_height": 277937577,
+          "block_time_ms": 1794823306978,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "aee96af85273dcc05b4ac5721f29da4c51b63b38f8a0f32b1b70005ebd981947",
+            "seq": 201
+          },
+          "event": "skip",
+          "receipt_id": "AMbrXXoL3afsgysRwZkMUJ4z1pxFSziD6RBYj9degsFL",
+          "tx": "GFg6Lsn4YkMsieGPLEXEqs1JtSeEUSHP28KaM9tiR757"
+        },
+        {
+          "block_height": 277950041,
+          "block_time_ms": 1794830686950,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "f0aabddf8207bb5dd9d57d82dddb6d6ba8f6cd3cd7698b49a01ac569be54f993",
+            "seq": 202
+          },
+          "event": "skip",
+          "receipt_id": "DrTXfg5eLW7T249oEUAd2btnVckmy54TqiJ5dVhZnUKp",
+          "tx": "HXeFCBBLAANteLnb9h2wACmB1pDCYUx2gQqNr5HxCgJD"
+        },
+        {
+          "block_height": 277963400,
+          "block_time_ms": 1794838567992,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "2a908494f1f13123751d19a54a1bc914d91c232ea7f97b033b0c73f3efe14c79",
+            "seq": 203
+          },
+          "event": "skip",
+          "receipt_id": "3BY5GCCszGPwY1oLGCq95jwzJ2FS42gXmzAvY2Wcnm5N",
+          "tx": "64By9kmFFCq9eRhxtLE2rrEQbAvQAKtLn6k8bXwU9Vdy"
+        },
+        {
+          "block_height": 277976482,
+          "block_time_ms": 1794846297197,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "fe8e0c95f6e40aa4a9e53442ebb559b35760334b638cbb25665b5a24c5853098",
+            "seq": 204
+          },
+          "event": "skip",
+          "receipt_id": "9S3hzTu4BgtghimZxnuEoyXErjptdmJABHWjyucSkbwV",
+          "tx": "BYYeXFT39RTGFvavQ8rdTNGhFmxHXURNsx2Yuxu9Yj67"
+        },
+        {
+          "block_height": 277988925,
+          "block_time_ms": 1794853806200,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "83983266a615b26ffc30a56950757c9fd1194b7acd86e7256b1bd069d84a650c",
+            "seq": 205
+          },
+          "event": "skip",
+          "receipt_id": "Boa5keTvXeJKjnFaPXfEmxPkJ6LWYXPDWzRe3wmGK5kW",
+          "tx": "345bFeUB16gLkLBajLSeqfyaD2DN9M3VwoNKfnoqUNFH"
+        },
+        {
+          "block_height": 278000947,
+          "block_time_ms": 1794861217861,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "27161a034fa316e4aa6976702aa656ec72ad93be8fa7328cf805042a2b09091e",
+            "seq": 206
+          },
+          "event": "skip",
+          "receipt_id": "H3BHpiP2476cHcfQ7e8BdHJwUaqk1vCRipqc6uSpym7j",
+          "tx": "HvfxYRpXuknRYYPdwZNhWRKfvvzM9BwQKrCfFuzCgFTQ"
+        },
+        {
+          "block_height": 278012990,
+          "block_time_ms": 1794868555589,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "97e8f8504d8ce32e7d23a38ea36e6d5067cb259b0ffcd19d54c0a8207932e397",
+            "seq": 207
+          },
+          "event": "skip",
+          "receipt_id": "7EHGpUUUvzLnDFzyoN45j97hQvWyRrr3TqTJEhZaMKZN",
+          "tx": "7gTyy4pW1tCbE45ZPsv5rrNvbNiHgza7NNALKYKubMG"
         }
       ],
       "gas": [
@@ -25861,6 +26780,61 @@
           "block_time_ms": 1794786547634,
           "tokens_burnt": "198029573991600000000",
           "tx": "3rVJnHD2Tj6szuvEx7MpfK3SAVUeDFKg9MoErpKkD39o"
+        },
+        {
+          "block_time_ms": 1794793899984,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "HTjTzwUrpo2jVnvY63MpbrDfqWgmE48XMwyTimFTugUJ"
+        },
+        {
+          "block_time_ms": 1794801269848,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "DNBPEXKsFSpiZed5nH7zmRgnE3XkGKLMA9zrJvpfkrVs"
+        },
+        {
+          "block_time_ms": 1794808609586,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "cdTjYjjdnuaQaN7zD59jh6tCDygKtxg1j1CkLyaE9yF"
+        },
+        {
+          "block_time_ms": 1794815966350,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "HoVR1yLGN5QXfi37PHdr6oDjF8kY57RaQHch9wQrjrnf"
+        },
+        {
+          "block_time_ms": 1794823306978,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "GFg6Lsn4YkMsieGPLEXEqs1JtSeEUSHP28KaM9tiR757"
+        },
+        {
+          "block_time_ms": 1794830686950,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "HXeFCBBLAANteLnb9h2wACmB1pDCYUx2gQqNr5HxCgJD"
+        },
+        {
+          "block_time_ms": 1794838567992,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "64By9kmFFCq9eRhxtLE2rrEQbAvQAKtLn6k8bXwU9Vdy"
+        },
+        {
+          "block_time_ms": 1794846297197,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "BYYeXFT39RTGFvavQ8rdTNGhFmxHXURNsx2Yuxu9Yj67"
+        },
+        {
+          "block_time_ms": 1794853806200,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "345bFeUB16gLkLBajLSeqfyaD2DN9M3VwoNKfnoqUNFH"
+        },
+        {
+          "block_time_ms": 1794861217861,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "HvfxYRpXuknRYYPdwZNhWRKfvvzM9BwQKrCfFuzCgFTQ"
+        },
+        {
+          "block_time_ms": 1794868555589,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "7gTyy4pW1tCbE45ZPsv5rrNvbNiHgza7NNALKYKubMG"
         }
       ],
       "observed": {
@@ -25886,7 +26860,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 196,
+          "seq": 208,
           "version": "0.1.0"
         },
         "intents": {
@@ -25929,11 +26903,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 199,
+          "events_replayed": 211,
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [],
           "trades": 0
         }
@@ -25941,11 +26915,13 @@
       "proof": {
         "detail": "self-reported: harness and model are the operator's word",
         "evidence_ids": [],
-        "receipts_sha256": "07506f37bc1f01e40631835e667644adcc1db8fe48c3a3c1676456c530e58d58",
+        "receipts_sha256": "4e05c5fb3afa38cb77f400c36ce8f6cc632cb3182211f59dc56a675db68cac32",
         "seqs": [
           1,
-          196
+          207
         ],
+        "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
+        "strategy_versions": 2,
         "tier": "self"
       },
       "provenance": {
@@ -26832,7 +27808,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",
@@ -27355,6 +28331,138 @@
           "event": "skip",
           "receipt_id": "Hu8v4x342ZQkX1j9nDyWLWYrYuSmqS6JGddgmkZhrcZq",
           "tx": "GTwpz6HrPt5KPcDa5DUR5VqNn5ipCchWdurG9EHeozUv"
+        },
+        {
+          "block_height": 277887303,
+          "block_time_ms": 1794793989484,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "62aaac3add5d2fd81e9271ee630d3738395f2e562872db8dab02a7350dff1af3",
+            "seq": 36
+          },
+          "event": "skip",
+          "receipt_id": "Hnwdj7r9p9bE8oHw1ZifDfwezAsAXYKn1p3RXaJihYj4",
+          "tx": "9v8ZoDwfZU5tTCVnHKoM392Uye8fRVCiCd4uNTs9bocQ"
+        },
+        {
+          "block_height": 277899967,
+          "block_time_ms": 1794801356382,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "6e04ccba307d4f3c5a8e5a83a7968d3bcfd67b18e9d0705aab1d284ba6e403ba",
+            "seq": 37
+          },
+          "event": "skip",
+          "receipt_id": "6cEiNzFjvb8h2jy96kdJZUSsRy796Sky3R6n7PbYpg1F",
+          "tx": "ALzNmMVqQfKArnJoX4NyCdnMkzcAsdkbe9KHTdthnv9B"
+        },
+        {
+          "block_height": 277912549,
+          "block_time_ms": 1794808712253,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "920e7563aa2f094bf5db81b73ddf36f0757e9cc92f0514dc3dc900561ea7fac1",
+            "seq": 38
+          },
+          "event": "skip",
+          "receipt_id": "667DUgx1D6vx2BPfgnpZiX37SrE4Q8iWPQPyeZRC3rTN",
+          "tx": "9MDaUmRtMcTcJWyBeD7K4HawWZXJYxYRgW1keox3Dwq7"
+        },
+        {
+          "block_height": 277925142,
+          "block_time_ms": 1794816056205,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "5b5650c0e81ece91b9e97da5a6ff11c0a847dc97adfd9d17e8eefda12436cc4f",
+            "seq": 39
+          },
+          "event": "skip",
+          "receipt_id": "9JCcytqd2crciDHVMw5GGpcMswtgmP7sSgvq9ksGZso",
+          "tx": "4oS1QQ2Zo8YN593MTyqHWrNUqeFznj17TrNJXCW11bFQ"
+        },
+        {
+          "block_height": 277937742,
+          "block_time_ms": 1794823402837,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "b67b2dc9a1f45c0a659597753ef0f81e593494c8e3640f503dce0887ed5d6cd7",
+            "seq": 40
+          },
+          "event": "skip",
+          "receipt_id": "9Wf3AKixz35gaewgR54jU3JSDgKBfYrN7SWLg8VzGouM",
+          "tx": "2imYa5VEXzPXoF57auQbZvoqb7Y7E4SeByc64VDiXCvn"
+        },
+        {
+          "block_height": 277950184,
+          "block_time_ms": 1794830773540,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "edc536c1f6937afa5f03e4b22dc5fc2d2ec4ec1e78f9d81ec9a08711e793aa9d",
+            "seq": 41
+          },
+          "event": "skip",
+          "receipt_id": "DyLDMyMR1Tu2GaqGrHt6yD4t3Yh4aMTnUnrYQ4MFfiTQ",
+          "tx": "5pL1fYrCBXXccctWGzfCWQ5YmVi3wSsXUAM5efhaGqbK"
+        },
+        {
+          "block_height": 277964036,
+          "block_time_ms": 1794838951515,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "1d18b21334c24cab16ad7710d3cad08462cf7d6d87311c4519a5a477de59350d",
+            "seq": 42
+          },
+          "event": "skip",
+          "receipt_id": "9Y3yMnfwnmpkj5qEg5yoanKeYANuqVUftVCopVuiZXer",
+          "tx": "FahkCRomzdZKyDBJ3Yyq3gMxNtxzNShCUYjWfVzKMJU5"
+        },
+        {
+          "block_height": 277976882,
+          "block_time_ms": 1794846533245,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "1ba27721a316b056d0c17e1bf494f286e42f9be2bd28d5f4a8097e51ece2ea18",
+            "seq": 43
+          },
+          "event": "skip",
+          "receipt_id": "62MWFigAP8RwsNZmm7zE2U8g9kdbem8C8BHsBYPe6FT",
+          "tx": "CK9DDCg2ytv8QSJmDtBQhepnn2HgpVCtxtNptNGoRiVH"
+        },
+        {
+          "block_height": 277989172,
+          "block_time_ms": 1794853968358,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "3b1ddb6fd40b6337e622524c4a64567d3958c31e8c63ea23226e0fc06347488f",
+            "seq": 44
+          },
+          "event": "skip",
+          "receipt_id": "GfTsacUJLo23nWkXnsdRdmMRRqB3zXsCscRs7vLh9fNB",
+          "tx": "DBSX74Mg3AJqy4xaGz2ftds7SSXHfQG5Qs5JHn2HgKBt"
+        },
+        {
+          "block_height": 278001083,
+          "block_time_ms": 1794861300386,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "06958929ee7fedd496d676ee3ffb78f311f4398b6f58a9bb5973acdaa4e2b675",
+            "seq": 45
+          },
+          "event": "skip",
+          "receipt_id": "A6gwkrm9LGFCFFcsVYBQxgGuUt4iZ1KBjosyjyRoXvLG",
+          "tx": "GcQ6EL8MGx1ZZTwxxvU59A69LFGoBciej6xNoxCN9Kv2"
+        },
+        {
+          "block_height": 278013166,
+          "block_time_ms": 1794868662257,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "4503026aefb6b86a1d2beb9ce85a7f537398d5174255c68f921fe68b29fda15e",
+            "seq": 46
+          },
+          "event": "skip",
+          "receipt_id": "CDTgzuArwQ4NzRXDipEE54PieH7VUw2dtwtP3sXFzR9C",
+          "tx": "FH2mWsFw6CCFAdy9yu65fTVNwfYswZgRpqzbEM8nBwxz"
         }
       ],
       "gas": [
@@ -27532,6 +28640,61 @@
           "block_time_ms": 1794786651584,
           "tokens_burnt": "197719955582700000000",
           "tx": "GTwpz6HrPt5KPcDa5DUR5VqNn5ipCchWdurG9EHeozUv"
+        },
+        {
+          "block_time_ms": 1794793989484,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "9v8ZoDwfZU5tTCVnHKoM392Uye8fRVCiCd4uNTs9bocQ"
+        },
+        {
+          "block_time_ms": 1794801356382,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "ALzNmMVqQfKArnJoX4NyCdnMkzcAsdkbe9KHTdthnv9B"
+        },
+        {
+          "block_time_ms": 1794808712253,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "9MDaUmRtMcTcJWyBeD7K4HawWZXJYxYRgW1keox3Dwq7"
+        },
+        {
+          "block_time_ms": 1794816056205,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "4oS1QQ2Zo8YN593MTyqHWrNUqeFznj17TrNJXCW11bFQ"
+        },
+        {
+          "block_time_ms": 1794823402837,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "2imYa5VEXzPXoF57auQbZvoqb7Y7E4SeByc64VDiXCvn"
+        },
+        {
+          "block_time_ms": 1794830773540,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "5pL1fYrCBXXccctWGzfCWQ5YmVi3wSsXUAM5efhaGqbK"
+        },
+        {
+          "block_time_ms": 1794838951515,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "FahkCRomzdZKyDBJ3Yyq3gMxNtxzNShCUYjWfVzKMJU5"
+        },
+        {
+          "block_time_ms": 1794846533245,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "CK9DDCg2ytv8QSJmDtBQhepnn2HgpVCtxtNptNGoRiVH"
+        },
+        {
+          "block_time_ms": 1794853968358,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "DBSX74Mg3AJqy4xaGz2ftds7SSXHfQG5Qs5JHn2HgKBt"
+        },
+        {
+          "block_time_ms": 1794861300386,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "GcQ6EL8MGx1ZZTwxxvU59A69LFGoBciej6xNoxCN9Kv2"
+        },
+        {
+          "block_time_ms": 1794868662257,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "FH2mWsFw6CCFAdy9yu65fTVNwfYswZgRpqzbEM8nBwxz"
         }
       ],
       "observed": {
@@ -27557,7 +28720,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 35,
+          "seq": 47,
           "version": "0.1.0"
         },
         "intents": {
@@ -27600,11 +28763,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 37,
+          "events_replayed": 49,
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [],
           "trades": 0
         }
@@ -27612,11 +28775,13 @@
       "proof": {
         "detail": "self-reported: harness and model are the operator's word",
         "evidence_ids": [],
-        "receipts_sha256": "d85f08e72690d87b1f04d6aa5e5696f023faf1dbf6a22f1d527b67e9c9f4e78d",
+        "receipts_sha256": "95f8ceb531806a05852bf65d06277ea80c6f00d5dccf92d70cc650f1b4bcd5fd",
         "seqs": [
           1,
-          35
+          46
         ],
+        "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
+        "strategy_versions": 2,
         "tier": "self"
       },
       "provenance": {
@@ -27835,7 +29000,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",
@@ -28908,7 +30073,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",
@@ -30566,7 +31731,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498552",
+          "hour": "498576",
           "spent": [
             [
               "wrap.testnet",

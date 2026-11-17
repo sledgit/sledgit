@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794789000000,
-  "derived_sha256": "ce0549b085c848b97732adf4bdfcc1d31a66d87e8bc922233c09db3586ee56ce",
+  "as_of_ms": 1794875400000,
+  "derived_sha256": "609b8920f25406d143f7d6276d70e3e917c2135f0ec794499aa2465fefbb2dc6",
   "entry": {
     "account": "iron-trader-demo.arena2.irontrade.testnet",
     "beyond_noise": false,
@@ -24,7 +24,7 @@
       "skips": 2,
       "trades": 0
     },
-    "days": 14.67839153,
+    "days": 15.67839153,
     "decisions": [
       {
         "block_time_ms": 1793520944980,
@@ -49,13 +49,13 @@
     ],
     "description": "The open-source demo-trader desk (screener, analyst, risk, budget; the vault is the broker). Rule-based, with an optional Kronos-small forecast; the receipts name which ran. Re-run any decision with demo-trader rerun.",
     "end": {
-      "price": 3.173,
-      "value_usd": 3.0384
+      "price": 3.139,
+      "value_usd": 3.0112
     },
     "events_sha256": "5ee910bb5f47f990c6910f3bfb14c790fc6544e588fa7c19cd01e9d979ca03d4",
-    "funded_twr": -0.27291476,
+    "funded_twr": -0.28070577,
     "harness": "demo-trader/0.1.0",
-    "hold_twr": -0.13775269,
+    "hold_twr": -0.14164236,
     "id": "tn-iron-trader-demo",
     "inactive": false,
     "kind": "arena",
@@ -71,9 +71,9 @@
       "status": "genuine"
     },
     "range95": {
-      "hi": 0.04592008,
-      "lo": -0.25471785,
-      "n": 352
+      "hi": 0.04703513,
+      "lo": -0.26213924,
+      "n": 376
     },
     "ranked": false,
     "refusals_by_code": {},
@@ -2195,25 +2195,169 @@
         "value": 2.68785312
       },
       {
-        "hold": 3.0102778,
-        "stake": 3.01257312,
-        "t": 1794789000000,
-        "value": 2.6577626
+        "hold": 3.0086802,
+        "stake": 3.01097588,
+        "t": 1794790800000,
+        "value": 2.65496348
+      },
+      {
+        "hold": 2.993503,
+        "stake": 2.99577759,
+        "t": 1794794400000,
+        "value": 2.62837186
+      },
+      {
+        "hold": 3.0258544,
+        "stake": 3.02819443,
+        "t": 1794798000000,
+        "value": 2.685054
+      },
+      {
+        "hold": 3.0226592,
+        "stake": 3.02499999,
+        "t": 1794801600000,
+        "value": 2.67945576
+      },
+      {
+        "hold": 3.0110766,
+        "stake": 3.01340273,
+        "t": 1794805200000,
+        "value": 2.65916216
+      },
+      {
+        "hold": 3.0058844,
+        "stake": 3.0082075,
+        "t": 1794808800000,
+        "value": 2.65006502
+      },
+      {
+        "hold": 3.0070826,
+        "stake": 3.00941441,
+        "t": 1794812400000,
+        "value": 2.65216436
+      },
+      {
+        "hold": 3.0170676,
+        "stake": 3.01942439,
+        "t": 1794816000000,
+        "value": 2.66965885
+      },
+      {
+        "hold": 3.011476,
+        "stake": 3.01382897,
+        "t": 1794819600000,
+        "value": 2.65986194
+      },
+      {
+        "hold": 3.0150706,
+        "stake": 3.01743679,
+        "t": 1794823200000,
+        "value": 2.66615995
+      },
+      {
+        "hold": 3.0190646,
+        "stake": 3.02144478,
+        "t": 1794826800000,
+        "value": 2.67315775
+      },
+      {
+        "hold": 3.021461,
+        "stake": 3.02385223,
+        "t": 1794830400000,
+        "value": 2.67735642
+      },
+      {
+        "hold": 2.9943018,
+        "stake": 2.99664867,
+        "t": 1794834000000,
+        "value": 2.62977142
+      },
+      {
+        "hold": 2.9958994,
+        "stake": 2.99825572,
+        "t": 1794837600000,
+        "value": 2.63257054
+      },
+      {
+        "hold": 3.021461,
+        "stake": 3.02387197,
+        "t": 1794841200000,
+        "value": 2.67735642
+      },
+      {
+        "hold": 3.0002928,
+        "stake": 3.00267032,
+        "t": 1794844800000,
+        "value": 2.64026811
+      },
+      {
+        "hold": 3.019464,
+        "stake": 3.02188434,
+        "t": 1794848400000,
+        "value": 2.67385753
+      },
+      {
+        "hold": 2.9986952,
+        "stake": 3.00108263,
+        "t": 1794852000000,
+        "value": 2.63746899
+      },
+      {
+        "hold": 3.009479,
+        "stake": 3.01189345,
+        "t": 1794855600000,
+        "value": 2.65636304
+      },
+      {
+        "hold": 3.0146712,
+        "stake": 3.01710209,
+        "t": 1794859200000,
+        "value": 2.66546017
+      },
+      {
+        "hold": 3.0082808,
+        "stake": 3.01070599,
+        "t": 1794862800000,
+        "value": 2.6542637
+      },
+      {
+        "hold": 3.013473,
+        "stake": 3.01591468,
+        "t": 1794866400000,
+        "value": 2.66336083
+      },
+      {
+        "hold": 3.0082808,
+        "stake": 3.01071901,
+        "t": 1794870000000,
+        "value": 2.6542637
+      },
+      {
+        "hold": 3.0050856,
+        "stake": 3.00752415,
+        "t": 1794873600000,
+        "value": 2.64866546
+      },
+      {
+        "hold": 2.9966982,
+        "stake": 2.99912377,
+        "t": 1794875400000,
+        "value": 2.63397009
       }
     ],
-    "stake_twr": -0.13709523,
+    "stake_twr": -0.14094759,
     "start": {
       "price": 4.364,
       "time_ms": 1793520786972,
       "value_usd": 3.4912
     },
-    "strategy_sha256": null,
-    "twr": -0.2387252,
+    "strategy_sha256": "f9d7c6aa37ec82f8ae56fc1a44d6d0d3baa0e22cd712961bac9392150d199e8a",
+    "twr": -0.24554019,
     "unranked_reason": "2 in-season decision(s); ranking needs 7",
-    "vs_funded": 0.04702277,
-    "vs_hold": -0.11710388,
-    "vs_hold_after_gas": -0.11748476,
-    "vs_stake": -0.11777657
+    "vs_funded": 0.04888901,
+    "vs_hold": -0.12104259,
+    "vs_hold_after_gas": -0.12142177,
+    "vs_stake": -0.12175345
   },
   "events": [
     {
@@ -2380,7 +2524,7 @@
       "status": "ok"
     },
     "usage": {
-      "hour": "498552",
+      "hour": "498576",
       "spent": [],
       "trades": 0
     }
