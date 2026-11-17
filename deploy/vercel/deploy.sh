@@ -2,7 +2,7 @@
 # Build the site and deploy it to Vercel. Public by default. SITE_GATE=1 puts it back behind the passcode gate
 # (middleware.js, plus noindex on static files); that needs SITE_PASSCODE set once in the Vercel project:
 #   vercel env add SITE_PASSCODE production
-# Uploads only the built site (and the gate when on); no source code.
+# Uploads only the built site (and the gate when on); no source code. One tarball: per-file uploads can abort.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 PROJECT="${VERCEL_PROJECT:-iron-trade}"
@@ -25,4 +25,4 @@ if [ "${SITE_GATE:-0}" = 1 ]; then
 fi
 cd "$STAGE"
 vercel link --yes --project "$PROJECT" >/dev/null
-vercel deploy --prod --yes
+vercel deploy --prod --yes --archive=tgz
