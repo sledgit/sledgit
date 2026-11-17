@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794875400000,
-  "collected_at": "2026-11-17T00:49:00.989Z",
+  "as_of_ms": 1794891960000,
+  "collected_at": "2026-11-17T05:51:05.352Z",
   "excluded": [
     "children of irontrade.testnet not read: the factory still holds a key, so its vaults are legacy"
   ],
@@ -1824,6 +1824,26 @@
     [
       1794873600000,
       3.16
+    ],
+    [
+      1794877200000,
+      3.125
+    ],
+    [
+      1794880800000,
+      3.168
+    ],
+    [
+      1794884400000,
+      3.183
+    ],
+    [
+      1794888000000,
+      3.28
+    ],
+    [
+      1794891600000,
+      3.289
     ]
   ],
   "minute": {
@@ -2687,7 +2707,15 @@
     "1794874440000": 3.154,
     "1794874620000": 3.149,
     "1794874800000": 3.148,
-    "1794875400000": 3.139
+    "1794875880000": 3.138,
+    "1794875940000": 3.138,
+    "1794876000000": 3.14,
+    "1794883200000": 3.175,
+    "1794883500000": 3.179,
+    "1794890760000": 3.263,
+    "1794890820000": 3.264,
+    "1794890880000": 3.259,
+    "1794891960000": 3.271
   },
   "network": "testnet",
   "reference": {
@@ -2922,7 +2950,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [],
           "trades": 0
         }
@@ -3116,7 +3144,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [],
           "trades": 0
         }
@@ -3657,7 +3685,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",
@@ -3668,16 +3696,17 @@
         }
       },
       "proof": {
-        "detail": "19 in-season decision(s) have no receipt in the file (first: seq 2)",
+        "detail": "house-rerun --check passes for 20 of 20 in-season decision(s) (seqs 1-20): published strategy, recorded inputs match chain and feed, and each receipt decides what the vault recorded",
         "evidence_ids": [],
-        "receipts_sha256": "13bc34e2cb04c9411d1b1a6eb2ab50e29069cf5cc14dd65f80e48e259ee0ebfd",
+        "receipts_sha256": "ed56897a8266fc61052a20a7c4555b4def914b7f5dab9c777968fb36e0932705",
         "seqs": [
           1,
           20
         ],
         "strategy_sha256": "c7fb1b78c53eaa599a2bc0003dcac4639151ab9a54c75eafbda3443198936f4d",
         "strategy_versions": 1,
-        "tier": "self"
+        "tier": "rules",
+        "verified_model": "rules:breakout"
       },
       "provenance": {
         "access_keys": 0,
@@ -4209,7 +4238,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",
@@ -4220,16 +4249,17 @@
         }
       },
       "proof": {
-        "detail": "19 in-season decision(s) have no receipt in the file (first: seq 2)",
+        "detail": "house-rerun --check passes for 20 of 20 in-season decision(s) (seqs 1-20): published strategy, recorded inputs match chain and feed, and each receipt decides what the vault recorded",
         "evidence_ids": [],
-        "receipts_sha256": "71d29ee1f66b9640853ec0526f6e61b383cea36532935428152f39e15b2e067e",
+        "receipts_sha256": "16420a3eb660578ab07e72fe1f0a2fe86a2135b5ffed4a5210c2b815a785b441",
         "seqs": [
           1,
           20
         ],
         "strategy_sha256": "95150baf2bfc66ffa9d4ebd8161eb3d9ed0382b01c95755101e4b5d3b8354583",
         "strategy_versions": 1,
-        "tier": "self"
+        "tier": "rules",
+        "verified_model": "rules:hold"
       },
       "provenance": {
         "access_keys": 0,
@@ -4516,7 +4546,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",
@@ -5124,7 +5154,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",
@@ -5139,16 +5169,17 @@
         }
       },
       "proof": {
-        "detail": "18 in-season decision(s) have no receipt in the file (first: seq 2)",
+        "detail": "house-rerun --check passes for 19 of 19 in-season decision(s) (seqs 1-19): published strategy, recorded inputs match chain and feed, and each receipt decides what the vault recorded",
         "evidence_ids": [],
-        "receipts_sha256": "8ebba9095a15b129455c23272456e7569b10d4145a1b6997d8bc78395d62f31f",
+        "receipts_sha256": "7ef2b1cd27238cf7cb904d6b7f97e6e18d1faaae6f6482432ccc13017ab31830",
         "seqs": [
           1,
           19
         ],
         "strategy_sha256": "ba2d2bdc50de214995ef238a6b2f78e0c4fc3778dd6fde2dc31fa9797275e6e7",
         "strategy_versions": 1,
-        "tier": "self"
+        "tier": "rules",
+        "verified_model": "rules:luck"
       },
       "provenance": {
         "access_keys": 0,
@@ -5452,7 +5483,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",
@@ -6025,7 +6056,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",
@@ -6036,16 +6067,17 @@
         }
       },
       "proof": {
-        "detail": "19 in-season decision(s) have no receipt in the file (first: seq 2)",
+        "detail": "house-rerun --check passes for 20 of 20 in-season decision(s) (seqs 1-20): published strategy, recorded inputs match chain and feed, and each receipt decides what the vault recorded",
         "evidence_ids": [],
-        "receipts_sha256": "2c969ad8ca2846b0a3626f6ddd0a95c3ff8cc080b58af9eede556000362f57b8",
+        "receipts_sha256": "5867113583673370f5f4f63755b57f1bcef15ba25fae920c6bfad29e4efcec90",
         "seqs": [
           1,
           20
         ],
         "strategy_sha256": "3544d9ef12901bf4b3c9e798b406ef8c30ce0778bc11f5dc866679243882edf6",
         "strategy_versions": 1,
-        "tier": "self"
+        "tier": "rules",
+        "verified_model": "rules:rebalancer"
       },
       "provenance": {
         "access_keys": 0,
@@ -6280,7 +6312,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [],
           "trades": 0
         }
@@ -6822,7 +6854,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",
@@ -6833,16 +6865,17 @@
         }
       },
       "proof": {
-        "detail": "19 in-season decision(s) have no receipt in the file (first: seq 2)",
+        "detail": "house-rerun --check passes for 20 of 20 in-season decision(s) (seqs 1-20): published strategy, recorded inputs match chain and feed, and each receipt decides what the vault recorded",
         "evidence_ids": [],
-        "receipts_sha256": "dfd90b279bc09d1ab57cac84c07ae8e1ebb4d98e72d526aa58be38b3911745c5",
+        "receipts_sha256": "df965fd79819afc5fdd875421f40e7a054d4086106338cf5d3e767b1a5b81a2a",
         "seqs": [
           1,
           20
         ],
         "strategy_sha256": "d1278515eb3548725ddeed63263a1b6fcc76631d58e85e78b39cc2eaec53f094",
         "strategy_versions": 1,
-        "tier": "self"
+        "tier": "rules",
+        "verified_model": "rules:trend"
       },
       "provenance": {
         "access_keys": 0,
@@ -7047,7 +7080,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [],
           "trades": 0
         }
@@ -7459,7 +7492,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",
@@ -8185,7 +8218,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",
@@ -8391,7 +8424,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [],
           "trades": 0
         }
@@ -11842,6 +11875,42 @@
           "event": "skip",
           "receipt_id": "4DQUUH6ihpVDtunfa2KibA6QqbbqbZtDyXmzgQPcGQMc",
           "tx": "2e3Xxr4Q8u9CX14a1v33xeWQ2xHtJWtGHBMzbDohVR3T"
+        },
+        {
+          "block_height": 278025032,
+          "block_time_ms": 1794875881986,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000015",
+            "receipt_hash": "1ee337cdebcfb3a451db1b7f6421ef8987823b27f2d95066d88636840601879a",
+            "seq": 206
+          },
+          "event": "skip",
+          "receipt_id": "8LFpVPpJZjY8pjhDbUjGUxH99Uf257SqT5a91Gyf92SR",
+          "tx": "8NQiojkJQs4VvgKYEqC63SgTQzTVgzhyMsfLYLKYGmua"
+        },
+        {
+          "block_height": 278036931,
+          "block_time_ms": 1794883219363,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000014",
+            "receipt_hash": "88743eccf68618d8d6033d3cd86ab91c1b600d78009e844e146a8499a4f7b8f4",
+            "seq": 207
+          },
+          "event": "skip",
+          "receipt_id": "MDQPAdiGEwaPYWtwHMSSaeuMCaL8dfonkL6Lfmcr1HP",
+          "tx": "r1jma1NycPmD7v2WD1asqw9BPEr6pN7BRvZcW2NvW37"
+        },
+        {
+          "block_height": 278049442,
+          "block_time_ms": 1794890765788,
+          "data": {
+            "note": "refused:insufficient_balance buy 0.000014",
+            "receipt_hash": "0d115534eb5a2d9754f3b96a6ef2c3523c23e48fbb0258bcf29f626dbafa90c5",
+            "seq": 208
+          },
+          "event": "skip",
+          "receipt_id": "2tAx8A1shH8Y1kWgdX8QJbF35yfBZCaodiNNFkZKo7Yi",
+          "tx": "3ZSsspwK8ZZF3KjY2ZVKXbN5nARMJo9AaVpmrbHhpsAr"
         }
       ],
       "gas": [
@@ -12869,6 +12938,21 @@
           "block_time_ms": 1794868520342,
           "tokens_burnt": "207031006558800000000",
           "tx": "2e3Xxr4Q8u9CX14a1v33xeWQ2xHtJWtGHBMzbDohVR3T"
+        },
+        {
+          "block_time_ms": 1794875881986,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "8NQiojkJQs4VvgKYEqC63SgTQzTVgzhyMsfLYLKYGmua"
+        },
+        {
+          "block_time_ms": 1794883219363,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "r1jma1NycPmD7v2WD1asqw9BPEr6pN7BRvZcW2NvW37"
+        },
+        {
+          "block_time_ms": 1794890765788,
+          "tokens_burnt": "208513857041400000000",
+          "tx": "3ZSsspwK8ZZF3KjY2ZVKXbN5nARMJo9AaVpmrbHhpsAr"
         }
       ],
       "observed": {
@@ -12894,7 +12978,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 206,
+          "seq": 208,
           "version": "0.1.0"
         },
         "intents": {
@@ -12937,11 +13021,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 243,
+          "events_replayed": 245,
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "usdc.itachicara.testnet",
@@ -12958,10 +13042,10 @@
       "proof": {
         "detail": "self-reported: harness and model are the operator's word",
         "evidence_ids": [],
-        "receipts_sha256": "52d4112c0265fe8552c8023cd140360413b0d8a2d5737ac20f0ad99170ad9e0c",
+        "receipts_sha256": "327fb751c3b07eb47c474f7ca2b787abad91038cd3da5623aa24a43ae982ffcc",
         "seqs": [
           1,
-          205
+          208
         ],
         "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
         "strategy_versions": 2,
@@ -13166,7 +13250,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",
@@ -13353,7 +13437,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [],
           "trades": 0
         }
@@ -16090,6 +16174,42 @@
           "event": "skip",
           "receipt_id": "3pAfdMktfLKyge8Cy6QLn7xVsPoEuesaNYT1sRx6Qoq4",
           "tx": "BuuQ7nt5ggsNymKAXG7TtU4utL61keTCcmPW5fLWmkaa"
+        },
+        {
+          "block_height": 278025080,
+          "block_time_ms": 1794875911040,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "7eaafd503bfb5614b9edbff4ccec42ce62600c675db3f2ce48a29aaab21147e0",
+            "seq": 205
+          },
+          "event": "skip",
+          "receipt_id": "DzNCDk6vTDxBj8swLHWjBd35g2FVkFkhXXfKU7EmdiK7",
+          "tx": "5BJ3dH4QkoC8jzGE4k9aRqY72b29YZuV1Vryeqq8axhQ"
+        },
+        {
+          "block_height": 278036976,
+          "block_time_ms": 1794883246447,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "f19f0ae333a4bb00a385ae2b5d27e49cd16a638d2ddc5d0680301f4a24f81124",
+            "seq": 206
+          },
+          "event": "skip",
+          "receipt_id": "4aut8taEzduogRE9x68gjFYwGLp4jxS7gy5Bj5yJgWHF",
+          "tx": "EtVBUNSEFevbSTp93BooJ3z9ayjNAUWWXCCkDFRBVqeQ"
+        },
+        {
+          "block_height": 278049492,
+          "block_time_ms": 1794890796107,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "e95fa7fa85ee695b85448eda7af3ec1d70cd641426c616c9e05c10cfe4d90f96",
+            "seq": 207
+          },
+          "event": "skip",
+          "receipt_id": "Hws1yWPA7kGmTvxvmXvJ7aG6YF4YT4vdLS4PAeturQzA",
+          "tx": "5yJASrQE6KMGTg5LwUmdZrg9ccgDAzfBw2dgZq1pQG97"
         }
       ],
       "gas": [
@@ -17112,6 +17232,21 @@
           "block_time_ms": 1794868546423,
           "tokens_burnt": "206863125164100000000",
           "tx": "BuuQ7nt5ggsNymKAXG7TtU4utL61keTCcmPW5fLWmkaa"
+        },
+        {
+          "block_time_ms": 1794875911040,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "5BJ3dH4QkoC8jzGE4k9aRqY72b29YZuV1Vryeqq8axhQ"
+        },
+        {
+          "block_time_ms": 1794883246447,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "EtVBUNSEFevbSTp93BooJ3z9ayjNAUWWXCCkDFRBVqeQ"
+        },
+        {
+          "block_time_ms": 1794890796107,
+          "tokens_burnt": "206863125164100000000",
+          "tx": "5yJASrQE6KMGTg5LwUmdZrg9ccgDAzfBw2dgZq1pQG97"
         }
       ],
       "observed": {
@@ -17137,7 +17272,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 205,
+          "seq": 207,
           "version": "0.1.0"
         },
         "intents": {
@@ -17180,11 +17315,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 215,
+          "events_replayed": 217,
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",
@@ -17201,10 +17336,10 @@
       "proof": {
         "detail": "self-reported: harness and model are the operator's word",
         "evidence_ids": [],
-        "receipts_sha256": "e24fdb9570f0d446699b78d0fc7e0041bd8a133de7c8dba3c8734fdffb109bdd",
+        "receipts_sha256": "80a0d043123353878cc14af7aea2027e214abb21077f71d993298f78faa14a35",
         "seqs": [
           1,
-          204
+          207
         ],
         "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
         "strategy_versions": 2,
@@ -21001,6 +21136,42 @@
           "event": "skip",
           "receipt_id": "13jE8R5kvQy3h7avojgbu2CkejKKQf9CMYpQ43NPV69J",
           "tx": "743358FyYjSUiEboxbBSBHN3egaLomasF3KuTts8uSxh"
+        },
+        {
+          "block_height": 278025176,
+          "block_time_ms": 1794875972081,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "4240f7d77879a1b9044a8c7949127b0444f3e6f2c5a828f4e2d4b213aef2579e",
+            "seq": 205
+          },
+          "event": "skip",
+          "receipt_id": "C2xTVywoaVBR9sRfFyz45Bnhc7uhDdB5s7wQ9K14MvV2",
+          "tx": "6uF5jMARpobyjEygSBVZF7TbXuckCcWkFV3sDvbRCXUW"
+        },
+        {
+          "block_height": 278037411,
+          "block_time_ms": 1794883513775,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "0855e83918491f9aa9acea66aa05dd032f14245d4d148665ab239eb03017d4ec",
+            "seq": 206
+          },
+          "event": "skip",
+          "receipt_id": "23PsUk4w4reFiBAZTzJWDnQApK8gEXtQDSVXd5oHW6JT",
+          "tx": "9nNb1ufUjvrt8NXiX68qsyhgDG35jGLn1befkQy8BWDH"
+        },
+        {
+          "block_height": 278049613,
+          "block_time_ms": 1794890870459,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "8d02207f5dd9d0f1acc9fc27a1fe5ad8e1436cc5f59de42c778c2588028ff3f4",
+            "seq": 207
+          },
+          "event": "skip",
+          "receipt_id": "2u9tGMvpLGzXc8EsntaeGzs3tr7L4irJ3uokCR9JZGik",
+          "tx": "2VeGhSz9y9ZudiP4EBdmDF2ZNH4VPvNC4XkPmRvc4Kp2"
         }
       ],
       "gas": [
@@ -22023,6 +22194,21 @@
           "block_time_ms": 1794868632842,
           "tokens_burnt": "207692882708500000000",
           "tx": "743358FyYjSUiEboxbBSBHN3egaLomasF3KuTts8uSxh"
+        },
+        {
+          "block_time_ms": 1794875972081,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "6uF5jMARpobyjEygSBVZF7TbXuckCcWkFV3sDvbRCXUW"
+        },
+        {
+          "block_time_ms": 1794883513775,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "9nNb1ufUjvrt8NXiX68qsyhgDG35jGLn1befkQy8BWDH"
+        },
+        {
+          "block_time_ms": 1794890870459,
+          "tokens_burnt": "207692882708500000000",
+          "tx": "2VeGhSz9y9ZudiP4EBdmDF2ZNH4VPvNC4XkPmRvc4Kp2"
         }
       ],
       "observed": {
@@ -22048,7 +22234,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 205,
+          "seq": 207,
           "version": "0.1.0"
         },
         "intents": {
@@ -22091,11 +22277,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 256,
+          "events_replayed": 258,
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "usdc.itachicara.testnet",
@@ -22112,10 +22298,10 @@
       "proof": {
         "detail": "self-reported: harness and model are the operator's word",
         "evidence_ids": [],
-        "receipts_sha256": "32b3700f806ecbe3b357a74459aea5c9a1b5d2cd2a125ebd46ae2448f050df9e",
+        "receipts_sha256": "db1013bd1d021b0b45556d5fbb45c4c1d64e8dfc2d8119d003d09da01d3c7558",
         "seqs": [
           1,
-          204
+          207
         ],
         "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
         "strategy_versions": 2,
@@ -22351,7 +22537,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",
@@ -23186,7 +23372,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",
@@ -23201,16 +23387,50 @@
         }
       },
       "proof": {
-        "detail": "19 in-season decision(s) have no receipt in the file (first: seq 4)",
+        "detail": "TEE season check failed: 14 of 22 decision(s) attested",
         "evidence_ids": [
           "bundle:06f872bc7bd09f8aa9b852230ad1587715f569e0d1b004d6a9615049cfb333dd",
+          "bundle:071c169e84e79c01a2e23cc059a6e1e2988481924d99db44f6a5217337f74f40",
+          "bundle:1526227e9d03702d1f2fef7c2cc71e76fab03b0091a7760db26c3362b84aad35",
           "bundle:1e601b14784cd698075e05c6bf6f3b8570d610d86bbad39cf9219498239ad6ef",
+          "bundle:267b0c91b4af5ab9c81bc6c5f5fcc070cde7fcc2645c6fa485b5e5d3d21c3a50",
+          "bundle:2828cd38f5c85f29c31b4f77a2567a234c913f1ccc7f0e0315b7da0084fb8ac4",
+          "bundle:2f18053383f6f31f6b22ecc099f1c10869036ac69f8d46d6b1df1df174afbc7c",
+          "bundle:35ddc6b8f956c4e9c7d34c86feffffd84931d7c5e341346b841994bea23bc5b3",
           "bundle:38c0a8286cc24793bebfb65f48cf33fd7516cd2f986ad2d9a5c2ab8389ff6514",
+          "bundle:51ab63bbeedacad78afa973d5c7bb8d50433d72a6adb7dcafc630901038db6ec",
+          "bundle:621b3851e50707b44b32720ff4e1751aa61de2c1c9f2f453976ec32db838e984",
+          "bundle:7cb2f47f1ab4a8237a01fefd520c55fd69a239513a72851ab3cd06eb1bbd5577",
+          "bundle:86dc220c543a6dfcc835a76bf6fb14595957a6ef8be67d6b9c8db070a639fbbe",
+          "bundle:a1525487050b51c8ef9be4cc3c7f7b1cb9dd1b0843f7f9d8f6e9ee6f12854a9f",
+          "bundle:b0eb58ca4a1150c5737a10191d54ea244756af4a6f97e6f994263e80185ebfda",
+          "bundle:bd5e51b007f1a1cea0c8bf41ee5071e59e03ae6d57590b5d884120ec2cfb44a2",
+          "bundle:c70c4a75cd101b34e28bff1032e30ddc11716853029441c68a2aad2939f2264f",
+          "bundle:cd43e6efec73f868f77aafe341faef9d92238a05a3ccc0518e8c0af0b725aee6",
+          "bundle:d2117c3723b6784a32b3d1bb142814e055898463d6744ce0aced1d4ba65b2277",
+          "bundle:d7cc53399ae8d694a93095c8fb37b358c35f200e1f66362bb049adda153462cf",
+          "chat:0d71071807184140841045a34dacc3e7",
+          "chat:0e3af8a87676419991023b02aa596931",
+          "chat:1908e7410354452d893a431d55a17f23",
+          "chat:1a64b592c5d74abaae747bf8e57ccb7c",
+          "chat:1b7873b452914e3babf8f978b6b60949",
           "chat:32cc946ae5a2498d99a3795a1513ba88",
+          "chat:415e01d1c5d34036accef1aeb33c81ff",
           "chat:4bb5c35972034340a35ca9f74bb7dbca",
-          "chat:9827ec13df214247ba495f20a1babc1c"
+          "chat:52e24c2ad990497ab308a9bb95164aee",
+          "chat:55d307aacbe84b29807f98f8fde44309",
+          "chat:5ae11988b5914d0e8adfccae505091ea",
+          "chat:73e698d3776e437282220a838e0f71b0",
+          "chat:8318d59420b44a829ebe7d5c79f211d6",
+          "chat:9827ec13df214247ba495f20a1babc1c",
+          "chat:ad6ea1695d13429ab392c0c2ffb265c7",
+          "chat:d4ac3d635b9b40b494636f280f0f5839",
+          "chat:dcd41b0d73f64d57a9ca623ba3c18863",
+          "chat:e5a7c7b0f5e04fb28b2f33aba5dc941f",
+          "chat:e90decd382974aea8859c5416f7c16a9",
+          "chat:f85431a2d12e4f0c8a0e046f5109fc80"
         ],
-        "receipts_sha256": "0c95a48bb3574d020ed74a73706d386203e2647309466b22d0745408c6b9b216",
+        "receipts_sha256": "4cc0cdf641c89778edc4b7f3e66f8c6733a38ae6551788ef9b1dc763a60b2f88",
         "seqs": [
           1,
           22
@@ -25798,6 +26018,42 @@
           "event": "skip",
           "receipt_id": "7EHGpUUUvzLnDFzyoN45j97hQvWyRrr3TqTJEhZaMKZN",
           "tx": "7gTyy4pW1tCbE45ZPsv5rrNvbNiHgza7NNALKYKubMG"
+        },
+        {
+          "block_height": 278025095,
+          "block_time_ms": 1794875920483,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "397b21fe0b10d4ab4a6d9fd3342ecb639f53f1d3c018eb68185f6d499848dcbb",
+            "seq": 208
+          },
+          "event": "skip",
+          "receipt_id": "HXWm14CT5DB113DTWJr7w2ke3ByZBKXcNjcGj6ziE3mu",
+          "tx": "E2atcEq2s31gvThLHtbpWteUQFCks5pyPQ1tZg2B872x"
+        },
+        {
+          "block_height": 278036992,
+          "block_time_ms": 1794883257092,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "58915547bf3b6feb5b94089ba0c7c159dfe14ce38ee5952fd446d95f09471ee3",
+            "seq": 209
+          },
+          "event": "skip",
+          "receipt_id": "E3ZzwTb69qCQ9RrRwUumrixBFXmuhDegFVg726wJ9mw4",
+          "tx": "BzKRwMfEaJxz8iJ5mBSQN2zAFEKT2sJAEyheK5hnmWCB"
+        },
+        {
+          "block_height": 278049504,
+          "block_time_ms": 1794890803378,
+          "data": {
+            "note": "model_error",
+            "receipt_hash": "eadeb7a7ef4aa22e69a719ea5537c37bfbe9368f4f4b47f90edd6ac57be12cfd",
+            "seq": 210
+          },
+          "event": "skip",
+          "receipt_id": "DrBk5LMYdhoT4dpXkvEGe2TuuETNofg5QyeucyY41ASa",
+          "tx": "G1L89C5K3ZcUKZ8gfjW9KAFcnZ2f7EYqfouFS3HH8WCg"
         }
       ],
       "gas": [
@@ -26835,6 +27091,21 @@
           "block_time_ms": 1794868555589,
           "tokens_burnt": "198029573991600000000",
           "tx": "7gTyy4pW1tCbE45ZPsv5rrNvbNiHgza7NNALKYKubMG"
+        },
+        {
+          "block_time_ms": 1794875920483,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "E2atcEq2s31gvThLHtbpWteUQFCks5pyPQ1tZg2B872x"
+        },
+        {
+          "block_time_ms": 1794883257092,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "BzKRwMfEaJxz8iJ5mBSQN2zAFEKT2sJAEyheK5hnmWCB"
+        },
+        {
+          "block_time_ms": 1794890803378,
+          "tokens_burnt": "198029573991600000000",
+          "tx": "G1L89C5K3ZcUKZ8gfjW9KAFcnZ2f7EYqfouFS3HH8WCg"
         }
       ],
       "observed": {
@@ -26860,7 +27131,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 208,
+          "seq": 210,
           "version": "0.1.0"
         },
         "intents": {
@@ -26903,11 +27174,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 211,
+          "events_replayed": 213,
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [],
           "trades": 0
         }
@@ -26915,10 +27186,10 @@
       "proof": {
         "detail": "self-reported: harness and model are the operator's word",
         "evidence_ids": [],
-        "receipts_sha256": "4e05c5fb3afa38cb77f400c36ce8f6cc632cb3182211f59dc56a675db68cac32",
+        "receipts_sha256": "481227847d3cbcbb743149cd8331c1811b06803162b97026bb836f41c1fba8b8",
         "seqs": [
           1,
-          207
+          210
         ],
         "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
         "strategy_versions": 2,
@@ -27808,7 +28079,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",
@@ -28463,6 +28734,42 @@
           "event": "skip",
           "receipt_id": "CDTgzuArwQ4NzRXDipEE54PieH7VUw2dtwtP3sXFzR9C",
           "tx": "FH2mWsFw6CCFAdy9yu65fTVNwfYswZgRpqzbEM8nBwxz"
+        },
+        {
+          "block_height": 278025225,
+          "block_time_ms": 1794876003018,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "62f125dc6b25d0daa6c19a9726a827311eb251988e8ed00cf9f8b2d10a961c91",
+            "seq": 47
+          },
+          "event": "skip",
+          "receipt_id": "aJMjYaKZtMhpZ4veGfQrPnZbLXay3CpCYA6HdcHFojU",
+          "tx": "4CywH8Cnrku8TwDHcCZqZYPmXRneVTpEvQ7kEU4DDZNM"
+        },
+        {
+          "block_height": 278037456,
+          "block_time_ms": 1794883541203,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "3d05160ead8b86bd50ceb70413e46a78827fc76be0cb30eb33d548f42d6a8d91",
+            "seq": 48
+          },
+          "event": "skip",
+          "receipt_id": "7Fsak6bgAtvjBjpBMALstB1nYJctmzrT6j3E1MtreSrh",
+          "tx": "GfjD63dCbDgrTpYXNFZp4FjGH26sQKotN3rwPVznuhS6"
+        },
+        {
+          "block_height": 278049659,
+          "block_time_ms": 1794890897967,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "1a9b619503c789f2c65162def2c0af90e3a70245112a76fe4b4e035549d1eeb1",
+            "seq": 49
+          },
+          "event": "skip",
+          "receipt_id": "5VrZaSRGLBBbk1mkdyv4PXDLr2U5c1cbBFUc4oe9bZBJ",
+          "tx": "6wFTxVTqr6QvdMVgZi2fD3snJc87S6FTE4gkBrY9Hnp1"
         }
       ],
       "gas": [
@@ -28695,6 +29002,21 @@
           "block_time_ms": 1794868662257,
           "tokens_burnt": "197719955582700000000",
           "tx": "FH2mWsFw6CCFAdy9yu65fTVNwfYswZgRpqzbEM8nBwxz"
+        },
+        {
+          "block_time_ms": 1794876003018,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "4CywH8Cnrku8TwDHcCZqZYPmXRneVTpEvQ7kEU4DDZNM"
+        },
+        {
+          "block_time_ms": 1794883541203,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "GfjD63dCbDgrTpYXNFZp4FjGH26sQKotN3rwPVznuhS6"
+        },
+        {
+          "block_time_ms": 1794890897967,
+          "tokens_burnt": "197719955582700000000",
+          "tx": "6wFTxVTqr6QvdMVgZi2fD3snJc87S6FTE4gkBrY9Hnp1"
         }
       ],
       "observed": {
@@ -28720,7 +29042,7 @@
           "mpc_id": "v1.signer-prod.testnet",
           "owner_id": "it1793205219-owner.testnet",
           "proposed_owner": null,
-          "seq": 47,
+          "seq": 49,
           "version": "0.1.0"
         },
         "intents": {
@@ -28763,11 +29085,11 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 49,
+          "events_replayed": 51,
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [],
           "trades": 0
         }
@@ -28775,10 +29097,10 @@
       "proof": {
         "detail": "self-reported: harness and model are the operator's word",
         "evidence_ids": [],
-        "receipts_sha256": "95f8ceb531806a05852bf65d06277ea80c6f00d5dccf92d70cc650f1b4bcd5fd",
+        "receipts_sha256": "8b1e015279e4bfbb779286d66b21c164d98bc688affc8e1f02ac9e616ca0ac36",
         "seqs": [
           1,
-          46
+          49
         ],
         "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
         "strategy_versions": 2,
@@ -29000,7 +29322,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",
@@ -30073,7 +30395,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",
@@ -31731,7 +32053,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498576",
+          "hour": "498581",
           "spent": [
             [
               "wrap.testnet",

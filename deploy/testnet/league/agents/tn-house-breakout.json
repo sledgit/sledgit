@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794875400000,
-  "derived_sha256": "609b8920f25406d143f7d6276d70e3e917c2135f0ec794499aa2465fefbb2dc6",
+  "as_of_ms": 1794891960000,
+  "derived_sha256": "95a802dbc537167249f900ab4bbd3762d169b67426d8f5857b3049ce67e9c8d3",
   "entry": {
     "account": "house-breakout.arena2.irontrade.testnet",
     "beyond_noise": false,
@@ -24,7 +24,7 @@
       "skips": 19,
       "trades": 1
     },
-    "days": 18.56781657,
+    "days": 18.75948324,
     "decisions": [
       {
         "block_time_ms": 1794874472767,
@@ -251,13 +251,13 @@
     ],
     "description": "Published rule: enter above the prior 55-day high, exit below the prior 20-day low.",
     "end": {
-      "price": 3.139,
+      "price": 3.271,
       "value_usd": 1.05122588
     },
     "events_sha256": "a786296d859e36834aff4463c3d84f4a300ac307fb1a557de2e0ec5b62e80586",
-    "funded_twr": -0.29285875,
+    "funded_twr": -0.26312232,
     "harness": "sledgit-runner/0.1.0",
-    "hold_twr": -0.14770973,
+    "hold_twr": -0.13286382,
     "id": "tn-house-breakout",
     "inactive": false,
     "kind": "house",
@@ -265,17 +265,18 @@
     "name": "Breakout 55/20",
     "proof": {
       "claimed": "rules",
-      "detail": "19 in-season decision(s) have no receipt in the file (first: seq 2)",
-      "tier": "self"
+      "detail": "house-rerun --check passes for 20 of 20 in-season decision(s) (seqs 1-20): published strategy, recorded inputs match chain and feed, and each receipt decides what the vault recorded",
+      "tier": "rules",
+      "verified_model": "rules:breakout"
     },
     "provenance": {
       "reason": "direct child of arena2.irontrade.testnet (factory keyless), runs its pinned code 2ZP4H1ENzFKyN4nVSZf9vKf3pEpgoup9DVU6NbjbE2Gg, 0 access keys",
       "status": "genuine"
     },
     "range95": {
-      "hi": -0.3077133,
-      "lo": -0.55391179,
-      "n": 446
+      "hi": -0.31825491,
+      "lo": -0.5623921,
+      "n": 451
     },
     "ranked": true,
     "refusals_by_code": {},
@@ -2961,13 +2962,43 @@
         "value": 1.05122588
       },
       {
-        "hold": 1.89165825,
-        "stake": 1.89345394,
-        "t": 1794875400000,
+        "hold": 1.8881635,
+        "stake": 1.88995318,
+        "t": 1794877200000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.89889737,
+        "stake": 1.90071576,
+        "t": 1794880800000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.90264175,
+        "stake": 1.90447283,
+        "t": 1794884400000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.92685537,
+        "stake": 1.92874647,
+        "t": 1794888000000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.929102,
+        "stake": 1.93100252,
+        "t": 1794891600000,
+        "value": 1.05122588
+      },
+      {
+        "hold": 1.92460875,
+        "stake": 1.92649928,
+        "t": 1794891960000,
         "value": 1.05122588
       }
     ],
-    "stake_twr": -0.14690068,
+    "stake_twr": -0.13201204,
     "start": {
       "price": 4.439,
       "time_ms": 1793271140648,
@@ -2976,10 +3007,10 @@
     "strategy_sha256": "c7fb1b78c53eaa599a2bc0003dcac4639151ab9a54c75eafbda3443198936f4d",
     "twr": -0.52636816,
     "unranked_reason": null,
-    "vs_funded": -0.33021607,
-    "vs_hold": -0.44428341,
-    "vs_hold_after_gas": -0.45629885,
-    "vs_stake": -0.44481043
+    "vs_funded": -0.35724495,
+    "vs_hold": -0.45379762,
+    "vs_hold_after_gas": -0.46560735,
+    "vs_stake": -0.45433363
   },
   "events": [
     {
@@ -3377,7 +3408,7 @@
       "status": "ok"
     },
     "usage": {
-      "hour": "498576",
+      "hour": "498581",
       "spent": [
         [
           "wrap.testnet",

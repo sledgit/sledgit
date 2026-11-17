@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794875400000,
-  "derived_sha256": "609b8920f25406d143f7d6276d70e3e917c2135f0ec794499aa2465fefbb2dc6",
+  "as_of_ms": 1794891960000,
+  "derived_sha256": "95a802dbc537167249f900ab4bbd3762d169b67426d8f5857b3049ce67e9c8d3",
   "entry": {
     "account": "suite.arena2.irontrade.testnet",
     "beyond_noise": false,
@@ -24,7 +24,7 @@
       "skips": 10,
       "trades": 17
     },
-    "days": 18.56781657,
+    "days": 18.75948324,
     "decisions": [
       {
         "amount_in": "23000000000000000000000",
@@ -751,13 +751,13 @@
     ],
     "description": "Test fixture: the live test suite's vault. Not an entry.",
     "end": {
-      "price": 3.139,
-      "value_usd": 1.97756501
+      "price": 3.271,
+      "value_usd": 2.05135301
     },
     "events_sha256": "eb2c5888eada717b66a44b83eb031cf9bc8d0aa89301f71a69a8c511ad69d4d6",
-    "funded_twr": -0.29285875,
+    "funded_twr": -0.26312232,
     "harness": "test scripts",
-    "hold_twr": -0.14770973,
+    "hold_twr": -0.13286382,
     "id": "tn-suite",
     "inactive": false,
     "kind": "fixture",
@@ -773,9 +773,9 @@
       "status": "genuine"
     },
     "range95": {
-      "hi": -0.23026698,
-      "lo": -0.5003382,
-      "n": 444
+      "hi": -0.21322692,
+      "lo": -0.49185637,
+      "n": 449
     },
     "ranked": false,
     "refusals_by_code": {
@@ -3463,25 +3463,55 @@
         "value": 1.1801065
       },
       {
-        "hold": 1.89165825,
-        "stake": 1.89345394,
-        "t": 1794875400000,
-        "value": 1.17314262
+        "hold": 1.8881635,
+        "stake": 1.88995318,
+        "t": 1794877200000,
+        "value": 1.16850003
+      },
+      {
+        "hold": 1.89889737,
+        "stake": 1.90071576,
+        "t": 1794880800000,
+        "value": 1.1827594
+      },
+      {
+        "hold": 1.90264175,
+        "stake": 1.90447283,
+        "t": 1794884400000,
+        "value": 1.1877336
+      },
+      {
+        "hold": 1.92685537,
+        "stake": 1.92874647,
+        "t": 1794888000000,
+        "value": 1.21990008
+      },
+      {
+        "hold": 1.929102,
+        "stake": 1.93100252,
+        "t": 1794891600000,
+        "value": 1.2228846
+      },
+      {
+        "hold": 1.92460875,
+        "stake": 1.92649928,
+        "t": 1794891960000,
+        "value": 1.21691556
       }
     ],
-    "stake_twr": -0.14690068,
+    "stake_twr": -0.13201204,
     "start": {
       "price": 4.439,
       "time_ms": 1793271140648,
       "value_usd": 2.2195
     },
     "strategy_sha256": null,
-    "twr": -0.47143833,
+    "twr": -0.45171635,
     "unranked_reason": "test fixture: scripted decisions",
-    "vs_funded": -0.25253736,
-    "vs_hold": -0.37983374,
-    "vs_hold_after_gas": -0.45756373,
-    "vs_stake": -0.38042189
+    "vs_funded": -0.25593668,
+    "vs_hold": -0.36770756,
+    "vs_hold_after_gas": -0.44695741,
+    "vs_stake": -0.36832805
   },
   "events": [
     {
@@ -4932,7 +4962,7 @@
       "status": "ok"
     },
     "usage": {
-      "hour": "498576",
+      "hour": "498581",
       "spent": [
         [
           "wrap.testnet",

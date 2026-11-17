@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794875400000,
-  "derived_sha256": "609b8920f25406d143f7d6276d70e3e917c2135f0ec794499aa2465fefbb2dc6",
+  "as_of_ms": 1794891960000,
+  "derived_sha256": "95a802dbc537167249f900ab4bbd3762d169b67426d8f5857b3049ce67e9c8d3",
   "entry": {
     "account": "house-luck.arena2.irontrade.testnet",
     "beyond_noise": false,
@@ -24,7 +24,7 @@
       "skips": 15,
       "trades": 4
     },
-    "days": 18.56781657,
+    "days": 18.75948324,
     "decisions": [
       {
         "block_time_ms": 1794874294576,
@@ -307,13 +307,13 @@
     ],
     "description": "Luck baseline: random trades under the same limits, seeded by the vault's on-chain decision seq and a slot block hash.",
     "end": {
-      "price": 3.139,
-      "value_usd": 1.56382868
+      "price": 3.271,
+      "value_usd": 1.62959019
     },
     "events_sha256": "671ac3002a5a1244f4551f77c62b81edd47d7dac91a860941d99d863ed7553d0",
-    "funded_twr": -0.29285875,
+    "funded_twr": -0.26312232,
     "harness": "sledgit-runner/0.1.0",
-    "hold_twr": -0.14770973,
+    "hold_twr": -0.13286382,
     "id": "tn-house-luck",
     "inactive": false,
     "kind": "house",
@@ -321,17 +321,18 @@
     "name": "Luck baseline",
     "proof": {
       "claimed": "rules",
-      "detail": "18 in-season decision(s) have no receipt in the file (first: seq 2)",
-      "tier": "self"
+      "detail": "house-rerun --check passes for 19 of 19 in-season decision(s) (seqs 1-19): published strategy, recorded inputs match chain and feed, and each receipt decides what the vault recorded",
+      "tier": "rules",
+      "verified_model": "rules:luck"
     },
     "provenance": {
       "reason": "direct child of arena2.irontrade.testnet (factory keyless), runs its pinned code 2ZP4H1ENzFKyN4nVSZf9vKf3pEpgoup9DVU6NbjbE2Gg, 0 access keys",
       "status": "genuine"
     },
     "range95": {
-      "hi": -0.23703255,
-      "lo": -0.53072616,
-      "n": 443
+      "hi": -0.21592927,
+      "lo": -0.52097739,
+      "n": 448
     },
     "ranked": true,
     "refusals_by_code": {},
@@ -3017,25 +3018,55 @@
         "value": 1.13947454
       },
       {
-        "hold": 1.89165825,
-        "stake": 1.89345394,
-        "t": 1794875400000,
-        "value": 1.13190208
+        "hold": 1.8881635,
+        "stake": 1.88995318,
+        "t": 1794877200000,
+        "value": 1.12685378
+      },
+      {
+        "hold": 1.89889737,
+        "stake": 1.90071576,
+        "t": 1794880800000,
+        "value": 1.14235928
+      },
+      {
+        "hold": 1.90264175,
+        "stake": 1.90447283,
+        "t": 1794884400000,
+        "value": 1.14776818
+      },
+      {
+        "hold": 1.92685537,
+        "stake": 1.92874647,
+        "t": 1794888000000,
+        "value": 1.18274571
+      },
+      {
+        "hold": 1.929102,
+        "stake": 1.93100252,
+        "t": 1794891600000,
+        "value": 1.18599105
+      },
+      {
+        "hold": 1.92460875,
+        "stake": 1.92649928,
+        "t": 1794891960000,
+        "value": 1.17950038
       }
     ],
-    "stake_twr": -0.14690068,
+    "stake_twr": -0.13201204,
     "start": {
       "price": 4.439,
       "time_ms": 1793271140648,
       "value_usd": 2.2195
     },
     "strategy_sha256": "ba2d2bdc50de214995ef238a6b2f78e0c4fc3778dd6fde2dc31fa9797275e6e7",
-    "twr": -0.49001934,
+    "twr": -0.46857383,
     "unranked_reason": null,
-    "vs_funded": -0.27881358,
-    "vs_hold": -0.401635,
-    "vs_hold_after_gas": -0.42955668,
-    "vs_stake": -0.40220247
+    "vs_funded": -0.27881359,
+    "vs_hold": -0.38714797,
+    "vs_hold_after_gas": -0.41574566,
+    "vs_stake": -0.38774938
   },
   "events": [
     {
@@ -3499,7 +3530,7 @@
       "status": "ok"
     },
     "usage": {
-      "hour": "498576",
+      "hour": "498581",
       "spent": [
         [
           "wrap.testnet",

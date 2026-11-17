@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794875400000,
-  "derived_sha256": "609b8920f25406d143f7d6276d70e3e917c2135f0ec794499aa2465fefbb2dc6",
+  "as_of_ms": 1794891960000,
+  "derived_sha256": "95a802dbc537167249f900ab4bbd3762d169b67426d8f5857b3049ce67e9c8d3",
   "entry": {
     "account": "qwen25-14b-local.arena2.irontrade.testnet",
     "beyond_noise": false,
@@ -10,22 +10,52 @@
       "benchmark_rebalance_usd": 0.0033165,
       "fill_vs_reference_pct": 0.02209308,
       "fill_vs_reference_usd": 0.18898789,
-      "gas_near": 0.07096498,
-      "gas_usd": 0.27673044,
+      "gas_near": 0.07158557,
+      "gas_usd": 0.27871136,
       "neutralised_usd": 2.61280863,
       "traded_ref_usd": 8.55416749
     },
     "counts": {
-      "decisions": 204,
+      "decisions": 207,
       "failed": 0,
       "missed_slots": 0,
       "off_schedule": 0,
       "refusals": 0,
-      "skips": 197,
+      "skips": 200,
       "trades": 7
     },
-    "days": 18.52594007,
+    "days": 18.71760674,
     "decisions": [
+      {
+        "block_time_ms": 1794890796107,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "e95fa7fa85ee695b85448eda7af3ec1d70cd641426c616c9e05c10cfe4d90f96",
+        "seq": 207,
+        "tx": "5yJASrQE6KMGTg5LwUmdZrg9ccgDAzfBw2dgZq1pQG97"
+      },
+      {
+        "block_time_ms": 1794883246447,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "f19f0ae333a4bb00a385ae2b5d27e49cd16a638d2ddc5d0680301f4a24f81124",
+        "seq": 206,
+        "tx": "EtVBUNSEFevbSTp93BooJ3z9ayjNAUWWXCCkDFRBVqeQ"
+      },
+      {
+        "block_time_ms": 1794875911040,
+        "event": "skip",
+        "in_season": true,
+        "note": "hold",
+        "on_schedule": null,
+        "receipt_hash": "7eaafd503bfb5614b9edbff4ccec42ce62600c675db3f2ce48a29aaab21147e0",
+        "seq": 205,
+        "tx": "5BJ3dH4QkoC8jzGE4k9aRqY72b29YZuV1Vryeqq8axhQ"
+      },
       {
         "block_time_ms": 1794868546423,
         "event": "skip",
@@ -2223,13 +2253,13 @@
     ],
     "description": "A self-hosted model with no attestation: harness and model are the operator's word.",
     "end": {
-      "price": 3.139,
-      "value_usd": 2.34779751
+      "price": 3.271,
+      "value_usd": 2.40037996
     },
-    "events_sha256": "90672e2e66203d0bf88af799b788a2c3a3dc5f095298c503e798429f3e8ebf17",
-    "funded_twr": -0.29014021,
+    "events_sha256": "1d0b5b1a65bbce46d066aed5fb2cbfe2d597216c21cc9bc4ff6945cb69ae8baa",
+    "funded_twr": -0.26028946,
     "harness": "Sledgit runner",
-    "hold_twr": -0.1463525,
+    "hold_twr": -0.13144951,
     "id": "tn-qwen25-14b-local",
     "inactive": false,
     "kind": "arena",
@@ -2245,15 +2275,15 @@
       "status": "genuine"
     },
     "range95": {
-      "hi": -0.68611505,
-      "lo": -0.7621386,
-      "n": 438
+      "hi": -0.68451727,
+      "lo": -0.76104034,
+      "n": 443
     },
     "ranked": true,
     "refusals_by_code": {},
     "season_seqs": [
       1,
-      204
+      207
     ],
     "series": [
       {
@@ -4927,25 +4957,55 @@
         "value": 0.51755823
       },
       {
-        "hold": 1.88741463,
-        "stake": 1.88920626,
-        "t": 1794875400000,
-        "value": 0.51572068
+        "hold": 1.88391988,
+        "stake": 1.88570552,
+        "t": 1794877200000,
+        "value": 0.51449564
+      },
+      {
+        "hold": 1.89465375,
+        "stake": 1.89646804,
+        "t": 1794880800000,
+        "value": 0.51825825
+      },
+      {
+        "hold": 1.89839813,
+        "stake": 1.9002251,
+        "t": 1794884400000,
+        "value": 0.51957079
+      },
+      {
+        "hold": 1.92261175,
+        "stake": 1.92449861,
+        "t": 1794888000000,
+        "value": 0.52805854
+      },
+      {
+        "hold": 1.92485838,
+        "stake": 1.92675464,
+        "t": 1794891600000,
+        "value": 0.52884606
+      },
+      {
+        "hold": 1.92036513,
+        "stake": 1.92225143,
+        "t": 1794891960000,
+        "value": 0.52727102
       }
     ],
-    "stake_twr": -0.14554217,
+    "stake_twr": -0.13059637,
     "start": {
       "price": 4.422,
       "time_ms": 1793274758778,
       "value_usd": 2.211
     },
     "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
-    "twr": -0.76674777,
+    "twr": -0.76152374,
     "unranked_reason": null,
-    "vs_funded": -0.67141084,
-    "vs_hold": -0.72675814,
-    "vs_hold_after_gas": -0.75296584,
-    "vs_stake": -0.72701727
+    "vs_funded": -0.67760867,
+    "vs_hold": -0.72543189,
+    "vs_hold_after_gas": -0.7519743,
+    "vs_stake": -0.72570133
   },
   "events": [
     {
@@ -7645,6 +7705,42 @@
       "event": "skip",
       "receipt_id": "3pAfdMktfLKyge8Cy6QLn7xVsPoEuesaNYT1sRx6Qoq4",
       "tx": "BuuQ7nt5ggsNymKAXG7TtU4utL61keTCcmPW5fLWmkaa"
+    },
+    {
+      "block_height": 278025080,
+      "block_time_ms": 1794875911040,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "7eaafd503bfb5614b9edbff4ccec42ce62600c675db3f2ce48a29aaab21147e0",
+        "seq": 205
+      },
+      "event": "skip",
+      "receipt_id": "DzNCDk6vTDxBj8swLHWjBd35g2FVkFkhXXfKU7EmdiK7",
+      "tx": "5BJ3dH4QkoC8jzGE4k9aRqY72b29YZuV1Vryeqq8axhQ"
+    },
+    {
+      "block_height": 278036976,
+      "block_time_ms": 1794883246447,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "f19f0ae333a4bb00a385ae2b5d27e49cd16a638d2ddc5d0680301f4a24f81124",
+        "seq": 206
+      },
+      "event": "skip",
+      "receipt_id": "4aut8taEzduogRE9x68gjFYwGLp4jxS7gy5Bj5yJgWHF",
+      "tx": "EtVBUNSEFevbSTp93BooJ3z9ayjNAUWWXCCkDFRBVqeQ"
+    },
+    {
+      "block_height": 278049492,
+      "block_time_ms": 1794890796107,
+      "data": {
+        "note": "hold",
+        "receipt_hash": "e95fa7fa85ee695b85448eda7af3ec1d70cd641426c616c9e05c10cfe4d90f96",
+        "seq": 207
+      },
+      "event": "skip",
+      "receipt_id": "Hws1yWPA7kGmTvxvmXvJ7aG6YF4YT4vdLS4PAeturQzA",
+      "tx": "5yJASrQE6KMGTg5LwUmdZrg9ccgDAzfBw2dgZq1pQG97"
     }
   ],
   "network": "testnet",
@@ -7671,7 +7767,7 @@
       "mpc_id": "v1.signer-prod.testnet",
       "owner_id": "it1793205219-owner.testnet",
       "proposed_owner": null,
-      "seq": 205,
+      "seq": 207,
       "version": "0.1.0"
     },
     "intents": {
@@ -7714,11 +7810,11 @@
       ]
     },
     "reconciliation": {
-      "events_replayed": 215,
+      "events_replayed": 217,
       "status": "ok"
     },
     "usage": {
-      "hour": "498576",
+      "hour": "498581",
       "spent": [
         [
           "wrap.testnet",

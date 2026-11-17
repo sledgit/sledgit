@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794875400000,
-  "derived_sha256": "609b8920f25406d143f7d6276d70e3e917c2135f0ec794499aa2465fefbb2dc6",
+  "as_of_ms": 1794891960000,
+  "derived_sha256": "95a802dbc537167249f900ab4bbd3762d169b67426d8f5857b3049ce67e9c8d3",
   "entry": {
     "account": "suite.arena.irontrade.testnet",
     "beyond_noise": false,
@@ -24,7 +24,7 @@
       "skips": 0,
       "trades": 0
     },
-    "days": 18.56781657,
+    "days": 18.75948324,
     "decisions": [
       {
         "amount_in": "10000000000000000000000",
@@ -223,13 +223,13 @@
     ],
     "description": "Test fixture: every refusal code, rolling caps and intent expiry. Not an entry. Retired: legacy factory arena.irontrade.testnet (pre-round-3 code); record kept, not ranked.",
     "end": {
-      "price": 3.139,
-      "value_usd": 1.06851288
+      "price": 3.271,
+      "value_usd": 1.10283288
     },
     "events_sha256": "25dbbf48ae59d6e5e487686107235ca286e4af77c53466dc84519a8af6146794",
-    "funded_twr": -0.24031063,
+    "funded_twr": -0.21590986,
     "harness": "test scripts",
-    "hold_twr": -0.14725026,
+    "hold_twr": -0.13239634,
     "id": "tn0-suite",
     "inactive": false,
     "kind": "retired",
@@ -245,9 +245,9 @@
       "status": "genuine"
     },
     "range95": {
-      "hi": 0.04889088,
-      "lo": -0.2433438,
-      "n": 447
+      "hi": 0.06599709,
+      "lo": -0.23381575,
+      "n": 452
     },
     "ranked": false,
     "refusals_by_code": {},
@@ -2930,25 +2930,55 @@
         "value": 1.07397288
       },
       {
-        "hold": 1.19940349,
-        "stake": 1.20054205,
-        "t": 1794875400000,
-        "value": 1.06851288
+        "hold": 1.19718765,
+        "stake": 1.1983224,
+        "t": 1794877200000,
+        "value": 1.06487288
+      },
+      {
+        "hold": 1.20399345,
+        "stake": 1.2051464,
+        "t": 1794880800000,
+        "value": 1.07605288
+      },
+      {
+        "hold": 1.20636757,
+        "stake": 1.20752856,
+        "t": 1794884400000,
+        "value": 1.07995288
+      },
+      {
+        "hold": 1.22172019,
+        "stake": 1.22291924,
+        "t": 1794888000000,
+        "value": 1.10517288
+      },
+      {
+        "hold": 1.22314466,
+        "stake": 1.22434968,
+        "t": 1794891600000,
+        "value": 1.10751288
+      },
+      {
+        "hold": 1.22029572,
+        "stake": 1.22149441,
+        "t": 1794891960000,
+        "value": 1.10283288
       }
     ],
-    "stake_twr": -0.14644077,
+    "stake_twr": -0.1315441,
     "start": {
       "price": 4.439,
       "time_ms": 1793271140648,
       "value_usd": 1.40651288
     },
     "strategy_sha256": null,
-    "twr": -0.24031063,
+    "twr": -0.21590986,
     "unranked_reason": "retired entry: record kept, not ranked",
     "vs_funded": 0,
-    "vs_hold": -0.10912976,
-    "vs_hold_after_gas": -0.10912976,
-    "vs_stake": -0.10997463
+    "vs_hold": -0.09625768,
+    "vs_hold_after_gas": -0.09625768,
+    "vs_stake": -0.09714455
   },
   "events": [
     {
@@ -3926,7 +3956,7 @@
       "status": "ok"
     },
     "usage": {
-      "hour": "498576",
+      "hour": "498581",
       "spent": [
         [
           "wrap.testnet",

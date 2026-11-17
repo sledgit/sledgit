@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794875400000,
-  "derived_sha256": "609b8920f25406d143f7d6276d70e3e917c2135f0ec794499aa2465fefbb2dc6",
+  "as_of_ms": 1794891960000,
+  "derived_sha256": "95a802dbc537167249f900ab4bbd3762d169b67426d8f5857b3049ce67e9c8d3",
   "entry": {
     "account": "qwen36-tee.arena.irontrade.testnet",
     "beyond_noise": false,
@@ -24,7 +24,7 @@
       "skips": 0,
       "trades": 0
     },
-    "days": 18.56781657,
+    "days": 18.75948324,
     "decisions": [
       {
         "block_time_ms": 1793255267021,
@@ -71,13 +71,13 @@
     ],
     "description": "Decisions from Qwen3.6 on NEAR AI Cloud with TEE evidence. Its first decision (seq 1) predates the season and the current attestation policy, so it is history, not scored. Retired: legacy factory arena.irontrade.testnet (pre-round-3 code); record kept, not ranked.",
     "end": {
-      "price": 3.139,
-      "value_usd": 1.44001577
+      "price": 3.271,
+      "value_usd": 1.48951577
     },
     "events_sha256": "1c28b577f9e480f269287e0cca442acf0be6f62a5d8d61b166a1890a77319fd7",
-    "funded_twr": -0.25291622,
+    "funded_twr": -0.2272355,
     "harness": "sledgit-runner/0.1.0",
-    "hold_twr": -0.14736048,
+    "hold_twr": -0.13250849,
     "id": "tn0-qwen36-tee",
     "inactive": false,
     "kind": "retired",
@@ -93,9 +93,9 @@
       "status": "genuine"
     },
     "range95": {
-      "hi": 0.05631521,
-      "lo": -0.27320126,
-      "n": 447
+      "hi": 0.07620106,
+      "lo": -0.2626555,
+      "n": 452
     },
     "ranked": false,
     "refusals_by_code": {},
@@ -2778,25 +2778,55 @@
         "value": 1.44789077
       },
       {
-        "hold": 1.64347612,
-        "stake": 1.64503621,
-        "t": 1794875400000,
-        "value": 1.44001577
+        "hold": 1.64043987,
+        "stake": 1.64199475,
+        "t": 1794877200000,
+        "value": 1.43476577
+      },
+      {
+        "hold": 1.64976548,
+        "stake": 1.6513453,
+        "t": 1794880800000,
+        "value": 1.45089077
+      },
+      {
+        "hold": 1.6530186,
+        "stake": 1.65460945,
+        "t": 1794884400000,
+        "value": 1.45651577
+      },
+      {
+        "hold": 1.67405544,
+        "stake": 1.67569843,
+        "t": 1794888000000,
+        "value": 1.49289077
+      },
+      {
+        "hold": 1.67600732,
+        "stake": 1.67765849,
+        "t": 1794891600000,
+        "value": 1.49626577
+      },
+      {
+        "hold": 1.67210357,
+        "stake": 1.67374607,
+        "t": 1794891960000,
+        "value": 1.48951577
       }
     ],
-    "stake_twr": -0.1465511,
+    "stake_twr": -0.13165635,
     "start": {
       "price": 4.439,
       "time_ms": 1793271140648,
       "value_usd": 1.92751577
     },
     "strategy_sha256": null,
-    "twr": -0.25291622,
+    "twr": -0.2272355,
     "unranked_reason": "retired entry: record kept, not ranked",
     "vs_funded": 0,
-    "vs_hold": -0.12379879,
-    "vs_hold_after_gas": -0.12379879,
-    "vs_stake": -0.12462975
+    "vs_hold": -0.10919647,
+    "vs_hold_after_gas": -0.10919647,
+    "vs_stake": -0.11007064
   },
   "events": [
     {
@@ -2989,7 +3019,7 @@
       "status": "ok"
     },
     "usage": {
-      "hour": "498576",
+      "hour": "498581",
       "spent": [
         [
           "wrap.testnet",

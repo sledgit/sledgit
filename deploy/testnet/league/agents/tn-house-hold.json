@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794875400000,
-  "derived_sha256": "609b8920f25406d143f7d6276d70e3e917c2135f0ec794499aa2465fefbb2dc6",
+  "as_of_ms": 1794891960000,
+  "derived_sha256": "95a802dbc537167249f900ab4bbd3762d169b67426d8f5857b3049ce67e9c8d3",
   "entry": {
     "account": "house-hold.arena2.irontrade.testnet",
     "beyond_noise": false,
@@ -24,7 +24,7 @@
       "skips": 19,
       "trades": 1
     },
-    "days": 18.56781657,
+    "days": 18.75948324,
     "decisions": [
       {
         "block_time_ms": 1794874656770,
@@ -251,13 +251,13 @@
     ],
     "description": "Published rule: move to 50/50 once, then never trade.",
     "end": {
-      "price": 3.139,
-      "value_usd": 1.31047785
+      "price": 3.271,
+      "value_usd": 1.34347785
     },
     "events_sha256": "5f503f57006318492dd31a1fb2fdf5db72a19f1eed8197901154a8a44cb7c887",
-    "funded_twr": -0.29285875,
+    "funded_twr": -0.26312232,
     "harness": "sledgit-runner/0.1.0",
-    "hold_twr": -0.14770973,
+    "hold_twr": -0.13286382,
     "id": "tn-house-hold",
     "inactive": false,
     "kind": "house",
@@ -265,17 +265,18 @@
     "name": "Hold-once",
     "proof": {
       "claimed": "rules",
-      "detail": "19 in-season decision(s) have no receipt in the file (first: seq 2)",
-      "tier": "self"
+      "detail": "house-rerun --check passes for 20 of 20 in-season decision(s) (seqs 1-20): published strategy, recorded inputs match chain and feed, and each receipt decides what the vault recorded",
+      "tier": "rules",
+      "verified_model": "rules:hold"
     },
     "provenance": {
       "reason": "direct child of arena2.irontrade.testnet (factory keyless), runs its pinned code 2ZP4H1ENzFKyN4nVSZf9vKf3pEpgoup9DVU6NbjbE2Gg, 0 access keys",
       "status": "genuine"
     },
     "range95": {
-      "hi": -0.24328155,
-      "lo": -0.36578035,
-      "n": 446
+      "hi": -0.23678131,
+      "lo": -0.36154967,
+      "n": 451
     },
     "ranked": true,
     "refusals_by_code": {},
@@ -2961,25 +2962,55 @@
         "value": 1.31572785
       },
       {
-        "hold": 1.89165825,
-        "stake": 1.89345394,
-        "t": 1794875400000,
-        "value": 1.31047785
+        "hold": 1.8881635,
+        "stake": 1.88995318,
+        "t": 1794877200000,
+        "value": 1.30697785
+      },
+      {
+        "hold": 1.89889737,
+        "stake": 1.90071576,
+        "t": 1794880800000,
+        "value": 1.31772785
+      },
+      {
+        "hold": 1.90264175,
+        "stake": 1.90447283,
+        "t": 1794884400000,
+        "value": 1.32147785
+      },
+      {
+        "hold": 1.92685537,
+        "stake": 1.92874647,
+        "t": 1794888000000,
+        "value": 1.34572785
+      },
+      {
+        "hold": 1.929102,
+        "stake": 1.93100252,
+        "t": 1794891600000,
+        "value": 1.34797785
+      },
+      {
+        "hold": 1.92460875,
+        "stake": 1.92649928,
+        "t": 1794891960000,
+        "value": 1.34347785
       }
     ],
-    "stake_twr": -0.14690068,
+    "stake_twr": -0.13201204,
     "start": {
       "price": 4.439,
       "time_ms": 1793271140648,
       "value_usd": 2.2195
     },
     "strategy_sha256": "95150baf2bfc66ffa9d4ebd8161eb3d9ed0382b01c95755101e4b5d3b8354583",
-    "twr": -0.40956168,
+    "twr": -0.39469347,
     "unranked_reason": null,
-    "vs_funded": -0.16503482,
-    "vs_hold": -0.30723329,
-    "vs_hold_after_gas": -0.31989965,
-    "vs_stake": -0.30789029
+    "vs_funded": -0.17855221,
+    "vs_hold": -0.30194755,
+    "vs_hold_after_gas": -0.31471055,
+    "vs_stake": -0.30263257
   },
   "events": [
     {
@@ -3377,7 +3408,7 @@
       "status": "ok"
     },
     "usage": {
-      "hour": "498576",
+      "hour": "498581",
       "spent": [
         [
           "wrap.testnet",

@@ -1,6 +1,6 @@
 {
-  "as_of_ms": 1794878160000,
-  "collected_at": "2026-11-17T01:17:59.204Z",
+  "as_of_ms": 1794895800000,
+  "collected_at": "2026-11-17T06:12:22.535Z",
   "excluded": [],
   "factories": [
     {
@@ -245,6 +245,26 @@
     [
       1794877200000,
       3.125
+    ],
+    [
+      1794880800000,
+      3.168
+    ],
+    [
+      1794884400000,
+      3.183
+    ],
+    [
+      1794888000000,
+      3.28
+    ],
+    [
+      1794891600000,
+      3.289
+    ],
+    [
+      1794895200000,
+      3.247
     ]
   ],
   "minute": {
@@ -306,7 +326,12 @@
     "1794867360000": 3.189,
     "1794871320000": 3.171,
     "1794875400000": 3.139,
-    "1794878160000": 3.135
+    "1794879360000": 3.147,
+    "1794883440000": 3.173,
+    "1794887580000": 3.27,
+    "1794891600000": 3.283,
+    "1794895740000": 3.242,
+    "1794895800000": 3.239
   },
   "network": "mainnet",
   "reference": {
@@ -500,7 +525,7 @@
           "status": "ok"
         },
         "usage": {
-          "hour": "498577",
+          "hour": "498582",
           "spent": [],
           "trades": 0
         }
@@ -1754,6 +1779,118 @@
           "event": "skip",
           "receipt_id": "2i73WziDpMwwKG8NpGPPCiUdMefkzGiet7KTevZ8GMnu",
           "tx": "DSMj3xjgHfHHZHneuSbCURYQ4HZ67cfNQXYDkDrCkEN7"
+        },
+        {
+          "block_height": 224896558,
+          "block_time_ms": 1794879379655,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "98b11fd045e7d605258a05ad0abbc3b61424531dcbe6cd4c0e09a7cddd289e75",
+            "seq": 46
+          },
+          "event": "skip",
+          "receipt_id": "3vbUya8PZ8jBGAmQ5R9popjB4BAAeXF4RXmKrCx3vS39",
+          "tx": "Boh76jycEv8dNTkv5FVcWgYybBwTY2ikxyqJpMdJDmP6"
+        },
+        {
+          "block_height": 224903505,
+          "block_time_ms": 1794883441989,
+          "data": {
+            "amount_in": "1200000",
+            "min_amount_out": "180000000000000000000000",
+            "pool_id": 4512,
+            "receipt_hash": "3e471e9a8864b214c8ef395056badaa163043f3bf057d66a22e80caaa9571bde",
+            "seq": 47,
+            "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+            "token_out": "wrap.near",
+            "venue": "rhea"
+          },
+          "event": "request",
+          "receipt_id": "7XXG36pfgmjaAY6UNM4z44MhUQgXfgpv26iztSoJuWX5",
+          "tx": "3U3PUyFEEaJiG6PGNX8emhabLTRQf8Wz94HH3juLANnB"
+        },
+        {
+          "block_height": 224903519,
+          "block_time_ms": 1794883450757,
+          "data": {
+            "amount_in": "1200000",
+            "amount_out": "377708422261920928804430",
+            "min_amount_out": "373931338039301719516385",
+            "note": "",
+            "pool_id": 4512,
+            "quote": "377708422261920928804430",
+            "receipt_hash": "3e471e9a8864b214c8ef395056badaa163043f3bf057d66a22e80caaa9571bde",
+            "returned": true,
+            "seq": 47,
+            "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+            "token_out": "wrap.near",
+            "venue": "rhea"
+          },
+          "event": "trade",
+          "receipt_id": "ApVgSvLtuZSE1J79TWXk7bEBoTAGAV8fQSuTJimAXgcF",
+          "tx": "3U3PUyFEEaJiG6PGNX8emhabLTRQf8Wz94HH3juLANnB"
+        },
+        {
+          "block_height": 224910588,
+          "block_time_ms": 1794887582817,
+          "data": {
+            "amount_in": "915000",
+            "min_amount_out": "137250000000000000000000",
+            "pool_id": 4512,
+            "receipt_hash": "c7ceab55956f6ca31f103d50b1cbf81f06d8a5a8888e8c63cf3cfdbae1517000",
+            "seq": 48,
+            "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+            "token_out": "wrap.near",
+            "venue": "rhea"
+          },
+          "event": "request",
+          "receipt_id": "DGxpYbAUL341PXdMvZQpmyw2KMvNxeNwxfGfk9SgY3ua",
+          "tx": "DeSvV5ACZGar8V6U5hhXsokUnj5Vjh2ovmLteYLqYze3"
+        },
+        {
+          "block_height": 224910602,
+          "block_time_ms": 1794887591090,
+          "data": {
+            "amount_in": "915000",
+            "amount_out": "280975305796758118823032",
+            "min_amount_out": "278165552738790537634801",
+            "note": "",
+            "pool_id": 4512,
+            "quote": "280975305796758118823032",
+            "receipt_hash": "c7ceab55956f6ca31f103d50b1cbf81f06d8a5a8888e8c63cf3cfdbae1517000",
+            "returned": true,
+            "seq": 48,
+            "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+            "token_out": "wrap.near",
+            "venue": "rhea"
+          },
+          "event": "trade",
+          "receipt_id": "9BXvQYByw95smTp6MTMk4eNUKqJZv3G6t8hwGc6rXQNg",
+          "tx": "DeSvV5ACZGar8V6U5hhXsokUnj5Vjh2ovmLteYLqYze3"
+        },
+        {
+          "block_height": 224917556,
+          "block_time_ms": 1794891604036,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "3a5420adadf37d0b1c166e9e52d8235921eb57dde36143aa5c49a9e18713646a",
+            "seq": 49
+          },
+          "event": "skip",
+          "receipt_id": "FB4xHVtwYGftk2rBT5t6xW9gWir8uv1d3fRtL1Tistmx",
+          "tx": "J85PC1SbavGaxcxnWrEkWt2qQTxFQg2qKAJbv3U8Zp6r"
+        },
+        {
+          "block_height": 224924714,
+          "block_time_ms": 1794895745625,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "343e5fadd35c5658263f01f1d020c08fb1def04170f520016ecaa8114137dd41",
+            "seq": 50
+          },
+          "event": "skip",
+          "receipt_id": "GF4H58nEpWCdL6XxuJRcVjzXZxZ8MiGCqqWNF1bHKeZH",
+          "tx": "HS6dtLqQ2NTZxVm6GAohVdQYEEJJ7vSXU2SdSoCFwswY"
         }
       ],
       "gas": [
@@ -1981,6 +2118,31 @@
           "block_time_ms": 1794875421928,
           "tokens_burnt": "214470411363200000000",
           "tx": "DSMj3xjgHfHHZHneuSbCURYQ4HZ67cfNQXYDkDrCkEN7"
+        },
+        {
+          "block_time_ms": 1794879379655,
+          "tokens_burnt": "214470411363200000000",
+          "tx": "Boh76jycEv8dNTkv5FVcWgYybBwTY2ikxyqJpMdJDmP6"
+        },
+        {
+          "block_time_ms": 1794883441989,
+          "tokens_burnt": "4434098535739100000000",
+          "tx": "3U3PUyFEEaJiG6PGNX8emhabLTRQf8Wz94HH3juLANnB"
+        },
+        {
+          "block_time_ms": 1794887582817,
+          "tokens_burnt": "4422271036100800000000",
+          "tx": "DeSvV5ACZGar8V6U5hhXsokUnj5Vjh2ovmLteYLqYze3"
+        },
+        {
+          "block_time_ms": 1794891604036,
+          "tokens_burnt": "214470411363200000000",
+          "tx": "J85PC1SbavGaxcxnWrEkWt2qQTxFQg2qKAJbv3U8Zp6r"
+        },
+        {
+          "block_time_ms": 1794895745625,
+          "tokens_burnt": "214470411363200000000",
+          "tx": "HS6dtLqQ2NTZxVm6GAohVdQYEEJJ7vSXU2SdSoCFwswY"
         }
       ],
       "observed": {
@@ -1989,13 +2151,13 @@
             "exchange": "0",
             "intents": "0",
             "token": "wrap.near",
-            "wallet": "1017197042125026320810873"
+            "wallet": "1675880770183705368438335"
           },
           {
             "exchange": "0",
             "intents": "0",
             "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
-            "wallet": "4861877"
+            "wallet": "2746877"
           },
           {
             "exchange": "0",
@@ -2012,7 +2174,7 @@
           "mpc_id": "v1.signer",
           "owner_id": "fb1bc414b980fa6a5572c9e57c488f771b6ed5f8ac44774b277b81d8f2d6e5ea",
           "proposed_owner": null,
-          "seq": 45,
+          "seq": 50,
           "trading_ends_ns": "1797260058302772872",
           "version": "0.2.0"
         },
@@ -2056,15 +2218,15 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 71,
+          "events_replayed": 78,
           "status": "ok"
         },
         "usage": {
-          "hour": "498577",
+          "hour": "498582",
           "spent": [
             [
               "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
-              "4205000"
+              "5950000"
             ],
             [
               "wrap.near",
@@ -2077,10 +2239,10 @@
       "proof": {
         "detail": "self-reported: harness and model are the operator's word",
         "evidence_ids": [],
-        "receipts_sha256": "fbcd7d466c0c72f16c504602ccc6fc1774437464cf774f09b692fc374f5fd0d3",
+        "receipts_sha256": "df023c69c7ba1208943494635e3c5136f153ed417153aaf4632011511298846d",
         "seqs": [
           1,
-          45
+          50
         ],
         "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
         "strategy_versions": 2,
@@ -2953,6 +3115,118 @@
           "event": "skip",
           "receipt_id": "3zQoJoEFQncHeZ6v1fSF7vA6ZU7tPfhBiQtnRSvmWZA5",
           "tx": "GduGXwoqC5LsEdUzvzQ23dYw2LFGhBSxP1B6rchvVpaQ"
+        },
+        {
+          "block_height": 224896579,
+          "block_time_ms": 1794879391681,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "0d088835bcd2b8f22fafc2df39ba7dad799604736479098f18c1fd8ab92cf53c",
+            "seq": 45
+          },
+          "event": "skip",
+          "receipt_id": "5DAr1zgr5cAhCvQP4Muru6bzaAj6vw7sYZeWLFNMLVmR",
+          "tx": "3CuecMxAK6MNzfmDPg1axdQQfjJhQ9Njc4ridZV7TDM8"
+        },
+        {
+          "block_height": 224903558,
+          "block_time_ms": 1794883474974,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "e52bc90b23f7165a5e56461637b18f2263f48c65a8283a516a0c61d3d075dfa0",
+            "seq": 46
+          },
+          "event": "skip",
+          "receipt_id": "2xS1aZuhxcb4yZBt3ndf3cixZnN2SYncjuRTyuYJkfrd",
+          "tx": "GqzLrRPxsxGat8t89i8BHsXw8bR93nhMBoes224vTbRy"
+        },
+        {
+          "block_height": 224910630,
+          "block_time_ms": 1794887607493,
+          "data": {
+            "amount_in": "150000000000000000000000",
+            "min_amount_out": "300000",
+            "pool_id": 4512,
+            "receipt_hash": "34e2113e63cb5c3cfacf4d6c7f7a95b095cf0945e1b37337f48b35f1bae960f6",
+            "seq": 47,
+            "token_in": "wrap.near",
+            "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+            "venue": "rhea"
+          },
+          "event": "request",
+          "receipt_id": "JDGDM5MxSLZBpLbtAnDRcSCzwu82HDS8xMdZ8Nzf65Rx",
+          "tx": "EVgauPenKf3Vpcp4F3vQqEpyxXW6eskfRb6k1Px3SDVj"
+        },
+        {
+          "block_height": 224910644,
+          "block_time_ms": 1794887615973,
+          "data": {
+            "amount_in": "150000000000000000000000",
+            "amount_out": "486519",
+            "min_amount_out": "481653",
+            "note": "",
+            "pool_id": 4512,
+            "quote": "486519",
+            "receipt_hash": "34e2113e63cb5c3cfacf4d6c7f7a95b095cf0945e1b37337f48b35f1bae960f6",
+            "returned": true,
+            "seq": 47,
+            "token_in": "wrap.near",
+            "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+            "venue": "rhea"
+          },
+          "event": "trade",
+          "receipt_id": "BGKWuyLXCgY8JxUJQcdJj5PuxCPiQw3Rx4Fw74J3z5dj",
+          "tx": "EVgauPenKf3Vpcp4F3vQqEpyxXW6eskfRb6k1Px3SDVj"
+        },
+        {
+          "block_height": 224917586,
+          "block_time_ms": 1794891620623,
+          "data": {
+            "amount_in": "400000",
+            "min_amount_out": "60000000000000000000000",
+            "pool_id": 4512,
+            "receipt_hash": "4ed75bcbed6134462d16b3804075ee2c5f0fd97a5f9d4b0cefbc847f70a67f8e",
+            "seq": 48,
+            "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+            "token_out": "wrap.near",
+            "venue": "rhea"
+          },
+          "event": "request",
+          "receipt_id": "4zuaoBDrFdDwEU89GDVJBkRFxg8Vv7wyahwpuvSihhrs",
+          "tx": "9MR5aQn6y1Q89d1cMiVFHyGpvF9BHH5SKvMY1zc4PijU"
+        },
+        {
+          "block_height": 224917600,
+          "block_time_ms": 1794891628909,
+          "data": {
+            "amount_in": "400000",
+            "amount_out": "121745344119378234112653",
+            "min_amount_out": "120527890678184451771526",
+            "note": "",
+            "pool_id": 4512,
+            "quote": "121745344119378234112653",
+            "receipt_hash": "4ed75bcbed6134462d16b3804075ee2c5f0fd97a5f9d4b0cefbc847f70a67f8e",
+            "returned": true,
+            "seq": 48,
+            "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+            "token_out": "wrap.near",
+            "venue": "rhea"
+          },
+          "event": "trade",
+          "receipt_id": "HePaozwGZR6WU62G6sYpDqgUkj4nq52hHgjVLo5wFq9k",
+          "tx": "9MR5aQn6y1Q89d1cMiVFHyGpvF9BHH5SKvMY1zc4PijU"
+        },
+        {
+          "block_height": 224924740,
+          "block_time_ms": 1794895760316,
+          "data": {
+            "note": "hold",
+            "receipt_hash": "20ae473314b5996fd641d10f87d8b11ba26cddd1eecee39052192e1d6c56064e",
+            "seq": 49
+          },
+          "event": "skip",
+          "receipt_id": "Grrfk1MNe6Gkd2w3PsZ9WgAuhc4Au5DQZYDHAcDRJNmW",
+          "tx": "2Vyzb7w4nmAvH4XjiG4j3K5upBfenmWRisrHuU5Hv1mY"
         }
       ],
       "gas": [
@@ -3175,6 +3449,31 @@
           "block_time_ms": 1794875434701,
           "tokens_burnt": "214014411363200000000",
           "tx": "GduGXwoqC5LsEdUzvzQ23dYw2LFGhBSxP1B6rchvVpaQ"
+        },
+        {
+          "block_time_ms": 1794879391681,
+          "tokens_burnt": "214014411363200000000",
+          "tx": "3CuecMxAK6MNzfmDPg1axdQQfjJhQ9Njc4ridZV7TDM8"
+        },
+        {
+          "block_time_ms": 1794883474974,
+          "tokens_burnt": "214014411363200000000",
+          "tx": "GqzLrRPxsxGat8t89i8BHsXw8bR93nhMBoes224vTbRy"
+        },
+        {
+          "block_time_ms": 1794887607493,
+          "tokens_burnt": "4364984591956000000000",
+          "tx": "EVgauPenKf3Vpcp4F3vQqEpyxXW6eskfRb6k1Px3SDVj"
+        },
+        {
+          "block_time_ms": 1794891620623,
+          "tokens_burnt": "4419605547886200000000",
+          "tx": "9MR5aQn6y1Q89d1cMiVFHyGpvF9BHH5SKvMY1zc4PijU"
+        },
+        {
+          "block_time_ms": 1794895760316,
+          "tokens_burnt": "214014411363200000000",
+          "tx": "2Vyzb7w4nmAvH4XjiG4j3K5upBfenmWRisrHuU5Hv1mY"
         }
       ],
       "observed": {
@@ -3183,13 +3482,13 @@
             "exchange": "0",
             "intents": "0",
             "token": "wrap.near",
-            "wallet": "1919638169885516036553630"
+            "wallet": "1891383514004894270666283"
           },
           {
             "exchange": "0",
             "intents": "0",
             "token": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
-            "wallet": "1969692"
+            "wallet": "2056211"
           },
           {
             "exchange": "0",
@@ -3206,7 +3505,7 @@
           "mpc_id": "v1.signer",
           "owner_id": "e4cf873fc8516ae3f8c5cd14677c430a05f811e8c291b2c62e8cdcf81f864c1a",
           "proposed_owner": null,
-          "seq": 44,
+          "seq": 49,
           "trading_ends_ns": "1797260130970222941",
           "version": "0.2.0"
         },
@@ -3250,32 +3549,34 @@
           ]
         },
         "reconciliation": {
-          "events_replayed": 56,
+          "events_replayed": 63,
           "status": "ok"
         },
         "usage": {
-          "hour": "498577",
+          "hour": "498582",
           "spent": [
             [
               "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
-              "600000"
+              "400000"
             ],
             [
               "wrap.near",
-              "0"
+              "150000000000000000000000"
             ]
           ],
           "trades": 0
         }
       },
       "proof": {
-        "detail": "season check: 44 of 44 decision(s) attested under the pinned NEAR AI policy (seqs 1-44, as of the cutoff)",
+        "detail": "season check: 49 of 49 decision(s) attested under the pinned NEAR AI policy (seqs 1-49, as of the cutoff)",
         "evidence_ids": [
+          "bundle:13020b244077be875f2f7eddd866551a08c7d8ed31fe955712c3618483db8810",
           "bundle:210f8b81fb8ffcf6d9f1214abba08b56bce5667826e70e5c59bf1768bf8205f9",
           "bundle:2623e980197d2756278d9ae4b1f993061dcfb72dfabbf45dc82cecf12415797a",
           "bundle:288e8f4fdd1ffa8c968f3a46db4f308586dbca700a9ff4ead66593d6652caa72",
           "bundle:2aa08994da21db47fb5832d6f18ee24cb1bc640dc4b12e6310520fb5a6390d7d",
           "bundle:3236aa3aad4277d3b3b3cf4f1cd2b05e2876305b893e35c8d7014b2ce447dfd6",
+          "bundle:32bd99afc5f115986ad02f27f1d4f3724a0be8ad113d392ffc3085641c8dbdfb",
           "bundle:330500856e3b4cc8a629338cb855bdb72073979856f5e479ea6f49e2fc1085d4",
           "bundle:3819bd8a2c02f60922b66289f9b5831db810ada335dbb5e5f81f3a83a7f0ca1a",
           "bundle:3bb3dfc74488d03a0f649b68d7911b84d0ac976a23759da95ae1041cb0887e04",
@@ -3292,6 +3593,7 @@
           "bundle:5e2e48079c24a731729014ce37220e1da9797579ba0d244acbff2f72777592d0",
           "bundle:681e0d04b30172099dae5add9e18730094a9f918bd9477406f0a90eb1ed9fe4e",
           "bundle:6b567cf7ea6fabbfd1dd3ca085839d8811a9421b3736b6ee08c794ac221eb96f",
+          "bundle:6dd64f6c16e91753fc8bbbb44e813f48827e06c368999d4b1613028c584e319a",
           "bundle:72e2814b1d7c24c6e4d94dc463cb470b4496f59def604df19b4a95724d35a19c",
           "bundle:96d76481aa008410ea8a908ab4b5bf0b8ed7784375f73c68cde171c0dc0e24e3",
           "bundle:9c48ffb41307a32eb1cbd549f374e0ce531ed81eca2fb7cf3f5d4712aae02b83",
@@ -3311,22 +3613,27 @@
           "bundle:eaacc95c983e565b40e27273c8e810ca237cb94eee6cdb66a3ac3819a1cc38f5",
           "bundle:ed2aac1b8dad549f1846d5d0250de0d2853e86ad0d1c672396418913be915c16",
           "bundle:ed2f9681609ffd9ea92cf58a4a9c746d0ae78e12febec8f530f4594dcbaaaabb",
+          "bundle:edc4e171ce8a72e07eeb715fcd67415477fda876723746b7bd57f2e7461cc840",
           "bundle:f37a1f84394de39db67c763e2fd13d95d7fc24e91105c09a87598bcb5a0ce682",
+          "bundle:f3a38c59dae25ca832c01d6fe88c1fe4135f5e589a890a6f2c5c8def63d19bcc",
           "bundle:fd40843b932c354a77feb60ba93fc6d6d600eff80dc078d2724e5e65fc140d5b",
           "bundle:ff4a036e9a15b5d52f662b842cf43e7d4cbe8068fb5828d49df40e94d065ca13",
           "chat:04a8f86bec794172b96cc408d9fb16fd",
           "chat:08c76db07eaf40f59290db41726ec935",
           "chat:0ae9ec48dd6c406f86fb968ccdda656a",
+          "chat:0ce845273a854fe885012f8f3a919a4e",
           "chat:0f3e3367ba1b464b95d0255442073838",
           "chat:11aaaa7c83de47799e68b3b24e143206",
           "chat:16e9eb86fcd64e319b0941dcaacdac73",
           "chat:1d6879e6409a4850a6d99e957f040576",
+          "chat:23480da1a2fb4b108f29f037f3e89c68",
           "chat:25fe5611f6444a01a5d4a73537738039",
           "chat:2918959039ac41fe8a701250e3eeead3",
           "chat:2f88721b0bda4748b0d1281e7a412846",
           "chat:36a82d1f3d7c46aa8f30e9392f5ba6bf",
           "chat:38fada26b8224bac8ed4d43a6b337e27",
           "chat:403a91575beb492f9bcaf1904b6af08c",
+          "chat:446c428edaaa447eae1415d9ec52601d",
           "chat:47b2343510af40d092145e41f038585b",
           "chat:4956e0476e4d4fe09fbec01f46006645",
           "chat:5f902d7c8be248fe994183187c9c6e20",
@@ -3337,11 +3644,13 @@
           "chat:7361fa3bc0c7482187edcd851142e23a",
           "chat:75a5eeb7d114423bbb13bcc6f0b879fc",
           "chat:78a4897781f644f9bbc6a3543666dec9",
+          "chat:7af13da764ec4b3ab9ab6ed57d65277b",
           "chat:7e1966d161f34f1ea6ca2854b12455a8",
           "chat:7e26cf14c24c46029dfc228ce167b280",
           "chat:8940a2bd6ae845a3a6d7da9e628d74b3",
           "chat:92ef1b667a4944789b6c7ed1a7bc6eff",
           "chat:a15555eb6ab24eb4be033a4a120f621b",
+          "chat:a423a0fa861c40bca7ff3ef96cdce110",
           "chat:ab70f97e66a84367bc9bb609f20bba23",
           "chat:baa23869bef245c197dc7fe782e94931",
           "chat:bb6c815a2ae44dbb8226075d18d178e0",
@@ -3358,10 +3667,10 @@
           "chat:f8bf093cdf944616a37f0d9f686ea757",
           "chat:faaf630a00b64e99aad9d8a38d4bc616"
         ],
-        "receipts_sha256": "9283d53ea18ef071d32923e2485c0debc18c61404e461cc4f026b878c0060731",
+        "receipts_sha256": "509d0cc526dce431a1d7f95ffa8f360cc0ac815aa6851600e5b875f064dac5d7",
         "seqs": [
           1,
-          44
+          49
         ],
         "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
         "strategy_versions": 2,
