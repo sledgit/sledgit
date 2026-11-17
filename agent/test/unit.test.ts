@@ -244,3 +244,14 @@ test("arena: dry run seals a receipt and sends nothing", async () => {
   assert.equal(r.outcome.status, "dry_run");
   assert.equal(calls.length, 0);
 });
+
+test("finished transactions are read from the archival node (regular RPC prunes them)", async () => {
+  const { archivalTx, ARCHIVAL_RPC } = await import("../src/attest/chain.js");
+  const seen: { url: string; method: string }[] = [];
+  const f = (async (url: string | URL, init?: RequestInit) => {
+    seen.push({ url: String(url), method: (JSON.parse(String(init?.body)) as { method: string }).method });
+    return new Response(JSON.stringify({ result: { receipts_outcome: [] } }));
+  }) as typeof fetch;
+  assert.deepEqual(await archivalTx("testnet", "h", "a.testnet", f), { receipts_outcome: [] });
+  assert.deepEqual(seen, [{ url: ARCHIVAL_RPC.testnet, method: "tx" }]);
+});

@@ -4,6 +4,7 @@ import { Account, JsonRpcProvider, KeyPair, actions, teraToGas } from "near-api-
 import { assertAccountsMatchNetwork, type AgentKey, type Network } from "./config.js";
 import type { ChainReader } from "./provenance.js";
 import { isVaultStandard } from "./events.js";
+import { archivalTx } from "./attest/chain.js";
 
 export const REFUSAL_CODES = [
   "frozen", "busy", "unsettled", "pair_not_allowed", "zero_amount", "trade_cap",
@@ -256,7 +257,9 @@ export class Vault {
 
   /** The vault's own events in a finished transaction (for verify). */
   async txEvents(txHash: string, sender: string): Promise<VaultEvent[]> {
-    const r = await this.provider.viewTransactionStatus({ txHash, accountId: sender, waitUntil: "FINAL" });
+    // Regular RPC prunes old transactions and then waits instead of failing, so the archival node goes first.
+    const r = await archivalTx<unknown>(this.net.id, txHash, sender)
+      .catch(() => this.provider.viewTransactionStatus({ txHash, accountId: sender, waitUntil: "FINAL" }));
     return eventsFromOutcome(r as unknown as OutcomeTree, this.id, { onlySucceeded: true }).events;
   }
 

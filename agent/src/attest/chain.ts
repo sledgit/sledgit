@@ -158,6 +158,11 @@ export async function viewAt<T>(net: NetworkId, account: string, method: string,
 }
 
 /** The block a transaction was included in, from the archival node (sender is needed by the tx method). */
+/** A finished transaction's status from the archival node; regular RPC prunes old ones. */
+export async function archivalTx<T>(net: NetworkId, txHash: string, sender: string, f: typeof fetch = fetch): Promise<T> {
+  return archival<T>(net, "tx", { tx_hash: txHash, sender_account_id: sender, wait_until: "FINAL" }, f);
+}
+
 export async function txBlockHeight(net: NetworkId, txHash: string, sender: string, f: typeof fetch = fetch): Promise<number> {
   const r = await archival<{ transaction_outcome?: { block_hash?: string } }>(net, "tx", { tx_hash: txHash, sender_account_id: sender, wait_until: "FINAL" }, f);
   const hash = r.transaction_outcome?.block_hash;

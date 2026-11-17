@@ -30,15 +30,16 @@ Built for NEAR HACKATHON, tracks `security`, `defi`, `agents`. See [Hackathon di
 | Vault contract: caps, pairs, price floors, freeze, timelocked policy, owner-only withdraw | Built. 77 unit tests (including a property test that caps can't be exceeded); 27 sandbox tests against the real mainnet Rhea and `intents.near` binaries, on two nearcore versions. Owner escape hatches: `intents_abandon` (an intent that can't settle, an hour past its deadline; the cap stays used) and `exchange_claim_lostfound` (a payout the exchange parked) | `contracts/vault/` |
 | Factory: keyless vaults from one global contract | Built and **live on testnet as `arena2.irontrade.testnet`, locked**: its only key was deleted after a script checked its config, so it has 0 access keys. It pins vault code `2ZP4H1ENzFKyN4nVSZf9vKf3pEpgoup9DVU6NbjbE2Gg` (the round-3 source) and accepts deposits of 0.1–10 NEAR. A failed creation is refunded at once when the factory can cover it, otherwise recorded and paid by `claim_refund` | `contracts/factory/`, `contracts/vault/examples/deploy_and_lock.rs` |
 | Testnet arena vaults | Arena entries `qwen36-tee` and `llama32-local`; house strategies `house-rebalancer`, `house-trend`, `house-luck`, `house-breakout` and `house-hold`; test fixture `suite` (all `.arena2.irontrade.testnet`). 0 access keys each. Each agent is a separate account whose only key is a function-call key for its vault's agent methods | `deploy/testnet/arena-*.json`, `lock-*.json`, `FIXTURES.md` |
-| House strategies (open rules) | Rebalancer, Trend 50-day, Breakout, Hold and Luck, as published, versioned rules. Every receipt carries the strategy hash and its inputs, and `house-rerun` decides again from them; `house-rerun --check` also requires the vault's on-chain event to record exactly that decision and the balances, policy, usage and config the rule read to equal the chain's at the decision's transaction block. All five run on testnet; they tick once a day (00:05 UTC slot, 2 h window) | `agent/src/strategies/`, `deploy/testnet/s1/receipts-house/` |
-| Leaderboard reader | Built. Reads only the vault's own events for vaults the locked factory created, values them at the reference price (Binance NEARUSDT; USDC at $1), and compares each entry with computed Hold 50/50 and Stake & hold benchmarks and with its own funded position. It records costs, gas, refusals by code and a 95% range, and checks each entry's proof. The snapshot is a pure function of saved inputs: anyone can rebuild it and compare the hash | `agent/src/league/`, `deploy/testnet/league/` |
-| A TEE-attested decision on chain | On the round-3 vault `qwen36-tee.arena2.irontrade.testnet`, Qwen3.6 via NEAR AI Cloud decided to hold, recorded as a skip at seq 1: tx `DxB7YtvrQAkqfAG8w224tEQbbxVz7uZdN62RRw7pdPp3`. It earns the badge under policy v2: 45 of 45 evidence checks, plus the season checks against the chain. The earlier decisions on the retired `qwen36-tee.arena.irontrade.testnet` are kept as history | `deploy/testnet/s1/receipts-arena/qwen36-tee/` |
+| House strategies (open rules) | Published, versioned rules. Every receipt carries the strategy hash and its inputs, and `house-rerun` decides again from them; `house-rerun --check` also requires the vault's on-chain event to record exactly that decision and the balances, policy, usage and config the rule read to equal the chain's at the decision's transaction block. Rebalancer, Trend 50-day, Breakout, Hold and Luck run on testnet, ticking once a day (00:05 UTC slot, 2 h window). Volatility target (version 3) and three staked rules (`stake-hold`, `stake-rebalancer`, `stake-vol-target`, holding the NEAR side as stNEAR) are published, backtested and tested, but no vault runs them yet | `agent/src/strategies/`, `deploy/testnet/s1/receipts-house/` |
+| Backtest and Skills page | Every skill is backtested with the same `decide()` code the house vaults run, on Binance NEARUSDT daily closes from 2020-10-28, after the pool fee, price impact and gas, with in-sample and out-of-sample periods apart and a bootstrap test corrected for the number of skills. All results are labelled unproven; none passes the corrected test | `agent/src/backtest/`, `agent/data/`, `site/src/app/skills/` |
+| Leaderboard reader | Built. Reads only the vault's own events for vaults the locked factory created, values them at the reference price (Binance NEARUSDT; USDC at $1; stNEAR at its on-chain redemption rate), and compares each entry with computed Hold 50/50 and Stake & hold benchmarks and with its own funded position. It records costs, gas, refusals by code and a 95% range, and checks each entry's proof. The snapshot is a pure function of saved inputs: anyone can rebuild it and compare the hash | `agent/src/league/`, `deploy/testnet/league/` |
+| A TEE-attested decision on chain | On the round-3 vault `qwen36-tee.arena2.irontrade.testnet`, Qwen3.6 via NEAR AI Cloud decided to hold, recorded as a skip at seq 1: tx `DxB7YtvrQAkqfAG8w224tEQbbxVz7uZdN62RRw7pdPp3`. It earns the badge under policy v2: 45 of 45 evidence checks, plus the season checks against the chain. Its later daily decisions (22 on chain, all with receipts) include 8 made while NEAR AI ran gateway builds that were never reviewed into the pinned policy, so this testnet vault's season badge is withheld, as designed. The mainnet TEE entry holds the badge for every decision (see step 5). The earlier decisions on the retired `qwen36-tee.arena.irontrade.testnet` are kept as history | `deploy/testnet/s1/receipts-arena/qwen36-tee/` |
 | NEAR Intents path: the vault signs its own swap via Chain Signatures | Built. On testnet the real MPC (`v1.signer-prod.testnet`) signed a vault intent that settled. NEAR Intents has no testnet, so testnet uses a self-deployed copy of `intents.near` v0.4.5 with the same code hash. That copy keeps a deployer key, so its operator could replace it | `contracts/vault/src/intents.rs` |
-| Agent runner (CLI + LLM arena) and receipts | Built. 188 tests. Receipts are RFC 8785 canonical JSON; `receipt_hash` is in the vault's event | `agent/` |
+| Agent runner (CLI + LLM arena) and receipts | Built. 202 tests. Receipts are RFC 8785 canonical JSON; `receipt_hash` is in the vault's event | `agent/` |
 | TEE verifier and measurement policy | Built (policy v2). Checks the season against the chain, binds each reply to its vault, decision and block time, and pins NEAR AI's measurements down to the VM's boot measurements | `agent/src/attest/`, `agent/src/attest/POLICY.md` |
 | MCP server (read-only) | Built. 7 tools: vault policy and usage, `preview_trade`, list a factory's vaults, an agent's record, `verify_receipt`, `verify_attestation`. No keys, no write tools; stdio, or HTTP on loopback only | `mcp/` |
-| Agent skill | `SKILL.md`: how any agent (Claude Code, Codex, OpenClaw, …) operates a vault safely; laid out for `npx skills add` once the repo is public | `skills/sledgit-vault/`, `agent/SKILL.md` |
-| Website | A preview with a **simulated** season (labelled as sample data). The Testnet view shows the committed leaderboard snapshot, read from the chain. Access-gated during development | `site/` |
+| Agent skill | `SKILL.md`: how any agent (Claude Code, Codex, OpenClaw, …) operates a vault safely; laid out for `npx skills add` | `skills/sledgit-vault/`, `agent/SKILL.md` |
+| Website | Public at https://sledgit.com. The mainnet and testnet leaderboards show committed snapshots built from the chain (`league check` rebuilds them); agent, vault and receipt pages; the Skills page; the security and trust pages. A static export: no backend, no keys | `site/` |
 
 **Retired testnet factory.** `arena.irontrade.testnet` is locked too, but pins the code from before the round-3
 fixes (`5ePvrzPrKn8WGzZh8LnSLjaxcCPebA5E6nFJ4HxwR3iQ`). Its vaults stay on chain as history: `verify` still matches
@@ -75,9 +76,12 @@ come from those legacy vaults and are kept as history.
 - **NEAR Intents with real solvers:** before launch, a directly deployed test vault sold 0.3 wNEAR for 0.9959 USDC.
   Settlement `23kX2MBotGQKsyDnLsttevPUdRFbEC6o4USNRDYWWCMS`. `intent --publish` quotes the solver relay, has the vault
   sign at that quote, and publishes it.
+- **Live entries trade on Rhea only, so far:** their NEAR Intents key has not been set up yet (`get_intents` shows
+  `public_key: null`), so their intents path is unused.
 
 **Not done yet:**
 - **No ranking yet:** ranking starts at day 7 of a season.
+- **House vaults on mainnet:** not created yet; the house rules run on testnet only.
 - **Testnet is not performance:** testnet pools fill far from the reference price.
 - **TEE policy:** NEAR AI updated its enclave app containers on 2026-11-14. The new measurements (2 compose hashes, 3
   images; hardware quotes and OS/TDX measurements unchanged) were reviewed into `agent/src/attest/nearai-policy.json`.
@@ -110,6 +114,10 @@ cd agent && npm ci
    ```
    - **See:** `"keys": []` twice. Nobody can sign as the vault or replace its code. The factory can only ever create
      vaults with the code it was locked with.
+   - The same holds on mainnet, for the factory and a live vault:
+     ```bash
+     for a in qwen36-tee.arena.sledgit.near arena.sledgit.near; do curl -s https://free.rpc.fastnear.com -H 'content-type: application/json' -d '{"jsonrpc":"2.0","id":1,"method":"query","params":{"request_type":"view_access_key_list","finality":"final","account_id":"'$a'"}}'; echo; done
+     ```
 4. **Match receipts to the chain.** Run `node bin/sledgit.mjs verify ../deploy/testnet/s1/receipts-arena/qwen36-tee/receipts.jsonl`.
    - **See:** `"status": "ok"`, `"onchain": true`, `"sledgit_vault": true`, exit code 0.
    - The receipt's sha256 is in an event emitted by that vault, in the named transaction, with the same direction,
@@ -118,10 +126,11 @@ cd agent && npm ci
    - Change one character in the receipt and run it again. **See:** exit 1.
    - The legacy receipts (`../deploy/testnet/receipts/receipts.jsonl`) exit 1 by design. The old factory's vaults return
      `"status": "legacy_vault"`, and the first, directly deployed vault returns `"unverified_vault"`.
-5. **Verify the attested decision.** Run `node bin/sledgit.mjs verify-attestation ../deploy/testnet/s1/receipts-arena/qwen36-tee/receipts.jsonl`.
-   - **See:** `"tee_pill": true` and exit 0. (On the retired vault's history,
-     `../deploy/testnet/receipts-arena/qwen36-tee/receipts.jsonl` needs `--from-seq 2`: its seq 1 is reported as
-     "attested under policy v1 (pre-binding format): badge not awarded under policy v2".) Each decision's checks cover:
+5. **Verify the attested decisions on mainnet.** Run `node bin/sledgit.mjs verify-attestation ../deploy/mainnet/s1/receipts/qwen36-tee/receipts.jsonl`.
+   - **See:** `"tee_pill": true` and exit 0, for every decision the mainnet vault `qwen36-tee.arena.sledgit.near`
+     recorded. (The testnet vault's file, `../deploy/testnet/s1/receipts-arena/qwen36-tee/receipts.jsonl`, exits 1 by
+     design: 8 of its decisions ran on NEAR AI gateway builds that are not in the pinned policy, and the output names
+     each unpinned measurement.) Each decision's checks cover:
      - the vault is a genuine Sledgit vault, and every decision it recorded on chain from that seq has a receipt;
      - the receipt-to-bundle binding (prompt, inputs, reply), and the decision is exactly what the reply says;
      - the request is the published template, and carries the vault, the tick's salt and a final testnet block;
@@ -328,7 +337,8 @@ the repo.
   - there is no pre-hackathon code.
   
   It was built in a local workspace without git history and published at the end of the hackathon, as one commit tagged
-  `hackathon-submission`. The timeline is checkable on chain instead:
+  `hackathon-submission` (2026-11-14). Later commits are dated work after that tag. The timeline is checkable on chain
+  instead:
   - the first testnet contracts were deployed on 2026-10-28 (`it1793205011-vault.testnet`,
     `it1793205219-owner.testnet` and its sub-accounts);
   - the testnet factory `arena2.irontrade.testnet` and its vaults followed;
@@ -383,8 +393,10 @@ the repo.
 
 ## Roadmap
 
-1. Daily house ticks and leaderboard snapshots on a schedule; the Breakout and Hold house vaults (waiting on test NEAR).
-2. Mainnet: the public factory, so anyone can create a small vault (about 0.1–0.2 NEAR of storage plus
+1. Mainnet house vaults: volatility target, breakout, band rebalance and a staked rule, as reference entries.
+2. Price-oracle floors per pair, so pairs without a Rhea pool (SOL, gold, EUR stablecoins inside NEAR Intents) can be
+   traded under the same limits.
+3. The public factory (live): anyone can create a small vault (about 0.1–0.2 NEAR of storage plus
    their deposit). Beta deposit cap, set by the factory for the life of each vault: the owner's net deposits per token
    (deposits made with `ft_transfer_call`, minus withdrawals) can't exceed it, and the excess is sent straight back.
    The factory's admin account (`sledgit.near`) can change the caps for every vault (`set_deposit_caps`, then
@@ -394,16 +406,16 @@ the repo.
    It isn't a ceiling on what a vault can hold: a plain `ft_transfer` or a NEAR Intents transfer into the vault isn't
    counted. The per-trade and daily limits still bound what the agent can trade, and the leaderboard unranks an entry
    whose balances don't match its recorded deposits.
-   - Three reference entries are created from the same factory, each with its own owner and agent account.
-   - Agent software holds only a function-call key scoped to its vault with a finite allowance; a separate full-access
-     recovery key for the agent's gas money is kept offline.
+   - Two agent entries run from this factory so far, each with its own owner and agent account.
+   - Agent software holds only a function-call key scoped to its vault with a finite allowance. Each agent account also
+     has a separate full-access recovery key for its gas money; moving those keys offline is still open.
    - The reproducible build hash is published at the release tag. Deployed vaults never change: a new version means a
      new factory and vaults that owners choose to move to.
-3. No fees: the contracts take none, and none are planned on chain.
-4. Badge hardening: binding to the gateway's TLS session, Sigstore provenance for the pinned images, NVIDIA token
+4. No fees: the contracts take none, and none are planned on chain.
+5. Badge hardening: binding to the gateway's TLS session, Sigstore provenance for the pinned images, NVIDIA token
    signature checks, and keeping each quote's Intel collateral with the evidence.
-5. List the MCP server in the MCP Registry, and publish the skill (`npx skills add`, ClawHub).
-6. A hardware (TPM2) badge.
+6. List the MCP server in the MCP Registry, and publish the skill (`npx skills add`, ClawHub).
+7. A hardware (TPM2) badge.
 
 ## License
 

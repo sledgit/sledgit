@@ -28,3 +28,16 @@ test("R3-09: a genuine vault's skip note comes back labelled untrusted, outside 
   assert.equal(e.agent_written?.label, AGENT_WRITTEN_LABEL);
   assert.equal(e.agent_written?.fields.note, `[agent-written, untrusted] ${NOTE}`);
 });
+
+test("transactions are read from the archival node first; regular RPC only if it fails", async () => {
+  const calls: string[] = [];
+  const reply = (body: unknown) => ({ ok: true, status: 200, text: async () => JSON.stringify(body) });
+  const tree = { status: { SuccessValue: "" }, receipts_outcome: [], transaction_outcome: {} };
+  const ok = (async (url: string) => { calls.push(url); return reply({ result: tree }); }) as never;
+  assert.deepEqual(await new Near(NETS.mainnet, ok).tx("h", "a.near"), tree);
+  assert.deepEqual(calls, [NETS.mainnet.archival]);
+  calls.length = 0;
+  const down = (async (url: string) => { calls.push(url); return url === NETS.mainnet.archival ? reply({ error: { name: "HANDLER_ERROR" } }) : reply({ result: tree }); }) as never;
+  assert.deepEqual(await new Near(NETS.mainnet, down).tx("h", "a.near"), tree);
+  assert.deepEqual(calls, [NETS.mainnet.archival, NETS.mainnet.rpc]);
+});

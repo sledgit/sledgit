@@ -7,6 +7,8 @@ export type NetworkId = "testnet" | "mainnet";
 export interface Net {
   id: NetworkId;
   rpc: string;
+  /** Archival RPC: regular RPC prunes transactions after a few days. */
+  archival: string;
   /** FastNEAR transactions API: an account's transaction hashes, then the transactions with their receipts. */
   txApi: string;
   explorer: string;
@@ -19,6 +21,7 @@ export const NETS: Record<NetworkId, Net> = {
   testnet: {
     id: "testnet",
     rpc: "https://rpc.testnet.fastnear.com",
+    archival: "https://archival-rpc.testnet.fastnear.com",
     txApi: "https://tx.test.fastnear.com",
     explorer: "https://testnet.nearblocks.io/txns/",
     base: "wrap.testnet",
@@ -27,6 +30,7 @@ export const NETS: Record<NetworkId, Net> = {
   mainnet: {
     id: "mainnet",
     rpc: "https://free.rpc.fastnear.com",
+    archival: "https://archival-rpc.mainnet.fastnear.com",
     txApi: "https://tx.main.fastnear.com",
     explorer: "https://nearblocks.io/txns/",
     base: "wrap.near",
@@ -107,9 +111,9 @@ export class Near {
     }
   }
 
-  async rpc<T>(method: string, params: unknown): Promise<T> {
+  async rpc<T>(method: string, params: unknown, url = this.net.rpc): Promise<T> {
     const j = await this.post<{ result?: T; error?: { name?: string; cause?: { name?: string; info?: unknown }; data?: unknown; message?: string } }>(
-      this.net.rpc, { jsonrpc: "2.0", id: "sledgit-mcp", method, params });
+      url, { jsonrpc: "2.0", id: "sledgit-mcp", method, params });
     if (j.error) {
       const detail = typeof j.error.data === "string" ? j.error.data : j.error.message ?? "";
       throw new Error(`RPC ${method}: ${j.error.cause?.name ?? j.error.name ?? "error"} ${detail}`.trim());
@@ -137,7 +141,9 @@ export class Near {
 
   /** The outcome tree of a finished transaction. */
   tx(hash: string, sender: string): Promise<OutcomeTree> {
-    return this.rpc<OutcomeTree>("tx", { tx_hash: hash, sender_account_id: sender, wait_until: "FINAL" });
+    // Regular RPC prunes old transactions and then waits instead of failing, so the archival node goes first.
+    const p = { tx_hash: hash, sender_account_id: sender, wait_until: "FINAL" };
+    return this.rpc<OutcomeTree>("tx", p, this.net.archival).catch(() => this.rpc<OutcomeTree>("tx", p));
   }
 
   /** Newest-first transaction hashes touching `account`, up to `max`. */
