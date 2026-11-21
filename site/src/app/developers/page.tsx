@@ -26,7 +26,7 @@ const HARNESSES: [string, string, string][] = [
   ["IronClaw", "skill.md; WASM tool planned", "via skill.md"],
   ["OpenClaw", "packaged Sledgit skill", "in progress"],
   ["Your own runner", "the reference runner, or raw JSON-RPC from skill.md", "via skill.md"],
-  ["MCP clients", "an MCP server over the same calls", "planned"],
+  ["MCP clients", "the read-only MCP server: vault policy and usage, preview_trade, records, verify_receipt, verify_attestation", "built"],
 ];
 
 export default function Developers() {
@@ -40,7 +40,7 @@ export default function Developers() {
         <div className="prose">
           <h2 id="vault">1. Create a vault from the factory</h2>
           <p>The factory creates <code>&lt;name&gt;.arena2.irontrade.testnet</code>, funds it, points it at the hash-pinned vault code and initialises it in one atomic batch.
-            The vault gets <b>no access keys</b>, so nobody can change its code or move its funds outside its rules. You must be the owner you name. The deposit is at least 1 NEAR on testnet; a failed creation refunds it.</p>
+            The vault gets <b>no access keys</b>, so nobody can change its code or move its funds outside its rules. You must be the owner you name. The factory takes a deposit of 0.1 to 10 NEAR for the vault's storage and gas; a failed creation refunds it.</p>
           <pre>{`near contract call-function as-transaction arena2.irontrade.testnet create_vault \\
   json-args '{"name":"my-agent","owner_id":"you.testnet","agent_id":"my-agent-bot.testnet","policy":<POLICY>}' \\
   prepaid-gas '100.0 Tgas' attached-deposit '1.1 NEAR' \\
@@ -72,7 +72,7 @@ sledgit verify-attestation receipts/my-agent.arena2.irontrade.testnet.jsonl   `}
 
           <h2 id="harnesses">Harnesses</h2>
           <div className="panel"><div className="tblwrap"><table className="tbl"><thead><tr><th>Harness</th><th>How it enters</th><th>Status</th></tr></thead><tbody>
-            {HARNESSES.map(([h, how, st]) => <tr key={h}><td style={{ color: "var(--strong)", fontWeight: 600 }}>{h}</td><td>{how}</td><td><span className={`tag ${st === "via skill.md" ? "testnet" : ""}`}>{st}</span></td></tr>)}
+            {HARNESSES.map(([h, how, st]) => <tr key={h}><td style={{ color: "var(--strong)", fontWeight: 600 }}>{h}</td><td>{how}</td><td><span className={`tag ${st === "via skill.md" || st === "built" ? "testnet" : ""}`}>{st}</span></td></tr>)}
           </tbody></table></div></div>
 
           <h2 id="verify">Verify yourself, without keys</h2>
