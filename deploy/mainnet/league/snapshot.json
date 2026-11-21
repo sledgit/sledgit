@@ -1,25 +1,25 @@
 {
-  "as_of_ms": 1794895800000,
+  "as_of_ms": 1795171020000,
   "benchmarks": {
-    "hold_twr": 0.00217054,
+    "hold_twr": -0.0296124,
     "stake_apr": {
       "source": "assumption, not measured: 4.5% APR, the post-2024 NEAR staking rate the backtest uses (agent/src/strategies/benchmarks.ts STAKE_APR); testnet vaults cannot stake",
       "value": 0.045
     },
-    "stake_twr": 0.00233372,
-    "stake_vs_hold": 0.00016283,
+    "stake_twr": -0.02927473,
+    "stake_vs_hold": 0.00034797,
     "start_ms": 1794668096365
   },
   "by_model": [
     {
       "avg_vs_hold_after_gas": null,
-      "decisions": 50,
+      "decisions": 111,
       "entries": [
-        "mn-local-qwen3-8b"
+        "mn-qwen36-tee"
       ],
-      "family": "Qwen3 8B",
-      "label": "Qwen3 8B · self-reported",
-      "provisional_vs_hold_after_gas": -0.05048804,
+      "family": "Qwen3.6 35B",
+      "label": "Qwen3.6 35B · self-reported",
+      "provisional_vs_hold_after_gas": -0.0286363,
       "ranked_entries": 0,
       "refusals": 0,
       "scored_sources": 0,
@@ -28,17 +28,17 @@
       "status": "not enough data",
       "strategy": null,
       "tier": "self",
-      "trades": 25
+      "trades": 18
     },
     {
       "avg_vs_hold_after_gas": null,
-      "decisions": 49,
+      "decisions": 92,
       "entries": [
-        "mn-qwen36-tee"
+        "mn-local-qwen3-8b"
       ],
-      "family": "Qwen3.6 35B",
-      "label": "Qwen3.6 35B · attested",
-      "provisional_vs_hold_after_gas": -0.0158946,
+      "family": "Qwen3 8B",
+      "label": "Qwen3 8B · self-reported",
+      "provisional_vs_hold_after_gas": -0.04331789,
       "ranked_entries": 0,
       "refusals": 0,
       "scored_sources": 0,
@@ -46,12 +46,12 @@
       "spread": null,
       "status": "not enough data",
       "strategy": null,
-      "tier": "tee",
-      "trades": 11
+      "tier": "self",
+      "trades": 28
     }
   ],
   "caveat": null,
-  "derived_sha256": "7d85d7eaab2a08e75dfa6917932ddad4dd06e47a95694103fdd92cfc888b3edc",
+  "derived_sha256": "2fddd121906a82005c37d0b97626c4049a8cfedfdb29a4ede08fc327b5431e0a",
   "entries": [
     {
       "account": "qwen36-tee.arena.sledgit.near",
@@ -60,24 +60,798 @@
         "benchmark_cost_rate": 0.003,
         "benchmark_cost_rate_source": "fixed published rate: the Rhea wNEAR/USDC pool fee, 0.30% (pool 4512)",
         "benchmark_rebalance_usd": 0.0048345,
-        "fill_vs_reference_pct": 0.00400352,
-        "fill_vs_reference_usd": 0.02669387,
-        "gas_near": 0.05668154,
-        "gas_usd": 0.18041266,
+        "fill_vs_reference_pct": 0.00361911,
+        "fill_vs_reference_usd": 0.04245221,
+        "gas_near": 0.09930286,
+        "gas_usd": 0.32196132,
         "neutralised_usd": 0,
-        "traded_ref_usd": 6.6676
+        "traded_ref_usd": 11.73
       },
       "counts": {
-        "decisions": 49,
+        "decisions": 111,
         "failed": 0,
         "missed_slots": 0,
         "off_schedule": 0,
         "refusals": 0,
-        "skips": 38,
-        "trades": 11
+        "skips": 93,
+        "trades": 18
       },
-      "days": 2.63462525,
+      "days": 5.82004192,
       "decisions": [
+        {
+          "block_time_ms": 1795170961180,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "243d0650b64c5725b3427b92bb917f70b9e1f9629698f0dccf3cfb5df1658a2d",
+          "seq": 111,
+          "tx": "5FSmFrczujJj3YTXyUNJuqudYDco73gUwAXJxsvHEqwv"
+        },
+        {
+          "block_time_ms": 1795165784084,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "8d7b3538e1405452e8801daa321d19c9bf1f70aee1a4ed6f4cc45d6615c8c6c9",
+          "seq": 110,
+          "tx": "2nVYe8khgjxo1Y5oYREez8Np4iJDJaKjccT4yR4V99wv"
+        },
+        {
+          "block_time_ms": 1795160776908,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "046a04d052a700e12d4a47e4f3d5f8090f9356bcf5d230fbb8c84c8444c49af1",
+          "seq": 109,
+          "tx": "9omvqYyewwXfukgNXY8cCcND9Q3QfijCAQuh5uLKVrz3"
+        },
+        {
+          "block_time_ms": 1795155618875,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "13cecbe1553e2e269532a70c27154be6822cfafb92debc02a201528f7ce53b4a",
+          "seq": 108,
+          "tx": "HKgMBDXJX11MEk2SFhyeyXHWsyK9f1QKRtbknmvXM1bW"
+        },
+        {
+          "block_time_ms": 1795150578142,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "0afd6af71db23236b9e7c6a97c038318b91a211e40b3c371f8fbb917658f2b89",
+          "seq": 107,
+          "tx": "36dxNMCKBQ72FoxJDNmkFsXZbQThJDmvdNt54rvgZMCU"
+        },
+        {
+          "block_time_ms": 1795145706478,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "934dc71e84aa7b0c20c8425422e38292f7cc2362497b38e29ba19446926a350f",
+          "seq": 106,
+          "tx": "4wmYrAzVFL9C1ZZR7H7TbYtFuSgmHRbzbe3nCwmFZyX4"
+        },
+        {
+          "block_time_ms": 1795140829186,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "3ee9a18baa624038e2234c8e888dff65b09c53e824b1503325a679ee4a1cbf36",
+          "seq": 105,
+          "tx": "AfJL3Aqrw7sbq9USpxVLaTiXvEHWhzRpEWUMSr56S8fi"
+        },
+        {
+          "block_time_ms": 1795136002029,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "ba4d3e68692a17c03b94945800e16ba80f9946dffa2bfad5b48509dfc7407041",
+          "seq": 104,
+          "tx": "AgmcZ1qVNiXHqPQm3BnUUdrCWfeJJn5iuThQ7o7isPSb"
+        },
+        {
+          "block_time_ms": 1795131180648,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "1c365e60caaf016ff4585010d432f648076b965dfb5e6604ecdf0c4c0d5b0b0e",
+          "seq": 103,
+          "tx": "GqKsDv2PoGAKwC6oMS6TnW45UXSQRKMfTCSocDaeZD7t"
+        },
+        {
+          "block_time_ms": 1795126444214,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "c6a08d5f0f880ff915e4b364b66b09a67fe56d704ef2f60e3c085d8650c13fe6",
+          "seq": 102,
+          "tx": "7DC9i18Y1Ss9j4KRjdGBPW8TMECiibW7Fzwkc7TMNekE"
+        },
+        {
+          "block_time_ms": 1795121697095,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "3483b361d1a9f88cae4b0edb768cd938745e4fe4f89073059fdf13d43e96d4ed",
+          "seq": 101,
+          "tx": "6Zu32RVxJw5qoaZuZaiLzAFrxAasjVJsCs4Zj9GdXbqk"
+        },
+        {
+          "block_time_ms": 1795116993651,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "c28c2c08eb2335766b1d57fbad1b932cf51c7801717d3b381407d3155057d989",
+          "seq": 100,
+          "tx": "GnrAVbhB8iY2BG3vsjxQKCEvSn1tPee4VG6Fi9msde6a"
+        },
+        {
+          "block_time_ms": 1795112310144,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "212331aabd3df5c06b2a5224fce293eb50638a78949647829de95d5f31bd09a1",
+          "seq": 99,
+          "tx": "67fwAfYYQe4m6vLdgPRDmt2Pw5Qo58Tb2ssEQxCXZG7C"
+        },
+        {
+          "block_time_ms": 1795107536649,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "2f16ddd7ec275d7951e3cef9e91126f71dd8997782751371007dfc1f9c905584",
+          "seq": 98,
+          "tx": "7wHegkFMgCMWmGCEqqBMjq8nyG1vx2V1mYb1f6caeiwG"
+        },
+        {
+          "block_time_ms": 1795102803688,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "af11ee8bc97963f5718a1ec8e54f2ea406e1e5905c659d3e7e3b4ae488090305",
+          "seq": 97,
+          "tx": "EyFJyr2xpDbKHzkDtk9YncpSkv7nSTZHUWkedwicEUTi"
+        },
+        {
+          "block_time_ms": 1795097759513,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "0cfcb9e5d36a9ffb813ecdd235d6e634f26cb4e6a2fe9b4942ba794962e257d9",
+          "seq": 96,
+          "tx": "35FiTv6kN9NtGK4jLvcXKeVTzspfDu8AXHKYNyT53svA"
+        },
+        {
+          "block_time_ms": 1795092775685,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "e46ac76796944bbdf3ec73366c8e9ebdba3e5ae43d9d1c50a52889f7a1c9d63a",
+          "seq": 95,
+          "tx": "4dQDgK9HR5rsPmPmBz4Q7QbwX5Er8cL9dMaBfFTq1sGG"
+        },
+        {
+          "block_time_ms": 1795087716002,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "38b18f143b29725ddd826002ae2f86d5ef27b08f646a0f81cc9c37cc347d9a88",
+          "seq": 94,
+          "tx": "5qWgr1AcziYmaW2yXjCiZ6rKYeEhS4D6vYxbTPrDCd7G"
+        },
+        {
+          "block_time_ms": 1795082968554,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "f79f81707385f6896d1d12798a0fe0285c77192525f0420c4e1e2d2fb926a164",
+          "seq": 93,
+          "tx": "8G2T5nTRftYzoKZksD7ywobDuGTMH9diNpa1hi9MY8Qn"
+        },
+        {
+          "block_time_ms": 1795078197442,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "25e8e160a7b345668663824300c4c70888a78971099327894685331d1ca34cc7",
+          "seq": 92,
+          "tx": "7ZaMSF2UNiQNsmZNeEhghRk6CpVxLTHwQCJmy9bA9ynM"
+        },
+        {
+          "block_time_ms": 1795073421559,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "9cef5a31e4ec774abd3f0ed5ed967509ce463d7c904e950f13d7fce6551e30bd",
+          "seq": 91,
+          "tx": "33csEYVQqJpArd68uU2vHcfPXgnJfgK7mVgEFR3RCKof"
+        },
+        {
+          "block_time_ms": 1795067347828,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "6d0529aad78b086ef44a9ad49866c14916aefe8ae706f02003b31913e2809fec",
+          "seq": 90,
+          "tx": "92ZaUec9HFE1McHoneaMxyhhVeAWpyBRpEs1vWvKu7Cw"
+        },
+        {
+          "block_time_ms": 1795062487227,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "c9bea445dc3c492244d3551637f7f876e60fcb455547ba2f5b3fa7719e39d0f3",
+          "seq": 89,
+          "tx": "CaiyjcaT2CAcbzJCUiBNApmqGR3PdJFdmArBKh2FSnXW"
+        },
+        {
+          "block_time_ms": 1795057839856,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "6a376657b0534cc1f1c0c4f74449d9d43166abfdf3c530f8bb31313e827207d3",
+          "seq": 88,
+          "tx": "2debGMzTr23egFnRfrd8QH8bFHA6WmjgcEGroo6mkWa9"
+        },
+        {
+          "block_time_ms": 1795053687229,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "2639d222ac0bcf2258a3c84cb195462ce0fa660187529c759a8a279bf6d68b7c",
+          "seq": 87,
+          "tx": "Ht2BbcXkYNEtBLvsCRZBqkJDv56Xz3LPTi8V27kXQNgc"
+        },
+        {
+          "block_time_ms": 1795049562613,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "db0f77bb8ba0501bce4e030f04be5c869b67b09f2be62b55bb7bd33adb630aad",
+          "seq": 86,
+          "tx": "Gf2k3iRe4T7WF7AyoXfa5hNLNc5nzE1DNQcM6AFJ2kop"
+        },
+        {
+          "block_time_ms": 1795045438145,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "561fa1698b0687e4c5aae5f248359494533aa041b793dd9f0f47e8423a13014f",
+          "seq": 85,
+          "tx": "E1j3fJmtJcrQGDLyr6cBRammxd9PBhUbGpf6BkkCaU7b"
+        },
+        {
+          "block_time_ms": 1795041338128,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "0105cc5c6bb2ad5ef78368cdfb9412bbf916a7b1ef312ffe3624ef52d1a43d04",
+          "seq": 84,
+          "tx": "GH6PxrScE8VzEo9Dmvhym2Z4rcDz4FzKMztMHvmbRHsM"
+        },
+        {
+          "block_time_ms": 1795037216605,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "14f1b3dd47d76b3bac658715c7159865e3002b51cb75a0b6a2cc78975de0681b",
+          "seq": 83,
+          "tx": "92mExe2s2X4jckdvgkb9mdnnjzdMAkFTgtpo9PooGzcg"
+        },
+        {
+          "block_time_ms": 1795033068562,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "af64aed9d5d7fdb7ed94d1563f57aeafd281f13bfe2cb0797efcb1b1198d0447",
+          "seq": 82,
+          "tx": "45o1gAMGMkCXdE8kzPFXdrJazPxpBhKvstU4gjRX1z81"
+        },
+        {
+          "block_time_ms": 1795028973697,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "10a2c184e0c2dc7d4616133d94603adb6edb6a0395f8bd488e30675bbc46bb7e",
+          "seq": 81,
+          "tx": "At2Eggz8mL7djFC8YvggnAvxNVW4QKYbmzYrKfWdZzW4"
+        },
+        {
+          "block_time_ms": 1795024874454,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "a70352855e315f6fec51d07651437f852ab9fd589b492f393020235524762fd4",
+          "seq": 80,
+          "tx": "HxqXhHUaQsVRu37aLnX58ninca7TzJGjRsZetDf8t6Qw"
+        },
+        {
+          "block_time_ms": 1795020509190,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "c3660359d830645ce001563bbe325ac6fc38194fe95eed314e38e32f1336ef2c",
+          "seq": 79,
+          "tx": "ChCG8AFQBHM9iMNKM7kzRv7jX4FyBKBpNHmrFidZrzaL"
+        },
+        {
+          "block_time_ms": 1795016413630,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "5ccf2238601638aab213dd813e4b645fb66e96eb6858e85782b510869ff389cb",
+          "seq": 78,
+          "tx": "AbWEY3JtoSsRYcp9p67iwjHpDm3VmGEK62zvmi9dwCEE"
+        },
+        {
+          "block_time_ms": 1795012112909,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "9daddd0c4f0311eab1dd67452a97f5ad35b1422b7b012dce784e960416fa3bd0",
+          "seq": 77,
+          "tx": "Bhox9a192zvtdijjn8et1dUdpLit9HXDCdqw3t76QSNA"
+        },
+        {
+          "block_time_ms": 1795007812067,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "8ca7e12084e502951c0700f3fd42fa789c2229a4f85f12c52a2686611962157f",
+          "seq": 76,
+          "tx": "ANxBu9FPUtxMb2nUFS8VepddY2p6aWyMgu1tgGVKUi5q"
+        },
+        {
+          "block_time_ms": 1795003494413,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "e1aaa59e8dc0bd8e209e86c55a2d2e6d4589b659075bfaca0d06bc673bfd71b4",
+          "seq": 75,
+          "tx": "HRpqHNUaq2QQBPLQSacMBiZMtJEdyqQpBzeRVis9cQso"
+        },
+        {
+          "block_time_ms": 1794999051136,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "d3c5a8fd946cc05c0a51f6e41f65ea49c45835ab8c1003aa655b3c37d0353b61",
+          "seq": 74,
+          "tx": "BV8q2QGLXAypH5awirK7VreqTVhiSpHfwSedgmEoFJgE"
+        },
+        {
+          "block_time_ms": 1794994946648,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "7783baa273b02951f0d31747880e5adeca7ee88b79c3311a9ba3bbc5d31b5285",
+          "seq": 73,
+          "tx": "Bm2nEbar8igxDxjB4xyX3fRNRe5KnL5UsroLom98NaxA"
+        },
+        {
+          "amount_in": "500000",
+          "amount_out": "149028277269962850599076",
+          "block_time_ms": 1794990702674,
+          "cost_usd": 0.00224555,
+          "event": "trade",
+          "fill_price": 3.35506797,
+          "in_season": true,
+          "on_schedule": null,
+          "pool_id": 4512,
+          "receipt_hash": "a2839b1bee739756b8daa243612388f8b919e3d43a3b1c0ae550f97428c55c12",
+          "ref_price": 3.34,
+          "seq": 72,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "F3uCmCX5kYV4rzuhwkWDF6NhrATmJUVnorv3mXpg6WB6",
+          "venue": "rhea"
+        },
+        {
+          "amount_in": "500000",
+          "block_time_ms": 1794990693677,
+          "event": "request",
+          "in_season": true,
+          "on_schedule": null,
+          "receipt_hash": "a2839b1bee739756b8daa243612388f8b919e3d43a3b1c0ae550f97428c55c12",
+          "seq": 72,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "F3uCmCX5kYV4rzuhwkWDF6NhrATmJUVnorv3mXpg6WB6"
+        },
+        {
+          "block_time_ms": 1794986636941,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "2b5df723daed1f7ff44946e352c889952b4354268fc00dfbef128cb8286d7883",
+          "seq": 71,
+          "tx": "EyVfZNtKncoJmtBPcLSEsdimumDkF4JE5N25eLnEfPm9"
+        },
+        {
+          "amount_in": "300000000000000000000000",
+          "amount_out": "1020336",
+          "block_time_ms": 1794982538619,
+          "cost_usd": 0.004764,
+          "event": "trade",
+          "fill_price": 3.40112,
+          "in_season": true,
+          "on_schedule": null,
+          "pool_id": 4512,
+          "receipt_hash": "9d986c82af9540d00f422c5ddf9040b08b8e99bd093627ad9038ba92c10be77f",
+          "ref_price": 3.417,
+          "seq": 70,
+          "side": "sell",
+          "token_in": "wrap.near",
+          "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "tx": "25Bd8FVK2vjNdrwKF1CPK8JpxLJNfL8E6XMohAveQ4tb",
+          "venue": "rhea"
+        },
+        {
+          "amount_in": "300000000000000000000000",
+          "block_time_ms": 1794982529978,
+          "event": "request",
+          "in_season": true,
+          "on_schedule": null,
+          "receipt_hash": "9d986c82af9540d00f422c5ddf9040b08b8e99bd093627ad9038ba92c10be77f",
+          "seq": 70,
+          "side": "sell",
+          "token_in": "wrap.near",
+          "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "tx": "25Bd8FVK2vjNdrwKF1CPK8JpxLJNfL8E6XMohAveQ4tb"
+        },
+        {
+          "block_time_ms": 1794978437814,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "2fe1c72eab2f2c12b8b763b19cdd65eda636514af21a1760fa6e6918c238a9d3",
+          "seq": 69,
+          "tx": "FjhMEawNcawSS3RRfFziLXQ1Z1LPcmnkmQYcK9PafADy"
+        },
+        {
+          "amount_in": "300000000000000000000000",
+          "amount_out": "1014888",
+          "block_time_ms": 1794974337888,
+          "cost_usd": 0.002412,
+          "event": "trade",
+          "fill_price": 3.38296,
+          "in_season": true,
+          "on_schedule": null,
+          "pool_id": 4512,
+          "receipt_hash": "d75c1d8bbca48b511429291e649a4ed46069188f538795a37011e66c895b3792",
+          "ref_price": 3.391,
+          "seq": 68,
+          "side": "sell",
+          "token_in": "wrap.near",
+          "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "tx": "7N7DoccAf2UvCsGvCPi9CNKRthrpx5PeJCGYgaGVjLky",
+          "venue": "rhea"
+        },
+        {
+          "amount_in": "300000000000000000000000",
+          "block_time_ms": 1794974329534,
+          "event": "request",
+          "in_season": true,
+          "on_schedule": null,
+          "receipt_hash": "d75c1d8bbca48b511429291e649a4ed46069188f538795a37011e66c895b3792",
+          "seq": 68,
+          "side": "sell",
+          "token_in": "wrap.near",
+          "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "tx": "7N7DoccAf2UvCsGvCPi9CNKRthrpx5PeJCGYgaGVjLky"
+        },
+        {
+          "block_time_ms": 1794970206296,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "bf523f68d9e113575c4b67a3d9f47492deceab47d7e357fee31b746f0d58f126",
+          "seq": 67,
+          "tx": "8sdq21q6pc51EkikNDobxC9i4tqsAE3a7QXyhr5jPPKh"
+        },
+        {
+          "block_time_ms": 1794966072687,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "c46d3d0392773f14f6ceb01de24b8c08298276a3f9d044a2c9589051c7880877",
+          "seq": 66,
+          "tx": "GZXr9DGUsZzq7yMiQfCDrZdLRwDFqG7YvMENE2hBNk5P"
+        },
+        {
+          "amount_in": "400000",
+          "amount_out": "117674344845809589878731",
+          "block_time_ms": 1794961850784,
+          "cost_usd": 0.00014258,
+          "event": "trade",
+          "fill_price": 3.39921162,
+          "in_season": true,
+          "on_schedule": null,
+          "pool_id": 4512,
+          "receipt_hash": "7ca84a06460b55172328609282d52afb3573bcf770210e4154d7cb0eed44a349",
+          "ref_price": 3.398,
+          "seq": 65,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "DpqWSwL4egjjaCapiz2C8SN4x7T4pFvgsZ7fjCp44qXo",
+          "venue": "rhea"
+        },
+        {
+          "amount_in": "400000",
+          "block_time_ms": 1794961842734,
+          "event": "request",
+          "in_season": true,
+          "on_schedule": null,
+          "receipt_hash": "7ca84a06460b55172328609282d52afb3573bcf770210e4154d7cb0eed44a349",
+          "seq": 65,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "DpqWSwL4egjjaCapiz2C8SN4x7T4pFvgsZ7fjCp44qXo"
+        },
+        {
+          "amount_in": "500000",
+          "amount_out": "148135927620285704486617",
+          "block_time_ms": 1794957792863,
+          "cost_usd": 0.0015226,
+          "event": "trade",
+          "fill_price": 3.37527842,
+          "in_season": true,
+          "on_schedule": null,
+          "pool_id": 4512,
+          "receipt_hash": "fa77322a043bba3e54591b3485b04c79b8a496698789e2fd45d13200be059f24",
+          "ref_price": 3.365,
+          "seq": 64,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "7n6vBoacqPF3DkH4wMcDjavv7wC9a665AWLfYWKGPoFT",
+          "venue": "rhea"
+        },
+        {
+          "amount_in": "500000",
+          "block_time_ms": 1794957785129,
+          "event": "request",
+          "in_season": true,
+          "on_schedule": null,
+          "receipt_hash": "fa77322a043bba3e54591b3485b04c79b8a496698789e2fd45d13200be059f24",
+          "seq": 64,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "7n6vBoacqPF3DkH4wMcDjavv7wC9a665AWLfYWKGPoFT"
+        },
+        {
+          "amount_in": "400000000000000000000000",
+          "amount_out": "1316892",
+          "block_time_ms": 1794953771126,
+          "cost_usd": 0.003108,
+          "event": "trade",
+          "fill_price": 3.29223,
+          "in_season": true,
+          "on_schedule": null,
+          "pool_id": 4512,
+          "receipt_hash": "4e626d1d695da2a7a304a4897db8124eb668986d69c969dc25dab5e8ef8c7f95",
+          "ref_price": 3.3,
+          "seq": 63,
+          "side": "sell",
+          "token_in": "wrap.near",
+          "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "tx": "BsRfzp5L412BC5tYggUjeU4zawbN62FjdF77ebnTt3fy",
+          "venue": "rhea"
+        },
+        {
+          "amount_in": "400000000000000000000000",
+          "block_time_ms": 1794953762700,
+          "event": "request",
+          "in_season": true,
+          "on_schedule": null,
+          "receipt_hash": "4e626d1d695da2a7a304a4897db8124eb668986d69c969dc25dab5e8ef8c7f95",
+          "seq": 63,
+          "side": "sell",
+          "token_in": "wrap.near",
+          "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "tx": "BsRfzp5L412BC5tYggUjeU4zawbN62FjdF77ebnTt3fy"
+        },
+        {
+          "block_time_ms": 1794949643863,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "365d644f60c9240baa2b4b5414a9370a64e16551bfbd9795d16dbdceb18956de",
+          "seq": 62,
+          "tx": "3QT3eShUx9DSstwrNbKZdT3vHwk6cuerq3oxoUUyuBXv"
+        },
+        {
+          "block_time_ms": 1794945567674,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "3a8b4241efb9ee43950f99440489dc66c01913dabd4656a1b81e209022a5d660",
+          "seq": 61,
+          "tx": "64TMBgqVonkfVrLjdcKpGCDR8SkZwrdTqwk73WRpeTdV"
+        },
+        {
+          "block_time_ms": 1794941379368,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "9bb70c6aaf5a80b1ebd9e3f87f966e184e07dd055dab19f4e37f04c4399db519",
+          "seq": 60,
+          "tx": "HcadEJkZtLmYw6xfxv7PgkHm6xqJ88R6Y7qqdy2bhxLs"
+        },
+        {
+          "block_time_ms": 1794937152357,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "8c3c738e10eb693ed75996d2a9c2b81e33e12d5eb295e4a55317f3a294847663",
+          "seq": 59,
+          "tx": "9HEuV2bjE1NJyGbL9zF2KQa52HXf1abNnGxmSrRKAEYQ"
+        },
+        {
+          "block_time_ms": 1794932953291,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "71aadc33340c357698bd16518993e9dcf36a3a34975b46bd9fbe2a9e1344329e",
+          "seq": 58,
+          "tx": "GWZ4WdtszHUAuJhtVX6VBkSYz1wrriUMGoEzPpk3T4wj"
+        },
+        {
+          "block_time_ms": 1794928773783,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "5422c487dc203f9974dbef6467026c4f64265421659384cc4b1d9c8440863fbb",
+          "seq": 57,
+          "tx": "9NmWvxzRHsebgwfWLgcECAvedCqxZ2Mftg2CoRZdSFki"
+        },
+        {
+          "block_time_ms": 1794924587646,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "9d2563a8251a753b3fba71b6694239b194428eb3c4e028dce21f345fd6287d19",
+          "seq": 56,
+          "tx": "EKmQmxdE5eA8pn6Mu6oqy6rossBcnuN14T5nGtMejYA1"
+        },
+        {
+          "block_time_ms": 1794920388343,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "679444852c7ebafb2e7453635934d77c250e77f96465218742d7cc4310b533b0",
+          "seq": 55,
+          "tx": "45gdwhXduivhWRNYrRoai12v5sUTU6njrTjk2EfTBAKk"
+        },
+        {
+          "block_time_ms": 1794916295648,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "fc359f710c1c41d613701e615d73432988254dd46dbc26ececa1bcedf98988c7",
+          "seq": 54,
+          "tx": "CzmFQ9cdNCQRVPm84drf1SttwfWBTiM2gEAjS8veJRKk"
+        },
+        {
+          "block_time_ms": 1794912179811,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "e59b88dfa933eda64293412fe7e2d7c31e297feb30b372f4577968ab901b5372",
+          "seq": 53,
+          "tx": "EKc89swkDCXUj8EoeVFWjNFWtfSr9V1svHBKBfyL9um6"
+        },
+        {
+          "amount_in": "300000",
+          "amount_out": "93203121425605362471151",
+          "block_time_ms": 1794908168798,
+          "cost_usd": 0.00156361,
+          "event": "trade",
+          "fill_price": 3.21877632,
+          "in_season": true,
+          "on_schedule": null,
+          "pool_id": 4512,
+          "receipt_hash": "e676b91cf6e6fd19ecbb076a47a3fbe53c880f58c0967fcbe3ff63b35306c2bd",
+          "ref_price": 3.202,
+          "seq": 52,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "G15ejZ97mdjRbM1RafoqPZQdf1ZMpFK4qofaD6XQiQHU",
+          "venue": "rhea"
+        },
+        {
+          "amount_in": "300000",
+          "block_time_ms": 1794908161071,
+          "event": "request",
+          "in_season": true,
+          "on_schedule": null,
+          "receipt_hash": "e676b91cf6e6fd19ecbb076a47a3fbe53c880f58c0967fcbe3ff63b35306c2bd",
+          "seq": 52,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "G15ejZ97mdjRbM1RafoqPZQdf1ZMpFK4qofaD6XQiQHU"
+        },
+        {
+          "block_time_ms": 1794903993439,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "c88d573cf394e8d5d4b9bbd1619e96b84bc7e1f024d2e20ae91cdcd5bb8e364e",
+          "seq": 51,
+          "tx": "zufmBDMMX11uf1nmvCmuBG3NRSUfmq3XxhgKNEpSHw2"
+        },
+        {
+          "block_time_ms": 1794899819366,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "f0ad1dc663f6684188bcc229d87ef1680dc208682b6a5135ba79de442a2a7517",
+          "seq": 50,
+          "tx": "2WvaHqCNDSg9VLnNufoykJTTYQFBSqVACH6nAbDCxThr"
+        },
         {
           "block_time_ms": 1794895760316,
           "event": "skip",
@@ -813,13 +1587,13 @@
       ],
       "description": "Qwen3.6 run inside NEAR AI Cloud's enclave; each decision carries hardware attestation and the model's signature.",
       "end": {
-        "price": 3.239,
-        "value_usd": 8.1824022
+        "price": 3.034,
+        "value_usd": 7.95418301
       },
-      "events_sha256": "21abdb3dd25c7b5223e4344402af10b3a01793119342c69159fdce534a991075",
-      "funded_twr": 0.00496432,
+      "events_sha256": "23c8bedd8d78ab695be34e12553e5f858978abb1fb47028042a821dbabad34da",
+      "funded_twr": -0.05864102,
       "harness": "Sledgit runner",
-      "hold_twr": 0.00097844,
+      "hold_twr": -0.03077653,
       "id": "mn-qwen36-tee",
       "inactive": false,
       "kind": "arena",
@@ -827,24 +1601,23 @@
       "name": "Qwen3.6 35B (NEAR AI TEE)",
       "proof": {
         "claimed": "tee",
-        "detail": "season check: 49 of 49 decision(s) attested under the pinned NEAR AI policy (seqs 1-49, as of the cutoff)",
-        "tier": "tee",
-        "verified_model": "Qwen/Qwen3.6-35B-A3B-FP8"
+        "detail": "TEE season check failed: 87 of 111 decision(s) attested",
+        "tier": "self"
       },
       "provenance": {
         "reason": "direct child of arena.sledgit.near (factory keyless), runs its pinned code 7AsP45G2kP3B2vp2261SqjtGhfyRLbwkMkksV7eJYuiU, 0 access keys",
         "status": "genuine"
       },
       "range95": {
-        "hi": 0.03895308,
-        "lo": -0.02527218,
-        "n": 54
+        "hi": 0.05358541,
+        "lo": -0.03118544,
+        "n": 123
       },
       "ranked": false,
       "refusals_by_code": {},
       "season_seqs": [
         1,
-        49
+        111
       ],
       "series": [
         {
@@ -1232,25 +2005,481 @@
           "value": 3.25257291
         },
         {
-          "hold": 3.2261535,
-          "stake": 3.2266788,
-          "t": 1794895800000,
-          "value": 3.24656928
+          "hold": 3.22066175,
+          "stake": 3.22119217,
+          "t": 1794898800000,
+          "value": 3.2383143
+        },
+        {
+          "hold": 3.237137,
+          "stake": 3.23768121,
+          "t": 1794902400000,
+          "value": 3.26307925
+        },
+        {
+          "hold": 3.22465575,
+          "stake": 3.22520409,
+          "t": 1794906000000,
+          "value": 3.24431793
+        },
+        {
+          "hold": 3.221161,
+          "stake": 3.22171644,
+          "t": 1794909600000,
+          "value": 3.23944283
+        },
+        {
+          "hold": 3.205185,
+          "stake": 3.20574313,
+          "t": 1794913200000,
+          "value": 3.21424496
+        },
+        {
+          "hold": 3.2501175,
+          "stake": 3.25069978,
+          "t": 1794916800000,
+          "value": 3.28511398
+        },
+        {
+          "hold": 3.2461235,
+          "stake": 3.24671277,
+          "t": 1794920400000,
+          "value": 3.27881451
+        },
+        {
+          "hold": 3.23514,
+          "stake": 3.23573367,
+          "t": 1794924000000,
+          "value": 3.26149097
+        },
+        {
+          "hold": 3.22465575,
+          "stake": 3.2252539,
+          "t": 1794927600000,
+          "value": 3.24495487
+        },
+        {
+          "hold": 3.193203,
+          "stake": 3.19379764,
+          "t": 1794931200000,
+          "value": 3.19534655
+        },
+        {
+          "hold": 3.183218,
+          "stake": 3.18381698,
+          "t": 1794934800000,
+          "value": 3.17959788
+        },
+        {
+          "hold": 3.19270375,
+          "stake": 3.19331448,
+          "t": 1794938400000,
+          "value": 3.19455912
+        },
+        {
+          "hold": 3.187212,
+          "stake": 3.18782872,
+          "t": 1794942000000,
+          "value": 3.18589735
+        },
+        {
+          "hold": 3.2041865,
+          "stake": 3.20481805,
+          "t": 1794945600000,
+          "value": 3.21267009
+        },
+        {
+          "hold": 3.233143,
+          "stake": 3.23379436,
+          "t": 1794949200000,
+          "value": 3.25834124
+        },
+        {
+          "hold": 3.24961825,
+          "stake": 3.25028465,
+          "t": 1794952800000,
+          "value": 3.28432655
+        },
+        {
+          "hold": 3.2680905,
+          "stake": 3.26877293,
+          "t": 1794956400000,
+          "value": 3.30857809
+        },
+        {
+          "hold": 3.30453575,
+          "stake": 3.30524188,
+          "t": 1794960000000,
+          "value": 3.35569286
+        },
+        {
+          "hold": 3.30453575,
+          "stake": 3.3052506,
+          "t": 1794963600000,
+          "value": 3.35554291
+        },
+        {
+          "hold": 3.2840665,
+          "stake": 3.28478132,
+          "t": 1794967200000,
+          "value": 3.3254411
+        },
+        {
+          "hold": 3.28855975,
+          "stake": 3.28928512,
+          "t": 1794970800000,
+          "value": 3.33204881
+        },
+        {
+          "hold": 3.3000425,
+          "stake": 3.30078152,
+          "t": 1794974400000,
+          "value": 3.3484543
+        },
+        {
+          "hold": 3.29355225,
+          "stake": 3.29429709,
+          "t": 1794978000000,
+          "value": 3.34045725
+        },
+        {
+          "hold": 3.3080305,
+          "stake": 3.30879047,
+          "t": 1794981600000,
+          "value": 3.35829683
+        },
+        {
+          "hold": 3.29554925,
+          "stake": 3.29631231,
+          "t": 1794985200000,
+          "value": 3.34566991
+        },
+        {
+          "hold": 3.2920545,
+          "stake": 3.29282463,
+          "t": 1794988800000,
+          "value": 3.34219703
+        },
+        {
+          "hold": 3.27957325,
+          "stake": 3.28034625,
+          "t": 1794992400000,
+          "value": 3.32925769
+        },
+        {
+          "hold": 3.281071,
+          "stake": 3.28185328,
+          "t": 1794996000000,
+          "value": 3.33092346
+        },
+        {
+          "hold": 3.27657775,
+          "stake": 3.2773665,
+          "t": 1794999600000,
+          "value": 3.32592615
+        },
+        {
+          "hold": 3.28157025,
+          "stake": 3.28236996,
+          "t": 1795003200000,
+          "value": 3.33147872
+        },
+        {
+          "hold": 3.27258375,
+          "stake": 3.27338771,
+          "t": 1795006800000,
+          "value": 3.3214841
+        },
+        {
+          "hold": 3.27458075,
+          "stake": 3.27539423,
+          "t": 1795010400000,
+          "value": 3.32370513
+        },
+        {
+          "hold": 3.263098,
+          "stake": 3.26391438,
+          "t": 1795014000000,
+          "value": 3.31093423
+        },
+        {
+          "hold": 3.2121745,
+          "stake": 3.21297398,
+          "t": 1795017600000,
+          "value": 3.25429808
+        },
+        {
+          "hold": 3.21467075,
+          "stake": 3.21547973,
+          "t": 1795021200000,
+          "value": 3.25707437
+        },
+        {
+          "hold": 3.233143,
+          "stake": 3.23396963,
+          "t": 1795024800000,
+          "value": 3.27761885
+        },
+        {
+          "hold": 3.2401325,
+          "stake": 3.24097107,
+          "t": 1795028400000,
+          "value": 3.28539244
+        },
+        {
+          "hold": 3.225155,
+          "stake": 3.22599418,
+          "t": 1795032000000,
+          "value": 3.26873475
+        },
+        {
+          "hold": 3.243128,
+          "stake": 3.24398491,
+          "t": 1795035600000,
+          "value": 3.28872398
+        },
+        {
+          "hold": 3.23264375,
+          "stake": 3.2335035,
+          "t": 1795039200000,
+          "value": 3.27706359
+        },
+        {
+          "hold": 3.2221595,
+          "stake": 3.22302199,
+          "t": 1795042800000,
+          "value": 3.26540321
+        },
+        {
+          "hold": 3.2581055,
+          "stake": 3.25899569,
+          "t": 1795046400000,
+          "value": 3.30538167
+        },
+        {
+          "hold": 3.27058675,
+          "stake": 3.27149221,
+          "t": 1795050000000,
+          "value": 3.31926308
+        },
+        {
+          "hold": 3.25960325,
+          "stake": 3.26051121,
+          "t": 1795053600000,
+          "value": 3.30704744
+        },
+        {
+          "hold": 3.2720845,
+          "stake": 3.27300787,
+          "t": 1795057200000,
+          "value": 3.32092885
+        },
+        {
+          "hold": 3.29954325,
+          "stake": 3.30049056,
+          "t": 1795060800000,
+          "value": 3.35146795
+        },
+        {
+          "hold": 3.3180155,
+          "stake": 3.31898194,
+          "t": 1795064400000,
+          "value": 3.37201243
+        },
+        {
+          "hold": 3.2980455,
+          "stake": 3.29900933,
+          "t": 1795068000000,
+          "value": 3.34980218
+        },
+        {
+          "hold": 3.31651775,
+          "stake": 3.3175009,
+          "t": 1795071600000,
+          "value": 3.37034666
+        },
+        {
+          "hold": 3.32151025,
+          "stake": 3.32250507,
+          "t": 1795075200000,
+          "value": 3.37589923
+        },
+        {
+          "hold": 3.328999,
+          "stake": 3.33000701,
+          "t": 1795078800000,
+          "value": 3.38422807
+        },
+        {
+          "hold": 3.31052675,
+          "stake": 3.31153268,
+          "t": 1795082400000,
+          "value": 3.36368359
+        },
+        {
+          "hold": 3.30253875,
+          "stake": 3.30354866,
+          "t": 1795086000000,
+          "value": 3.35479948
+        },
+        {
+          "hold": 3.30952825,
+          "stake": 3.31055107,
+          "t": 1795089600000,
+          "value": 3.36257307
+        },
+        {
+          "hold": 3.30852975,
+          "stake": 3.3095607,
+          "t": 1795093200000,
+          "value": 3.36146256
+        },
+        {
+          "hold": 3.3060335,
+          "stake": 3.30707166,
+          "t": 1795096800000,
+          "value": 3.35868628
+        },
+        {
+          "hold": 3.285065,
+          "stake": 3.28609895,
+          "t": 1795100400000,
+          "value": 3.33536551
+        },
+        {
+          "hold": 3.24362725,
+          "stake": 3.24464404,
+          "t": 1795104000000,
+          "value": 3.28927923
+        },
+        {
+          "hold": 3.241131,
+          "stake": 3.24215462,
+          "t": 1795107600000,
+          "value": 3.28650295
+        },
+        {
+          "hold": 3.243128,
+          "stake": 3.24416127,
+          "t": 1795111200000,
+          "value": 3.28872398
+        },
+        {
+          "hold": 3.24462575,
+          "stake": 3.24566838,
+          "t": 1795114800000,
+          "value": 3.29038975
+        },
+        {
+          "hold": 3.2481205,
+          "stake": 3.24917378,
+          "t": 1795118400000,
+          "value": 3.29427654
+        },
+        {
+          "hold": 3.22765125,
+          "stake": 3.22869969,
+          "t": 1795122000000,
+          "value": 3.27151103
+        },
+        {
+          "hold": 3.193203,
+          "stake": 3.19423727,
+          "t": 1795125600000,
+          "value": 3.23319834
+        },
+        {
+          "hold": 3.20768125,
+          "stake": 3.20873319,
+          "t": 1795129200000,
+          "value": 3.24930078
+        },
+        {
+          "hold": 3.211176,
+          "stake": 3.21223848,
+          "t": 1795132800000,
+          "value": 3.25318757
+        },
+        {
+          "hold": 3.207182,
+          "stake": 3.20825004,
+          "t": 1795136400000,
+          "value": 3.24874552
+        },
+        {
+          "hold": 3.14876975,
+          "stake": 3.14980667,
+          "t": 1795140000000,
+          "value": 3.18378053
+        },
+        {
+          "hold": 3.14477575,
+          "stake": 3.14581787,
+          "t": 1795143600000,
+          "value": 3.17933848
+        },
+        {
+          "hold": 3.13179525,
+          "stake": 3.13283639,
+          "t": 1795147200000,
+          "value": 3.16490181
+        },
+        {
+          "hold": 3.11382225,
+          "stake": 3.11485884,
+          "t": 1795150800000,
+          "value": 3.14491258
+        },
+        {
+          "hold": 3.133293,
+          "stake": 3.13435083,
+          "t": 1795154400000,
+          "value": 3.16656758
+        },
+        {
+          "hold": 3.13529,
+          "stake": 3.13635707,
+          "t": 1795158000000,
+          "value": 3.1687886
+        },
+        {
+          "hold": 3.1283005,
+          "stake": 3.12937049,
+          "t": 1795161600000,
+          "value": 3.16101502
+        },
+        {
+          "hold": 3.111326,
+          "stake": 3.11239176,
+          "t": 1795165200000,
+          "value": 3.1421363
+        },
+        {
+          "hold": 3.10683275,
+          "stake": 3.10790302,
+          "t": 1795168800000,
+          "value": 3.13713899
+        },
+        {
+          "hold": 3.12380725,
+          "stake": 3.12489445,
+          "t": 1795171020000,
+          "value": 3.15601771
         }
       ],
-      "stake_twr": 0.00114142,
+      "stake_twr": -0.0304392,
       "start": {
         "price": 3.223,
         "time_ms": 1794668168378,
         "value_usd": 3.223
       },
       "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
-      "twr": 0.00731284,
-      "unranked_reason": "2.6 days at the minimum value; ranking starts at day 7",
-      "vs_funded": 0.00233692,
-      "vs_hold": 0.00632821,
-      "vs_hold_after_gas": -0.0158946,
-      "vs_stake": 0.00616438
+      "twr": -0.02078259,
+      "unranked_reason": "5.8 days at the minimum value; ranking starts at day 7",
+      "vs_funded": 0.04021678,
+      "vs_hold": 0.01031128,
+      "vs_hold_after_gas": -0.0286363,
+      "vs_stake": 0.00995978
     },
     {
       "account": "local-qwen3-8b.arena.sledgit.near",
@@ -1259,24 +2488,510 @@
         "benchmark_cost_rate": 0.003,
         "benchmark_cost_rate_source": "fixed published rate: the Rhea wNEAR/USDC pool fee, 0.30% (pool 4512)",
         "benchmark_rebalance_usd": 0.0048375,
-        "fill_vs_reference_pct": 0.00314291,
-        "fill_vs_reference_usd": 0.10199384,
-        "gas_near": 0.11583655,
-        "gas_usd": 0.36426106,
+        "fill_vs_reference_pct": 0.00297366,
+        "fill_vs_reference_usd": 0.11665562,
+        "gas_near": 0.13747095,
+        "gas_usd": 0.43531881,
         "neutralised_usd": 0,
-        "traded_ref_usd": 32.452
+        "traded_ref_usd": 39.229677
       },
       "counts": {
-        "decisions": 50,
+        "decisions": 92,
         "failed": 0,
         "missed_slots": 0,
         "off_schedule": 0,
         "refusals": 0,
-        "skips": 25,
-        "trades": 25
+        "skips": 64,
+        "trades": 28
       },
-      "days": 2.63545874,
+      "days": 5.82087541,
       "decisions": [
+        {
+          "block_time_ms": 1795073409390,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "37dfc1832bb12df2499308c975ec4c71f591d5ac4282750c1b1c3735f3a0f176",
+          "seq": 92,
+          "tx": "GGoSdHa9E8UMsUYV9nDEViacebkjXNaPm2tA8hFi6vb1"
+        },
+        {
+          "block_time_ms": 1795067334404,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "7ecb80788031389e68d05b6bb92a7f74ae671b38bdbee9444517c9dd8d9f8784",
+          "seq": 91,
+          "tx": "7ezWD3xornWaER2U1ELm5N1cTbeP6o8X76TrReyaeybg"
+        },
+        {
+          "block_time_ms": 1795062473707,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "2a3cf6b0aee2065c73fdc43cb22fac64af46b5dda92ae92d65b51277531b25fb",
+          "seq": 90,
+          "tx": "CJMjsrX4SvEkXAKdrB4s7UoFr6SeK865XVmd2ZwhZB7r"
+        },
+        {
+          "block_time_ms": 1795057826954,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "4a68fbef3ccf6fe9708d188bb3bf2056e97002da220f6c15d7bc5ff6e78fe03a",
+          "seq": 89,
+          "tx": "8Hsy2ZsAogXVwDYRjWxQ6fjyEHvKc74JHeCiStBnv9Vv"
+        },
+        {
+          "block_time_ms": 1795053673989,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "5c45e7a7ebd88a5f77e833338b0aa5272fcbb10745c50fb515d40646f6a1240d",
+          "seq": 88,
+          "tx": "Fo6bDYfjN1CqZYgcewMjEBVJXVRffBH1AmiEo3LPg5gK"
+        },
+        {
+          "block_time_ms": 1795049549881,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "a1a3ca587000844f9bc236ed7fd454f6588d8bc37c638db1330c83e73cd76b75",
+          "seq": 87,
+          "tx": "2pFEQpvWJyWWdMHfZNcJnfWp9C5uonec88wEnAp8pY4y"
+        },
+        {
+          "block_time_ms": 1795045420876,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "85c2bafa9a407ab9e849be0762de0cd0f63aab7131e5b8ab522bb011cd5d085f",
+          "seq": 86,
+          "tx": "CWi3CNDTQQQ8f4iqCSAip5sAD5s7NJDf9Nyse9ZCLf2"
+        },
+        {
+          "block_time_ms": 1795041325441,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "fd1327a03fc1b75387760d1c8adb58293fe3e0b51d9bb216d67a89f7312c0a15",
+          "seq": 85,
+          "tx": "AubQo2KhbLP5iM9LvJev3j78pUQGJzaAKbeGtNdsBkse"
+        },
+        {
+          "block_time_ms": 1795037204169,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "b5ca1db003d35ea8780c6061454fd75b36ee79404866d8e4c16214593811b446",
+          "seq": 84,
+          "tx": "8sjTJa2ruTncbwBrm7BrDcffDhUVLJUFgjicczfRQy9B"
+        },
+        {
+          "block_time_ms": 1795033055786,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "b464a7863409d1bbdc0c3a5e3311455b5cee4d18dca9bed488b48485f7cf1ca9",
+          "seq": 83,
+          "tx": "A6xDBjpBMuZ8JwPjnk6VvrdfBRtDp7m4WBnHDNwSZMWg"
+        },
+        {
+          "block_time_ms": 1795028962058,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "bf58a6960d8698a1d12922795290177ce10969120be0f961ac321e5531453330",
+          "seq": 82,
+          "tx": "FuoMMZknkDTk5XGcGAFy8DyvppsNDRnc8rWpZBw949tH"
+        },
+        {
+          "block_time_ms": 1795024861133,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "4fd2827eb37f9bc797b590532e630b300a11e021164d924da7c2a7bc370f8931",
+          "seq": 81,
+          "tx": "B3pdGouEceUvVnWUF6xhTZxEM8vKoqTWbG48DCJpbVGe"
+        },
+        {
+          "block_time_ms": 1795020493255,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "08e0c7677489958ad9d581f72bbef649239a3a62402046591d4276741a823a7d",
+          "seq": 80,
+          "tx": "H4BsMrqPTS8fxTL1QvBL9iWbNQfqbPJiPg2czZXb2GYX"
+        },
+        {
+          "block_time_ms": 1795016398518,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "ae7bfc3c70fe5e6197560c2f628baf16d467f2679fc53fd3326ef1d135992088",
+          "seq": 79,
+          "tx": "G3kJTw4o6VCx95WZvoRLBBBdaAGLK1RzFyXNaYotAKLw"
+        },
+        {
+          "block_time_ms": 1795012095430,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "de66e2b917835edced63f8440700d6f8fdfb87554b7be1ba50b1761169718a4e",
+          "seq": 78,
+          "tx": "ApjgWDBcAACAy3yVc8FYD3xAPKLeD7RVrest4h1odqok"
+        },
+        {
+          "block_time_ms": 1795007791756,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "100f5652eee5e96695e544d85138fc5a94202a4568ef5a4a282555c90e87ea47",
+          "seq": 77,
+          "tx": "8jEDyuZ3cpxRrjtQ9sSkqdW9rpvXPPf6yL21hLoD25ZC"
+        },
+        {
+          "block_time_ms": 1795003480409,
+          "event": "skip",
+          "in_season": true,
+          "note": "model_error",
+          "on_schedule": null,
+          "receipt_hash": "28bdf5a379a59f27a76a69b54c07cbbcb337f6763e2e31a3cfde0cc894f9829e",
+          "seq": 76,
+          "tx": "WZ9PJ7G6gFh2Kwswy4Ewdqac7TohhYs6vFidwdHq1sM"
+        },
+        {
+          "block_time_ms": 1794999031199,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "b884b77c5572d487743d4269f6559a6ec37faf01032e3413cb4fc19a0a73f14d",
+          "seq": 75,
+          "tx": "FkcaXUJNh2dgh8aoaGZqFmSM5T1b7ntS153RbKL86xCb"
+        },
+        {
+          "amount_in": "1200000000000000000000000",
+          "amount_out": "4014670",
+          "block_time_ms": 1794994930216,
+          "cost_usd": 0.01613,
+          "event": "trade",
+          "fill_price": 3.34555833,
+          "in_season": true,
+          "on_schedule": null,
+          "pool_id": 4512,
+          "receipt_hash": "6e8d9acd7843f008ce981f383fb403ea8f9ec0498ee010e99eb0b4a6f8c727ab",
+          "ref_price": 3.359,
+          "seq": 74,
+          "side": "sell",
+          "token_in": "wrap.near",
+          "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "tx": "FdxncH1yePwAyqiWiNG2Di5dhZQAZ1U5ArLjahQB6NUN",
+          "venue": "rhea"
+        },
+        {
+          "amount_in": "1200000000000000000000000",
+          "block_time_ms": 1794994921733,
+          "event": "request",
+          "in_season": true,
+          "on_schedule": null,
+          "receipt_hash": "6e8d9acd7843f008ce981f383fb403ea8f9ec0498ee010e99eb0b4a6f8c727ab",
+          "seq": 74,
+          "side": "sell",
+          "token_in": "wrap.near",
+          "token_out": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "tx": "FdxncH1yePwAyqiWiNG2Di5dhZQAZ1U5ArLjahQB6NUN"
+        },
+        {
+          "block_time_ms": 1794990676615,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "ca6e70283248e7e46725e8c49884e68af7b9339344d2ae8b152b97281f9606bd",
+          "seq": 73,
+          "tx": "uQpCHnTkT2KqhvwQmseG496EZvZ39GkhucS8hd8cX38"
+        },
+        {
+          "block_time_ms": 1794986621760,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "7b71e81faf2897e1d6c4ad58098ff33b99f500a683a011c26d0e478394a7fab6",
+          "seq": 72,
+          "tx": "2QYcd7T1gi2h3Vb6jgDSWkmuFmhgXdRt4VtcanH14nRu"
+        },
+        {
+          "block_time_ms": 1794982513496,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "05592c7b123380df01441829e1bdc505ca59aba0edcd2b3ca0c89b1914b89f09",
+          "seq": 71,
+          "tx": "BY31sPA76YEtVHsRVXStpCQ782gAxRXK3YfB7f62aa6c"
+        },
+        {
+          "block_time_ms": 1794978425017,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "0cbd890fe394fb5cd28554730470c70172168f7d46efa5c68a7b13cf5a73adfd",
+          "seq": 70,
+          "tx": "FRCLd2dKdB2KMBwRq9TVoa6xreY6knnBGCZqV64CRWjV"
+        },
+        {
+          "block_time_ms": 1794974312406,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "be2dff022fa87b5b2e7fbe627158519d49b09c544a5128f99a49d4dec008ba50",
+          "seq": 69,
+          "tx": "7cTUKx2AWVAaZJitg78vVgwT1uvcY3CanNn9i3RhjjnA"
+        },
+        {
+          "block_time_ms": 1794970191784,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "9812a0e59b713d5803232350c13e090057e928f7c2ed21581f97d3f697095a2f",
+          "seq": 68,
+          "tx": "HdVdw9Fim4eFYQHDATpxxhLkQu2Gi45jSrSVxBJaUW5B"
+        },
+        {
+          "block_time_ms": 1794966059868,
+          "event": "skip",
+          "in_season": true,
+          "note": "model_error",
+          "on_schedule": null,
+          "receipt_hash": "ef75880f3c61a9d92e379263046a791fd13b7c1d58610432c4e921d7531aaa79",
+          "seq": 67,
+          "tx": "G6hhLVWiEiCkEXbawQ4W1cqJMgd1DGgGW42myj7Qe2xm"
+        },
+        {
+          "block_time_ms": 1794961826687,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "885dc11662d9f30a648268f0c5d2bb21af5eb7751f44f649c3f2a79fe00a7909",
+          "seq": 66,
+          "tx": "7w5LkosALQC7L5fivaTeu2rqTYPLrd3WRs6AUqERkLCW"
+        },
+        {
+          "block_time_ms": 1794957769277,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "587f8bf979666e8e19a2dc5114b9a65b2d44b05c3e6b337fc8566059ecf7fffb",
+          "seq": 65,
+          "tx": "5vQQJs3AQJipcV6XEZDXDm4VXEg3kTyVuCKeYg2Cu2rg"
+        },
+        {
+          "block_time_ms": 1794953747412,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "1214c678c9babda5a10d4f0948a4637fb6a56c4147c3d76510f51350009a9537",
+          "seq": 64,
+          "tx": "Be1Fh6zDUqdnitXqSCq2c3JfG7exAyFEvnWn2DbWxDq9"
+        },
+        {
+          "block_time_ms": 1794949630810,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "12b0ec7914318316157289c11cbd5ef923d69581bacc3a242dbae61efde168e0",
+          "seq": 63,
+          "tx": "Gm5i8igDHBWV1TyxvJUJ6KvRKzeAQRukKjf7ViHS58Ns"
+        },
+        {
+          "block_time_ms": 1794945555740,
+          "event": "skip",
+          "in_season": true,
+          "note": "model_error",
+          "on_schedule": null,
+          "receipt_hash": "681e76eb57b367276e802697216e72ab5bf8e33dc345bfa75cd5e5612a6cd002",
+          "seq": 62,
+          "tx": "GMhFjvHwkenxNEzhPm7WsWk42PPTQd1xiNJ5azMCh4CY"
+        },
+        {
+          "block_time_ms": 1794941361215,
+          "event": "skip",
+          "in_season": true,
+          "note": "model_error",
+          "on_schedule": null,
+          "receipt_hash": "e20598eef0e86a22f0ac2227cd7fd60861229109919acf6c4b0d876e24ae0d77",
+          "seq": 61,
+          "tx": "9ydtnRP82vahC7qAF5pPpkLbjnrjBmDkWiWkxLQWT7dJ"
+        },
+        {
+          "block_time_ms": 1794937139402,
+          "event": "skip",
+          "in_season": true,
+          "note": "refused:insufficient_balance buy 0.985",
+          "on_schedule": null,
+          "receipt_hash": "e30b008af7e064a5ba684af0f6609e5fd9ac519546731e4ee2ff0f9c165cbe02",
+          "seq": 60,
+          "tx": "At2rLZwMzUM4Gzi2p9CGs2bSzoTbX4uRjaUigwydSriw"
+        },
+        {
+          "block_time_ms": 1794932940435,
+          "event": "skip",
+          "in_season": true,
+          "note": "refused:insufficient_balance buy 2.74",
+          "on_schedule": null,
+          "receipt_hash": "642274c22d78b7878de5dc54535b89bca842d3878b6fd957c6a993cfabae993f",
+          "seq": 59,
+          "tx": "9vtUTbCivCq2APmyRkDBoE5fCyvzY7SJBwW6X3PTNMAD"
+        },
+        {
+          "amount_in": "2060177",
+          "amount_out": "641559380048718657578730",
+          "block_time_ms": 1794928759686,
+          "cost_usd": -0.00371953,
+          "event": "trade",
+          "fill_price": 3.21120237,
+          "in_season": true,
+          "on_schedule": null,
+          "pool_id": 4512,
+          "receipt_hash": "efab1b86ee67d7b93582a143667628d25bed1e89372a90730e07854825d920e5",
+          "ref_price": 3.217,
+          "seq": 58,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "5ekb58sgEUStKrPdgDT6bk6hoP4ziyuQn8katF5cLFFw",
+          "venue": "rhea"
+        },
+        {
+          "amount_in": "2060177",
+          "block_time_ms": 1794928751427,
+          "event": "request",
+          "in_season": true,
+          "on_schedule": null,
+          "receipt_hash": "efab1b86ee67d7b93582a143667628d25bed1e89372a90730e07854825d920e5",
+          "seq": 58,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "5ekb58sgEUStKrPdgDT6bk6hoP4ziyuQn8katF5cLFFw"
+        },
+        {
+          "amount_in": "686700",
+          "amount_out": "210664417848035403755968",
+          "block_time_ms": 1794924574741,
+          "cost_usd": 0.00225131,
+          "event": "trade",
+          "fill_price": 3.2596867,
+          "in_season": true,
+          "on_schedule": null,
+          "pool_id": 4512,
+          "receipt_hash": "50a6b3809b76f0d503444aeff3b48c53424a7a07518e958ef88274551b2bc133",
+          "ref_price": 3.249,
+          "seq": 57,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "4CwAuBqbfkToLK4pey31VvSG1qohrs7Ca6R3PBKuCLvg",
+          "venue": "rhea"
+        },
+        {
+          "amount_in": "686700",
+          "block_time_ms": 1794924566939,
+          "event": "request",
+          "in_season": true,
+          "on_schedule": null,
+          "receipt_hash": "50a6b3809b76f0d503444aeff3b48c53424a7a07518e958ef88274551b2bc133",
+          "seq": 57,
+          "side": "buy",
+          "token_in": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "token_out": "wrap.near",
+          "tx": "4CwAuBqbfkToLK4pey31VvSG1qohrs7Ca6R3PBKuCLvg"
+        },
+        {
+          "block_time_ms": 1794920360100,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "3d787a31755ae7e16750682d1a196980917bf8d4a1c6c621e77c5cb527aa4915",
+          "seq": 56,
+          "tx": "FqYRvztAawHGhDHTfz1T4x1sHy6rL8E4QSqsWPNvrVC5"
+        },
+        {
+          "block_time_ms": 1794916276583,
+          "event": "skip",
+          "in_season": true,
+          "note": "refused:daily_cap sell 0.6867",
+          "on_schedule": null,
+          "receipt_hash": "a35c01f7feec8be983c95bc984d3d3970f2b723dc73c3e320d27e8826a7f476c",
+          "seq": 55,
+          "tx": "EwG52dnnKNdA7PstRJNkKeYrUADi7Up6LHXXdugSfHpD"
+        },
+        {
+          "block_time_ms": 1794912167697,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "bf06d1191321465a8f9fd3782e052fc51b7c4b095352ed7cf5f94361e400cde3",
+          "seq": 54,
+          "tx": "6TdyDLcEsfWMPJm8dhS8L2yFRF4DQtqeqw9fmAMrPPP6"
+        },
+        {
+          "block_time_ms": 1794908145126,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "f26b5d7c615e6137d7a72b89d0847a596212328434d09f5ffa367cbe2f3992c0",
+          "seq": 53,
+          "tx": "3ULxc1Koz5ZxyGSXErgpi7DewiNvvezHkhR7BdmqTi4y"
+        },
+        {
+          "block_time_ms": 1794903977530,
+          "event": "skip",
+          "in_season": true,
+          "note": "refused:daily_cap sell 0.6867",
+          "on_schedule": null,
+          "receipt_hash": "8588ad118113a334838d9a0a0fccf2681d9ede4fa3ead9da461773d579747a51",
+          "seq": 52,
+          "tx": "AiSNiD959bmsNXLzEZ2eP1gywfpyi5LiSN7eztf85FF6"
+        },
+        {
+          "block_time_ms": 1794899805872,
+          "event": "skip",
+          "in_season": true,
+          "note": "hold",
+          "on_schedule": null,
+          "receipt_hash": "d6a5db7d84412b9f5063a6f914dcff7936d25c11d79ecb5d19e19c4e05859102",
+          "seq": 51,
+          "tx": "HniGFWb3F6H9S7mZHZpqfMFroXuDujCchki4TcWjUzKk"
+        },
         {
           "block_time_ms": 1794895745625,
           "event": "skip",
@@ -2330,13 +4045,13 @@
       ],
       "description": "A local model on a laptop via Ollama. Harness and model are the operator's word; the vault still enforces every limit.",
       "end": {
-        "price": 3.239,
-        "value_usd": 8.17505481
+        "price": 3.034,
+        "value_usd": 8.04413926
       },
-      "events_sha256": "69b6deae7153f1376c468077252aea6ffb31e8ad9c6db6b94e05f13e9dca21c0",
-      "funded_twr": 0.00434109,
+      "events_sha256": "dd187e3bf6a61fa798c7b576237c164f1b26d88648363abaa8a60445c191d332",
+      "funded_twr": -0.05922481,
       "harness": "Sledgit runner + Ollama",
-      "hold_twr": 0.00066729,
+      "hold_twr": -0.03106798,
       "id": "mn-local-qwen3-8b",
       "inactive": false,
       "kind": "arena",
@@ -2352,15 +4067,15 @@
         "status": "genuine"
       },
       "range95": {
-        "hi": 0.02859452,
-        "lo": -0.04121295,
-        "n": 39
+        "hi": 0.06446355,
+        "lo": -0.04323302,
+        "n": 112
       },
       "ranked": false,
       "refusals_by_code": {},
       "season_seqs": [
         1,
-        50
+        92
       ],
       "series": [
         {
@@ -2748,25 +4463,481 @@
           "value": 3.21006822
         },
         {
-          "hold": 3.227152,
-          "stake": 3.22767747,
-          "t": 1794895800000,
-          "value": 3.20481234
+          "hold": 3.22166025,
+          "stake": 3.22219084,
+          "t": 1794898800000,
+          "value": 3.19758552
+        },
+        {
+          "hold": 3.2381355,
+          "stake": 3.23867988,
+          "t": 1794902400000,
+          "value": 3.219266
+        },
+        {
+          "hold": 3.22565425,
+          "stake": 3.22620275,
+          "t": 1794906000000,
+          "value": 3.20284139
+        },
+        {
+          "hold": 3.2221595,
+          "stake": 3.2227151,
+          "t": 1794909600000,
+          "value": 3.1982425
+        },
+        {
+          "hold": 3.2061835,
+          "stake": 3.2067418,
+          "t": 1794913200000,
+          "value": 3.177219
+        },
+        {
+          "hold": 3.251116,
+          "stake": 3.25169845,
+          "t": 1794916800000,
+          "value": 3.2363476
+        },
+        {
+          "hold": 3.247122,
+          "stake": 3.24771144,
+          "t": 1794920400000,
+          "value": 3.23109172
+        },
+        {
+          "hold": 3.2361385,
+          "stake": 3.23673234,
+          "t": 1794924000000,
+          "value": 3.21663806
+        },
+        {
+          "hold": 3.22565425,
+          "stake": 3.22625256,
+          "t": 1794927600000,
+          "value": 3.20088522
+        },
+        {
+          "hold": 3.1942015,
+          "stake": 3.19479631,
+          "t": 1794931200000,
+          "value": 3.14468419
+        },
+        {
+          "hold": 3.1842165,
+          "stake": 3.18481565,
+          "t": 1794934800000,
+          "value": 3.12486267
+        },
+        {
+          "hold": 3.19370225,
+          "stake": 3.19431314,
+          "t": 1794938400000,
+          "value": 3.14369311
+        },
+        {
+          "hold": 3.1882105,
+          "stake": 3.18882739,
+          "t": 1794942000000,
+          "value": 3.13279128
+        },
+        {
+          "hold": 3.205185,
+          "stake": 3.20581672,
+          "t": 1794945600000,
+          "value": 3.16648786
+        },
+        {
+          "hold": 3.2341415,
+          "stake": 3.23479303,
+          "t": 1794949200000,
+          "value": 3.22397027
+        },
+        {
+          "hold": 3.25061675,
+          "stake": 3.25128332,
+          "t": 1794952800000,
+          "value": 3.25667578
+        },
+        {
+          "hold": 3.269089,
+          "stake": 3.2697716,
+          "t": 1794956400000,
+          "value": 3.29334559
+        },
+        {
+          "hold": 3.30553425,
+          "stake": 3.30624056,
+          "t": 1794960000000,
+          "value": 3.36569414
+        },
+        {
+          "hold": 3.30553425,
+          "stake": 3.30624927,
+          "t": 1794963600000,
+          "value": 3.36569414
+        },
+        {
+          "hold": 3.285065,
+          "stake": 3.28578,
+          "t": 1794967200000,
+          "value": 3.32506002
+        },
+        {
+          "hold": 3.28955825,
+          "stake": 3.2902838,
+          "t": 1794970800000,
+          "value": 3.33397971
+        },
+        {
+          "hold": 3.301041,
+          "stake": 3.3017802,
+          "t": 1794974400000,
+          "value": 3.35677445
+        },
+        {
+          "hold": 3.29455075,
+          "stake": 3.29529576,
+          "t": 1794978000000,
+          "value": 3.34389047
+        },
+        {
+          "hold": 3.309029,
+          "stake": 3.30978915,
+          "t": 1794981600000,
+          "value": 3.37263167
+        },
+        {
+          "hold": 3.29654775,
+          "stake": 3.29731098,
+          "t": 1794985200000,
+          "value": 3.34785477
+        },
+        {
+          "hold": 3.293053,
+          "stake": 3.2938233,
+          "t": 1794988800000,
+          "value": 3.34091724
+        },
+        {
+          "hold": 3.28057175,
+          "stake": 3.28134492,
+          "t": 1794992400000,
+          "value": 3.31614034
+        },
+        {
+          "hold": 3.2820695,
+          "stake": 3.28285196,
+          "t": 1794996000000,
+          "value": 3.31749451
+        },
+        {
+          "hold": 3.27757625,
+          "stake": 3.27836517,
+          "t": 1794999600000,
+          "value": 3.31280868
+        },
+        {
+          "hold": 3.28256875,
+          "stake": 3.28336863,
+          "t": 1795003200000,
+          "value": 3.31801516
+        },
+        {
+          "hold": 3.27358225,
+          "stake": 3.27438638,
+          "t": 1795006800000,
+          "value": 3.30864349
+        },
+        {
+          "hold": 3.27557925,
+          "stake": 3.27639291,
+          "t": 1795010400000,
+          "value": 3.31072609
+        },
+        {
+          "hold": 3.2640965,
+          "stake": 3.26491305,
+          "t": 1795014000000,
+          "value": 3.29875118
+        },
+        {
+          "hold": 3.213173,
+          "stake": 3.21397265,
+          "t": 1795017600000,
+          "value": 3.24564509
+        },
+        {
+          "hold": 3.21566925,
+          "stake": 3.21647839,
+          "t": 1795021200000,
+          "value": 3.24824833
+        },
+        {
+          "hold": 3.2341415,
+          "stake": 3.2349683,
+          "t": 1795024800000,
+          "value": 3.2675123
+        },
+        {
+          "hold": 3.241131,
+          "stake": 3.24196974,
+          "t": 1795028400000,
+          "value": 3.27480137
+        },
+        {
+          "hold": 3.2261535,
+          "stake": 3.22699284,
+          "t": 1795032000000,
+          "value": 3.25918193
+        },
+        {
+          "hold": 3.2441265,
+          "stake": 3.24498357,
+          "t": 1795035600000,
+          "value": 3.27792526
+        },
+        {
+          "hold": 3.23364225,
+          "stake": 3.23450217,
+          "t": 1795039200000,
+          "value": 3.26699165
+        },
+        {
+          "hold": 3.223158,
+          "stake": 3.22402066,
+          "t": 1795042800000,
+          "value": 3.25605805
+        },
+        {
+          "hold": 3.259104,
+          "stake": 3.25999436,
+          "t": 1795046400000,
+          "value": 3.2935447
+        },
+        {
+          "hold": 3.27158525,
+          "stake": 3.27249088,
+          "t": 1795050000000,
+          "value": 3.3065609
+        },
+        {
+          "hold": 3.26060175,
+          "stake": 3.26150988,
+          "t": 1795053600000,
+          "value": 3.29510665
+        },
+        {
+          "hold": 3.273083,
+          "stake": 3.27400654,
+          "t": 1795057200000,
+          "value": 3.30812285
+        },
+        {
+          "hold": 3.30054175,
+          "stake": 3.30148923,
+          "t": 1795060800000,
+          "value": 3.33675849
+        },
+        {
+          "hold": 3.319014,
+          "stake": 3.31998062,
+          "t": 1795064400000,
+          "value": 3.35602246
+        },
+        {
+          "hold": 3.299044,
+          "stake": 3.300008,
+          "t": 1795068000000,
+          "value": 3.33519654
+        },
+        {
+          "hold": 3.31751625,
+          "stake": 3.31849957,
+          "t": 1795071600000,
+          "value": 3.35446052
+        },
+        {
+          "hold": 3.32250875,
+          "stake": 3.32350375,
+          "t": 1795075200000,
+          "value": 3.359667
+        },
+        {
+          "hold": 3.3299975,
+          "stake": 3.33100569,
+          "t": 1795078800000,
+          "value": 3.36747672
+        },
+        {
+          "hold": 3.31152525,
+          "stake": 3.31253136,
+          "t": 1795082400000,
+          "value": 3.34821274
+        },
+        {
+          "hold": 3.30353725,
+          "stake": 3.30454734,
+          "t": 1795086000000,
+          "value": 3.33988237
+        },
+        {
+          "hold": 3.31052675,
+          "stake": 3.31154975,
+          "t": 1795089600000,
+          "value": 3.34717145
+        },
+        {
+          "hold": 3.30952825,
+          "stake": 3.31055938,
+          "t": 1795093200000,
+          "value": 3.34613015
+        },
+        {
+          "hold": 3.307032,
+          "stake": 3.30807034,
+          "t": 1795096800000,
+          "value": 3.34352691
+        },
+        {
+          "hold": 3.2860635,
+          "stake": 3.28709762,
+          "t": 1795100400000,
+          "value": 3.32165969
+        },
+        {
+          "hold": 3.24462575,
+          "stake": 3.2456427,
+          "t": 1795104000000,
+          "value": 3.27844591
+        },
+        {
+          "hold": 3.2421295,
+          "stake": 3.24315329,
+          "t": 1795107600000,
+          "value": 3.27584267
+        },
+        {
+          "hold": 3.2441265,
+          "stake": 3.24515994,
+          "t": 1795111200000,
+          "value": 3.27792526
+        },
+        {
+          "hold": 3.24562425,
+          "stake": 3.24666705,
+          "t": 1795114800000,
+          "value": 3.27948721
+        },
+        {
+          "hold": 3.249119,
+          "stake": 3.25017245,
+          "t": 1795118400000,
+          "value": 3.28313174
+        },
+        {
+          "hold": 3.22864975,
+          "stake": 3.22969836,
+          "t": 1795122000000,
+          "value": 3.26178517
+        },
+        {
+          "hold": 3.1942015,
+          "stake": 3.19523594,
+          "t": 1795125600000,
+          "value": 3.22586046
+        },
+        {
+          "hold": 3.20867975,
+          "stake": 3.20973186,
+          "t": 1795129200000,
+          "value": 3.24095925
+        },
+        {
+          "hold": 3.2121745,
+          "stake": 3.21323714,
+          "t": 1795132800000,
+          "value": 3.24460379
+        },
+        {
+          "hold": 3.2081805,
+          "stake": 3.20924871,
+          "t": 1795136400000,
+          "value": 3.24043861
+        },
+        {
+          "hold": 3.14976825,
+          "stake": 3.15080533,
+          "t": 1795140000000,
+          "value": 3.17952279
+        },
+        {
+          "hold": 3.14577425,
+          "stake": 3.14681653,
+          "t": 1795143600000,
+          "value": 3.17535761
+        },
+        {
+          "hold": 3.13279375,
+          "stake": 3.13383505,
+          "t": 1795147200000,
+          "value": 3.16182076
+        },
+        {
+          "hold": 3.11482075,
+          "stake": 3.11585749,
+          "t": 1795150800000,
+          "value": 3.14307743
+        },
+        {
+          "hold": 3.1342915,
+          "stake": 3.13534949,
+          "t": 1795154400000,
+          "value": 3.1633827
+        },
+        {
+          "hold": 3.1362885,
+          "stake": 3.13735572,
+          "t": 1795158000000,
+          "value": 3.16546529
+        },
+        {
+          "hold": 3.129299,
+          "stake": 3.13036914,
+          "t": 1795161600000,
+          "value": 3.15817622
+        },
+        {
+          "hold": 3.1123245,
+          "stake": 3.11339041,
+          "t": 1795165200000,
+          "value": 3.14047419
+        },
+        {
+          "hold": 3.10783125,
+          "stake": 3.10890167,
+          "t": 1795168800000,
+          "value": 3.13578836
+        },
+        {
+          "hold": 3.12480575,
+          "stake": 3.1258931,
+          "t": 1795171020000,
+          "value": 3.15349039
         }
       ],
-      "stake_twr": 0.00083022,
+      "stake_twr": -0.03073082,
       "start": {
         "price": 3.225,
         "time_ms": 1794668096365,
         "value_usd": 3.225
       },
       "strategy_sha256": "8ad6f472f89b29c8aa433bc1943575f737e2a0540df020cafec30af2b384d852",
-      "twr": -0.00625974,
-      "unranked_reason": "2.6 days at the minimum value; ranking starts at day 7",
-      "vs_funded": -0.010555,
-      "vs_hold": -0.00692241,
-      "vs_hold_after_gas": -0.05048804,
-      "vs_stake": -0.00708408
+      "twr": -0.02217352,
+      "unranked_reason": "5.8 days at the minimum value; ranking starts at day 7",
+      "vs_funded": 0.03938378,
+      "vs_hold": 0.00917966,
+      "vs_hold_after_gas": -0.04331789,
+      "vs_stake": 0.00882861
     },
     {
       "account": "canary-27958c783600.arena.sledgit.near",
@@ -2843,12 +5014,20 @@
       "ids": [
         "mn-qwen36-tee"
       ],
+      "kind": "proof",
+      "severity": "info",
+      "text": "claims tee, proven self (TEE season check failed: 87 of 111 decision(s) attested)"
+    },
+    {
+      "ids": [
+        "mn-qwen36-tee"
+      ],
       "kind": "strategy_change",
       "severity": "info",
       "text": "the season's receipts use 2 published prompt or strategy versions (changed mid-season)"
     }
   ],
-  "inputs_sha256": "69f41ed981a485ac91b60a259961930e8eac63a92fccfe0f61d721173a79103a",
+  "inputs_sha256": "db08021238c4cf3f60f7b4acdca8fc7a8fddb4cb04ac4c91367f9ca78d9248af",
   "luck_entry": null,
   "method": {
     "benchmarks": "Hold 50/50 and Stake & hold are COMPUTED, not vaults: they start from the entry's own start value, at its start time and reference price, rebalanced once to 50/50 and charged season.benchmark_cost_rate on that rebalance (a fixed published rate, never the entry's own). Stake & hold compounds the NEAR half daily at the stated APR (an assumption, see stake_apr.source). Funded position: the entry's own holdings at its start, never traded, no costs.",
