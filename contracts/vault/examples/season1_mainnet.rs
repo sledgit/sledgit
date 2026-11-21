@@ -102,8 +102,9 @@ struct EntryPlan {
 
 fn s<'a>(v: &'a Value, k: &str) -> Result<&'a str, String> { v[k].as_str().ok_or_else(|| format!("config: '{k}' missing")) }
 
-/// The policy every Season 1 vault gets, built from the config; mirrors the contract's validate() rules.
-fn policy(cfg: &Value) -> Result<Value, String> {
+/// The policy a Season 1 vault gets, built from the config; mirrors the contract's validate() rules. A staked entry
+/// also gets the staking token and the base <-> staking-token pairs on `stake.pool_id` (a rated pool).
+fn policy(cfg: &Value, staked: bool) -> Result<Value, String> {
     let (b, q) = (&cfg["tokens"]["base"], &cfg["tokens"]["quote"]);
     let (bd, qd) = (b["decimals"].as_u64().ok_or("base decimals")? as u32, q["decimals"].as_u64().ok_or("quote decimals")? as u32);
     let p = &cfg["policy"];
@@ -122,12 +123,27 @@ fn policy(cfg: &Value) -> Result<Value, String> {
     // The vault computes amount_in * num in u128; prove the largest trade can't overflow.
     if bt.checked_mul(sn).is_none() || qt.checked_mul(bn).is_none() { return Err("policy: price band overflows at the cap".into()); }
     let (bid, qid) = (s(b, "id")?, s(q, "id")?);
-    Ok(json!({"tokens": [
+    let mut out = json!({"tokens": [
             {"token": bid, "max_per_trade": bt.to_string(), "max_per_day": bday.to_string()},
             {"token": qid, "max_per_trade": qt.to_string(), "max_per_day": qday.to_string()}],
         "pairs": [{"token_in": bid, "token_out": qid, "pool_id": pool, "min_price_num": sn.to_string(), "min_price_den": sd.to_string()},
                   {"token_in": qid, "token_out": bid, "pool_id": pool, "min_price_num": bn.to_string(), "min_price_den": bdn.to_string()}],
-        "max_trades_per_hour": rate, "max_slippage_bps": slip}))
+        "max_trades_per_hour": rate, "max_slippage_bps": slip});
+    if staked {
+        let st = &cfg["stake"];
+        let (sid, sdec) = (s(st, "id")?, st["decimals"].as_u64().ok_or("stake decimals")? as u32);
+        let spool = st["pool_id"].as_u64().ok_or("stake.pool_id")?;
+        let (stt, stday) = (to_raw(s(st, "max_per_trade")?, sdec)?, to_raw(s(st, "max_per_day")?, sdec)?);
+        if stt == 0 || stt > stday { return Err("policy: stake per-trade cap must be >0 and <= the daily cap".into()); }
+        let (in_n, in_d) = price_band(s(st, "min_price_stake")?, bd, sdec)?; // base -> stake: stake per base
+        let (out_n, out_d) = price_band(s(st, "min_price_unstake")?, sdec, bd)?; // stake -> base: base per stake
+        if bt.checked_mul(in_n).is_none() || stt.checked_mul(out_n).is_none() { return Err("policy: stake band overflows at the cap".into()); }
+        out["tokens"].as_array_mut().unwrap().push(json!({"token": sid, "max_per_trade": stt.to_string(), "max_per_day": stday.to_string()}));
+        let pairs = out["pairs"].as_array_mut().unwrap();
+        pairs.push(json!({"token_in": bid, "token_out": sid, "pool_id": spool, "min_price_num": in_n.to_string(), "min_price_den": in_d.to_string()}));
+        pairs.push(json!({"token_in": sid, "token_out": bid, "pool_id": spool, "min_price_num": out_n.to_string(), "min_price_den": out_d.to_string()}));
+    }
+    Ok(out)
 }
 
 /// Validates the whole config (separation, accounts, deposits, policy) and builds each entry's transactions.
@@ -152,7 +168,6 @@ fn build_plan(cfg: &Value, bounds: Option<(u128, u128)>) -> Result<Vec<EntryPlan
     let (b, q) = (&cfg["tokens"]["base"], &cfg["tokens"]["quote"]);
     let (bid, qid) = (s(b, "id")?, s(q, "id")?);
     let (bd, qd) = (b["decimals"].as_u64().ok_or("base decimals")? as u32, q["decimals"].as_u64().ok_or("quote decimals")? as u32);
-    let pol = policy(cfg)?;
     let allowance = to_raw(s(&cfg["agent"], "allowance_near")?, 24)?;
     let agent_bal = to_raw(s(&cfg["agent"], "balance_near")?, 24)?;
     // near-api-js checks the allowance against the worst-case gas price (~0.3 NEAR for a 300 Tgas call), so the
@@ -188,6 +203,8 @@ fn build_plan(cfg: &Value, bounds: Option<(u128, u128)>) -> Result<Vec<EntryPlan
             Some(k) if k.starts_with("ed25519:") && k.len() > 40 && k.parse::<near_api::PublicKey>().is_ok() => Some(k.to_string()),
             Some(k) => return Err(format!("{name}: recovery_public_key '{k}' is not an ed25519 public key")),
         };
+        let staked = e["stake"].as_bool().unwrap_or(false);
+        let pol = policy(cfg, staked)?;
         let deposit = to_raw(s(e, "deposit_near")?, 24)?;
         if deposit < min || deposit > max { return Err(format!("{name}: deposit outside the factory's bounds")); }
         let (fb, fq) = (to_raw(s(&e["fund"], "base")?, bd)?, to_raw(s(&e["fund"], "quote")?, qd)?);
@@ -199,8 +216,12 @@ fn build_plan(cfg: &Value, bounds: Option<(u128, u128)>) -> Result<Vec<EntryPlan
             t(&owner, bid, "storage_deposit", json!({"account_id": vault, "registration_only": true}), FT_STORAGE, 30, "vault registered on the base token"),
             t(&owner, qid, "storage_deposit", json!({"account_id": vault, "registration_only": true}), FT_STORAGE, 30, "vault registered on the quote token"),
             t(&owner, &vault, "exchange_storage_deposit", json!({}), EXCHANGE_STORAGE, 50, &format!("vault storage on {exchange}")),
-            t(&owner, &vault, "exchange_register_tokens", json!({}), 1, 50, "register both tokens on the exchange"),
         ];
+        if staked {
+            txs.push(t(&owner, s(&cfg["stake"], "id")?, "storage_deposit", json!({"account_id": vault, "registration_only": true}), FT_STORAGE, 30,
+                "vault registered on the staking token"));
+        }
+        txs.push(t(&owner, &vault, "exchange_register_tokens", json!({}), 1, 50, "register the policy's tokens on the exchange"));
         if fb > 0 {
             txs.push(t(&owner, bid, "storage_deposit", json!({"account_id": owner, "registration_only": true}), FT_STORAGE, 30, "owner registered on the base token (skipped if already)"));
             txs.push(t(&owner, bid, "near_deposit", json!({}), fb, 30, "wrap the owner's NEAR"));
@@ -214,7 +235,7 @@ fn build_plan(cfg: &Value, bounds: Option<(u128, u128)>) -> Result<Vec<EntryPlan
         txs.push(t(&agent, &agent, "add_key(recovery)", json!({"public_key": recovery_pk.clone().unwrap_or_else(|| "generated at send; file to move offline".into())}), 0, 0,
             "a full-access RECOVERY key John holds offline: the agent's NEAR stays recoverable"));
         txs.push(t(&agent, &agent, "delete_key(setup)", json!({}), 0, 0, "every other full-access key goes; the recovery key stays"));
-        let registrations = 2 * FT_STORAGE + EXCHANGE_STORAGE;
+        let registrations = if staked { 3 } else { 2 } * FT_STORAGE + EXCHANGE_STORAGE;
         let owner_near = deposit + registrations + if fb > 0 { FT_STORAGE + fb } else { 0 } + OWNER_GAS;
         // Spent for good: the listing fee, the vault's state, the registrations, and the vault's native NEAR up to
         // withdraw_near's reserve. Recoverable: native NEAR above that reserve, the trading funds (owner withdraw) and
@@ -416,6 +437,22 @@ async fn main() -> R {
             if !(ids.contains(&s(b, "id")?) && ids.contains(&s(q, "id")?)) { return Err(fail(format!("pool {} trades {ids:?}, not the config's pair", cfg["pool_id"]))); }
         }
         Err(e) => problems.push(format!("pool {}: {e}", cfg["pool_id"])),
+    }
+    // Staked entries: the staking token's decimals and its pool with base, as the config says.
+    if cfg["entries"].as_array().is_some_and(|es| es.iter().any(|e| e["stake"] == true)) {
+        let st = &cfg["stake"];
+        match chain.view(s(st, "id")?, "ft_metadata", json!({})).await {
+            Ok(m) if m["decimals"] == st["decimals"] => {}
+            Ok(m) => return Err(fail(format!("{} has {} decimals on chain, the config says {}", s(st, "id")?, m["decimals"], st["decimals"]))),
+            Err(e) => problems.push(format!("{} ft_metadata: {e}", s(st, "id")?)),
+        }
+        match chain.view(s(&cfg, "exchange")?, "get_pool", json!({"pool_id": st["pool_id"]})).await {
+            Ok(p) => {
+                let ids: Vec<&str> = p["token_account_ids"].as_array().map(|a| a.iter().filter_map(|x| x.as_str()).collect()).unwrap_or_default();
+                if !(ids.contains(&s(b, "id")?) && ids.contains(&s(st, "id")?)) { return Err(fail(format!("stake pool {} trades {ids:?}, not base and the staking token", st["pool_id"]))); }
+            }
+            Err(e) => problems.push(format!("stake pool {}: {e}", st["pool_id"])),
+        }
     }
 
     let plan = build_plan(&cfg, bounds).map_err(fail)?;
@@ -629,6 +666,26 @@ mod tests {
         }
         c
     }
+    #[test]
+    fn a_staked_entry_gets_the_staking_token_and_its_pairs() {
+        let mut c = filled();
+        c["entries"][1]["stake"] = json!(true);
+        let p = build_plan(&c, None).unwrap();
+        let (plain, staked) = (&p[0], &p[1]);
+        assert_eq!(plain.policy["tokens"].as_array().unwrap().len(), 2, "unstaked entries are unchanged");
+        assert_eq!(staked.policy["tokens"][2]["token"], "meta-pool.near");
+        let pairs = staked.policy["pairs"].as_array().unwrap();
+        assert_eq!(pairs.len(), 4);
+        assert_eq!((pairs[2]["token_in"].as_str(), pairs[2]["token_out"].as_str(), pairs[2]["pool_id"].as_u64()), (Some("wrap.near"), Some("meta-pool.near"), Some(3514)));
+        // 0.64 stNEAR per wNEAR and 1.47 wNEAR per stNEAR (both 24 decimals): floor = in * num / den.
+        assert_eq!((pairs[2]["min_price_num"].as_str(), pairs[2]["min_price_den"].as_str()), (Some("16"), Some("25")));
+        assert_eq!((pairs[3]["min_price_num"].as_str(), pairs[3]["min_price_den"].as_str()), (Some("147"), Some("100")));
+        assert!(staked.txs.iter().any(|t| t.receiver == "meta-pool.near" && t.method == "storage_deposit"), "vault registered on stNEAR");
+        assert_eq!(staked.locked_near, plain.locked_near + FT_STORAGE);
+        c["stake"]["min_price_stake"] = json!("0");
+        assert!(build_plan(&c, None).unwrap_err().contains("above 0"));
+    }
+
     #[test]
     fn rpc_errors_fail_closed_only_unknown_account_means_absent() {
         assert!(unknown_account(&json!({"error": {"cause": {"name": "UNKNOWN_ACCOUNT"}}})));

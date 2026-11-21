@@ -19,6 +19,17 @@
     }
   },
   "pool_id": 4512,
+  "stake": {
+    "comment": "Used only by entries with \"stake\": true. stNEAR (Meta Pool) on Rhea rated pool 3514. Bands 3% under the 2026-11-17 redemption rate (1.5156 NEAR per stNEAR); the rate rises about 4.5% a year, so min_price_stake needs re-proposing about every 8 months.",
+    "id": "meta-pool.near",
+    "symbol": "stNEAR",
+    "decimals": 24,
+    "pool_id": 3514,
+    "max_per_trade": "1",
+    "max_per_day": "2",
+    "min_price_stake": "0.64",
+    "min_price_unstake": "1.47"
+  },
   "policy": {
     "base": {
       "max_per_trade": "1.2",
