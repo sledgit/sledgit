@@ -7,6 +7,7 @@ import * as v1 from "./rules-v1.js";
 import * as v2 from "./rules-v2.js";
 import * as v3 from "./rules.js";
 import { STAKED, stakedSpec, decideStaked, type StakedInput } from "./staked.js";
+import { STAKED_TREND_VOL, TREND_VOL, trendVolSpec } from "./trend-vol.js";
 
 export interface PublishedStrategy {
   hash: string;
@@ -41,6 +42,12 @@ function entries(): PublishedStrategy[] {
     const spec = stakedSpec(s);
     out.push({ hash: createHash("sha256").update(canonical(spec)).digest("hex"), id: s.id, version: s.version, spec, reads_chain: true, staked: true,
       decide: (x, vault) => decideStaked(s, x as StakedInput, vault) });
+  }
+  for (const staked of [false, true]) {
+    const spec = trendVolSpec(staked);
+    out.push({ hash: createHash("sha256").update(canonical(spec)).digest("hex"), id: staked ? STAKED_TREND_VOL.id : TREND_VOL.id, version: 1, spec,
+      reads_chain: true, staked,
+      decide: (x, vault) => (staked ? decideStaked(STAKED_TREND_VOL, x as StakedInput, vault) : v3.decide(TREND_VOL, x as v3.RuleInput, vault)) });
   }
   return out;
 }

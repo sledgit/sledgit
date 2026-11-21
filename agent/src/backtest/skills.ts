@@ -2,6 +2,7 @@
 // strategies/rules.ts, run unchanged. Research skills use the same Strategy interface and are not traded live yet.
 import { STRATEGIES, type RuleInput, type Strategy } from "../strategies/rules.js";
 import { stakedById, type StakedStrategy } from "../strategies/staked.js";
+import { STAKED_TREND_VOL, TREND_VOL } from "../strategies/trend-vol.js";
 
 export type SkillStatus = "house" | "research" | "llm";
 
@@ -55,6 +56,10 @@ export const SKILLS: Skill[] = [
     evidence: "Volatility scaling lowers drawdowns; return effects are mixed." },
   { ...stakedHouse("stake-vol-target"), name: "Staked volatility target", status: "house", stake: true, candles: 60,
     evidence: "Carry plus volatility scaling." },
+  { strategy: TREND_VOL, name: "Trend and volatility ensemble", status: "house", stake: false, candles: 60,
+    evidence: "Several slow trend signals averaged, scaled by volatility: trend's crash protection with less turnover than one signal." },
+  { strategy: { ...TREND_VOL, id: STAKED_TREND_VOL.id, rule: STAKED_TREND_VOL.rule }, staked: STAKED_TREND_VOL, name: "Staked trend and volatility ensemble",
+    status: "house", stake: true, candles: 60, evidence: "Carry plus the trend and volatility ensemble." },
   { strategy: house("trend"), name: "Trend 50-day", status: "house", stake: false, candles: 60,
     evidence: "Best in-sample of 26 trend settings in our earlier test, so likely overfit." },
   { strategy: house("breakout"), name: "Breakout 55/20", status: "house", stake: false, candles: 60,

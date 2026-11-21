@@ -9,8 +9,7 @@ import { sealReceipt, appendLine, verifyFile, canonical, sha256Hex, type Json } 
 import { makeModel, type Model } from "./models.js";
 import { nearUsdt, type RefPrice } from "./price.js";
 import { tick, loadPrompt, attestationsDir } from "./arena.js";
-import { strategyById, strategyPrompt, rulesModel, STRATEGIES } from "./strategies/rules.js";
-import { stakedById, stakedModel, stakedPrompt, STAKED } from "./strategies/staked.js";
+import { HOUSE_RULES, houseRule } from "./strategies/house.js";
 import { PAIRS } from "./pairs.js";
 import { dailyCandles } from "./strategies/market.js";
 import { houseRerun as rerunRows, houseCheck, type RerunRow } from "./strategies/rerun.js";
@@ -57,7 +56,7 @@ export const USAGE = `sledgit <command> [options]
                                  [--interval ${MIN_INTERVAL_S}..${MAX_INTERVAL_S} seconds] [--dry-run]; stops when the vault is frozen or the agent replaced
                                  [--attest tee]: call --model through NEAR AI Cloud (NEAR_AI_CLOUD_API_KEY) and keep TEE evidence
                                  [--harness <name/version>]: the agent software recorded in receipts (self-reported)
-  house --strategy <id>          a published rule-based house strategy (${[...STRATEGIES, ...STAKED].map((x) => x.id).join(" | ")}); same ticks, receipts and
+  house --strategy <id>          a published rule-based house strategy (${HOUSE_RULES.map((x) => x.id).join(" | ")}); same ticks, receipts and
                                  limits as arena, plus closed daily candles and the vault's on-chain history; prompt_sha256 =
                                  the strategy hash. Ticks once per daily slot (${SCHEDULE.slot_utc} UTC, ${SCHEDULE.window_minutes} min window);
                                  [--off-schedule] ticks anyway and the receipt says so
@@ -217,8 +216,7 @@ export async function main(argv: string[], deps: MainDeps = {}): Promise<number>
   const looped = cmd === "arena" || cmd === "house";
   const ticks = looped ? boundedInt(o.ticks!, "--ticks", 1, MAX_TICKS) : 1;
   const intervalS = looped ? boundedInt(o.interval!, "--interval", MIN_INTERVAL_S, MAX_INTERVAL_S) : 0;
-  const stakedStrategy = cmd === "house" ? stakedById(o.strategy ?? "") : undefined;
-  const strategy = cmd === "house" && !stakedStrategy ? strategyById(o.strategy ?? "") : undefined;
+  const rule = cmd === "house" ? houseRule(o.strategy ?? "") : undefined;
   if (cmd === "house") {
     // A house strategy is its published rules; nothing else may shape its decisions or its receipts.
     const extra = (["attest", "prompt", "harness", "model"] as const).filter((k) => o[k] !== undefined);
@@ -372,11 +370,11 @@ export async function main(argv: string[], deps: MainDeps = {}): Promise<number>
     }
     case "house": {
       // Staked strategies need the network's staking token; testnet has none.
-      const stake = stakedStrategy ? PAIRS[net.id].stake : undefined;
-      if (stakedStrategy && !stake) throw new Error(`${stakedStrategy.id} needs a staking token; ${net.id} has none`);
-      const model = stakedStrategy ? stakedModel(stakedStrategy, vault.id) : rulesModel(strategy!, vault.id);
-      const prompt = stakedStrategy ? stakedPrompt(stakedStrategy) : strategyPrompt(strategy!);
-      const id = stakedStrategy?.id ?? strategy!.id;
+      const stake = rule!.staked ? PAIRS[net.id].stake : undefined;
+      if (rule!.staked && !stake) throw new Error(`${rule!.id} needs a staking token; ${net.id} has none`);
+      const model = rule!.model(vault.id);
+      const prompt = rule!.prompt;
+      const id = rule!.id;
       const sleep = deps.sleep ?? ((ms: number) => new Promise<void>((r) => setTimeout(r, ms)));
       const now = deps.now ?? Date.now;
       for (let i = 0; i < ticks; i++) {

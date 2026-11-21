@@ -35,6 +35,16 @@ test("backtest: the committed history gives a reproducible report with no false 
   const a = report(c), b = report(c);
   assert.deepEqual(a, b);
   for (const s of a.skills) if (s.verdict.startsWith("promising")) assert.ok(s.p_vs_hold! < a.significance.alpha);
+  // Every skill but hold and luck faces random rules that trade about as often; promising needs the 95% bar too.
+  for (const s of a.skills) {
+    if (s.id === "hold" || s.id === "luck") { assert.equal(s.random, null); continue; }
+    const r = s.random!;
+    assert.equal(r.runs, a.random_rules.runs);
+    for (const v of [r.full.beats, r.out_of_sample.beats]) assert.ok(v >= 0 && v <= 1);
+    const t = (s.periods.full as unknown as { trades_per_year: number }).trades_per_year;
+    if (t >= 5) assert.ok(Math.abs(r.trades_per_year_median - t) / t < 0.35, `${s.id}: ${r.trades_per_year_median} vs ${t}`);
+    if (s.verdict.startsWith("promising")) assert.ok(r.out_of_sample.beats >= a.random_rules.bar);
+  }
 });
 
 test("vol-target v3: low volatility caps at 90%, high volatility cuts NEAR, small moves hold", async () => {

@@ -195,6 +195,95 @@ async fn full_swap_against_real_rhea() -> R {
     Ok(())
 }
 
+/// Staked vaults swap wNEAR <-> a liquid-staking token through a Rhea rated pool, priced at the token's redemption rate.
+#[tokio::test]
+async fn stake_and_unstake_through_a_rated_pool() -> R {
+    let env = setup(true).await?;
+    let a = |n: &str| id(&format!("{n}.sandbox"));
+    let (st, sv) = (a("stnear"), a("svault"));
+    for n in [&st, &sv] {
+        env._sandbox.create_account(n.to_string().parse()?).initial_balance(near_sdk::NearToken::from_near(100)).send().await?;
+    }
+    near_api::Contract::deploy(st.clone()).use_code(wasm("../target/near/test_token/test_token.wasm")?)
+        .with_init_call("new", json!({"owner_id": env.lp, "total_supply": (1_000_000 * E24).to_string(), "symbol": "STNEAR", "decimals": 24}))?
+        .with_signer(env.signer.clone()).send_to(&env.net).await?.assert_success();
+    for w in [&env.ex, &sv, &env.owner] {
+        env.ok(&env.lp, &st, "storage_deposit", json!({"account_id": w}), NearToken::from_millinear(10).as_yoctonear(), 30).await?;
+    }
+    env.ok(&env.lp, &env.wnear, "storage_deposit", json!({"account_id": sv}), NearToken::from_millinear(10).as_yoctonear(), 30).await?;
+    env.ok(&env.lp, &st, "set_st_near_price", json!({"price": (15 * E24 / 10).to_string()}), 0, 30).await?;
+
+    // Rhea: register the rate source, read it, then a stNEAR/wNEAR rated pool at 0.05% with 10k stNEAR : 15k wNEAR.
+    env.ok(&env.ex, &env.ex, "extend_whitelisted_tokens", json!({"tokens": [st]}), 1, 30).await?;
+    env.ok(&env.ex, &env.ex, "register_rated_token", json!({"rate_type": "STNEAR", "token_id": st}), 1, 30).await?;
+    env.ok(&env.lp, &env.ex, "update_token_rate", json!({"token_id": st}), 0, 100).await?;
+    let r = env.ok(&env.ex, &env.ex, "add_rated_swap_pool", json!({"tokens": [st, env.wnear], "decimals": [24, 24], "fee": 5, "amp_factor": 240}),
+        NearToken::from_millinear(100).as_yoctonear(), 50).await?;
+    let pool = r.into_result()?.json::<u64>()?;
+    let (ls, lw) = (10_000 * E24, 15_000 * E24);
+    for (t, amt) in [(&st, ls), (&env.wnear, lw)] {
+        env.ok(&env.lp, t, "ft_transfer_call", json!({"receiver_id": env.ex, "amount": amt.to_string(), "msg": ""}), 1, 100).await?;
+    }
+    env.ok(&env.lp, &env.ex, "add_stable_liquidity", json!({"pool_id": pool, "amounts": [ls.to_string(), lw.to_string()], "min_shares": "1"}),
+        NearToken::from_millinear(100).as_yoctonear(), 100).await?;
+
+    // A vault allowed wNEAR <-> stNEAR on that pool; bands well under the 1.5 rate.
+    let policy = json!({"tokens": [
+            {"token": env.usdc, "max_per_trade": (50 * E6).to_string(), "max_per_day": (100 * E6).to_string()},
+            {"token": env.wnear, "max_per_trade": (20 * E24).to_string(), "max_per_day": (40 * E24).to_string()},
+            {"token": st, "max_per_trade": (20 * E24).to_string(), "max_per_day": (40 * E24).to_string()}],
+        "pairs": [
+            {"token_in": env.wnear, "token_out": st, "pool_id": pool, "min_price_num": "6", "min_price_den": "10"},
+            {"token_in": st, "token_out": env.wnear, "pool_id": pool, "min_price_num": "14", "min_price_den": "10"}],
+        "max_trades_per_hour": 10, "max_slippage_bps": 100});
+    near_api::Contract::deploy(sv.clone()).use_code(wasm("../target/near/sledgit_vault/sledgit_vault.wasm")?)
+        .with_init_call("new", json!({"owner_id": env.owner, "agent_id": env.agent, "exchange_id": env.ex,
+            "intents_id": env.intents, "mpc_id": env.mpc, "policy": policy}))?
+        .with_signer(env.signer.clone()).send_to(&env.net).await?.assert_success();
+    env.ok(&env.owner, &sv, "exchange_storage_deposit", json!({}), NearToken::from_millinear(100).as_yoctonear(), 50).await?;
+    env.ok(&env.owner, &sv, "exchange_register_tokens", json!({}), 1, 50).await?;
+    env.ok(&env.lp, &env.wnear, "ft_transfer", json!({"receiver_id": env.owner, "amount": (10 * E24).to_string()}), 1, 30).await?;
+    env.ok(&env.owner, &env.wnear, "ft_transfer_call", json!({"receiver_id": sv, "amount": (10 * E24).to_string(), "msg": ""}), 1, 100).await?;
+
+    let swap = |tin: &AccountId, tout: &AccountId, amt: u128| {
+        let (tin, tout) = (tin.clone(), tout.clone());
+        let (env, sv) = (&env, sv.clone());
+        async move {
+            env.call(&env.agent, &sv, "request_swap", json!({"token_in": tin, "token_out": tout, "amount_in": amt.to_string(),
+                "min_amount_out": "1", "receipt_hash": HASH}), 0, 300).await
+        }
+    };
+    // Stake 3 wNEAR: about 2 stNEAR at a 1.5 rate, less the 0.05% fee.
+    let r = swap(&env.wnear, &st, 3 * E24).await?;
+    let t = events(&r, "trade");
+    assert_eq!(t.len(), 1, "no stake trade: {:?}", r.logs());
+    let got: u128 = t[0]["amount_out"].as_str().unwrap().parse()?;
+    assert!(got > 1_998 * E24 / 1_000 && got < 2 * E24, "stake out {got}");
+    assert_eq!(env.bal(&st, &sv).await?, got);
+    assert_eq!(env.bal(&env.wnear, &sv).await?, 7 * E24);
+    // Unstake it all: about 3 wNEAR back.
+    let r = swap(&st, &env.wnear, got).await?;
+    let t = events(&r, "trade");
+    assert_eq!(t.len(), 1, "no unstake trade: {:?}", r.logs());
+    let back: u128 = t[0]["amount_out"].as_str().unwrap().parse()?;
+    assert!(back > 2_996 * E24 / 1_000 && back < 3 * E24, "unstake out {back}");
+    assert_eq!(env.bal(&st, &sv).await?, 0);
+    assert_eq!(env.bal(&env.wnear, &sv).await?, 7 * E24 + back);
+    let d = env.view::<Value>(&env.ex, "get_deposits", json!({"account_id": sv})).await?;
+    assert!(d.as_object().unwrap().values().all(|v| v == "0"), "left on the exchange: {d}");
+    // At a 2.0 rate the pool pays 0.5 stNEAR per wNEAR, under the 0.6 band: the quote check fails it and nothing moves.
+    env.ok(&env.lp, &st, "set_st_near_price", json!({"price": (2 * E24).to_string()}), 0, 30).await?;
+    env.ok(&env.lp, &env.ex, "update_token_rate", json!({"token_id": st}), 0, 100).await?;
+    let w0 = env.bal(&env.wnear, &sv).await?;
+    let r = swap(&env.wnear, &st, E24).await?;
+    assert_eq!(events(&r, "trade").len(), 0, "a stake below the band must not fill: {:?}", r.logs());
+    let f = events(&r, "failed");
+    assert_eq!((f.len(), f.first().map(|x| x["stage"].clone())), (1, Some(json!("Quote"))), "{:?}", r.logs());
+    assert_eq!(env.bal(&env.wnear, &sv).await?, w0);
+    assert_eq!(env.bal(&st, &sv).await?, 0);
+    Ok(())
+}
+
 #[tokio::test]
 async fn refusal_is_recorded_on_chain_and_moves_nothing() -> R {
     let env = setup(true).await?;

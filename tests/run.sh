@@ -95,7 +95,8 @@ repo_secret_scan() {
     rsync -a --exclude node_modules --exclude target --exclude venv --exclude .next --exclude out ./ "$tmp/tree/"
   fi
   cp .gitleaksignore "$tmp/tree/" 2>/dev/null || true
-  (cd "$tmp/tree" && gitleaks dir . --no-banner --redact)
+  # .gitleaks.toml: the default rules plus public on-chain ids (USDC) and attestation public keys.
+  (cd "$tmp/tree" && gitleaks dir . --no-banner --redact -c .gitleaks.toml)
   local rc=$?; rm -rf "$tmp"; return $rc
 }
 gitleaks_missing() { echo "gitleaks is not installed: install it (brew install gitleaks) or set IT_SKIP_SECRET_SCAN=1"; return 1; }

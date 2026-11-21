@@ -3,7 +3,7 @@ use near_contract_standards::fungible_token::metadata::{FungibleTokenMetadata, F
 use near_contract_standards::fungible_token::{FungibleToken, FungibleTokenCore};
 use near_contract_standards::storage_management::{StorageBalance, StorageBalanceBounds, StorageManagement};
 use near_sdk::json_types::U128;
-use near_sdk::{near, AccountId, PanicOnDefault, PromiseOrValue};
+use near_sdk::{env, near, AccountId, PanicOnDefault, PromiseOrValue};
 
 #[near(contract_state)]
 #[derive(PanicOnDefault)]
@@ -49,6 +49,12 @@ impl Contract {
     pub fn storage_balance_of(&self, account_id: AccountId) -> Option<StorageBalance> { self.token.storage_balance_of(account_id) }
     #[payable]
     pub fn storage_unregister(&mut self, force: Option<bool>) -> bool { self.token.storage_unregister(force) }
+
+    /// Liquid-staking stand-in: the redemption rate Rhea's rated pools read (base units per whole token).
+    pub fn set_st_near_price(&mut self, price: U128) { env::storage_write(b"p", &price.0.to_le_bytes()); }
+    pub fn get_st_near_price(&self) -> U128 {
+        U128(env::storage_read(b"p").and_then(|b| b.try_into().ok()).map(u128::from_le_bytes).unwrap_or(10u128.pow(24)))
+    }
 
     pub fn ft_metadata(&self) -> FungibleTokenMetadata {
         FungibleTokenMetadata { spec: FT_METADATA_SPEC.to_string(), name: self.symbol.clone(), symbol: self.symbol.clone(),
